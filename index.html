@@ -11,7 +11,9 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: #0f0f0f; color: #e8e4dc; font-family: system-ui, -apple-system, sans-serif; font-weight: 300; }
   button { font-family: inherit; }
-  ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #141414; } ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #141414; }
+  ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
 </style>
 </head>
 <body>
@@ -20,67 +22,27 @@
 
 const { useState, useEffect } = React;
 
-// ── CURRENT WEEK DATA ──────────────────────────────────────────────────────
+// ── WEEK REGISTRY ──────────────────────────────────────────────────────────
+// Add a new entry here each week. That's the only line you ever change.
+// Format: { id: "2026-W20", label: "Week of May 11, 2026" }
 
-const WEEK_ID = "2026-W19"; // Update this each week e.g. "2026-W20"
-const WEEK_LABEL = "Week of May 4, 2026"; // Update this each week
-
-const JAKE_MACROS = { cal: 2030, protein: 203, carbs: 102, fat: 90 };
-const LAINE_MACROS = { cal: 1363, protein: 103, carbs: 152, fat: 37 };
-
-const DINNERS = [
-  { day: "Monday", name: "Salmon, Edamame + Roasted Broccoli", note: "Same dish — Jake gets a larger salmon portion.", jake: { cal: 700, protein: 58, carbs: 28, fat: 38, fiber: 10 }, laine: { cal: 480, protein: 36, carbs: 28, fat: 18, fiber: 10 }, ingredients: [{ item: "Salmon fillet", jake: "200g", laine: "130g" }, { item: "Shelled edamame (frozen)", jake: "150g", laine: "100g" }, { item: "Broccoli florets", shared: "400g total" }, { item: "Olive oil", shared: "1.5 tbsp" }, { item: "Soy sauce, sesame oil, garlic, sesame seeds", shared: "to taste" }], steps: ["Toss broccoli with olive oil, salt, garlic. Roast at 220C / 425F for 20 min.", "Season both salmon portions with soy sauce + sesame oil. Pan-sear 4 min per side.", "Microwave edamame per package. Toss with sesame oil + pinch of salt.", "Plate separately by portion size."] },
-  { day: "Tuesday", name: "Turkey Stuffed Bell Peppers", note: "Jake eats 2 peppers, Laine eats 1.", jake: { cal: 660, protein: 62, carbs: 30, fat: 28, fiber: 9 }, laine: { cal: 420, protein: 38, carbs: 28, fat: 12, fiber: 7 }, ingredients: [{ item: "Ground turkey (93% lean)", jake: "250g", laine: "150g" }, { item: "Bell peppers", jake: "2 large, halved", laine: "1 large, halved" }, { item: "Black beans, drained", shared: "1 can" }, { item: "Canned diced tomatoes", shared: "100g" }, { item: "Shredded cheese", jake: "2 tbsp", laine: "1 tbsp" }, { item: "Cumin, garlic powder, chili flakes", shared: "to taste" }], steps: ["Brown all turkey in one pan with spices. Add beans + tomatoes. Cook 5 min.", "Fill Jake's 4 pepper halves generously, Laine's 2 halves modestly.", "Top with cheese. Bake 20 min at 200C / 400F."] },
-  { day: "Wednesday", name: "Steak, White Bean Mash + Asparagus", note: "Jake gets larger steak. Laine gets more bean mash for carbs.", jake: { cal: 740, protein: 65, carbs: 32, fat: 36, fiber: 8 }, laine: { cal: 500, protein: 42, carbs: 38, fat: 14, fiber: 9 }, ingredients: [{ item: "Steak (sirloin or flank)", jake: "220g", laine: "140g" }, { item: "White cannellini beans", jake: "1/2 can", laine: "3/4 can" }, { item: "Asparagus", shared: "1 bunch" }, { item: "Olive oil", jake: "1 tbsp", laine: "1/2 tbsp" }, { item: "Garlic, lemon, rosemary, salt, pepper", shared: "to taste" }], steps: ["Warm beans with garlic + olive oil. Mash roughly. Season with lemon + salt.", "Roast asparagus with oil + salt at 220C for 12 min.", "Sear steaks in a hot cast-iron — Jake 3-4 min per side, Laine 2-3 min. Rest 5 min."] },
-  { day: "Thursday", name: "Shrimp + Chickpea Stir-Fry", note: "Same sauce and veggies — Jake gets more shrimp.", jake: { cal: 620, protein: 60, carbs: 38, fat: 22, fiber: 10 }, laine: { cal: 420, protein: 38, carbs: 38, fat: 10, fiber: 10 }, ingredients: [{ item: "Raw shrimp, peeled", jake: "300g", laine: "180g" }, { item: "Chickpeas, drained", shared: "1 can" }, { item: "Mixed veggies (bell pepper, snap peas, bok choy)", shared: "3 cups" }, { item: "Soy sauce / sesame oil / sriracha", shared: "2 tbsp / 1 tbsp / 1 tsp" }, { item: "Garlic + ginger", shared: "2 cloves, 1 tsp" }], steps: ["Mix sauce: soy sauce, sesame oil, sriracha, ginger. Set aside.", "Saute garlic. Add chickpeas 3 min. Add veggies 3 min. Add all shrimp, cook 2 min per side.", "Portion shrimp by weight, pour sauce over, toss, serve immediately."] },
-  { day: "Friday", name: "Baked Cod + Lemon Lentil Soup", note: "More soup for Laine (carbs), more cod for Jake.", jake: { cal: 580, protein: 58, carbs: 36, fat: 16, fiber: 12 }, laine: { cal: 420, protein: 36, carbs: 42, fat: 8, fiber: 12 }, ingredients: [{ item: "Cod fillet", jake: "200g", laine: "130g" }, { item: "Dry green lentils", jake: "100g", laine: "130g" }, { item: "Canned diced tomatoes", shared: "1 can" }, { item: "Carrot, celery, onion", shared: "1 of each" }, { item: "Olive oil, cumin, paprika, lemon", shared: "1 tbsp oil" }, { item: "Fresh parsley", shared: "handful" }], steps: ["Saute onion, carrot, celery in olive oil 5 min. Add spices, stir 1 min.", "Add lentils, tomatoes, 700ml water. Simmer 20 min. Finish with lemon.", "Season cod with salt, pepper, lemon zest. Bake at 200C for 12-14 min.", "Laine gets larger bowl of soup + smaller cod. Jake gets smaller soup + larger cod."] },
-  { day: "Saturday", name: "Chicken Thighs, Sweet Potato + Kale", note: "One sheet pan. Laine gets more sweet potato, Jake more chicken.", jake: { cal: 720, protein: 64, carbs: 42, fat: 28, fiber: 9 }, laine: { cal: 490, protein: 40, carbs: 52, fat: 10, fiber: 10 }, ingredients: [{ item: "Boneless chicken thighs", jake: "250g", laine: "160g" }, { item: "Sweet potato, cubed", jake: "1 medium", laine: "1.5 medium" }, { item: "Kale, stems removed", shared: "3 large handfuls" }, { item: "Olive oil", jake: "2 tbsp", laine: "1/2 tbsp" }, { item: "Garlic powder, smoked paprika, cumin, salt, lemon", shared: "to taste" }], steps: ["Toss sweet potato with oil, smoked paprika, salt. Roast at 210C / 410F for 25 min.", "Season chicken with garlic powder, cumin, salt. Add to sheet pan for last 20 min.", "Massage kale with a little oil + salt. Add to pan for final 5 min.", "Portion chicken by weight. Laine gets more potato."] },
-  { day: "Sunday", name: "Pork Tenderloin, Brussels Sprouts + Lentils", note: "While this cooks — prep both weekday lunch batches.", jake: { cal: 680, protein: 72, carbs: 38, fat: 20, fiber: 13 }, laine: { cal: 470, protein: 46, carbs: 42, fat: 8, fiber: 12 }, ingredients: [{ item: "Pork tenderloin", jake: "220g", laine: "140g" }, { item: "Brussels sprouts, halved", shared: "400g" }, { item: "Dry green lentils", jake: "80g", laine: "90g" }, { item: "Olive oil", jake: "2 tbsp", laine: "1/2 tbsp" }, { item: "Dijon mustard, garlic, thyme, salt, pepper, lemon", shared: "to taste" }], steps: ["Cook lentils: simmer in salted water 20 min. Drain, dress with olive oil + lemon.", "Rub pork with Dijon, garlic, thyme, salt + pepper. Sear 2 min per side.", "Toss Brussels sprouts with oil, salt, pepper. Arrange around pork on the pan.", "Roast at 210C for 18-20 min until pork hits 63C / 145F. Rest 5 min. Portion by weight."] },
+const WEEK_REGISTRY = [
+  { id: "2026-W19", label: "Week of May 4, 2026" },
 ];
 
-const JAKE_LUNCH = {
-  name: "Turkish-Style Lentil + Chicken Bowl",
-  note: "Stores 5 days. Reheat 2 min with a splash of water on the lentils.",
-  macros: { cal: 650, protein: 68, carbs: 42, fat: 18, fiber: 16 },
-  ingredients: ["1.2 kg boneless chicken thighs", "400g dry red lentils", "2 cans (800g) black beans, drained", "2 large zucchini, diced", "300g fresh spinach", "4 garlic cloves", "2 tbsp olive oil", "2 tsp cumin, 2 tsp smoked paprika, 1 tsp turmeric", "Salt, pepper, lemon juice", "5 tbsp Greek yogurt (1 per portion, optional)"],
-  steps: ["Season chicken with cumin, paprika, salt + pepper. Bake at 200C / 400F for 25 min. Cool and shred.", "Rinse lentils. Simmer in 900ml water with turmeric + garlic for 15 min.", "Saute zucchini in olive oil 5 min. Add black beans, warm through. Add spinach, toss until wilted.", "Divide into 5 containers: lentils bottom, veggies middle, chicken top. Squeeze lemon.", "Pack Greek yogurt separately. Mix in before eating."],
-};
+const CURRENT_WEEK_ID = WEEK_REGISTRY[WEEK_REGISTRY.length - 1].id;
 
-const LAINE_LUNCH = {
-  name: "Chicken, Rice + Roasted Veggie Bowl",
-  note: "Higher carb, lower fat to match Laine's macros. Stores 5 days.",
-  macros: { cal: 480, protein: 42, carbs: 52, fat: 10, fiber: 8 },
-  ingredients: ["700g boneless chicken breast", "300g dry basmati or jasmine rice", "2 large zucchini, diced", "2 cups cherry tomatoes", "1 can (400g) chickpeas, drained", "1 red onion, diced", "1 tbsp olive oil", "1 tsp cumin, 1 tsp garlic powder, paprika, salt", "Lemon juice, fresh parsley"],
-  steps: ["Cook rice per package. Fluff and season lightly with salt.", "Season chicken breast with spices. Bake at 200C for 22 min. Cool and slice.", "Toss zucchini, cherry tomatoes, red onion, chickpeas with olive oil + salt. Roast at 210C for 20 min.", "Divide into 5 containers: rice base, roasted veggie mix, sliced chicken on top.", "Squeeze lemon over each, top with parsley. Refrigerate."],
-};
-
-const LAINE_BREAKFASTS = [
-  { day: "Mon / Wed / Fri", name: "Greek Yogurt Parfait", macros: { cal: 320, protein: 22, carbs: 38, fat: 8, fiber: 5 }, ingredients: ["180g 0% Greek yogurt", "60g low-sugar granola", "100g mixed berries", "1 tsp honey", "1 tbsp ground flaxseed"], steps: ["Layer yogurt in a bowl.", "Top with berries, granola, flaxseed, and honey.", "Prep the night before in a jar — add granola in the morning to keep it crunchy."] },
-  { day: "Tue / Thu", name: "Egg White Scramble + Toast", macros: { cal: 340, protein: 26, carbs: 36, fat: 9, fiber: 4 }, ingredients: ["4 egg whites + 1 whole egg", "1/2 cup spinach", "1/4 bell pepper, diced", "2 slices whole grain toast", "1 tsp olive oil", "Salt, pepper, chili flakes"], steps: ["Saute bell pepper in olive oil 2 min. Add spinach, wilt 1 min.", "Add eggs. Scramble gently until just set.", "Serve with toast."] },
-  { day: "Sat / Sun", name: "Banana Oat Protein Pancakes", macros: { cal: 380, protein: 24, carbs: 52, fat: 8, fiber: 5 }, ingredients: ["1 ripe banana", "60g rolled oats", "2 eggs", "1 scoop (30g) vanilla protein powder", "Pinch cinnamon", "Fresh fruit + honey to top"], steps: ["Blend banana, oats, eggs, protein powder, and cinnamon until smooth.", "Cook small pancakes on a non-stick pan, 2 min per side.", "Top with fresh fruit and a drizzle of honey."] },
-];
-
-const JAKE_SNACKS = [
-  { name: "Cottage Cheese + Walnuts", macros: { cal: 280, protein: 24, carbs: 6, fat: 18, fiber: 1 }, desc: "200g full-fat cottage cheese + 20g walnuts. No prep." },
-  { name: "Hard-Boiled Eggs + Avocado", macros: { cal: 310, protein: 18, carbs: 6, fat: 24, fiber: 5 }, desc: "2 hard-boiled eggs + 1/2 avocado, salt + chili flakes." },
-  { name: "Greek Yogurt + Flaxseed", macros: { cal: 200, protein: 22, carbs: 10, fat: 5, fiber: 4 }, desc: "200g 0% Greek yogurt + 1 tbsp ground flaxseed." },
-  { name: "Edamame", macros: { cal: 180, protein: 17, carbs: 14, fat: 8, fiber: 8 }, desc: "200g shelled edamame, microwaved, sea salt." },
-];
-
-const SHOPPING = {
-  "Proteins": ["Chicken thighs 1.61 kg boneless", "Chicken breast 700g", "Salmon fillet 330g", "Ground turkey 400g (93% lean)", "Sirloin or flank steak 360g", "Raw shrimp 480g peeled", "Cod fillet 330g", "Pork tenderloin 360g", "Eggs x 2 dozen", "Cottage cheese x 2 tubs 200g", "Greek yogurt — 2 large tubs"],
-  "Cans + Dry": ["Red lentils 400g dry", "Green lentils 450g dry", "Black beans x 3 cans", "Chickpeas x 2 cans", "White cannellini beans x 2 cans", "Diced tomatoes x 3 cans", "Basmati or jasmine rice 300g", "Rolled oats 200g", "Low-sugar granola 300g", "Vanilla protein powder", "Whole grain bread 1 loaf"],
-  "Produce": ["Spinach — 2 large bags", "Kale — 1 bunch", "Zucchini x 5", "Broccoli 400g", "Brussels sprouts 400g", "Asparagus x 1 bunch", "Bell peppers x 6 mixed", "Cherry tomatoes — 2 cups", "Sweet potatoes x 3", "Snap peas + bok choy", "Red onion x 2", "Onion x 1", "Carrot x 1, Celery x 1 stalk", "Avocado x 3", "Banana x 2 ripe", "Mixed berries — fresh or frozen", "Garlic — 1 head", "Fresh ginger + parsley", "Lemons x 6"],
-  "Frozen": ["Edamame shelled — large bag"],
-  "Pantry": ["Olive oil", "Sesame oil", "Soy sauce", "Sriracha", "Dijon mustard", "Honey", "Walnuts 100g", "Ground flaxseed", "Shredded cheese", "Sesame seeds"],
-  "Spices": ["Cumin, Smoked paprika, Turmeric", "Garlic powder, Chili flakes", "Rosemary, Thyme, Oregano, Cinnamon"],
-};
-
-const CURRENT_WEEK = { id: WEEK_ID, label: WEEK_LABEL, savedAt: new Date().toISOString(), dinners: DINNERS, jakeLunch: JAKE_LUNCH, laineLunch: LAINE_LUNCH, laineBreakfasts: LAINE_BREAKFASTS, jakeSnacks: JAKE_SNACKS, shopping: SHOPPING };
-
-// ── COMPONENTS ─────────────────────────────────────────────────────────────
+// ── STYLES / COLORS ────────────────────────────────────────────────────────
 
 const CLR = { cal: "#e8e4dc", protein: "#e07070", carbs: "#d4924a", fat: "#5ba3d0", fiber: "#7ec8a0" };
+
+const S = {
+  card: { background: "#181818", border: "1px solid #252525", borderRadius: 13, padding: "16px 18px" },
+  cardTitle: { fontFamily: "monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 11 },
+  label: { fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555" },
+};
+
+// ── COMPONENTS ─────────────────────────────────────────────────────────────
 
 function MacroRow({ macros }) {
   const items = [["cal", macros.cal, "kcal"], ["protein", macros.protein, "g"], ["carbs", macros.carbs, "g"], ["fat", macros.fat, "g"]];
@@ -98,8 +60,8 @@ function MacroRow({ macros }) {
 
 function Card({ title, children }) {
   return (
-    <div style={{ background: "#181818", border: "1px solid #252525", borderRadius: 13, padding: "16px 18px" }}>
-      <div style={{ fontFamily: "monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 11 }}>{title}</div>
+    <div style={S.card}>
+      <div style={S.cardTitle}>{title}</div>
       {children}
     </div>
   );
@@ -204,16 +166,14 @@ function DinnerCard({ d, isOpen, onToggle }) {
   );
 }
 
-// ── WEEK VIEW (used for both current and history) ───────────────────────────
+// ── WEEK VIEW ──────────────────────────────────────────────────────────────
 
 function WeekView({ week }) {
   const [tab, setTab] = useState(0);
   const [openDinner, setOpenDinner] = useState(null);
   const [openLunch, setOpenLunch] = useState(null);
   const [openBreakfast, setOpenBreakfast] = useState(null);
-
   const TABS = ["Lunch Prep", "Dinners", "Laine's Breakfasts", "Jake's Snacks", "Shopping", "Targets"];
-  const d = week;
 
   return (
     <div>
@@ -226,17 +186,17 @@ function WeekView({ week }) {
       {tab === 0 && (
         <div>
           <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555", marginBottom: 20 }}>Two separate preps — Sunday — Mon-Fri</div>
-          <Accordion label="Jake" labelColor="#5ba3d0" name={d.jakeLunch.name} note={d.jakeLunch.note} macros={d.jakeLunch.macros} ingredients={d.jakeLunch.ingredients} steps={d.jakeLunch.steps} isOpen={openLunch === 0} onToggle={() => setOpenLunch(openLunch === 0 ? null : 0)} />
-          <Accordion label="Laine" labelColor="#e07070" name={d.laineLunch.name} note={d.laineLunch.note} macros={d.laineLunch.macros} ingredients={d.laineLunch.ingredients} steps={d.laineLunch.steps} isOpen={openLunch === 1} onToggle={() => setOpenLunch(openLunch === 1 ? null : 1)} />
+          <Accordion label="Jake" labelColor="#5ba3d0" name={week.jakeLunch.name} note={week.jakeLunch.note} macros={week.jakeLunch.macros} ingredients={week.jakeLunch.ingredients} steps={week.jakeLunch.steps} isOpen={openLunch === 0} onToggle={() => setOpenLunch(openLunch === 0 ? null : 0)} />
+          <Accordion label="Laine" labelColor="#e07070" name={week.laineLunch.name} note={week.laineLunch.note} macros={week.laineLunch.macros} ingredients={week.laineLunch.ingredients} steps={week.laineLunch.steps} isOpen={openLunch === 1} onToggle={() => setOpenLunch(openLunch === 1 ? null : 1)} />
         </div>
       )}
 
       {tab === 1 && (
         <div>
-          <div style={{ fontSize: 13, color: "#666", marginBottom: 20, lineHeight: 1.6 }}>Every dinner cooked together. Same recipe, different portions. Each card has a Jake vs Laine ingredient table.</div>
+          <div style={{ fontSize: 13, color: "#666", marginBottom: 20, lineHeight: 1.6 }}>Every dinner cooked together. Same recipe, different portions. Each card shows Jake vs Laine amounts.</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {d.dinners.map((dinner, i) => (
-              <DinnerCard key={dinner.day} d={dinner} isOpen={openDinner === i} onToggle={() => setOpenDinner(openDinner === i ? null : i)} />
+            {week.dinners.map((d, i) => (
+              <DinnerCard key={d.day} d={d} isOpen={openDinner === i} onToggle={() => setOpenDinner(openDinner === i ? null : i)} />
             ))}
           </div>
         </div>
@@ -244,8 +204,8 @@ function WeekView({ week }) {
 
       {tab === 2 && (
         <div>
-          <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Laine only — Jake has coffee. Three rotating options, all higher-carb to match her macro split.</div>
-          {d.laineBreakfasts.map((b, i) => (
+          <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Laine only — Jake has coffee. Three rotating options, higher-carb to match her macro split.</div>
+          {week.laineBreakfasts.map((b, i) => (
             <Accordion key={b.name} label={b.day} labelColor="#e07070" name={b.name} macros={b.macros} ingredients={b.ingredients} steps={b.steps} isOpen={openBreakfast === i} onToggle={() => setOpenBreakfast(openBreakfast === i ? null : i)} />
           ))}
         </div>
@@ -255,7 +215,7 @@ function WeekView({ week }) {
         <div>
           <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Jake only — pick 1-2 per day to fill the calorie and protein gap from skipping breakfast.</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {d.jakeSnacks.map(s => (
+            {week.jakeSnacks.map(s => (
               <div key={s.name} style={{ background: "#181818", border: "1px solid #252525", borderRadius: 14, padding: "18px 20px" }}>
                 <div style={{ fontSize: 15, fontWeight: 400, marginBottom: 6 }}>{s.name}</div>
                 <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6, marginBottom: 12 }}>{s.desc}</div>
@@ -270,7 +230,7 @@ function WeekView({ week }) {
         <div>
           <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555", marginBottom: 24 }}>Full household — one grocery run</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 20 }}>
-            {Object.entries(d.shopping).map(([cat, items]) => (
+            {Object.entries(week.shopping).map(([cat, items]) => (
               <div key={cat}>
                 <div style={{ fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8b87a", marginBottom: 10, paddingBottom: 6, borderBottom: "1px solid #1e1e1e" }}>{cat}</div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 5 }}>
@@ -290,8 +250,8 @@ function WeekView({ week }) {
         <div>
           <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555", marginBottom: 24 }}>Daily targets vs estimated intake</div>
           {[
-            { person: "Jake", color: "#5ba3d0", border: "#1a3a52", rows: [["Lunch Bowl", 650, 68, 42, 18, 16], ["Dinner (avg)", 680, 61, 33, 28, 10], ["1-2 Snacks", 480, 42, 20, 34, 5], ["Coffee", 20, 1, 2, 1, 0]], total: [1830, 172, 97, 81, 31], goal: [2030, 203, 102, 90, 35] },
-            { person: "Laine", color: "#e07070", border: "#3d1a1a", rows: [["Breakfast (avg)", 347, 24, 42, 8, 5], ["Lunch Bowl", 480, 42, 52, 10, 8], ["Dinner (avg)", 474, 40, 40, 10, 10], ["Coffee", 20, 1, 2, 1, 0]], total: [1321, 107, 136, 29, 23], goal: [1363, 103, 152, 37, 30] },
+            { person: "Jake", color: "#5ba3d0", border: "#1a3a52", rows: week.targets.jake.rows, total: week.targets.jake.total, goal: week.targets.jake.goal },
+            { person: "Laine", color: "#e07070", border: "#3d1a1a", rows: week.targets.laine.rows, total: week.targets.laine.total, goal: week.targets.laine.goal },
           ].map(({ person, color, border, rows, total, goal }) => (
             <div key={person} style={{ marginBottom: 28 }}>
               <div style={{ fontSize: 13, color, fontFamily: "monospace", textTransform: "uppercase", marginBottom: 12 }}>{person}</div>
@@ -334,25 +294,12 @@ function WeekView({ week }) {
   );
 }
 
-// ── HISTORY TAB ─────────────────────────────────────────────────────────────
+// ── HISTORY TAB ────────────────────────────────────────────────────────────
 
-function HistoryTab() {
-  const [history, setHistory] = useState([]);
+function HistoryTab({ allWeeks }) {
   const [viewing, setViewing] = useState(null);
 
-  useEffect(() => {
-    try {
-      const stored = JSON.parse(localStorage.getItem("mealplan_history") || "[]");
-      setHistory(stored);
-    } catch (e) {}
-  }, []);
-
-  const deleteWeek = (id) => {
-    const updated = history.filter(w => w.id !== id);
-    localStorage.setItem("mealplan_history", JSON.stringify(updated));
-    setHistory(updated);
-    if (viewing && viewing.id === id) setViewing(null);
-  };
+  const past = allWeeks.filter(w => w.id !== CURRENT_WEEK_ID).reverse();
 
   if (viewing) {
     return (
@@ -366,12 +313,12 @@ function HistoryTab() {
     );
   }
 
-  if (history.length === 0) {
+  if (past.length === 0) {
     return (
       <div style={{ textAlign: "center", padding: "60px 0", color: "#444" }}>
         <div style={{ fontSize: 32, marginBottom: 12 }}>📋</div>
-        <div style={{ fontSize: 14 }}>No past weeks saved yet.</div>
-        <div style={{ fontSize: 12, marginTop: 6, color: "#333" }}>The current week saves automatically each time you open this app.</div>
+        <div style={{ fontSize: 14 }}>No past weeks yet.</div>
+        <div style={{ fontSize: 12, marginTop: 6, color: "#333" }}>Past weeks show up here automatically as you add new JSON files.</div>
       </div>
     );
   }
@@ -379,21 +326,16 @@ function HistoryTab() {
   return (
     <div>
       <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555", marginBottom: 20 }}>
-        {history.length} week{history.length !== 1 ? "s" : ""} saved
+        {past.length} past week{past.length !== 1 ? "s" : ""}
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {history.slice().reverse().map(week => (
+        {past.map(week => (
           <div key={week.id} style={{ background: "#181818", border: "1px solid #252525", borderRadius: 14, padding: "16px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <div>
               <div style={{ fontSize: 15, fontWeight: 400, marginBottom: 4 }}>{week.label}</div>
-              <div style={{ fontSize: 11, color: "#444", fontFamily: "monospace" }}>
-                {week.dinners ? week.dinners.length + " dinners" : ""} · saved {new Date(week.savedAt).toLocaleDateString()}
-              </div>
+              <div style={{ fontSize: 11, color: "#444", fontFamily: "monospace" }}>{week.dinners.length} dinners</div>
             </div>
-            <div style={{ display: "flex", gap: 8 }}>
-              <button onClick={() => setViewing(week)} style={{ background: "#1e1e1e", border: "1px solid #2e2e2e", borderRadius: 8, color: "#c8b87a", padding: "7px 14px", cursor: "pointer", fontSize: 12 }}>View</button>
-              <button onClick={() => deleteWeek(week.id)} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 8, color: "#555", padding: "7px 10px", cursor: "pointer", fontSize: 12 }}>✕</button>
-            </div>
+            <button onClick={() => setViewing(week)} style={{ background: "#1e1e1e", border: "1px solid #2e2e2e", borderRadius: 8, color: "#c8b87a", padding: "7px 14px", cursor: "pointer", fontSize: 12 }}>View</button>
           </div>
         ))}
       </div>
@@ -401,41 +343,71 @@ function HistoryTab() {
   );
 }
 
-// ── APP ─────────────────────────────────────────────────────────────────────
+// ── APP ────────────────────────────────────────────────────────────────────
 
 function App() {
   const [mainTab, setMainTab] = useState(0);
-  const [saved, setSaved] = useState(false);
+  const [allWeeks, setAllWeeks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    try {
-      const history = JSON.parse(localStorage.getItem("mealplan_history") || "[]");
-      const exists = history.find(w => w.id === CURRENT_WEEK.id);
-      if (!exists) {
-        history.push(CURRENT_WEEK);
-        localStorage.setItem("mealplan_history", JSON.stringify(history));
+    async function loadWeeks() {
+      try {
+        const results = await Promise.all(
+          WEEK_REGISTRY.map(async ({ id, label }) => {
+            const res = await fetch("weeks/" + id + ".json");
+            if (!res.ok) throw new Error("Could not load " + id + ".json");
+            const data = await res.json();
+            return { ...data, id, label };
+          })
+        );
+        setAllWeeks(results);
+      } catch (e) {
+        setError(e.message);
+      } finally {
+        setLoading(false);
       }
-      setSaved(true);
-    } catch (e) {}
+    }
+    loadWeeks();
   }, []);
 
+  const currentWeek = allWeeks.find(w => w.id === CURRENT_WEEK_ID);
   const MAIN_TABS = ["This Week", "Past Weeks"];
+
+  if (loading) {
+    return (
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", color: "#444", fontSize: 13, fontFamily: "monospace" }}>
+        Loading...
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ textAlign: "center", color: "#e07070", fontFamily: "monospace", fontSize: 13 }}>
+          <div style={{ marginBottom: 8 }}>Error loading week data</div>
+          <div style={{ color: "#555", fontSize: 11 }}>{error}</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ minHeight: "100vh", padding: "40px 20px 80px" }}>
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
 
-        {/* HEADER */}
         <div style={{ marginBottom: 36, borderBottom: "1px solid #1e1e1e", paddingBottom: 28 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "#c8b87a", marginBottom: 10 }}>Household Meal Plan</div>
           <h1 style={{ fontSize: "clamp(1.8rem, 5vw, 2.8rem)", fontWeight: 300, lineHeight: 1.1, letterSpacing: "-0.02em", marginBottom: 16 }}>
             Jake <span style={{ color: "#333" }}>&amp;</span> <span style={{ color: "#c8b87a", fontStyle: "italic" }}>Laine.</span>
           </h1>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, maxWidth: 480, flex: 1 }}>
+          {currentWeek && (
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, maxWidth: 480 }}>
               {[
-                { name: "Jake", m: JAKE_MACROS, color: "#5ba3d0", bg: "#0d1a26", border: "#1a3a52" },
-                { name: "Laine", m: LAINE_MACROS, color: "#e07070", bg: "#261515", border: "#3d1a1a" },
+                { name: "Jake", m: currentWeek.jakeMacros, color: "#5ba3d0", bg: "#0d1a26", border: "#1a3a52" },
+                { name: "Laine", m: currentWeek.laineMacros, color: "#e07070", bg: "#261515", border: "#3d1a1a" },
               ].map(({ name, m, color, bg, border }) => (
                 <div key={name} style={{ background: bg, border: "1px solid " + border, borderRadius: 12, padding: "12px 14px" }}>
                   <div style={{ fontSize: 11, color, fontFamily: "monospace", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>{name}</div>
@@ -445,29 +417,23 @@ function App() {
                 </div>
               ))}
             </div>
-            {saved && (
-              <div style={{ fontSize: 11, color: "#3a6a3a", background: "#0d1a0d", border: "1px solid #1a3a1a", borderRadius: 8, padding: "6px 12px", fontFamily: "monospace" }}>
-                ✓ {WEEK_LABEL} saved
-              </div>
-            )}
-          </div>
+          )}
         </div>
 
-        {/* MAIN TABS */}
         <div style={{ display: "flex", gap: 4, background: "#141414", border: "1px solid #1e1e1e", borderRadius: 12, padding: 4, marginBottom: 28, maxWidth: 300 }}>
           {MAIN_TABS.map((t, i) => (
             <button key={t} onClick={() => setMainTab(i)} style={{ flex: 1, padding: "9px 14px", background: mainTab === i ? "#1e1e1e" : "none", border: "1px solid " + (mainTab === i ? "#2e2e2e" : "transparent"), borderRadius: 8, cursor: "pointer", color: mainTab === i ? "#e8e4dc" : "#555", fontSize: 11, letterSpacing: "0.04em", textTransform: "uppercase", transition: "all 0.15s" }}>{t}</button>
           ))}
         </div>
 
-        {mainTab === 0 && (
+        {mainTab === 0 && currentWeek && (
           <div>
-            <div style={{ fontSize: 13, color: "#c8b87a", fontFamily: "monospace", marginBottom: 20 }}>{WEEK_LABEL}</div>
-            <WeekView week={CURRENT_WEEK} />
+            <div style={{ fontSize: 13, color: "#c8b87a", fontFamily: "monospace", marginBottom: 20 }}>{currentWeek.label}</div>
+            <WeekView week={currentWeek} />
           </div>
         )}
 
-        {mainTab === 1 && <HistoryTab />}
+        {mainTab === 1 && <HistoryTab allWeeks={allWeeks} />}
 
       </div>
     </div>
@@ -478,3 +444,4 @@ ReactDOM.render(<App />, document.getElementById("root"));
 </script>
 </body>
 </html>
+
