@@ -22,23 +22,17 @@
 
 const { useState, useEffect, useContext, createContext, useCallback } = React;
 
-// ── WEEK REGISTRY ──────────────────────────────────────────────────────────
 const WEEK_REGISTRY = [
   { id: "2026-W19", label: "Week of May 4, 2026" },
 ];
 const CURRENT_WEEK_ID = WEEK_REGISTRY[WEEK_REGISTRY.length - 1].id;
 
-// ── CONTEXTS ───────────────────────────────────────────────────────────────
 const UnitsCtx = createContext("imperial");
 const useUnits = () => useContext(UnitsCtx);
-
 const SubsCtx = createContext({ subs: {}, setSub: () => {} });
 const useSubs = () => useContext(SubsCtx);
 
-// ── COLORS ────────────────────────────────────────────────────────────────
 const CLR = { cal: "#e8e4dc", protein: "#e07070", carbs: "#d4924a", fat: "#5ba3d0", fiber: "#7ec8a0" };
-
-// ── HELPERS ────────────────────────────────────────────────────────────────
 
 function resolveVal(val, units) {
   if (!val) return "";
@@ -46,17 +40,28 @@ function resolveVal(val, units) {
   return val[units] || val.metric || val.imperial || "";
 }
 
-// Given an ingredient object + current subs map, return the active ingredient
 function resolveIngredient(ing, subs, units) {
-  const subKey = ing.subKey;
-  if (subKey && subs[subKey]) {
-    const chosenSub = ing.substitutions.find(s => s.id === subs[subKey]);
-    if (chosenSub) return { ...ing, item: chosenSub.item, jake: chosenSub.jake || ing.jake, laine: chosenSub.laine || ing.laine, shared: chosenSub.shared || ing.shared };
-  }
-  return ing;
+  if (!ing.subKey || !subs[ing.subKey]) return ing;
+  const sub = ing.substitutions && ing.substitutions.find(s => s.id === subs[ing.subKey]);
+  if (!sub) return ing;
+  return { ...ing, item: sub.item, jake: sub.jake || ing.jake, laine: sub.laine || ing.laine, shared: sub.shared || ing.shared };
 }
 
-// Flatten all shopping items from a week, applying substitutions
+function resolveDinner(d, subs) {
+  let jake = d.jake, laine = d.laine, steps = d.steps;
+  for (const ing of d.ingredients) {
+    if (!ing.subKey || !subs[ing.subKey]) continue;
+    const sub = ing.substitutions && ing.substitutions.find(s => s.id === subs[ing.subKey]);
+    if (!sub) continue;
+    if (sub.macros_override) {
+      if (sub.macros_override.jake) jake = { ...jake, ...sub.macros_override.jake };
+      if (sub.macros_override.laine) laine = { ...laine, ...sub.macros_override.laine };
+    }
+    if (sub.steps) steps = sub.steps;
+  }
+  return { jake, laine, steps };
+}
+
 function buildShoppingList(week, subs, units) {
   const list = {};
   Object.entries(week.shopping).forEach(([cat, items]) => {
@@ -64,10 +69,7 @@ function buildShoppingList(week, subs, units) {
       if (typeof item === "string") return { display: item, key: item };
       if (item.subKey && subs[item.subKey]) {
         const sub = item.substitutions && item.substitutions.find(s => s.id === subs[item.subKey]);
-        if (sub) {
-          const display = resolveVal(sub.shopping || sub.item, units);
-          return { display, key: item.subKey + "-" + sub.id };
-        }
+        if (sub) return { display: resolveVal(sub.shopping || sub.item, units), key: item.subKey + "-" + sub.id };
       }
       return { display: resolveVal(item, units), key: resolveVal(item, units) };
     });
@@ -75,7 +77,6 @@ function buildShoppingList(week, subs, units) {
   return list;
 }
 
-// ── MACRO ROW ──────────────────────────────────────────────────────────────
 function MacroRow({ macros }) {
   const items = [["cal", macros.cal, "kcal"], ["protein", macros.protein, "g"], ["carbs", macros.carbs, "g"], ["fat", macros.fat, "g"]];
   if (macros.fiber != null) items.push(["fiber", macros.fiber, "g"]);
@@ -90,7 +91,6 @@ function MacroRow({ macros }) {
   );
 }
 
-// ── CARD ───────────────────────────────────────────────────────────────────
 function Card({ title, children }) {
   return (
     <div style={{ background: "#181818", border: "1px solid #252525", borderRadius: 13, padding: "16px 18px" }}>
@@ -100,7 +100,6 @@ function Card({ title, children }) {
   );
 }
 
-// ── STEPS ──────────────────────────────────────────────────────────────────
 function Steps({ items }) {
   return (
     <ol style={{ paddingLeft: 16, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
@@ -109,36 +108,22 @@ function Steps({ items }) {
   );
 }
 
-// ── INGREDIENT LIST (with substitution dropdowns) ─────────────────────────
 function SubDropdown({ ing }) {
   const { subs, setSub } = useSubs();
-  const units = useUnits();
   const [open, setOpen] = useState(false);
   const current = subs[ing.subKey] || "default";
-
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
-      <button
-        onClick={() => setOpen(o => !o)}
-        title="Substitutions"
-        style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 5, color: "#666", padding: "1px 5px", cursor: "pointer", fontSize: 10, lineHeight: 1, marginLeft: 6 }}
-      >
-        swap {open ? "▲" : "▼"}
+      <button onClick={() => setOpen(o => !o)} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 5, color: "#666", padding: "1px 5px", cursor: "pointer", fontSize: 10, lineHeight: 1, marginLeft: 6 }}>
+        swap {open ? "^" : "v"}
       </button>
       {open && (
         <div style={{ position: "absolute", top: "calc(100% + 4px)", left: 0, zIndex: 100, background: "#202020", border: "1px solid #333", borderRadius: 10, padding: 6, minWidth: 180, boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }}>
-          <div
-            onClick={() => { setSub(ing.subKey, null); setOpen(false); }}
-            style={{ padding: "7px 10px", fontSize: 12, color: current === "default" ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === "default" ? "#2a2510" : "none" }}
-          >
+          <div onClick={() => { setSub(ing.subKey, null); setOpen(false); }} style={{ padding: "7px 10px", fontSize: 12, color: current === "default" ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === "default" ? "#2a2510" : "none" }}>
             {ing.item} <span style={{ color: "#444", fontSize: 10 }}>(original)</span>
           </div>
           {ing.substitutions.map(sub => (
-            <div
-              key={sub.id}
-              onClick={() => { setSub(ing.subKey, sub.id); setOpen(false); }}
-              style={{ padding: "7px 10px", fontSize: 12, color: current === sub.id ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === sub.id ? "#2a2510" : "none" }}
-            >
+            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpen(false); }} style={{ padding: "7px 10px", fontSize: 12, color: current === sub.id ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === sub.id ? "#2a2510" : "none" }}>
               {sub.item}
               {sub.note && <div style={{ fontSize: 10, color: "#555", marginTop: 2 }}>{sub.note}</div>}
             </div>
@@ -155,14 +140,17 @@ function IngredientList({ items }) {
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
       {items.map((rawIng, i) => {
-        const ing = resolveIngredient(rawIng, subs, units);
-        const val = typeof rawIng === "string" ? rawIng : resolveVal(ing.shared || ing.jake, units);
-        const display = typeof rawIng === "string" ? rawIng : ing.item + (val && val !== ing.item ? " — " + val : "");
+        const text = typeof rawIng === "string"
+          ? rawIng
+          : rawIng.item
+            ? resolveIngredient(rawIng, subs, units).item
+            : rawIng[units] || rawIng.metric || rawIng.imperial || "";
+        const hasSubs = rawIng && rawIng.substitutions && rawIng.substitutions.length > 0;
         return (
           <li key={i} style={{ fontSize: 12, lineHeight: 1.5, color: "#bbb", paddingLeft: 13, position: "relative", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 2 }}>
-            <span style={{ position: "absolute", left: 0, color: "#c8b87a" }}>—</span>
-            <span>{typeof rawIng === "string" ? rawIng : ing.item}</span>
-            {rawIng.substitutions && rawIng.substitutions.length > 0 && <SubDropdown ing={rawIng} />}
+            <span style={{ position: "absolute", left: 0, color: "#c8b87a" }}>-</span>
+            <span>{text}</span>
+            {hasSubs && <SubDropdown ing={rawIng} />}
           </li>
         );
       })}
@@ -170,7 +158,6 @@ function IngredientList({ items }) {
   );
 }
 
-// ── ACCORDION ──────────────────────────────────────────────────────────────
 function Accordion({ label, labelColor, name, note, macros, ingredients, steps, isOpen, onToggle }) {
   return (
     <div style={{ background: "#181818", border: "1px solid " + (isOpen ? "#333" : "#222"), borderRadius: 14, overflow: "hidden", marginBottom: 10 }}>
@@ -182,7 +169,7 @@ function Accordion({ label, labelColor, name, note, macros, ingredients, steps, 
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, marginLeft: 12 }}>
           <span style={{ fontSize: 11, color: "#7ec8a0", fontFamily: "monospace" }}>{macros.protein}g P</span>
-          <span style={{ color: "#444", fontSize: 13 }}>{isOpen ? "▲" : "▼"}</span>
+          <span style={{ color: "#444", fontSize: 13 }}>{isOpen ? "^" : "v"}</span>
         </div>
       </button>
       {isOpen && (
@@ -198,11 +185,10 @@ function Accordion({ label, labelColor, name, note, macros, ingredients, steps, 
   );
 }
 
-// ── DINNER CARD ────────────────────────────────────────────────────────────
 function DinnerCard({ d, isOpen, onToggle }) {
   const { subs } = useSubs();
   const units = useUnits();
-
+  const { jake, laine, steps } = resolveDinner(d, subs);
   return (
     <div style={{ background: "#181818", border: "1px solid " + (isOpen ? "#333" : "#222"), borderRadius: 14, overflow: "hidden" }}>
       <button onClick={onToggle} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", background: "none", border: "none", cursor: "pointer", color: "inherit" }}>
@@ -213,10 +199,10 @@ function DinnerCard({ d, isOpen, onToggle }) {
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, marginLeft: 12 }}>
           <div style={{ textAlign: "right" }}>
-            <div style={{ fontSize: 11, color: "#5ba3d0", fontFamily: "monospace" }}>J: {d.jake.cal} kcal</div>
-            <div style={{ fontSize: 11, color: "#e07070", fontFamily: "monospace" }}>L: {d.laine.cal} kcal</div>
+            <div style={{ fontSize: 11, color: "#5ba3d0", fontFamily: "monospace" }}>J: {jake.cal} kcal</div>
+            <div style={{ fontSize: 11, color: "#e07070", fontFamily: "monospace" }}>L: {laine.cal} kcal</div>
           </div>
-          <span style={{ color: "#444", fontSize: 13 }}>{isOpen ? "▲" : "▼"}</span>
+          <span style={{ color: "#444", fontSize: 13 }}>{isOpen ? "^" : "v"}</span>
         </div>
       </button>
       {isOpen && (
@@ -224,14 +210,13 @@ function DinnerCard({ d, isOpen, onToggle }) {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 14 }}>
             <div>
               <div style={{ fontSize: 11, color: "#5ba3d0", fontFamily: "monospace", marginBottom: 6, textTransform: "uppercase" }}>Jake</div>
-              <MacroRow macros={d.jake} />
+              <MacroRow macros={jake} />
             </div>
             <div>
               <div style={{ fontSize: 11, color: "#e07070", fontFamily: "monospace", marginBottom: 6, textTransform: "uppercase" }}>Laine</div>
-              <MacroRow macros={d.laine} />
+              <MacroRow macros={laine} />
             </div>
           </div>
-
           <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 11, overflow: "hidden", marginBottom: 12 }}>
             <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: "1px solid #222" }}>
               {["Ingredient", "Jake", "Laine"].map(h => (
@@ -254,29 +239,25 @@ function DinnerCard({ d, isOpen, onToggle }) {
               );
             })}
           </div>
-
-          <Card title="Instructions"><Steps items={d.steps} /></Card>
+          <Card title="Instructions"><Steps items={steps} /></Card>
         </div>
       )}
     </div>
   );
 }
 
-// ── UNITS TOGGLE ───────────────────────────────────────────────────────────
 function UnitsToggle({ units, setUnits }) {
   return (
     <div style={{ display: "flex", gap: 2, background: "#141414", border: "1px solid #1e1e1e", borderRadius: 8, padding: 3 }}>
       {["imperial", "metric"].map(u => (
-        <button key={u} onClick={() => { setUnits(u); localStorage.setItem("mealplan_units", u); }}
-          style={{ padding: "5px 11px", background: units === u ? "#2a2a2a" : "none", border: "1px solid " + (units === u ? "#333" : "transparent"), borderRadius: 6, cursor: "pointer", color: units === u ? "#e8e4dc" : "#555", fontSize: 10, letterSpacing: "0.06em", textTransform: "uppercase", transition: "all 0.15s" }}>
-          {u === "imperial" ? "🇺🇸 US" : "🌍 Metric"}
+        <button key={u} onClick={() => { setUnits(u); localStorage.setItem("mealplan_units", u); }} style={{ padding: "5px 11px", background: units === u ? "#2a2a2a" : "none", border: "1px solid " + (units === u ? "#333" : "transparent"), borderRadius: 6, cursor: "pointer", color: units === u ? "#e8e4dc" : "#555", fontSize: 10, letterSpacing: "0.06em", textTransform: "uppercase", transition: "all 0.15s" }}>
+          {u === "imperial" ? "US" : "Metric"}
         </button>
       ))}
     </div>
   );
 }
 
-// ── SHOPPING LIST (with checkboxes) ────────────────────────────────────────
 function ShoppingList({ week }) {
   const { subs } = useSubs();
   const units = useUnits();
@@ -284,39 +265,22 @@ function ShoppingList({ week }) {
   const [checked, setChecked] = useState(() => {
     try { return JSON.parse(localStorage.getItem(storageKey) || "{}"); } catch { return {}; }
   });
-
-  const toggle = (key) => {
-    setChecked(prev => {
-      const next = { ...prev, [key]: !prev[key] };
-      localStorage.setItem(storageKey, JSON.stringify(next));
-      return next;
-    });
-  };
-
-  const clearAll = () => {
-    setChecked({});
-    localStorage.removeItem(storageKey);
-  };
-
+  const toggle = (key) => setChecked(prev => {
+    const next = { ...prev, [key]: !prev[key] };
+    localStorage.setItem(storageKey, JSON.stringify(next));
+    return next;
+  });
+  const clearAll = () => { setChecked({}); localStorage.removeItem(storageKey); };
   const list = buildShoppingList(week, subs, units);
   const totalItems = Object.values(list).flat().length;
   const checkedCount = Object.values(checked).filter(Boolean).length;
-
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-        <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555" }}>
-          Full household — one grocery run
-        </div>
+        <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555" }}>Full household - one grocery run</div>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          {checkedCount > 0 && (
-            <span style={{ fontSize: 11, color: "#7ec8a0", fontFamily: "monospace" }}>{checkedCount}/{totalItems} done</span>
-          )}
-          {checkedCount > 0 && (
-            <button onClick={clearAll} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 7, color: "#555", padding: "4px 10px", cursor: "pointer", fontSize: 11 }}>
-              Clear all
-            </button>
-          )}
+          {checkedCount > 0 && <span style={{ fontSize: 11, color: "#7ec8a0", fontFamily: "monospace" }}>{checkedCount}/{totalItems} done</span>}
+          {checkedCount > 0 && <button onClick={clearAll} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 7, color: "#555", padding: "4px 10px", cursor: "pointer", fontSize: 11 }}>Clear all</button>}
         </div>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: 20 }}>
@@ -329,7 +293,7 @@ function ShoppingList({ week }) {
                 return (
                   <li key={key} onClick={() => toggle(key)} style={{ fontSize: 12, color: done ? "#444" : "#999", display: "flex", gap: 8, lineHeight: 1.5, cursor: "pointer", alignItems: "flex-start", padding: "3px 0", userSelect: "none" }}>
                     <span style={{ flexShrink: 0, marginTop: 1, width: 16, height: 16, border: "1px solid " + (done ? "#3a6a3a" : "#333"), borderRadius: 4, background: done ? "#1a3a1a" : "none", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, color: "#7ec8a0", transition: "all 0.15s" }}>
-                      {done ? "✓" : ""}
+                      {done ? "v" : ""}
                     </span>
                     <span style={{ textDecoration: done ? "line-through" : "none", transition: "all 0.15s" }}>{display}</span>
                   </li>
@@ -343,14 +307,12 @@ function ShoppingList({ week }) {
   );
 }
 
-// ── WEEK VIEW ──────────────────────────────────────────────────────────────
 function WeekView({ week }) {
   const [tab, setTab] = useState(0);
   const [openDinner, setOpenDinner] = useState(null);
   const [openLunch, setOpenLunch] = useState(null);
   const [openBreakfast, setOpenBreakfast] = useState(null);
   const TABS = ["Lunch Prep", "Dinners", "Laine's Breakfasts", "Jake's Snacks", "Shopping", "Targets"];
-
   return (
     <div>
       <div style={{ display: "flex", gap: 3, flexWrap: "wrap", background: "#141414", border: "1px solid #1e1e1e", borderRadius: 12, padding: 4, marginBottom: 28 }}>
@@ -358,7 +320,6 @@ function WeekView({ week }) {
           <button key={t} onClick={() => setTab(i)} style={{ flex: 1, minWidth: 90, padding: "8px 10px", background: tab === i ? "#1e1e1e" : "none", border: "1px solid " + (tab === i ? "#2e2e2e" : "transparent"), borderRadius: 8, cursor: "pointer", color: tab === i ? "#e8e4dc" : "#555", fontSize: 10, letterSpacing: "0.04em", textTransform: "uppercase", transition: "all 0.15s" }}>{t}</button>
         ))}
       </div>
-
       {tab === 0 && (
         <div>
           <div style={{ background: "#1a1508", border: "1px solid #332e18", borderRadius: 12, padding: "12px 16px", marginBottom: 20, fontSize: 12, color: "#c8b87a", lineHeight: 1.6 }}>
@@ -368,10 +329,9 @@ function WeekView({ week }) {
           <Accordion label="Laine" labelColor="#e07070" name={week.laineLunch.name} note={week.laineLunch.note} macros={week.laineLunch.macros} ingredients={week.laineLunch.ingredients} steps={week.laineLunch.steps} isOpen={openLunch === 1} onToggle={() => setOpenLunch(openLunch === 1 ? null : 1)} />
         </div>
       )}
-
       {tab === 1 && (
         <div>
-          <div style={{ fontSize: 13, color: "#666", marginBottom: 20, lineHeight: 1.6 }}>Every dinner cooked together. Same recipe, different portions. Tap an ingredient's <span style={{ color: "#666", fontFamily: "monospace", fontSize: 11 }}>swap</span> button to substitute — it updates the shopping list too.</div>
+          <div style={{ fontSize: 13, color: "#666", marginBottom: 20, lineHeight: 1.6 }}>Every dinner cooked together. Same recipe, different portions. Tap swap to substitute - updates shopping list too.</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {week.dinners.map((d, i) => (
               <DinnerCard key={d.day} d={d} isOpen={openDinner === i} onToggle={() => setOpenDinner(openDinner === i ? null : i)} />
@@ -379,19 +339,17 @@ function WeekView({ week }) {
           </div>
         </div>
       )}
-
       {tab === 2 && (
         <div>
-          <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Laine only — Jake has coffee.</div>
+          <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Laine only - Jake has coffee.</div>
           {week.laineBreakfasts.map((b, i) => (
             <Accordion key={b.name} label={b.day} labelColor="#e07070" name={b.name} macros={b.macros} ingredients={b.ingredients} steps={b.steps} isOpen={openBreakfast === i} onToggle={() => setOpenBreakfast(openBreakfast === i ? null : i)} />
           ))}
         </div>
       )}
-
       {tab === 3 && (
         <div>
-          <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Jake only — pick 1-2 per day.</div>
+          <div style={{ fontSize: 13, color: "#666", marginBottom: 24, lineHeight: 1.6 }}>Jake only - pick 1-2 per day.</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {week.jakeSnacks.map(s => (
               <div key={s.name} style={{ background: "#181818", border: "1px solid #252525", borderRadius: 14, padding: "18px 20px" }}>
@@ -403,14 +361,12 @@ function WeekView({ week }) {
           </div>
         </div>
       )}
-
       {tab === 4 && <ShoppingList week={week} />}
-
       {tab === 5 && (
         <div>
           <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555", marginBottom: 24 }}>Daily targets vs estimated intake</div>
           {[
-            { person: "Jake",  color: "#5ba3d0", border: "#1a3a52", rows: week.targets.jake.rows,  total: week.targets.jake.total,  goal: week.targets.jake.goal },
+            { person: "Jake", color: "#5ba3d0", border: "#1a3a52", rows: week.targets.jake.rows, total: week.targets.jake.total, goal: week.targets.jake.goal },
             { person: "Laine", color: "#e07070", border: "#3d1a1a", rows: week.targets.laine.rows, total: week.targets.laine.total, goal: week.targets.laine.goal },
           ].map(({ person, color, border, rows, total, goal }) => (
             <div key={person} style={{ marginBottom: 28 }}>
@@ -454,23 +410,18 @@ function WeekView({ week }) {
   );
 }
 
-// ── HISTORY TAB ────────────────────────────────────────────────────────────
 function HistoryTab({ allWeeks }) {
   const [viewing, setViewing] = useState(null);
   const past = allWeeks.filter(w => w.id !== CURRENT_WEEK_ID).reverse();
-
   if (viewing) {
     return (
       <div>
-        <button onClick={() => setViewing(null)} style={{ display: "flex", alignItems: "center", gap: 8, background: "none", border: "1px solid #2a2a2a", borderRadius: 8, color: "#888", padding: "7px 14px", cursor: "pointer", fontSize: 12, marginBottom: 24 }}>
-          ← Back to history
-        </button>
+        <button onClick={() => setViewing(null)} style={{ display: "flex", alignItems: "center", gap: 8, background: "none", border: "1px solid #2a2a2a", borderRadius: 8, color: "#888", padding: "7px 14px", cursor: "pointer", fontSize: 12, marginBottom: 24 }}>Back to history</button>
         <div style={{ fontSize: 11, color: "#c8b87a", fontFamily: "monospace", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 20 }}>{viewing.label}</div>
         <WeekView week={viewing} />
       </div>
     );
   }
-
   if (past.length === 0) {
     return (
       <div style={{ textAlign: "center", padding: "60px 0", color: "#444" }}>
@@ -480,7 +431,6 @@ function HistoryTab({ allWeeks }) {
       </div>
     );
   }
-
   return (
     <div>
       <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555", marginBottom: 20 }}>{past.length} past week{past.length !== 1 ? "s" : ""}</div>
@@ -499,7 +449,6 @@ function HistoryTab({ allWeeks }) {
   );
 }
 
-// ── APP ────────────────────────────────────────────────────────────────────
 function App() {
   const [mainTab, setMainTab] = useState(0);
   const [allWeeks, setAllWeeks] = useState([]);
@@ -509,7 +458,6 @@ function App() {
   const [subs, setSubs] = useState(() => {
     try { return JSON.parse(localStorage.getItem("mealplan_subs") || "{}"); } catch { return {}; }
   });
-
   const setSub = useCallback((key, val) => {
     setSubs(prev => {
       const next = { ...prev };
@@ -518,7 +466,6 @@ function App() {
       return next;
     });
   }, []);
-
   useEffect(() => {
     async function loadWeeks() {
       try {
@@ -539,10 +486,8 @@ function App() {
     }
     loadWeeks();
   }, []);
-
   const currentWeek = allWeeks.find(w => w.id === CURRENT_WEEK_ID);
   const MAIN_TABS = ["This Week", "Past Weeks"];
-
   if (loading) return <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", color: "#444", fontSize: 13, fontFamily: "monospace" }}>Loading...</div>;
   if (error) return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -552,13 +497,11 @@ function App() {
       </div>
     </div>
   );
-
   return (
     <UnitsCtx.Provider value={units}>
       <SubsCtx.Provider value={{ subs, setSub }}>
         <div style={{ minHeight: "100vh", padding: "40px 20px 80px" }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
-
             <div style={{ marginBottom: 36, borderBottom: "1px solid #1e1e1e", paddingBottom: 28 }}>
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 16 }}>
                 <div>
@@ -572,7 +515,7 @@ function App() {
               {currentWeek && (
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, maxWidth: 480 }}>
                   {[
-                    { name: "Jake",  m: currentWeek.jakeMacros,  color: "#5ba3d0", bg: "#0d1a26", border: "#1a3a52" },
+                    { name: "Jake", m: currentWeek.jakeMacros, color: "#5ba3d0", bg: "#0d1a26", border: "#1a3a52" },
                     { name: "Laine", m: currentWeek.laineMacros, color: "#e07070", bg: "#261515", border: "#3d1a1a" },
                   ].map(({ name, m, color, bg, border }) => (
                     <div key={name} style={{ background: bg, border: "1px solid " + border, borderRadius: 12, padding: "12px 14px" }}>
@@ -585,13 +528,11 @@ function App() {
                 </div>
               )}
             </div>
-
             <div style={{ display: "flex", gap: 4, background: "#141414", border: "1px solid #1e1e1e", borderRadius: 12, padding: 4, marginBottom: 28, maxWidth: 300 }}>
               {MAIN_TABS.map((t, i) => (
                 <button key={t} onClick={() => setMainTab(i)} style={{ flex: 1, padding: "9px 14px", background: mainTab === i ? "#1e1e1e" : "none", border: "1px solid " + (mainTab === i ? "#2e2e2e" : "transparent"), borderRadius: 8, cursor: "pointer", color: mainTab === i ? "#e8e4dc" : "#555", fontSize: 11, letterSpacing: "0.04em", textTransform: "uppercase", transition: "all 0.15s" }}>{t}</button>
               ))}
             </div>
-
             {mainTab === 0 && currentWeek && (
               <div>
                 <div style={{ fontSize: 13, color: "#c8b87a", fontFamily: "monospace", marginBottom: 20 }}>{currentWeek.label}</div>
@@ -599,7 +540,6 @@ function App() {
               </div>
             )}
             {mainTab === 1 && <HistoryTab allWeeks={allWeeks} />}
-
           </div>
         </div>
       </SubsCtx.Provider>
