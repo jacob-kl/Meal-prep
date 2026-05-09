@@ -32,6 +32,9 @@ const useUnits = () => useContext(UnitsCtx);
 const SubsCtx = createContext({ subs: {}, setSub: () => {} });
 const useSubs = () => useContext(SubsCtx);
 
+const OpenDropdownCtx = createContext({ openKey: null, setOpenKey: () => {} });
+const useOpenDropdown = () => useContext(OpenDropdownCtx);
+
 const CLR = { cal: "#e8e4dc", protein: "#e07070", carbs: "#d4924a", fat: "#5ba3d0", fiber: "#7ec8a0" };
 
 function resolveVal(val, units) {
@@ -110,20 +113,34 @@ function Steps({ items }) {
 
 function SubDropdown({ ing }) {
   const { subs, setSub } = useSubs();
-  const [open, setOpen] = useState(false);
+  const { openKey, setOpenKey } = useOpenDropdown();
+  const btnRef = React.useRef(null);
+  const isOpen = openKey === ing.subKey;
   const current = subs[ing.subKey] || "default";
+
+  const toggle = () => setOpenKey(isOpen ? null : ing.subKey);
+
+  // Determine if we should open upward based on button position
+  const [openUp, setOpenUp] = useState(false);
+  useEffect(() => {
+    if (isOpen && btnRef.current) {
+      const rect = btnRef.current.getBoundingClientRect();
+      setOpenUp(rect.bottom + 220 > window.innerHeight);
+    }
+  }, [isOpen]);
+
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
-      <button onClick={() => setOpen(o => !o)} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 5, color: "#666", padding: "1px 5px", cursor: "pointer", fontSize: 10, lineHeight: 1, marginLeft: 6 }}>
-        swap {open ? "^" : "v"}
+      <button ref={btnRef} onClick={toggle} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 5, color: "#666", padding: "1px 5px", cursor: "pointer", fontSize: 10, lineHeight: 1, marginLeft: 6 }}>
+        swap {isOpen ? "^" : "v"}
       </button>
-      {open && (
-        <div style={{ position: "absolute", top: "calc(100% + 4px)", left: 0, zIndex: 100, background: "#202020", border: "1px solid #333", borderRadius: 10, padding: 6, minWidth: 180, boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }}>
-          <div onClick={() => { setSub(ing.subKey, null); setOpen(false); }} style={{ padding: "7px 10px", fontSize: 12, color: current === "default" ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === "default" ? "#2a2510" : "none" }}>
+      {isOpen && (
+        <div style={{ position: "absolute", [openUp ? "bottom" : "top"]: "calc(100% + 4px)", left: 0, zIndex: 200, background: "#202020", border: "1px solid #333", borderRadius: 10, padding: 6, minWidth: 200, boxShadow: "0 8px 24px rgba(0,0,0,0.6)" }}>
+          <div onClick={() => { setSub(ing.subKey, null); setOpenKey(null); }} style={{ padding: "7px 10px", fontSize: 12, color: current === "default" ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === "default" ? "#2a2510" : "none" }}>
             {ing.item} <span style={{ color: "#444", fontSize: 10 }}>(original)</span>
           </div>
           {ing.substitutions.map(sub => (
-            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpen(false); }} style={{ padding: "7px 10px", fontSize: 12, color: current === sub.id ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === sub.id ? "#2a2510" : "none" }}>
+            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpenKey(null); }} style={{ padding: "7px 10px", fontSize: 12, color: current === sub.id ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === sub.id ? "#2a2510" : "none" }}>
               {sub.item}
               {sub.note && <div style={{ fontSize: 10, color: "#555", marginTop: 2 }}>{sub.note}</div>}
             </div>
@@ -466,6 +483,7 @@ function App() {
       return next;
     });
   }, []);
+  const [openKey, setOpenKey] = useState(null);
   useEffect(() => {
     async function loadWeeks() {
       try {
@@ -499,6 +517,7 @@ function App() {
   );
   return (
     <UnitsCtx.Provider value={units}>
+      <OpenDropdownCtx.Provider value={{ openKey, setOpenKey }}>
       <SubsCtx.Provider value={{ subs, setSub }}>
         <div style={{ minHeight: "100vh", padding: "40px 20px 80px" }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -543,6 +562,7 @@ function App() {
           </div>
         </div>
       </SubsCtx.Provider>
+      </OpenDropdownCtx.Provider>
     </UnitsCtx.Provider>
   );
 }
