@@ -9,14 +9,14 @@
       "jake":  { "cal": 700, "protein": 58, "carbs": 28, "fat": 38, "fiber": 10 },
       "laine": { "cal": 480, "protein": 36, "carbs": 28, "fat": 18, "fiber": 10 },
       "ingredients": [
-        { "item": "Salmon fillet",                          "jake": "200g",    "laine": "130g" },
-        { "item": "Shelled edamame (frozen)",               "jake": "150g",    "laine": "100g" },
-        { "item": "Broccoli florets",                       "shared": "400g total" },
-        { "item": "Olive oil",                              "shared": "1.5 tbsp" },
+        { "item": "Salmon fillet",     "jake": { "metric": "200g", "imperial": "7 oz" },   "laine": { "metric": "130g", "imperial": "4.5 oz" } },
+        { "item": "Shelled edamame",   "jake": { "metric": "150g", "imperial": "1 cup" },  "laine": { "metric": "100g", "imperial": "2/3 cup" } },
+        { "item": "Broccoli florets",  "shared": { "metric": "400g total", "imperial": "about 4 cups total" } },
+        { "item": "Olive oil",         "shared": "1.5 tbsp" },
         { "item": "Soy sauce, sesame oil, garlic, sesame seeds", "shared": "to taste" }
       ],
       "steps": [
-        "Toss broccoli with olive oil, salt, garlic. Roast at 220C / 425F for 20 min.",
+        "Toss broccoli with olive oil, salt, garlic. Roast at 425F / 220C for 20 min.",
         "Season both salmon portions with soy sauce + sesame oil. Pan-sear 4 min per side.",
         "Microwave edamame per package. Toss with sesame oil + pinch of salt.",
         "Plate separately by portion size."
@@ -29,17 +29,17 @@
       "jake":  { "cal": 660, "protein": 62, "carbs": 30, "fat": 28, "fiber": 9 },
       "laine": { "cal": 420, "protein": 38, "carbs": 28, "fat": 12, "fiber": 7 },
       "ingredients": [
-        { "item": "Ground turkey (93% lean)", "jake": "250g",            "laine": "150g" },
-        { "item": "Bell peppers",             "jake": "2 large, halved", "laine": "1 large, halved" },
-        { "item": "Black beans, drained",     "shared": "1 can" },
-        { "item": "Canned diced tomatoes",    "shared": "100g" },
-        { "item": "Shredded cheese",          "jake": "2 tbsp",          "laine": "1 tbsp" },
+        { "item": "Ground turkey (93% lean)", "jake": { "metric": "250g", "imperial": "9 oz" },  "laine": { "metric": "150g", "imperial": "5.5 oz" } },
+        { "item": "Bell peppers",             "jake": "2 large, halved",                          "laine": "1 large, halved" },
+        { "item": "Black beans, drained",     "shared": "1 can (15 oz)" },
+        { "item": "Canned diced tomatoes",    "shared": { "metric": "100g", "imperial": "1/2 cup" } },
+        { "item": "Shredded cheese",          "jake": "2 tbsp",                                   "laine": "1 tbsp" },
         { "item": "Cumin, garlic powder, chili flakes", "shared": "to taste" }
       ],
       "steps": [
         "Brown all turkey in one pan with spices. Add beans + tomatoes. Cook 5 min.",
         "Fill Jake's 4 pepper halves generously, Laine's 2 halves modestly.",
-        "Top with cheese. Bake 20 min at 200C / 400F."
+        "Top with cheese. Bake 20 min at 400F / 200C."
       ]
     },
     {
@@ -49,15 +49,15 @@
       "jake":  { "cal": 740, "protein": 65, "carbs": 32, "fat": 36, "fiber": 8 },
       "laine": { "cal": 500, "protein": 42, "carbs": 38, "fat": 14, "fiber": 9 },
       "ingredients": [
-        { "item": "Steak (sirloin or flank)",  "jake": "220g",    "laine": "140g" },
-        { "item": "White cannellini beans",    "jake": "1/2 can", "laine": "3/4 can" },
-        { "item": "Asparagus",                 "shared": "1 bunch" },
-        { "item": "Olive oil",                 "jake": "1 tbsp",  "laine": "1/2 tbsp" },
+        { "item": "Steak (sirloin or flank)", "jake": { "metric": "220g", "imperial": "8 oz" },  "laine": { "metric": "140g", "imperial": "5 oz" } },
+        { "item": "White cannellini beans",   "jake": "1/2 can (15 oz)",                          "laine": "3/4 can (15 oz)" },
+        { "item": "Asparagus",                "shared": "1 bunch" },
+        { "item": "Olive oil",                "jake": "1 tbsp",                                   "laine": "1/2 tbsp" },
         { "item": "Garlic, lemon, rosemary, salt, pepper", "shared": "to taste" }
       ],
       "steps": [
         "Warm beans with garlic + olive oil. Mash roughly. Season with lemon + salt.",
-        "Roast asparagus with oil + salt at 220C for 12 min.",
+        "Roast asparagus with oil + salt at 425F / 220C for 12 min.",
         "Sear steaks in a hot cast-iron — Jake 3-4 min per side, Laine 2-3 min. Rest 5 min."
       ]
     },
@@ -68,11 +68,11 @@
       "jake":  { "cal": 620, "protein": 60, "carbs": 38, "fat": 22, "fiber": 10 },
       "laine": { "cal": 420, "protein": 38, "carbs": 38, "fat": 10, "fiber": 10 },
       "ingredients": [
-        { "item": "Raw shrimp, peeled",   "jake": "300g",  "laine": "180g" },
-        { "item": "Chickpeas, drained",   "shared": "1 can" },
+        { "item": "Raw shrimp, peeled",  "jake": { "metric": "300g", "imperial": "10 oz" }, "laine": { "metric": "180g", "imperial": "6.5 oz" } },
+        { "item": "Chickpeas, drained",  "shared": "1 can (15 oz)" },
         { "item": "Mixed veggies (bell pepper, snap peas, bok choy)", "shared": "3 cups" },
         { "item": "Soy sauce / sesame oil / sriracha", "shared": "2 tbsp / 1 tbsp / 1 tsp" },
-        { "item": "Garlic + ginger",      "shared": "2 cloves, 1 tsp" }
+        { "item": "Garlic + ginger",     "shared": "2 cloves, 1 tsp" }
       ],
       "steps": [
         "Mix sauce: soy sauce, sesame oil, sriracha, ginger. Set aside.",
@@ -87,17 +87,17 @@
       "jake":  { "cal": 580, "protein": 58, "carbs": 36, "fat": 16, "fiber": 12 },
       "laine": { "cal": 420, "protein": 36, "carbs": 42, "fat": 8,  "fiber": 12 },
       "ingredients": [
-        { "item": "Cod fillet",            "jake": "200g", "laine": "130g" },
-        { "item": "Dry green lentils",     "jake": "100g", "laine": "130g" },
-        { "item": "Canned diced tomatoes", "shared": "1 can" },
+        { "item": "Cod fillet",         "jake": { "metric": "200g", "imperial": "7 oz" },  "laine": { "metric": "130g", "imperial": "4.5 oz" } },
+        { "item": "Dry green lentils",  "jake": { "metric": "100g", "imperial": "1/2 cup" }, "laine": { "metric": "130g", "imperial": "2/3 cup" } },
+        { "item": "Canned diced tomatoes", "shared": "1 can (14.5 oz)" },
         { "item": "Carrot, celery, onion", "shared": "1 of each" },
         { "item": "Olive oil, cumin, paprika, lemon", "shared": "1 tbsp oil" },
         { "item": "Fresh parsley",         "shared": "handful" }
       ],
       "steps": [
         "Saute onion, carrot, celery in olive oil 5 min. Add spices, stir 1 min.",
-        "Add lentils, tomatoes, 700ml water. Simmer 20 min. Finish with lemon.",
-        "Season cod with salt, pepper, lemon zest. Bake at 200C for 12-14 min.",
+        "Add lentils, tomatoes, and 3 cups water. Simmer 20 min. Finish with lemon.",
+        "Season cod with salt, pepper, lemon zest. Bake at 400F / 200C for 12-14 min.",
         "Laine gets larger bowl of soup + smaller cod. Jake gets smaller soup + larger cod."
       ]
     },
@@ -108,14 +108,14 @@
       "jake":  { "cal": 720, "protein": 64, "carbs": 42, "fat": 28, "fiber": 9 },
       "laine": { "cal": 490, "protein": 40, "carbs": 52, "fat": 10, "fiber": 10 },
       "ingredients": [
-        { "item": "Boneless chicken thighs", "jake": "250g",     "laine": "160g" },
-        { "item": "Sweet potato, cubed",     "jake": "1 medium", "laine": "1.5 medium" },
+        { "item": "Boneless chicken thighs", "jake": { "metric": "250g", "imperial": "9 oz" }, "laine": { "metric": "160g", "imperial": "5.5 oz" } },
+        { "item": "Sweet potato, cubed",     "jake": "1 medium",                                "laine": "1.5 medium" },
         { "item": "Kale, stems removed",     "shared": "3 large handfuls" },
-        { "item": "Olive oil",               "jake": "2 tbsp",   "laine": "1/2 tbsp" },
+        { "item": "Olive oil",               "jake": "2 tbsp",                                  "laine": "1/2 tbsp" },
         { "item": "Garlic powder, smoked paprika, cumin, salt, lemon", "shared": "to taste" }
       ],
       "steps": [
-        "Toss sweet potato with oil, smoked paprika, salt. Roast at 210C / 410F for 25 min.",
+        "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
         "Season chicken with garlic powder, cumin, salt. Add to sheet pan for last 20 min.",
         "Massage kale with a little oil + salt. Add to pan for final 5 min.",
         "Portion chicken by weight. Laine gets more potato."
@@ -128,65 +128,65 @@
       "jake":  { "cal": 680, "protein": 72, "carbs": 38, "fat": 20, "fiber": 13 },
       "laine": { "cal": 470, "protein": 46, "carbs": 42, "fat": 8,  "fiber": 12 },
       "ingredients": [
-        { "item": "Pork tenderloin",          "jake": "220g",  "laine": "140g" },
-        { "item": "Brussels sprouts, halved", "shared": "400g" },
-        { "item": "Dry green lentils",        "jake": "80g",   "laine": "90g" },
-        { "item": "Olive oil",                "jake": "2 tbsp", "laine": "1/2 tbsp" },
+        { "item": "Pork tenderloin",          "jake": { "metric": "220g", "imperial": "8 oz" },  "laine": { "metric": "140g", "imperial": "5 oz" } },
+        { "item": "Brussels sprouts, halved", "shared": { "metric": "400g", "imperial": "about 4 cups" } },
+        { "item": "Dry green lentils",        "jake": { "metric": "80g", "imperial": "1/3 cup" }, "laine": { "metric": "90g", "imperial": "scant 1/2 cup" } },
+        { "item": "Olive oil",                "jake": "2 tbsp",                                   "laine": "1/2 tbsp" },
         { "item": "Dijon mustard, garlic, thyme, salt, pepper, lemon", "shared": "to taste" }
       ],
       "steps": [
         "Cook lentils: simmer in salted water 20 min. Drain, dress with olive oil + lemon.",
         "Rub pork with Dijon, garlic, thyme, salt + pepper. Sear 2 min per side.",
         "Toss Brussels sprouts with oil, salt, pepper. Arrange around pork on the pan.",
-        "Roast at 210C for 18-20 min until pork hits 63C / 145F. Rest 5 min. Portion by weight."
+        "Roast at 410F / 210C for 18-20 min until pork hits 145F / 63C. Rest 5 min. Portion by weight."
       ]
     }
   ],
   "jakeLunch": {
     "name": "Turkish-Style Lentil + Chicken Bowl",
-    "note": "Stores 5 days. Reheat 2 min with a splash of water on the lentils.",
+    "note": "Make the full batch below, then divide into 5 equal containers. Grab one each day Mon–Fri. Reheat 2 min — add a splash of water to the lentils first.",
     "macros": { "cal": 650, "protein": 68, "carbs": 42, "fat": 18, "fiber": 16 },
     "ingredients": [
-      "1.2 kg boneless chicken thighs",
-      "400g dry red lentils",
-      "2 cans (800g) black beans, drained",
-      "2 large zucchini, diced",
-      "300g fresh spinach",
+      { "metric": "1.2 kg boneless chicken thighs", "imperial": "2.6 lbs boneless chicken thighs" },
+      { "metric": "400g dry red lentils", "imperial": "2 cups dry red lentils" },
+      { "metric": "2 cans (800g total) black beans, drained", "imperial": "2 cans (15 oz each) black beans, drained" },
+      { "metric": "2 large zucchini, diced", "imperial": "2 large zucchini, diced" },
+      { "metric": "300g fresh spinach", "imperial": "10 oz / about 8 big handfuls fresh spinach" },
       "4 garlic cloves",
       "2 tbsp olive oil",
       "2 tsp cumin, 2 tsp smoked paprika, 1 tsp turmeric",
       "Salt, pepper, lemon juice",
-      "5 tbsp Greek yogurt (1 per portion, optional)"
+      "5 tbsp Greek yogurt — 1 per container (optional)"
     ],
     "steps": [
-      "Season chicken with cumin, paprika, salt + pepper. Bake at 200C / 400F for 25 min. Cool and shred.",
-      "Rinse lentils. Simmer in 900ml water with turmeric + garlic for 15 min.",
-      "Saute zucchini in olive oil 5 min. Add black beans, warm through. Add spinach, toss until wilted.",
-      "Divide into 5 containers: lentils bottom, veggies middle, chicken top. Squeeze lemon.",
-      "Pack Greek yogurt separately. Mix in before eating."
+      "Season chicken with cumin, paprika, salt + pepper. Bake at 400F / 200C for 25 min. Cool and shred. This is your protein for all 5 containers.",
+      "Rinse lentils. Simmer in 3.5 cups (900ml) water with turmeric + crushed garlic for 15 min until soft. They thicken as they cool — that's normal.",
+      "In a large pan, saute zucchini in olive oil 5 min. Add black beans, warm through. Add all the spinach, toss until wilted.",
+      "Divide everything evenly across 5 containers: lentils on the bottom, veggie/bean mix in the middle, shredded chicken on top.",
+      "Squeeze lemon over each container. Pack Greek yogurt separately if using — mix in right before eating."
     ]
   },
   "laineLunch": {
     "name": "Chicken, Rice + Roasted Veggie Bowl",
-    "note": "Higher carb, lower fat to match Laine's macros. Stores 5 days.",
+    "note": "Make the full batch below, then divide into 5 equal containers. Higher carb, lower fat to match Laine's macros. Keeps all week in the fridge.",
     "macros": { "cal": 480, "protein": 42, "carbs": 52, "fat": 10, "fiber": 8 },
     "ingredients": [
-      "700g boneless chicken breast",
-      "300g dry basmati or jasmine rice",
+      { "metric": "700g boneless chicken breast", "imperial": "1.5 lbs boneless chicken breast" },
+      { "metric": "300g dry basmati or jasmine rice", "imperial": "1.5 cups dry basmati or jasmine rice" },
       "2 large zucchini, diced",
       "2 cups cherry tomatoes",
-      "1 can (400g) chickpeas, drained",
+      { "metric": "1 can (400g) chickpeas, drained", "imperial": "1 can (15 oz) chickpeas, drained" },
       "1 red onion, diced",
       "1 tbsp olive oil",
       "1 tsp cumin, 1 tsp garlic powder, paprika, salt",
       "Lemon juice, fresh parsley"
     ],
     "steps": [
-      "Cook rice per package. Fluff and season lightly with salt.",
-      "Season chicken breast with spices. Bake at 200C for 22 min. Cool and slice.",
-      "Toss zucchini, cherry tomatoes, red onion, chickpeas with olive oil + salt. Roast at 210C for 20 min.",
-      "Divide into 5 containers: rice base, roasted veggie mix, sliced chicken on top.",
-      "Squeeze lemon over each, top with parsley. Refrigerate."
+      "Cook rice per package. Fluff and season lightly with salt. This is the base for all 5 containers.",
+      "Season chicken breast with spices. Bake at 400F / 200C for 22 min. Cool and slice.",
+      "Toss zucchini, cherry tomatoes, red onion, and chickpeas with olive oil + salt. Roast at 410F / 210C for 20 min.",
+      "Divide evenly across 5 containers: rice on the bottom, roasted veggie mix in the middle, sliced chicken on top.",
+      "Squeeze lemon over each container, top with parsley. Seal and refrigerate."
     ]
   },
   "laineBreakfasts": [
@@ -194,36 +194,112 @@
       "day": "Mon / Wed / Fri",
       "name": "Greek Yogurt Parfait",
       "macros": { "cal": 320, "protein": 22, "carbs": 38, "fat": 8, "fiber": 5 },
-      "ingredients": ["180g 0% Greek yogurt", "60g low-sugar granola", "100g mixed berries", "1 tsp honey", "1 tbsp ground flaxseed"],
-      "steps": ["Layer yogurt in a bowl.", "Top with berries, granola, flaxseed, and honey.", "Prep the night before in a jar — add granola in the morning to keep it crunchy."]
+      "ingredients": [
+        { "metric": "180g 0% Greek yogurt", "imperial": "3/4 cup 0% Greek yogurt" },
+        { "metric": "60g low-sugar granola", "imperial": "2/3 cup low-sugar granola" },
+        "100g / 3/4 cup mixed berries",
+        "1 tsp honey",
+        "1 tbsp ground flaxseed"
+      ],
+      "steps": [
+        "Layer yogurt in a bowl or jar.",
+        "Top with berries, granola, flaxseed, and a drizzle of honey.",
+        "Tip: prep the night before in a jar — just add granola in the morning so it stays crunchy."
+      ]
     },
     {
       "day": "Tue / Thu",
       "name": "Egg White Scramble + Toast",
       "macros": { "cal": 340, "protein": 26, "carbs": 36, "fat": 9, "fiber": 4 },
-      "ingredients": ["4 egg whites + 1 whole egg", "1/2 cup spinach", "1/4 bell pepper, diced", "2 slices whole grain toast", "1 tsp olive oil", "Salt, pepper, chili flakes"],
-      "steps": ["Saute bell pepper in olive oil 2 min. Add spinach, wilt 1 min.", "Add eggs. Scramble gently until just set.", "Serve with toast."]
+      "ingredients": [
+        "4 egg whites + 1 whole egg",
+        "1/2 cup spinach",
+        "1/4 bell pepper, diced",
+        "2 slices whole grain toast",
+        "1 tsp olive oil",
+        "Salt, pepper, chili flakes"
+      ],
+      "steps": [
+        "Saute bell pepper in olive oil 2 min. Add spinach, wilt 1 min.",
+        "Add eggs. Scramble gently over medium-low heat until just set.",
+        "Serve with toast."
+      ]
     },
     {
       "day": "Sat / Sun",
       "name": "Banana Oat Protein Pancakes",
       "macros": { "cal": 380, "protein": 24, "carbs": 52, "fat": 8, "fiber": 5 },
-      "ingredients": ["1 ripe banana", "60g rolled oats", "2 eggs", "1 scoop (30g) vanilla protein powder", "Pinch cinnamon", "Fresh fruit + honey to top"],
-      "steps": ["Blend banana, oats, eggs, protein powder, and cinnamon until smooth.", "Cook small pancakes on a non-stick pan, 2 min per side.", "Top with fresh fruit and a drizzle of honey."]
+      "ingredients": [
+        "1 ripe banana",
+        { "metric": "60g rolled oats", "imperial": "2/3 cup rolled oats" },
+        "2 eggs",
+        "1 scoop (30g / 1 oz) vanilla protein powder",
+        "Pinch cinnamon",
+        "Fresh fruit + honey to top"
+      ],
+      "steps": [
+        "Blend banana, oats, eggs, protein powder, and cinnamon until smooth.",
+        "Cook small pancakes on a non-stick pan over medium heat, 2 min per side.",
+        "Top with fresh fruit and a drizzle of honey."
+      ]
     }
   ],
   "jakeSnacks": [
-    { "name": "Cottage Cheese + Walnuts",   "macros": { "cal": 280, "protein": 24, "carbs": 6,  "fat": 18, "fiber": 1 }, "desc": "200g full-fat cottage cheese + 20g walnuts. No prep." },
+    { "name": "Cottage Cheese + Walnuts",   "macros": { "cal": 280, "protein": 24, "carbs": 6,  "fat": 18, "fiber": 1 }, "desc": "3/4 cup full-fat cottage cheese + a small handful of walnuts. No prep." },
     { "name": "Hard-Boiled Eggs + Avocado", "macros": { "cal": 310, "protein": 18, "carbs": 6,  "fat": 24, "fiber": 5 }, "desc": "2 hard-boiled eggs + 1/2 avocado, salt + chili flakes." },
-    { "name": "Greek Yogurt + Flaxseed",    "macros": { "cal": 200, "protein": 22, "carbs": 10, "fat": 5,  "fiber": 4 }, "desc": "200g 0% Greek yogurt + 1 tbsp ground flaxseed." },
-    { "name": "Edamame",                    "macros": { "cal": 180, "protein": 17, "carbs": 14, "fat": 8,  "fiber": 8 }, "desc": "200g shelled edamame, microwaved, sea salt." }
+    { "name": "Greek Yogurt + Flaxseed",    "macros": { "cal": 200, "protein": 22, "carbs": 10, "fat": 5,  "fiber": 4 }, "desc": "3/4 cup 0% Greek yogurt + 1 tbsp ground flaxseed." },
+    { "name": "Edamame",                    "macros": { "cal": 180, "protein": 17, "carbs": 14, "fat": 8,  "fiber": 8 }, "desc": "About 1.5 cups shelled edamame, microwaved, sea salt." }
   ],
   "shopping": {
-    "Proteins": ["Chicken thighs 1.61 kg boneless", "Chicken breast 700g", "Salmon fillet 330g", "Ground turkey 400g (93% lean)", "Sirloin or flank steak 360g", "Raw shrimp 480g peeled", "Cod fillet 330g", "Pork tenderloin 360g", "Eggs x 2 dozen", "Cottage cheese x 2 tubs 200g", "Greek yogurt — 2 large tubs"],
-    "Cans + Dry": ["Red lentils 400g dry", "Green lentils 450g dry", "Black beans x 3 cans", "Chickpeas x 2 cans", "White cannellini beans x 2 cans", "Diced tomatoes x 3 cans", "Basmati or jasmine rice 300g", "Rolled oats 200g", "Low-sugar granola 300g", "Vanilla protein powder", "Whole grain bread 1 loaf"],
-    "Produce": ["Spinach — 2 large bags", "Kale — 1 bunch", "Zucchini x 5", "Broccoli 400g", "Brussels sprouts 400g", "Asparagus x 1 bunch", "Bell peppers x 6 mixed", "Cherry tomatoes — 2 cups", "Sweet potatoes x 3", "Snap peas + bok choy", "Red onion x 2", "Onion x 1", "Carrot x 1, Celery x 1 stalk", "Avocado x 3", "Banana x 2 ripe", "Mixed berries — fresh or frozen", "Garlic — 1 head", "Fresh ginger + parsley", "Lemons x 6"],
+    "Proteins": [
+      { "metric": "Chicken thighs 1.61 kg boneless", "imperial": "Chicken thighs 3.5 lbs boneless" },
+      { "metric": "Chicken breast 700g", "imperial": "Chicken breast 1.5 lbs" },
+      { "metric": "Salmon fillet 330g", "imperial": "Salmon fillet 12 oz" },
+      { "metric": "Ground turkey 400g (93% lean)", "imperial": "Ground turkey 14 oz (93% lean)" },
+      { "metric": "Sirloin or flank steak 360g", "imperial": "Sirloin or flank steak 13 oz" },
+      { "metric": "Raw shrimp 480g peeled", "imperial": "Raw shrimp 1 lb peeled" },
+      { "metric": "Cod fillet 330g", "imperial": "Cod fillet 12 oz" },
+      { "metric": "Pork tenderloin 360g", "imperial": "Pork tenderloin 13 oz" },
+      "Eggs x 2 dozen",
+      "Cottage cheese x 2 tubs",
+      "Greek yogurt — 2 large tubs"
+    ],
+    "Cans + Dry": [
+      { "metric": "Red lentils 400g dry", "imperial": "Red lentils 2 cups dry" },
+      { "metric": "Green lentils 450g dry", "imperial": "Green lentils 2.5 cups dry" },
+      "Black beans x 3 cans (15 oz each)",
+      "Chickpeas x 2 cans (15 oz each)",
+      "White cannellini beans x 2 cans (15 oz each)",
+      "Diced tomatoes x 3 cans",
+      { "metric": "Basmati or jasmine rice 300g dry", "imperial": "Basmati or jasmine rice 1.5 cups dry" },
+      { "metric": "Rolled oats 200g", "imperial": "Rolled oats 2 cups" },
+      "Low-sugar granola 1 bag",
+      "Vanilla protein powder",
+      "Whole grain bread 1 loaf"
+    ],
+    "Produce": [
+      "Spinach — 2 large bags",
+      "Kale — 1 bunch",
+      "Zucchini x 5",
+      "Broccoli — 1 large head",
+      "Brussels sprouts — 1 bag",
+      "Asparagus x 1 bunch",
+      "Bell peppers x 6 mixed",
+      "Cherry tomatoes — 1 pint",
+      "Sweet potatoes x 3",
+      "Snap peas + bok choy",
+      "Red onion x 2",
+      "Onion x 1",
+      "Carrot x 1, Celery x 1 stalk",
+      "Avocado x 3",
+      "Banana x 2 ripe",
+      "Mixed berries — fresh or 1 frozen bag",
+      "Garlic — 1 head",
+      "Fresh ginger + parsley",
+      "Lemons x 6"
+    ],
     "Frozen": ["Edamame shelled — large bag"],
-    "Pantry": ["Olive oil", "Sesame oil", "Soy sauce", "Sriracha", "Dijon mustard", "Honey", "Walnuts 100g", "Ground flaxseed", "Shredded cheese", "Sesame seeds"],
+    "Pantry": ["Olive oil", "Sesame oil", "Soy sauce", "Sriracha", "Dijon mustard", "Honey", "Walnuts — small bag", "Ground flaxseed", "Shredded cheese", "Sesame seeds"],
     "Spices": ["Cumin, Smoked paprika, Turmeric", "Garlic powder, Chili flakes", "Rosemary, Thyme, Oregano, Cinnamon"]
   },
   "targets": {
@@ -239,3 +315,4 @@
     }
   }
 }
+
