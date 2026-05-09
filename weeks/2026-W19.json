@@ -1,38 +1,193 @@
 {
-  "jakeMacros": { "cal": 2030, "protein": 203, "carbs": 102, "fat": 90 },
-  "laineMacros": { "cal": 1363, "protein": 103, "carbs": 152, "fat": 37 },
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
   "dinners": [
     {
       "day": "Monday",
       "name": "Salmon, Edamame + Roasted Broccoli",
-      "note": "Same dish — Jake gets a larger salmon portion.",
-      "jake":  { "cal": 700, "protein": 58, "carbs": 28, "fat": 38, "fiber": 10 },
-      "laine": { "cal": 480, "protein": 36, "carbs": 28, "fat": 18, "fiber": 10 },
+      "note": "Same dish - Jake gets a larger salmon portion.",
+      "jake": {
+        "cal": 700,
+        "protein": 58,
+        "carbs": 28,
+        "fat": 38,
+        "fiber": 10
+      },
+      "laine": {
+        "cal": 480,
+        "protein": 36,
+        "carbs": 28,
+        "fat": 18,
+        "fiber": 10
+      },
       "ingredients": [
         {
           "item": "Salmon fillet",
-          "jake": { "metric": "200g", "imperial": "7 oz" },
-          "laine": { "metric": "130g", "imperial": "4.5 oz" },
+          "jake": {
+            "metric": "200g",
+            "imperial": "7 oz"
+          },
+          "laine": {
+            "metric": "130g",
+            "imperial": "4.5 oz"
+          },
           "subKey": "mon-protein",
           "substitutions": [
-            { "id": "trout",  "item": "Rainbow trout",  "note": "Same cook time, milder flavor", "shopping": { "metric": "Trout fillet 330g", "imperial": "Trout fillet 12 oz" } },
-            { "id": "tilapia","item": "Tilapia",         "note": "Leaner, more neutral", "shopping": { "metric": "Tilapia fillet 330g", "imperial": "Tilapia fillet 12 oz" } },
-            { "id": "shrimp", "item": "Large shrimp",    "note": "Pan-sear 2 min per side instead", "shopping": { "metric": "Large shrimp 330g peeled", "imperial": "Large shrimp 12 oz peeled" } }
+            {
+              "id": "trout",
+              "item": "Rainbow trout",
+              "note": "Same cook time, milder flavor",
+              "shopping": {
+                "metric": "Trout fillet 330g",
+                "imperial": "Trout fillet 12 oz"
+              },
+              "macros_override": {
+                "jake": {
+                  "cal": 690,
+                  "protein": 56,
+                  "carbs": 28,
+                  "fat": 36,
+                  "fiber": 10
+                },
+                "laine": {
+                  "cal": 470,
+                  "protein": 34,
+                  "carbs": 28,
+                  "fat": 16,
+                  "fiber": 10
+                }
+              },
+              "steps": [
+                "Toss broccoli with olive oil, salt, garlic. Roast at 425F / 220C for 20 min.",
+                "Season both trout portions with soy sauce + sesame oil. Pan-sear 3-4 min per side.",
+                "Microwave edamame per package. Toss with sesame oil + pinch of salt.",
+                "Plate separately by portion size."
+              ]
+            },
+            {
+              "id": "tilapia",
+              "item": "Tilapia",
+              "note": "Leaner, more neutral",
+              "shopping": {
+                "metric": "Tilapia fillet 330g",
+                "imperial": "Tilapia fillet 12 oz"
+              },
+              "macros_override": {
+                "jake": {
+                  "cal": 620,
+                  "protein": 56,
+                  "carbs": 28,
+                  "fat": 28,
+                  "fiber": 10
+                },
+                "laine": {
+                  "cal": 430,
+                  "protein": 34,
+                  "carbs": 28,
+                  "fat": 12,
+                  "fiber": 10
+                }
+              },
+              "steps": [
+                "Toss broccoli with olive oil, salt, garlic. Roast at 425F / 220C for 20 min.",
+                "Season both tilapia portions with soy sauce + sesame oil. Pan-sear 3 min per side.",
+                "Microwave edamame per package. Toss with sesame oil + pinch of salt.",
+                "Plate separately by portion size."
+              ]
+            },
+            {
+              "id": "shrimp",
+              "item": "Large shrimp",
+              "note": "Pan-sear 2 min per side instead",
+              "shopping": {
+                "metric": "Large shrimp 330g peeled",
+                "imperial": "Large shrimp 12 oz peeled"
+              },
+              "macros_override": {
+                "jake": {
+                  "cal": 580,
+                  "protein": 60,
+                  "carbs": 30,
+                  "fat": 18,
+                  "fiber": 10
+                },
+                "laine": {
+                  "cal": 400,
+                  "protein": 38,
+                  "carbs": 30,
+                  "fat": 10,
+                  "fiber": 10
+                }
+              },
+              "steps": [
+                "Toss broccoli with olive oil, salt, garlic. Roast at 425F / 220C for 20 min.",
+                "Season shrimp with soy sauce + sesame oil. Cook in a hot pan 2 min per side.",
+                "Microwave edamame per package. Toss with sesame oil + pinch of salt.",
+                "Plate separately by portion size."
+              ]
+            }
           ]
         },
-        { "item": "Shelled edamame", "jake": { "metric": "150g", "imperial": "1 cup" }, "laine": { "metric": "100g", "imperial": "2/3 cup" } },
+        {
+          "item": "Shelled edamame",
+          "jake": {
+            "metric": "150g",
+            "imperial": "1 cup"
+          },
+          "laine": {
+            "metric": "100g",
+            "imperial": "2/3 cup"
+          }
+        },
         {
           "item": "Broccoli florets",
-          "shared": { "metric": "400g total", "imperial": "about 4 cups total" },
+          "shared": {
+            "metric": "400g total",
+            "imperial": "about 4 cups total"
+          },
           "subKey": "mon-veg",
           "substitutions": [
-            { "id": "broccolini", "item": "Broccolini",    "note": "Roast 15 min instead of 20", "shopping": { "metric": "Broccolini 400g", "imperial": "Broccolini 2 bunches" } },
-            { "id": "greenbean",  "item": "Green beans",   "note": "Roast 15 min at same temp", "shopping": "Green beans — 1 large bag" },
-            { "id": "cauliflower","item": "Cauliflower",   "note": "Roast 25 min for golden edges", "shopping": "Cauliflower — 1 head" }
+            {
+              "id": "broccolini",
+              "item": "Broccolini",
+              "note": "Roast 15 min instead of 20",
+              "shopping": {
+                "metric": "Broccolini 400g",
+                "imperial": "Broccolini 2 bunches"
+              }
+            },
+            {
+              "id": "greenbean",
+              "item": "Green beans",
+              "note": "Roast 15 min at same temp",
+              "shopping": "Green beans - 1 large bag"
+            },
+            {
+              "id": "cauliflower",
+              "item": "Cauliflower",
+              "note": "Roast 25 min for golden edges",
+              "shopping": "Cauliflower - 1 head"
+            }
           ]
         },
-        { "item": "Olive oil", "shared": "1.5 tbsp" },
-        { "item": "Soy sauce, sesame oil, garlic, sesame seeds", "shared": "to taste" }
+        {
+          "item": "Olive oil",
+          "shared": "1.5 tbsp"
+        },
+        {
+          "item": "Soy sauce, sesame oil, garlic, sesame seeds",
+          "shared": "to taste"
+        }
       ],
       "steps": [
         "Toss broccoli with olive oil, salt, garlic. Roast at 425F / 220C for 20 min.",
@@ -45,24 +200,126 @@
       "day": "Tuesday",
       "name": "Turkey Stuffed Bell Peppers",
       "note": "Jake eats 2 peppers, Laine eats 1.",
-      "jake":  { "cal": 660, "protein": 62, "carbs": 30, "fat": 28, "fiber": 9 },
-      "laine": { "cal": 420, "protein": 38, "carbs": 28, "fat": 12, "fiber": 7 },
+      "jake": {
+        "cal": 660,
+        "protein": 62,
+        "carbs": 30,
+        "fat": 28,
+        "fiber": 9
+      },
+      "laine": {
+        "cal": 420,
+        "protein": 38,
+        "carbs": 28,
+        "fat": 12,
+        "fiber": 7
+      },
       "ingredients": [
         {
           "item": "Ground turkey (93% lean)",
-          "jake": { "metric": "250g", "imperial": "9 oz" },
-          "laine": { "metric": "150g", "imperial": "5.5 oz" },
+          "jake": {
+            "metric": "250g",
+            "imperial": "9 oz"
+          },
+          "laine": {
+            "metric": "150g",
+            "imperial": "5.5 oz"
+          },
           "subKey": "tue-protein",
           "substitutions": [
-            { "id": "beef",   "item": "Ground beef (90% lean)", "note": "Richer flavor, slightly more fat", "jake": { "metric": "250g", "imperial": "9 oz" }, "laine": { "metric": "150g", "imperial": "5.5 oz" }, "shopping": { "metric": "Ground beef 90% lean 400g", "imperial": "Ground beef 90% lean 14 oz" } },
-            { "id": "chicken","item": "Ground chicken",         "note": "Leaner than turkey", "jake": { "metric": "250g", "imperial": "9 oz" }, "laine": { "metric": "150g", "imperial": "5.5 oz" }, "shopping": { "metric": "Ground chicken 400g", "imperial": "Ground chicken 14 oz" } }
+            {
+              "id": "beef",
+              "item": "Ground beef (90% lean)",
+              "note": "Richer flavor, slightly more fat",
+              "jake": {
+                "metric": "250g",
+                "imperial": "9 oz"
+              },
+              "laine": {
+                "metric": "150g",
+                "imperial": "5.5 oz"
+              },
+              "shopping": {
+                "metric": "Ground beef 90% lean 400g",
+                "imperial": "Ground beef 90% lean 14 oz"
+              },
+              "macros_override": {
+                "jake": {
+                  "cal": 720,
+                  "protein": 60,
+                  "carbs": 30,
+                  "fat": 36,
+                  "fiber": 9
+                },
+                "laine": {
+                  "cal": 460,
+                  "protein": 36,
+                  "carbs": 28,
+                  "fat": 18,
+                  "fiber": 7
+                }
+              }
+            },
+            {
+              "id": "chicken",
+              "item": "Ground chicken",
+              "note": "Leaner than turkey",
+              "jake": {
+                "metric": "250g",
+                "imperial": "9 oz"
+              },
+              "laine": {
+                "metric": "150g",
+                "imperial": "5.5 oz"
+              },
+              "shopping": {
+                "metric": "Ground chicken 400g",
+                "imperial": "Ground chicken 14 oz"
+              },
+              "macros_override": {
+                "jake": {
+                  "cal": 620,
+                  "protein": 64,
+                  "carbs": 30,
+                  "fat": 22,
+                  "fiber": 9
+                },
+                "laine": {
+                  "cal": 400,
+                  "protein": 40,
+                  "carbs": 28,
+                  "fat": 10,
+                  "fiber": 7
+                }
+              }
+            }
           ]
         },
-        { "item": "Bell peppers", "jake": "2 large, halved", "laine": "1 large, halved" },
-        { "item": "Black beans, drained", "shared": "1 can (15 oz)" },
-        { "item": "Canned diced tomatoes", "shared": { "metric": "100g", "imperial": "1/2 cup" } },
-        { "item": "Shredded cheese", "jake": "2 tbsp", "laine": "1 tbsp" },
-        { "item": "Cumin, garlic powder, chili flakes", "shared": "to taste" }
+        {
+          "item": "Bell peppers",
+          "jake": "2 large, halved",
+          "laine": "1 large, halved"
+        },
+        {
+          "item": "Black beans, drained",
+          "shared": "1 can (15 oz)"
+        },
+        {
+          "item": "Canned diced tomatoes",
+          "shared": {
+            "metric": "100g",
+            "imperial": "1/2 cup"
+          }
+        },
+        {
+          "item": "Shredded cheese",
+          "jake": "2 tbsp",
+          "laine": "1 tbsp"
+        },
+        {
+          "item": "Cumin, garlic powder, chili flakes",
+          "shared": "to taste"
+        }
       ],
       "steps": [
         "Brown all turkey in one pan with spices. Add beans + tomatoes. Cook 5 min.",
@@ -74,68 +331,299 @@
       "day": "Wednesday",
       "name": "Steak, White Bean Mash + Asparagus",
       "note": "Jake gets larger steak. Laine gets more bean mash for carbs.",
-      "jake":  { "cal": 740, "protein": 65, "carbs": 32, "fat": 36, "fiber": 8 },
-      "laine": { "cal": 500, "protein": 42, "carbs": 38, "fat": 14, "fiber": 9 },
+      "jake": {
+        "cal": 740,
+        "protein": 65,
+        "carbs": 32,
+        "fat": 36,
+        "fiber": 8
+      },
+      "laine": {
+        "cal": 500,
+        "protein": 42,
+        "carbs": 38,
+        "fat": 14,
+        "fiber": 9
+      },
       "ingredients": [
         {
           "item": "Steak (sirloin or flank)",
-          "jake": { "metric": "220g", "imperial": "8 oz" },
-          "laine": { "metric": "140g", "imperial": "5 oz" },
+          "jake": {
+            "metric": "220g",
+            "imperial": "8 oz"
+          },
+          "laine": {
+            "metric": "140g",
+            "imperial": "5 oz"
+          },
           "subKey": "wed-protein",
           "substitutions": [
-            { "id": "chicken", "item": "Chicken breast", "note": "Bake at 400F for 22 min instead of searing", "jake": { "metric": "220g", "imperial": "8 oz" }, "laine": { "metric": "140g", "imperial": "5 oz" }, "shopping": { "metric": "Chicken breast 360g", "imperial": "Chicken breast 13 oz" } },
-            { "id": "pork",    "item": "Pork chop",      "note": "Sear 4 min per side, same rest time", "jake": { "metric": "220g", "imperial": "8 oz" }, "laine": { "metric": "140g", "imperial": "5 oz" }, "shopping": { "metric": "Pork chops 360g", "imperial": "Pork chops 13 oz" } }
+            {
+              "id": "chicken",
+              "item": "Chicken breast",
+              "note": "Bake at 400F for 22 min instead of searing",
+              "jake": {
+                "metric": "220g",
+                "imperial": "8 oz"
+              },
+              "laine": {
+                "metric": "140g",
+                "imperial": "5 oz"
+              },
+              "shopping": {
+                "metric": "Chicken breast 360g",
+                "imperial": "Chicken breast 13 oz"
+              },
+              "steps": [
+                "Warm beans with garlic + olive oil. Mash roughly. Season with lemon + salt.",
+                "Roast asparagus with oil + salt at 425F / 220C for 12 min.",
+                "Season chicken breast with salt, pepper, garlic. Bake at 400F for 22 min. Rest 5 min before slicing."
+              ],
+              "macros_override": {
+                "jake": {
+                  "cal": 640,
+                  "protein": 68,
+                  "carbs": 32,
+                  "fat": 20,
+                  "fiber": 8
+                },
+                "laine": {
+                  "cal": 440,
+                  "protein": 44,
+                  "carbs": 38,
+                  "fat": 8,
+                  "fiber": 9
+                }
+              }
+            },
+            {
+              "id": "pork",
+              "item": "Pork chop",
+              "note": "Sear 4 min per side, same rest time",
+              "jake": {
+                "metric": "220g",
+                "imperial": "8 oz"
+              },
+              "laine": {
+                "metric": "140g",
+                "imperial": "5 oz"
+              },
+              "shopping": {
+                "metric": "Pork chops 360g",
+                "imperial": "Pork chops 13 oz"
+              },
+              "steps": [
+                "Warm beans with garlic + olive oil. Mash roughly. Season with lemon + salt.",
+                "Roast asparagus with oil + salt at 425F / 220C for 12 min.",
+                "Season pork chops with salt, pepper, rosemary. Sear in a hot cast-iron 4 min per side. Rest 5 min."
+              ],
+              "macros_override": {
+                "jake": {
+                  "cal": 700,
+                  "protein": 62,
+                  "carbs": 32,
+                  "fat": 30,
+                  "fiber": 8
+                },
+                "laine": {
+                  "cal": 470,
+                  "protein": 40,
+                  "carbs": 38,
+                  "fat": 14,
+                  "fiber": 9
+                }
+              }
+            }
           ]
         },
-        { "item": "White cannellini beans", "jake": "1/2 can (15 oz)", "laine": "3/4 can (15 oz)" },
+        {
+          "item": "White cannellini beans",
+          "jake": "1/2 can (15 oz)",
+          "laine": "3/4 can (15 oz)"
+        },
         {
           "item": "Asparagus",
           "shared": "1 bunch",
           "subKey": "wed-veg",
           "substitutions": [
-            { "id": "broccolini", "item": "Broccolini",   "note": "Roast 15 min same temp", "shopping": "Broccolini — 2 bunches" },
-            { "id": "greenbean",  "item": "Green beans",  "note": "Roast 15 min same temp", "shopping": "Green beans — 1 large bag" },
-            { "id": "zucchini",   "item": "Zucchini, halved lengthwise", "note": "Roast 15 min cut-side up", "shopping": "Zucchini x 2 extra" }
+            {
+              "id": "broccolini",
+              "item": "Broccolini",
+              "note": "Roast 15 min same temp",
+              "shopping": "Broccolini - 2 bunches"
+            },
+            {
+              "id": "greenbean",
+              "item": "Green beans",
+              "note": "Roast 15 min same temp",
+              "shopping": "Green beans - 1 large bag"
+            },
+            {
+              "id": "zucchini",
+              "item": "Zucchini, halved lengthwise",
+              "note": "Roast 15 min cut-side up",
+              "shopping": "Zucchini x 2 extra"
+            }
           ]
         },
-        { "item": "Olive oil", "jake": "1 tbsp", "laine": "1/2 tbsp" },
-        { "item": "Garlic, lemon, rosemary, salt, pepper", "shared": "to taste" }
+        {
+          "item": "Olive oil",
+          "jake": "1 tbsp",
+          "laine": "1/2 tbsp"
+        },
+        {
+          "item": "Garlic, lemon, rosemary, salt, pepper",
+          "shared": "to taste"
+        }
       ],
       "steps": [
         "Warm beans with garlic + olive oil. Mash roughly. Season with lemon + salt.",
         "Roast asparagus with oil + salt at 425F / 220C for 12 min.",
-        "Sear steaks in a hot cast-iron — Jake 3-4 min per side, Laine 2-3 min. Rest 5 min."
+        "Sear steaks in a hot cast-iron - Jake 3-4 min per side, Laine 2-3 min. Rest 5 min."
       ]
     },
     {
       "day": "Thursday",
       "name": "Shrimp + Chickpea Stir-Fry",
-      "note": "Same sauce and veggies — Jake gets more shrimp.",
-      "jake":  { "cal": 620, "protein": 60, "carbs": 38, "fat": 22, "fiber": 10 },
-      "laine": { "cal": 420, "protein": 38, "carbs": 38, "fat": 10, "fiber": 10 },
+      "note": "Same sauce and veggies - Jake gets more shrimp.",
+      "jake": {
+        "cal": 620,
+        "protein": 60,
+        "carbs": 38,
+        "fat": 22,
+        "fiber": 10
+      },
+      "laine": {
+        "cal": 420,
+        "protein": 38,
+        "carbs": 38,
+        "fat": 10,
+        "fiber": 10
+      },
       "ingredients": [
         {
           "item": "Raw shrimp, peeled",
-          "jake": { "metric": "300g", "imperial": "10 oz" },
-          "laine": { "metric": "180g", "imperial": "6.5 oz" },
+          "jake": {
+            "metric": "300g",
+            "imperial": "10 oz"
+          },
+          "laine": {
+            "metric": "180g",
+            "imperial": "6.5 oz"
+          },
           "subKey": "thu-protein",
           "substitutions": [
-            { "id": "chicken", "item": "Chicken breast, cubed", "note": "Cook 5-6 min instead of 2 per side", "jake": { "metric": "300g", "imperial": "10 oz" }, "laine": { "metric": "180g", "imperial": "6.5 oz" }, "shopping": { "metric": "Chicken breast extra 480g", "imperial": "Chicken breast extra 1 lb" } },
-            { "id": "tofu",    "item": "Extra-firm tofu, cubed", "note": "Press 20 min first, then cook 4 min per side", "jake": { "metric": "300g", "imperial": "10 oz" }, "laine": { "metric": "180g", "imperial": "6.5 oz" }, "shopping": { "metric": "Extra-firm tofu 480g", "imperial": "Extra-firm tofu 1 lb" } }
+            {
+              "id": "chicken",
+              "item": "Chicken breast, cubed",
+              "note": "Cook 5-6 min instead of 2 per side",
+              "jake": {
+                "metric": "300g",
+                "imperial": "10 oz"
+              },
+              "laine": {
+                "metric": "180g",
+                "imperial": "6.5 oz"
+              },
+              "shopping": {
+                "metric": "Chicken breast extra 480g",
+                "imperial": "Chicken breast extra 1 lb"
+              },
+              "steps": [
+                "Mix sauce: soy sauce, sesame oil, sriracha, ginger. Set aside.",
+                "Saute garlic. Add chickpeas 3 min. Add veggies 3 min.",
+                "Add cubed chicken, cook 5-6 min until cooked through. Portion by weight.",
+                "Pour sauce over, toss, serve immediately."
+              ],
+              "macros_override": {
+                "jake": {
+                  "cal": 600,
+                  "protein": 62,
+                  "carbs": 38,
+                  "fat": 16,
+                  "fiber": 10
+                },
+                "laine": {
+                  "cal": 410,
+                  "protein": 40,
+                  "carbs": 38,
+                  "fat": 8,
+                  "fiber": 10
+                }
+              }
+            },
+            {
+              "id": "tofu",
+              "item": "Extra-firm tofu, cubed",
+              "note": "Press 20 min first, then cook 4 min per side",
+              "jake": {
+                "metric": "300g",
+                "imperial": "10 oz"
+              },
+              "laine": {
+                "metric": "180g",
+                "imperial": "6.5 oz"
+              },
+              "shopping": {
+                "metric": "Extra-firm tofu 480g",
+                "imperial": "Extra-firm tofu 1 lb"
+              },
+              "steps": [
+                "Mix sauce: soy sauce, sesame oil, sriracha, ginger. Set aside.",
+                "Press tofu 20 min, cube it. Pan-fry in a little oil 4 min per side until golden. Set aside.",
+                "Saute garlic. Add chickpeas 3 min. Add veggies 3 min. Add tofu back in.",
+                "Pour sauce over, toss gently, serve immediately."
+              ],
+              "macros_override": {
+                "jake": {
+                  "cal": 560,
+                  "protein": 44,
+                  "carbs": 42,
+                  "fat": 22,
+                  "fiber": 12
+                },
+                "laine": {
+                  "cal": 400,
+                  "protein": 30,
+                  "carbs": 42,
+                  "fat": 14,
+                  "fiber": 12
+                }
+              }
+            }
           ]
         },
-        { "item": "Chickpeas, drained", "shared": "1 can (15 oz)" },
+        {
+          "item": "Chickpeas, drained",
+          "shared": "1 can (15 oz)"
+        },
         {
           "item": "Mixed veggies (bell pepper, snap peas, bok choy)",
           "shared": "3 cups",
           "subKey": "thu-veg",
           "substitutions": [
-            { "id": "broccoli", "item": "Broccoli, snap peas, carrots", "note": "Add carrots first, cook 1 min extra", "shopping": "Broccoli 1 head + carrots 2 extra" },
-            { "id": "frozen",   "item": "Frozen stir-fry veggie blend", "note": "Fastest option — thaw first or add 2 extra min", "shopping": "Frozen stir-fry blend — 1 large bag" }
+            {
+              "id": "broccoli",
+              "item": "Broccoli, snap peas, carrots",
+              "note": "Add carrots first, cook 1 min extra",
+              "shopping": "Broccoli 1 head + carrots 2 extra"
+            },
+            {
+              "id": "frozen",
+              "item": "Frozen stir-fry veggie blend",
+              "note": "Fastest option - thaw first or add 2 extra min",
+              "shopping": "Frozen stir-fry blend - 1 large bag"
+            }
           ]
         },
-        { "item": "Soy sauce / sesame oil / sriracha", "shared": "2 tbsp / 1 tbsp / 1 tsp" },
-        { "item": "Garlic + ginger", "shared": "2 cloves, 1 tsp" }
+        {
+          "item": "Soy sauce / sesame oil / sriracha",
+          "shared": "2 tbsp / 1 tbsp / 1 tsp"
+        },
+        {
+          "item": "Garlic + ginger",
+          "shared": "2 cloves, 1 tsp"
+        }
       ],
       "steps": [
         "Mix sauce: soy sauce, sesame oil, sriracha, ginger. Set aside.",
@@ -147,25 +635,89 @@
       "day": "Friday",
       "name": "Baked Cod + Lemon Lentil Soup",
       "note": "More soup for Laine (carbs), more cod for Jake.",
-      "jake":  { "cal": 580, "protein": 58, "carbs": 36, "fat": 16, "fiber": 12 },
-      "laine": { "cal": 420, "protein": 36, "carbs": 42, "fat": 8,  "fiber": 12 },
+      "jake": {
+        "cal": 580,
+        "protein": 58,
+        "carbs": 36,
+        "fat": 16,
+        "fiber": 12
+      },
+      "laine": {
+        "cal": 420,
+        "protein": 36,
+        "carbs": 42,
+        "fat": 8,
+        "fiber": 12
+      },
       "ingredients": [
         {
           "item": "Cod fillet",
-          "jake": { "metric": "200g", "imperial": "7 oz" },
-          "laine": { "metric": "130g", "imperial": "4.5 oz" },
+          "jake": {
+            "metric": "200g",
+            "imperial": "7 oz"
+          },
+          "laine": {
+            "metric": "130g",
+            "imperial": "4.5 oz"
+          },
           "subKey": "fri-protein",
           "substitutions": [
-            { "id": "tilapia",  "item": "Tilapia",          "note": "Same cook time and temp", "shopping": { "metric": "Tilapia fillet 330g", "imperial": "Tilapia fillet 12 oz" } },
-            { "id": "halibut",  "item": "Halibut",           "note": "Meatier, add 2 min bake time", "shopping": { "metric": "Halibut fillet 330g", "imperial": "Halibut fillet 12 oz" } },
-            { "id": "salmon",   "item": "Salmon",             "note": "Richer — pan sear instead of baking", "shopping": { "metric": "Salmon fillet 330g", "imperial": "Salmon fillet 12 oz" } }
+            {
+              "id": "tilapia",
+              "item": "Tilapia",
+              "note": "Same cook time and temp",
+              "shopping": {
+                "metric": "Tilapia fillet 330g",
+                "imperial": "Tilapia fillet 12 oz"
+              }
+            },
+            {
+              "id": "halibut",
+              "item": "Halibut",
+              "note": "Meatier, add 2 min bake time",
+              "shopping": {
+                "metric": "Halibut fillet 330g",
+                "imperial": "Halibut fillet 12 oz"
+              }
+            },
+            {
+              "id": "salmon",
+              "item": "Salmon",
+              "note": "Richer - pan sear instead of baking",
+              "shopping": {
+                "metric": "Salmon fillet 330g",
+                "imperial": "Salmon fillet 12 oz"
+              }
+            }
           ]
         },
-        { "item": "Dry green lentils", "jake": { "metric": "100g", "imperial": "1/2 cup" }, "laine": { "metric": "130g", "imperial": "2/3 cup" } },
-        { "item": "Canned diced tomatoes", "shared": "1 can (14.5 oz)" },
-        { "item": "Carrot, celery, onion", "shared": "1 of each" },
-        { "item": "Olive oil, cumin, paprika, lemon", "shared": "1 tbsp oil" },
-        { "item": "Fresh parsley", "shared": "handful" }
+        {
+          "item": "Dry green lentils",
+          "jake": {
+            "metric": "100g",
+            "imperial": "1/2 cup"
+          },
+          "laine": {
+            "metric": "130g",
+            "imperial": "2/3 cup"
+          }
+        },
+        {
+          "item": "Canned diced tomatoes",
+          "shared": "1 can (14.5 oz)"
+        },
+        {
+          "item": "Carrot, celery, onion",
+          "shared": "1 of each"
+        },
+        {
+          "item": "Olive oil, cumin, paprika, lemon",
+          "shared": "1 tbsp oil"
+        },
+        {
+          "item": "Fresh parsley",
+          "shared": "handful"
+        }
       ],
       "steps": [
         "Saute onion, carrot, celery in olive oil 5 min. Add spices, stir 1 min.",
@@ -178,32 +730,126 @@
       "day": "Saturday",
       "name": "Chicken Thighs, Sweet Potato + Kale",
       "note": "One sheet pan. Laine gets more sweet potato, Jake more chicken.",
-      "jake":  { "cal": 720, "protein": 64, "carbs": 42, "fat": 28, "fiber": 9 },
-      "laine": { "cal": 490, "protein": 40, "carbs": 52, "fat": 10, "fiber": 10 },
+      "jake": {
+        "cal": 720,
+        "protein": 64,
+        "carbs": 42,
+        "fat": 28,
+        "fiber": 9
+      },
+      "laine": {
+        "cal": 490,
+        "protein": 40,
+        "carbs": 52,
+        "fat": 10,
+        "fiber": 10
+      },
       "ingredients": [
         {
           "item": "Boneless chicken thighs",
-          "jake": { "metric": "250g", "imperial": "9 oz" },
-          "laine": { "metric": "160g", "imperial": "5.5 oz" },
+          "jake": {
+            "metric": "250g",
+            "imperial": "9 oz"
+          },
+          "laine": {
+            "metric": "160g",
+            "imperial": "5.5 oz"
+          },
           "subKey": "sat-protein",
           "substitutions": [
-            { "id": "breast",  "item": "Chicken breast",  "note": "Leaner — add to pan from the start, not last 20 min", "jake": { "metric": "250g", "imperial": "9 oz" }, "laine": { "metric": "160g", "imperial": "5.5 oz" }, "shopping": { "metric": "Chicken breast 410g", "imperial": "Chicken breast 14.5 oz" } },
-            { "id": "drumstick","item": "Chicken drumsticks","note": "Add 10 min extra roast time", "jake": { "metric": "250g", "imperial": "9 oz" }, "laine": { "metric": "160g", "imperial": "5.5 oz" }, "shopping": { "metric": "Chicken drumsticks 410g", "imperial": "Chicken drumsticks 14.5 oz" } }
+            {
+              "id": "breast",
+              "item": "Chicken breast",
+              "note": "Leaner - add to pan from the start, not last 20 min",
+              "jake": {
+                "metric": "250g",
+                "imperial": "9 oz"
+              },
+              "laine": {
+                "metric": "160g",
+                "imperial": "5.5 oz"
+              },
+              "shopping": {
+                "metric": "Chicken breast 410g",
+                "imperial": "Chicken breast 14.5 oz"
+              }
+            },
+            {
+              "id": "drumstick",
+              "item": "Chicken drumsticks",
+              "note": "Add 10 min extra roast time",
+              "jake": {
+                "metric": "250g",
+                "imperial": "9 oz"
+              },
+              "laine": {
+                "metric": "160g",
+                "imperial": "5.5 oz"
+              },
+              "shopping": {
+                "metric": "Chicken drumsticks 410g",
+                "imperial": "Chicken drumsticks 14.5 oz"
+              }
+            }
           ]
         },
-        { "item": "Sweet potato, cubed", "jake": "1 medium", "laine": "1.5 medium" },
+        {
+          "item": "Sweet potato, cubed",
+          "jake": "1 medium",
+          "laine": "1.5 medium"
+        },
         {
           "item": "Kale, stems removed",
           "shared": "3 large handfuls",
           "subKey": "sat-greens",
           "substitutions": [
-            { "id": "collard",  "item": "Collard greens, stems removed", "note": "Laine's pick! Slice thin, add 3 extra min", "shopping": "Collard greens — 1 bunch" },
-            { "id": "spinach",  "item": "Baby spinach",                  "note": "Wilts fast — add last 2 min only", "shopping": "Baby spinach — 1 bag" },
-            { "id": "chard",    "item": "Swiss chard, stems removed",    "note": "Similar to kale, slightly more tender", "shopping": "Swiss chard — 1 bunch" }
+            {
+              "id": "collard",
+              "item": "Collard greens, stems removed",
+              "note": "Laine's pick! Slice thin, add 3 extra min",
+              "shopping": "Collard greens - 1 bunch",
+              "steps": [
+                "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
+                "Season chicken with garlic powder, cumin, salt. Add to sheet pan for last 20 min.",
+                "Slice collard greens thin, removing stems. Toss with oil + salt. Add to pan for final 8 min until wilted and tender.",
+                "Portion chicken by weight. Laine gets more potato."
+              ]
+            },
+            {
+              "id": "spinach",
+              "item": "Baby spinach",
+              "note": "Wilts fast - add last 2 min only",
+              "shopping": "Baby spinach - 1 bag",
+              "steps": [
+                "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
+                "Season chicken with garlic powder, cumin, salt. Add to sheet pan for last 20 min.",
+                "Toss spinach with a little oil + salt. Add to pan for final 2 min only - it wilts very fast.",
+                "Portion chicken by weight. Laine gets more potato."
+              ]
+            },
+            {
+              "id": "chard",
+              "item": "Swiss chard, stems removed",
+              "note": "Similar to kale, slightly more tender",
+              "shopping": "Swiss chard - 1 bunch",
+              "steps": [
+                "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
+                "Season chicken with garlic powder, cumin, salt. Add to sheet pan for last 20 min.",
+                "Remove chard stems, slice leaves. Toss with oil + salt. Add to pan for final 5 min.",
+                "Portion chicken by weight. Laine gets more potato."
+              ]
+            }
           ]
         },
-        { "item": "Olive oil", "jake": "2 tbsp", "laine": "1/2 tbsp" },
-        { "item": "Garlic powder, smoked paprika, cumin, salt, lemon", "shared": "to taste" }
+        {
+          "item": "Olive oil",
+          "jake": "2 tbsp",
+          "laine": "1/2 tbsp"
+        },
+        {
+          "item": "Garlic powder, smoked paprika, cumin, salt, lemon",
+          "shared": "to taste"
+        }
       ],
       "steps": [
         "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
@@ -215,32 +861,115 @@
     {
       "day": "Sunday",
       "name": "Pork Tenderloin, Brussels Sprouts + Lentils",
-      "note": "While this cooks — prep both weekday lunch batches.",
-      "jake":  { "cal": 680, "protein": 72, "carbs": 38, "fat": 20, "fiber": 13 },
-      "laine": { "cal": 470, "protein": 46, "carbs": 42, "fat": 8,  "fiber": 12 },
+      "note": "While this cooks - prep both weekday lunch batches.",
+      "jake": {
+        "cal": 680,
+        "protein": 72,
+        "carbs": 38,
+        "fat": 20,
+        "fiber": 13
+      },
+      "laine": {
+        "cal": 470,
+        "protein": 46,
+        "carbs": 42,
+        "fat": 8,
+        "fiber": 12
+      },
       "ingredients": [
         {
           "item": "Pork tenderloin",
-          "jake": { "metric": "220g", "imperial": "8 oz" },
-          "laine": { "metric": "140g", "imperial": "5 oz" },
+          "jake": {
+            "metric": "220g",
+            "imperial": "8 oz"
+          },
+          "laine": {
+            "metric": "140g",
+            "imperial": "5 oz"
+          },
           "subKey": "sun-protein",
           "substitutions": [
-            { "id": "chicken", "item": "Chicken breast", "note": "Bake at 400F for 22 min, skip sear step", "jake": { "metric": "220g", "imperial": "8 oz" }, "laine": { "metric": "140g", "imperial": "5 oz" }, "shopping": { "metric": "Chicken breast 360g", "imperial": "Chicken breast 13 oz" } },
-            { "id": "salmon",  "item": "Salmon fillet",  "note": "Bake at 400F for 14 min, skip sear step", "jake": { "metric": "220g", "imperial": "8 oz" }, "laine": { "metric": "140g", "imperial": "5 oz" }, "shopping": { "metric": "Salmon fillet 360g", "imperial": "Salmon fillet 13 oz" } }
+            {
+              "id": "chicken",
+              "item": "Chicken breast",
+              "note": "Bake at 400F for 22 min, skip sear step",
+              "jake": {
+                "metric": "220g",
+                "imperial": "8 oz"
+              },
+              "laine": {
+                "metric": "140g",
+                "imperial": "5 oz"
+              },
+              "shopping": {
+                "metric": "Chicken breast 360g",
+                "imperial": "Chicken breast 13 oz"
+              }
+            },
+            {
+              "id": "salmon",
+              "item": "Salmon fillet",
+              "note": "Bake at 400F for 14 min, skip sear step",
+              "jake": {
+                "metric": "220g",
+                "imperial": "8 oz"
+              },
+              "laine": {
+                "metric": "140g",
+                "imperial": "5 oz"
+              },
+              "shopping": {
+                "metric": "Salmon fillet 360g",
+                "imperial": "Salmon fillet 13 oz"
+              }
+            }
           ]
         },
         {
           "item": "Brussels sprouts, halved",
-          "shared": { "metric": "400g", "imperial": "about 4 cups" },
+          "shared": {
+            "metric": "400g",
+            "imperial": "about 4 cups"
+          },
           "subKey": "sun-veg",
           "substitutions": [
-            { "id": "broccoli",  "item": "Broccoli florets",   "note": "Roast 20 min same temp", "shopping": { "metric": "Broccoli 400g", "imperial": "Broccoli 1 large head" } },
-            { "id": "cauliflower","item": "Cauliflower florets","note": "Roast 25 min same temp", "shopping": "Cauliflower — 1 head" }
+            {
+              "id": "broccoli",
+              "item": "Broccoli florets",
+              "note": "Roast 20 min same temp",
+              "shopping": {
+                "metric": "Broccoli 400g",
+                "imperial": "Broccoli 1 large head"
+              }
+            },
+            {
+              "id": "cauliflower",
+              "item": "Cauliflower florets",
+              "note": "Roast 25 min same temp",
+              "shopping": "Cauliflower - 1 head"
+            }
           ]
         },
-        { "item": "Dry green lentils", "jake": { "metric": "80g", "imperial": "1/3 cup" }, "laine": { "metric": "90g", "imperial": "scant 1/2 cup" } },
-        { "item": "Olive oil", "jake": "2 tbsp", "laine": "1/2 tbsp" },
-        { "item": "Dijon mustard, garlic, thyme, salt, pepper, lemon", "shared": "to taste" }
+        {
+          "item": "Dry green lentils",
+          "jake": {
+            "metric": "80g",
+            "imperial": "1/3 cup"
+          },
+          "laine": {
+            "metric": "90g",
+            "imperial": "scant 1/2 cup"
+          }
+        },
+        {
+          "item": "Olive oil",
+          "jake": "2 tbsp",
+          "laine": "1/2 tbsp"
+        },
+        {
+          "item": "Dijon mustard, garlic, thyme, salt, pepper, lemon",
+          "shared": "to taste"
+        }
       ],
       "steps": [
         "Cook lentils: simmer in salted water 20 min. Drain, dress with olive oil + lemon.",
@@ -252,48 +981,98 @@
   ],
   "jakeLunch": {
     "name": "Turkish-Style Lentil + Chicken Bowl",
-    "note": "Make the full batch below, then divide into 5 equal containers. Grab one each day Mon–Fri. Reheat 2 min — add a splash of water to the lentils first.",
-    "macros": { "cal": 650, "protein": 68, "carbs": 42, "fat": 18, "fiber": 16 },
+    "note": "Make the full batch below, then divide into 5 equal containers. Grab one each day Mon\u2013Fri. Reheat 2 min - add a splash of water to the lentils first.",
+    "macros": {
+      "cal": 650,
+      "protein": 68,
+      "carbs": 42,
+      "fat": 18,
+      "fiber": 16
+    },
     "ingredients": [
-      { "metric": "1.2 kg boneless chicken thighs", "imperial": "2.6 lbs boneless chicken thighs" },
-      { "metric": "400g dry red lentils (makes enough for 5 — don't reduce)", "imperial": "2 cups dry red lentils (makes enough for 5 — don't reduce)" },
-      { "metric": "2 cans (800g total) black beans, drained", "imperial": "2 cans (15 oz each) black beans, drained" },
-      { "metric": "2 large zucchini, diced", "imperial": "2 large zucchini, diced" },
-      { "metric": "300g fresh spinach", "imperial": "10 oz / about 8 big handfuls fresh spinach" },
-      "4 garlic cloves",
-      "2 tbsp olive oil",
-      "2 tsp cumin, 2 tsp smoked paprika, 1 tsp turmeric",
-      "Salt, pepper, lemon juice",
-      "5 tbsp Greek yogurt — 1 per container (optional)"
+      {
+        "item": "2.6 lbs boneless chicken thighs"
+      },
+      {
+        "item": "2 cups dry red lentils (makes enough for 5 - do not reduce)"
+      },
+      {
+        "item": "2 cans (15 oz each) black beans, drained"
+      },
+      {
+        "item": "2 large zucchini, diced"
+      },
+      {
+        "item": "10 oz / about 8 big handfuls fresh spinach"
+      },
+      {
+        "item": "4 garlic cloves"
+      },
+      {
+        "item": "2 tbsp olive oil"
+      },
+      {
+        "item": "2 tsp cumin, 2 tsp smoked paprika, 1 tsp turmeric"
+      },
+      {
+        "item": "Salt, pepper, lemon juice"
+      },
+      {
+        "item": "5 tbsp Greek yogurt - 1 per container (optional)"
+      }
     ],
     "steps": [
-      "Season ALL the chicken with cumin, paprika, salt + pepper. Bake at 400F / 200C for 25 min. Cool and shred the whole batch — this is the protein for all 5 containers.",
-      "Rinse ALL the lentils. Simmer in 3.5 cups (900ml) water with turmeric + crushed garlic for 15 min until soft. They thicken as they cool — that's normal. This is the base for all 5.",
+      "Season ALL the chicken with cumin, paprika, salt + pepper. Bake at 400F / 200C for 25 min. Cool and shred the whole batch - this is the protein for all 5 containers.",
+      "Rinse ALL the lentils. Simmer in 3.5 cups (900ml) water with turmeric + crushed garlic for 15 min until soft. They thicken as they cool - this is normal. This is the base for all 5.",
       "In a large pan, saute ALL the zucchini in olive oil 5 min. Add ALL the black beans, warm through. Add ALL the spinach, toss until wilted.",
-      "Now divide: split everything evenly across 5 containers — lentils on the bottom, the veggie/bean mix in the middle, shredded chicken on top.",
-      "Squeeze lemon over each container. Pack Greek yogurt separately if using — mix in right before eating. Done for the week."
+      "Now divide: split everything evenly across 5 containers - lentils on the bottom, the veggie/bean mix in the middle, shredded chicken on top.",
+      "Squeeze lemon over each container. Pack Greek yogurt separately if using - mix in right before eating. Done for the week."
     ]
   },
   "laineLunch": {
     "name": "Chicken, Rice + Roasted Veggie Bowl",
     "note": "Make the full batch below, then divide into 5 equal containers. Higher carb, lower fat to match Laine's macros. Keeps all week in the fridge.",
-    "macros": { "cal": 480, "protein": 42, "carbs": 52, "fat": 10, "fiber": 8 },
+    "macros": {
+      "cal": 480,
+      "protein": 42,
+      "carbs": 52,
+      "fat": 10,
+      "fiber": 8
+    },
     "ingredients": [
-      { "metric": "700g boneless chicken breast", "imperial": "1.5 lbs boneless chicken breast" },
-      { "metric": "300g dry basmati or jasmine rice (cook the whole batch — it's for all 5 containers)", "imperial": "1.5 cups dry basmati or jasmine rice (cook the whole batch — it's for all 5 containers)" },
-      "2 large zucchini, diced",
-      "2 cups cherry tomatoes",
-      { "metric": "1 can (400g) chickpeas, drained", "imperial": "1 can (15 oz) chickpeas, drained" },
-      "1 red onion, diced",
-      "1 tbsp olive oil",
-      "1 tsp cumin, 1 tsp garlic powder, paprika, salt",
-      "Lemon juice, fresh parsley"
+      {
+        "item": "1.5 lbs boneless chicken breast"
+      },
+      {
+        "item": "1.5 cups dry basmati or jasmine rice (cook the whole batch - this is for all 5 containers)"
+      },
+      {
+        "item": "2 large zucchini, diced"
+      },
+      {
+        "item": "2 cups cherry tomatoes"
+      },
+      {
+        "item": "1 can (15 oz) chickpeas, drained"
+      },
+      {
+        "item": "1 red onion, diced"
+      },
+      {
+        "item": "1 tbsp olive oil"
+      },
+      {
+        "item": "1 tsp cumin, 1 tsp garlic powder, paprika, salt"
+      },
+      {
+        "item": "Lemon juice, fresh parsley"
+      }
     ],
     "steps": [
       "Cook ALL the rice per package. Fluff and season lightly with salt. This batch is the base for all 5 containers.",
       "Season ALL the chicken breast with spices. Bake at 400F / 200C for 22 min. Cool and slice the whole batch.",
       "Toss ALL the zucchini, cherry tomatoes, red onion, and chickpeas with olive oil + salt on a sheet pan. Roast at 410F / 210C for 20 min.",
-      "Now divide: split everything evenly across 5 containers — rice on the bottom, roasted veggie mix in the middle, sliced chicken on top.",
+      "Now divide: split everything evenly across 5 containers - rice on the bottom, roasted veggie mix in the middle, sliced chicken on top.",
       "Squeeze lemon over each container, top with parsley. Seal and refrigerate. Done for the week."
     ]
   },
@@ -301,31 +1080,65 @@
     {
       "day": "Mon / Wed / Fri",
       "name": "Greek Yogurt Parfait",
-      "macros": { "cal": 320, "protein": 22, "carbs": 38, "fat": 8, "fiber": 5 },
+      "macros": {
+        "cal": 320,
+        "protein": 22,
+        "carbs": 38,
+        "fat": 8,
+        "fiber": 5
+      },
       "ingredients": [
-        { "metric": "180g 0% Greek yogurt", "imperial": "3/4 cup 0% Greek yogurt" },
-        { "metric": "60g low-sugar granola", "imperial": "2/3 cup low-sugar granola" },
-        "100g / 3/4 cup mixed berries",
-        "1 tsp honey",
-        "1 tbsp ground flaxseed"
+        {
+          "item": "3/4 cup 0% Greek yogurt"
+        },
+        {
+          "item": "2/3 cup low-sugar granola"
+        },
+        {
+          "item": "100g / 3/4 cup mixed berries"
+        },
+        {
+          "item": "1 tsp honey"
+        },
+        {
+          "item": "1 tbsp ground flaxseed"
+        }
       ],
       "steps": [
         "Layer yogurt in a bowl or jar.",
         "Top with berries, granola, flaxseed, and a drizzle of honey.",
-        "Tip: prep the night before in a jar — just add granola in the morning so it stays crunchy."
+        "Tip: prep the night before in a jar - just add granola in the morning so it stays crunchy."
       ]
     },
     {
       "day": "Tue / Thu",
       "name": "Egg White Scramble + Toast",
-      "macros": { "cal": 340, "protein": 26, "carbs": 36, "fat": 9, "fiber": 4 },
+      "macros": {
+        "cal": 340,
+        "protein": 26,
+        "carbs": 36,
+        "fat": 9,
+        "fiber": 4
+      },
       "ingredients": [
-        "4 egg whites + 1 whole egg",
-        "1/2 cup spinach",
-        "1/4 bell pepper, diced",
-        "2 slices whole grain toast",
-        "1 tsp olive oil",
-        "Salt, pepper, chili flakes"
+        {
+          "item": "4 egg whites + 1 whole egg"
+        },
+        {
+          "item": "1/2 cup spinach"
+        },
+        {
+          "item": "1/4 bell pepper, diced"
+        },
+        {
+          "item": "2 slices whole grain toast"
+        },
+        {
+          "item": "1 tsp olive oil"
+        },
+        {
+          "item": "Salt, pepper, chili flakes"
+        }
       ],
       "steps": [
         "Saute bell pepper in olive oil 2 min. Add spinach, wilt 1 min.",
@@ -336,14 +1149,32 @@
     {
       "day": "Sat / Sun",
       "name": "Banana Oat Protein Pancakes",
-      "macros": { "cal": 380, "protein": 24, "carbs": 52, "fat": 8, "fiber": 5 },
+      "macros": {
+        "cal": 380,
+        "protein": 24,
+        "carbs": 52,
+        "fat": 8,
+        "fiber": 5
+      },
       "ingredients": [
-        "1 ripe banana",
-        { "metric": "60g rolled oats", "imperial": "2/3 cup rolled oats" },
-        "2 eggs",
-        "1 scoop (30g / 1 oz) vanilla protein powder",
-        "Pinch cinnamon",
-        "Fresh fruit + honey to top"
+        {
+          "item": "1 ripe banana"
+        },
+        {
+          "item": "2/3 cup rolled oats"
+        },
+        {
+          "item": "2 eggs"
+        },
+        {
+          "item": "1 scoop (30g / 1 oz) vanilla protein powder"
+        },
+        {
+          "item": "Pinch cinnamon"
+        },
+        {
+          "item": "Fresh fruit + honey to top"
+        }
       ],
       "steps": [
         "Blend banana, oats, eggs, protein powder, and cinnamon until smooth.",
@@ -353,112 +1184,313 @@
     }
   ],
   "jakeSnacks": [
-    { "name": "Cottage Cheese + Walnuts",   "macros": { "cal": 280, "protein": 24, "carbs": 6,  "fat": 18, "fiber": 1 }, "desc": "3/4 cup full-fat cottage cheese + a small handful of walnuts. No prep." },
-    { "name": "Hard-Boiled Eggs + Avocado", "macros": { "cal": 310, "protein": 18, "carbs": 6,  "fat": 24, "fiber": 5 }, "desc": "2 hard-boiled eggs + 1/2 avocado, salt + chili flakes." },
-    { "name": "Greek Yogurt + Flaxseed",    "macros": { "cal": 200, "protein": 22, "carbs": 10, "fat": 5,  "fiber": 4 }, "desc": "3/4 cup 0% Greek yogurt + 1 tbsp ground flaxseed." },
-    { "name": "Edamame",                    "macros": { "cal": 180, "protein": 17, "carbs": 14, "fat": 8,  "fiber": 8 }, "desc": "About 1.5 cups shelled edamame, microwaved, sea salt." }
+    {
+      "name": "Cottage Cheese + Walnuts",
+      "macros": {
+        "cal": 280,
+        "protein": 24,
+        "carbs": 6,
+        "fat": 18,
+        "fiber": 1
+      },
+      "desc": "3/4 cup full-fat cottage cheese + a small handful of walnuts. No prep."
+    },
+    {
+      "name": "Hard-Boiled Eggs + Avocado",
+      "macros": {
+        "cal": 310,
+        "protein": 18,
+        "carbs": 6,
+        "fat": 24,
+        "fiber": 5
+      },
+      "desc": "2 hard-boiled eggs + 1/2 avocado, salt + chili flakes."
+    },
+    {
+      "name": "Greek Yogurt + Flaxseed",
+      "macros": {
+        "cal": 200,
+        "protein": 22,
+        "carbs": 10,
+        "fat": 5,
+        "fiber": 4
+      },
+      "desc": "3/4 cup 0% Greek yogurt + 1 tbsp ground flaxseed."
+    },
+    {
+      "name": "Edamame",
+      "macros": {
+        "cal": 180,
+        "protein": 17,
+        "carbs": 14,
+        "fat": 8,
+        "fiber": 8
+      },
+      "desc": "About 1.5 cups shelled edamame, microwaved, sea salt."
+    }
   ],
   "shopping": {
     "Proteins": [
-      { "metric": "Chicken thighs 1.61 kg boneless", "imperial": "Chicken thighs 3.5 lbs boneless",
+      {
+        "metric": "Chicken thighs 1.61 kg boneless",
+        "imperial": "Chicken thighs 3.5 lbs boneless",
         "subKey": "sat-protein",
         "substitutions": [
-          { "id": "breast",   "shopping": { "metric": "Chicken breast 410g (Sat)", "imperial": "Chicken breast 14.5 oz (Sat)" } },
-          { "id": "drumstick","shopping": { "metric": "Chicken drumsticks 410g (Sat)", "imperial": "Chicken drumsticks 14.5 oz (Sat)" } }
+          {
+            "id": "breast",
+            "shopping": {
+              "metric": "Chicken breast 410g (Sat)",
+              "imperial": "Chicken breast 14.5 oz (Sat)"
+            }
+          },
+          {
+            "id": "drumstick",
+            "shopping": {
+              "metric": "Chicken drumsticks 410g (Sat)",
+              "imperial": "Chicken drumsticks 14.5 oz (Sat)"
+            }
+          }
         ]
       },
-      { "metric": "Chicken breast 700g (Laine lunch)", "imperial": "Chicken breast 1.5 lbs (Laine lunch)" },
-      { "metric": "Salmon fillet 330g", "imperial": "Salmon fillet 12 oz",
+      {
+        "metric": "Chicken breast 700g (Laine lunch)",
+        "imperial": "Chicken breast 1.5 lbs (Laine lunch)"
+      },
+      {
+        "metric": "Salmon fillet 330g",
+        "imperial": "Salmon fillet 12 oz",
         "subKey": "mon-protein",
         "substitutions": [
-          { "id": "trout",  "shopping": { "metric": "Trout fillet 330g", "imperial": "Trout fillet 12 oz" } },
-          { "id": "tilapia","shopping": { "metric": "Tilapia fillet 330g", "imperial": "Tilapia fillet 12 oz" } },
-          { "id": "shrimp", "shopping": { "metric": "Large shrimp 330g peeled", "imperial": "Large shrimp 12 oz peeled" } }
+          {
+            "id": "trout",
+            "shopping": {
+              "metric": "Trout fillet 330g",
+              "imperial": "Trout fillet 12 oz"
+            }
+          },
+          {
+            "id": "tilapia",
+            "shopping": {
+              "metric": "Tilapia fillet 330g",
+              "imperial": "Tilapia fillet 12 oz"
+            }
+          },
+          {
+            "id": "shrimp",
+            "shopping": {
+              "metric": "Large shrimp 330g peeled",
+              "imperial": "Large shrimp 12 oz peeled"
+            }
+          }
         ]
       },
-      { "metric": "Ground turkey 400g (93% lean)", "imperial": "Ground turkey 14 oz (93% lean)",
+      {
+        "metric": "Ground turkey 400g (93% lean)",
+        "imperial": "Ground turkey 14 oz (93% lean)",
         "subKey": "tue-protein",
         "substitutions": [
-          { "id": "beef",   "shopping": { "metric": "Ground beef 90% lean 400g", "imperial": "Ground beef 90% lean 14 oz" } },
-          { "id": "chicken","shopping": { "metric": "Ground chicken 400g", "imperial": "Ground chicken 14 oz" } }
+          {
+            "id": "beef",
+            "shopping": {
+              "metric": "Ground beef 90% lean 400g",
+              "imperial": "Ground beef 90% lean 14 oz"
+            }
+          },
+          {
+            "id": "chicken",
+            "shopping": {
+              "metric": "Ground chicken 400g",
+              "imperial": "Ground chicken 14 oz"
+            }
+          }
         ]
       },
-      { "metric": "Sirloin or flank steak 360g", "imperial": "Sirloin or flank steak 13 oz",
+      {
+        "metric": "Sirloin or flank steak 360g",
+        "imperial": "Sirloin or flank steak 13 oz",
         "subKey": "wed-protein",
         "substitutions": [
-          { "id": "chicken","shopping": { "metric": "Chicken breast 360g (Wed)", "imperial": "Chicken breast 13 oz (Wed)" } },
-          { "id": "pork",   "shopping": { "metric": "Pork chops 360g", "imperial": "Pork chops 13 oz" } }
+          {
+            "id": "chicken",
+            "shopping": {
+              "metric": "Chicken breast 360g (Wed)",
+              "imperial": "Chicken breast 13 oz (Wed)"
+            }
+          },
+          {
+            "id": "pork",
+            "shopping": {
+              "metric": "Pork chops 360g",
+              "imperial": "Pork chops 13 oz"
+            }
+          }
         ]
       },
-      { "metric": "Raw shrimp 480g peeled", "imperial": "Raw shrimp 1 lb peeled",
+      {
+        "metric": "Raw shrimp 480g peeled",
+        "imperial": "Raw shrimp 1 lb peeled",
         "subKey": "thu-protein",
         "substitutions": [
-          { "id": "chicken","shopping": { "metric": "Chicken breast extra 480g", "imperial": "Chicken breast extra 1 lb" } },
-          { "id": "tofu",   "shopping": { "metric": "Extra-firm tofu 480g", "imperial": "Extra-firm tofu 1 lb" } }
+          {
+            "id": "chicken",
+            "shopping": {
+              "metric": "Chicken breast extra 480g",
+              "imperial": "Chicken breast extra 1 lb"
+            }
+          },
+          {
+            "id": "tofu",
+            "shopping": {
+              "metric": "Extra-firm tofu 480g",
+              "imperial": "Extra-firm tofu 1 lb"
+            }
+          }
         ]
       },
-      { "metric": "Cod fillet 330g", "imperial": "Cod fillet 12 oz",
+      {
+        "metric": "Cod fillet 330g",
+        "imperial": "Cod fillet 12 oz",
         "subKey": "fri-protein",
         "substitutions": [
-          { "id": "tilapia", "shopping": { "metric": "Tilapia fillet 330g", "imperial": "Tilapia fillet 12 oz" } },
-          { "id": "halibut", "shopping": { "metric": "Halibut fillet 330g", "imperial": "Halibut fillet 12 oz" } },
-          { "id": "salmon",  "shopping": { "metric": "Salmon fillet 330g (Fri)", "imperial": "Salmon fillet 12 oz (Fri)" } }
+          {
+            "id": "tilapia",
+            "shopping": {
+              "metric": "Tilapia fillet 330g",
+              "imperial": "Tilapia fillet 12 oz"
+            }
+          },
+          {
+            "id": "halibut",
+            "shopping": {
+              "metric": "Halibut fillet 330g",
+              "imperial": "Halibut fillet 12 oz"
+            }
+          },
+          {
+            "id": "salmon",
+            "shopping": {
+              "metric": "Salmon fillet 330g (Fri)",
+              "imperial": "Salmon fillet 12 oz (Fri)"
+            }
+          }
         ]
       },
-      { "metric": "Pork tenderloin 360g", "imperial": "Pork tenderloin 13 oz",
+      {
+        "metric": "Pork tenderloin 360g",
+        "imperial": "Pork tenderloin 13 oz",
         "subKey": "sun-protein",
         "substitutions": [
-          { "id": "chicken","shopping": { "metric": "Chicken breast 360g (Sun)", "imperial": "Chicken breast 13 oz (Sun)" } },
-          { "id": "salmon", "shopping": { "metric": "Salmon fillet 360g (Sun)", "imperial": "Salmon fillet 13 oz (Sun)" } }
+          {
+            "id": "chicken",
+            "shopping": {
+              "metric": "Chicken breast 360g (Sun)",
+              "imperial": "Chicken breast 13 oz (Sun)"
+            }
+          },
+          {
+            "id": "salmon",
+            "shopping": {
+              "metric": "Salmon fillet 360g (Sun)",
+              "imperial": "Salmon fillet 13 oz (Sun)"
+            }
+          }
         ]
       },
       "Eggs x 2 dozen",
       "Cottage cheese x 2 tubs",
-      "Greek yogurt — 2 large tubs"
+      "Greek yogurt - 2 large tubs"
     ],
     "Cans + Dry": [
-      { "metric": "Red lentils 400g dry", "imperial": "Red lentils 2 cups dry" },
-      { "metric": "Green lentils 450g dry", "imperial": "Green lentils 2.5 cups dry" },
+      {
+        "metric": "Red lentils 400g dry",
+        "imperial": "Red lentils 2 cups dry"
+      },
+      {
+        "metric": "Green lentils 450g dry",
+        "imperial": "Green lentils 2.5 cups dry"
+      },
       "Black beans x 3 cans (15 oz each)",
       "Chickpeas x 2 cans (15 oz each)",
       "White cannellini beans x 2 cans (15 oz each)",
       "Diced tomatoes x 3 cans",
-      { "metric": "Basmati or jasmine rice 300g dry", "imperial": "Basmati or jasmine rice 1.5 cups dry" },
-      { "metric": "Rolled oats 200g", "imperial": "Rolled oats 2 cups" },
+      {
+        "metric": "Basmati or jasmine rice 300g dry",
+        "imperial": "Basmati or jasmine rice 1.5 cups dry"
+      },
+      {
+        "metric": "Rolled oats 200g",
+        "imperial": "Rolled oats 2 cups"
+      },
       "Low-sugar granola 1 bag",
       "Vanilla protein powder",
       "Whole grain bread 1 loaf"
     ],
     "Produce": [
-      "Spinach — 2 large bags",
-      { "metric": "Kale — 1 bunch", "imperial": "Kale — 1 bunch",
+      "Spinach - 2 large bags",
+      {
+        "metric": "Kale - 1 bunch",
+        "imperial": "Kale - 1 bunch",
         "subKey": "sat-greens",
         "substitutions": [
-          { "id": "collard", "shopping": "Collard greens — 1 bunch" },
-          { "id": "spinach", "shopping": "Baby spinach — 1 bag (extra)" },
-          { "id": "chard",   "shopping": "Swiss chard — 1 bunch" }
+          {
+            "id": "collard",
+            "shopping": "Collard greens - 1 bunch"
+          },
+          {
+            "id": "spinach",
+            "shopping": "Baby spinach - 1 bag (extra)"
+          },
+          {
+            "id": "chard",
+            "shopping": "Swiss chard - 1 bunch"
+          }
         ]
       },
       "Zucchini x 5",
-      { "metric": "Broccoli — 1 large head", "imperial": "Broccoli — 1 large head",
+      {
+        "metric": "Broccoli - 1 large head",
+        "imperial": "Broccoli - 1 large head",
         "subKey": "mon-veg",
         "substitutions": [
-          { "id": "broccolini",  "shopping": { "metric": "Broccolini 400g", "imperial": "Broccolini 2 bunches" } },
-          { "id": "greenbean",   "shopping": "Green beans — 1 large bag" },
-          { "id": "cauliflower", "shopping": "Cauliflower — 1 head" }
+          {
+            "id": "broccolini",
+            "shopping": {
+              "metric": "Broccolini 400g",
+              "imperial": "Broccolini 2 bunches"
+            }
+          },
+          {
+            "id": "greenbean",
+            "shopping": "Green beans - 1 large bag"
+          },
+          {
+            "id": "cauliflower",
+            "shopping": "Cauliflower - 1 head"
+          }
         ]
       },
-      "Brussels sprouts — 1 bag",
-      { "metric": "Asparagus x 1 bunch", "imperial": "Asparagus x 1 bunch",
+      "Brussels sprouts - 1 bag",
+      {
+        "metric": "Asparagus x 1 bunch",
+        "imperial": "Asparagus x 1 bunch",
         "subKey": "wed-veg",
         "substitutions": [
-          { "id": "broccolini","shopping": "Broccolini — 2 bunches" },
-          { "id": "greenbean", "shopping": "Green beans — 1 large bag" },
-          { "id": "zucchini",  "shopping": "Zucchini x 2 extra" }
+          {
+            "id": "broccolini",
+            "shopping": "Broccolini - 2 bunches"
+          },
+          {
+            "id": "greenbean",
+            "shopping": "Green beans - 1 large bag"
+          },
+          {
+            "id": "zucchini",
+            "shopping": "Zucchini x 2 extra"
+          }
         ]
       },
       "Bell peppers x 6 mixed",
-      "Cherry tomatoes — 1 pint",
+      "Cherry tomatoes - 1 pint",
       "Sweet potatoes x 3",
       "Snap peas + bok choy",
       "Red onion x 2",
@@ -466,25 +1498,133 @@
       "Carrot x 1, Celery x 1 stalk",
       "Avocado x 3",
       "Banana x 2 ripe",
-      "Mixed berries — fresh or 1 frozen bag",
-      "Garlic — 1 head",
+      "Mixed berries - fresh or 1 frozen bag",
+      "Garlic - 1 head",
       "Fresh ginger + parsley",
       "Lemons x 6"
     ],
-    "Frozen": ["Edamame shelled — large bag"],
-    "Pantry": ["Olive oil", "Sesame oil", "Soy sauce", "Sriracha", "Dijon mustard", "Honey", "Walnuts — small bag", "Ground flaxseed", "Shredded cheese", "Sesame seeds"],
-    "Spices": ["Cumin, Smoked paprika, Turmeric", "Garlic powder, Chili flakes", "Rosemary, Thyme, Oregano, Cinnamon"]
+    "Frozen": [
+      "Edamame shelled - large bag"
+    ],
+    "Pantry": [
+      "Olive oil",
+      "Sesame oil",
+      "Soy sauce",
+      "Sriracha",
+      "Dijon mustard",
+      "Honey",
+      "Walnuts - small bag",
+      "Ground flaxseed",
+      "Shredded cheese",
+      "Sesame seeds"
+    ],
+    "Spices": [
+      "Cumin, Smoked paprika, Turmeric",
+      "Garlic powder, Chili flakes",
+      "Rosemary, Thyme, Oregano, Cinnamon"
+    ]
   },
   "targets": {
     "jake": {
-      "rows": [["Lunch Bowl", 650, 68, 42, 18, 16], ["Dinner (avg)", 680, 61, 33, 28, 10], ["1-2 Snacks", 480, 42, 20, 34, 5], ["Coffee", 20, 1, 2, 1, 0]],
-      "total": [1830, 172, 97, 81, 31],
-      "goal":  [2030, 203, 102, 90, 35]
+      "rows": [
+        [
+          "Lunch Bowl",
+          650,
+          68,
+          42,
+          18,
+          16
+        ],
+        [
+          "Dinner (avg)",
+          680,
+          61,
+          33,
+          28,
+          10
+        ],
+        [
+          "1-2 Snacks",
+          480,
+          42,
+          20,
+          34,
+          5
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1830,
+        172,
+        97,
+        81,
+        31
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
     },
     "laine": {
-      "rows": [["Breakfast (avg)", 347, 24, 42, 8, 5], ["Lunch Bowl", 480, 42, 52, 10, 8], ["Dinner (avg)", 474, 40, 40, 10, 10], ["Coffee", 20, 1, 2, 1, 0]],
-      "total": [1321, 107, 136, 29, 23],
-      "goal":  [1363, 103, 152, 37, 30]
+      "rows": [
+        [
+          "Breakfast (avg)",
+          347,
+          24,
+          42,
+          8,
+          5
+        ],
+        [
+          "Lunch Bowl",
+          480,
+          42,
+          52,
+          10,
+          8
+        ],
+        [
+          "Dinner (avg)",
+          474,
+          40,
+          40,
+          10,
+          10
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1321,
+        107,
+        136,
+        29,
+        23
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
     }
-  }
+  },
+  "_v": 3
 }
