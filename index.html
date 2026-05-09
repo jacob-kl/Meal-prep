@@ -117,30 +117,33 @@ function SubDropdown({ ing }) {
   const btnRef = React.useRef(null);
   const isOpen = openKey === ing.subKey;
   const current = subs[ing.subKey] || "default";
+  const [menuStyle, setMenuStyle] = useState({});
 
-  const toggle = () => setOpenKey(isOpen ? null : ing.subKey);
-
-  // Determine if we should open upward based on button position
-  const [openUp, setOpenUp] = useState(false);
-  useEffect(() => {
-    if (isOpen && btnRef.current) {
+  const toggle = () => {
+    if (!isOpen && btnRef.current) {
       const rect = btnRef.current.getBoundingClientRect();
-      setOpenUp(rect.bottom + 220 > window.innerHeight);
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const menuHeight = Math.min(280, 44 + ing.substitutions.length * 52);
+      const top = spaceBelow > menuHeight
+        ? rect.bottom + 6
+        : rect.top - menuHeight - 6;
+      setMenuStyle({ top: Math.max(8, top), left: Math.min(rect.left, window.innerWidth - 220) });
     }
-  }, [isOpen]);
+    setOpenKey(isOpen ? null : ing.subKey);
+  };
 
   return (
-    <div style={{ position: "relative", display: "inline-block" }}>
+    <div style={{ display: "inline-block" }}>
       <button ref={btnRef} onClick={toggle} style={{ background: "none", border: "1px solid #2a2a2a", borderRadius: 5, color: "#666", padding: "1px 5px", cursor: "pointer", fontSize: 10, lineHeight: 1, marginLeft: 6 }}>
         swap {isOpen ? "^" : "v"}
       </button>
       {isOpen && (
-        <div style={{ position: "absolute", [openUp ? "bottom" : "top"]: "calc(100% + 4px)", left: 0, zIndex: 200, background: "#202020", border: "1px solid #333", borderRadius: 10, padding: 6, minWidth: 200, boxShadow: "0 8px 24px rgba(0,0,0,0.6)" }}>
-          <div onClick={() => { setSub(ing.subKey, null); setOpenKey(null); }} style={{ padding: "7px 10px", fontSize: 12, color: current === "default" ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === "default" ? "#2a2510" : "none" }}>
+        <div style={{ position: "fixed", ...menuStyle, zIndex: 1000, background: "#202020", border: "1px solid #333", borderRadius: 10, padding: 6, width: 210, boxShadow: "0 8px 32px rgba(0,0,0,0.8)" }}>
+          <div onClick={() => { setSub(ing.subKey, null); setOpenKey(null); }} style={{ padding: "8px 10px", fontSize: 12, color: current === "default" ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === "default" ? "#2a2510" : "none" }}>
             {ing.item} <span style={{ color: "#444", fontSize: 10 }}>(original)</span>
           </div>
           {ing.substitutions.map(sub => (
-            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpenKey(null); }} style={{ padding: "7px 10px", fontSize: 12, color: current === sub.id ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === sub.id ? "#2a2510" : "none" }}>
+            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpenKey(null); }} style={{ padding: "8px 10px", fontSize: 12, color: current === sub.id ? "#c8b87a" : "#bbb", cursor: "pointer", borderRadius: 7, background: current === sub.id ? "#2a2510" : "none" }}>
               {sub.item}
               {sub.note && <div style={{ fontSize: 10, color: "#555", marginTop: 2 }}>{sub.note}</div>}
             </div>
@@ -177,7 +180,7 @@ function IngredientList({ items }) {
 
 function Accordion({ label, labelColor, name, note, macros, ingredients, steps, isOpen, onToggle }) {
   return (
-    <div style={{ background: "#181818", border: "1px solid " + (isOpen ? "#333" : "#222"), borderRadius: 14, overflow: "hidden", marginBottom: 10 }}>
+    <div style={{ background: "#181818", border: "1px solid " + (isOpen ? "#333" : "#222"), borderRadius: 14, marginBottom: 10 }}>
       <button onClick={onToggle} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", background: "none", border: "none", cursor: "pointer", color: "inherit" }}>
         <div style={{ textAlign: "left" }}>
           {label && <div style={{ fontSize: 11, color: labelColor || "#c8b87a", fontFamily: "monospace", marginBottom: 4, letterSpacing: "0.06em" }}>{label}</div>}
@@ -207,7 +210,7 @@ function DinnerCard({ d, isOpen, onToggle }) {
   const units = useUnits();
   const { jake, laine, steps } = resolveDinner(d, subs);
   return (
-    <div style={{ background: "#181818", border: "1px solid " + (isOpen ? "#333" : "#222"), borderRadius: 14, overflow: "hidden" }}>
+    <div style={{ background: "#181818", border: "1px solid " + (isOpen ? "#333" : "#222"), borderRadius: 14 }}>
       <button onClick={onToggle} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", background: "none", border: "none", cursor: "pointer", color: "inherit" }}>
         <div style={{ textAlign: "left" }}>
           <div style={{ fontSize: 11, color: "#c8b87a", fontFamily: "monospace", marginBottom: 4 }}>{d.day}</div>
@@ -234,7 +237,7 @@ function DinnerCard({ d, isOpen, onToggle }) {
               <MacroRow macros={laine} />
             </div>
           </div>
-          <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 11, overflow: "hidden", marginBottom: 12 }}>
+          <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 11, overflow: "visible", marginBottom: 12 }}>
             <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: "1px solid #222" }}>
               {["Ingredient", "Jake", "Laine"].map(h => (
                 <div key={h} style={{ padding: "8px 12px", fontSize: 9, color: "#444", fontFamily: "monospace", letterSpacing: "0.1em", textTransform: "uppercase" }}>{h}</div>
