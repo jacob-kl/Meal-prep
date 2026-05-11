@@ -312,10 +312,16 @@ function ShoppingList({ week, jakeDays, laineDays }) {
   // Scale lunch-related shopping items based on days selected
   function scaleText(text, ratio) {
     if (ratio === 1) return text;
-    return text.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|handfuls?|ml)/gi,
-      (match, num, unit) => scaleNumber(num, ratio) + " " + unit
-    );
-  }
+    return text.replace(/(\d+\.?\d*)/g, (m, n) => {
+      const scaled = parseFloat(n) * ratio;
+      const r = Math.round(scaled * 8) / 8;
+      if (r === Math.floor(r)) return String(r);
+      const whole = Math.floor(r);
+      const frac = r - whole;
+      const fracs = [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]];
+      for (const [n2,d,s] of fracs) {
+        if (Math.abs(frac - n2/d) < 0.07) return whole > 0 ? whole + " " + s : s;
+      }
       return parseFloat(scaled.toFixed(1)).toString();
     });
   }
@@ -371,35 +377,29 @@ function ShoppingList({ week, jakeDays, laineDays }) {
   );
 }
 
-function scaleNumber(num, ratio) {
-  const scaled = parseFloat(num) * ratio;
-  const rounded = Math.round(scaled * 8) / 8;
-  if (rounded === Math.floor(rounded)) return String(rounded);
-  const fracs = [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]];
-  const whole = Math.floor(rounded);
-  const frac = rounded - whole;
-  for (const [n,d,s] of fracs) {
-    if (Math.abs(frac - n/d) < 0.07) return whole > 0 ? whole + " " + s : s;
-  }
-  return parseFloat(scaled.toFixed(1)).toString();
-}
-
 function scaleIngredient(text, days) {
+  // Matches patterns like "2.6 lbs", "2 cups", "1.5 lbs", "400g", "1 can", "5 tbsp" etc
+  // and scales the number by days/5
   if (days === 5) return text;
   const ratio = days / 5;
-  // Only scale numbers followed by a quantity unit — never bare numbers or temps/times
-  return text.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|handfuls?|cloves?|heads?|bunches?|bags?|pints?|ml|liters?)/gi,
-    (match, num, unit) => scaleNumber(num, ratio) + " " + unit
-  );
+  return text.replace(/(\d+\.?\d*)/g, (match, num) => {
+    const scaled = parseFloat(num) * ratio;
+    // Format nicely: if close to a simple fraction, show it
+    const rounded = Math.round(scaled * 8) / 8; // round to nearest 1/8
+    if (rounded === Math.floor(rounded)) return String(rounded);
+    const fracs = [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]];
+    const whole = Math.floor(rounded);
+    const frac = rounded - whole;
+    for (const [n,d,s] of fracs) {
+      if (Math.abs(frac - n/d) < 0.07) return whole > 0 ? whole + " " + s : s;
+    }
+    return parseFloat(scaled.toFixed(1)).toString();
+  });
 }
 
 function scaleStep(text, days) {
   if (days === 5) return text;
-  const ratio = days / 5;
-  // In steps, only scale explicit quantity units — protect temps (F/C) and times (min/hour/sec)
-  return text.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|handfuls?|ml)/gi,
-    (match, num, unit) => scaleNumber(num, ratio) + " " + unit
-  );
+  return scaleIngredient(text, days);
 }
 
 function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, isOpen, onToggle }) {
