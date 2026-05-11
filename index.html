@@ -155,11 +155,26 @@ function SubDropdown({ ing }) {
   );
 }
 
+function IngNutrition({ n }) {
+  if (!n) return null;
+  const pills = [["cal", n.cal, "kcal"], ["pro", n.protein, "g"], ["carb", n.carbs, "g"], ["fat", n.fat, "g"]];
+  const clr = { cal: "#88b4d8", pro: "#c878f8", carb: "#00d4aa", fat: "#38b6ff" };
+  return (
+    <span style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 4 }}>
+      {pills.map(([k, v, u]) => (
+        <span key={k} style={{ fontSize: 9, fontFamily: "monospace", color: clr[k], background: "#0c1524", border: "1px solid #1a2f50", borderRadius: 5, padding: "1px 6px", letterSpacing: "0.02em" }}>
+          <span style={{ color: "#2a4060", marginRight: 2 }}>{k}</span>{v}{u}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 function IngredientList({ items }) {
   const { subs } = useSubs();
   const units = useUnits();
   return (
-    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
+    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
       {items.map((rawIng, i) => {
         const text = typeof rawIng === "string"
           ? rawIng
@@ -167,11 +182,15 @@ function IngredientList({ items }) {
             ? resolveIngredient(rawIng, subs, units).item
             : rawIng[units] || rawIng.metric || rawIng.imperial || "";
         const hasSubs = rawIng && rawIng.substitutions && rawIng.substitutions.length > 0;
+        const nutri = typeof rawIng === "object" ? rawIng.nutrition : null;
         return (
-          <li key={i} style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4", paddingLeft: 13, position: "relative", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 2 }}>
-            <span style={{ position: "absolute", left: 0, color: "#00d4aa" }}>-</span>
-            <span>{text}</span>
-            {hasSubs && <SubDropdown ing={rawIng} />}
+          <li key={i} style={{ paddingLeft: 13, position: "relative" }}>
+            <span style={{ position: "absolute", left: 0, top: 2, color: "#00d4aa" }}>-</span>
+            <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
+              <span style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4" }}>{text}</span>
+              {hasSubs && <SubDropdown ing={rawIng} />}
+            </div>
+            <IngNutrition n={nutri} />
           </li>
         );
       })}
@@ -249,13 +268,16 @@ function DinnerCard({ d, isOpen, onToggle }) {
               const jakeVal = ing.jake ? resolveVal(ing.jake, units) : resolveVal(ing.shared, units);
               const laineVal = ing.laine ? resolveVal(ing.laine, units) : resolveVal(ing.shared, units);
               return (
-                <div key={i} style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: i < d.ingredients.length - 1 ? "1px solid #1a2f50" : "none", alignItems: "center" }}>
-                  <div style={{ padding: "8px 12px", fontSize: 12, color: "#8aaed4", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
-                    {ing.item}
-                    {rawIng.substitutions && rawIng.substitutions.length > 0 && <SubDropdown ing={rawIng} />}
+                <div key={i} style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: i < d.ingredients.length - 1 ? "1px solid #1a2f50" : "none", alignItems: "start" }}>
+                  <div style={{ padding: "9px 12px", fontSize: 12, color: "#8aaed4" }}>
+                    <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4, marginBottom: rawIng.nutrition ? 5 : 0 }}>
+                      {ing.item}
+                      {rawIng.substitutions && rawIng.substitutions.length > 0 && <SubDropdown ing={rawIng} />}
+                    </div>
+                    <IngNutrition n={rawIng.nutrition} />
                   </div>
-                  <div style={{ padding: "8px 12px", fontSize: 12, color: "#38b6ff", fontFamily: "monospace" }}>{jakeVal}</div>
-                  <div style={{ padding: "8px 12px", fontSize: 12, color: "#c878f8", fontFamily: "monospace" }}>{laineVal}</div>
+                  <div style={{ padding: "9px 12px", fontSize: 12, color: "#38b6ff", fontFamily: "monospace" }}>{jakeVal}</div>
+                  <div style={{ padding: "9px 12px", fontSize: 12, color: "#c878f8", fontFamily: "monospace" }}>{laineVal}</div>
                 </div>
               );
             })}
