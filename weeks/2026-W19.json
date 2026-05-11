@@ -136,7 +136,13 @@
                 "Plate separately by portion size."
               ]
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 290,
+            "protein": 40,
+            "carbs": 0,
+            "fat": 14
+          }
         },
         {
           "item": "Shelled edamame",
@@ -147,6 +153,12 @@
           "laine": {
             "metric": "100g",
             "imperial": "2/3 cup"
+          },
+          "nutrition": {
+            "cal": 180,
+            "protein": 16,
+            "carbs": 14,
+            "fat": 8
           }
         },
         {
@@ -178,15 +190,33 @@
               "note": "Roast 25 min for golden edges",
               "shopping": "Cauliflower - 1 head"
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 55,
+            "protein": 5,
+            "carbs": 11,
+            "fat": 0
+          }
         },
         {
           "item": "Olive oil",
-          "shared": "1.5 tbsp"
+          "shared": "1.5 tbsp",
+          "nutrition": {
+            "cal": 180,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 20
+          }
         },
         {
           "item": "Soy sauce, sesame oil, garlic, sesame seeds",
-          "shared": "to taste"
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 55,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 5
+          }
         }
       ],
       "steps": [
@@ -293,32 +323,68 @@
                 }
               }
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 520,
+            "protein": 72,
+            "carbs": 0,
+            "fat": 24
+          }
         },
         {
           "item": "Bell peppers",
           "jake": "2 large, halved",
-          "laine": "1 large, halved"
+          "laine": "1 large, halved",
+          "nutrition": {
+            "cal": 55,
+            "protein": 2,
+            "carbs": 13,
+            "fat": 0
+          }
         },
         {
           "item": "Black beans, drained",
-          "shared": "1 can (15 oz)"
+          "shared": "1 can (15 oz)",
+          "nutrition": {
+            "cal": 340,
+            "protein": 20,
+            "carbs": 62,
+            "fat": 1
+          }
         },
         {
           "item": "Canned diced tomatoes",
           "shared": {
             "metric": "100g",
             "imperial": "1/2 cup"
+          },
+          "nutrition": {
+            "cal": 45,
+            "protein": 2,
+            "carbs": 10,
+            "fat": 0
           }
         },
         {
           "item": "Shredded cheese",
           "jake": "2 tbsp",
-          "laine": "1 tbsp"
+          "laine": "1 tbsp",
+          "nutrition": {
+            "cal": 60,
+            "protein": 4,
+            "carbs": 1,
+            "fat": 5
+          }
         },
         {
           "item": "Cumin, garlic powder, chili flakes",
-          "shared": "to taste"
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 10,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 0
+          }
         }
       ],
       "steps": [
@@ -434,12 +500,24 @@
                 }
               }
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 540,
+            "protein": 78,
+            "carbs": 0,
+            "fat": 24
+          }
         },
         {
           "item": "White cannellini beans",
           "jake": "1/2 can (15 oz)",
-          "laine": "3/4 can (15 oz)"
+          "laine": "3/4 can (15 oz)",
+          "nutrition": {
+            "cal": 290,
+            "protein": 20,
+            "carbs": 54,
+            "fat": 1
+          }
         },
         {
           "item": "Asparagus",
@@ -464,16 +542,34 @@
               "note": "Roast 15 min cut-side up",
               "shopping": "Zucchini x 2 extra"
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 40,
+            "protein": 4,
+            "carbs": 7,
+            "fat": 0
+          }
         },
         {
           "item": "Olive oil",
           "jake": "1 tbsp",
-          "laine": "1/2 tbsp"
+          "laine": "1/2 tbsp",
+          "nutrition": {
+            "cal": 180,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 20
+          }
         },
         {
           "item": "Garlic, lemon, rosemary, salt, pepper",
-          "shared": "to taste"
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 15,
+            "protein": 0,
+            "carbs": 3,
+            "fat": 0
+          }
         }
       ],
       "steps": [
@@ -591,11 +687,23 @@
                 }
               }
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 350,
+            "protein": 72,
+            "carbs": 3,
+            "fat": 5
+          }
         },
         {
           "item": "Chickpeas, drained",
-          "shared": "1 can (15 oz)"
+          "shared": "1 can (15 oz)",
+          "nutrition": {
+            "cal": 360,
+            "protein": 20,
+            "carbs": 60,
+            "fat": 6
+          }
         },
         {
           "item": "Mixed veggies (bell pepper, snap peas, bok choy)",
@@ -614,15 +722,33 @@
               "note": "Fastest option - thaw first or add 2 extra min",
               "shopping": "Frozen stir-fry blend - 1 large bag"
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 60,
+            "protein": 4,
+            "carbs": 12,
+            "fat": 0
+          }
         },
         {
           "item": "Soy sauce / sesame oil / sriracha",
-          "shared": "2 tbsp / 1 tbsp / 1 tsp"
+          "shared": "2 tbsp / 1 tbsp / 1 tsp",
+          "nutrition": {
+            "cal": 75,
+            "protein": 1,
+            "carbs": 3,
+            "fat": 7
+          }
         },
         {
           "item": "Garlic + ginger",
-          "shared": "2 cloves, 1 tsp"
+          "shared": "2 cloves, 1 tsp",
+          "nutrition": {
+            "cal": 15,
+            "protein": 0,
+            "carbs": 3,
+            "fat": 0
+          }
         }
       ],
       "steps": [
@@ -689,7 +815,13 @@
                 "imperial": "Salmon fillet 12 oz"
               }
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 270,
+            "protein": 60,
+            "carbs": 0,
+            "fat": 2
+          }
         },
         {
           "item": "Dry green lentils",
@@ -700,23 +832,53 @@
           "laine": {
             "metric": "130g",
             "imperial": "2/3 cup"
+          },
+          "nutrition": {
+            "cal": 340,
+            "protein": 26,
+            "carbs": 58,
+            "fat": 1
           }
         },
         {
           "item": "Canned diced tomatoes",
-          "shared": "1 can (14.5 oz)"
+          "shared": "1 can (14.5 oz)",
+          "nutrition": {
+            "cal": 45,
+            "protein": 2,
+            "carbs": 10,
+            "fat": 0
+          }
         },
         {
           "item": "Carrot, celery, onion",
-          "shared": "1 of each"
+          "shared": "1 of each",
+          "nutrition": {
+            "cal": 70,
+            "protein": 2,
+            "carbs": 16,
+            "fat": 0
+          }
         },
         {
           "item": "Olive oil, cumin, paprika, lemon",
-          "shared": "1 tbsp oil"
+          "shared": "1 tbsp oil",
+          "nutrition": {
+            "cal": 130,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 14
+          }
         },
         {
           "item": "Fresh parsley",
-          "shared": "handful"
+          "shared": "handful",
+          "nutrition": {
+            "cal": 5,
+            "protein": 0,
+            "carbs": 1,
+            "fat": 0
+          }
         }
       ],
       "steps": [
@@ -791,12 +953,24 @@
                 "imperial": "Chicken drumsticks 14.5 oz"
               }
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 590,
+            "protein": 74,
+            "carbs": 0,
+            "fat": 30
+          }
         },
         {
           "item": "Sweet potato, cubed",
           "jake": "1 medium",
-          "laine": "1.5 medium"
+          "laine": "1.5 medium",
+          "nutrition": {
+            "cal": 220,
+            "protein": 4,
+            "carbs": 52,
+            "fat": 0
+          }
         },
         {
           "item": "Kale, stems removed",
@@ -839,16 +1013,34 @@
                 "Portion chicken by weight. Laine gets more potato."
               ]
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 50,
+            "protein": 4,
+            "carbs": 10,
+            "fat": 1
+          }
         },
         {
           "item": "Olive oil",
           "jake": "2 tbsp",
-          "laine": "1/2 tbsp"
+          "laine": "1/2 tbsp",
+          "nutrition": {
+            "cal": 180,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 20
+          }
         },
         {
           "item": "Garlic powder, smoked paprika, cumin, salt, lemon",
-          "shared": "to taste"
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 15,
+            "protein": 0,
+            "carbs": 3,
+            "fat": 0
+          }
         }
       ],
       "steps": [
@@ -923,7 +1115,13 @@
                 "imperial": "Salmon fillet 13 oz"
               }
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 500,
+            "protein": 84,
+            "carbs": 0,
+            "fat": 16
+          }
         },
         {
           "item": "Brussels sprouts, halved",
@@ -948,7 +1146,13 @@
               "note": "Roast 25 min same temp",
               "shopping": "Cauliflower - 1 head"
             }
-          ]
+          ],
+          "nutrition": {
+            "cal": 90,
+            "protein": 8,
+            "carbs": 18,
+            "fat": 1
+          }
         },
         {
           "item": "Dry green lentils",
@@ -959,16 +1163,34 @@
           "laine": {
             "metric": "90g",
             "imperial": "scant 1/2 cup"
+          },
+          "nutrition": {
+            "cal": 340,
+            "protein": 26,
+            "carbs": 58,
+            "fat": 1
           }
         },
         {
           "item": "Olive oil",
           "jake": "2 tbsp",
-          "laine": "1/2 tbsp"
+          "laine": "1/2 tbsp",
+          "nutrition": {
+            "cal": 180,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 20
+          }
         },
         {
           "item": "Dijon mustard, garlic, thyme, salt, pepper, lemon",
-          "shared": "to taste"
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 3,
+            "fat": 1
+          }
         }
       ],
       "steps": [
@@ -991,34 +1213,94 @@
     },
     "ingredients": [
       {
-        "item": "2.6 lbs boneless chicken thighs"
+        "item": "2.6 lbs boneless chicken thighs",
+        "nutrition": {
+          "cal": 1580,
+          "protein": 198,
+          "carbs": 0,
+          "fat": 80
+        }
       },
       {
-        "item": "2 cups dry red lentils (makes enough for 5 - do not reduce)"
+        "item": "2 cups dry red lentils (makes enough for 5 - do not reduce)",
+        "nutrition": {
+          "cal": 1380,
+          "protein": 96,
+          "carbs": 238,
+          "fat": 4
+        }
       },
       {
-        "item": "2 cans (15 oz each) black beans, drained"
+        "item": "2 cans (15 oz each) black beans, drained",
+        "nutrition": {
+          "cal": 680,
+          "protein": 40,
+          "carbs": 124,
+          "fat": 2
+        }
       },
       {
-        "item": "2 large zucchini, diced"
+        "item": "2 large zucchini, diced",
+        "nutrition": {
+          "cal": 66,
+          "protein": 5,
+          "carbs": 12,
+          "fat": 1
+        }
       },
       {
-        "item": "10 oz / about 8 big handfuls fresh spinach"
+        "item": "10 oz / about 8 big handfuls fresh spinach",
+        "nutrition": {
+          "cal": 65,
+          "protein": 8,
+          "carbs": 10,
+          "fat": 1
+        }
       },
       {
-        "item": "4 garlic cloves"
+        "item": "4 garlic cloves",
+        "nutrition": {
+          "cal": 18,
+          "protein": 1,
+          "carbs": 4,
+          "fat": 0
+        }
       },
       {
-        "item": "2 tbsp olive oil"
+        "item": "2 tbsp olive oil",
+        "nutrition": {
+          "cal": 240,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 27
+        }
       },
       {
-        "item": "2 tsp cumin, 2 tsp smoked paprika, 1 tsp turmeric"
+        "item": "2 tsp cumin, 2 tsp smoked paprika, 1 tsp turmeric",
+        "nutrition": {
+          "cal": 18,
+          "protein": 1,
+          "carbs": 4,
+          "fat": 0
+        }
       },
       {
-        "item": "Salt, pepper, lemon juice"
+        "item": "Salt, pepper, lemon juice",
+        "nutrition": {
+          "cal": 5,
+          "protein": 0,
+          "carbs": 1,
+          "fat": 0
+        }
       },
       {
-        "item": "5 tbsp Greek yogurt - 1 per container (optional)"
+        "item": "5 tbsp Greek yogurt - 1 per container (optional)",
+        "nutrition": {
+          "cal": 90,
+          "protein": 10,
+          "carbs": 7,
+          "fat": 2
+        }
       }
     ],
     "steps": [
@@ -1041,31 +1323,85 @@
     },
     "ingredients": [
       {
-        "item": "1.5 lbs boneless chicken breast"
+        "item": "1.5 lbs boneless chicken breast",
+        "nutrition": {
+          "cal": 1110,
+          "protein": 210,
+          "carbs": 0,
+          "fat": 24
+        }
       },
       {
-        "item": "1.5 cups dry basmati or jasmine rice (cook the whole batch - this is for all 5 containers)"
+        "item": "1.5 cups dry basmati or jasmine rice (cook the whole batch - this is for all 5 containers)",
+        "nutrition": {
+          "cal": 810,
+          "protein": 15,
+          "carbs": 178,
+          "fat": 2
+        }
       },
       {
-        "item": "2 large zucchini, diced"
+        "item": "2 large zucchini, diced",
+        "nutrition": {
+          "cal": 66,
+          "protein": 5,
+          "carbs": 12,
+          "fat": 1
+        }
       },
       {
-        "item": "2 cups cherry tomatoes"
+        "item": "2 cups cherry tomatoes",
+        "nutrition": {
+          "cal": 60,
+          "protein": 3,
+          "carbs": 13,
+          "fat": 0
+        }
       },
       {
-        "item": "1 can (15 oz) chickpeas, drained"
+        "item": "1 can (15 oz) chickpeas, drained",
+        "nutrition": {
+          "cal": 360,
+          "protein": 20,
+          "carbs": 60,
+          "fat": 6
+        }
       },
       {
-        "item": "1 red onion, diced"
+        "item": "1 red onion, diced",
+        "nutrition": {
+          "cal": 46,
+          "protein": 1,
+          "carbs": 11,
+          "fat": 0
+        }
       },
       {
-        "item": "1 tbsp olive oil"
+        "item": "1 tbsp olive oil",
+        "nutrition": {
+          "cal": 120,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 14
+        }
       },
       {
-        "item": "1 tsp cumin, 1 tsp garlic powder, paprika, salt"
+        "item": "1 tsp cumin, 1 tsp garlic powder, paprika, salt",
+        "nutrition": {
+          "cal": 12,
+          "protein": 0,
+          "carbs": 3,
+          "fat": 0
+        }
       },
       {
-        "item": "Lemon juice, fresh parsley"
+        "item": "Lemon juice, fresh parsley",
+        "nutrition": {
+          "cal": 8,
+          "protein": 0,
+          "carbs": 2,
+          "fat": 0
+        }
       }
     ],
     "steps": [
@@ -1089,19 +1425,49 @@
       },
       "ingredients": [
         {
-          "item": "3/4 cup 0% Greek yogurt"
+          "item": "3/4 cup 0% Greek yogurt",
+          "nutrition": {
+            "cal": 100,
+            "protein": 17,
+            "carbs": 7,
+            "fat": 0
+          }
         },
         {
-          "item": "2/3 cup low-sugar granola"
+          "item": "2/3 cup low-sugar granola",
+          "nutrition": {
+            "cal": 250,
+            "protein": 6,
+            "carbs": 42,
+            "fat": 8
+          }
         },
         {
-          "item": "100g / 3/4 cup mixed berries"
+          "item": "100g / 3/4 cup mixed berries",
+          "nutrition": {
+            "cal": 50,
+            "protein": 1,
+            "carbs": 12,
+            "fat": 0
+          }
         },
         {
-          "item": "1 tsp honey"
+          "item": "1 tsp honey",
+          "nutrition": {
+            "cal": 21,
+            "protein": 0,
+            "carbs": 6,
+            "fat": 0
+          }
         },
         {
-          "item": "1 tbsp ground flaxseed"
+          "item": "1 tbsp ground flaxseed",
+          "nutrition": {
+            "cal": 37,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 3
+          }
         }
       ],
       "steps": [
@@ -1122,22 +1488,58 @@
       },
       "ingredients": [
         {
-          "item": "4 egg whites + 1 whole egg"
+          "item": "4 egg whites + 1 whole egg",
+          "nutrition": {
+            "cal": 140,
+            "protein": 24,
+            "carbs": 1,
+            "fat": 5
+          }
         },
         {
-          "item": "1/2 cup spinach"
+          "item": "1/2 cup spinach",
+          "nutrition": {
+            "cal": 10,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 0
+          }
         },
         {
-          "item": "1/4 bell pepper, diced"
+          "item": "1/4 bell pepper, diced",
+          "nutrition": {
+            "cal": 12,
+            "protein": 0,
+            "carbs": 3,
+            "fat": 0
+          }
         },
         {
-          "item": "2 slices whole grain toast"
+          "item": "2 slices whole grain toast",
+          "nutrition": {
+            "cal": 160,
+            "protein": 7,
+            "carbs": 30,
+            "fat": 2
+          }
         },
         {
-          "item": "1 tsp olive oil"
+          "item": "1 tsp olive oil",
+          "nutrition": {
+            "cal": 40,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 4
+          }
         },
         {
-          "item": "Salt, pepper, chili flakes"
+          "item": "Salt, pepper, chili flakes",
+          "nutrition": {
+            "cal": 3,
+            "protein": 0,
+            "carbs": 1,
+            "fat": 0
+          }
         }
       ],
       "steps": [
@@ -1158,22 +1560,58 @@
       },
       "ingredients": [
         {
-          "item": "1 ripe banana"
+          "item": "1 ripe banana",
+          "nutrition": {
+            "cal": 105,
+            "protein": 1,
+            "carbs": 27,
+            "fat": 0
+          }
         },
         {
-          "item": "2/3 cup rolled oats"
+          "item": "2/3 cup rolled oats",
+          "nutrition": {
+            "cal": 200,
+            "protein": 7,
+            "carbs": 34,
+            "fat": 4
+          }
         },
         {
-          "item": "2 eggs"
+          "item": "2 eggs",
+          "nutrition": {
+            "cal": 140,
+            "protein": 12,
+            "carbs": 1,
+            "fat": 10
+          }
         },
         {
-          "item": "1 scoop (30g / 1 oz) vanilla protein powder"
+          "item": "1 scoop (30g / 1 oz) vanilla protein powder",
+          "nutrition": {
+            "cal": 120,
+            "protein": 24,
+            "carbs": 5,
+            "fat": 2
+          }
         },
         {
-          "item": "Pinch cinnamon"
+          "item": "Pinch cinnamon",
+          "nutrition": {
+            "cal": 2,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 0
+          }
         },
         {
-          "item": "Fresh fruit + honey to top"
+          "item": "Fresh fruit + honey to top",
+          "nutrition": {
+            "cal": 60,
+            "protein": 0,
+            "carbs": 15,
+            "fat": 0
+          }
         }
       ],
       "steps": [
