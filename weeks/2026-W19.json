@@ -138,10 +138,10 @@
             }
           ],
           "nutrition": {
-            "cal": 290,
-            "protein": 40,
+            "cal": 686,
+            "protein": 66,
             "carbs": 0,
-            "fat": 14
+            "fat": 43
           }
         },
         {
@@ -155,10 +155,10 @@
             "imperial": "2/3 cup"
           },
           "nutrition": {
-            "cal": 180,
-            "protein": 16,
-            "carbs": 14,
-            "fat": 8
+            "cal": 303,
+            "protein": 30,
+            "carbs": 22,
+            "fat": 13
           }
         },
         {
@@ -192,17 +192,17 @@
             }
           ],
           "nutrition": {
-            "cal": 55,
-            "protein": 5,
-            "carbs": 11,
-            "fat": 0
+            "cal": 136,
+            "protein": 11,
+            "carbs": 28,
+            "fat": 2
           }
         },
         {
           "item": "Olive oil",
           "shared": "1.5 tbsp",
           "nutrition": {
-            "cal": 180,
+            "cal": 177,
             "protein": 0,
             "carbs": 0,
             "fat": 20
@@ -212,9 +212,9 @@
           "item": "Soy sauce, sesame oil, garlic, sesame seeds",
           "shared": "to taste",
           "nutrition": {
-            "cal": 55,
-            "protein": 1,
-            "carbs": 2,
+            "cal": 60,
+            "protein": 2,
+            "carbs": 3,
             "fat": 5
           }
         }
@@ -325,10 +325,10 @@
             }
           ],
           "nutrition": {
-            "cal": 520,
-            "protein": 72,
+            "cal": 680,
+            "protein": 76,
             "carbs": 0,
-            "fat": 24
+            "fat": 40
           }
         },
         {
@@ -336,20 +336,20 @@
           "jake": "2 large, halved",
           "laine": "1 large, halved",
           "nutrition": {
-            "cal": 55,
-            "protein": 2,
-            "carbs": 13,
-            "fat": 0
+            "cal": 140,
+            "protein": 5,
+            "carbs": 32,
+            "fat": 1
           }
         },
         {
           "item": "Black beans, drained",
           "shared": "1 can (15 oz)",
           "nutrition": {
-            "cal": 340,
-            "protein": 20,
-            "carbs": 62,
-            "fat": 1
+            "cal": 553,
+            "protein": 38,
+            "carbs": 98,
+            "fat": 2
           }
         },
         {
@@ -359,9 +359,9 @@
             "imperial": "1/2 cup"
           },
           "nutrition": {
-            "cal": 45,
-            "protein": 2,
-            "carbs": 10,
+            "cal": 18,
+            "protein": 1,
+            "carbs": 4,
             "fat": 0
           }
         },
@@ -370,19 +370,19 @@
           "jake": "2 tbsp",
           "laine": "1 tbsp",
           "nutrition": {
-            "cal": 60,
-            "protein": 4,
-            "carbs": 1,
-            "fat": 5
+            "cal": 84,
+            "protein": 5,
+            "carbs": 0,
+            "fat": 7
           }
         },
         {
           "item": "Cumin, garlic powder, chili flakes",
           "shared": "to taste",
           "nutrition": {
-            "cal": 10,
+            "cal": 12,
             "protein": 0,
-            "carbs": 2,
+            "carbs": 3,
             "fat": 0
           }
         }
@@ -502,10 +502,10 @@
             }
           ],
           "nutrition": {
-            "cal": 540,
-            "protein": 78,
+            "cal": 745,
+            "protein": 94,
             "carbs": 0,
-            "fat": 24
+            "fat": 40
           }
         },
         {
@@ -513,9 +513,9 @@
           "jake": "1/2 can (15 oz)",
           "laine": "3/4 can (15 oz)",
           "nutrition": {
-            "cal": 290,
-            "protein": 20,
-            "carbs": 54,
+            "cal": 514,
+            "protein": 37,
+            "carbs": 95,
             "fat": 1
           }
         },
@@ -544,9 +544,9 @@
             }
           ],
           "nutrition": {
-            "cal": 40,
-            "protein": 4,
-            "carbs": 7,
+            "cal": 68,
+            "protein": 7,
+            "carbs": 13,
             "fat": 0
           }
         },
@@ -555,7 +555,7 @@
           "jake": "1 tbsp",
           "laine": "1/2 tbsp",
           "nutrition": {
-            "cal": 180,
+            "cal": 177,
             "protein": 0,
             "carbs": 0,
             "fat": 20
@@ -565,9 +565,9 @@
           "item": "Garlic, lemon, rosemary, salt, pepper",
           "shared": "to taste",
           "nutrition": {
-            "cal": 15,
+            "cal": 18,
             "protein": 0,
-            "carbs": 3,
+            "carbs": 4,
             "fat": 0
           }
         }
@@ -689,20 +689,20 @@
             }
           ],
           "nutrition": {
-            "cal": 350,
-            "protein": 72,
-            "carbs": 3,
-            "fat": 5
+            "cal": 408,
+            "protein": 86,
+            "carbs": 4,
+            "fat": 4
           }
         },
         {
           "item": "Chickpeas, drained",
           "shared": "1 can (15 oz)",
           "nutrition": {
-            "cal": 360,
-            "protein": 20,
-            "carbs": 60,
-            "fat": 6
+            "cal": 697,
+            "protein": 38,
+            "carbs": 115,
+            "fat": 11
           }
         },
         {
@@ -724,29 +724,29 @@
             }
           ],
           "nutrition": {
-            "cal": 60,
-            "protein": 4,
-            "carbs": 12,
-            "fat": 0
+            "cal": 95,
+            "protein": 5,
+            "carbs": 19,
+            "fat": 1
           }
         },
         {
           "item": "Soy sauce / sesame oil / sriracha",
           "shared": "2 tbsp / 1 tbsp / 1 tsp",
           "nutrition": {
-            "cal": 75,
-            "protein": 1,
-            "carbs": 3,
-            "fat": 7
+            "cal": 145,
+            "protein": 2,
+            "carbs": 5,
+            "fat": 14
           }
         },
         {
           "item": "Garlic + ginger",
           "shared": "2 cloves, 1 tsp",
           "nutrition": {
-            "cal": 15,
-            "protein": 0,
-            "carbs": 3,
+            "cal": 18,
+            "protein": 1,
+            "carbs": 4,
             "fat": 0
           }
         }
@@ -817,8 +817,8 @@
             }
           ],
           "nutrition": {
-            "cal": 270,
-            "protein": 60,
+            "cal": 271,
+            "protein": 59,
             "carbs": 0,
             "fat": 2
           }
@@ -834,19 +834,19 @@
             "imperial": "2/3 cup"
           },
           "nutrition": {
-            "cal": 340,
-            "protein": 26,
-            "carbs": 58,
-            "fat": 1
+            "cal": 812,
+            "protein": 58,
+            "carbs": 138,
+            "fat": 2
           }
         },
         {
           "item": "Canned diced tomatoes",
           "shared": "1 can (14.5 oz)",
           "nutrition": {
-            "cal": 45,
-            "protein": 2,
-            "carbs": 10,
+            "cal": 18,
+            "protein": 1,
+            "carbs": 4,
             "fat": 0
           }
         },
@@ -854,9 +854,9 @@
           "item": "Carrot, celery, onion",
           "shared": "1 of each",
           "nutrition": {
-            "cal": 70,
-            "protein": 2,
-            "carbs": 16,
+            "cal": 120,
+            "protein": 3,
+            "carbs": 28,
             "fat": 0
           }
         },
@@ -866,7 +866,7 @@
           "nutrition": {
             "cal": 130,
             "protein": 0,
-            "carbs": 2,
+            "carbs": 3,
             "fat": 14
           }
         },
@@ -955,10 +955,10 @@
             }
           ],
           "nutrition": {
-            "cal": 590,
-            "protein": 74,
+            "cal": 726,
+            "protein": 70,
             "carbs": 0,
-            "fat": 30
+            "fat": 49
           }
         },
         {
@@ -966,9 +966,9 @@
           "jake": "1 medium",
           "laine": "1.5 medium",
           "nutrition": {
-            "cal": 220,
-            "protein": 4,
-            "carbs": 52,
+            "cal": 280,
+            "protein": 5,
+            "carbs": 65,
             "fat": 0
           }
         },
@@ -1015,9 +1015,9 @@
             }
           ],
           "nutrition": {
-            "cal": 50,
+            "cal": 44,
             "protein": 4,
-            "carbs": 10,
+            "carbs": 8,
             "fat": 1
           }
         },
@@ -1026,19 +1026,19 @@
           "jake": "2 tbsp",
           "laine": "1/2 tbsp",
           "nutrition": {
-            "cal": 180,
+            "cal": 298,
             "protein": 0,
             "carbs": 0,
-            "fat": 20
+            "fat": 34
           }
         },
         {
           "item": "Garlic powder, smoked paprika, cumin, salt, lemon",
           "shared": "to taste",
           "nutrition": {
-            "cal": 15,
-            "protein": 0,
-            "carbs": 3,
+            "cal": 18,
+            "protein": 1,
+            "carbs": 4,
             "fat": 0
           }
         }
@@ -1117,10 +1117,10 @@
             }
           ],
           "nutrition": {
-            "cal": 500,
-            "protein": 84,
+            "cal": 515,
+            "protein": 76,
             "carbs": 0,
-            "fat": 16
+            "fat": 22
           }
         },
         {
@@ -1148,9 +1148,9 @@
             }
           ],
           "nutrition": {
-            "cal": 90,
-            "protein": 8,
-            "carbs": 18,
+            "cal": 172,
+            "protein": 14,
+            "carbs": 36,
             "fat": 1
           }
         },
@@ -1165,10 +1165,10 @@
             "imperial": "scant 1/2 cup"
           },
           "nutrition": {
-            "cal": 340,
-            "protein": 26,
-            "carbs": 58,
-            "fat": 1
+            "cal": 600,
+            "protein": 44,
+            "carbs": 102,
+            "fat": 2
           }
         },
         {
@@ -1176,19 +1176,19 @@
           "jake": "2 tbsp",
           "laine": "1/2 tbsp",
           "nutrition": {
-            "cal": 180,
+            "cal": 239,
             "protein": 0,
             "carbs": 0,
-            "fat": 20
+            "fat": 27
           }
         },
         {
           "item": "Dijon mustard, garlic, thyme, salt, pepper, lemon",
           "shared": "to taste",
           "nutrition": {
-            "cal": 20,
+            "cal": 25,
             "protein": 1,
-            "carbs": 3,
+            "carbs": 4,
             "fat": 1
           }
         }
@@ -1215,10 +1215,10 @@
       {
         "item": "2.6 lbs boneless chicken thighs",
         "nutrition": {
-          "cal": 1580,
-          "protein": 198,
+          "cal": 2090,
+          "protein": 234,
           "carbs": 0,
-          "fat": 80
+          "fat": 118
         }
       },
       {
@@ -1233,10 +1233,10 @@
       {
         "item": "2 cans (15 oz each) black beans, drained",
         "nutrition": {
-          "cal": 680,
-          "protein": 40,
-          "carbs": 124,
-          "fat": 2
+          "cal": 1106,
+          "protein": 76,
+          "carbs": 196,
+          "fat": 4
         }
       },
       {
@@ -1269,7 +1269,7 @@
       {
         "item": "2 tbsp olive oil",
         "nutrition": {
-          "cal": 240,
+          "cal": 239,
           "protein": 0,
           "carbs": 0,
           "fat": 27
@@ -1361,10 +1361,10 @@
       {
         "item": "1 can (15 oz) chickpeas, drained",
         "nutrition": {
-          "cal": 360,
-          "protein": 20,
-          "carbs": 60,
-          "fat": 6
+          "cal": 697,
+          "protein": 38,
+          "carbs": 115,
+          "fat": 11
         }
       },
       {
@@ -1600,7 +1600,7 @@
           "nutrition": {
             "cal": 2,
             "protein": 0,
-            "carbs": 0,
+            "carbs": 1,
             "fat": 0
           }
         },
