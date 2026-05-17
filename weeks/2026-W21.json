@@ -1,0 +1,1181 @@
+{
+  "_v": 3,
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
+  "dinners": [
+    {
+      "day": "Sunday",
+      "name": "Slow-Cooker Pulled Pork + Sweet Potato + Broccoli",
+      "note": "Start the shoulder in the morning. Makes enough for Sunday dinner + Tuesday + Thursday. Jake gets more pork, Laine more sweet potato.",
+      "jake": {
+        "cal": 720,
+        "protein": 65,
+        "carbs": 38,
+        "fat": 30,
+        "fiber": 8
+      },
+      "laine": {
+        "cal": 490,
+        "protein": 40,
+        "carbs": 48,
+        "fat": 14,
+        "fiber": 9
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder (from batch)",
+          "jake": {
+            "imperial": "8 oz pulled",
+            "metric": "225g pulled"
+          },
+          "laine": {
+            "imperial": "5 oz pulled",
+            "metric": "140g pulled"
+          },
+          "nutrition": {
+            "cal": 580,
+            "protein": 62,
+            "carbs": 0,
+            "fat": 34
+          }
+        },
+        {
+          "item": "Sweet potato, cubed",
+          "jake": "1 medium",
+          "laine": "1.5 medium",
+          "nutrition": {
+            "cal": 280,
+            "protein": 5,
+            "carbs": 65,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Broccoli florets",
+          "shared": {
+            "imperial": "about 4 cups total",
+            "metric": "400g total"
+          },
+          "nutrition": {
+            "cal": 136,
+            "protein": 11,
+            "carbs": 28,
+            "fat": 2
+          }
+        },
+        {
+          "item": "Olive oil",
+          "jake": "1.5 tbsp",
+          "laine": "0.5 tbsp",
+          "nutrition": {
+            "cal": 200,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 22
+          }
+        },
+        {
+          "item": "Garlic powder, smoked paprika, cumin, salt",
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 15,
+            "protein": 0,
+            "carbs": 3,
+            "fat": 0
+          }
+        }
+      ],
+      "steps": [
+        "For the pork shoulder batch: rub the whole shoulder with cumin, smoked paprika, garlic powder, salt, pepper, chili flakes. Add 1/2 cup water to slow cooker. Cook on LOW 8 hrs or HIGH 4-5 hrs. Shred and portion into 3 dinner-sized containers plus lunch use.",
+        "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
+        "Toss broccoli with remaining oil + salt. Add to pan for last 15 min.",
+        "Plate: Jake gets more pork + less potato. Laine gets less pork + more potato."
+      ]
+    },
+    {
+      "day": "Monday",
+      "name": "Mandarin Orange Chicken + Lentils + Frozen Veggies",
+      "note": "Trader Joe's night \u2014 easy. Jake gets extra lentils for protein. Laine gets more veg. Use frozen veggie bag of choice.",
+      "jake": {
+        "cal": 710,
+        "protein": 58,
+        "carbs": 52,
+        "fat": 24,
+        "fiber": 10
+      },
+      "laine": {
+        "cal": 490,
+        "protein": 36,
+        "carbs": 58,
+        "fat": 14,
+        "fiber": 11
+      },
+      "ingredients": [
+        {
+          "item": "TJ's Mandarin Orange Chicken",
+          "jake": {
+            "imperial": "8 oz",
+            "metric": "225g"
+          },
+          "laine": {
+            "imperial": "5 oz",
+            "metric": "140g"
+          },
+          "nutrition": {
+            "cal": 540,
+            "protein": 46,
+            "carbs": 54,
+            "fat": 20
+          }
+        },
+        {
+          "item": "Dry green lentils",
+          "jake": {
+            "imperial": "1/3 cup dry",
+            "metric": "65g dry"
+          },
+          "laine": {
+            "imperial": "1/4 cup dry",
+            "metric": "50g dry"
+          },
+          "nutrition": {
+            "cal": 400,
+            "protein": 30,
+            "carbs": 68,
+            "fat": 1
+          }
+        },
+        {
+          "item": "Frozen veggies (edamame, stir-fry blend, or broccoli)",
+          "shared": "2-3 cups total",
+          "nutrition": {
+            "cal": 120,
+            "protein": 8,
+            "carbs": 18,
+            "fat": 2
+          }
+        }
+      ],
+      "steps": [
+        "Simmer lentils in salted water \u2014 Jake's portion 20 min, they're done when tender. Drain.",
+        "Bake orange chicken per package (usually 400F for 20-22 min, toss halfway).",
+        "Microwave or steam frozen veggies per package.",
+        "Plate: Jake gets larger chicken + lentil portion. Laine gets smaller chicken + more veg."
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "name": "Pulled Pork Pasta (Leftover Pork + Tomato Sauce)",
+      "note": "Use the roasted onion & garlic pasta sauce jar. Jake gets more pasta, Laine more sauce/veg ratio. Use gemelli or casarecce.",
+      "jake": {
+        "cal": 730,
+        "protein": 60,
+        "carbs": 52,
+        "fat": 26,
+        "fiber": 7
+      },
+      "laine": {
+        "cal": 480,
+        "protein": 38,
+        "carbs": 56,
+        "fat": 12,
+        "fiber": 7
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder (leftover pulled)",
+          "jake": {
+            "imperial": "6 oz",
+            "metric": "170g"
+          },
+          "laine": {
+            "imperial": "4 oz",
+            "metric": "113g"
+          },
+          "nutrition": {
+            "cal": 435,
+            "protein": 46,
+            "carbs": 0,
+            "fat": 26
+          }
+        },
+        {
+          "item": "Garofalo gemelli or casarecce pasta",
+          "jake": {
+            "imperial": "3 oz dry",
+            "metric": "85g dry"
+          },
+          "laine": {
+            "imperial": "2.5 oz dry",
+            "metric": "70g dry"
+          },
+          "nutrition": {
+            "cal": 490,
+            "protein": 17,
+            "carbs": 98,
+            "fat": 2
+          }
+        },
+        {
+          "item": "Signature Select roasted onion & garlic pasta sauce",
+          "jake": {
+            "imperial": "3/4 cup",
+            "metric": "180ml"
+          },
+          "laine": {
+            "imperial": "1 cup",
+            "metric": "240ml"
+          },
+          "nutrition": {
+            "cal": 220,
+            "protein": 4,
+            "carbs": 34,
+            "fat": 6
+          }
+        },
+        {
+          "item": "Baby spinach, stirred in",
+          "shared": "2 big handfuls",
+          "nutrition": {
+            "cal": 14,
+            "protein": 2,
+            "carbs": 2,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Progresso garlic herb bread crumbs (garnish)",
+          "shared": "1 tbsp each",
+          "nutrition": {
+            "cal": 55,
+            "protein": 2,
+            "carbs": 10,
+            "fat": 1
+          }
+        }
+      ],
+      "steps": [
+        "Cook pasta per package in salted water. Reserve 1/4 cup pasta water before draining.",
+        "Warm pulled pork in a pan over medium heat. Add pasta sauce, stir together.",
+        "Add drained pasta to the pan, toss with sauce + pork. Add pasta water if needed to loosen.",
+        "Stir in baby spinach off heat until just wilted.",
+        "Plate with Jake's larger pasta portion. Garnish with bread crumbs."
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "name": "Shrimp + Garbanzo Bean + Spinach Skillet",
+      "note": "Quick weeknight. Jake gets more shrimp, Laine gets more beans. Use the garbanzo can and frozen shrimp.",
+      "jake": {
+        "cal": 640,
+        "protein": 64,
+        "carbs": 34,
+        "fat": 22,
+        "fiber": 9
+      },
+      "laine": {
+        "cal": 430,
+        "protein": 38,
+        "carbs": 42,
+        "fat": 10,
+        "fiber": 10
+      },
+      "ingredients": [
+        {
+          "item": "Frozen shrimp, peeled + thawed",
+          "jake": {
+            "imperial": "10 oz",
+            "metric": "280g"
+          },
+          "laine": {
+            "imperial": "6 oz",
+            "metric": "170g"
+          },
+          "nutrition": {
+            "cal": 360,
+            "protein": 74,
+            "carbs": 3,
+            "fat": 4
+          }
+        },
+        {
+          "item": "Garbanzo beans, drained",
+          "shared": "1 can (15 oz)",
+          "nutrition": {
+            "cal": 697,
+            "protein": 38,
+            "carbs": 115,
+            "fat": 11
+          }
+        },
+        {
+          "item": "Baby spinach",
+          "shared": "3 big handfuls",
+          "nutrition": {
+            "cal": 21,
+            "protein": 2,
+            "carbs": 3,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Diced tomatoes (from large can)",
+          "shared": {
+            "imperial": "1 cup",
+            "metric": "240g"
+          },
+          "nutrition": {
+            "cal": 40,
+            "protein": 2,
+            "carbs": 9,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Lemon juice + garlic",
+          "shared": "2 tbsp lemon, 3 cloves",
+          "nutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 5,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Olive oil",
+          "jake": "1.5 tbsp",
+          "laine": "0.5 tbsp",
+          "nutrition": {
+            "cal": 200,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 22
+          }
+        }
+      ],
+      "steps": [
+        "Heat oil in a large skillet over medium-high. Add garlic, cook 1 min.",
+        "Add garbanzo beans and diced tomatoes. Simmer 5 min.",
+        "Add all shrimp. Cook 2 min per side until pink.",
+        "Stir in spinach off heat. Finish with lemon juice.",
+        "Plate: Jake gets more shrimp, Laine gets more beans."
+      ]
+    },
+    {
+      "day": "Thursday",
+      "name": "Pulled Pork Chili (Leftover Pork + Dennison's Base)",
+      "note": "Use one can Dennison's chili as the flavor base + add the leftover pork. Hearty and zero effort. Jake eats more.",
+      "jake": {
+        "cal": 700,
+        "protein": 68,
+        "carbs": 40,
+        "fat": 24,
+        "fiber": 13
+      },
+      "laine": {
+        "cal": 460,
+        "protein": 44,
+        "carbs": 42,
+        "fat": 10,
+        "fiber": 13
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder (leftover pulled, final portion)",
+          "jake": {
+            "imperial": "6 oz",
+            "metric": "170g"
+          },
+          "laine": {
+            "imperial": "4 oz",
+            "metric": "113g"
+          },
+          "nutrition": {
+            "cal": 435,
+            "protein": 46,
+            "carbs": 0,
+            "fat": 26
+          }
+        },
+        {
+          "item": "Dennison's chunky chili with beans (1 can)",
+          "shared": "1 can split",
+          "nutrition": {
+            "cal": 500,
+            "protein": 28,
+            "carbs": 60,
+            "fat": 14
+          }
+        },
+        {
+          "item": "Black beans (Sun Vista or Bush's), drained",
+          "shared": {
+            "imperial": "1 cup",
+            "metric": "240g"
+          },
+          "nutrition": {
+            "cal": 218,
+            "protein": 15,
+            "carbs": 40,
+            "fat": 1
+          }
+        },
+        {
+          "item": "Hatch diced green chiles",
+          "shared": "1 can",
+          "nutrition": {
+            "cal": 15,
+            "protein": 1,
+            "carbs": 3,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Daisy sour cream",
+          "jake": "2 tbsp",
+          "laine": "1 tbsp",
+          "nutrition": {
+            "cal": 120,
+            "protein": 2,
+            "carbs": 3,
+            "fat": 12
+          }
+        }
+      ],
+      "steps": [
+        "Combine canned chili, black beans, green chiles, and pulled pork in a pot.",
+        "Simmer on medium 15 min, stirring occasionally.",
+        "Taste and adjust salt/cumin/chili powder.",
+        "Ladle into bowls: Jake gets a larger portion. Top with sour cream."
+      ]
+    },
+    {
+      "day": "Friday",
+      "name": "Baked Cod + Lentil Soup (Leftover) + Frozen Veg",
+      "note": "Light Friday. Laine gets more lentil soup base, Jake more cod. Use frozen cod and any leftover lentils or make a quick new batch.",
+      "jake": {
+        "cal": 600,
+        "protein": 62,
+        "carbs": 36,
+        "fat": 18,
+        "fiber": 11
+      },
+      "laine": {
+        "cal": 420,
+        "protein": 38,
+        "carbs": 42,
+        "fat": 8,
+        "fiber": 12
+      },
+      "ingredients": [
+        {
+          "item": "Frozen cod fillet",
+          "jake": {
+            "imperial": "8 oz",
+            "metric": "225g"
+          },
+          "laine": {
+            "imperial": "5 oz",
+            "metric": "140g"
+          },
+          "nutrition": {
+            "cal": 330,
+            "protein": 72,
+            "carbs": 0,
+            "fat": 3
+          }
+        },
+        {
+          "item": "Dry green lentils",
+          "jake": {
+            "imperial": "1/3 cup dry",
+            "metric": "65g dry"
+          },
+          "laine": {
+            "imperial": "1/2 cup dry",
+            "metric": "80g dry"
+          },
+          "nutrition": {
+            "cal": 500,
+            "protein": 36,
+            "carbs": 86,
+            "fat": 2
+          }
+        },
+        {
+          "item": "Diced tomatoes (from large can)",
+          "shared": {
+            "imperial": "1 cup",
+            "metric": "240g"
+          },
+          "nutrition": {
+            "cal": 40,
+            "protein": 2,
+            "carbs": 9,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Frozen veggies (any)",
+          "shared": "2 cups",
+          "nutrition": {
+            "cal": 80,
+            "protein": 5,
+            "carbs": 14,
+            "fat": 1
+          }
+        },
+        {
+          "item": "Lemon juice, olive oil, garlic, cumin, paprika",
+          "shared": "1 tbsp oil total",
+          "nutrition": {
+            "cal": 145,
+            "protein": 1,
+            "carbs": 4,
+            "fat": 15
+          }
+        }
+      ],
+      "steps": [
+        "Simmer lentils with diced tomatoes, cumin, garlic, and 2 cups water for 20 min. Season with salt + lemon.",
+        "Season cod with paprika, salt, lemon zest. Bake at 400F / 200C for 12-14 min.",
+        "Steam frozen veggies per package.",
+        "Laine gets larger lentil bowl + smaller cod. Jake gets larger cod + smaller soup."
+      ]
+    },
+    {
+      "day": "Saturday",
+      "name": "Turkey & Pinto Bean Stuffed Sweet Potatoes",
+      "note": "Ground turkey from freezer + pinto beans. Laine gets a bigger potato, Jake gets more turkey. Fun and filling.",
+      "jake": {
+        "cal": 700,
+        "protein": 66,
+        "carbs": 44,
+        "fat": 24,
+        "fiber": 10
+      },
+      "laine": {
+        "cal": 480,
+        "protein": 42,
+        "carbs": 54,
+        "fat": 10,
+        "fiber": 11
+      },
+      "ingredients": [
+        {
+          "item": "Ground turkey 85/15 (from freezer)",
+          "jake": {
+            "imperial": "9 oz",
+            "metric": "255g"
+          },
+          "laine": {
+            "imperial": "5.5 oz",
+            "metric": "155g"
+          },
+          "nutrition": {
+            "cal": 640,
+            "protein": 72,
+            "carbs": 0,
+            "fat": 40
+          }
+        },
+        {
+          "item": "Aunt Penny's pinto beans, drained",
+          "shared": "1 can (15 oz)",
+          "nutrition": {
+            "cal": 360,
+            "protein": 22,
+            "carbs": 64,
+            "fat": 1
+          }
+        },
+        {
+          "item": "Sweet potato",
+          "jake": "1 large",
+          "laine": "1.5 large",
+          "nutrition": {
+            "cal": 280,
+            "protein": 5,
+            "carbs": 65,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Hatch green chiles or diced tomatoes",
+          "shared": "to taste",
+          "nutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 4,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Daisy sour cream + cumin + garlic powder",
+          "jake": "2 tbsp sour cream",
+          "laine": "1 tbsp sour cream",
+          "nutrition": {
+            "cal": 80,
+            "protein": 1,
+            "carbs": 3,
+            "fat": 8
+          }
+        }
+      ],
+      "steps": [
+        "Pierce sweet potatoes, bake at 400F / 200C for 45-50 min until soft.",
+        "Brown ground turkey in a skillet with cumin, garlic powder, salt. Drain excess fat.",
+        "Add pinto beans + green chiles/tomatoes. Simmer 5 min.",
+        "Split sweet potatoes open. Spoon turkey-bean mixture on top.",
+        "Jake gets more turkey filling. Laine gets bigger potato. Top with sour cream."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Chicken + White Bean + Spinach Pasta Batch",
+    "note": "Make the full batch Sunday, divide into 5 equal containers. High protein for Jake. Uses pasta, white beans, chicken breast, spinach, and pesto.",
+    "macros": {
+      "cal": 660,
+      "protein": 70,
+      "carbs": 48,
+      "fat": 18,
+      "fiber": 10
+    },
+    "ingredients": [
+      {
+        "item": "2.5 lbs chicken breast (from freezer)",
+        "nutrition": {
+          "cal": 1850,
+          "protein": 350,
+          "carbs": 0,
+          "fat": 40
+        }
+      },
+      {
+        "item": "Garofalo gemelli or spaghetti, 12 oz dry",
+        "nutrition": {
+          "cal": 1260,
+          "protein": 43,
+          "carbs": 252,
+          "fat": 5
+        }
+      },
+      {
+        "item": "Cannellini beans, 1 can (15 oz) drained",
+        "nutrition": {
+          "cal": 410,
+          "protein": 28,
+          "carbs": 74,
+          "fat": 1
+        }
+      },
+      {
+        "item": "Baby spinach - 4 big handfuls",
+        "nutrition": {
+          "cal": 28,
+          "protein": 4,
+          "carbs": 4,
+          "fat": 0
+        }
+      },
+      {
+        "item": "Prego creamy parmesan pesto - 3 tbsp total",
+        "nutrition": {
+          "cal": 210,
+          "protein": 3,
+          "carbs": 6,
+          "fat": 21
+        }
+      },
+      {
+        "item": "RealLemon juice + garlic + salt + pepper",
+        "nutrition": {
+          "cal": 15,
+          "protein": 0,
+          "carbs": 4,
+          "fat": 0
+        }
+      }
+    ],
+    "steps": [
+      "Season ALL chicken breast with salt, garlic powder, pepper. Bake at 400F for 24 min. Cool and slice or shred the whole batch.",
+      "Cook ALL pasta per package in salted water. Drain, toss immediately with pesto to prevent sticking.",
+      "Drain and rinse cannellini beans.",
+      "Divide evenly: pasta base across 5 containers, then beans, then chicken on top, then spinach (it will wilt when reheated), then a squeeze of lemon.",
+      "Reheat 2 min \u2014 add a small splash of water before microwaving so pasta doesn't dry out."
+    ]
+  },
+  "laineLunch": {
+    "name": "Shrimp + Lentil + Veggie Bowl",
+    "note": "Laine's batch \u2014 no chicken. Uses frozen shrimp, lentils, frozen veggies, and diced tomatoes. Higher carb, lower fat for her macros. Divide into 5 containers.",
+    "macros": {
+      "cal": 470,
+      "protein": 42,
+      "carbs": 50,
+      "fat": 9,
+      "fiber": 12
+    },
+    "ingredients": [
+      {
+        "item": "Frozen shrimp peeled - 1.5 lbs",
+        "nutrition": {
+          "cal": 720,
+          "protein": 144,
+          "carbs": 6,
+          "fat": 8
+        }
+      },
+      {
+        "item": "Dry green lentils - 1.5 cups dry",
+        "nutrition": {
+          "cal": 1060,
+          "protein": 76,
+          "carbs": 182,
+          "fat": 3
+        }
+      },
+      {
+        "item": "Great Value diced tomatoes - 1 large can",
+        "nutrition": {
+          "cal": 140,
+          "protein": 6,
+          "carbs": 30,
+          "fat": 1
+        }
+      },
+      {
+        "item": "Frozen veggies (stir-fry blend or edamame) - 3 cups",
+        "nutrition": {
+          "cal": 180,
+          "protein": 12,
+          "carbs": 27,
+          "fat": 3
+        }
+      },
+      {
+        "item": "Lemon juice, garlic, cumin, smoked paprika, salt",
+        "nutrition": {
+          "cal": 20,
+          "protein": 0,
+          "carbs": 5,
+          "fat": 0
+        }
+      },
+      {
+        "item": "Olive oil - 1 tbsp total",
+        "nutrition": {
+          "cal": 120,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 14
+        }
+      }
+    ],
+    "steps": [
+      "Cook ALL lentils: simmer in salted water with cumin + garlic for 20 min. Drain and dress with olive oil + lemon.",
+      "Cook ALL shrimp: toss with smoked paprika + salt. Pan sear in batches 2 min per side. Set aside.",
+      "Steam or microwave ALL frozen veggies per package.",
+      "Heat diced tomatoes in the same pan 3 min to reduce slightly.",
+      "Divide evenly across 5 containers: lentils base, tomato-veggie mix, shrimp on top. Squeeze lemon over each. Refrigerate."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "day": "Mon / Wed / Fri",
+      "name": "Greek Yogurt Parfait",
+      "macros": {
+        "cal": 310,
+        "protein": 24,
+        "carbs": 32,
+        "fat": 6,
+        "fiber": 4
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt (1 container)",
+          "nutrition": {
+            "cal": 120,
+            "protein": 15,
+            "carbs": 14,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Open Nature protein granola - 1/3 cup",
+          "nutrition": {
+            "cal": 150,
+            "protein": 8,
+            "carbs": 18,
+            "fat": 5
+          }
+        },
+        {
+          "item": "Frozen fruit (thawed) - 1/2 cup",
+          "nutrition": {
+            "cal": 40,
+            "protein": 1,
+            "carbs": 10,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Ground flaxseed - 1 tbsp",
+          "nutrition": {
+            "cal": 37,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 3
+          }
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl.",
+        "Top with thawed frozen fruit, granola, and flaxseed.",
+        "Tip: prep night before in a jar \u2014 add granola in the morning."
+      ]
+    },
+    {
+      "day": "Tue / Thu",
+      "name": "Egg White Scramble + Cottage Cheese",
+      "macros": {
+        "cal": 290,
+        "protein": 34,
+        "carbs": 12,
+        "fat": 6,
+        "fiber": 2
+      },
+      "ingredients": [
+        {
+          "item": "Liquid egg whites - 3/4 cup",
+          "nutrition": {
+            "cal": 95,
+            "protein": 20,
+            "carbs": 2,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Cottage cheese 1% - 1/2 cup",
+          "nutrition": {
+            "cal": 90,
+            "protein": 14,
+            "carbs": 5,
+            "fat": 1
+          }
+        },
+        {
+          "item": "Baby spinach - 1/2 cup",
+          "nutrition": {
+            "cal": 5,
+            "protein": 1,
+            "carbs": 1,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Diced tomatoes or frozen veg - 1/4 cup",
+          "nutrition": {
+            "cal": 15,
+            "protein": 1,
+            "carbs": 3,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Salt, pepper, chili flakes",
+          "nutrition": {
+            "cal": 3,
+            "protein": 0,
+            "carbs": 1,
+            "fat": 0
+          }
+        }
+      ],
+      "steps": [
+        "Scramble egg whites over medium-low with spinach and veg until just set.",
+        "Serve alongside cottage cheese \u2014 season both with salt, pepper, chili flakes."
+      ]
+    },
+    {
+      "day": "Sat / Sun",
+      "name": "Birch Benders Protein Pancakes + Fruit",
+      "macros": {
+        "cal": 360,
+        "protein": 22,
+        "carbs": 50,
+        "fat": 8,
+        "fiber": 4
+      },
+      "ingredients": [
+        {
+          "item": "Birch Benders pancake mix - 1/2 cup",
+          "nutrition": {
+            "cal": 200,
+            "protein": 12,
+            "carbs": 36,
+            "fat": 3
+          }
+        },
+        {
+          "item": "Liquid egg whites - 1/4 cup (or 1 egg)",
+          "nutrition": {
+            "cal": 32,
+            "protein": 7,
+            "carbs": 0,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Frozen fruit (thawed) or sliced apple",
+          "nutrition": {
+            "cal": 50,
+            "protein": 0,
+            "carbs": 13,
+            "fat": 0
+          }
+        },
+        {
+          "item": "Ground flaxseed - 1 tbsp",
+          "nutrition": {
+            "cal": 37,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 3
+          }
+        }
+      ],
+      "steps": [
+        "Mix pancake mix with egg whites and water per package directions.",
+        "Cook small pancakes on a non-stick pan over medium heat, 2 min per side.",
+        "Top with thawed frozen fruit or sliced apple. Add flaxseed on the side."
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Cottage Cheese + Walnuts",
+      "macros": {
+        "cal": 270,
+        "protein": 22,
+        "carbs": 6,
+        "fat": 18,
+        "fiber": 1
+      },
+      "desc": "3/4 cup 1% cottage cheese + small handful of walnuts. No prep."
+    },
+    {
+      "name": "Protein Shake",
+      "macros": {
+        "cal": 160,
+        "protein": 30,
+        "carbs": 8,
+        "fat": 3,
+        "fiber": 1
+      },
+      "desc": "1-2 scoops protein powder with water or a splash of milk. Use if hitting protein is a struggle."
+    },
+    {
+      "name": "Clif Bar",
+      "macros": {
+        "cal": 240,
+        "protein": 9,
+        "carbs": 44,
+        "fat": 5,
+        "fiber": 5
+      },
+      "desc": "On-hand, no prep. Good pre-workout or afternoon bridge."
+    },
+    {
+      "name": "Hard-Boiled Egg Whites + Cottage Cheese",
+      "macros": {
+        "cal": 180,
+        "protein": 26,
+        "carbs": 5,
+        "fat": 3,
+        "fiber": 0
+      },
+      "desc": "Use the liquid egg whites \u2014 microwave in a mug 90 sec. Add cottage cheese alongside."
+    }
+  ],
+  "shopping": {
+    "Proteins (Buy)": [
+      {
+        "imperial": "Pork shoulder/butt 4-5 lbs",
+        "metric": "Pork shoulder/butt 2-2.3 kg"
+      }
+    ],
+    "Pantry (Buy if not stocked)": [
+      "Olive oil (if low)",
+      "Garlic (fresh head or two)",
+      "Protein powder (if running low)"
+    ],
+    "Already Have \u2014 Proteins": [
+      "Chicken breast 2.5 lbs (freezer)",
+      "Ground turkey 3 lbs 85/15 (freezer)",
+      "Frozen shrimp (freezer)",
+      "Frozen cod (freezer)",
+      "TJ's Mandarin Orange Chicken x3 (freezer)",
+      "Cottage cheese 1% (fridge)",
+      "Oikos Triple Zero yogurt (fridge)",
+      "Cubed ham (fridge)",
+      "Chicken of the Sea tuna x5 cans"
+    ],
+    "Already Have \u2014 Pantry": [
+      "Garofalo pasta (gemelli x3, casarecce x1, spaghetti x1)",
+      "Barilla tri-color rotini",
+      "Signature Select lentils 2lb bag",
+      "Tri-color quinoa",
+      "Birch Benders pancake mix",
+      "Progresso garlic herb bread crumbs",
+      "Open Nature protein granola",
+      "Brown flaxseeds",
+      "All purpose flour"
+    ],
+    "Already Have \u2014 Canned & Jarred": [
+      "Dennison's chunky chili x2, no-bean x1",
+      "Signature Select pasta sauce x3 jars (garlic basil, roasted onion & garlic, four cheese)",
+      "Classico + Signature Select pizza sauce",
+      "Prego creamy parmesan pesto",
+      "Juanita's hominy",
+      "Sun Vista black beans (40oz), Bush's black beans, Bush's baked beans",
+      "Signature Select black beans, cannellini beans, garbanzo beans",
+      "Aunt Penny's pinto beans x2",
+      "Hatch diced green chiles",
+      "Del Monte whole kernel corn x2",
+      "Great Value diced tomatoes (large can)",
+      "Bettergoods tomato bisque + hatch chile corn chowder",
+      "Great Value sliced peaches + sliced pears"
+    ],
+    "Already Have \u2014 Produce & Refrigerated": [
+      "Sweet potatoes x3",
+      "Broccoli x1 head",
+      "Baby spinach (large container)",
+      "Granny Smith apples x2",
+      "Lemons x4-5, limes x2-3",
+      "Yellow onion, red onion",
+      "Liquid egg whites x2 cartons",
+      "Daisy sour cream x2 tubs",
+      "Best Foods light mayo",
+      "Cherry almond salad kit"
+    ],
+    "Already Have \u2014 Frozen": [
+      "Edamame",
+      "Frozen fruit assortment",
+      "Frozen veggie assortment",
+      "Frozen cod",
+      "Frozen shrimp"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Lunch Bowl",
+          660,
+          70,
+          48,
+          18,
+          10
+        ],
+        [
+          "Dinner (avg)",
+          700,
+          63,
+          42,
+          24,
+          10
+        ],
+        [
+          "1-2 Snacks",
+          440,
+          48,
+          18,
+          30,
+          3
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1820,
+        182,
+        110,
+        73,
+        23
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          320,
+          27,
+          31,
+          7,
+          3
+        ],
+        [
+          "Lunch Bowl",
+          470,
+          42,
+          50,
+          9,
+          12
+        ],
+        [
+          "Dinner (avg)",
+          536,
+          39,
+          49,
+          11,
+          10
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1346,
+        109,
+        132,
+        28,
+        25
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
+    }
+  }
+}
