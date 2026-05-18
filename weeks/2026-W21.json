@@ -42,21 +42,33 @@
             "imperial": "5 oz pulled",
             "metric": "140g pulled"
           },
-          "nutrition": {
-            "cal": 580,
-            "protein": 62,
+          "jakeNutrition": {
+            "cal": 357,
+            "protein": 38,
             "carbs": 0,
-            "fat": 34
+            "fat": 21
+          },
+          "laineNutrition": {
+            "cal": 223,
+            "protein": 24,
+            "carbs": 0,
+            "fat": 13
           }
         },
         {
           "item": "Sweet potato, cubed",
           "jake": "1 medium",
           "laine": "1.5 medium",
-          "nutrition": {
-            "cal": 280,
-            "protein": 5,
-            "carbs": 65,
+          "jakeNutrition": {
+            "cal": 112,
+            "protein": 2,
+            "carbs": 26,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 168,
+            "protein": 3,
+            "carbs": 39,
             "fat": 0
           }
         },
@@ -66,31 +78,49 @@
             "imperial": "about 4 cups total",
             "metric": "400g total"
           },
-          "nutrition": {
-            "cal": 136,
-            "protein": 11,
-            "carbs": 28,
-            "fat": 2
+          "jakeNutrition": {
+            "cal": 68,
+            "protein": 6,
+            "carbs": 14,
+            "fat": 1
+          },
+          "laineNutrition": {
+            "cal": 68,
+            "protein": 6,
+            "carbs": 14,
+            "fat": 1
           }
         },
         {
           "item": "Olive oil",
           "jake": "1.5 tbsp",
           "laine": "0.5 tbsp",
-          "nutrition": {
-            "cal": 200,
+          "jakeNutrition": {
+            "cal": 150,
             "protein": 0,
             "carbs": 0,
-            "fat": 22
+            "fat": 16
+          },
+          "laineNutrition": {
+            "cal": 50,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 6
           }
         },
         {
           "item": "Garlic powder, smoked paprika, cumin, salt",
           "shared": "to taste",
-          "nutrition": {
-            "cal": 15,
+          "jakeNutrition": {
+            "cal": 8,
             "protein": 0,
-            "carbs": 3,
+            "carbs": 2,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 8,
+            "protein": 0,
+            "carbs": 2,
             "fat": 0
           }
         }
@@ -131,11 +161,17 @@
             "imperial": "5 oz",
             "metric": "140g"
           },
-          "nutrition": {
-            "cal": 540,
-            "protein": 46,
-            "carbs": 54,
-            "fat": 20
+          "jakeNutrition": {
+            "cal": 332,
+            "protein": 28,
+            "carbs": 33,
+            "fat": 12
+          },
+          "laineNutrition": {
+            "cal": 208,
+            "protein": 18,
+            "carbs": 21,
+            "fat": 8
           }
         },
         {
@@ -148,21 +184,33 @@
             "imperial": "1/4 cup dry",
             "metric": "50g dry"
           },
-          "nutrition": {
-            "cal": 400,
-            "protein": 30,
-            "carbs": 68,
+          "jakeNutrition": {
+            "cal": 229,
+            "protein": 17,
+            "carbs": 39,
             "fat": 1
+          },
+          "laineNutrition": {
+            "cal": 171,
+            "protein": 13,
+            "carbs": 29,
+            "fat": 0
           }
         },
         {
           "item": "Frozen veggies (edamame, stir-fry blend, or broccoli)",
           "shared": "2-3 cups total",
-          "nutrition": {
-            "cal": 120,
-            "protein": 8,
-            "carbs": 18,
-            "fat": 2
+          "jakeNutrition": {
+            "cal": 60,
+            "protein": 4,
+            "carbs": 9,
+            "fat": 1
+          },
+          "laineNutrition": {
+            "cal": 60,
+            "protein": 4,
+            "carbs": 9,
+            "fat": 1
           }
         }
       ],
@@ -202,11 +250,17 @@
             "imperial": "4 oz",
             "metric": "113g"
           },
-          "nutrition": {
-            "cal": 435,
-            "protein": 46,
+          "jakeNutrition": {
+            "cal": 261,
+            "protein": 28,
             "carbs": 0,
-            "fat": 26
+            "fat": 16
+          },
+          "laineNutrition": {
+            "cal": 174,
+            "protein": 18,
+            "carbs": 0,
+            "fat": 10
           }
         },
         {
@@ -219,11 +273,17 @@
             "imperial": "2.5 oz dry",
             "metric": "70g dry"
           },
-          "nutrition": {
-            "cal": 490,
-            "protein": 17,
-            "carbs": 98,
-            "fat": 2
+          "jakeNutrition": {
+            "cal": 267,
+            "protein": 9,
+            "carbs": 53,
+            "fat": 1
+          },
+          "laineNutrition": {
+            "cal": 223,
+            "protein": 8,
+            "carbs": 45,
+            "fat": 1
           }
         },
         {
@@ -236,31 +296,49 @@
             "imperial": "1 cup",
             "metric": "240ml"
           },
-          "nutrition": {
-            "cal": 220,
-            "protein": 4,
-            "carbs": 34,
-            "fat": 6
+          "jakeNutrition": {
+            "cal": 94,
+            "protein": 2,
+            "carbs": 15,
+            "fat": 3
+          },
+          "laineNutrition": {
+            "cal": 126,
+            "protein": 2,
+            "carbs": 19,
+            "fat": 3
           }
         },
         {
           "item": "Baby spinach, stirred in",
           "shared": "2 big handfuls",
-          "nutrition": {
-            "cal": 14,
-            "protein": 2,
-            "carbs": 2,
+          "jakeNutrition": {
+            "cal": 7,
+            "protein": 1,
+            "carbs": 1,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 7,
+            "protein": 1,
+            "carbs": 1,
             "fat": 0
           }
         },
         {
           "item": "Progresso garlic herb bread crumbs (garnish)",
           "shared": "1 tbsp each",
-          "nutrition": {
-            "cal": 55,
-            "protein": 2,
-            "carbs": 10,
-            "fat": 1
+          "jakeNutrition": {
+            "cal": 28,
+            "protein": 1,
+            "carbs": 5,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 28,
+            "protein": 1,
+            "carbs": 5,
+            "fat": 0
           }
         }
       ],
@@ -301,30 +379,48 @@
             "imperial": "6 oz",
             "metric": "170g"
           },
-          "nutrition": {
-            "cal": 360,
-            "protein": 74,
-            "carbs": 3,
-            "fat": 4
+          "jakeNutrition": {
+            "cal": 225,
+            "protein": 46,
+            "carbs": 2,
+            "fat": 2
+          },
+          "laineNutrition": {
+            "cal": 135,
+            "protein": 28,
+            "carbs": 1,
+            "fat": 2
           }
         },
         {
           "item": "Garbanzo beans, drained",
           "shared": "1 can (15 oz)",
-          "nutrition": {
-            "cal": 697,
-            "protein": 38,
-            "carbs": 115,
-            "fat": 11
+          "jakeNutrition": {
+            "cal": 348,
+            "protein": 19,
+            "carbs": 58,
+            "fat": 6
+          },
+          "laineNutrition": {
+            "cal": 348,
+            "protein": 19,
+            "carbs": 58,
+            "fat": 6
           }
         },
         {
           "item": "Baby spinach",
           "shared": "3 big handfuls",
-          "nutrition": {
-            "cal": 21,
-            "protein": 2,
-            "carbs": 3,
+          "jakeNutrition": {
+            "cal": 10,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 10,
+            "protein": 1,
+            "carbs": 2,
             "fat": 0
           }
         },
@@ -334,20 +430,32 @@
             "imperial": "1 cup",
             "metric": "240g"
           },
-          "nutrition": {
-            "cal": 40,
-            "protein": 2,
-            "carbs": 9,
+          "jakeNutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 4,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 4,
             "fat": 0
           }
         },
         {
           "item": "Lemon juice + garlic",
           "shared": "2 tbsp lemon, 3 cloves",
-          "nutrition": {
-            "cal": 20,
-            "protein": 1,
-            "carbs": 5,
+          "jakeNutrition": {
+            "cal": 10,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 10,
+            "protein": 0,
+            "carbs": 2,
             "fat": 0
           }
         },
@@ -355,11 +463,17 @@
           "item": "Olive oil",
           "jake": "1.5 tbsp",
           "laine": "0.5 tbsp",
-          "nutrition": {
-            "cal": 200,
+          "jakeNutrition": {
+            "cal": 150,
             "protein": 0,
             "carbs": 0,
-            "fat": 22
+            "fat": 16
+          },
+          "laineNutrition": {
+            "cal": 50,
+            "protein": 0,
+            "carbs": 0,
+            "fat": 6
           }
         }
       ],
@@ -400,21 +514,33 @@
             "imperial": "4 oz",
             "metric": "113g"
           },
-          "nutrition": {
-            "cal": 435,
-            "protein": 46,
+          "jakeNutrition": {
+            "cal": 261,
+            "protein": 28,
             "carbs": 0,
-            "fat": 26
+            "fat": 16
+          },
+          "laineNutrition": {
+            "cal": 174,
+            "protein": 18,
+            "carbs": 0,
+            "fat": 10
           }
         },
         {
           "item": "Dennison's chunky chili with beans (1 can)",
           "shared": "1 can split",
-          "nutrition": {
-            "cal": 500,
-            "protein": 28,
-            "carbs": 60,
-            "fat": 14
+          "jakeNutrition": {
+            "cal": 250,
+            "protein": 14,
+            "carbs": 30,
+            "fat": 7
+          },
+          "laineNutrition": {
+            "cal": 250,
+            "protein": 14,
+            "carbs": 30,
+            "fat": 7
           }
         },
         {
@@ -423,20 +549,32 @@
             "imperial": "1 cup",
             "metric": "240g"
           },
-          "nutrition": {
-            "cal": 218,
-            "protein": 15,
-            "carbs": 40,
-            "fat": 1
+          "jakeNutrition": {
+            "cal": 109,
+            "protein": 8,
+            "carbs": 20,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 109,
+            "protein": 8,
+            "carbs": 20,
+            "fat": 0
           }
         },
         {
           "item": "Hatch diced green chiles",
           "shared": "1 can",
-          "nutrition": {
-            "cal": 15,
-            "protein": 1,
-            "carbs": 3,
+          "jakeNutrition": {
+            "cal": 8,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 8,
+            "protein": 0,
+            "carbs": 2,
             "fat": 0
           }
         },
@@ -444,11 +582,17 @@
           "item": "Daisy sour cream",
           "jake": "2 tbsp",
           "laine": "1 tbsp",
-          "nutrition": {
-            "cal": 120,
-            "protein": 2,
-            "carbs": 3,
-            "fat": 12
+          "jakeNutrition": {
+            "cal": 80,
+            "protein": 1,
+            "carbs": 2,
+            "fat": 8
+          },
+          "laineNutrition": {
+            "cal": 40,
+            "protein": 1,
+            "carbs": 1,
+            "fat": 4
           }
         }
       ],
@@ -488,11 +632,17 @@
             "imperial": "5 oz",
             "metric": "140g"
           },
-          "nutrition": {
-            "cal": 330,
-            "protein": 72,
+          "jakeNutrition": {
+            "cal": 203,
+            "protein": 44,
             "carbs": 0,
-            "fat": 3
+            "fat": 2
+          },
+          "laineNutrition": {
+            "cal": 127,
+            "protein": 28,
+            "carbs": 0,
+            "fat": 1
           }
         },
         {
@@ -505,11 +655,17 @@
             "imperial": "1/2 cup dry",
             "metric": "80g dry"
           },
-          "nutrition": {
-            "cal": 500,
-            "protein": 36,
-            "carbs": 86,
-            "fat": 2
+          "jakeNutrition": {
+            "cal": 200,
+            "protein": 14,
+            "carbs": 34,
+            "fat": 1
+          },
+          "laineNutrition": {
+            "cal": 300,
+            "protein": 22,
+            "carbs": 52,
+            "fat": 1
           }
         },
         {
@@ -518,31 +674,49 @@
             "imperial": "1 cup",
             "metric": "240g"
           },
-          "nutrition": {
-            "cal": 40,
-            "protein": 2,
-            "carbs": 9,
+          "jakeNutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 4,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 20,
+            "protein": 1,
+            "carbs": 4,
             "fat": 0
           }
         },
         {
           "item": "Frozen veggies (any)",
           "shared": "2 cups",
-          "nutrition": {
-            "cal": 80,
-            "protein": 5,
-            "carbs": 14,
-            "fat": 1
+          "jakeNutrition": {
+            "cal": 40,
+            "protein": 2,
+            "carbs": 7,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 40,
+            "protein": 2,
+            "carbs": 7,
+            "fat": 0
           }
         },
         {
           "item": "Lemon juice, olive oil, garlic, cumin, paprika",
           "shared": "1 tbsp oil total",
-          "nutrition": {
-            "cal": 145,
-            "protein": 1,
-            "carbs": 4,
-            "fat": 15
+          "jakeNutrition": {
+            "cal": 72,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 8
+          },
+          "laineNutrition": {
+            "cal": 72,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 8
           }
         }
       ],
@@ -582,41 +756,65 @@
             "imperial": "5.5 oz",
             "metric": "155g"
           },
-          "nutrition": {
-            "cal": 640,
-            "protein": 72,
+          "jakeNutrition": {
+            "cal": 397,
+            "protein": 45,
             "carbs": 0,
-            "fat": 40
+            "fat": 25
+          },
+          "laineNutrition": {
+            "cal": 243,
+            "protein": 27,
+            "carbs": 0,
+            "fat": 15
           }
         },
         {
           "item": "Aunt Penny's pinto beans, drained",
           "shared": "1 can (15 oz)",
-          "nutrition": {
-            "cal": 360,
-            "protein": 22,
-            "carbs": 64,
-            "fat": 1
+          "jakeNutrition": {
+            "cal": 180,
+            "protein": 11,
+            "carbs": 32,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 180,
+            "protein": 11,
+            "carbs": 32,
+            "fat": 0
           }
         },
         {
           "item": "Sweet potato",
           "jake": "1 large",
           "laine": "1.5 large",
-          "nutrition": {
-            "cal": 280,
-            "protein": 5,
-            "carbs": 65,
+          "jakeNutrition": {
+            "cal": 112,
+            "protein": 2,
+            "carbs": 26,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 168,
+            "protein": 3,
+            "carbs": 39,
             "fat": 0
           }
         },
         {
           "item": "Hatch green chiles or diced tomatoes",
           "shared": "to taste",
-          "nutrition": {
-            "cal": 20,
-            "protein": 1,
-            "carbs": 4,
+          "jakeNutrition": {
+            "cal": 10,
+            "protein": 0,
+            "carbs": 2,
+            "fat": 0
+          },
+          "laineNutrition": {
+            "cal": 10,
+            "protein": 0,
+            "carbs": 2,
             "fat": 0
           }
         },
@@ -624,11 +822,17 @@
           "item": "Daisy sour cream + cumin + garlic powder",
           "jake": "2 tbsp sour cream",
           "laine": "1 tbsp sour cream",
-          "nutrition": {
-            "cal": 80,
+          "jakeNutrition": {
+            "cal": 53,
             "protein": 1,
-            "carbs": 3,
-            "fat": 8
+            "carbs": 2,
+            "fat": 5
+          },
+          "laineNutrition": {
+            "cal": 27,
+            "protein": 0,
+            "carbs": 1,
+            "fat": 3
           }
         }
       ],
@@ -654,7 +858,7 @@
     "ingredients": [
       {
         "item": "2.5 lbs chicken breast (from freezer)",
-        "nutrition": {
+        "jakeNutrition": {
           "cal": 1850,
           "protein": 350,
           "carbs": 0,
@@ -663,7 +867,7 @@
       },
       {
         "item": "Garofalo gemelli or spaghetti, 12 oz dry",
-        "nutrition": {
+        "jakeNutrition": {
           "cal": 1260,
           "protein": 43,
           "carbs": 252,
@@ -672,7 +876,7 @@
       },
       {
         "item": "Cannellini beans, 1 can (15 oz) drained",
-        "nutrition": {
+        "jakeNutrition": {
           "cal": 410,
           "protein": 28,
           "carbs": 74,
@@ -681,7 +885,7 @@
       },
       {
         "item": "Baby spinach - 4 big handfuls",
-        "nutrition": {
+        "jakeNutrition": {
           "cal": 28,
           "protein": 4,
           "carbs": 4,
@@ -690,7 +894,7 @@
       },
       {
         "item": "Prego creamy parmesan pesto - 3 tbsp total",
-        "nutrition": {
+        "jakeNutrition": {
           "cal": 210,
           "protein": 3,
           "carbs": 6,
@@ -699,7 +903,7 @@
       },
       {
         "item": "RealLemon juice + garlic + salt + pepper",
-        "nutrition": {
+        "jakeNutrition": {
           "cal": 15,
           "protein": 0,
           "carbs": 4,
@@ -728,7 +932,7 @@
     "ingredients": [
       {
         "item": "Frozen shrimp peeled - 1.5 lbs",
-        "nutrition": {
+        "laineNutrition": {
           "cal": 720,
           "protein": 144,
           "carbs": 6,
@@ -737,7 +941,7 @@
       },
       {
         "item": "Dry green lentils - 1.5 cups dry",
-        "nutrition": {
+        "laineNutrition": {
           "cal": 1060,
           "protein": 76,
           "carbs": 182,
@@ -746,7 +950,7 @@
       },
       {
         "item": "Great Value diced tomatoes - 1 large can",
-        "nutrition": {
+        "laineNutrition": {
           "cal": 140,
           "protein": 6,
           "carbs": 30,
@@ -755,7 +959,7 @@
       },
       {
         "item": "Frozen veggies (stir-fry blend or edamame) - 3 cups",
-        "nutrition": {
+        "laineNutrition": {
           "cal": 180,
           "protein": 12,
           "carbs": 27,
@@ -764,7 +968,7 @@
       },
       {
         "item": "Lemon juice, garlic, cumin, smoked paprika, salt",
-        "nutrition": {
+        "laineNutrition": {
           "cal": 20,
           "protein": 0,
           "carbs": 5,
@@ -773,7 +977,7 @@
       },
       {
         "item": "Olive oil - 1 tbsp total",
-        "nutrition": {
+        "laineNutrition": {
           "cal": 120,
           "protein": 0,
           "carbs": 0,
@@ -803,7 +1007,7 @@
       "ingredients": [
         {
           "item": "Oikos Triple Zero yogurt (1 container)",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 120,
             "protein": 15,
             "carbs": 14,
@@ -812,7 +1016,7 @@
         },
         {
           "item": "Open Nature protein granola - 1/3 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 150,
             "protein": 8,
             "carbs": 18,
@@ -821,7 +1025,7 @@
         },
         {
           "item": "Frozen fruit (thawed) - 1/2 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 40,
             "protein": 1,
             "carbs": 10,
@@ -830,7 +1034,7 @@
         },
         {
           "item": "Ground flaxseed - 1 tbsp",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 37,
             "protein": 1,
             "carbs": 2,
@@ -857,7 +1061,7 @@
       "ingredients": [
         {
           "item": "Liquid egg whites - 3/4 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 95,
             "protein": 20,
             "carbs": 2,
@@ -866,7 +1070,7 @@
         },
         {
           "item": "Cottage cheese 1% - 1/2 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 90,
             "protein": 14,
             "carbs": 5,
@@ -875,7 +1079,7 @@
         },
         {
           "item": "Baby spinach - 1/2 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 5,
             "protein": 1,
             "carbs": 1,
@@ -884,7 +1088,7 @@
         },
         {
           "item": "Diced tomatoes or frozen veg - 1/4 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 15,
             "protein": 1,
             "carbs": 3,
@@ -893,7 +1097,7 @@
         },
         {
           "item": "Salt, pepper, chili flakes",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 3,
             "protein": 0,
             "carbs": 1,
@@ -919,7 +1123,7 @@
       "ingredients": [
         {
           "item": "Birch Benders pancake mix - 1/2 cup",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 200,
             "protein": 12,
             "carbs": 36,
@@ -928,7 +1132,7 @@
         },
         {
           "item": "Liquid egg whites - 1/4 cup (or 1 egg)",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 32,
             "protein": 7,
             "carbs": 0,
@@ -937,7 +1141,7 @@
         },
         {
           "item": "Frozen fruit (thawed) or sliced apple",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 50,
             "protein": 0,
             "carbs": 13,
@@ -946,7 +1150,7 @@
         },
         {
           "item": "Ground flaxseed - 1 tbsp",
-          "nutrition": {
+          "laineNutrition": {
             "cal": 37,
             "protein": 1,
             "carbs": 2,
