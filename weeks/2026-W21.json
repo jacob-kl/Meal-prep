@@ -14,125 +14,6 @@
   },
   "dinners": [
     {
-      "day": "Sunday",
-      "name": "Slow-Cooker Pulled Pork + Sweet Potato + Broccoli",
-      "note": "Start the shoulder in the morning. Makes enough for Sunday dinner + Tuesday + Thursday. Jake gets more pork, Laine more sweet potato.",
-      "jake": {
-        "cal": 720,
-        "protein": 65,
-        "carbs": 38,
-        "fat": 30,
-        "fiber": 8
-      },
-      "laine": {
-        "cal": 490,
-        "protein": 40,
-        "carbs": 48,
-        "fat": 14,
-        "fiber": 9
-      },
-      "ingredients": [
-        {
-          "item": "Pork shoulder (from batch)",
-          "jake": {
-            "imperial": "8 oz pulled",
-            "metric": "225g pulled"
-          },
-          "laine": {
-            "imperial": "5 oz pulled",
-            "metric": "140g pulled"
-          },
-          "jakeNutrition": {
-            "cal": 357,
-            "protein": 38,
-            "carbs": 0,
-            "fat": 21
-          },
-          "laineNutrition": {
-            "cal": 223,
-            "protein": 24,
-            "carbs": 0,
-            "fat": 13
-          }
-        },
-        {
-          "item": "Sweet potato, cubed",
-          "jake": "1 medium",
-          "laine": "1.5 medium",
-          "jakeNutrition": {
-            "cal": 112,
-            "protein": 2,
-            "carbs": 26,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 168,
-            "protein": 3,
-            "carbs": 39,
-            "fat": 0
-          }
-        },
-        {
-          "item": "Broccoli florets",
-          "shared": {
-            "imperial": "about 4 cups total",
-            "metric": "400g total"
-          },
-          "jakeNutrition": {
-            "cal": 68,
-            "protein": 6,
-            "carbs": 14,
-            "fat": 1
-          },
-          "laineNutrition": {
-            "cal": 68,
-            "protein": 6,
-            "carbs": 14,
-            "fat": 1
-          }
-        },
-        {
-          "item": "Olive oil",
-          "jake": "1.5 tbsp",
-          "laine": "0.5 tbsp",
-          "jakeNutrition": {
-            "cal": 150,
-            "protein": 0,
-            "carbs": 0,
-            "fat": 16
-          },
-          "laineNutrition": {
-            "cal": 50,
-            "protein": 0,
-            "carbs": 0,
-            "fat": 6
-          }
-        },
-        {
-          "item": "Garlic powder, smoked paprika, cumin, salt",
-          "shared": "to taste",
-          "jakeNutrition": {
-            "cal": 8,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 8,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          }
-        }
-      ],
-      "steps": [
-        "For the pork shoulder batch: rub the whole shoulder with cumin, smoked paprika, garlic powder, salt, pepper, chili flakes. Add 1/2 cup water to slow cooker. Cook on LOW 8 hrs or HIGH 4-5 hrs. Shred and portion into 3 dinner-sized containers plus lunch use.",
-        "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
-        "Toss broccoli with remaining oil + salt. Add to pan for last 15 min.",
-        "Plate: Jake gets more pork + less potato. Laine gets less pork + more potato."
-      ]
-    },
-    {
       "day": "Monday",
       "name": "Mandarin Orange Chicken + Lentils + Frozen Veggies",
       "note": "Trader Joe's night \u2014 easy. Jake gets extra lentils for protein. Laine gets more veg. Use frozen veggie bag of choice.",
@@ -161,18 +42,7 @@
             "imperial": "5 oz",
             "metric": "140g"
           },
-          "jakeNutrition": {
-            "cal": 332,
-            "protein": 28,
-            "carbs": 33,
-            "fat": 12
-          },
-          "laineNutrition": {
-            "cal": 208,
-            "protein": 18,
-            "carbs": 21,
-            "fat": 8
-          }
+          "nutritionKey": "TJ's Mandarin Orange Chicken"
         },
         {
           "item": "Dry green lentils",
@@ -184,34 +54,12 @@
             "imperial": "1/4 cup dry",
             "metric": "50g dry"
           },
-          "jakeNutrition": {
-            "cal": 229,
-            "protein": 17,
-            "carbs": 39,
-            "fat": 1
-          },
-          "laineNutrition": {
-            "cal": 171,
-            "protein": 13,
-            "carbs": 29,
-            "fat": 0
-          }
+          "nutritionKey": "Dry green lentils"
         },
         {
           "item": "Frozen veggies (edamame, stir-fry blend, or broccoli)",
           "shared": "2-3 cups total",
-          "jakeNutrition": {
-            "cal": 60,
-            "protein": 4,
-            "carbs": 9,
-            "fat": 1
-          },
-          "laineNutrition": {
-            "cal": 60,
-            "protein": 4,
-            "carbs": 9,
-            "fat": 1
-          }
+          "nutritionKey": "Frozen veggies (mixed)"
         }
       ],
       "steps": [
@@ -250,18 +98,7 @@
             "imperial": "4 oz",
             "metric": "113g"
           },
-          "jakeNutrition": {
-            "cal": 261,
-            "protein": 28,
-            "carbs": 0,
-            "fat": 16
-          },
-          "laineNutrition": {
-            "cal": 174,
-            "protein": 18,
-            "carbs": 0,
-            "fat": 10
-          }
+          "nutritionKey": "Pork shoulder (pulled)"
         },
         {
           "item": "Garofalo gemelli or casarecce pasta",
@@ -273,18 +110,7 @@
             "imperial": "2.5 oz dry",
             "metric": "70g dry"
           },
-          "jakeNutrition": {
-            "cal": 267,
-            "protein": 9,
-            "carbs": 53,
-            "fat": 1
-          },
-          "laineNutrition": {
-            "cal": 223,
-            "protein": 8,
-            "carbs": 45,
-            "fat": 1
-          }
+          "nutritionKey": "Garofalo organic pasta"
         },
         {
           "item": "Signature Select roasted onion & garlic pasta sauce",
@@ -296,50 +122,17 @@
             "imperial": "1 cup",
             "metric": "240ml"
           },
-          "jakeNutrition": {
-            "cal": 94,
-            "protein": 2,
-            "carbs": 15,
-            "fat": 3
-          },
-          "laineNutrition": {
-            "cal": 126,
-            "protein": 2,
-            "carbs": 19,
-            "fat": 3
-          }
+          "nutritionKey": "Signature Select pasta sauce"
         },
         {
           "item": "Baby spinach, stirred in",
           "shared": "2 big handfuls",
-          "jakeNutrition": {
-            "cal": 7,
-            "protein": 1,
-            "carbs": 1,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 7,
-            "protein": 1,
-            "carbs": 1,
-            "fat": 0
-          }
+          "nutritionKey": "Baby spinach"
         },
         {
           "item": "Progresso garlic herb bread crumbs (garnish)",
           "shared": "1 tbsp each",
-          "jakeNutrition": {
-            "cal": 28,
-            "protein": 1,
-            "carbs": 5,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 28,
-            "protein": 1,
-            "carbs": 5,
-            "fat": 0
-          }
+          "nutritionKey": "Progresso garlic herb bread crumbs"
         }
       ],
       "steps": [
@@ -379,50 +172,17 @@
             "imperial": "6 oz",
             "metric": "170g"
           },
-          "jakeNutrition": {
-            "cal": 225,
-            "protein": 46,
-            "carbs": 2,
-            "fat": 2
-          },
-          "laineNutrition": {
-            "cal": 135,
-            "protein": 28,
-            "carbs": 1,
-            "fat": 2
-          }
+          "nutritionKey": "Frozen shrimp"
         },
         {
           "item": "Garbanzo beans, drained",
           "shared": "1 can (15 oz)",
-          "jakeNutrition": {
-            "cal": 348,
-            "protein": 19,
-            "carbs": 58,
-            "fat": 6
-          },
-          "laineNutrition": {
-            "cal": 348,
-            "protein": 19,
-            "carbs": 58,
-            "fat": 6
-          }
+          "nutritionKey": "Garbanzo beans"
         },
         {
           "item": "Baby spinach",
           "shared": "3 big handfuls",
-          "jakeNutrition": {
-            "cal": 10,
-            "protein": 1,
-            "carbs": 2,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 10,
-            "protein": 1,
-            "carbs": 2,
-            "fat": 0
-          }
+          "nutritionKey": "Baby spinach"
         },
         {
           "item": "Diced tomatoes (from large can)",
@@ -430,51 +190,18 @@
             "imperial": "1 cup",
             "metric": "240g"
           },
-          "jakeNutrition": {
-            "cal": 20,
-            "protein": 1,
-            "carbs": 4,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 20,
-            "protein": 1,
-            "carbs": 4,
-            "fat": 0
-          }
+          "nutritionKey": "Diced tomatoes"
         },
         {
           "item": "Lemon juice + garlic",
           "shared": "2 tbsp lemon, 3 cloves",
-          "jakeNutrition": {
-            "cal": 10,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 10,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          }
+          "nutritionKey": "Lemon juice"
         },
         {
           "item": "Olive oil",
           "jake": "1.5 tbsp",
           "laine": "0.5 tbsp",
-          "jakeNutrition": {
-            "cal": 150,
-            "protein": 0,
-            "carbs": 0,
-            "fat": 16
-          },
-          "laineNutrition": {
-            "cal": 50,
-            "protein": 0,
-            "carbs": 0,
-            "fat": 6
-          }
+          "nutritionKey": "Olive oil"
         }
       ],
       "steps": [
@@ -514,34 +241,12 @@
             "imperial": "4 oz",
             "metric": "113g"
           },
-          "jakeNutrition": {
-            "cal": 261,
-            "protein": 28,
-            "carbs": 0,
-            "fat": 16
-          },
-          "laineNutrition": {
-            "cal": 174,
-            "protein": 18,
-            "carbs": 0,
-            "fat": 10
-          }
+          "nutritionKey": "Pork shoulder (pulled)"
         },
         {
           "item": "Dennison's chunky chili with beans (1 can)",
           "shared": "1 can split",
-          "jakeNutrition": {
-            "cal": 250,
-            "protein": 14,
-            "carbs": 30,
-            "fat": 7
-          },
-          "laineNutrition": {
-            "cal": 250,
-            "protein": 14,
-            "carbs": 30,
-            "fat": 7
-          }
+          "nutritionKey": "Dennison's chunky chili"
         },
         {
           "item": "Black beans (Sun Vista or Bush's), drained",
@@ -549,51 +254,18 @@
             "imperial": "1 cup",
             "metric": "240g"
           },
-          "jakeNutrition": {
-            "cal": 109,
-            "protein": 8,
-            "carbs": 20,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 109,
-            "protein": 8,
-            "carbs": 20,
-            "fat": 0
-          }
+          "nutritionKey": "Black beans"
         },
         {
           "item": "Hatch diced green chiles",
           "shared": "1 can",
-          "jakeNutrition": {
-            "cal": 8,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 8,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          }
+          "nutritionKey": "Hatch diced green chiles"
         },
         {
           "item": "Daisy sour cream",
           "jake": "2 tbsp",
           "laine": "1 tbsp",
-          "jakeNutrition": {
-            "cal": 80,
-            "protein": 1,
-            "carbs": 2,
-            "fat": 8
-          },
-          "laineNutrition": {
-            "cal": 40,
-            "protein": 1,
-            "carbs": 1,
-            "fat": 4
-          }
+          "nutritionKey": "Daisy sour cream"
         }
       ],
       "steps": [
@@ -632,18 +304,7 @@
             "imperial": "5 oz",
             "metric": "140g"
           },
-          "jakeNutrition": {
-            "cal": 203,
-            "protein": 44,
-            "carbs": 0,
-            "fat": 2
-          },
-          "laineNutrition": {
-            "cal": 127,
-            "protein": 28,
-            "carbs": 0,
-            "fat": 1
-          }
+          "nutritionKey": "Frozen cod"
         },
         {
           "item": "Dry green lentils",
@@ -655,18 +316,7 @@
             "imperial": "1/2 cup dry",
             "metric": "80g dry"
           },
-          "jakeNutrition": {
-            "cal": 200,
-            "protein": 14,
-            "carbs": 34,
-            "fat": 1
-          },
-          "laineNutrition": {
-            "cal": 300,
-            "protein": 22,
-            "carbs": 52,
-            "fat": 1
-          }
+          "nutritionKey": "Dry green lentils"
         },
         {
           "item": "Diced tomatoes (from large can)",
@@ -674,50 +324,17 @@
             "imperial": "1 cup",
             "metric": "240g"
           },
-          "jakeNutrition": {
-            "cal": 20,
-            "protein": 1,
-            "carbs": 4,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 20,
-            "protein": 1,
-            "carbs": 4,
-            "fat": 0
-          }
+          "nutritionKey": "Diced tomatoes"
         },
         {
           "item": "Frozen veggies (any)",
           "shared": "2 cups",
-          "jakeNutrition": {
-            "cal": 40,
-            "protein": 2,
-            "carbs": 7,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 40,
-            "protein": 2,
-            "carbs": 7,
-            "fat": 0
-          }
+          "nutritionKey": "Frozen veggies (mixed)"
         },
         {
           "item": "Lemon juice, olive oil, garlic, cumin, paprika",
           "shared": "1 tbsp oil total",
-          "jakeNutrition": {
-            "cal": 72,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 8
-          },
-          "laineNutrition": {
-            "cal": 72,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 8
-          }
+          "nutritionKey": "Lemon juice"
         }
       ],
       "steps": [
@@ -756,84 +373,29 @@
             "imperial": "5.5 oz",
             "metric": "155g"
           },
-          "jakeNutrition": {
-            "cal": 397,
-            "protein": 45,
-            "carbs": 0,
-            "fat": 25
-          },
-          "laineNutrition": {
-            "cal": 243,
-            "protein": 27,
-            "carbs": 0,
-            "fat": 15
-          }
+          "nutritionKey": "Ground turkey 85/15"
         },
         {
           "item": "Aunt Penny's pinto beans, drained",
           "shared": "1 can (15 oz)",
-          "jakeNutrition": {
-            "cal": 180,
-            "protein": 11,
-            "carbs": 32,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 180,
-            "protein": 11,
-            "carbs": 32,
-            "fat": 0
-          }
+          "nutritionKey": "Pinto beans"
         },
         {
           "item": "Sweet potato",
           "jake": "1 large",
           "laine": "1.5 large",
-          "jakeNutrition": {
-            "cal": 112,
-            "protein": 2,
-            "carbs": 26,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 168,
-            "protein": 3,
-            "carbs": 39,
-            "fat": 0
-          }
+          "nutritionKey": "Sweet potato"
         },
         {
           "item": "Hatch green chiles or diced tomatoes",
           "shared": "to taste",
-          "jakeNutrition": {
-            "cal": 10,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          },
-          "laineNutrition": {
-            "cal": 10,
-            "protein": 0,
-            "carbs": 2,
-            "fat": 0
-          }
+          "nutritionKey": "Hatch diced green chiles"
         },
         {
           "item": "Daisy sour cream + cumin + garlic powder",
           "jake": "2 tbsp sour cream",
           "laine": "1 tbsp sour cream",
-          "jakeNutrition": {
-            "cal": 53,
-            "protein": 1,
-            "carbs": 2,
-            "fat": 5
-          },
-          "laineNutrition": {
-            "cal": 27,
-            "protein": 0,
-            "carbs": 1,
-            "fat": 3
-          }
+          "nutritionKey": "Daisy sour cream"
         }
       ],
       "steps": [
@@ -842,6 +404,70 @@
         "Add pinto beans + green chiles/tomatoes. Simmer 5 min.",
         "Split sweet potatoes open. Spoon turkey-bean mixture on top.",
         "Jake gets more turkey filling. Laine gets bigger potato. Top with sour cream."
+      ]
+    },
+    {
+      "day": "Sunday",
+      "name": "Slow-Cooker Pulled Pork + Sweet Potato + Broccoli",
+      "note": "Start the shoulder in the morning. Makes enough for Sunday dinner + Tuesday + Thursday. Jake gets more pork, Laine more sweet potato.",
+      "jake": {
+        "cal": 720,
+        "protein": 65,
+        "carbs": 38,
+        "fat": 30,
+        "fiber": 8
+      },
+      "laine": {
+        "cal": 490,
+        "protein": 40,
+        "carbs": 48,
+        "fat": 14,
+        "fiber": 9
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder (from batch)",
+          "jake": {
+            "imperial": "8 oz pulled",
+            "metric": "225g pulled"
+          },
+          "laine": {
+            "imperial": "5 oz pulled",
+            "metric": "140g pulled"
+          },
+          "nutritionKey": "Pork shoulder (pulled)"
+        },
+        {
+          "item": "Sweet potato, cubed",
+          "jake": "1 medium",
+          "laine": "1.5 medium",
+          "nutritionKey": "Sweet potato"
+        },
+        {
+          "item": "Broccoli florets",
+          "shared": {
+            "imperial": "about 4 cups total",
+            "metric": "400g total"
+          },
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Olive oil",
+          "jake": "1.5 tbsp",
+          "laine": "0.5 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic powder, smoked paprika, cumin, salt",
+          "shared": "to taste",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "For the pork shoulder batch: rub the whole shoulder with cumin, smoked paprika, garlic powder, salt, pepper, chili flakes. Add 1/2 cup water to slow cooker. Cook on LOW 8 hrs or HIGH 4-5 hrs. Shred and portion into 3 dinner-sized containers plus lunch use.",
+        "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
+        "Toss broccoli with remaining oil + salt. Add to pan for last 15 min.",
+        "Plate: Jake gets more pork + less potato. Laine gets less pork + more potato."
       ]
     }
   ],
@@ -858,57 +484,27 @@
     "ingredients": [
       {
         "item": "2.5 lbs chicken breast (from freezer)",
-        "jakeNutrition": {
-          "cal": 1850,
-          "protein": 350,
-          "carbs": 0,
-          "fat": 40
-        }
+        "nutritionKey": "Chicken breast"
       },
       {
         "item": "Garofalo gemelli or spaghetti, 12 oz dry",
-        "jakeNutrition": {
-          "cal": 1260,
-          "protein": 43,
-          "carbs": 252,
-          "fat": 5
-        }
+        "nutritionKey": "Garofalo organic pasta"
       },
       {
         "item": "Cannellini beans, 1 can (15 oz) drained",
-        "jakeNutrition": {
-          "cal": 410,
-          "protein": 28,
-          "carbs": 74,
-          "fat": 1
-        }
+        "nutritionKey": "Cannellini beans"
       },
       {
         "item": "Baby spinach - 4 big handfuls",
-        "jakeNutrition": {
-          "cal": 28,
-          "protein": 4,
-          "carbs": 4,
-          "fat": 0
-        }
+        "nutritionKey": "Baby spinach"
       },
       {
         "item": "Prego creamy parmesan pesto - 3 tbsp total",
-        "jakeNutrition": {
-          "cal": 210,
-          "protein": 3,
-          "carbs": 6,
-          "fat": 21
-        }
+        "nutritionKey": "Prego creamy parmesan pesto"
       },
       {
         "item": "RealLemon juice + garlic + salt + pepper",
-        "jakeNutrition": {
-          "cal": 15,
-          "protein": 0,
-          "carbs": 4,
-          "fat": 0
-        }
+        "nutritionKey": "Lemon juice"
       }
     ],
     "steps": [
@@ -932,57 +528,27 @@
     "ingredients": [
       {
         "item": "Frozen shrimp peeled - 1.5 lbs",
-        "laineNutrition": {
-          "cal": 720,
-          "protein": 144,
-          "carbs": 6,
-          "fat": 8
-        }
+        "nutritionKey": "Frozen shrimp"
       },
       {
         "item": "Dry green lentils - 1.5 cups dry",
-        "laineNutrition": {
-          "cal": 1060,
-          "protein": 76,
-          "carbs": 182,
-          "fat": 3
-        }
+        "nutritionKey": "Dry green lentils"
       },
       {
         "item": "Great Value diced tomatoes - 1 large can",
-        "laineNutrition": {
-          "cal": 140,
-          "protein": 6,
-          "carbs": 30,
-          "fat": 1
-        }
+        "nutritionKey": "Diced tomatoes"
       },
       {
         "item": "Frozen veggies (stir-fry blend or edamame) - 3 cups",
-        "laineNutrition": {
-          "cal": 180,
-          "protein": 12,
-          "carbs": 27,
-          "fat": 3
-        }
+        "nutritionKey": "Frozen veggies (mixed)"
       },
       {
         "item": "Lemon juice, garlic, cumin, smoked paprika, salt",
-        "laineNutrition": {
-          "cal": 20,
-          "protein": 0,
-          "carbs": 5,
-          "fat": 0
-        }
+        "nutritionKey": "Lemon juice"
       },
       {
         "item": "Olive oil - 1 tbsp total",
-        "laineNutrition": {
-          "cal": 120,
-          "protein": 0,
-          "carbs": 0,
-          "fat": 14
-        }
+        "nutritionKey": "Olive oil"
       }
     ],
     "steps": [
@@ -1007,39 +573,19 @@
       "ingredients": [
         {
           "item": "Oikos Triple Zero yogurt (1 container)",
-          "laineNutrition": {
-            "cal": 120,
-            "protein": 15,
-            "carbs": 14,
-            "fat": 0
-          }
+          "nutritionKey": "Oikos Triple Zero yogurt"
         },
         {
           "item": "Open Nature protein granola - 1/3 cup",
-          "laineNutrition": {
-            "cal": 150,
-            "protein": 8,
-            "carbs": 18,
-            "fat": 5
-          }
+          "nutritionKey": "Open Nature protein granola"
         },
         {
           "item": "Frozen fruit (thawed) - 1/2 cup",
-          "laineNutrition": {
-            "cal": 40,
-            "protein": 1,
-            "carbs": 10,
-            "fat": 0
-          }
+          "nutritionKey": "Frozen fruit (mixed)"
         },
         {
           "item": "Ground flaxseed - 1 tbsp",
-          "laineNutrition": {
-            "cal": 37,
-            "protein": 1,
-            "carbs": 2,
-            "fat": 3
-          }
+          "nutritionKey": "Ground flaxseed"
         }
       ],
       "steps": [
@@ -1061,48 +607,22 @@
       "ingredients": [
         {
           "item": "Liquid egg whites - 3/4 cup",
-          "laineNutrition": {
-            "cal": 95,
-            "protein": 20,
-            "carbs": 2,
-            "fat": 0
-          }
+          "nutritionKey": "Liquid egg whites"
         },
         {
           "item": "Cottage cheese 1% - 1/2 cup",
-          "laineNutrition": {
-            "cal": 90,
-            "protein": 14,
-            "carbs": 5,
-            "fat": 1
-          }
+          "nutritionKey": "Cottage cheese 1%"
         },
         {
           "item": "Baby spinach - 1/2 cup",
-          "laineNutrition": {
-            "cal": 5,
-            "protein": 1,
-            "carbs": 1,
-            "fat": 0
-          }
+          "nutritionKey": "Baby spinach"
         },
         {
           "item": "Diced tomatoes or frozen veg - 1/4 cup",
-          "laineNutrition": {
-            "cal": 15,
-            "protein": 1,
-            "carbs": 3,
-            "fat": 0
-          }
+          "nutritionKey": "Diced tomatoes"
         },
         {
-          "item": "Salt, pepper, chili flakes",
-          "laineNutrition": {
-            "cal": 3,
-            "protein": 0,
-            "carbs": 1,
-            "fat": 0
-          }
+          "item": "Salt, pepper, chili flakes"
         }
       ],
       "steps": [
@@ -1123,39 +643,19 @@
       "ingredients": [
         {
           "item": "Birch Benders pancake mix - 1/2 cup",
-          "laineNutrition": {
-            "cal": 200,
-            "protein": 12,
-            "carbs": 36,
-            "fat": 3
-          }
+          "nutritionKey": "Birch Benders pancake mix"
         },
         {
           "item": "Liquid egg whites - 1/4 cup (or 1 egg)",
-          "laineNutrition": {
-            "cal": 32,
-            "protein": 7,
-            "carbs": 0,
-            "fat": 0
-          }
+          "nutritionKey": "Liquid egg whites"
         },
         {
           "item": "Frozen fruit (thawed) or sliced apple",
-          "laineNutrition": {
-            "cal": 50,
-            "protein": 0,
-            "carbs": 13,
-            "fat": 0
-          }
+          "nutritionKey": "Frozen fruit (mixed)"
         },
         {
           "item": "Ground flaxseed - 1 tbsp",
-          "laineNutrition": {
-            "cal": 37,
-            "protein": 1,
-            "carbs": 2,
-            "fat": 3
-          }
+          "nutritionKey": "Ground flaxseed"
         }
       ],
       "steps": [
