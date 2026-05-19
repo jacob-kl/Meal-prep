@@ -13,60 +13,68 @@
     "fat": 37
   },
   "dinners": [
-    {
+       {
       "day": "Monday",
-      "name": "Mandarin Orange Chicken + Lentils + Frozen Veggies",
-      "note": "Trader Joe's night \u2014 easy. Jake gets extra lentils for protein. Laine gets more veg. Use frozen veggie bag of choice.",
+      "name": "Slow-Cooker Pulled Pork + Sweet Potato + Broccoli",
+      "note": "Start the shoulder in the morning. Makes enough for Sunday dinner + Tuesday + Thursday. Jake gets more pork, Laine more sweet potato.",
       "jake": {
-        "cal": 710,
-        "protein": 58,
-        "carbs": 52,
-        "fat": 24,
-        "fiber": 10
+        "cal": 720,
+        "protein": 65,
+        "carbs": 38,
+        "fat": 30,
+        "fiber": 8
       },
       "laine": {
         "cal": 490,
-        "protein": 36,
-        "carbs": 58,
+        "protein": 40,
+        "carbs": 48,
         "fat": 14,
-        "fiber": 11
+        "fiber": 9
       },
       "ingredients": [
         {
-          "item": "TJ's Mandarin Orange Chicken",
+          "item": "Pork shoulder (from batch)",
           "jake": {
-            "imperial": "8 oz",
-            "metric": "225g"
+            "imperial": "8 oz pulled",
+            "metric": "225g pulled"
           },
           "laine": {
-            "imperial": "5 oz",
-            "metric": "140g"
+            "imperial": "5 oz pulled",
+            "metric": "140g pulled"
           },
-          "nutritionKey": "TJ's Mandarin Orange Chicken"
+          "nutritionKey": "Pork shoulder (pulled)"
         },
         {
-          "item": "Dry green lentils",
-          "jake": {
-            "imperial": "1/3 cup dry",
-            "metric": "65g dry"
-          },
-          "laine": {
-            "imperial": "1/4 cup dry",
-            "metric": "50g dry"
-          },
-          "nutritionKey": "Dry green lentils"
+          "item": "Sweet potato, cubed",
+          "jake": "1 medium",
+          "laine": "1.5 medium",
+          "nutritionKey": "Sweet potato"
         },
         {
-          "item": "Frozen veggies (edamame, stir-fry blend, or broccoli)",
-          "shared": "2-3 cups total",
-          "nutritionKey": "Frozen veggies (mixed)"
+          "item": "Broccoli florets",
+          "shared": {
+            "imperial": "about 4 cups total",
+            "metric": "400g total"
+          },
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Olive oil",
+          "jake": "1.5 tbsp",
+          "laine": "0.5 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic powder, smoked paprika, cumin, salt",
+          "shared": "to taste",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
         }
       ],
       "steps": [
-        "Simmer lentils in salted water \u2014 Jake's portion 20 min, they're done when tender. Drain.",
-        "Bake orange chicken per package (usually 400F for 20-22 min, toss halfway).",
-        "Microwave or steam frozen veggies per package.",
-        "Plate: Jake gets larger chicken + lentil portion. Laine gets smaller chicken + more veg."
+        "For the pork shoulder batch: rub the whole shoulder with cumin, smoked paprika, garlic powder, salt, pepper, chili flakes. Add 1/2 cup water to slow cooker. Cook on LOW 8 hrs or HIGH 4-5 hrs. Shred and portion into 3 dinner-sized containers plus lunch use.",
+        "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
+        "Toss broccoli with remaining oil + salt. Add to pan for last 15 min.",
+        "Plate: Jake gets more pork + less potato. Laine gets less pork + more potato."
       ]
     },
     {
@@ -406,70 +414,62 @@
         "Jake gets more turkey filling. Laine gets bigger potato. Top with sour cream."
       ]
     },
-    {
+     {
       "day": "Sunday",
-      "name": "Slow-Cooker Pulled Pork + Sweet Potato + Broccoli",
-      "note": "Start the shoulder in the morning. Makes enough for Sunday dinner + Tuesday + Thursday. Jake gets more pork, Laine more sweet potato.",
+      "name": "Mandarin Orange Chicken + Lentils + Frozen Veggies",
+      "note": "Trader Joe's night \u2014 easy. Jake gets extra lentils for protein. Laine gets more veg. Use frozen veggie bag of choice.",
       "jake": {
-        "cal": 720,
-        "protein": 65,
-        "carbs": 38,
-        "fat": 30,
-        "fiber": 8
+        "cal": 710,
+        "protein": 58,
+        "carbs": 52,
+        "fat": 24,
+        "fiber": 10
       },
       "laine": {
         "cal": 490,
-        "protein": 40,
-        "carbs": 48,
+        "protein": 36,
+        "carbs": 58,
         "fat": 14,
-        "fiber": 9
+        "fiber": 11
       },
       "ingredients": [
         {
-          "item": "Pork shoulder (from batch)",
+          "item": "TJ's Mandarin Orange Chicken",
           "jake": {
-            "imperial": "8 oz pulled",
-            "metric": "225g pulled"
+            "imperial": "8 oz",
+            "metric": "225g"
           },
           "laine": {
-            "imperial": "5 oz pulled",
-            "metric": "140g pulled"
+            "imperial": "5 oz",
+            "metric": "140g"
           },
-          "nutritionKey": "Pork shoulder (pulled)"
+          "nutritionKey": "TJ's Mandarin Orange Chicken"
         },
         {
-          "item": "Sweet potato, cubed",
-          "jake": "1 medium",
-          "laine": "1.5 medium",
-          "nutritionKey": "Sweet potato"
-        },
-        {
-          "item": "Broccoli florets",
-          "shared": {
-            "imperial": "about 4 cups total",
-            "metric": "400g total"
+          "item": "Dry green lentils",
+          "jake": {
+            "imperial": "1/3 cup dry",
+            "metric": "65g dry"
           },
-          "nutritionKey": "Broccoli florets"
+          "laine": {
+            "imperial": "1/4 cup dry",
+            "metric": "50g dry"
+          },
+          "nutritionKey": "Dry green lentils"
         },
         {
-          "item": "Olive oil",
-          "jake": "1.5 tbsp",
-          "laine": "0.5 tbsp",
-          "nutritionKey": "Olive oil"
-        },
-        {
-          "item": "Garlic powder, smoked paprika, cumin, salt",
-          "shared": "to taste",
-          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+          "item": "Frozen veggies (edamame, stir-fry blend, or broccoli)",
+          "shared": "2-3 cups total",
+          "nutritionKey": "Frozen veggies (mixed)"
         }
       ],
       "steps": [
-        "For the pork shoulder batch: rub the whole shoulder with cumin, smoked paprika, garlic powder, salt, pepper, chili flakes. Add 1/2 cup water to slow cooker. Cook on LOW 8 hrs or HIGH 4-5 hrs. Shred and portion into 3 dinner-sized containers plus lunch use.",
-        "Toss sweet potato with oil, smoked paprika, salt. Roast at 410F / 210C for 25 min.",
-        "Toss broccoli with remaining oil + salt. Add to pan for last 15 min.",
-        "Plate: Jake gets more pork + less potato. Laine gets less pork + more potato."
+        "Simmer lentils in salted water \u2014 Jake's portion 20 min, they're done when tender. Drain.",
+        "Bake orange chicken per package (usually 400F for 20-22 min, toss halfway).",
+        "Microwave or steam frozen veggies per package.",
+        "Plate: Jake gets larger chicken + lentil portion. Laine gets smaller chicken + more veg."
       ]
-    }
+     }
   ],
   "jakeLunch": {
     "name": "Chicken + White Bean + Spinach Pasta Batch",
