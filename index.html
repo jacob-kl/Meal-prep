@@ -34,6 +34,9 @@ const useUnits = () => useContext(UnitsCtx);
 const SubsCtx = createContext({ subs: {}, setSub: () => {} });
 const useSubs = () => useContext(SubsCtx);
 
+const NutritionDBCtx = createContext({});
+const useNutritionDB = () => useContext(NutritionDBCtx);
+
 const OpenDropdownCtx = createContext({ openKey: null, setOpenKey: () => {} });
 const useOpenDropdown = () => useContext(OpenDropdownCtx);
 
@@ -170,9 +173,26 @@ function IngNutrition({ n, color }) {
   );
 }
 
-function IngredientList({ items, nutritionKey, nutritionColor }) {
+function scaleNutrition(base, ratio) {
+  if (!base) return null;
+  return { cal: Math.round(base.cal * ratio), protein: Math.round(base.protein * ratio), carbs: Math.round(base.carbs * ratio), fat: Math.round(base.fat * ratio) };
+}
+
+function parseQty(s) {
+  if (!s || typeof s !== "string") return 1;
+  const frac = s.match(/(\d+)\s*\/\s*(\d+)/);
+  if (frac) {
+    const whole = s.match(/^(\d+)\s+\d+\/\d+/);
+    return (whole ? parseInt(whole[1]) : 0) + parseInt(frac[1]) / parseInt(frac[2]);
+  }
+  const num = s.match(/(\d+\.?\d*)/);
+  return num ? parseFloat(num[1]) : 1;
+}
+
+function IngredientList({ items, nutritionColor }) {
   const { subs } = useSubs();
   const units = useUnits();
+  const db = useNutritionDB();
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
       {items.map((rawIng, i) => {
@@ -182,7 +202,7 @@ function IngredientList({ items, nutritionKey, nutritionColor }) {
             ? resolveIngredient(rawIng, subs, units).item
             : rawIng[units] || rawIng.metric || rawIng.imperial || "";
         const hasSubs = rawIng && rawIng.substitutions && rawIng.substitutions.length > 0;
-        const nutri = typeof rawIng === "object" ? (nutritionKey ? rawIng[nutritionKey] : (rawIng.jakeNutrition || rawIng.laineNutrition || rawIng.nutrition || null)) : null;
+        const base = rawIng.nutritionKey ? db[rawIng.nutritionKey] : null;
         return (
           <li key={i} style={{ paddingLeft: 13, position: "relative" }}>
             <span style={{ position: "absolute", left: 0, top: 2, color: "#00d4aa" }}>-</span>
@@ -190,7 +210,7 @@ function IngredientList({ items, nutritionKey, nutritionColor }) {
               <span style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4" }}>{text}</span>
               {hasSubs && <SubDropdown ing={rawIng} />}
             </div>
-            <IngNutrition n={nutri} color={nutritionColor} />
+            {base && <IngNutrition n={base} color={nutritionColor} />}
           </li>
         );
       })}
@@ -228,6 +248,7 @@ function Accordion({ label, labelColor, name, note, macros, ingredients, steps, 
 function DinnerCard({ d, isOpen, onToggle }) {
   const { subs } = useSubs();
   const units = useUnits();
+  const nutritionDB = useNutritionDB();
   const { jake, laine, steps } = resolveDinner(d, subs);
   return (
     <div style={{ background: "#0f1a2e", border: "1px solid " + (isOpen ? "#1e3a5f" : "#162d4f"), borderRadius: 14 }}>
@@ -267,6 +288,10 @@ function DinnerCard({ d, isOpen, onToggle }) {
               const ing = resolveIngredient(rawIng, subs, units);
               const jakeVal = ing.jake ? resolveVal(ing.jake, units) : resolveVal(ing.shared, units);
               const laineVal = ing.laine ? resolveVal(ing.laine, units) : resolveVal(ing.shared, units);
+              const base = rawIng.nutritionKey ? nutritionDB[rawIng.nutritionKey] : null;
+              const jq = parseQty(jakeVal), lq = parseQty(laineVal), total = jq + lq || 2;
+              const jakeN = scaleNutrition(base, total > 0 ? jq / total : 0.5);
+              const laineN = scaleNutrition(base, total > 0 ? lq / total : 0.5);
               return (
                 <div key={i} style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: i < d.ingredients.length - 1 ? "1px solid #1a2f50" : "none", alignItems: "start" }}>
                   <div style={{ padding: "9px 12px", fontSize: 12, color: "#8aaed4", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
@@ -275,11 +300,11 @@ function DinnerCard({ d, isOpen, onToggle }) {
                   </div>
                   <div style={{ padding: "9px 12px", fontSize: 12, color: "#38b6ff", fontFamily: "monospace" }}>
                     {jakeVal}
-                    <IngNutrition n={rawIng.jakeNutrition} color="#38b6ff" />
+                    <IngNutrition n={jakeN} color="#38b6ff" />
                   </div>
                   <div style={{ padding: "9px 12px", fontSize: 12, color: "#c878f8", fontFamily: "monospace" }}>
                     {laineVal}
-                    <IngNutrition n={rawIng.laineNutrition} color="#c878f8" />
+                    <IngNutrition n={laineN} color="#c878f8" />
                   </div>
                 </div>
               );
@@ -645,6 +670,10 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [units, setUnits] = useState(() => localStorage.getItem("mealplan_units") || "imperial");
+  const [nutritionDB, setNutritionDB] = useState({});
+  React.useEffect(() => {
+    fetch("nutrition.json").then(r => r.json()).then(setNutritionDB).catch(() => {});
+  }, []);
   const [subs, setSubs] = useState(() => {
     try { return JSON.parse(localStorage.getItem("mealplan_subs") || "{}"); } catch { return {}; }
   });
@@ -690,6 +719,7 @@ function App() {
   );
   return (
     <UnitsCtx.Provider value={units}>
+      <NutritionDBCtx.Provider value={nutritionDB}>
       <OpenDropdownCtx.Provider value={{ openKey, setOpenKey }}>
       <SubsCtx.Provider value={{ subs, setSub }}>
         <div style={{ minHeight: "100vh", padding: "40px 20px 80px" }}>
@@ -736,6 +766,7 @@ function App() {
         </div>
       </SubsCtx.Provider>
       </OpenDropdownCtx.Provider>
+      </NutritionDBCtx.Provider>
     </UnitsCtx.Provider>
   );
 }
