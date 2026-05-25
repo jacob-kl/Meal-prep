@@ -751,15 +751,16 @@
     }
   ],
   "shopping": {
-    "note": "Items you need to buy for W22. Everything else comes from your pantry/freezer.",
-    "mustBuy": [
+    "Must Buy": [
       "Corn tortillas (small, 1 pack) \u2014 taco night",
-      "Light Italian or Caesar dressing \u2014 Laine's pasta salad",
-      "Rice (if running low \u2014 check supply)"
+      "Light Italian or Caesar dressing \u2014 Laine's pasta salad"
     ],
-    "optional": [
-      "Extra canned tuna (you'll use 3 cans this week)",
-      "Sour cream (check how much you have \u2014 need ~6 tbsp)",
+    "Check Supply": [
+      "Rice \u2014 check if running low",
+      "Sour cream \u2014 need ~6 tbsp this week",
+      "Canned tuna \u2014 need 3 cans total"
+    ],
+    "Optional": [
       "Extra frozen veggies if freezer is getting low"
     ]
   },
