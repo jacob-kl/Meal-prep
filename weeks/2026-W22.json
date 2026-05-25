@@ -185,67 +185,68 @@
     },
     {
       "day": "Wednesday (May 27)",
-      "name": "Creamy Hatch Chile & Corn Chowder + Egg White Scramble",
-      "note": "Use the Bettergoods Hatch Chile and Corn Chowder jar as the base. Bulk it up with egg whites stirred in and a side of lentils for Jake's protein. Laine gets the chowder + egg whites only.",
+      "name": "Garlic Herb Pork Tenderloin + Hatch Chile Chowder",
+      "note": "Use the Bettergoods Hatch Chile & Corn Chowder jar as a warm sauce/side. Tenderloin is stupid easy \u2014 season, sear, oven-finish. Jake gets more pork, Laine more chowder.",
       "jake": {
-        "cal": 650,
-        "protein": 62,
-        "carbs": 36,
+        "cal": 660,
+        "protein": 64,
+        "carbs": 28,
         "fat": 22,
-        "fiber": 8
+        "fiber": 5
       },
       "laine": {
         "cal": 420,
-        "protein": 36,
-        "carbs": 48,
+        "protein": 40,
+        "carbs": 32,
         "fat": 10,
-        "fiber": 6
+        "fiber": 5
       },
       "ingredients": [
         {
-          "item": "Bettergoods Creamy Hatch Chile & Corn Chowder",
+          "item": "Pork tenderloin (from 1.5 lb purchase)",
+          "jake": {
+            "imperial": "8 oz cooked",
+            "metric": "225g cooked"
+          },
+          "laine": {
+            "imperial": "5 oz cooked",
+            "metric": "140g cooked"
+          },
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Bettergoods Hatch Chile & Corn Chowder",
           "shared": "1 jar split (24oz)",
           "nutritionKey": "Frozen veggies (mixed)"
         },
         {
-          "item": "Liquid egg whites",
-          "jake": {
-            "imperial": "3/4 cup",
-            "metric": "180ml"
-          },
-          "laine": {
-            "imperial": "1/2 cup",
-            "metric": "120ml"
-          },
-          "nutritionKey": "Liquid egg whites"
+          "item": "Frozen veggies",
+          "shared": "2 cups",
+          "nutritionKey": "Frozen veggies (mixed)"
         },
         {
-          "item": "Dry green lentils (Jake side)",
-          "jake": {
-            "imperial": "1/3 cup dry",
-            "metric": "60g dry"
-          },
-          "laine": "skip",
-          "nutritionKey": "Dry green lentils"
-        },
-        {
-          "item": "Shredded cheese",
+          "item": "Shredded cheese (topping)",
           "jake": "2 tbsp",
           "laine": "1 tbsp",
           "nutritionKey": "Shredded cheese (4-blend)"
         },
         {
-          "item": "Garlic powder, cumin, salt",
+          "item": "Olive oil",
+          "shared": "1 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic powder, rosemary, smoked paprika, salt",
           "shared": "to taste",
           "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
         }
       ],
       "steps": [
-        "If using lentils for Jake: simmer 60g dry lentils in salted water 20 min. Drain.",
-        "Heat chowder in a pot over medium, split into two portions.",
-        "Whisk egg whites with garlic powder + salt. Slowly stir into hot chowder over low heat \u2014 they'll cook through and thicken the soup in 3-4 min.",
-        "Jake: serve chowder + egg whites over/beside the lentils. Top both with shredded cheese.",
-        "Laine: chowder + egg whites, lighter portion, cheese on top."
+        "Pat tenderloin dry. Rub all over with garlic powder, smoked paprika, rosemary, salt, pepper.",
+        "Sear in oven-safe skillet with olive oil over high heat, 2 min per side until browned all around.",
+        "Transfer skillet to 425\u00b0F oven. Roast 15-18 min until internal temp hits 145\u00b0F. Rest 5 min before slicing.",
+        "Heat chowder in a pot over medium. Steam/microwave frozen veggies.",
+        "Plate: pork slices over or beside a ladle of chowder. Jake gets more pork, Laine more chowder. Top with shredded cheese."
       ]
     },
     {
@@ -396,41 +397,59 @@
     },
     {
       "day": "Saturday (May 30)",
-      "name": "Creamy Three Cheese Tomato Bisque + Tuna + Frozen Veg",
-      "note": "Use the Bettergoods Three Cheese Tomato Bisque jar. Stir canned tuna directly into Jake's bowl for a protein boost. Laine gets bisque + frozen veggies on the side. Easy Friday.",
+      "name": "Sliced Pork Tenderloin + Three Cheese Tomato Bisque + Pasta",
+      "note": "Use remaining tenderloin. Bettergoods Three Cheese Tomato Bisque works beautifully as a sauce over pasta. Elegant low-effort Saturday. Jake more pasta + pork, Laine lighter.",
       "jake": {
-        "cal": 620,
+        "cal": 700,
         "protein": 62,
-        "carbs": 30,
+        "carbs": 46,
         "fat": 22,
-        "fiber": 7
+        "fiber": 6
       },
       "laine": {
-        "cal": 400,
-        "protein": 36,
-        "carbs": 40,
+        "cal": 450,
+        "protein": 38,
+        "carbs": 50,
         "fat": 10,
-        "fiber": 7
+        "fiber": 6
       },
       "ingredients": [
         {
-          "item": "Bettergoods Creamy Three Cheese Tomato Bisque",
+          "item": "Pork tenderloin (remaining from Wed purchase)",
+          "jake": {
+            "imperial": "7 oz cooked",
+            "metric": "200g cooked"
+          },
+          "laine": {
+            "imperial": "5 oz cooked",
+            "metric": "140g cooked"
+          },
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Bettergoods Three Cheese Tomato Bisque",
           "shared": "1 jar split (24oz)",
           "nutritionKey": "Diced tomatoes"
         },
         {
-          "item": "Canned tuna in water, drained",
-          "jake": "2 cans",
-          "laine": "1 can",
-          "nutritionKey": "Canned tuna (in water)"
+          "item": "Garofalo spaghetti",
+          "jake": {
+            "imperial": "2.5 oz dry",
+            "metric": "70g dry"
+          },
+          "laine": {
+            "imperial": "2 oz dry",
+            "metric": "57g dry"
+          },
+          "nutritionKey": "Garofalo organic pasta"
         },
         {
-          "item": "Frozen veggies",
-          "shared": "2 cups",
-          "nutritionKey": "Frozen veggies (mixed)"
+          "item": "Baby spinach, stirred in",
+          "shared": "2 handfuls",
+          "nutritionKey": "Baby spinach"
         },
         {
-          "item": "Shredded cheese (topping)",
+          "item": "Shredded cheese",
           "jake": "2 tbsp",
           "laine": "1 tbsp",
           "nutritionKey": "Shredded cheese (4-blend)"
@@ -442,10 +461,11 @@
         }
       ],
       "steps": [
-        "Heat bisque in pot over medium, split into two portions.",
-        "Steam or microwave frozen veggies per package.",
-        "Stir drained tuna into Jake's bisque. Laine gets plain bisque + veggie side.",
-        "Top both with shredded cheese + bread crumbs."
+        "Cook spaghetti in salted water per package. Drain, reserve 1/4 cup pasta water.",
+        "Warm tenderloin slices in a pan over medium \u2014 just 2-3 min, it's already cooked.",
+        "Heat bisque in a pot. Toss cooked pasta in bisque, use pasta water to loosen if needed.",
+        "Stir spinach into the pasta off heat until wilted.",
+        "Plate: pasta + bisque base, pork slices on top. Jake bigger portion. Bread crumbs + cheese to finish."
       ]
     },
     {
@@ -562,8 +582,8 @@
     ]
   },
   "laineLunch": {
-    "name": "Chicken Pasta Salad \u2014 Mason Jar Style",
-    "note": "Only 2 chicken breasts so use both (~800g raw \u2192 ~550g cooked total). 5 mason jars. Dressing goes in a separate small container and is mixed in when eating. She eats in 2 sittings. Italian or Caesar dressing (light).",
+    "name": "Chicken Pasta Salad \u2014 Mason Jar Style (Fresh)",
+    "note": "Only 2 chicken breasts \u2014 bake both. Fresh cherry tomatoes, cucumber, and spinach added for Laine. 5 mason jars. Dressing separate. She eats in 2 sittings per jar.",
     "macros": {
       "cal": 555,
       "protein": 50,
@@ -586,8 +606,16 @@
         "nutritionKey": "Garbanzo beans"
       },
       {
-        "item": "Frozen veggies (thawed/steamed, cooled) \u2014 2.5 cups total",
-        "nutritionKey": "Frozen veggies (mixed)"
+        "item": "Cherry tomatoes \u2014 1 pint (halved, ~20 per jar)",
+        "nutritionKey": "Diced tomatoes"
+      },
+      {
+        "item": "English cucumber \u2014 1 large (sliced or diced, ~1/3 per jar)",
+        "nutritionKey": "Baby spinach"
+      },
+      {
+        "item": "Fresh baby spinach \u2014 big handful per jar",
+        "nutritionKey": "Baby spinach"
       },
       {
         "item": "Light Italian or Caesar dressing \u2014 2 tbsp per jar (kept separate)",
@@ -599,13 +627,13 @@
       }
     ],
     "steps": [
-      "Season both chicken breasts with garlic powder, salt, pepper. Bake at 400\u00b0F for 24 min. Cool completely, then dice into small cubes.",
-      "Cook all pasta in salted water per package. Drain, rinse under cold water to stop cooking. Toss with a tiny bit of olive oil to prevent sticking.",
-      "Steam/microwave frozen veggies. Cool completely (cold pasta salad needs cold veg).",
+      "Season both chicken breasts with garlic powder, salt, pepper. Bake at 400\u00b0F for 24 min. Cool completely, then dice small.",
+      "Cook all pasta in salted water per package. Drain, rinse cold. Toss with a tiny bit of olive oil.",
+      "Halve cherry tomatoes. Dice or slice cucumber. Rinse fresh spinach.",
       "Drain and rinse garbanzo beans.",
-      "Layer each mason jar: pasta first \u2192 garbanzo beans \u2192 veggies \u2192 chicken on top. Seal.",
-      "Put 2 tbsp dressing in a tiny separate container per jar. Label and refrigerate.",
-      "When eating: pour dressing in, shake or stir, eat half then reseal for later."
+      "Layer each mason jar: pasta \u2192 garbanzo beans \u2192 cucumber \u2192 cherry tomatoes \u2192 chicken \u2192 spinach on top (spinach stays freshest on top, away from the dressing).",
+      "Put 2 tbsp dressing in a tiny separate container per jar. Refrigerate.",
+      "When eating: pour dressing in, shake, eat half \u2014 reseal for the second sitting."
     ]
   },
   "laineBreakfasts": [
@@ -751,17 +779,56 @@
     }
   ],
   "shopping": {
-    "Must Buy": [
-      "Corn tortillas (small, 1 pack) \u2014 taco night",
-      "Light Italian or Caesar dressing \u2014 Laine's pasta salad"
+    "Proteins (Buy)": [
+      "Pork tenderloin \u2014 1.5 lbs (used Wed + Sat dinners)",
+      "Corn tortillas, small \u2014 1 pack (taco night)",
+      "Light Italian or Caesar dressing \u2014 1 bottle (Laine's jars)"
     ],
-    "Check Supply": [
-      "Rice \u2014 check if running low",
-      "Sour cream \u2014 need ~6 tbsp this week",
-      "Canned tuna \u2014 need 3 cans total"
+    "Produce (Buy)": [
+      "Cherry tomatoes \u2014 1 pint (Laine's pasta salad)",
+      "English cucumber \u2014 1 large (Laine's pasta salad)",
+      "Fresh baby spinach \u2014 1 bag/container (Laine's pasta salad + dinners)"
     ],
-    "Optional": [
-      "Extra frozen veggies if freezer is getting low"
+    "Already Have \u2014 Proteins": [
+      "Shrimp (freezer)",
+      "16oz steak (for tacos)",
+      "Ground turkey 85/15 (freezer \u2014 Jake's lunch batch + 2 dinners)",
+      "Chicken breast x2 (Laine's pasta salad)",
+      "Canned tuna x3+ (Friday bisque dinner + snacks)",
+      "Liquid egg whites x2 cartons",
+      "Oikos Triple Zero x2"
+    ],
+    "Already Have \u2014 Pantry": [
+      "Garofalo spaghetti",
+      "Garofalo pasta (rotini/penne for Laine's jars)",
+      "White rice",
+      "Quinoa (Jake's lunch)",
+      "Dry green lentils",
+      "Birch Benders pancake mix",
+      "Progresso garlic herb bread crumbs",
+      "Ground flaxseed"
+    ],
+    "Already Have \u2014 Canned & Jarred": [
+      "Dennison's chili with beans x1 can",
+      "Signature Select pasta sauce \u2014 garlic basil (Wednesday dinner)",
+      "Signature Select pasta sauce \u2014 four cheese (Jake's lunch)",
+      "Bettergoods Creamy Hatch Chile & Corn Chowder (Wednesday dinner)",
+      "Bettergoods Three Cheese Tomato Bisque (Saturday dinner)",
+      "Black beans x1 can",
+      "Pinto beans x1 can",
+      "Garbanzo beans x2 cans (Laine's jars + Wednesday dinner)"
+    ],
+    "Already Have \u2014 Produce & Refrigerated": [
+      "Baby spinach (existing \u2014 supplement with fresh bag)",
+      "Sour cream (need ~6 tbsp \u2014 check supply)",
+      "Shredded cheese (big bag)",
+      "Daisy sour cream",
+      "Lemons / lemon juice"
+    ],
+    "Already Have \u2014 Frozen": [
+      "Frozen shrimp",
+      "Frozen veggies assortment",
+      "Frozen fruit"
     ]
   },
   "targets": {
