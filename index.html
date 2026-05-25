@@ -458,14 +458,47 @@ function scaleStep(text, days) {
   );
 }
 
+// Convert metric measurements in a string to US imperial
+// g -> oz, kg -> lbs, ml -> fl oz. Cups/tbsp/tsp/oz/lbs left untouched.
+function convertToImperial(text) {
+  if (!text) return text;
+  // kg -> lbs
+  text = text.replace(/(\d+\.?\d*)\s*kg/gi, (_, n) => {
+    const lbs = parseFloat(n) * 2.20462;
+    const rounded = Math.round(lbs * 4) / 4;
+    return (rounded === Math.floor(rounded) ? String(rounded) : rounded.toFixed(2).replace(/\.?0+$/, "")) + " lbs";
+  });
+  // ml -> fl oz
+  text = text.replace(/(\d+\.?\d*)\s*ml/gi, (_, n) => {
+    const floz = parseFloat(n) / 29.5735;
+    const rounded = Math.round(floz * 4) / 4;
+    return (rounded === Math.floor(rounded) ? String(rounded) : rounded.toFixed(1)) + " fl oz";
+  });
+  // grams -> oz (skip if inside a word like "mg")
+  text = text.replace(/(\d+\.?\d*)\s*g(?![a-zA-Z])/g, (_, n) => {
+    const oz = parseFloat(n) / 28.3495;
+    const rounded = Math.round(oz * 4) / 4;
+    return (rounded === Math.floor(rounded) ? String(rounded) : rounded.toFixed(1)) + " oz";
+  });
+  return text;
+}
+
 function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, isOpen, onToggle }) {
   const units = useUnits();
+  const db = useNutritionDB();
   const scaledIngredients = lunch.ingredients.map(ing => {
-    if (typeof ing === "string") return scaleIngredient(ing, days);
-    const item = ing.item ? scaleIngredient(ing.item, days) : (ing[units] || ing.metric || ing.imperial || "");
+    if (typeof ing === "string") {
+      const scaled = scaleIngredient(ing, days);
+      return units === "imperial" ? convertToImperial(scaled) : scaled;
+    }
+    let item = ing.item ? scaleIngredient(ing.item, days) : (ing[units] || ing.metric || ing.imperial || "");
+    if (units === "imperial") item = convertToImperial(item);
     return { ...ing, item };
   });
-  const scaledSteps = lunch.steps.map(s => scaleStep(s, days));
+  const scaledSteps = lunch.steps.map(s => {
+    let stepped = scaleStep(s, days);
+    return units === "imperial" ? convertToImperial(stepped) : stepped;
+  });
   // Adjust the "divide into N containers" instruction
   const finalSteps = scaledSteps.map(s =>
     s.replace(/5 containers/g, days + " container" + (days !== 1 ? "s" : ""))
@@ -499,13 +532,18 @@ function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             <div style={{ background: "#0c1524", border: "1px solid #1e3a5f", borderRadius: 13, padding: "16px 18px" }}>
               <div style={{ fontFamily: "monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a5878", marginBottom: 11 }}>Ingredients — {days} portion{days !== 1 ? "s" : ""}</div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
-                {scaledIngredients.map((ing, i) => (
-                  <li key={i} style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4", paddingLeft: 13, position: "relative" }}>
-                    <span style={{ position: "absolute", left: 0, color: "#00d4aa" }}>-</span>
-                    {typeof ing === "string" ? ing : ing.item}
-                  </li>
-                ))}
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {scaledIngredients.map((ing, i) => {
+                  const displayText = typeof ing === "string" ? ing : ing.item;
+                  const base = (typeof ing !== "string" && ing.nutritionKey) ? db[ing.nutritionKey] : null;
+                  return (
+                    <li key={i} style={{ paddingLeft: 13, position: "relative" }}>
+                      <span style={{ position: "absolute", left: 0, top: 2, color: "#00d4aa" }}>-</span>
+                      <span style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4" }}>{displayText}</span>
+                      {base && <IngNutrition n={base} color={personColor} />}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div style={{ background: "#0c1524", border: "1px solid #1e3a5f", borderRadius: 13, padding: "16px 18px" }}>
