@@ -1,6 +1,6 @@
 {
   "_v": 3,
-  "_note": "Week of May 25 \u2013 May 31, 2026. Sunday = Taco Night (shrimp + steak). Jake low-carb lunch bowl (ground turkey + quinoa + pasta sauce). Laine mason-jar chicken pasta salad (dressing separate).",
+  "_note": "Week of May 25 \u2013 May 31, 2026. Monday = Taco Night (shrimp + steak). Jake low-carb lunch bowl (ground turkey + quinoa + pasta sauce). Laine mason-jar chicken pasta salad (dressing separate).",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -15,7 +15,7 @@
   },
   "dinners": [
     {
-      "day": "Sunday (May 25)",
+      "day": "Monday (May 25)",
       "name": "Shrimp & Steak Tacos",
       "note": "Use the 16oz steak + frozen shrimp you already have. Toppings: sour cream, shredded cheese. Jake gets more steak, Laine more shrimp. Corn tortillas needed (or flour if that's what's on hand). Jake gets 3 tortillas, Laine 2.",
       "jake": {
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "day": "Monday (May 26)",
+      "day": "Tuesday (May 26)",
       "name": "Ground Turkey + Black Bean Skillet over Rice",
       "note": "Uses ground turkey, black beans, Signature Select pasta sauce (garlic basil works great here as an arrabiata-style). Serve over rice. Jake bigger portion, Laine less rice.",
       "jake": {
@@ -184,7 +184,7 @@
       ]
     },
     {
-      "day": "Tuesday (May 27)",
+      "day": "Wednesday (May 27)",
       "name": "Creamy Hatch Chile & Corn Chowder + Egg White Scramble",
       "note": "Use the Bettergoods Hatch Chile and Corn Chowder jar as the base. Bulk it up with egg whites stirred in and a side of lentils for Jake's protein. Laine gets the chowder + egg whites only.",
       "jake": {
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "day": "Wednesday (May 28)",
+      "day": "Thursday (May 28)",
       "name": "Garlic Basil Pasta + Ground Turkey + Garbanzo Beans",
       "note": "Use the Signature Select Garlic Basil sauce. Jake gets spaghetti, Laine gets less pasta + more beans. Bread crumbs as topping.",
       "jake": {
@@ -329,7 +329,7 @@
       ]
     },
     {
-      "day": "Thursday (May 29)",
+      "day": "Friday (May 29)",
       "name": "Dennison's Chili + Pinto Beans + Lentils",
       "note": "One can Dennison's as base, boost with pinto beans and lentils. High fiber, high protein, zero effort. Top with shredded cheese and sour cream. Jake bigger bowl.",
       "jake": {
@@ -395,7 +395,7 @@
       ]
     },
     {
-      "day": "Friday (May 30)",
+      "day": "Saturday (May 30)",
       "name": "Creamy Three Cheese Tomato Bisque + Tuna + Frozen Veg",
       "note": "Use the Bettergoods Three Cheese Tomato Bisque jar. Stir canned tuna directly into Jake's bowl for a protein boost. Laine gets bisque + frozen veggies on the side. Easy Friday.",
       "jake": {
@@ -449,9 +449,9 @@
       ]
     },
     {
-      "day": "Saturday (May 31)",
+      "day": "Sunday (May 31)",
       "name": "Birch Benders Pancake Night + Egg White Scramble",
-      "note": "Fun Saturday breakfast-for-dinner. Pancakes from the bag (just add water), egg white scramble on the side. Jake doubles the egg whites. Frozen fruit as topping.",
+      "note": "Fun Sunday breakfast-for-dinner. Pancakes from the bag (just add water), egg white scramble on the side. Jake doubles the egg whites. Frozen fruit as topping.",
       "jake": {
         "cal": 680,
         "protein": 56,
@@ -670,7 +670,7 @@
       ]
     },
     {
-      "day": "Sun (May 25) / Sat (May 31)",
+      "day": "Mon (May 25) / Sun (May 31)",
       "name": "Birch Benders Pancakes + Fruit",
       "macros": {
         "cal": 360,
