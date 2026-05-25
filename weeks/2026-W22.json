@@ -582,14 +582,14 @@
     ]
   },
   "laineLunch": {
-    "name": "Chicken Pasta Salad \u2014 Mason Jar Style (Fresh)",
-    "note": "Only 2 chicken breasts \u2014 bake both. Fresh cherry tomatoes, cucumber, and spinach added for Laine. 5 mason jars. Dressing separate. She eats in 2 sittings per jar.",
+    "name": "Chicken & Tuna Pasta Salad \u2014 Mason Jar Style",
+    "note": "2 chicken breasts + 1 can tuna per jar. Fresh cherry tomatoes, cucumber, spinach. 5 mason jars, dressing separate, 2 sittings per jar. No beans.",
     "macros": {
-      "cal": 555,
-      "protein": 50,
-      "carbs": 65,
+      "cal": 565,
+      "protein": 72,
+      "carbs": 42,
       "fat": 10,
-      "fiber": 6
+      "fiber": 4
     },
     "dressingNote": "Light Italian or light Caesar \u2014 2 tbsp per jar, kept in a tiny separate lidded container alongside each jar.",
     "ingredients": [
@@ -598,12 +598,12 @@
         "nutritionKey": "Chicken breast"
       },
       {
-        "item": "Garofalo pasta (rotini or penne) \u2014 250g dry total (50g per jar)",
-        "nutritionKey": "Garofalo organic pasta"
+        "item": "Canned tuna in water \u2014 1 can per jar (5 cans total)",
+        "nutritionKey": "Canned tuna (in water)"
       },
       {
-        "item": "Garbanzo beans, drained \u2014 1 can total (~85g per jar)",
-        "nutritionKey": "Garbanzo beans"
+        "item": "Garofalo pasta (rotini or penne) \u2014 250g dry total (50g per jar)",
+        "nutritionKey": "Garofalo organic pasta"
       },
       {
         "item": "Cherry tomatoes \u2014 1 pint (halved, ~20 per jar)",
@@ -628,10 +628,10 @@
     ],
     "steps": [
       "Season both chicken breasts with garlic powder, salt, pepper. Bake at 400\u00b0F for 24 min. Cool completely, then dice small.",
-      "Cook all pasta in salted water per package. Drain, rinse cold. Toss with a tiny bit of olive oil.",
+      "Cook all pasta in salted water per package. Drain, rinse cold. Toss with a tiny bit of olive oil to prevent sticking.",
       "Halve cherry tomatoes. Dice or slice cucumber. Rinse fresh spinach.",
-      "Drain and rinse garbanzo beans.",
-      "Layer each mason jar: pasta \u2192 garbanzo beans \u2192 cucumber \u2192 cherry tomatoes \u2192 chicken \u2192 spinach on top (spinach stays freshest on top, away from the dressing).",
+      "Drain tuna cans well \u2014 press with fork to squeeze out water.",
+      "Layer each mason jar: pasta \u2192 tuna \u2192 cucumber \u2192 cherry tomatoes \u2192 chicken \u2192 spinach on top.",
       "Put 2 tbsp dressing in a tiny separate container per jar. Refrigerate.",
       "When eating: pour dressing in, shake, eat half \u2014 reseal for the second sitting."
     ]
@@ -780,7 +780,8 @@
   ],
   "shopping": {
     "Proteins (Buy)": [
-      "Pork tenderloin \u2014 1.5 lbs (used Wed + Sat dinners)",
+      "Pork tenderloin \u2014 1.5 lbs (Wed + Sat dinners)",
+      "Canned tuna in water \u2014 5 cans (Laine's jars)",
       "Corn tortillas, small \u2014 1 pack (taco night)",
       "Light Italian or Caesar dressing \u2014 1 bottle (Laine's jars)"
     ],
@@ -814,9 +815,9 @@
       "Signature Select pasta sauce \u2014 four cheese (Jake's lunch)",
       "Bettergoods Creamy Hatch Chile & Corn Chowder (Wednesday dinner)",
       "Bettergoods Three Cheese Tomato Bisque (Saturday dinner)",
-      "Black beans x1 can",
-      "Pinto beans x1 can",
-      "Garbanzo beans x2 cans (Laine's jars + Wednesday dinner)"
+      "Black beans x1 can (Tuesday dinner)",
+      "Pinto beans x1 can (Thursday dinner)",
+      "Garbanzo beans x1 can (Wednesday dinner \u2014 Jake's pasta)"
     ],
     "Already Have \u2014 Produce & Refrigerated": [
       "Baby spinach (existing \u2014 supplement with fresh bag)",
