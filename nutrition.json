@@ -244,5 +244,54 @@
     "protein": 0,
     "carbs": 2,
     "fat": 0
+  },
+  "Quinoa (dry)": {
+    "serving": "per 100g dry",
+    "cal": 368,
+    "protein": 14,
+    "carbs": 64,
+    "fat": 6
+  },
+  "Shredded cheese (4-blend)": {
+    "serving": "per 2 tbsp (14g)",
+    "cal": 55,
+    "protein": 4,
+    "carbs": 1,
+    "fat": 5
+  },
+  "Canned tuna (in water)": {
+    "serving": "per 1 can (142g drained)",
+    "cal": 150,
+    "protein": 33,
+    "carbs": 0,
+    "fat": 1
+  },
+  "Flank/sirloin steak": {
+    "serving": "per 100g cooked",
+    "cal": 250,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 16
+  },
+  "Italian dressing (light)": {
+    "serving": "per 2 tbsp (30ml)",
+    "cal": 30,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 2
+  },
+  "Corn tortilla (small)": {
+    "serving": "per 1 tortilla (28g)",
+    "cal": 62,
+    "protein": 2,
+    "carbs": 13,
+    "fat": 1
+  },
+  "Signature Select Alfredo sauce": {
+    "serving": "per 1/4 cup (60g)",
+    "cal": 80,
+    "protein": 2,
+    "carbs": 3,
+    "fat": 7
   }
 }
