@@ -1,937 +1,304 @@
 {
-  "_v": 3,
-  "_note": "Week of May 25 \u2013 May 31, 2026. Monday = Taco Night (shrimp + steak). Jake low-carb lunch bowl (ground turkey + quinoa + pasta sauce). Laine mason-jar chicken pasta salad (dressing separate).",
-  "jakeMacros": {
-    "cal": 2030,
-    "protein": 203,
-    "carbs": 102,
-    "fat": 90
+  "_note": "All values are per the serving size listed. Edit here and values update across all weeks.",
+  "Pork shoulder (pulled)": {
+    "serving": "per 100g pulled",
+    "cal": 239,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 15
   },
-  "laineMacros": {
-    "cal": 1363,
-    "protein": 103,
-    "carbs": 152,
-    "fat": 37
+  "Chicken breast": {
+    "serving": "per 100g cooked",
+    "cal": 165,
+    "protein": 31,
+    "carbs": 0,
+    "fat": 4
   },
-  "dinners": [
-    {
-      "day": "Monday (May 25)",
-      "name": "Shrimp & Steak Tacos",
-      "note": "Use the 16oz steak + frozen shrimp you already have. Toppings: sour cream, shredded cheese. Jake gets more steak, Laine more shrimp. Corn tortillas needed (or flour if that's what's on hand). Jake gets 3 tortillas, Laine 2.",
-      "jake": {
-        "cal": 740,
-        "protein": 78,
-        "carbs": 42,
-        "fat": 28,
-        "fiber": 3
-      },
-      "laine": {
-        "cal": 480,
-        "protein": 48,
-        "carbs": 32,
-        "fat": 14,
-        "fiber": 2
-      },
-      "ingredients": [
-        {
-          "item": "Flank/sirloin steak (from the 16oz)",
-          "jake": {
-            "imperial": "8 oz",
-            "metric": "225g cooked"
-          },
-          "laine": {
-            "imperial": "5 oz",
-            "metric": "140g cooked"
-          },
-          "nutritionKey": "Flank/sirloin steak"
-        },
-        {
-          "item": "Frozen shrimp, peeled + thawed",
-          "jake": {
-            "imperial": "5 oz",
-            "metric": "140g"
-          },
-          "laine": {
-            "imperial": "4 oz",
-            "metric": "113g"
-          },
-          "nutritionKey": "Frozen shrimp"
-        },
-        {
-          "item": "Corn tortillas (small)",
-          "jake": "3 tortillas",
-          "laine": "2 tortillas",
-          "nutritionKey": "Corn tortilla (small)"
-        },
-        {
-          "item": "Shredded cheese",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        },
-        {
-          "item": "Daisy sour cream",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Daisy sour cream"
-        },
-        {
-          "item": "Olive oil (for searing)",
-          "shared": "1 tbsp total",
-          "nutritionKey": "Olive oil"
-        },
-        {
-          "item": "Cumin, chili powder, garlic powder, salt",
-          "shared": "to taste",
-          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
-        },
-        {
-          "item": "Lemon juice (for shrimp)",
-          "shared": "1 tbsp",
-          "nutritionKey": "Lemon juice"
-        }
-      ],
-      "steps": [
-        "Season steak with cumin, chili powder, garlic powder, salt. Let rest 10 min at room temp.",
-        "Sear steak in cast iron or heavy pan on high heat 3-4 min per side for medium. Rest 5 min before slicing thin against the grain.",
-        "In the same pan, add shrimp tossed with chili powder + cumin. Cook 2 min per side until pink. Finish with squeeze of lemon.",
-        "Warm tortillas directly on burner flame or dry pan 30 sec each side.",
-        "Build tacos: Jake gets 3 with more steak, Laine gets 2 with more shrimp. Top with sour cream + cheese."
-      ]
-    },
-    {
-      "day": "Tuesday (May 26)",
-      "name": "Ground Turkey + Black Bean Skillet over Rice",
-      "note": "Uses ground turkey, black beans, Signature Select pasta sauce (garlic basil works great here as an arrabiata-style). Serve over rice. Jake bigger portion, Laine less rice.",
-      "jake": {
-        "cal": 710,
-        "protein": 68,
-        "carbs": 44,
-        "fat": 24,
-        "fiber": 10
-      },
-      "laine": {
-        "cal": 470,
-        "protein": 44,
-        "carbs": 50,
-        "fat": 10,
-        "fiber": 10
-      },
-      "ingredients": [
-        {
-          "item": "Ground turkey 85/15",
-          "jake": {
-            "imperial": "8 oz raw",
-            "metric": "225g raw"
-          },
-          "laine": {
-            "imperial": "5 oz raw",
-            "metric": "140g raw"
-          },
-          "nutritionKey": "Ground turkey 85/15"
-        },
-        {
-          "item": "Black beans, drained",
-          "shared": "1 can split",
-          "nutritionKey": "Black beans"
-        },
-        {
-          "item": "Signature Select pasta sauce (garlic basil)",
-          "jake": {
-            "imperial": "3/4 cup",
-            "metric": "180ml"
-          },
-          "laine": {
-            "imperial": "1 cup",
-            "metric": "240ml"
-          },
-          "nutritionKey": "Signature Select pasta sauce"
-        },
-        {
-          "item": "White rice (dry)",
-          "jake": {
-            "imperial": "1/3 cup dry",
-            "metric": "65g dry"
-          },
-          "laine": {
-            "imperial": "1/2 cup dry",
-            "metric": "90g dry"
-          },
-          "nutritionKey": "Sweet potato"
-        },
-        {
-          "item": "Frozen veggies, stirred in",
-          "shared": "1.5 cups",
-          "nutritionKey": "Frozen veggies (mixed)"
-        },
-        {
-          "item": "Shredded cheese (topping)",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        },
-        {
-          "item": "Garlic, cumin, chili powder",
-          "shared": "to taste",
-          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
-        }
-      ],
-      "steps": [
-        "Cook rice per package in salted water. Set aside.",
-        "Brown ground turkey in skillet over medium-high, breaking it up. Season with cumin, chili powder, garlic powder, salt.",
-        "Add garlic, stir 1 min. Add pasta sauce + black beans + frozen veggies. Simmer 8-10 min.",
-        "Serve over rice. Jake gets more turkey, less rice. Laine gets less turkey, more rice. Top both with shredded cheese."
-      ]
-    },
-    {
-      "day": "Wednesday (May 27)",
-      "name": "Garlic Herb Pork Tenderloin + Hatch Chile Chowder",
-      "note": "Use the Bettergoods Hatch Chile & Corn Chowder jar as a warm sauce/side. Tenderloin is stupid easy \u2014 season, sear, oven-finish. Jake gets more pork, Laine more chowder.",
-      "jake": {
-        "cal": 660,
-        "protein": 64,
-        "carbs": 28,
-        "fat": 22,
-        "fiber": 5
-      },
-      "laine": {
-        "cal": 420,
-        "protein": 40,
-        "carbs": 32,
-        "fat": 10,
-        "fiber": 5
-      },
-      "ingredients": [
-        {
-          "item": "Pork tenderloin (from 1.5 lb purchase)",
-          "jake": {
-            "imperial": "8 oz cooked",
-            "metric": "225g cooked"
-          },
-          "laine": {
-            "imperial": "5 oz cooked",
-            "metric": "140g cooked"
-          },
-          "nutritionKey": "Pork tenderloin"
-        },
-        {
-          "item": "Bettergoods Hatch Chile & Corn Chowder",
-          "shared": "1 jar split (24oz)",
-          "nutritionKey": "Frozen veggies (mixed)"
-        },
-        {
-          "item": "Frozen veggies",
-          "shared": "2 cups",
-          "nutritionKey": "Frozen veggies (mixed)"
-        },
-        {
-          "item": "Shredded cheese (topping)",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        },
-        {
-          "item": "Olive oil",
-          "shared": "1 tbsp",
-          "nutritionKey": "Olive oil"
-        },
-        {
-          "item": "Garlic powder, rosemary, smoked paprika, salt",
-          "shared": "to taste",
-          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
-        }
-      ],
-      "steps": [
-        "Pat tenderloin dry. Rub all over with garlic powder, smoked paprika, rosemary, salt, pepper.",
-        "Sear in oven-safe skillet with olive oil over high heat, 2 min per side until browned all around.",
-        "Transfer skillet to 425\u00b0F oven. Roast 15-18 min until internal temp hits 145\u00b0F. Rest 5 min before slicing.",
-        "Heat chowder in a pot over medium. Steam/microwave frozen veggies.",
-        "Plate: pork slices over or beside a ladle of chowder. Jake gets more pork, Laine more chowder. Top with shredded cheese."
-      ]
-    },
-    {
-      "day": "Thursday (May 28)",
-      "name": "Garlic Basil Pasta + Ground Turkey + Garbanzo Beans",
-      "note": "Use the Signature Select Garlic Basil sauce. Jake gets spaghetti, Laine gets less pasta + more beans. Bread crumbs as topping.",
-      "jake": {
-        "cal": 720,
-        "protein": 66,
-        "carbs": 52,
-        "fat": 20,
-        "fiber": 9
-      },
-      "laine": {
-        "cal": 460,
-        "protein": 40,
-        "carbs": 56,
-        "fat": 8,
-        "fiber": 9
-      },
-      "ingredients": [
-        {
-          "item": "Ground turkey 85/15",
-          "jake": {
-            "imperial": "7 oz raw",
-            "metric": "200g raw"
-          },
-          "laine": {
-            "imperial": "4 oz raw",
-            "metric": "113g raw"
-          },
-          "nutritionKey": "Ground turkey 85/15"
-        },
-        {
-          "item": "Garofalo spaghetti",
-          "jake": {
-            "imperial": "3 oz dry",
-            "metric": "85g dry"
-          },
-          "laine": {
-            "imperial": "2 oz dry",
-            "metric": "57g dry"
-          },
-          "nutritionKey": "Garofalo organic pasta"
-        },
-        {
-          "item": "Garbanzo beans, drained",
-          "shared": "1 can split",
-          "nutritionKey": "Garbanzo beans"
-        },
-        {
-          "item": "Signature Select garlic basil pasta sauce",
-          "jake": {
-            "imperial": "3/4 cup",
-            "metric": "180ml"
-          },
-          "laine": {
-            "imperial": "1 cup",
-            "metric": "240ml"
-          },
-          "nutritionKey": "Signature Select pasta sauce"
-        },
-        {
-          "item": "Baby spinach",
-          "shared": "2 big handfuls",
-          "nutritionKey": "Baby spinach"
-        },
-        {
-          "item": "Progresso garlic herb bread crumbs (garnish)",
-          "shared": "1 tbsp each",
-          "nutritionKey": "Progresso garlic herb bread crumbs"
-        }
-      ],
-      "steps": [
-        "Cook spaghetti in salted water per package. Reserve 1/4 cup pasta water before draining.",
-        "Brown turkey in skillet, season with garlic powder, salt, Italian seasoning.",
-        "Add pasta sauce + drained garbanzo beans. Simmer 5 min.",
-        "Toss drained pasta into the pan. Add pasta water to loosen if needed.",
-        "Stir in spinach off heat until wilted.",
-        "Plate: Jake gets more pasta, Laine more beans. Both get bread crumbs on top."
-      ]
-    },
-    {
-      "day": "Friday (May 29)",
-      "name": "Dennison's Chili + Pinto Beans + Lentils",
-      "note": "One can Dennison's as base, boost with pinto beans and lentils. High fiber, high protein, zero effort. Top with shredded cheese and sour cream. Jake bigger bowl.",
-      "jake": {
-        "cal": 700,
-        "protein": 65,
-        "carbs": 48,
-        "fat": 22,
-        "fiber": 16
-      },
-      "laine": {
-        "cal": 450,
-        "protein": 40,
-        "carbs": 52,
-        "fat": 8,
-        "fiber": 16
-      },
-      "ingredients": [
-        {
-          "item": "Dennison's chili with beans (1 can)",
-          "shared": "1 can split",
-          "nutritionKey": "Dennison's chunky chili"
-        },
-        {
-          "item": "Pinto beans, drained",
-          "shared": "1 can split",
-          "nutritionKey": "Pinto beans"
-        },
-        {
-          "item": "Dry green lentils (add to chili)",
-          "jake": {
-            "imperial": "1/3 cup dry",
-            "metric": "60g dry"
-          },
-          "laine": {
-            "imperial": "1/4 cup dry",
-            "metric": "45g dry"
-          },
-          "nutritionKey": "Dry green lentils"
-        },
-        {
-          "item": "Shredded cheese",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        },
-        {
-          "item": "Daisy sour cream",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Daisy sour cream"
-        },
-        {
-          "item": "Cumin, chili powder, garlic powder",
-          "shared": "to taste",
-          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
-        }
-      ],
-      "steps": [
-        "Simmer lentils in salted water 20 min. Drain.",
-        "Combine Dennison's chili + pinto beans + cooked lentils in a pot. Heat over medium 10 min.",
-        "Season with cumin, chili powder, garlic if needed.",
-        "Ladle: Jake gets the bigger bowl. Top both with cheese + sour cream."
-      ]
-    },
-    {
-      "day": "Saturday (May 30)",
-      "name": "Sliced Pork Tenderloin + Three Cheese Tomato Bisque + Pasta",
-      "note": "Use remaining tenderloin. Bettergoods Three Cheese Tomato Bisque works beautifully as a sauce over pasta. Elegant low-effort Saturday. Jake more pasta + pork, Laine lighter.",
-      "jake": {
-        "cal": 700,
-        "protein": 62,
-        "carbs": 46,
-        "fat": 22,
-        "fiber": 6
-      },
-      "laine": {
-        "cal": 450,
-        "protein": 38,
-        "carbs": 50,
-        "fat": 10,
-        "fiber": 6
-      },
-      "ingredients": [
-        {
-          "item": "Pork tenderloin (remaining from Wed purchase)",
-          "jake": {
-            "imperial": "7 oz cooked",
-            "metric": "200g cooked"
-          },
-          "laine": {
-            "imperial": "5 oz cooked",
-            "metric": "140g cooked"
-          },
-          "nutritionKey": "Pork tenderloin"
-        },
-        {
-          "item": "Bettergoods Three Cheese Tomato Bisque",
-          "shared": "1 jar split (24oz)",
-          "nutritionKey": "Diced tomatoes"
-        },
-        {
-          "item": "Garofalo spaghetti",
-          "jake": {
-            "imperial": "2.5 oz dry",
-            "metric": "70g dry"
-          },
-          "laine": {
-            "imperial": "2 oz dry",
-            "metric": "57g dry"
-          },
-          "nutritionKey": "Garofalo organic pasta"
-        },
-        {
-          "item": "Baby spinach, stirred in",
-          "shared": "2 handfuls",
-          "nutritionKey": "Baby spinach"
-        },
-        {
-          "item": "Shredded cheese",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        },
-        {
-          "item": "Progresso garlic herb bread crumbs",
-          "shared": "1 tbsp each",
-          "nutritionKey": "Progresso garlic herb bread crumbs"
-        }
-      ],
-      "steps": [
-        "Cook spaghetti in salted water per package. Drain, reserve 1/4 cup pasta water.",
-        "Warm tenderloin slices in a pan over medium \u2014 just 2-3 min, it's already cooked.",
-        "Heat bisque in a pot. Toss cooked pasta in bisque, use pasta water to loosen if needed.",
-        "Stir spinach into the pasta off heat until wilted.",
-        "Plate: pasta + bisque base, pork slices on top. Jake bigger portion. Bread crumbs + cheese to finish."
-      ]
-    },
-    {
-      "day": "Sunday (May 31)",
-      "name": "Birch Benders Pancake Night + Egg White Scramble",
-      "note": "Fun Sunday breakfast-for-dinner. Pancakes from the bag (just add water), egg white scramble on the side. Jake doubles the egg whites. Frozen fruit as topping.",
-      "jake": {
-        "cal": 680,
-        "protein": 56,
-        "carbs": 54,
-        "fat": 18,
-        "fiber": 6
-      },
-      "laine": {
-        "cal": 430,
-        "protein": 34,
-        "carbs": 50,
-        "fat": 10,
-        "fiber": 4
-      },
-      "ingredients": [
-        {
-          "item": "Birch Benders pancake mix",
-          "jake": {
-            "imperial": "3/4 cup dry",
-            "metric": "120g dry"
-          },
-          "laine": {
-            "imperial": "1/2 cup dry",
-            "metric": "80g dry"
-          },
-          "nutritionKey": "Birch Benders pancake mix"
-        },
-        {
-          "item": "Liquid egg whites (mixed into batter + scramble)",
-          "jake": {
-            "imperial": "1 cup total",
-            "metric": "240ml"
-          },
-          "laine": {
-            "imperial": "1/2 cup total",
-            "metric": "120ml"
-          },
-          "nutritionKey": "Liquid egg whites"
-        },
-        {
-          "item": "Frozen fruit (thawed, topping)",
-          "shared": "1 cup",
-          "nutritionKey": "Frozen fruit (mixed)"
-        },
-        {
-          "item": "Ground flaxseed",
-          "shared": "1 tbsp each",
-          "nutritionKey": "Ground flaxseed"
-        },
-        {
-          "item": "Shredded cheese (in scramble)",
-          "jake": "2 tbsp",
-          "laine": "1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        }
-      ],
-      "steps": [
-        "Mix pancake mix + half the egg whites + water per package directions. Add flaxseed to batter.",
-        "Cook pancakes on non-stick over medium, 2 min per side.",
-        "Scramble remaining egg whites in a separate pan with salt and shredded cheese.",
-        "Serve: pancakes topped with thawed frozen fruit. Scramble on the side.",
-        "Jake gets more pancakes + more egg white scramble."
-      ]
-    }
-  ],
-  "jakeLunch": {
-    "name": "Ground Turkey + Quinoa Bowl with Tomato Sauce",
-    "note": "Low-carb batch. Quinoa kept small \u2014 it's there for texture and some carbs but turkey is the base. Pasta sauce (four cheese or garlic basil) as the sauce. Shredded cheese on top. Make 5 containers Sunday.",
-    "macros": {
-      "cal": 665,
-      "protein": 61,
-      "carbs": 40,
-      "fat": 30,
-      "fiber": 5
-    },
-    "ingredients": [
-      {
-        "item": "Ground turkey 85/15 \u2014 full batch 2.5 lbs raw",
-        "nutritionKey": "Ground turkey 85/15"
-      },
-      {
-        "item": "Quinoa (dry) \u2014 150g dry total (30g per container)",
-        "nutritionKey": "Quinoa (dry)"
-      },
-      {
-        "item": "Signature Select pasta sauce (four cheese or garlic basil) \u2014 2.5 cups total",
-        "nutritionKey": "Signature Select pasta sauce"
-      },
-      {
-        "item": "Frozen veggies \u2014 5 cups total",
-        "nutritionKey": "Frozen veggies (mixed)"
-      },
-      {
-        "item": "Shredded cheese \u2014 2 tbsp per container",
-        "nutritionKey": "Shredded cheese (4-blend)"
-      },
-      {
-        "item": "Garlic powder, cumin, salt, pepper",
-        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
-      }
-    ],
-    "steps": [
-      "Cook ALL quinoa: rinse 150g dry quinoa, simmer in 300ml salted water 15 min. Fluff and cool.",
-      "Brown ALL turkey (2.5 lbs) in a large pan over medium-high, breaking up. Season well with garlic powder, cumin, salt, pepper.",
-      "Steam or microwave all frozen veggies. Set aside.",
-      "Divide into 5 containers: quinoa base (30g worth cooked), then turkey (170g cooked), then 1 cup veggies, then 1/2 cup pasta sauce poured over.",
-      "Top each with 2 tbsp shredded cheese. Seal and refrigerate. Reheat 2 min \u2014 add a tiny splash of water before microwaving."
-    ]
+  "Ground turkey 85/15": {
+    "serving": "per 100g cooked",
+    "cal": 218,
+    "protein": 28,
+    "carbs": 0,
+    "fat": 12
   },
-  "laineLunch": {
-    "name": "Chicken & Tuna Pasta Salad \u2014 Mason Jar Style",
-    "note": "2 chicken breasts + 1 can tuna per jar. Fresh cherry tomatoes, cucumber, spinach. 5 mason jars, dressing separate, 2 sittings per jar. No beans.",
-    "macros": {
-      "cal": 565,
-      "protein": 72,
-      "carbs": 42,
-      "fat": 10,
-      "fiber": 4
-    },
-    "dressingNote": "Light Italian or light Caesar \u2014 2 tbsp per jar, kept in a tiny separate lidded container alongside each jar.",
-    "ingredients": [
-      {
-        "item": "Chicken breast \u2014 2 breasts (~800g raw total)",
-        "nutritionKey": "Chicken breast"
-      },
-      {
-        "item": "Canned tuna in water \u2014 1 can per jar (5 cans total)",
-        "nutritionKey": "Canned tuna (in water)"
-      },
-      {
-        "item": "Garofalo pasta (rotini or penne) \u2014 250g dry total (50g per jar)",
-        "nutritionKey": "Garofalo organic pasta"
-      },
-      {
-        "item": "Cherry tomatoes \u2014 1 pint (halved, ~20 per jar)",
-        "nutritionKey": "Diced tomatoes"
-      },
-      {
-        "item": "English cucumber \u2014 1 large (sliced or diced, ~1/3 per jar)",
-        "nutritionKey": "Baby spinach"
-      },
-      {
-        "item": "Fresh baby spinach \u2014 big handful per jar",
-        "nutritionKey": "Baby spinach"
-      },
-      {
-        "item": "Light Italian or Caesar dressing \u2014 2 tbsp per jar (kept separate)",
-        "nutritionKey": "Italian dressing (light)"
-      },
-      {
-        "item": "Lemon juice, salt, garlic powder (for chicken seasoning)",
-        "nutritionKey": "Lemon juice"
-      }
-    ],
-    "steps": [
-      "Season both chicken breasts with garlic powder, salt, pepper. Bake at 400\u00b0F for 24 min. Cool completely, then dice small.",
-      "Cook all pasta in salted water per package. Drain, rinse cold. Toss with a tiny bit of olive oil to prevent sticking.",
-      "Halve cherry tomatoes. Dice or slice cucumber. Rinse fresh spinach.",
-      "Drain tuna cans well \u2014 press with fork to squeeze out water.",
-      "Layer each mason jar: pasta \u2192 tuna \u2192 cucumber \u2192 cherry tomatoes \u2192 chicken \u2192 spinach on top.",
-      "Put 2 tbsp dressing in a tiny separate container per jar. Refrigerate.",
-      "When eating: pour dressing in, shake, eat half \u2014 reseal for the second sitting."
-    ]
+  "Frozen shrimp": {
+    "serving": "per 100g cooked",
+    "cal": 99,
+    "protein": 24,
+    "carbs": 0,
+    "fat": 1
   },
-  "laineBreakfasts": [
-    {
-      "day": "Mon / Wed / Fri",
-      "name": "Greek Yogurt Parfait",
-      "macros": {
-        "cal": 310,
-        "protein": 24,
-        "carbs": 32,
-        "fat": 6,
-        "fiber": 4
-      },
-      "ingredients": [
-        {
-          "item": "Oikos Triple Zero yogurt (1 container)",
-          "nutritionKey": "Oikos Triple Zero yogurt"
-        },
-        {
-          "item": "Frozen fruit (thawed) - 1/2 cup",
-          "nutritionKey": "Frozen fruit (mixed)"
-        },
-        {
-          "item": "Ground flaxseed - 1 tbsp",
-          "nutritionKey": "Ground flaxseed"
-        }
-      ],
-      "note": "Only 2 Oikos left \u2014 use Mon + Wed. Thu/Fri rotate to egg whites.",
-      "steps": [
-        "Spoon yogurt into a bowl or jar.",
-        "Top with thawed frozen fruit and flaxseed.",
-        "Prep the night before if mornings are rushed."
-      ]
-    },
-    {
-      "day": "Tue / Thu / Sat",
-      "name": "Egg White Scramble",
-      "macros": {
-        "cal": 220,
-        "protein": 26,
-        "carbs": 6,
-        "fat": 4,
-        "fiber": 2
-      },
-      "ingredients": [
-        {
-          "item": "Liquid egg whites - 3/4 cup",
-          "nutritionKey": "Liquid egg whites"
-        },
-        {
-          "item": "Frozen veggies - 1/2 cup",
-          "nutritionKey": "Frozen veggies (mixed)"
-        },
-        {
-          "item": "Shredded cheese - 1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
-        }
-      ],
-      "steps": [
-        "Scramble egg whites over medium-low with frozen veggies until just set.",
-        "Top with shredded cheese."
-      ]
-    },
-    {
-      "day": "Mon (May 25) / Sun (May 31)",
-      "name": "Birch Benders Pancakes + Fruit",
-      "macros": {
-        "cal": 360,
-        "protein": 18,
-        "carbs": 50,
-        "fat": 8,
-        "fiber": 4
-      },
-      "ingredients": [
-        {
-          "item": "Birch Benders pancake mix - 1/2 cup dry",
-          "nutritionKey": "Birch Benders pancake mix"
-        },
-        {
-          "item": "Liquid egg whites - 1/4 cup",
-          "nutritionKey": "Liquid egg whites"
-        },
-        {
-          "item": "Frozen fruit (thawed)",
-          "nutritionKey": "Frozen fruit (mixed)"
-        },
-        {
-          "item": "Ground flaxseed - 1 tbsp",
-          "nutritionKey": "Ground flaxseed"
-        }
-      ],
-      "steps": [
-        "Mix pancake mix + egg whites + water per package.",
-        "Cook small pancakes 2 min per side on non-stick.",
-        "Top with thawed fruit + flaxseed."
-      ]
-    }
-  ],
-  "jakeSnacks": [
-    {
-      "name": "Oikos Triple Zero + Flaxseed",
-      "macros": {
-        "cal": 175,
-        "protein": 17,
-        "carbs": 17,
-        "fat": 4,
-        "fiber": 2
-      },
-      "desc": "1 Oikos container + 1 tbsp ground flaxseed. Only 2 left \u2014 save these for Jake Mon + Tue."
-    },
-    {
-      "name": "Egg White Mug + Shredded Cheese",
-      "macros": {
-        "cal": 130,
-        "protein": 22,
-        "carbs": 1,
-        "fat": 5,
-        "fiber": 0
-      },
-      "desc": "1/2 cup liquid egg whites microwaved in a mug 90 sec. Top with 1 tbsp shredded cheese. Fast, high protein, basically zero carb."
-    },
-    {
-      "name": "Tuna Straight from Can",
-      "macros": {
-        "cal": 150,
-        "protein": 33,
-        "carbs": 0,
-        "fat": 1,
-        "fiber": 0
-      },
-      "desc": "Drain and eat with a fork. Add hot sauce or lemon. Zero effort, massive protein."
-    },
-    {
-      "name": "Frozen Fruit + Flaxseed",
-      "macros": {
-        "cal": 93,
-        "protein": 2,
-        "carbs": 23,
-        "fat": 4,
-        "fiber": 4
-      },
-      "desc": "1 cup thawed frozen fruit + 1 tbsp flaxseed. Light, good on higher carb days."
-    }
-  ],
-  "shopping": {
-    "Proteins (Buy)": [
-      "Pork tenderloin \u2014 1.5 lbs (Wed + Sat dinners)",
-      "Canned tuna in water \u2014 5 cans (Laine's jars)",
-      "Corn tortillas, small \u2014 1 pack (taco night)",
-      "Light Italian or Caesar dressing \u2014 1 bottle (Laine's jars)"
-    ],
-    "Produce (Buy)": [
-      "Cherry tomatoes \u2014 1 pint (Laine's pasta salad)",
-      "English cucumber \u2014 1 large (Laine's pasta salad)",
-      "Fresh baby spinach \u2014 1 bag/container (Laine's pasta salad + dinners)"
-    ],
-    "Already Have \u2014 Proteins": [
-      "Shrimp (freezer)",
-      "16oz steak (for tacos)",
-      "Ground turkey 85/15 (freezer \u2014 Jake's lunch batch + 2 dinners)",
-      "Chicken breast x2 (Laine's pasta salad)",
-      "Canned tuna x3+ (Friday bisque dinner + snacks)",
-      "Liquid egg whites x2 cartons",
-      "Oikos Triple Zero x2"
-    ],
-    "Already Have \u2014 Pantry": [
-      "Garofalo spaghetti",
-      "Garofalo pasta (rotini/penne for Laine's jars)",
-      "White rice",
-      "Quinoa (Jake's lunch)",
-      "Dry green lentils",
-      "Birch Benders pancake mix",
-      "Progresso garlic herb bread crumbs",
-      "Ground flaxseed"
-    ],
-    "Already Have \u2014 Canned & Jarred": [
-      "Dennison's chili with beans x1 can",
-      "Signature Select pasta sauce \u2014 garlic basil (Wednesday dinner)",
-      "Signature Select pasta sauce \u2014 four cheese (Jake's lunch)",
-      "Bettergoods Creamy Hatch Chile & Corn Chowder (Wednesday dinner)",
-      "Bettergoods Three Cheese Tomato Bisque (Saturday dinner)",
-      "Black beans x1 can (Tuesday dinner)",
-      "Pinto beans x1 can (Thursday dinner)",
-      "Garbanzo beans x1 can (Wednesday dinner \u2014 Jake's pasta)"
-    ],
-    "Already Have \u2014 Produce & Refrigerated": [
-      "Baby spinach (existing \u2014 supplement with fresh bag)",
-      "Sour cream (need ~6 tbsp \u2014 check supply)",
-      "Shredded cheese (big bag)",
-      "Daisy sour cream",
-      "Lemons / lemon juice"
-    ],
-    "Already Have \u2014 Frozen": [
-      "Frozen shrimp",
-      "Frozen veggies assortment",
-      "Frozen fruit"
-    ]
+  "Frozen cod": {
+    "serving": "per 100g cooked",
+    "cal": 105,
+    "protein": 23,
+    "carbs": 0,
+    "fat": 1
   },
-  "targets": {
-    "jake": {
-      "rows": [
-        [
-          "Lunch Bowl",
-          665,
-          61,
-          40,
-          30,
-          5
-        ],
-        [
-          "Dinner (avg)",
-          693,
-          65,
-          44,
-          22,
-          9
-        ],
-        [
-          "1-2 Snacks",
-          430,
-          48,
-          18,
-          28,
-          3
-        ],
-        [
-          "Coffee",
-          20,
-          1,
-          2,
-          1,
-          0
-        ]
-      ],
-      "total": [
-        1808,
-        175,
-        104,
-        81,
-        17
-      ],
-      "goal": [
-        2030,
-        203,
-        102,
-        90,
-        35
-      ]
-    },
-    "laine": {
-      "rows": [
-        [
-          "Breakfast (avg)",
-          297,
-          23,
-          29,
-          6,
-          3
-        ],
-        [
-          "Lunch Jar",
-          555,
-          50,
-          65,
-          10,
-          6
-        ],
-        [
-          "Dinner (avg)",
-          496,
-          41,
-          47,
-          10,
-          9
-        ],
-        [
-          "Coffee",
-          20,
-          1,
-          2,
-          1,
-          0
-        ]
-      ],
-      "total": [
-        1368,
-        115,
-        143,
-        27,
-        18
-      ],
-      "goal": [
-        1363,
-        103,
-        152,
-        37,
-        30
-      ]
-    }
+  "TJ's Mandarin Orange Chicken": {
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9
+  },
+  "Sweet potato": {
+    "serving": "per 1 medium (~130g)",
+    "cal": 112,
+    "protein": 2,
+    "carbs": 26,
+    "fat": 0
+  },
+  "Broccoli florets": {
+    "serving": "per 100g",
+    "cal": 34,
+    "protein": 3,
+    "carbs": 7,
+    "fat": 0
+  },
+  "Baby spinach": {
+    "serving": "per 100g",
+    "cal": 23,
+    "protein": 3,
+    "carbs": 4,
+    "fat": 0
+  },
+  "Dry green lentils": {
+    "serving": "per 100g dry",
+    "cal": 353,
+    "protein": 25,
+    "carbs": 60,
+    "fat": 1
+  },
+  "Garofalo organic pasta": {
+    "serving": "per 100g dry",
+    "cal": 350,
+    "protein": 13,
+    "carbs": 70,
+    "fat": 1
+  },
+  "Garbanzo beans": {
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 697,
+    "protein": 38,
+    "carbs": 115,
+    "fat": 11
+  },
+  "Black beans": {
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 553,
+    "protein": 38,
+    "carbs": 98,
+    "fat": 2
+  },
+  "Cannellini beans": {
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 410,
+    "protein": 28,
+    "carbs": 74,
+    "fat": 1
+  },
+  "Pinto beans": {
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 490,
+    "protein": 30,
+    "carbs": 88,
+    "fat": 2
+  },
+  "Diced tomatoes": {
+    "serving": "per 1 cup (240g)",
+    "cal": 41,
+    "protein": 2,
+    "carbs": 9,
+    "fat": 0
+  },
+  "Dennison's chunky chili": {
+    "serving": "per 1 can (15oz)",
+    "cal": 480,
+    "protein": 24,
+    "carbs": 60,
+    "fat": 14
+  },
+  "Olive oil": {
+    "serving": "per 1 tbsp (14g)",
+    "cal": 119,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 14
+  },
+  "Daisy sour cream": {
+    "serving": "per 2 tbsp (30g)",
+    "cal": 60,
+    "protein": 1,
+    "carbs": 2,
+    "fat": 5
+  },
+  "Signature Select pasta sauce": {
+    "serving": "per 1/2 cup (125g)",
+    "cal": 70,
+    "protein": 2,
+    "carbs": 11,
+    "fat": 2
+  },
+  "Prego creamy parmesan pesto": {
+    "serving": "per 1 tbsp (15g)",
+    "cal": 45,
+    "protein": 1,
+    "carbs": 1,
+    "fat": 4
+  },
+  "Progresso garlic herb bread crumbs": {
+    "serving": "per 1 tbsp (7g)",
+    "cal": 27,
+    "protein": 1,
+    "carbs": 5,
+    "fat": 0
+  },
+  "Hatch diced green chiles": {
+    "serving": "per 1 can (4oz / 113g)",
+    "cal": 15,
+    "protein": 1,
+    "carbs": 3,
+    "fat": 0
+  },
+  "Frozen veggies (mixed)": {
+    "serving": "per 1 cup (140g)",
+    "cal": 60,
+    "protein": 4,
+    "carbs": 10,
+    "fat": 1
+  },
+  "Frozen edamame": {
+    "serving": "per 1 cup shelled (155g)",
+    "cal": 188,
+    "protein": 18,
+    "carbs": 14,
+    "fat": 8
+  },
+  "Oikos Triple Zero yogurt": {
+    "serving": "per 1 container (150g)",
+    "cal": 120,
+    "protein": 15,
+    "carbs": 14,
+    "fat": 0
+  },
+  "Open Nature protein granola": {
+    "serving": "per 1/3 cup (35g)",
+    "cal": 140,
+    "protein": 8,
+    "carbs": 17,
+    "fat": 5
+  },
+  "Birch Benders pancake mix": {
+    "serving": "per 1/3 cup dry (40g)",
+    "cal": 150,
+    "protein": 5,
+    "carbs": 30,
+    "fat": 1
+  },
+  "Liquid egg whites": {
+    "serving": "per 1/4 cup (61g)",
+    "cal": 26,
+    "protein": 5,
+    "carbs": 0,
+    "fat": 0
+  },
+  "Cottage cheese 1%": {
+    "serving": "per 1/2 cup (113g)",
+    "cal": 90,
+    "protein": 14,
+    "carbs": 5,
+    "fat": 1
+  },
+  "Ground flaxseed": {
+    "serving": "per 1 tbsp (10g)",
+    "cal": 55,
+    "protein": 2,
+    "carbs": 3,
+    "fat": 4
+  },
+  "Frozen fruit (mixed)": {
+    "serving": "per 1/2 cup (75g)",
+    "cal": 38,
+    "protein": 0,
+    "carbs": 10,
+    "fat": 0
+  },
+  "Lemon juice": {
+    "serving": "per 1 tbsp (15g)",
+    "cal": 4,
+    "protein": 0,
+    "carbs": 1,
+    "fat": 0
+  },
+  "Garlic": {
+    "serving": "per clove (3g)",
+    "cal": 4,
+    "protein": 0,
+    "carbs": 1,
+    "fat": 0
+  },
+  "Spices (cumin/paprika/garlic powder/salt)": {
+    "serving": "per 1 tsp mixed (~3g)",
+    "cal": 8,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 0
+  },
+  "Quinoa (dry)": {
+    "serving": "per 100g dry",
+    "cal": 368,
+    "protein": 14,
+    "carbs": 64,
+    "fat": 6
+  },
+  "Shredded cheese (4-blend)": {
+    "serving": "per 2 tbsp (14g)",
+    "cal": 55,
+    "protein": 4,
+    "carbs": 1,
+    "fat": 5
+  },
+  "Canned tuna (in water)": {
+    "serving": "per 1 can (142g drained)",
+    "cal": 150,
+    "protein": 33,
+    "carbs": 0,
+    "fat": 1
+  },
+  "Flank/sirloin steak": {
+    "serving": "per 100g cooked",
+    "cal": 250,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 16
+  },
+  "Italian dressing (light)": {
+    "serving": "per 2 tbsp (30ml)",
+    "cal": 30,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 2
+  },
+  "Corn tortilla (small)": {
+    "serving": "per 1 tortilla (28g)",
+    "cal": 62,
+    "protein": 2,
+    "carbs": 13,
+    "fat": 1
+  },
+  "Signature Select Alfredo sauce": {
+    "serving": "per 1/4 cup (60g)",
+    "cal": 80,
+    "protein": 2,
+    "carbs": 3,
+    "fat": 7
+  },
+  "Pork tenderloin": {
+    "serving": "per 100g cooked",
+    "cal": 143,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 3
   }
 }
