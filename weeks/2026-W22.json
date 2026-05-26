@@ -19,41 +19,41 @@
       "name": "Shrimp & Steak Tacos",
       "note": "Use the 16oz steak + frozen shrimp. Jake more steak, Laine more shrimp. Sour cream + cheese on top.",
       "jake": {
-        "cal": 748,
-        "protein": 69,
-        "carbs": 29,
-        "fat": 42,
+        "cal": 693,
+        "protein": 71,
+        "carbs": 33,
+        "fat": 34,
         "fiber": 2
       },
       "laine": {
-        "cal": 508,
-        "protein": 48,
-        "carbs": 27,
-        "fat": 25,
+        "cal": 475,
+        "protein": 50,
+        "carbs": 29,
+        "fat": 20,
         "fiber": 2
       },
       "ingredients": [
         {
           "item": "Flank/sirloin steak (16oz split)",
           "jake": {
-            "qty": 140,
-            "unit": "g_cooked"
+            "qty": 179,
+            "unit": "g_raw"
           },
           "laine": {
-            "qty": 85,
-            "unit": "g_cooked"
+            "qty": 109,
+            "unit": "g_raw"
           },
           "nutritionKey": "Flank/sirloin steak"
         },
         {
           "item": "Frozen shrimp",
           "jake": {
-            "qty": 100,
-            "unit": "g_cooked"
+            "qty": 122,
+            "unit": "g_raw"
           },
           "laine": {
-            "qty": 85,
-            "unit": "g_cooked"
+            "qty": 104,
+            "unit": "g_raw"
           },
           "nutritionKey": "Frozen shrimp"
         },
@@ -123,34 +123,34 @@
       "name": "Ground Turkey + Black Bean Skillet over Rice",
       "note": "Uses pasta sauce as the skillet sauce. Jake more turkey less rice, Laine less turkey more rice.",
       "jake": {
-        "cal": 962,
-        "protein": 72,
-        "carbs": 112,
-        "fat": 27,
+        "cal": 1010,
+        "protein": 65,
+        "carbs": 116,
+        "fat": 34,
         "fiber": 12
       },
       "laine": {
-        "cal": 844,
-        "protein": 57,
-        "carbs": 115,
-        "fat": 18,
+        "cal": 872,
+        "protein": 52,
+        "carbs": 117,
+        "fat": 23,
         "fiber": 12
       },
       "ingredients": [
         {
           "item": "Ground turkey 85/15",
           "jake": {
-            "qty": 140,
-            "unit": "g_cooked"
+            "qty": 187,
+            "unit": "g_raw"
           },
           "laine": {
-            "qty": 90,
-            "unit": "g_cooked"
+            "qty": 120,
+            "unit": "g_raw"
           },
           "nutritionKey": "Ground turkey 85/15"
         },
         {
-          "item": "White rice (dry)",
+          "item": "White rice (dry) \u2014 Jake 45g dry, Laine 50g dry",
           "jake": {
             "qty": 45,
             "unit": "g_dry"
@@ -159,8 +159,7 @@
             "qty": 50,
             "unit": "g_dry"
           },
-          "nutritionKey": "Sweet potato",
-          "note": "White rice: per 100g dry ~358 cal, 7P, 79C, 1F"
+          "nutritionKey": "White rice (dry)"
         },
         {
           "item": "Black beans (1 can, split equally)",
@@ -223,29 +222,29 @@
       "name": "Garlic Herb Pork Tenderloin + Hatch Chile Chowder",
       "note": "Bettergoods Hatch Chile & Corn Chowder as a warm side. Tenderloin is easy \u2014 sear, oven-finish.",
       "jake": {
-        "cal": 661,
-        "protein": 66,
+        "cal": 654,
+        "protein": 68,
         "carbs": 33,
-        "fat": 26,
+        "fat": 25,
         "fiber": 4
       },
       "laine": {
-        "cal": 504,
-        "protein": 46,
+        "cal": 500,
+        "protein": 47,
         "carbs": 32,
-        "fat": 18,
+        "fat": 17,
         "fiber": 4
       },
       "ingredients": [
         {
           "item": "Pork tenderloin",
           "jake": {
-            "qty": 200,
-            "unit": "g_cooked"
+            "qty": 256,
+            "unit": "g_raw"
           },
           "laine": {
-            "qty": 130,
-            "unit": "g_cooked"
+            "qty": 167,
+            "unit": "g_raw"
           },
           "nutritionKey": "Pork tenderloin"
         },
@@ -307,29 +306,29 @@
       "name": "Garlic Basil Pasta + Ground Turkey + Garbanzo Beans",
       "note": "Signature Select garlic basil sauce. Bread crumbs on top. Jake more turkey, Laine more beans.",
       "jake": {
-        "cal": 927,
-        "protein": 63,
-        "carbs": 118,
-        "fat": 22,
+        "cal": 968,
+        "protein": 56,
+        "carbs": 121,
+        "fat": 29,
         "fiber": 10
       },
       "laine": {
-        "cal": 769,
-        "protein": 48,
-        "carbs": 104,
-        "fat": 17,
+        "cal": 799,
+        "protein": 44,
+        "carbs": 106,
+        "fat": 22,
         "fiber": 10
       },
       "ingredients": [
         {
           "item": "Ground turkey 85/15",
           "jake": {
-            "qty": 120,
-            "unit": "g_cooked"
+            "qty": 160,
+            "unit": "g_raw"
           },
           "laine": {
-            "qty": 80,
-            "unit": "g_cooked"
+            "qty": 107,
+            "unit": "g_raw"
           },
           "nutritionKey": "Ground turkey 85/15"
         },
@@ -397,14 +396,14 @@
       "jake": {
         "cal": 727,
         "protein": 41,
-        "carbs": 98,
+        "carbs": 97,
         "fat": 18,
         "fiber": 18
       },
       "laine": {
         "cal": 618,
         "protein": 35,
-        "carbs": 87,
+        "carbs": 86,
         "fat": 12,
         "fiber": 16
       },
@@ -482,16 +481,16 @@
       "name": "Sliced Pork Tenderloin + Three Cheese Tomato Bisque + Pasta",
       "note": "Remaining tenderloin. Bettergoods Three Cheese Tomato Bisque as pasta sauce. Easy Saturday.",
       "jake": {
-        "cal": 746,
-        "protein": 68,
-        "carbs": 67,
+        "cal": 754,
+        "protein": 70,
+        "carbs": 69,
         "fat": 21,
         "fiber": 5
       },
       "laine": {
-        "cal": 582,
-        "protein": 48,
-        "carbs": 56,
+        "cal": 587,
+        "protein": 49,
+        "carbs": 57,
         "fat": 16,
         "fiber": 5
       },
@@ -499,12 +498,12 @@
         {
           "item": "Pork tenderloin (remaining)",
           "jake": {
-            "qty": 180,
-            "unit": "g_cooked"
+            "qty": 231,
+            "unit": "g_raw"
           },
           "laine": {
-            "qty": 120,
-            "unit": "g_cooked"
+            "qty": 154,
+            "unit": "g_raw"
           },
           "nutritionKey": "Pork tenderloin"
         },
@@ -654,17 +653,17 @@
     "name": "Ground Turkey + Quinoa Bowl with Tomato Sauce",
     "note": "Low-carb batch. Quinoa kept small \u2014 it's there for texture and some carbs but turkey is the base. Pasta sauce (four cheese or garlic basil) as the sauce. Shredded cheese on top. Make 5 containers Sunday.",
     "macros": {
-      "cal": 674,
-      "protein": 62,
+      "cal": 712,
+      "protein": 53,
       "carbs": 43,
-      "fat": 30,
+      "fat": 40,
       "fiber": 4
     },
     "ingredients": [
       {
-        "item": "Ground turkey 85/15 \u2014 2.5 lbs raw total, 170g cooked per container",
-        "qty": 170,
-        "unit": "g_cooked",
+        "item": "Ground turkey 85/15 \u2014 2.5 lbs raw total, 0.5 lb (227g) raw per container",
+        "qty": 227,
+        "unit": "g_raw",
         "nutritionKey": "Ground turkey 85/15"
       },
       {
@@ -710,18 +709,18 @@
     "name": "Chicken & Tuna Pasta Salad \u2014 Mason Jar Style",
     "note": "2 chicken breasts + 1 can tuna per jar. Fresh cherry tomatoes, cucumber, spinach. 5 mason jars, dressing separate, 2 sittings per jar. No beans.",
     "macros": {
-      "cal": 579,
+      "cal": 580,
       "protein": 76,
-      "carbs": 46,
-      "fat": 7,
+      "carbs": 47,
+      "fat": 8,
       "fiber": 5
     },
     "dressingNote": "Light Italian or light Caesar \u2014 2 tbsp per jar, kept in a tiny separate lidded container alongside each jar.",
     "ingredients": [
       {
-        "item": "Chicken breast \u2014 2 breasts (~800g raw), 110g cooked per jar",
-        "qty": 110,
-        "unit": "g_cooked",
+        "item": "Chicken breast \u2014 2 breasts (~800g raw total), 147g raw per jar",
+        "qty": 147,
+        "unit": "g_raw",
         "nutritionKey": "Chicken breast"
       },
       {
