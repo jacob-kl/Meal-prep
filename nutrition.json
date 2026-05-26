@@ -11,37 +11,37 @@
   },
   "Chicken breast": {
     "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g cooked",
-    "cal": 165,
-    "protein": 31,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 171477)",
+    "cal": 120,
+    "protein": 23,
     "carbs": 0,
-    "fat": 4
+    "fat": 3
   },
   "Ground turkey 85/15": {
     "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g cooked",
-    "cal": 218,
-    "protein": 28,
+    "serving_unit": "g_raw",
+    "serving": "per 100g RAW (USDA FDC 174493)",
+    "cal": 180,
+    "protein": 17,
     "carbs": 0,
-    "fat": 12
+    "fat": 13
   },
   "Frozen shrimp": {
     "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g cooked",
-    "cal": 99,
-    "protein": 24,
-    "carbs": 0,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 175178)",
+    "cal": 85,
+    "protein": 20,
+    "carbs": 1,
     "fat": 1
   },
   "Frozen cod": {
     "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g cooked",
-    "cal": 105,
-    "protein": 23,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 171958)",
+    "cal": 82,
+    "protein": 18,
     "carbs": 0,
     "fat": 1
   },
@@ -94,10 +94,10 @@
     "serving_qty": 100,
     "serving_unit": "g",
     "serving": "per 100g dry",
-    "cal": 350,
+    "cal": 371,
     "protein": 13,
-    "carbs": 70,
-    "fat": 1
+    "carbs": 74,
+    "fat": 2
   },
   "Garbanzo beans": {
     "serving_qty": 1,
@@ -168,7 +168,7 @@
     "serving": "per 2 tbsp (30g)",
     "cal": 60,
     "protein": 1,
-    "carbs": 2,
+    "carbs": 1,
     "fat": 5
   },
   "Signature Select pasta sauce": {
@@ -344,12 +344,12 @@
   },
   "Flank/sirloin steak": {
     "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g cooked",
-    "cal": 250,
-    "protein": 26,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 174034)",
+    "cal": 153,
+    "protein": 21,
     "carbs": 0,
-    "fat": 16
+    "fat": 8
   },
   "Italian dressing (light)": {
     "serving_qty": 2,
@@ -380,12 +380,12 @@
   },
   "Pork tenderloin": {
     "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g cooked",
-    "cal": 143,
-    "protein": 26,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 167905)",
+    "cal": 109,
+    "protein": 21,
     "carbs": 0,
-    "fat": 3
+    "fat": 2
   },
   "English cucumber": {
     "serving_qty": 100,
@@ -422,5 +422,14 @@
     "protein": 7,
     "carbs": 18,
     "fat": 10
+  },
+  "White rice (dry)": {
+    "serving_qty": 100,
+    "serving_unit": "g_dry",
+    "serving": "per 100g dry (USDA FDC 169756)",
+    "cal": 358,
+    "protein": 7,
+    "carbs": 79,
+    "fat": 1
   }
 }
