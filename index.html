@@ -174,6 +174,20 @@ function IngNutrition({ n, color }) {
   );
 }
 
+// Compute macros for an ingredient given its qty and the DB entry.
+// DB entry has serving_qty + serving_unit + cal/protein/carbs/fat.
+// ing has qty + unit (or jake/laine sub-objects with qty+unit).
+function calcIngMacros(dbEntry, qty) {
+  if (!dbEntry || qty == null) return null;
+  const ratio = qty / dbEntry.serving_qty;
+  return {
+    cal:     Math.round(dbEntry.cal     * ratio),
+    protein: Math.round(dbEntry.protein * ratio),
+    carbs:   Math.round(dbEntry.carbs   * ratio),
+    fat:     Math.round(dbEntry.fat     * ratio),
+  };
+}
+
 function scaleNutrition(base, ratio) {
   if (!base) return null;
   return { cal: Math.round(base.cal * ratio), protein: Math.round(base.protein * ratio), carbs: Math.round(base.carbs * ratio), fat: Math.round(base.fat * ratio) };
@@ -287,12 +301,16 @@ function DinnerCard({ d, isOpen, onToggle }) {
             </div>
             {d.ingredients.map((rawIng, i) => {
               const ing = resolveIngredient(rawIng, subs, units);
-              const jakeVal = ing.jake ? resolveVal(ing.jake, units) : resolveVal(ing.shared, units);
-              const laineVal = ing.laine ? resolveVal(ing.laine, units) : resolveVal(ing.shared, units);
+              const jakeQtyObj  = ing.jake   ? ing.jake   : ing.shared;
+              const laineQtyObj = ing.laine  ? ing.laine  : ing.shared;
+              const jakeVal  = jakeQtyObj  ? resolveVal(jakeQtyObj,  units) || String(jakeQtyObj.qty  || "") : "";
+              const laineVal = laineQtyObj ? resolveVal(laineQtyObj, units) || String(laineQtyObj.qty || "") : "";
               const base = rawIng.nutritionKey ? nutritionDB[rawIng.nutritionKey] : null;
-              const jq = parseQty(jakeVal), lq = parseQty(laineVal), total = jq + lq || 2;
-              const jakeN = scaleNutrition(base, total > 0 ? jq / total : 0.5);
-              const laineN = scaleNutrition(base, total > 0 ? lq / total : 0.5);
+              // Use explicit qty if available, fall back to parseQty ratio
+              const jakeN  = (base && jakeQtyObj  && jakeQtyObj.qty  != null) ? calcIngMacros(base, jakeQtyObj.qty)
+                           : base ? scaleNutrition(base, 0.5) : null;
+              const laineN = (base && laineQtyObj && laineQtyObj.qty != null) ? calcIngMacros(base, laineQtyObj.qty)
+                           : base ? scaleNutrition(base, 0.5) : null;
               return (
                 <div key={i} style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: i < d.ingredients.length - 1 ? "1px solid #1a2f50" : "none", alignItems: "start" }}>
                   <div style={{ padding: "9px 12px", fontSize: 12, color: "#8aaed4", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
@@ -533,14 +551,20 @@ function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, 
             <div style={{ background: "#0c1524", border: "1px solid #1e3a5f", borderRadius: 13, padding: "16px 18px" }}>
               <div style={{ fontFamily: "monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a5878", marginBottom: 11 }}>Ingredients — {days} portion{days !== 1 ? "s" : ""}</div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                {scaledIngredients.map((ing, i) => {
+                {scaledIngredients.map((ing, rawIdx) => {
                   const displayText = typeof ing === "string" ? ing : ing.item;
-                  const base = (typeof ing !== "string" && ing.nutritionKey) ? db[ing.nutritionKey] : null;
+                  const rawIng = typeof ing === "string" ? null : ing;
+                  const base = rawIng && rawIng.nutritionKey ? db[rawIng.nutritionKey] : null;
+                  // Use the original (pre-scale) qty so macros reflect per-container/jar amount
+                  const origIng = typeof lunch.ingredients[rawIdx] === "object" ? lunch.ingredients[rawIdx] : null;
+                  const origQty = origIng ? origIng.qty : null;
+                  const scaledQty = origQty != null ? origQty * (days / 5) : null;
+                  const macros = base && scaledQty != null ? calcIngMacros(base, scaledQty) : null;
                   return (
-                    <li key={i} style={{ paddingLeft: 13, position: "relative" }}>
+                    <li key={rawIdx} style={{ paddingLeft: 13, position: "relative" }}>
                       <span style={{ position: "absolute", left: 0, top: 2, color: "#00d4aa" }}>-</span>
                       <span style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4" }}>{displayText}</span>
-                      {base && <IngNutrition n={base} color={personColor} />}
+                      {macros && <IngNutrition n={macros} color={personColor} />}
                     </li>
                   );
                 })}
