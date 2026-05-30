@@ -785,8 +785,8 @@ function WeekView({ week }) {
               </div>
             </div>
           ))}
+          <MicroTargets week={week} db={nutritionDB} />
         </div>
-        <MicroTargets week={week} db={nutritionDB} />
       )}
     </div>
   );
