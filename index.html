@@ -522,7 +522,171 @@ function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, 
   );
 }
 
+
+function MicroBar({ label, value, dri, unit, isUpper }) {
+  const pct = Math.min(Math.round((value / dri) * 100), 150);
+  const over = pct > 100;
+  const color = isUpper
+    ? (pct > 100 ? "#e05050" : pct > 80 ? "#f0a030" : "#7ec8a0")
+    : (pct >= 100 ? "#7ec8a0" : pct >= 60 ? "#00d4aa" : pct >= 30 ? "#f0a030" : "#e05050");
+  const barColor = isUpper
+    ? (pct > 100 ? "#e05050" : "#00d4aa")
+    : color;
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 3 }}>
+        <span style={{ fontSize: 11, color: "#8aaed4" }}>{label}</span>
+        <span style={{ fontSize: 10, fontFamily: "monospace", color }}>
+          {value % 1 === 0 ? value : value.toFixed(1)}{unit} / {dri}{unit}
+          {isUpper && over && <span style={{ color: "#e05050", marginLeft: 4 }}>↑</span>}
+        </span>
+      </div>
+      <div style={{ height: 5, background: "#0c1524", borderRadius: 3, overflow: "hidden" }}>
+        <div style={{ width: Math.min(pct, 100) + "%", height: "100%", background: barColor, borderRadius: 3, transition: "width 0.3s" }} />
+      </div>
+    </div>
+  );
+}
+
+function MicroTargets({ week, db }) {
+  const [person, setPerson] = React.useState("jake");
+  if (!db || !db._dri) return null;
+  const dri = db._dri[person];
+
+  // Compute estimated daily micros by summing all ingredients across:
+  // lunch (1 container), avg dinner (sum/7), laine breakfasts avg
+  // For each ingredient we need its qty and the db entry's micros
+
+  function getMicros(nutritionKey, qty) {
+    const entry = db[nutritionKey];
+    if (!entry || !entry.micros || !entry.serving_qty) return null;
+    const ratio = qty / entry.serving_qty;
+    const m = entry.micros;
+    const result = {};
+    Object.keys(m).forEach(k => { result[k] = Math.round(m[k] * ratio * 10) / 10; });
+    return result;
+  }
+
+  function addMicros(a, b) {
+    if (!b) return a;
+    const out = { ...a };
+    Object.keys(b).forEach(k => { out[k] = (out[k] || 0) + (b[k] || 0); });
+    return out;
+  }
+
+  function sumIngs(ingredients, personKey) {
+    let total = {};
+    for (const ing of ingredients) {
+      if (!ing.nutritionKey) continue;
+      let qty = null;
+      if (ing.qty != null) {
+        qty = ing.qty;
+      } else if (personKey && ing[personKey] && ing[personKey].qty != null) {
+        qty = ing[personKey].qty;
+      } else if (ing.shared && ing.shared.qty != null) {
+        qty = ing.shared.qty;
+      }
+      if (qty == null) continue;
+      const m = getMicros(ing.nutritionKey, qty);
+      total = addMicros(total, m);
+    }
+    return total;
+  }
+
+  // Lunch micros
+  const lunchIngs = person === "jake" ? week.jakeLunch.ingredients : week.laineLunch.ingredients;
+  let daily = sumIngs(lunchIngs, person);
+
+  // Avg dinner micros (sum all 7, divide by 7)
+  let dinnerTotal = {};
+  for (const dinner of week.dinners) {
+    const dm = sumIngs(dinner.ingredients, person);
+    dinnerTotal = addMicros(dinnerTotal, dm);
+  }
+  Object.keys(dinnerTotal).forEach(k => {
+    dinnerTotal[k] = Math.round((dinnerTotal[k] / 7) * 10) / 10;
+  });
+  daily = addMicros(daily, dinnerTotal);
+
+  // Laine breakfast avg (if laine)
+  if (person === "laine" && week.laineBreakfasts) {
+    let bfTotal = {};
+    for (const b of week.laineBreakfasts) {
+      if (!b.ingredients) continue;
+      const bm = sumIngs(b.ingredients, null);
+      bfTotal = addMicros(bfTotal, bm);
+    }
+    Object.keys(bfTotal).forEach(k => {
+      bfTotal[k] = Math.round((bfTotal[k] / week.laineBreakfasts.length) * 10) / 10;
+    });
+    daily = addMicros(daily, bfTotal);
+  }
+
+  const microLabels = {
+    sodium:      "Sodium",
+    potassium:   "Potassium",
+    calcium:     "Calcium",
+    vitamin_d:   "Vitamin D",
+    magnesium:   "Magnesium",
+    zinc:        "Zinc",
+    vitamin_c:   "Vitamin C",
+    vitamin_b12: "Vitamin B12",
+    iron:        "Iron",
+    vitamin_a:   "Vitamin A",
+    folate:      "Folate",
+    phosphorus:  "Phosphorus",
+    selenium:    "Selenium",
+    fiber:       "Fiber",
+  };
+
+  const color = person === "jake" ? "#38b6ff" : "#c878f8";
+
+  return (
+    <div style={{ marginTop: 36 }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+        <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#3a5878" }}>
+          Estimated Daily Micronutrients
+        </div>
+        <div style={{ display: "flex", gap: 2, background: "#0c1524", border: "1px solid #1a2f50", borderRadius: 8, padding: 3 }}>
+          {["jake", "laine"].map(p => (
+            <button key={p} onClick={() => setPerson(p)} style={{
+              padding: "5px 12px", background: person === p ? "#0f1a2e" : "none",
+              border: "1px solid " + (person === p ? "#1a2e50" : "transparent"),
+              borderRadius: 6, cursor: "pointer",
+              color: person === p ? (p === "jake" ? "#38b6ff" : "#c878f8") : "#3a5878",
+              fontSize: 10, letterSpacing: "0.06em", textTransform: "uppercase"
+            }}>{p}</button>
+          ))}
+        </div>
+      </div>
+      <div style={{ fontSize: 11, color: "#3a5878", marginBottom: 16, lineHeight: 1.6 }}>
+        Based on lunch + avg dinner{person === "laine" ? " + avg breakfast" : ""}. Sodium is an upper limit (lower = better). Estimates from DB values — actual amounts vary.
+      </div>
+      <div style={{ background: "#0f1a2e", border: "1px solid #1e3a5f", borderRadius: 13, padding: "20px 22px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px 32px" }}>
+          {Object.entries(microLabels).map(([key, label]) => {
+            const driEntry = dri[key];
+            if (!driEntry) return null;
+            const val = Math.round((daily[key] || 0) * 10) / 10;
+            return (
+              <MicroBar
+                key={key}
+                label={label}
+                value={val}
+                dri={driEntry.dri}
+                unit={driEntry.unit}
+                isUpper={!!driEntry.upper}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function WeekView({ week }) {
+  const nutritionDB = useNutritionDB();
   const [tab, setTab] = useState(0);
   const [openDinner, setOpenDinner] = useState(null);
   const [openLunch, setOpenLunch] = useState(null);
@@ -622,6 +786,7 @@ function WeekView({ week }) {
             </div>
           ))}
         </div>
+        <MicroTargets week={week} db={nutritionDB} />
       )}
     </div>
   );
