@@ -866,7 +866,26 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+class ErrorBoundary extends React.Component {
+  constructor(props) { super(props); this.state = { error: null }; }
+  static getDerivedStateFromError(e) { return { error: e }; }
+  render() {
+    if (this.state.error) {
+      return React.createElement('div', {
+        style: { color: 'red', padding: 20, fontFamily: 'monospace', fontSize: 12, whiteSpace: 'pre-wrap' }
+      }, 'RENDER ERROR:
+' + this.state.error.message + '
+' + (this.state.error.stack || ''));
+    }
+    return this.props.children;
+  }
+}
+window.onerror = function(msg, src, line, col, err) {
+  document.getElementById('root').innerHTML = '<pre style="color:red;padding:20px;font-size:12px">SCRIPT ERROR: ' + msg + '
+Line ' + line + '
+' + (err && err.stack || '') + '</pre>';
+};
+ReactDOM.render(React.createElement(ErrorBoundary, null, React.createElement(App)), document.getElementById('root'));
 </script>
 </body>
 </html>
