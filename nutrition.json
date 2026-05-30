@@ -431,5 +431,41 @@
     "protein": 7,
     "carbs": 79,
     "fat": 1
+  },
+  "Atlantic salmon (raw)": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 175167)",
+    "cal": 208,
+    "protein": 20,
+    "carbs": 0,
+    "fat": 13
+  },
+  "Frozen edamame (shelled)": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup shelled (155g) (USDA FDC 168411)",
+    "cal": 189,
+    "protein": 17,
+    "carbs": 14,
+    "fat": 8
+  },
+  "Bell pepper": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw",
+    "cal": 31,
+    "protein": 1,
+    "carbs": 7,
+    "fat": 0
+  },
+  "Roasted onion & garlic pasta sauce": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per 1/2 cup (125g) Signature Select",
+    "cal": 70,
+    "protein": 2,
+    "carbs": 11,
+    "fat": 2
   }
 }
