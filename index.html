@@ -559,12 +559,20 @@ function MicroTargets({ week, db }) {
 
   function getMicros(nutritionKey, qty) {
     const entry = db[nutritionKey];
-    if (!entry || !entry.micros || !entry.serving_qty) return null;
+    if (!entry || !entry.serving_qty) return null;
     const ratio = qty / entry.serving_qty;
-    const m = entry.micros;
     const result = {};
-    Object.keys(m).forEach(k => { result[k] = Math.round(m[k] * ratio * 10) / 10; });
-    return result;
+    // Pull micronutrients from micros object
+    if (entry.micros) {
+      Object.keys(entry.micros).forEach(k => {
+        result[k] = Math.round(entry.micros[k] * ratio * 10) / 10;
+      });
+    }
+    // Pull fiber from macro field (stored on the entry directly, not in micros)
+    if (entry.fiber != null) {
+      result.fiber = Math.round(entry.fiber * ratio * 10) / 10;
+    }
+    return Object.keys(result).length > 0 ? result : null;
   }
 
   function addMicros(a, b) {
