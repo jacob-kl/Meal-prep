@@ -1,0 +1,471 @@
+{
+  "_note": "All values are per the serving size listed. Edit here and values update across all weeks.",
+  "Pork shoulder (pulled)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g pulled",
+    "cal": 239,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 15
+  },
+  "Chicken breast": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 171477)",
+    "cal": 120,
+    "protein": 23,
+    "carbs": 0,
+    "fat": 3
+  },
+  "Ground turkey 85/15": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g RAW (USDA FDC 174493)",
+    "cal": 180,
+    "protein": 17,
+    "carbs": 0,
+    "fat": 13
+  },
+  "Frozen shrimp": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 175178)",
+    "cal": 85,
+    "protein": 20,
+    "carbs": 1,
+    "fat": 1
+  },
+  "Frozen cod": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 171958)",
+    "cal": 82,
+    "protein": 18,
+    "carbs": 0,
+    "fat": 1
+  },
+  "TJ's Mandarin Orange Chicken": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9
+  },
+  "Sweet potato": {
+    "serving_qty": 1,
+    "serving_unit": "medium",
+    "serving": "per 1 medium (~130g)",
+    "cal": 112,
+    "protein": 2,
+    "carbs": 26,
+    "fat": 0
+  },
+  "Broccoli florets": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 34,
+    "protein": 3,
+    "carbs": 7,
+    "fat": 0
+  },
+  "Baby spinach": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 23,
+    "protein": 3,
+    "carbs": 4,
+    "fat": 0
+  },
+  "Dry green lentils": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g dry",
+    "cal": 353,
+    "protein": 25,
+    "carbs": 60,
+    "fat": 1
+  },
+  "Garofalo organic pasta": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g dry",
+    "cal": 371,
+    "protein": 13,
+    "carbs": 74,
+    "fat": 2
+  },
+  "Garbanzo beans": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 697,
+    "protein": 38,
+    "carbs": 115,
+    "fat": 11
+  },
+  "Black beans": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 553,
+    "protein": 38,
+    "carbs": 98,
+    "fat": 2
+  },
+  "Cannellini beans": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 410,
+    "protein": 28,
+    "carbs": 74,
+    "fat": 1
+  },
+  "Pinto beans": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (15oz / 425g) drained",
+    "cal": 490,
+    "protein": 30,
+    "carbs": 88,
+    "fat": 2
+  },
+  "Diced tomatoes": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (240g)",
+    "cal": 41,
+    "protein": 2,
+    "carbs": 9,
+    "fat": 0
+  },
+  "Dennison's chunky chili": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (15oz)",
+    "cal": 480,
+    "protein": 24,
+    "carbs": 60,
+    "fat": 14
+  },
+  "Olive oil": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (14g)",
+    "cal": 119,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 14
+  },
+  "Daisy sour cream": {
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "serving": "per 2 tbsp (30g)",
+    "cal": 60,
+    "protein": 1,
+    "carbs": 1,
+    "fat": 5
+  },
+  "Signature Select pasta sauce": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per 1/2 cup (125g)",
+    "cal": 70,
+    "protein": 2,
+    "carbs": 11,
+    "fat": 2
+  },
+  "Prego creamy parmesan pesto": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (15g)",
+    "cal": 45,
+    "protein": 1,
+    "carbs": 1,
+    "fat": 4
+  },
+  "Progresso garlic herb bread crumbs": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (7g)",
+    "cal": 27,
+    "protein": 1,
+    "carbs": 5,
+    "fat": 0
+  },
+  "Hatch diced green chiles": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (4oz / 113g)",
+    "cal": 15,
+    "protein": 1,
+    "carbs": 3,
+    "fat": 0
+  },
+  "Frozen veggies (mixed)": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (140g)",
+    "cal": 60,
+    "protein": 4,
+    "carbs": 10,
+    "fat": 1
+  },
+  "Frozen edamame": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup shelled (155g)",
+    "cal": 188,
+    "protein": 18,
+    "carbs": 14,
+    "fat": 8
+  },
+  "Oikos Triple Zero yogurt": {
+    "serving_qty": 1,
+    "serving_unit": "container",
+    "serving": "per 1 container (150g)",
+    "cal": 120,
+    "protein": 15,
+    "carbs": 14,
+    "fat": 0
+  },
+  "Open Nature protein granola": {
+    "serving_qty": 0.3333333333333333,
+    "serving_unit": "cup",
+    "serving": "per 1/3 cup (35g)",
+    "cal": 140,
+    "protein": 8,
+    "carbs": 17,
+    "fat": 5
+  },
+  "Birch Benders pancake mix": {
+    "serving_qty": 0.3333333333333333,
+    "serving_unit": "cup",
+    "serving": "per 1/3 cup dry (40g)",
+    "cal": 150,
+    "protein": 5,
+    "carbs": 30,
+    "fat": 1
+  },
+  "Liquid egg whites": {
+    "serving_qty": 0.25,
+    "serving_unit": "cup",
+    "serving": "per 1/4 cup (61g)",
+    "cal": 26,
+    "protein": 5,
+    "carbs": 0,
+    "fat": 0
+  },
+  "Cottage cheese 1%": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per 1/2 cup (113g)",
+    "cal": 90,
+    "protein": 14,
+    "carbs": 5,
+    "fat": 1
+  },
+  "Ground flaxseed": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (10g)",
+    "cal": 55,
+    "protein": 2,
+    "carbs": 3,
+    "fat": 4
+  },
+  "Frozen fruit (mixed)": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per 1/2 cup (75g)",
+    "cal": 38,
+    "protein": 0,
+    "carbs": 10,
+    "fat": 0
+  },
+  "Lemon juice": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (15g)",
+    "cal": 4,
+    "protein": 0,
+    "carbs": 1,
+    "fat": 0
+  },
+  "Garlic": {
+    "serving_qty": 1,
+    "serving_unit": "clove",
+    "serving": "per clove (3g)",
+    "cal": 4,
+    "protein": 0,
+    "carbs": 1,
+    "fat": 0
+  },
+  "Spices (cumin/paprika/garlic powder/salt)": {
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "per 1 tsp mixed (~3g)",
+    "cal": 8,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 0
+  },
+  "Quinoa (dry)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g dry",
+    "cal": 368,
+    "protein": 14,
+    "carbs": 64,
+    "fat": 6
+  },
+  "Shredded cheese (4-blend)": {
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "serving": "per 2 tbsp (14g)",
+    "cal": 55,
+    "protein": 4,
+    "carbs": 1,
+    "fat": 5
+  },
+  "Canned tuna (in water)": {
+    "serving_qty": 1,
+    "serving_unit": "can",
+    "serving": "per 1 can (142g drained)",
+    "cal": 150,
+    "protein": 33,
+    "carbs": 0,
+    "fat": 1
+  },
+  "Flank/sirloin steak": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 174034)",
+    "cal": 153,
+    "protein": 21,
+    "carbs": 0,
+    "fat": 8
+  },
+  "Italian dressing (light)": {
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "serving": "per 2 tbsp (30ml)",
+    "cal": 30,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 2
+  },
+  "Corn tortilla (small)": {
+    "serving_qty": 1,
+    "serving_unit": "tortilla",
+    "serving": "per 1 tortilla (28g)",
+    "cal": 62,
+    "protein": 2,
+    "carbs": 13,
+    "fat": 1
+  },
+  "Signature Select Alfredo sauce": {
+    "serving_qty": 0.25,
+    "serving_unit": "cup",
+    "serving": "per 1/4 cup (60g)",
+    "cal": 80,
+    "protein": 2,
+    "carbs": 3,
+    "fat": 7
+  },
+  "Pork tenderloin": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 167905)",
+    "cal": 109,
+    "protein": 21,
+    "carbs": 0,
+    "fat": 2
+  },
+  "English cucumber": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 16,
+    "protein": 1,
+    "carbs": 4,
+    "fat": 0
+  },
+  "Cherry tomatoes": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 18,
+    "protein": 1,
+    "carbs": 4,
+    "fat": 0
+  },
+  "Bettergoods Hatch Chile & Corn Chowder": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (245g)",
+    "cal": 200,
+    "protein": 6,
+    "carbs": 22,
+    "fat": 7
+  },
+  "Bettergoods Three Cheese Tomato Bisque": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (245g)",
+    "cal": 190,
+    "protein": 7,
+    "carbs": 18,
+    "fat": 10
+  },
+  "White rice (dry)": {
+    "serving_qty": 100,
+    "serving_unit": "g_dry",
+    "serving": "per 100g dry (USDA FDC 169756)",
+    "cal": 358,
+    "protein": 7,
+    "carbs": 79,
+    "fat": 1
+  },
+  "Atlantic salmon (raw)": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 175167)",
+    "cal": 208,
+    "protein": 20,
+    "carbs": 0,
+    "fat": 13
+  },
+  "Frozen edamame (shelled)": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup shelled (155g) (USDA FDC 168411)",
+    "cal": 189,
+    "protein": 17,
+    "carbs": 14,
+    "fat": 8
+  },
+  "Bell pepper": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw",
+    "cal": 31,
+    "protein": 1,
+    "carbs": 7,
+    "fat": 0
+  },
+  "Roasted onion & garlic pasta sauce": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per 1/2 cup (125g) Signature Select",
+    "cal": 70,
+    "protein": 2,
+    "carbs": 11,
+    "fat": 2
+  }
+}
