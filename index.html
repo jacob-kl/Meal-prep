@@ -47,37 +47,26 @@ const CLR = { cal: "#88b4d8", protein: "#c878f8", carbs: "#00d4aa", fat: "#38b6f
 function resolveVal(val, units) {
   if (!val) return "";
   if (typeof val === "string") return val;
-  // New qty/unit schema: {qty, unit}
   if (val.qty != null && val.unit != null) return formatQty(val.qty, val.unit, units);
   return val[units] || val.metric || val.imperial || "";
 }
 
-// Convert a qty+unit pair into a human-readable string for the given unit system.
-// unit values: g_raw, g_dry, g, g_cooked, cup, tbsp, tsp, can, tortilla, container, cup_each, thirds_cup, medium
 function formatQty(qty, unit, units) {
   const isUS = units === "imperial";
-
-  // Weight units — convert g to oz/lbs for US
   if (["g_raw","g_dry","g_cooked","g"].includes(unit)) {
     if (isUS) {
       const oz = qty / 28.3495;
       if (oz >= 16) {
-        const lbs = oz / 16;
-        const rounded = Math.round(lbs * 4) / 4;
-        return rounded + " lbs";
+        const lbs = Math.round((oz / 16) * 4) / 4;
+        return lbs + " lbs";
       }
-      const rounded = Math.round(oz * 4) / 4;
-      // Format cleanly: 6.0 → "6", 6.25 → "6¼", etc.
-      return fmtOz(rounded) + " oz";
-    } else {
-      return qty + "g";
+      return fmtOz(Math.round(oz * 4) / 4) + " oz";
     }
+    return qty + "g";
   }
-
-  // Volume/count units — same in both systems, just display nicely
   if (unit === "cup")        return fmtFrac(qty) + " cup" + (qty !== 1 ? "s" : "");
   if (unit === "cup_each")   return fmtFrac(qty) + " cup each";
-  if (unit === "thirds_cup") return fmtFrac(qty * (1/3)) + " cup";
+  if (unit === "thirds_cup") return fmtFrac(qty / 3) + " cup";
   if (unit === "tbsp")       return fmtFrac(qty) + " tbsp";
   if (unit === "tsp")        return fmtFrac(qty) + " tsp";
   if (unit === "can")        return qty === 1 ? "1 can" : qty + " cans";
@@ -90,7 +79,7 @@ function formatQty(qty, unit, units) {
 function fmtOz(oz) {
   const whole = Math.floor(oz);
   const frac = Math.round((oz - whole) * 4);
-  const fracStr = ["", "¼", "½", "¾"][frac] || "";
+  const fracStr = ["", "\u00bc", "\u00bd", "\u00be"][frac] || "";
   return whole === 0 ? fracStr : (fracStr ? whole + fracStr : String(whole));
 }
 
@@ -98,9 +87,29 @@ function fmtFrac(n) {
   const rounded = Math.round(n * 8) / 8;
   const whole = Math.floor(rounded);
   const frac = Math.round((rounded - whole) * 8);
-  const eighths = ["","⅛","¼","⅜","½","⅝","¾","⅞"];
+  const eighths = ["", "\u215b", "\u00bc", "\u215c", "\u00bd", "\u215d", "\u00be", "\u215e"];
   const fracStr = eighths[frac] || "";
   return whole === 0 ? (fracStr || "0") : (fracStr ? whole + fracStr : String(whole));
+}
+
+function convertToImperial(text) {
+  if (!text) return text;
+  text = text.replace(/(\d+\.?\d*)\s*kg/gi, (_, n) => {
+    const lbs = parseFloat(n) * 2.20462;
+    const r = Math.round(lbs * 4) / 4;
+    return (r === Math.floor(r) ? String(r) : r.toFixed(2).replace(/\.?0+$/, "")) + " lbs";
+  });
+  text = text.replace(/(\d+\.?\d*)\s*ml/gi, (_, n) => {
+    const floz = parseFloat(n) / 29.5735;
+    const r = Math.round(floz * 4) / 4;
+    return (r === Math.floor(r) ? String(r) : r.toFixed(1)) + " fl oz";
+  });
+  text = text.replace(/(\d+\.?\d*)\s*g(?![a-zA-Z])/g, (_, n) => {
+    const oz = parseFloat(n) / 28.3495;
+    const r = Math.round(oz * 4) / 4;
+    return (r === Math.floor(r) ? String(r) : r.toFixed(1)) + " oz";
+  });
+  return text;
 }
 
 function resolveIngredient(ing, subs, units) {
@@ -228,9 +237,11 @@ function IngNutrition({ n, color }) {
   );
 }
 
-// Compute macros for an ingredient given its qty and the DB entry.
-// DB entry has serving_qty + serving_unit + cal/protein/carbs/fat.
-// ing has qty + unit (or jake/laine sub-objects with qty+unit).
+function scaleNutrition(base, ratio) {
+  if (!base) return null;
+  return { cal: Math.round(base.cal * ratio), protein: Math.round(base.protein * ratio), carbs: Math.round(base.carbs * ratio), fat: Math.round(base.fat * ratio) };
+}
+
 function calcIngMacros(dbEntry, qty) {
   if (!dbEntry || qty == null) return null;
   const ratio = qty / dbEntry.serving_qty;
@@ -240,11 +251,6 @@ function calcIngMacros(dbEntry, qty) {
     carbs:   Math.round(dbEntry.carbs   * ratio),
     fat:     Math.round(dbEntry.fat     * ratio),
   };
-}
-
-function scaleNutrition(base, ratio) {
-  if (!base) return null;
-  return { cal: Math.round(base.cal * ratio), protein: Math.round(base.protein * ratio), carbs: Math.round(base.carbs * ratio), fat: Math.round(base.fat * ratio) };
 }
 
 function parseQty(s) {
@@ -360,7 +366,6 @@ function DinnerCard({ d, isOpen, onToggle }) {
               const jakeVal  = jakeQtyObj  ? resolveVal(jakeQtyObj,  units) : "";
               const laineVal = laineQtyObj ? resolveVal(laineQtyObj, units) : "";
               const base = rawIng.nutritionKey ? nutritionDB[rawIng.nutritionKey] : null;
-              // Use explicit qty if available, fall back to parseQty ratio
               const jakeN  = (base && jakeQtyObj  && jakeQtyObj.qty  != null) ? calcIngMacros(base, jakeQtyObj.qty)
                            : base ? scaleNutrition(base, 0.5) : null;
               const laineN = (base && laineQtyObj && laineQtyObj.qty != null) ? calcIngMacros(base, laineQtyObj.qty)
@@ -530,31 +535,6 @@ function scaleStep(text, days) {
   );
 }
 
-// Convert metric measurements in a string to US imperial
-// g -> oz, kg -> lbs, ml -> fl oz. Cups/tbsp/tsp/oz/lbs left untouched.
-function convertToImperial(text) {
-  if (!text) return text;
-  // kg -> lbs
-  text = text.replace(/(\d+\.?\d*)\s*kg/gi, (_, n) => {
-    const lbs = parseFloat(n) * 2.20462;
-    const rounded = Math.round(lbs * 4) / 4;
-    return (rounded === Math.floor(rounded) ? String(rounded) : rounded.toFixed(2).replace(/\.?0+$/, "")) + " lbs";
-  });
-  // ml -> fl oz
-  text = text.replace(/(\d+\.?\d*)\s*ml/gi, (_, n) => {
-    const floz = parseFloat(n) / 29.5735;
-    const rounded = Math.round(floz * 4) / 4;
-    return (rounded === Math.floor(rounded) ? String(rounded) : rounded.toFixed(1)) + " fl oz";
-  });
-  // grams -> oz (skip if inside a word like "mg")
-  text = text.replace(/(\d+\.?\d*)\s*g(?![a-zA-Z])/g, (_, n) => {
-    const oz = parseFloat(n) / 28.3495;
-    const rounded = Math.round(oz * 4) / 4;
-    return (rounded === Math.floor(rounded) ? String(rounded) : rounded.toFixed(1)) + " oz";
-  });
-  return text;
-}
-
 function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, isOpen, onToggle }) {
   const units = useUnits();
   const db = useNutritionDB();
@@ -568,7 +548,7 @@ function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, 
     return { ...ing, item };
   });
   const scaledSteps = lunch.steps.map(s => {
-    let stepped = scaleStep(s, days);
+    const stepped = scaleStep(s, days);
     return units === "imperial" ? convertToImperial(stepped) : stepped;
   });
   // Adjust the "divide into N containers" instruction
@@ -604,18 +584,16 @@ function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             <div style={{ background: "#0c1524", border: "1px solid #1e3a5f", borderRadius: 13, padding: "16px 18px" }}>
               <div style={{ fontFamily: "monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a5878", marginBottom: 11 }}>Ingredients — {days} portion{days !== 1 ? "s" : ""}</div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                {scaledIngredients.map((ing, rawIdx) => {
-                  const displayText = typeof ing === "string" ? ing : ing.item;
-                  const rawIng = typeof ing === "string" ? null : ing;
-                  const base = rawIng && rawIng.nutritionKey ? db[rawIng.nutritionKey] : null;
-                  // Use the original (pre-scale) qty so macros reflect per-container/jar amount
-                  const origIng = typeof lunch.ingredients[rawIdx] === "object" ? lunch.ingredients[rawIdx] : null;
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
+                {scaledIngredients.map((rawIng, i) => {
+                  const displayText = typeof rawIng === "string" ? rawIng : rawIng.item;
+                  const origIng = typeof lunch.ingredients[i] === "object" ? lunch.ingredients[i] : null;
+                  const base = origIng && origIng.nutritionKey ? db[origIng.nutritionKey] : null;
                   const origQty = origIng ? origIng.qty : null;
                   const scaledQty = origQty != null ? origQty * (days / 5) : null;
                   const macros = base && scaledQty != null ? calcIngMacros(base, scaledQty) : null;
                   return (
-                    <li key={rawIdx} style={{ paddingLeft: 13, position: "relative" }}>
+                    <li key={i} style={{ paddingLeft: 13, position: "relative", marginBottom: 8 }}>
                       <span style={{ position: "absolute", left: 0, top: 2, color: "#00d4aa" }}>-</span>
                       <span style={{ fontSize: 12, lineHeight: 1.5, color: "#8aaed4" }}>{displayText}</span>
                       {macros && <IngNutrition n={macros} color={personColor} />}
