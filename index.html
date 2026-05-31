@@ -625,8 +625,8 @@ function NutritionTab({week,nutritionDB}) {
  
   const allMeals = [
     ...(person==="jake"
-      ? [...(week.jakeSnacks||[]).map(s=>({ingredients:[]})), {ingredients:week.jakeLunch?.ingredients||[]}]
-      : [...(week.laineSnacks||[]).map(s=>({ingredients:[]})), {ingredients:week.laineLunch?.ingredients||[]}, ...(week.laineBreakfasts||[])]
+      ? [...(week.jakeSnacks||[]).map(s=>({ingredients:s.ingredients||[]})), {ingredients:week.jakeLunch?.ingredients||[]}]
+      : [...(week.laineSnacks||[]).map(s=>({ingredients:s.ingredients||[]})), {ingredients:week.laineLunch?.ingredients||[]}, ...(week.laineBreakfasts||[])]
     ),
     ...(week.dinners||[])
   ];
@@ -635,14 +635,21 @@ function NutritionTab({week,nutritionDB}) {
     (meal.ingredients||[]).forEach(ing=>{
       const dbEntry=nutritionDB[ing.nutritionKey];
       if(!dbEntry) return;
-      // micros object (sodium, potassium, etc.)
       if(dbEntry.micros) microKeys.forEach(k=>{if(dbEntry.micros[k]!=null) weekMicros[k]+=dbEntry.micros[k];});
-      // fiber lives at top level, not inside micros
       if(dbEntry.fiber!=null && weekMicros.fiber!=null) weekMicros.fiber+=dbEntry.fiber;
     });
   });
   const dailyMicros={};
   microKeys.forEach(k=>dailyMicros[k]=Math.round(weekMicros[k]/7));
+ 
+  // Daily supplements are taken every single day — add at full value AFTER dividing weekly meals
+  const supplements = (week.dailySupplements||{})[person]||[];
+  supplements.forEach(supp=>{
+    const dbEntry=nutritionDB[supp.nutritionKey];
+    if(!dbEntry) return;
+    if(dbEntry.micros) microKeys.forEach(k=>{if(dbEntry.micros[k]!=null) dailyMicros[k]=(dailyMicros[k]||0)+dbEntry.micros[k];});
+    if(dbEntry.fiber!=null && dailyMicros.fiber!=null) dailyMicros.fiber=(dailyMicros.fiber||0)+dbEntry.fiber;
+  });
  
   const color=person==="jake"?T.blue:T.accent;
   const bg=person==="jake"?T.blueSoft:T.accentSoft;
