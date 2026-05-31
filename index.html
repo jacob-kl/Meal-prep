@@ -479,15 +479,21 @@ function LunchSection({lunch,label,labelColor,personColor}) {
 // ── Shopping ──────────────────────────────────────────────────────────
 // Parse a discrete countable quantity (2-8) from a shopping item string.
 function parseItemCount(text) {
-  if (/\d+\+/.test(text)) return null;
-  if (/~?\d+\.\d+\s*(lbs?|kg|oz|g)\b/i.test(text)) return null;
   // Range like "3–4 large" or "3-4 cans" → use upper bound
   const rangeM = text.match(/\b\d+\s*[–—\-]\s*([2-8])\b/);
   if (rangeM) return parseInt(rangeM[1]);
+  // "N+" → use N (can always go back to the store)
+  const plusM = text.match(/\b([2-8])\+/);
+  if (plusM) return parseInt(plusM[1]);
+  // Skip decimal weights like ~1.2 lbs — not a discrete count
+  if (/~?\d+\.\d+\s*(lbs?|kg)\b/i.test(text)) return null;
+  // "~N lbs" integer weight → treat as N segments
+  const wtM = text.match(/~([2-8])\s*(lbs?|kg)\b/i);
+  if (wtM) return parseInt(wtM[1]);
   // Exact count with countable unit
-  const m = text.match(/\b([2-8])\s+(cans?|pints?|fillets?|cartons?|containers?|packs?|bags?|bottles?|jars?|bunches?|loaves?|boxes?)\b/i);
+  const m = text.match(/\b([2-8])\s+(cans?|pints?|fillets?|cartons?|containers?|packs?|bags?|bottles?|jars?|bunches?|loaves?|boxes?|lbs?)\b/i);
   if (m) return parseInt(m[1]);
-  // Bare number before a noun or end of phrase e.g. "3 large", "4 bell peppers"
+  // Bare number before a noun e.g. "3 large", "4 bell peppers"
   const bareM = text.match(/\b([2-8])\s+(large|medium|small|fresh|whole|pieces?|cloves?|heads?|stalks?|slices?|bell peppers?|peppers?|lemons?|limes?|avocados?|tomatoes?|apples?|oranges?)\b/i);
   if (bareM) return parseInt(bareM[1]);
   return null;
