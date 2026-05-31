@@ -1,3 +1,4 @@
+
 {
   "_v": 4,
   "_note": "Week of June 1–7, 2026. Mediterranean. Pita Tuesday = shrimp + pork tenderloin. Chicken swapped out of dinners where possible per Laine preference. Tzatziki appears on Pita Tuesday and is a standalone recipe. Laine waffle Sunday instead of pancakes.",
@@ -740,6 +741,23 @@
           "nutritionKey": "Liquid egg whites"
         }
       ]
+    },
+    {
+      "name": "One A Day Women's Multi",
+      "macros": {
+        "cal": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "desc": "1 tablet daily with food. High iron (18mg), B12, vitamin D, folate, zinc.",
+      "ingredients": [
+        {
+          "item": "One A Day Women's Multi — 1 tablet daily",
+          "nutritionKey": "One A Day Women's Multi"
+        }
+      ]
     }
   ],
   "jakeSnacks": [
@@ -841,6 +859,23 @@
         {
           "item": "Ground flaxseed — 1 tbsp",
           "nutritionKey": "Ground flaxseed"
+        }
+      ]
+    },
+    {
+      "name": "One A Day Men's Multi",
+      "macros": {
+        "cal": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "desc": "1 tablet daily with food. Covers vitamin D, zinc, selenium, B12, magnesium, and vitamin A.",
+      "ingredients": [
+        {
+          "item": "One A Day Men's Multi — 1 tablet daily",
+          "nutritionKey": "One A Day Men's Multi"
         }
       ]
     }
