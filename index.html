@@ -477,33 +477,100 @@ function LunchSection({lunch,label,labelColor,personColor}) {
 }
  
 // ── Shopping ──────────────────────────────────────────────────────────
+// Parse a discrete countable quantity (2-8) from a shopping item string.
+function parseItemCount(text) {
+  if (/\d+[–—\-]\d+/.test(text)) return null;
+  if (/\d+\+/.test(text)) return null;
+  if (/~?\d+\.\d+\s*(lbs?|kg|oz|g)\b/i.test(text)) return null;
+  const m = text.match(/\b([2-8])\s+(cans?|pints?|fillets?|cartons?|containers?|packs?|bags?|bottles?|jars?|bunches?|loaves?|boxes?)\b/i);
+  if (m) return parseInt(m[1]);
+  return null;
+}
+ 
+function SegmentedCircle({ total, filled, color, borderColor, size=22 }) {
+  const cx=size/2, cy=size/2, r=(size-4)/2;
+  const allFull = filled >= total;
+  if (total === 1) {
+    return (
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{flexShrink:0}}>
+        <circle cx={cx} cy={cy} r={r} fill={allFull?color:"none"} stroke={allFull?color:borderColor} strokeWidth="2"/>
+        {allFull&&<path d={`M${cx-3.5} ${cy} l2.5 2.5 l4.5-4.5`} stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>}
+      </svg>
+    );
+  }
+  const gap = 0.09;
+  const sliceAngle = (2*Math.PI)/total;
+  const segs = Array.from({length:total},(_,i)=>{
+    const s=-Math.PI/2 + i*sliceAngle + gap/2;
+    const e=-Math.PI/2 + (i+1)*sliceAngle - gap/2;
+    const x1=cx+r*Math.cos(s), y1=cy+r*Math.sin(s);
+    const x2=cx+r*Math.cos(e), y2=cy+r*Math.sin(e);
+    const la=(e-s)>Math.PI?1:0;
+    return (
+      <path key={i}
+        d={`M${cx} ${cy} L${x1} ${y1} A${r} ${r} 0 ${la} 1 ${x2} ${y2}Z`}
+        fill={i<filled?color:"none"}
+        stroke={borderColor} strokeWidth="1.5" strokeLinejoin="round"
+      />
+    );
+  });
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{flexShrink:0}}>
+      <circle cx={cx} cy={cy} r={r} fill="none" stroke={borderColor} strokeWidth="1.5"/>
+      {segs}
+      {allFull&&<path d={`M${cx-3.5} ${cy} l2.5 2.5 l4.5-4.5`} stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>}
+    </svg>
+  );
+}
+ 
 function ShoppingTab({week}) {
   const T = getT(useDark());
   const SK="jl_shop_"+week.id;
   const [ck,setCk]=useState(()=>{try{return JSON.parse(localStorage.getItem(SK)||"{}");}catch{return {};}});
-  const tog=k=>setCk(p=>{const n={...p,[k]:!p[k]};localStorage.setItem(SK,JSON.stringify(n));return n;});
+  const save=next=>{setCk(next);localStorage.setItem(SK,JSON.stringify(next));};
   const cats=Object.entries(week.shopping||{});
-  const tot=cats.reduce((n,[,v])=>n+v.length,0);
-  const done=Object.values(ck).filter(Boolean).length;
   const catClr={"Must Buy":T.accent,"Check Supply":T.blue,"Already Have":T.green};
+ 
+  let totalItems=0,doneItems=0;
+  cats.forEach(([cat,items])=>items.forEach((item,i)=>{
+    const raw=typeof item==="string"?item:item.display||item;
+    const total=parseItemCount(raw)||1;
+    const filled=Math.min(ck[cat+":"+i]||0,total);
+    totalItems++; if(filled>=total) doneItems++;
+  }));
+ 
   return (
     <div>
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
-        <div style={{fontSize:13,color:T.textLight}}>{done}/{tot} items</div>
-        {done>0&&<button onClick={()=>{setCk({});localStorage.removeItem(SK);}} style={{background:"none",border:`1px solid ${T.border}`,borderRadius:8,color:T.textLight,padding:"4px 12px",fontSize:11}}>Clear all</button>}
+        <div style={{fontSize:13,color:T.textLight}}>{doneItems}/{totalItems} items</div>
+        {Object.keys(ck).length>0&&<button onClick={()=>save({})} style={{background:"none",border:`1px solid ${T.border}`,borderRadius:8,color:T.textLight,padding:"4px 12px",fontSize:11}}>Clear all</button>}
       </div>
       {cats.map(([cat,items])=>(
         <div key={cat} style={{marginBottom:28}}>
           <div style={{fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",color:catClr[cat]||T.gold,marginBottom:10,fontFamily:"'Lora',serif",paddingBottom:6,borderBottom:`1px solid ${T.divider}`}}>{cat}</div>
           <div style={{display:"flex",flexDirection:"column",gap:4}}>
-            {items.map((item,i)=>{const k=cat+":"+i;const isDone=!!ck[k];return(
-              <div key={k} onClick={()=>tog(k)} style={{display:"flex",alignItems:"flex-start",gap:12,padding:"10px 14px",borderRadius:10,cursor:"pointer",background:isDone?T.greenSoft:T.card,border:`1px solid ${isDone?"#c8e0c820":T.border}`,transition:"all 0.15s"}}>
-                <div style={{width:18,height:18,borderRadius:"50%",flexShrink:0,marginTop:1,border:`2px solid ${isDone?T.green:T.textLight}`,background:isDone?T.green:"none",display:"flex",alignItems:"center",justifyContent:"center"}}>
-                  {isDone&&<span style={{color:"#fff",fontSize:10}}>✓</span>}
+            {items.map((item,i)=>{
+              const k=cat+":"+i;
+              const raw=typeof item==="string"?item:item.display||item;
+              const total=parseItemCount(raw)||1;
+              const filled=Math.min(ck[k]||0,total);
+              const isDone=filled>=total;
+              const clr=catClr[cat]||T.green;
+              return (
+                <div key={k} onClick={()=>save({...ck,[k]:(filled+1)%(total+1)})}
+                  style={{display:"flex",alignItems:"center",gap:12,padding:"10px 14px",borderRadius:10,cursor:"pointer",background:isDone?T.greenSoft:T.card,border:`1px solid ${isDone?clr+"30":T.border}`,transition:"background 0.15s,border 0.15s",userSelect:"none"}}>
+                  <SegmentedCircle total={total} filled={filled} color={clr} borderColor={isDone?clr:T.textLight} size={22}/>
+                  <div style={{flex:1,minWidth:0}}>
+                    <span style={{fontSize:13,color:isDone?T.textLight:T.text,textDecoration:isDone?"line-through":"none",lineHeight:1.5}}>{raw}</span>
+                    {total>1&&filled>0&&!isDone&&(
+                      <span style={{marginLeft:8,fontSize:11,color:clr,fontFamily:"'DM Mono',monospace",whiteSpace:"nowrap"}}>
+                        {filled}/{total} — need {total-filled} more
+                      </span>
+                    )}
+                  </div>
                 </div>
-                <span style={{fontSize:13,color:isDone?T.textLight:T.text,textDecoration:isDone?"line-through":"none",lineHeight:1.5}}>{typeof item==="string"?item:item.display||item}</span>
-              </div>
-            );})}
+              );
+            })}
           </div>
         </div>
       ))}
