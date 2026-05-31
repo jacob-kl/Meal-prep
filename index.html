@@ -28,7 +28,7 @@ button { font-family:'Barlow',sans-serif; cursor:pointer; }
 <div id="root"></div>
 <script type="text/babel">
 const { useState, useEffect, useContext, createContext, useCallback, useRef } = React;
-
+ 
 // ── Config ────────────────────────────────────────────────────────────
 const WEEK_REGISTRY = [
   { id:"2026-W19", label:"Week of May 4, 2026" },
@@ -44,7 +44,7 @@ const WATER_TOTAL_OZ  = 128;
 const WATER_KEY       = "jl_water";
 const RATINGS_KEY     = "jl_ratings";
 const DARK_KEY        = "jl_dark";
-
+ 
 // ── Context ───────────────────────────────────────────────────────────
 const SubsCtx    = createContext({ subs:{}, setSub:()=>{} });
 const useSubs    = () => useContext(SubsCtx);
@@ -54,7 +54,7 @@ const NutCtx     = createContext({});
 const useNut     = () => useContext(NutCtx);
 const DarkCtx    = createContext(false);
 const useDark    = () => useContext(DarkCtx);
-
+ 
 // ── Theme ─────────────────────────────────────────────────────────────
 function getT(dark) {
   return dark ? {
@@ -77,7 +77,7 @@ function getT(dark) {
     inputBg:"#faf7f2",
   };
 }
-
+ 
 const CLR = { cal:"#c8814a", protein:"#6b9e6b", carbs:"#c8a96a", fat:"#7a9ec0", fiber:"#9e7ab5" };
 const MICRO_CLR = {
   sodium:"#e07040", potassium:"#6b9e6b", calcium:"#c8a96a", vitamin_d:"#e8c040",
@@ -85,7 +85,7 @@ const MICRO_CLR = {
   iron:"#c05050", vitamin_a:"#e0a030", folate:"#70a870", phosphorus:"#8090c0", selenium:"#b08060",
   fiber:"#9e7ab5"
 };
-
+ 
 // ── Water helpers ─────────────────────────────────────────────────────
 function getTodayKey() { const d=new Date(); return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
 function loadWater() {
@@ -93,7 +93,7 @@ function loadWater() {
   catch { return Array(WATER_GLASSES).fill(true); }
 }
 function saveWater(g) { localStorage.setItem(WATER_KEY,JSON.stringify({date:getTodayKey(),glasses:g})); }
-
+ 
 // ── Rating helpers ────────────────────────────────────────────────────
 function loadRatings() { try{return JSON.parse(localStorage.getItem(RATINGS_KEY)||"{}");}catch{return {};} }
 function saveRatings(r) { localStorage.setItem(RATINGS_KEY,JSON.stringify(r)); }
@@ -107,7 +107,7 @@ const SUBMIT_BTNS = [
   "🦐 Reel it in","🥗 Toss & save","🫙 Jar that rating",
   "🌿 Fresh take — saved","🍳 Plate it","🧄 Lock it in","🥂 Done — saved",
 ];
-
+ 
 // ── Rating Slider ─────────────────────────────────────────────────────
 function MealRating({ mealKey }) {
   const T = getT(useDark());
@@ -121,7 +121,7 @@ function MealRating({ mealKey }) {
   const saved = ratings[mealKey];
   const draft = pending!=null ? pending : saved;
   const isChanged = pending!=null && pending!==saved;
-
+ 
   const valFromE = e => {
     if(!trackRef.current) return 0;
     const r = trackRef.current.getBoundingClientRect();
@@ -139,7 +139,7 @@ function MealRating({ mealKey }) {
     setShowSaved(true); timerRef.current=setTimeout(()=>setShowSaved(false),2200);
   };
   const ratingClr = v => v==null?T.textLight:v<=3?"#c05050":v<=6?T.gold:T.green;
-
+ 
   return (
     <div style={{marginTop:14,paddingTop:12,borderTop:`1px solid ${T.divider}`}}>
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
@@ -184,7 +184,7 @@ function MealRating({ mealKey }) {
     </div>
   );
 }
-
+ 
 // ── Water Tracker ─────────────────────────────────────────────────────
 function WaterGlass({ full, onClick, index }) {
   const T = getT(useDark());
@@ -239,7 +239,7 @@ function WaterTracker() {
     </div>
   );
 }
-
+ 
 // ── Macro Water-Level Cells ───────────────────────────────────────────
 function WaterCell({ label, value, unit, pct, color, bg, dark }) {
   const clamp = Math.min(Math.max(pct,0),100);
@@ -275,7 +275,7 @@ function WaterCell({ label, value, unit, pct, color, bg, dark }) {
     </div>
   );
 }
-
+ 
 // ── Sub Dropdown ──────────────────────────────────────────────────────
 function SubDropdown({ ing }) {
   const T = getT(useDark());
@@ -307,7 +307,7 @@ function SubDropdown({ ing }) {
     </div>
   );
 }
-
+ 
 // ── UI Atoms ──────────────────────────────────────────────────────────
 function MacroPill({label,value,unit,colorKey}) {
   const T = getT(useDark());
@@ -351,7 +351,7 @@ function IngList({ingredients}) {
     </ul>
   );
 }
-
+ 
 // ── Meal Card ─────────────────────────────────────────────────────────
 function MealCard({meal,personLabel,personColor,forceOpen}) {
   const T = getT(useDark());
@@ -376,7 +376,7 @@ function MealCard({meal,personLabel,personColor,forceOpen}) {
     </div>
   );
 }
-
+ 
 // ── Dinner Card ───────────────────────────────────────────────────────
 function DinnerCard({dinner,week}) {
   const T = getT(useDark());
@@ -411,7 +411,7 @@ function DinnerCard({dinner,week}) {
     </div>
   );
 }
-
+ 
 // ── Tab Bar ───────────────────────────────────────────────────────────
 const ICONS = {
   Dinners:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M3 20h18M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/></svg>,
@@ -434,7 +434,7 @@ function TabBar({tabs,active,setActive}) {
     </div>
   );
 }
-
+ 
 // ── Batch Lunch ───────────────────────────────────────────────────────
 function scaleN(n,r){const v=Math.round(parseFloat(n)*r*8)/8;if(v===Math.floor(v))return String(v);const w=Math.floor(v),f=v-w;for(const[a,b,s]of[[1,8,"⅛"],[1,4,"¼"],[3,8,"⅜"],[1,2,"½"],[5,8,"⅝"],[3,4,"¾"],[7,8,"⅞"]])if(Math.abs(f-a/b)<0.07)return w>0?w+" "+s:s;return parseFloat((parseFloat(n)*r).toFixed(1)).toString();}
 function scaleText(t,d){if(d===5)return t;return t.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml)/gi,(m,n,u)=>scaleN(n,d/5)+" "+u);}
@@ -475,7 +475,7 @@ function LunchSection({lunch,label,labelColor,personColor}) {
     </div>
   );
 }
-
+ 
 // ── Shopping ──────────────────────────────────────────────────────────
 function ShoppingTab({week}) {
   const T = getT(useDark());
@@ -510,7 +510,7 @@ function ShoppingTab({week}) {
     </div>
   );
 }
-
+ 
 // ── Nutrition Tab — full micro aggregation ────────────────────────────
 function MicroBar({label,value,dri,unit,isUpper,color}) {
   const T = getT(useDark());
@@ -529,7 +529,7 @@ function MicroBar({label,value,dri,unit,isUpper,color}) {
     </div>
   );
 }
-
+ 
 function NutritionTab({week,nutritionDB}) {
   const T = getT(useDark());
   const dark = useDark();
@@ -538,12 +538,12 @@ function NutritionTab({week,nutritionDB}) {
   if(!targets) return null;
   const goal=targets.goal;
   const dri=nutritionDB._dri&&nutritionDB._dri[person];
-
+ 
   // ── Aggregate micros across all meals (Padre's approach) ────────────
   const microKeys = dri ? Object.keys(dri) : [];
   const weekMicros = {};
   microKeys.forEach(k=>weekMicros[k]=0);
-
+ 
   const allMeals = [
     ...(person==="jake"
       ? [...(week.jakeSnacks||[]).map(s=>({ingredients:[]})), {ingredients:week.jakeLunch?.ingredients||[]}]
@@ -551,20 +551,23 @@ function NutritionTab({week,nutritionDB}) {
     ),
     ...(week.dinners||[])
   ];
-
+ 
   allMeals.forEach(meal=>{
     (meal.ingredients||[]).forEach(ing=>{
-      const db=nutritionDB[ing.nutritionKey];
-      if(!db||!db.micros) return;
-      microKeys.forEach(k=>{if(db.micros[k]!=null) weekMicros[k]+=db.micros[k];});
+      const dbEntry=nutritionDB[ing.nutritionKey];
+      if(!dbEntry) return;
+      // micros object (sodium, potassium, etc.)
+      if(dbEntry.micros) microKeys.forEach(k=>{if(dbEntry.micros[k]!=null) weekMicros[k]+=dbEntry.micros[k];});
+      // fiber lives at top level, not inside micros
+      if(dbEntry.fiber!=null && weekMicros.fiber!=null) weekMicros.fiber+=dbEntry.fiber;
     });
   });
   const dailyMicros={};
   microKeys.forEach(k=>dailyMicros[k]=Math.round(weekMicros[k]/7));
-
+ 
   const color=person==="jake"?T.blue:T.accent;
   const bg=person==="jake"?T.blueSoft:T.accentSoft;
-
+ 
   // Water cells estimated pct — rough weekly avg vs goal
   const waterCells=[
     {label:"Calories",value:goal[0],unit:"kcal",pct:Math.round((targets.total[0]/goal[0])*100),color:"#c8814a",bg:dark?"#261a10":"#fdf6e8"},
@@ -572,7 +575,7 @@ function NutritionTab({week,nutritionDB}) {
     {label:"Carbs",   value:goal[2],unit:"g",   pct:Math.round((targets.total[2]/goal[2])*100),color:"#c8a96a",bg:dark?"#231e10":"#fdf4e3"},
     {label:"Fat",     value:goal[3],unit:"g",   pct:Math.round((targets.total[3]/goal[3])*100),color:"#7a9ec0",bg:dark?"#101c26":"#eef3f7"},
   ];
-
+ 
   return (
     <div>
       <div style={{display:"flex",gap:2,background:T.tag,borderRadius:7,padding:3,marginBottom:24,width:"fit-content"}}>
@@ -580,12 +583,12 @@ function NutritionTab({week,nutritionDB}) {
           <button key={p} onClick={()=>setPerson(p)} style={{padding:"5px 18px",background:person===p?T.card:"none",border:"none",borderRadius:5,color:person===p?(p==="jake"?T.blue:T.accent):T.textLight,fontSize:11,letterSpacing:"0.06em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace"}}>{p}</button>
         ))}
       </div>
-
+ 
       {/* Water-level macro cells */}
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:20}}>
         {waterCells.map(c=><WaterCell key={c.label} {...c} dark={dark}/>)}
       </div>
-
+ 
       {/* Breakdown table */}
       <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:16}}>
         <SectionLabel>Daily Breakdown</SectionLabel>
@@ -614,7 +617,7 @@ function NutritionTab({week,nutritionDB}) {
           </table>
         </div>
       </div>
-
+ 
       {/* Micros */}
       <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px"}}>
         <SectionLabel>Micronutrients — Est. Daily Average</SectionLabel>
@@ -637,7 +640,7 @@ function NutritionTab({week,nutritionDB}) {
     </div>
   );
 }
-
+ 
 // ── Week View ─────────────────────────────────────────────────────────
 function WeekView({week,nutritionDB}) {
   const T = getT(useDark());
@@ -646,7 +649,7 @@ function WeekView({week,nutritionDB}) {
   return (
     <div>
       <TabBar tabs={TABS} active={tab} setActive={setTab}/>
-
+ 
       {tab===0&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
@@ -655,7 +658,7 @@ function WeekView({week,nutritionDB}) {
           {week.dinners.map((d,i)=><DinnerCard key={i} dinner={d} week={week}/>)}
         </div>
       )}
-
+ 
       {tab===1&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.blueSoft,border:`1px solid ${T.blue}22`,borderRadius:10,padding:"10px 14px"}}>Batch cook Sunday — 5 containers, keeps all week.</div>
@@ -673,7 +676,7 @@ function WeekView({week,nutritionDB}) {
           </div>
         </div>
       )}
-
+ 
       {tab===2&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>Mason jars batch-made Sunday. Dressing separate. Two sittings per jar.</div>
@@ -691,14 +694,14 @@ function WeekView({week,nutritionDB}) {
           </div>
         </div>
       )}
-
+ 
       {tab===3&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>Laine only — Jake has coffee.</div>
           {(week.laineBreakfasts||[]).map((b,i)=><MealCard key={i} meal={b} personLabel="Laine" personColor={T.accent}/>)}
         </div>
       )}
-
+ 
       {tab===4&&(
         <div>
           {/* Tzatziki recipe card */}
@@ -724,7 +727,7 @@ function WeekView({week,nutritionDB}) {
     </div>
   );
 }
-
+ 
 // ── History ───────────────────────────────────────────────────────────
 function HistoryTab({allWeeks,nutritionDB}) {
   const T = getT(useDark());
@@ -753,7 +756,7 @@ function HistoryTab({allWeeks,nutritionDB}) {
     </div>
   );
 }
-
+ 
 // ── Dark Mode Toggle ──────────────────────────────────────────────────
 function DarkToggle({dark,setDark}) {
   const T = getT(dark);
@@ -765,7 +768,7 @@ function DarkToggle({dark,setDark}) {
     </button>
   );
 }
-
+ 
 // ── App ───────────────────────────────────────────────────────────────
 function App() {
   const [dark,setDark]=useState(()=>{const s=localStorage.getItem(DARK_KEY);if(s!=null)return s==="true";return window.matchMedia("(prefers-color-scheme: dark)").matches;});
@@ -778,12 +781,12 @@ function App() {
   const [subs,setSubs]=useState(()=>{try{return JSON.parse(localStorage.getItem("jl_subs")||"{}");}catch{return {};}});
   const setSub=useCallback((k,v)=>setSubs(p=>{const n={...p};if(v==null)delete n[k];else n[k]=v;localStorage.setItem("jl_subs",JSON.stringify(n));return n;}),[]);
   const [openKey,setOpenKey]=useState(null);
-
+ 
   useEffect(()=>{
     document.body.className=dark?"dark":"light";
     document.body.style.setProperty("--scroll-track",dark?"#1a1710":"#f5f0e8");
   },[dark]);
-
+ 
   useEffect(()=>{
     fetch("nutrition.json").then(r=>r.json()).then(setNutritionDB).catch(()=>{});
     (async()=>{
@@ -798,13 +801,13 @@ function App() {
       finally{setLoading(false);}
     })();
   },[]);
-
+ 
   const currentWeek=allWeeks.find(w=>w.id===CURRENT_WEEK_ID);
   const MAIN_TABS=["This Week","Shopping","Nutrition","Past Weeks"];
-
+ 
   if(loading) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.textLight,fontSize:13,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em"}}>Loading…</div>;
   if(error) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{textAlign:"center"}}><div style={{color:T.accent,fontFamily:"'Lora',serif",fontSize:18,marginBottom:8}}>Something's off</div><div style={{color:T.textLight,fontSize:11}}>{error}</div></div></div>;
-
+ 
   return (
     <DarkCtx.Provider value={dark}>
     <DropCtx.Provider value={{openKey,setOpenKey}}>
@@ -812,7 +815,7 @@ function App() {
     <NutCtx.Provider value={nutritionDB}>
       <div style={{minHeight:"100vh",background:T.bg,color:T.text,padding:"40px 20px 80px",transition:"background 0.3s,color 0.3s"}}>
         <div style={{maxWidth:860,margin:"0 auto"}}>
-
+ 
           {/* Header */}
           <div style={{marginBottom:24,borderBottom:`1px solid ${T.divider}`,paddingBottom:24}}>
             <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",flexWrap:"wrap",gap:12}}>
@@ -826,21 +829,21 @@ function App() {
               <DarkToggle dark={dark} setDark={setDark}/>
             </div>
           </div>
-
+ 
           <WaterTracker/>
-
+ 
           {/* Nav */}
           <div style={{display:"flex",gap:3,background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:28,maxWidth:520}}>
             {MAIN_TABS.map((t,i)=>(
               <button key={t} onClick={()=>setMainTab(i)} style={{flex:1,padding:"9px 12px",background:mainTab===i?T.card:"none",border:`1px solid ${mainTab===i?T.border:"transparent"}`,borderRadius:10,color:mainTab===i?T.text:T.textLight,fontSize:12,fontWeight:mainTab===i?500:400,transition:"all 0.15s"}}>{t}</button>
             ))}
           </div>
-
+ 
           {mainTab===0&&currentWeek&&<WeekView week={currentWeek} nutritionDB={nutritionDB}/>}
           {mainTab===1&&currentWeek&&<ShoppingTab week={currentWeek}/>}
           {mainTab===2&&currentWeek&&<NutritionTab week={currentWeek} nutritionDB={nutritionDB}/>}
           {mainTab===3&&<HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
-
+ 
           <div style={{marginTop:64,paddingTop:28,borderTop:`1px solid ${T.divider}`,textAlign:"center"}}>
             <div style={{fontFamily:"'Lora',serif",fontSize:"clamp(1.1rem,3vw,1.4rem)",fontWeight:400,fontStyle:"italic",color:T.textLight}}>
               Love you both. <span style={{color:T.accent}}>♥</span>
@@ -858,3 +861,4 @@ ReactDOM.render(<App/>, document.getElementById("root"));
 </script>
 </body>
 </html>
+ 
