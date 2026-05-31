@@ -10,24 +10,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#f5f0e8; color:#2a2418; font-family:'Barlow',sans-serif; font-weight:300; min-height:100vh; }
-  button { font-family:'Barlow',sans-serif; }
-  ::-webkit-scrollbar { width:5px; }
-  ::-webkit-scrollbar-track { background:#ede8de; }
-  ::-webkit-scrollbar-thumb { background:#b8a88a; border-radius:3px; }
-  ::selection { background:#f0e0b8; }
-  @keyframes wave1 { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-  @keyframes wave2 { 0%{transform:translateX(0)} 100%{transform:translateX(50%)} }
-  @keyframes glassSlide { from{y:9999px} to{y:var(--gy)} }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Barlow',sans-serif; font-weight:300; min-height:100vh; transition:background 0.3s,color 0.3s; }
+body.light { background:#f5f0e8; color:#2a2418; }
+body.dark  { background:#1a1710; color:#e8e0d0; }
+button { font-family:'Barlow',sans-serif; cursor:pointer; }
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:var(--scroll-track); }
+::-webkit-scrollbar-thumb { background:#b8a88a; border-radius:3px; }
+::selection { background:#f0e0b8; }
+@keyframes wave1 { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes wave2 { 0%{transform:translateX(0)} 100%{transform:translateX(50%)} }
+@keyframes fillRise { from{height:0} to{height:var(--fh)} }
 </style>
 </head>
-<body>
+<body class="light">
 <div id="root"></div>
 <script type="text/babel">
- 
 const { useState, useEffect, useContext, createContext, useCallback, useRef } = React;
- 
+
+// ── Config ────────────────────────────────────────────────────────────
 const WEEK_REGISTRY = [
   { id:"2026-W19", label:"Week of May 4, 2026" },
   { id:"2026-W20", label:"Week of May 11, 2026" },
@@ -36,291 +38,268 @@ const WEEK_REGISTRY = [
   { id:"2026-W23", label:"Week of June 1, 2026" },
 ];
 const CURRENT_WEEK_ID = "2026-W23";
- 
-// Water: 8 glasses × 16oz = 128oz = 1 gallon
 const WATER_GLASSES   = 8;
 const WATER_OZ_EACH   = 16;
-const WATER_TOTAL_OZ  = WATER_GLASSES * WATER_OZ_EACH;
+const WATER_TOTAL_OZ  = 128;
 const WATER_KEY       = "jl_water";
 const RATINGS_KEY     = "jl_ratings";
- 
-const SubsCtx         = createContext({ subs:{}, setSub:()=>{} });
-const useSubs         = () => useContext(SubsCtx);
-const OpenDropCtx     = createContext({ openKey:null, setOpenKey:()=>{} });
-const useOpenDrop     = () => useContext(OpenDropCtx);
-const NutritionDBCtx  = createContext({});
-const useNutritionDB  = () => useContext(NutritionDBCtx);
- 
-const T = {
-  bg:"#f5f0e8", card:"#ffffff", border:"#e8dfc8",
-  accent:"#7a3e2e", accentSoft:"#f5ede0",
-  gold:"#c4a86e", goldSoft:"#fdf4e3",
-  green:"#3a6b4a", greenSoft:"#edf5ed",
-  blue:"#2e5a7a", blueSoft:"#eef3f7",
-  text:"#2a2418", textMid:"#6a5a48", textLight:"#9a8a6e",
-  divider:"#e8dfc8", tag:"#f5f0e8", tagBorder:"#e0d5c0",
-};
- 
-const CLR = { cal:"#8b6914", protein:"#7a3e2e", carbs:"#3a6b4a", fat:"#2e5a7a", fiber:"#5a6b3a" };
- 
-// ── Midnight-reset water ─────────────────────────────────────────────
-function getTodayKey() {
-  const d = new Date();
-  return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+const DARK_KEY        = "jl_dark";
+
+// ── Context ───────────────────────────────────────────────────────────
+const SubsCtx    = createContext({ subs:{}, setSub:()=>{} });
+const useSubs    = () => useContext(SubsCtx);
+const DropCtx    = createContext({ openKey:null, setOpenKey:()=>{} });
+const useDrop    = () => useContext(DropCtx);
+const NutCtx     = createContext({});
+const useNut     = () => useContext(NutCtx);
+const DarkCtx    = createContext(false);
+const useDark    = () => useContext(DarkCtx);
+
+// ── Theme ─────────────────────────────────────────────────────────────
+function getT(dark) {
+  return dark ? {
+    bg:"#1a1710", card:"#252218", border:"#3a3428",
+    accent:"#d4765a", accentSoft:"#2e1f18",
+    gold:"#c4a86e", goldSoft:"#231e14",
+    green:"#5a9e6a", greenSoft:"#162018",
+    blue:"#5a8eb0", blueSoft:"#131e28",
+    text:"#e8e0d0", textMid:"#b8a888", textLight:"#7a6a58",
+    divider:"#3a3428", tag:"#2a2418", tagBorder:"#4a3e2c",
+    inputBg:"#2a2418",
+  } : {
+    bg:"#f5f0e8", card:"#ffffff", border:"#e8dfc8",
+    accent:"#7a3e2e", accentSoft:"#f5ede0",
+    gold:"#c4a86e", goldSoft:"#fdf4e3",
+    green:"#3a6b4a", greenSoft:"#edf5ed",
+    blue:"#2e5a7a", blueSoft:"#eef3f7",
+    text:"#2a2418", textMid:"#6a5a48", textLight:"#9a8a6e",
+    divider:"#e8dfc8", tag:"#f5f0e8", tagBorder:"#e0d5c0",
+    inputBg:"#faf7f2",
+  };
 }
+
+const CLR = { cal:"#c8814a", protein:"#6b9e6b", carbs:"#c8a96a", fat:"#7a9ec0", fiber:"#9e7ab5" };
+const MICRO_CLR = {
+  sodium:"#e07040", potassium:"#6b9e6b", calcium:"#c8a96a", vitamin_d:"#e8c040",
+  magnesium:"#7ab0c0", zinc:"#a07ab0", vitamin_c:"#e8804a", vitamin_b12:"#6ab08a",
+  iron:"#c05050", vitamin_a:"#e0a030", folate:"#70a870", phosphorus:"#8090c0", selenium:"#b08060",
+  fiber:"#9e7ab5"
+};
+
+// ── Water helpers ─────────────────────────────────────────────────────
+function getTodayKey() { const d=new Date(); return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
 function loadWater() {
-  try {
-    const raw = JSON.parse(localStorage.getItem(WATER_KEY)||"{}");
-    if (raw.date !== getTodayKey()) return Array(WATER_GLASSES).fill(true);
-    return raw.glasses;
-  } catch { return Array(WATER_GLASSES).fill(true); }
+  try { const r=JSON.parse(localStorage.getItem(WATER_KEY)||"{}"); if(r.date!==getTodayKey()) return Array(WATER_GLASSES).fill(true); return r.glasses; }
+  catch { return Array(WATER_GLASSES).fill(true); }
 }
-function saveWater(g) {
-  localStorage.setItem(WATER_KEY, JSON.stringify({ date:getTodayKey(), glasses:g }));
-}
- 
-// ── Rating system ────────────────────────────────────────────────────
-function loadRatings() {
-  try { return JSON.parse(localStorage.getItem(RATINGS_KEY)||"{}"); } catch { return {}; }
-}
-function saveRatings(r) { localStorage.setItem(RATINGS_KEY, JSON.stringify(r)); }
- 
+function saveWater(g) { localStorage.setItem(WATER_KEY,JSON.stringify({date:getTodayKey(),glasses:g})); }
+
+// ── Rating helpers ────────────────────────────────────────────────────
+function loadRatings() { try{return JSON.parse(localStorage.getItem(RATINGS_KEY)||"{}");}catch{return {};} }
+function saveRatings(r) { localStorage.setItem(RATINGS_KEY,JSON.stringify(r)); }
 const RATING_LABELS = {
-  0:"Hard pass", 1:"Not our thing", 2:"Wouldn't make again",
-  3:"Missing something", 4:"It'll do", 5:"Solid middle ground",
-  6:"Genuinely enjoyed it", 7:"Would request this again",
-  8:"Really hit the spot", 9:"Borderline perfect", 10:"Make this every week!"
+  0:"Hard pass",1:"Not our thing",2:"Wouldn't make again",3:"Missing something",
+  4:"It'll do",5:"Solid middle ground",6:"Genuinely enjoyed it",7:"Would request this again",
+  8:"Really hit the spot",9:"Borderline perfect",10:"Make this every week!"
 };
- 
-const SUBMIT_BUTTONS = [
+const SUBMIT_BTNS = [
   "🫒 That's a keeper","🍋 Squeeze it in","🧑‍🍳 Chef's kiss — save it",
-  "🐟 Reel it in","🥗 Toss & save","🫙 Jar that rating",
+  "🦐 Reel it in","🥗 Toss & save","🫙 Jar that rating",
   "🌿 Fresh take — saved","🍳 Plate it","🧄 Lock it in","🥂 Done — saved",
 ];
- 
+
+// ── Rating Slider ─────────────────────────────────────────────────────
 function MealRating({ mealKey }) {
+  const T = getT(useDark());
   const [ratings, setRatings] = useState(loadRatings);
   const [pending, setPending] = useState(null);
   const [dragging, setDragging] = useState(false);
   const [showSaved, setShowSaved] = useState(false);
-  const [btnLabel] = useState(() => SUBMIT_BUTTONS[Math.floor(Math.random()*SUBMIT_BUTTONS.length)]);
+  const [btn] = useState(()=>SUBMIT_BTNS[Math.floor(Math.random()*SUBMIT_BTNS.length)]);
   const trackRef = useRef(null);
-  const saveTimer = useRef(null);
- 
+  const timerRef = useRef(null);
   const saved = ratings[mealKey];
-  const draft = pending != null ? pending : saved;
-  const hasDraft = pending != null;
-  const hasSaved = saved != null;
-  const isChanged = hasDraft && pending !== saved;
- 
-  const posFromValue = v => `${(v/10)*100}%`;
- 
-  const valueFromEvent = (e) => {
-    if (!trackRef.current) return 0;
-    const rect = trackRef.current.getBoundingClientRect();
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    return Math.round(Math.max(0,Math.min(1,(clientX-rect.left)/rect.width))*10);
+  const draft = pending!=null ? pending : saved;
+  const isChanged = pending!=null && pending!==saved;
+
+  const valFromE = e => {
+    if(!trackRef.current) return 0;
+    const r = trackRef.current.getBoundingClientRect();
+    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+    return Math.round(Math.max(0,Math.min(1,(cx-r.left)/r.width))*10);
   };
- 
-  const handleDragStart = e => { setDragging(true); setPending(valueFromEvent(e)); };
-  const handleDragMove  = e => { if (!dragging) return; e.preventDefault(); setPending(valueFromEvent(e)); };
-  const handleDragEnd   = () => setDragging(false);
- 
-  const commit = () => {
-    if (pending==null) return;
-    const next = { ...loadRatings(), [mealKey]: pending };
+  const onStart = e => { setDragging(true); setPending(valFromE(e)); };
+  const onMove  = e => { if(!dragging) return; e.preventDefault(); setPending(valFromE(e)); };
+  const onEnd   = () => setDragging(false);
+  const commit  = () => {
+    if(pending==null) return;
+    const next={...loadRatings(),[mealKey]:pending};
     saveRatings(next); setRatings(next); setPending(null);
-    clearTimeout(saveTimer.current);
-    setShowSaved(true);
-    saveTimer.current = setTimeout(()=>setShowSaved(false), 2200);
+    clearTimeout(timerRef.current);
+    setShowSaved(true); timerRef.current=setTimeout(()=>setShowSaved(false),2200);
   };
- 
-  const ratingColor = v => {
-    if (v==null) return T.textLight;
-    if (v<=3) return "#c05050";
-    if (v<=6) return T.gold;
-    return T.green;
-  };
- 
-  const displayColor = ratingColor(draft!=null?draft:null);
- 
+  const ratingClr = v => v==null?T.textLight:v<=3?"#c05050":v<=6?T.gold:T.green;
+
   return (
-    <div style={{ marginTop:14, paddingTop:12, borderTop:`1px solid ${T.divider}` }}>
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:10 }}>
-        <span style={{ fontSize:11, color:T.textLight, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase" }}>
-          Rate this meal
-        </span>
-        <span style={{ fontSize:11, fontWeight:500, color:showSaved?T.green:displayColor, transition:"color 0.2s", fontStyle:draft==null?"italic":"normal" }}>
-          {showSaved ? "✓ saved!"
-            : draft!=null ? `${draft}/10 — ${RATING_LABELS[draft]}`
-            : "drag to set a score"}
+    <div style={{marginTop:14,paddingTop:12,borderTop:`1px solid ${T.divider}`}}>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
+        <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase"}}>Rate this meal</span>
+        <span style={{fontSize:11,fontWeight:500,color:showSaved?T.green:ratingClr(draft??null),transition:"color 0.2s",fontStyle:draft==null?"italic":"normal"}}>
+          {showSaved?"✓ saved!":draft!=null?`${draft}/10 — ${RATING_LABELS[draft]}`:"drag to score"}
         </span>
       </div>
- 
-      {/* Slider */}
-      <div style={{ position:"relative", height:36, cursor:"ew-resize", userSelect:"none", touchAction:"none" }}
-        ref={trackRef}
-        onMouseDown={handleDragStart}
-        onMouseMove={e=>{ if(dragging){e.preventDefault();setPending(valueFromEvent(e));} }}
-        onMouseUp={handleDragEnd} onMouseLeave={handleDragEnd}
-        onTouchStart={handleDragStart} onTouchMove={handleDragMove} onTouchEnd={handleDragEnd}
-      >
-        {/* Track */}
-        <div style={{ position:"absolute", top:"50%", left:0, right:0, height:6, transform:"translateY(-50%)", background:"#ede8de", borderRadius:3 }}>
-          {draft!=null && (
-            <div style={{ height:"100%", width:posFromValue(draft), background:`linear-gradient(to right,#c05050,${T.gold},${T.green})`, borderRadius:3, opacity:isChanged?0.6:1, transition:dragging?"none":"width 0.1s" }} />
-          )}
+      <div ref={trackRef} style={{position:"relative",height:36,cursor:"ew-resize",userSelect:"none",touchAction:"none"}}
+        onMouseDown={onStart} onMouseMove={onMove} onMouseUp={onEnd} onMouseLeave={onEnd}
+        onTouchStart={onStart} onTouchMove={onMove} onTouchEnd={onEnd}>
+        <div style={{position:"absolute",top:"50%",left:0,right:0,height:6,transform:"translateY(-50%)",background:T.divider,borderRadius:3}}>
+          {draft!=null&&<div style={{height:"100%",width:`${(draft/10)*100}%`,background:`linear-gradient(to right,#c05050,${T.gold},${T.green})`,borderRadius:3,opacity:isChanged?0.6:1,transition:dragging?"none":"width 0.1s"}}/>}
         </div>
-        {/* Ticks */}
         {Array.from({length:11},(_,i)=>(
-          <div key={i} style={{ position:"absolute", top:"50%", left:`${(i/10)*100}%`, transform:"translate(-50%,-50%)", width:i===0||i===10?3:2, height:i===0||i===10?12:7, background:T.divider, borderRadius:1 }} />
+          <div key={i} style={{position:"absolute",top:"50%",left:`${(i/10)*100}%`,transform:"translate(-50%,-50%)",width:i===0||i===10?3:2,height:i===0||i===10?12:7,background:T.divider,borderRadius:1}}/>
         ))}
-        {/* Thumb */}
-        {draft!=null ? (
-          <div style={{ position:"absolute", top:"50%", left:posFromValue(draft), transform:"translate(-50%,-50%)", width:22, height:22, borderRadius:"50%", background:isChanged?"#e8c87a":displayColor, border:"2px solid white", boxShadow:"0 2px 8px rgba(0,0,0,0.18)", transition:dragging?"none":"left 0.1s,background 0.2s", zIndex:2, display:"flex", alignItems:"center", justifyContent:"center" }}>
-            <span style={{ fontSize:9, fontWeight:700, color:"white", fontFamily:"monospace" }}>{draft}</span>
-          </div>
-        ) : (
-          <div style={{ position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)", width:22, height:22, borderRadius:"50%", background:T.divider, border:`2px dashed ${T.textLight}`, zIndex:2 }} />
-        )}
+        {draft!=null
+          ?<div style={{position:"absolute",top:"50%",left:`${(draft/10)*100}%`,transform:"translate(-50%,-50%)",width:22,height:22,borderRadius:"50%",background:isChanged?"#e8c87a":ratingClr(draft),border:"2px solid white",boxShadow:"0 2px 8px rgba(0,0,0,0.2)",transition:dragging?"none":"left 0.1s,background 0.2s",zIndex:2,display:"flex",alignItems:"center",justifyContent:"center"}}>
+              <span style={{fontSize:9,fontWeight:700,color:"white",fontFamily:"monospace"}}>{draft}</span>
+            </div>
+          :<div style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)",width:22,height:22,borderRadius:"50%",background:T.divider,border:`2px dashed ${T.textLight}`,zIndex:2}}/>
+        }
       </div>
- 
-      {/* Axis */}
-      <div style={{ display:"flex", justifyContent:"space-between", marginTop:2, marginBottom:10 }}>
-        <span style={{ fontSize:9, color:T.textLight, fontFamily:"monospace" }}>0</span>
-        <span style={{ fontSize:9, color:T.textLight, fontFamily:"monospace" }}>10</span>
+      <div style={{display:"flex",justifyContent:"space-between",marginTop:2,marginBottom:10}}>
+        <span style={{fontSize:9,color:T.textLight,fontFamily:"monospace"}}>0</span>
+        <span style={{fontSize:9,color:T.textLight,fontFamily:"monospace"}}>10</span>
       </div>
- 
-      {/* Submit */}
-      <div style={{ overflow:"hidden", maxHeight:isChanged?48:0, opacity:isChanged?1:0, transition:"max-height 0.25s ease,opacity 0.2s ease" }}>
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end", gap:10 }}>
-          <button onClick={()=>setPending(saved??null)} style={{ background:"none", border:"none", fontSize:11, color:T.textLight, cursor:"pointer", padding:"4px 8px" }}>Cancel</button>
-          <button onClick={commit} style={{ background:T.accentSoft, border:`1px solid ${T.accent}`, borderRadius:20, padding:"7px 16px", fontSize:12, fontWeight:500, color:T.accent, cursor:"pointer", transition:"background 0.15s" }}
-            onMouseEnter={e=>e.target.style.background="#eed0b8"} onMouseLeave={e=>e.target.style.background=T.accentSoft}>
-            {btnLabel}
+      <div style={{overflow:"hidden",maxHeight:isChanged?48:0,opacity:isChanged?1:0,transition:"max-height 0.25s ease,opacity 0.2s ease"}}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:10}}>
+          <button onClick={()=>setPending(saved??null)} style={{background:"none",border:"none",fontSize:11,color:T.textLight,padding:"4px 8px"}}>Cancel</button>
+          <button onClick={commit} style={{background:T.accentSoft,border:`1px solid ${T.accent}`,borderRadius:20,padding:"7px 16px",fontSize:12,fontWeight:500,color:T.accent}}>
+            {btn}
           </button>
         </div>
       </div>
- 
-      {hasSaved && !isChanged && !showSaved && (
-        <div style={{ display:"flex", justifyContent:"flex-end" }}>
-          <button onClick={()=>setPending(saved)} style={{ background:"none", border:"none", fontSize:10, color:T.textLight, cursor:"pointer", padding:0, textDecoration:"underline" }}>edit rating</button>
+      {saved!=null&&!isChanged&&!showSaved&&(
+        <div style={{display:"flex",justifyContent:"flex-end"}}>
+          <button onClick={()=>setPending(saved)} style={{background:"none",border:"none",fontSize:10,color:T.textLight,padding:0,textDecoration:"underline"}}>edit rating</button>
         </div>
       )}
     </div>
   );
 }
- 
-// ── Water Glass SVG (16oz each) ──────────────────────────────────────
+
+// ── Water Tracker ─────────────────────────────────────────────────────
 function WaterGlass({ full, onClick, index }) {
-  const W=32, H=44;
-  const strokeClr = full ? "#5a9ec0" : "#2a2418";
-  const strokeW   = full ? 1.5 : 2;
+  const T = getT(useDark());
+  const W=32,H=44;
   return (
-    <button onClick={onClick} title={full?"Tap when you've drunk this glass":"Tap to undo"}
-      style={{ background:"none", border:"none", cursor:"pointer", padding:4, display:"flex", flexDirection:"column", alignItems:"center", gap:3, transition:"transform 0.1s" }}>
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-        <clipPath id={`gc${index}`}>
-          <path d={`M5 3 L${W-5} 3 L${W-6.5} ${H-3} L6.5 ${H-3} Z`} />
-        </clipPath>
-        <rect x="0" y={full?6:H+2} width={W} height={H} fill="#7ab8d8" fillOpacity="0.82"
-          clipPath={`url(#gc${index})`} style={{ transition:"y 0.35s cubic-bezier(.4,0,.2,1)" }} />
-        {full && <line x1="7" y1="10" x2={W-7} y2="10" stroke="#a8d4ea" strokeWidth="1" strokeOpacity="0.7"/>}
-        <path d={`M4 3 L${W-4} 3 L${W-6} ${H-3} L6 ${H-3} Z`} fill="none" stroke={strokeClr} strokeWidth={strokeW} strokeLinejoin="round"/>
-        {!full && <text x={W/2} y={H/2+5} textAnchor="middle" fontSize="13" fill="#2a2418" fontWeight="bold" fontFamily="sans-serif">✓</text>}
+    <button onClick={onClick} title={full?`Tap when you drink glass ${index+1}`:"Tap to undo"}
+      style={{background:"none",border:"none",padding:4,display:"flex",flexDirection:"column",alignItems:"center",gap:3}}>
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} fill="none">
+        <clipPath id={`gc${index}`}><path d={`M5 3 L${W-5} 3 L${W-6.5} ${H-3} L6.5 ${H-3} Z`}/></clipPath>
+        <rect x="0" y={full?6:H+2} width={W} height={H} fill="#7ab8d8" fillOpacity="0.85" clipPath={`url(#gc${index})`} style={{transition:"y 0.35s cubic-bezier(.4,0,.2,1)"}}/>
+        {full&&<line x1="7" y1="10" x2={W-7} y2="10" stroke="#a8d4ea" strokeWidth="1" strokeOpacity="0.6"/>}
+        <path d={`M4 3 L${W-4} 3 L${W-6} ${H-3} L6 ${H-3} Z`} fill="none" stroke={full?"#5a9ec0":T.text} strokeWidth={full?1.5:2} strokeLinejoin="round"/>
+        {!full&&<text x={W/2} y={H/2+5} textAnchor="middle" fontSize="12" fill={T.text} fontWeight="bold">✓</text>}
       </svg>
-      <span style={{ fontSize:9, color:full?"#2e5a7a":"#2a2418", fontFamily:"monospace", fontWeight:full?400:700 }}>{index*WATER_OZ_EACH+WATER_OZ_EACH}oz</span>
+      <span style={{fontSize:8,color:full?"#2e5a7a":T.textMid,fontFamily:"monospace"}}>{(index+1)*WATER_OZ_EACH}oz</span>
     </button>
   );
 }
- 
-// ── Water Tracker ────────────────────────────────────────────────────
 function WaterTracker() {
+  const T = getT(useDark());
   const [glasses, setGlasses] = useState(loadWater);
- 
-  useEffect(() => {
-    const msUntilMidnight = () => {
-      const now = new Date(), midnight = new Date(now);
-      midnight.setHours(24,0,0,0);
-      return midnight-now;
-    };
-    const tid = setTimeout(() => {
-      const fresh = Array(WATER_GLASSES).fill(true);
-      setGlasses(fresh); saveWater(fresh);
-    }, msUntilMidnight());
-    return () => clearTimeout(tid);
-  }, [glasses]);
- 
-  const toggle = i => setGlasses(prev => {
-    const next=[...prev]; next[i]=!next[i]; saveWater(next); return next;
-  });
- 
-  const drunk   = glasses.filter(g=>!g).length;
-  const ozDone  = drunk * WATER_OZ_EACH;
-  const ozLeft  = WATER_TOTAL_OZ - ozDone;
-  const allDone = drunk === WATER_GLASSES;
-  const pct     = (ozDone / WATER_TOTAL_OZ) * 100;
- 
+  useEffect(()=>{
+    const ms=()=>{const n=new Date(),m=new Date(n);m.setHours(24,0,0,0);return m-n;};
+    const t=setTimeout(()=>{const f=Array(WATER_GLASSES).fill(true);setGlasses(f);saveWater(f);},ms());
+    return ()=>clearTimeout(t);
+  },[glasses]);
+  const toggle = i => setGlasses(prev=>{const n=[...prev];n[i]=!n[i];saveWater(n);return n;});
+  const drunk=glasses.filter(g=>!g).length;
+  const ozDone=drunk*WATER_OZ_EACH;
+  const allDone=drunk===WATER_GLASSES;
+  const pct=(ozDone/WATER_TOTAL_OZ)*100;
   return (
-    <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:16, padding:"16px 20px", marginBottom:28 }}>
-      <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", marginBottom:14 }}>
+    <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"16px 20px",marginBottom:24}}>
+      <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:12}}>
         <div>
-          <div style={{ fontSize:11, letterSpacing:"0.12em", textTransform:"uppercase", color:"#2e5a7a", fontFamily:"'DM Mono',monospace", marginBottom:3 }}>Water Today</div>
-          <div style={{ fontSize:13, fontFamily:"'Lora',serif", color:T.text }}>
-            {allDone ? "✓ Full gallon — nice." : `${ozDone}oz of ${WATER_TOTAL_OZ}oz · ${ozLeft}oz to go`}
+          <div style={{fontSize:11,letterSpacing:"0.12em",textTransform:"uppercase",color:"#2e5a7a",fontFamily:"'DM Mono',monospace",marginBottom:3}}>Water Today</div>
+          <div style={{fontSize:13,fontFamily:"'Lora',serif",color:T.text}}>
+            {allDone?"✓ Full gallon — nice.":`${ozDone}oz of ${WATER_TOTAL_OZ}oz · ${WATER_TOTAL_OZ-ozDone}oz to go`}
           </div>
         </div>
-        <div style={{ fontSize:10, color:T.textLight, textAlign:"right", lineHeight:1.6, fontFamily:"'DM Mono',monospace" }}>
-          Tap when<br/>you drink it
-        </div>
+        <span style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",textAlign:"right",lineHeight:1.6}}>Tap when<br/>you drink it</span>
       </div>
- 
-      {/* Progress bar */}
-      <div style={{ height:4, background:"#e0ecf5", borderRadius:3, marginBottom:14, overflow:"hidden", position:"relative" }}>
-        <div style={{ height:"100%", width:`${pct}%`, background:`linear-gradient(to right, #7ab8d8, #2e5a7a)`, borderRadius:3, transition:"width 0.4s cubic-bezier(.4,0,.2,1)" }} />
+      <div style={{height:4,background:T.divider,borderRadius:3,marginBottom:14,overflow:"hidden"}}>
+        <div style={{height:"100%",width:`${pct}%`,background:"linear-gradient(to right,#7ab8d8,#2e5a7a)",borderRadius:3,transition:"width 0.4s cubic-bezier(.4,0,.2,1)"}}/>
       </div>
- 
-      <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
-        {glasses.map((full,i) => <WaterGlass key={i} index={i} full={full} onClick={()=>toggle(i)} />)}
+      <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
+        {glasses.map((full,i)=><WaterGlass key={i} index={i} full={full} onClick={()=>toggle(i)}/>)}
       </div>
- 
-      {drunk>0 && !allDone && (
-        <button onClick={()=>{ const f=Array(WATER_GLASSES).fill(true); setGlasses(f); saveWater(f); }}
-          style={{ marginTop:10, background:"none", border:"none", fontSize:10, color:T.textLight, cursor:"pointer", padding:0 }}>↺ Reset</button>
+      {drunk>0&&!allDone&&(
+        <button onClick={()=>{const f=Array(WATER_GLASSES).fill(true);setGlasses(f);saveWater(f);}} style={{marginTop:8,background:"none",border:"none",fontSize:10,color:T.textLight,padding:0}}>↺ Reset</button>
       )}
     </div>
   );
 }
- 
-// ── Sub Dropdown ─────────────────────────────────────────────────────
+
+// ── Macro Water-Level Cells ───────────────────────────────────────────
+function WaterCell({ label, value, unit, pct, color, bg, dark }) {
+  const clamp = Math.min(Math.max(pct,0),100);
+  const wc = color+"55", wc2 = color+"33";
+  const [anim, setAnim] = useState(false);
+  useEffect(()=>{const t=setTimeout(()=>setAnim(true),80);return()=>clearTimeout(t);},[pct]);
+  return (
+    <div style={{position:"relative",overflow:"hidden",background:bg,borderRadius:10,height:88}}>
+      {/* Water fill */}
+      <div style={{position:"absolute",bottom:0,left:0,right:0,height:anim?`${clamp}%`:"0%",transition:"height 1.1s cubic-bezier(.4,0,.2,1)"}}>
+        {/* Wave */}
+        <div style={{position:"absolute",top:-8,left:0,width:"200%",height:14}}>
+          <svg viewBox="0 0 200 14" width="100%" height="14" preserveAspectRatio="none" style={{display:"block",animation:"wave1 2.8s linear infinite"}}>
+            <path d="M0 7 C25 1,50 13,75 7 S125 1,150 7 S175 13,200 7 L200 14 L0 14 Z" fill={wc}/>
+          </svg>
+          <svg viewBox="0 0 200 14" width="100%" height="14" preserveAspectRatio="none" style={{display:"block",position:"absolute",top:0,left:0,animation:"wave2 3.6s linear infinite",opacity:0.5}}>
+            <path d="M0 7 C30 13,60 1,90 7 S140 13,170 7 S185 1,200 7 L200 14 L0 14 Z" fill={wc2}/>
+          </svg>
+        </div>
+        <div style={{position:"absolute",inset:0,top:14,background:color+"18"}}/>
+      </div>
+      {/* Content */}
+      <div style={{position:"relative",zIndex:2,padding:"12px 14px",height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
+        <div style={{fontSize:9,fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:"0.12em",color:color,opacity:0.85}}>{label}</div>
+        <div style={{display:"flex",alignItems:"baseline",gap:3}}>
+          <span style={{fontSize:24,fontFamily:"'Lora',serif",color,fontWeight:500,lineHeight:1}}>{value}</span>
+          <span style={{fontSize:10,color:color,opacity:0.6,fontFamily:"'DM Mono',monospace"}}>{unit}</span>
+        </div>
+        <div style={{height:2,background:"rgba(0,0,0,0.08)",borderRadius:2,overflow:"hidden"}}>
+          <div style={{height:"100%",width:`${clamp}%`,background:color,borderRadius:2,transition:"width 1.1s cubic-bezier(.4,0,.2,1)"}}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Sub Dropdown ──────────────────────────────────────────────────────
 function SubDropdown({ ing }) {
+  const T = getT(useDark());
   const { subs, setSub } = useSubs();
-  const { openKey, setOpenKey } = useOpenDrop();
-  const btnRef = useRef(null);
-  const isOpen = openKey === ing.subKey;
-  const current = subs[ing.subKey] || "default";
-  const [menuStyle, setMenuStyle] = useState({});
+  const { openKey, setOpenKey } = useDrop();
+  const ref = useRef(null);
+  const isOpen = openKey===ing.subKey;
+  const cur = subs[ing.subKey]||"default";
+  const [ms, setMs] = useState({});
   const toggle = () => {
-    if (!isOpen && btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect();
-      const below = window.innerHeight - r.bottom;
-      const mh = Math.min(280, 44 + ing.substitutions.length*52);
-      setMenuStyle({ top:Math.max(8,below>mh?r.bottom+6:r.top-mh-6), left:Math.min(r.left,window.innerWidth-230) });
-    }
+    if(!isOpen&&ref.current){const r=ref.current.getBoundingClientRect();const below=window.innerHeight-r.bottom;const mh=Math.min(280,44+ing.substitutions.length*52);setMs({top:Math.max(8,below>mh?r.bottom+6:r.top-mh-6),left:Math.min(r.left,window.innerWidth-230)});}
     setOpenKey(isOpen?null:ing.subKey);
   };
   return (
-    <div style={{ display:"inline-block" }}>
-      <button ref={btnRef} onClick={toggle} style={{ background:"none", border:`1px solid ${T.border}`, borderRadius:5, color:T.textLight, padding:"1px 7px", cursor:"pointer", fontSize:10, marginLeft:6 }}>swap {isOpen?"▲":"▼"}</button>
-      {isOpen && (
-        <div style={{ position:"fixed", ...menuStyle, zIndex:1000, background:T.card, border:`1px solid ${T.gold}`, borderRadius:12, padding:6, width:220, boxShadow:"0 8px 32px rgba(80,50,10,0.12)" }}>
-          <div onClick={()=>{setSub(ing.subKey,null);setOpenKey(null);}} style={{ padding:"9px 12px", fontSize:12, cursor:"pointer", borderRadius:8, color:current==="default"?T.green:T.textMid, background:current==="default"?T.greenSoft:"none" }}>
-            {ing.item} <span style={{ color:T.textLight, fontSize:10 }}>(original)</span>
+    <div style={{display:"inline-block"}}>
+      <button ref={ref} onClick={toggle} style={{background:"none",border:`1px solid ${T.border}`,borderRadius:5,color:T.textLight,padding:"1px 7px",fontSize:10,marginLeft:6}}>{isOpen?"▲":"▼"} swap</button>
+      {isOpen&&(
+        <div style={{position:"fixed",...ms,zIndex:1000,background:T.card,border:`1px solid ${T.gold}`,borderRadius:12,padding:6,width:220,boxShadow:"0 8px 32px rgba(0,0,0,0.18)"}}>
+          <div onClick={()=>{setSub(ing.subKey,null);setOpenKey(null);}} style={{padding:"9px 12px",fontSize:12,cursor:"pointer",borderRadius:8,color:cur==="default"?T.green:T.textMid,background:cur==="default"?T.greenSoft:"none"}}>
+            {ing.item} <span style={{color:T.textLight,fontSize:10}}>(original)</span>
           </div>
-          {ing.substitutions.map(sub=>(
-            <div key={sub.id} onClick={()=>{setSub(ing.subKey,sub.id);setOpenKey(null);}} style={{ padding:"9px 12px", fontSize:12, cursor:"pointer", borderRadius:8, color:current===sub.id?T.green:T.textMid, background:current===sub.id?T.greenSoft:"none" }}>
-              {sub.item}
-              {sub.note && <div style={{ fontSize:10, color:T.textLight, marginTop:2 }}>{sub.note}</div>}
+          {ing.substitutions.map(s=>(
+            <div key={s.id} onClick={()=>{setSub(ing.subKey,s.id);setOpenKey(null);}} style={{padding:"9px 12px",fontSize:12,cursor:"pointer",borderRadius:8,color:cur===s.id?T.green:T.textMid,background:cur===s.id?T.greenSoft:"none"}}>
+              {s.item}{s.note&&<div style={{fontSize:10,color:T.textLight,marginTop:2}}>{s.note}</div>}
             </div>
           ))}
         </div>
@@ -328,262 +307,167 @@ function SubDropdown({ ing }) {
     </div>
   );
 }
- 
-function IngredientList({ ingredients }) {
+
+// ── UI Atoms ──────────────────────────────────────────────────────────
+function MacroPill({label,value,unit,colorKey}) {
+  const T = getT(useDark());
+  return (
+    <span style={{display:"inline-flex",alignItems:"center",gap:5,background:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"3px 10px",fontSize:11}}>
+      <span style={{width:6,height:6,borderRadius:"50%",background:CLR[colorKey],flexShrink:0}}/>
+      <span style={{color:T.textLight,fontSize:10,fontFamily:"'DM Mono',monospace",letterSpacing:"0.06em",textTransform:"uppercase"}}>{label}</span>
+      <span style={{color:T.text,fontWeight:500}}>{value}{unit}</span>
+    </span>
+  );
+}
+function MacroRow({macros}) {
+  const items=[["cal",macros.cal,"kcal"],["protein",macros.protein,"g"],["carbs",macros.carbs,"g"],["fat",macros.fat,"g"]];
+  if(macros.fiber!=null) items.push(["fiber",macros.fiber,"g"]);
+  return <div style={{display:"flex",gap:5,flexWrap:"wrap",margin:"8px 0 12px"}}>{items.map(([k,v,u])=><MacroPill key={k} label={k} value={v} unit={u} colorKey={k}/>)}</div>;
+}
+function SectionLabel({children}) {
+  const T = getT(useDark());
+  return <div style={{fontFamily:"'Lora',serif",fontSize:11,letterSpacing:"0.15em",textTransform:"uppercase",color:T.textLight,marginBottom:12}}>{children}</div>;
+}
+function Steps({items}) {
+  const T = getT(useDark());
+  return <ol style={{paddingLeft:18,margin:0,display:"flex",flexDirection:"column",gap:8}}>{items.map((s,i)=><li key={i} style={{fontSize:13,lineHeight:1.65,color:T.textMid}}>{s}</li>)}</ol>;
+}
+function IngList({ingredients}) {
+  const T = getT(useDark());
   const { subs } = useSubs();
-  const resolved = (ingredients||[]).map(ing => {
-    if (!ing.subKey||!subs[ing.subKey]) return ing;
-    const sub = ing.substitutions&&ing.substitutions.find(s=>s.id===subs[ing.subKey]);
-    return sub ? {...ing,item:sub.item} : ing;
+  const resolved = (ingredients||[]).map(ing=>{
+    if(!ing.subKey||!subs[ing.subKey]) return ing;
+    const s=ing.substitutions&&ing.substitutions.find(s=>s.id===subs[ing.subKey]);
+    return s?{...ing,item:s.item}:ing;
   });
   return (
-    <ul style={{ listStyle:"none", margin:0, padding:0, display:"flex", flexDirection:"column", gap:6 }}>
+    <ul style={{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:6}}>
       {resolved.map((ing,i)=>(
-        <li key={i} style={{ fontSize:13, color:T.textMid, display:"flex", alignItems:"flex-start" }}>
-          <span style={{ color:T.gold, marginRight:8, fontSize:10, marginTop:3, flexShrink:0 }}>◆</span>
+        <li key={i} style={{fontSize:13,color:T.textMid,display:"flex",alignItems:"flex-start"}}>
+          <span style={{color:T.gold,marginRight:8,fontSize:10,marginTop:3,flexShrink:0}}>◆</span>
           <span>{ing.item}{ing.subKey&&ing.substitutions&&<SubDropdown ing={ing}/>}</span>
         </li>
       ))}
     </ul>
   );
 }
- 
-// ── Macro Pills ───────────────────────────────────────────────────────
-function MacroPill({ label, value, unit, colorKey }) {
+
+// ── Meal Card ─────────────────────────────────────────────────────────
+function MealCard({meal,personLabel,personColor,forceOpen}) {
+  const T = getT(useDark());
+  const [showIng,setShowIng]=useState(false);
+  const [showSteps,setShowSteps]=useState(false);
+  const mealKey=(meal.day||meal.days||"")+"_"+(personLabel||"")+"_"+(meal.name||"");
+  const accentColor = personColor||T.accent;
   return (
-    <span style={{ display:"inline-flex", alignItems:"center", gap:5, background:T.tag, border:`1px solid ${T.tagBorder}`, borderRadius:20, padding:"3px 10px", fontSize:11 }}>
-      <span style={{ width:6, height:6, borderRadius:"50%", background:CLR[colorKey], flexShrink:0 }}/>
-      <span style={{ color:T.textLight, fontSize:10, fontFamily:"'DM Mono',monospace", letterSpacing:"0.06em", textTransform:"uppercase" }}>{label}</span>
-      <span style={{ color:T.text, fontWeight:500 }}>{value}{unit}</span>
-    </span>
-  );
-}
- 
-function MacroRow({ macros }) {
-  if (!macros) return null;
-  const items = [["cal",macros.cal,"kcal"],["protein",macros.protein,"g"],["carbs",macros.carbs,"g"],["fat",macros.fat,"g"]];
-  if (macros.fiber!=null) items.push(["fiber",macros.fiber,"g"]);
-  return (
-    <div style={{ display:"flex", gap:5, flexWrap:"wrap", margin:"8px 0 12px" }}>
-      {items.map(([k,v,u])=><MacroPill key={k} label={k} value={v} unit={u} colorKey={k}/>)}
-    </div>
-  );
-}
- 
-function Steps({ items }) {
-  return (
-    <ol style={{ paddingLeft:18, margin:0, display:"flex", flexDirection:"column", gap:8 }}>
-      {items.map((s,i)=><li key={i} style={{ fontSize:13, lineHeight:1.65, color:T.textMid }}>{s}</li>)}
-    </ol>
-  );
-}
- 
-function SectionLabel({ children }) {
-  return <div style={{ fontFamily:"'Lora',serif", fontSize:11, letterSpacing:"0.15em", textTransform:"uppercase", color:T.textLight, marginBottom:12 }}>{children}</div>;
-}
- 
-// ── Meal Card — Padre's style, Jake & Laine colours ──────────────────
-function MealCard({ meal, personLabel, personColor }) {
-  const [showIng, setShowIng] = useState(false);
-  const [showSteps, setShowSteps] = useState(false);
-  const dayLabel = meal.day || meal.days;
-  const mealKey = (dayLabel||"")+"_"+(personLabel||"")+"_"+(meal.name||"");
- 
-  return (
-    <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:16, padding:"18px 20px", marginBottom:12 }}>
-      {dayLabel && (
-        <div style={{ fontSize:10, color:personColor||T.textLight, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>
-          {dayLabel}{personLabel ? ` · ${personLabel}` : ""}
-        </div>
-      )}
-      <div style={{ fontSize:16, fontWeight:500, color:T.text, fontFamily:"'Lora',serif", marginBottom:4 }}>{meal.name}</div>
-      {meal.macros && <MacroRow macros={meal.macros}/>}
-      {meal.note && <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:10, fontStyle:"italic" }}>{meal.note}</div>}
- 
-      <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-        {meal.ingredients && (
-          <button onClick={()=>setShowIng(!showIng)} style={{ background:showIng?T.goldSoft:T.tag, border:`1px solid ${T.tagBorder}`, borderRadius:20, padding:"4px 12px", cursor:"pointer", fontSize:11, color:T.textMid, transition:"background 0.15s" }}>
-            {showIng?"▲":"▼"} Ingredients
-          </button>
-        )}
-        {meal.steps && (
-          <button onClick={()=>setShowSteps(!showSteps)} style={{ background:showSteps?T.accentSoft:T.tag, border:`1px solid ${T.tagBorder}`, borderRadius:20, padding:"4px 12px", cursor:"pointer", fontSize:11, color:T.textMid, transition:"background 0.15s" }}>
-            {showSteps?"▲":"▼"} Steps
-          </button>
-        )}
+    <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
+      {(meal.day||meal.days)&&<div style={{fontSize:10,color:accentColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{meal.day||meal.days}{personLabel?` · ${personLabel}`:""}</div>}
+      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{meal.name}</div>
+      {meal.macros&&<MacroRow macros={meal.macros}/>}
+      {meal.macrosNote&&<div style={{fontSize:11,color:T.textLight,marginBottom:6,fontFamily:"'DM Mono',monospace"}}>{meal.macrosNote}</div>}
+      {meal.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{meal.note}</div>}
+      <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+        {meal.ingredients&&<button onClick={()=>setShowIng(!showIng)} style={{background:showIng?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showIng?"▲":"▼"} Ingredients</button>}
+        {meal.steps&&<button onClick={()=>setShowSteps(!showSteps)} style={{background:showSteps?T.accentSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showSteps?"▲":"▼"} Steps</button>}
       </div>
- 
-      {showIng && (
-        <div style={{ marginTop:12, paddingTop:12, borderTop:`1px solid ${T.divider}` }}>
-          <SectionLabel>Ingredients</SectionLabel>
-          <IngredientList ingredients={meal.ingredients}/>
-        </div>
-      )}
-      {showSteps && (
-        <div style={{ marginTop:12, paddingTop:12, borderTop:`1px solid ${T.divider}` }}>
-          <SectionLabel>Method</SectionLabel>
-          <Steps items={meal.steps}/>
-        </div>
-      )}
+      {showIng&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Ingredients</SectionLabel><IngList ingredients={meal.ingredients}/></div>}
+      {showSteps&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Method</SectionLabel><Steps items={meal.steps}/></div>}
       <MealRating mealKey={mealKey}/>
     </div>
   );
 }
- 
-// ── Dinner Card — shows both Jake and Laine macros ───────────────────
-function DinnerCard({ dinner }) {
-  const [showIng, setShowIng] = useState(false);
-  const [showSteps, setShowSteps] = useState(false);
-  const mealKey = "dinner_"+(dinner.day||"")+"_"+(dinner.name||"");
- 
+
+// ── Dinner Card ───────────────────────────────────────────────────────
+function DinnerCard({dinner,week}) {
+  const T = getT(useDark());
+  const [showIng,setShowIng]=useState(false);
+  const [showSteps,setShowSteps]=useState(false);
+  const mealKey="dinner_"+(dinner.day||"")+"_"+(dinner.name||"");
   return (
-    <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:16, padding:"18px 20px", marginBottom:12 }}>
-      <div style={{ fontSize:10, color:T.textLight, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>{dinner.day}</div>
-      <div style={{ fontSize:16, fontWeight:500, color:T.text, fontFamily:"'Lora',serif", marginBottom:6 }}>{dinner.name}</div>
-      {dinner.note && <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:10, fontStyle:"italic" }}>{dinner.note}</div>}
- 
-      {/* Side-by-side macros */}
-      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:10, marginBottom:12 }}>
-        {[["Jake",dinner.jake,T.blue,T.blueSoft],["Laine",dinner.laine,T.accent,T.accentSoft]].map(([name,m,color,bg])=>m&&(
-          <div key={name} style={{ background:bg, borderRadius:10, padding:"10px 12px" }}>
-            <div style={{ fontSize:10, color, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>{name}</div>
-            <div style={{ display:"flex", flexWrap:"wrap", gap:4 }}>
+    <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
+      <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
+      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
+      {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🫒 Tzatziki night — see recipe card in Snacks tab</div>}
+      {dinner.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{dinner.note}</div>}
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
+        {[["Jake",dinner.jake,T.blue,T.blueSoft],["Laine",dinner.laine,T.accent,T.accentSoft]].map(([name,m,clr,bg])=>m&&(
+          <div key={name} style={{background:bg,borderRadius:10,padding:"10px 12px"}}>
+            <div style={{fontSize:10,color:clr,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:6}}>{name}</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
               {[["cal",m.cal,"kcal"],["pro",m.protein,"g"],["carbs",m.carbs,"g"],["fat",m.fat,"g"]].map(([k,v,u])=>(
-                <span key={k} style={{ fontSize:10, fontFamily:"'DM Mono',monospace", color, background:"rgba(255,255,255,0.6)", borderRadius:4, padding:"1px 6px" }}>{k} {v}{u}</span>
+                <span key={k} style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:clr,background:"rgba(255,255,255,0.5)",borderRadius:4,padding:"1px 6px"}}>{k} {v}{u}</span>
               ))}
             </div>
           </div>
         ))}
       </div>
- 
-      <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-        {dinner.ingredients && (
-          <button onClick={()=>setShowIng(!showIng)} style={{ background:showIng?T.goldSoft:T.tag, border:`1px solid ${T.tagBorder}`, borderRadius:20, padding:"4px 12px", cursor:"pointer", fontSize:11, color:T.textMid, transition:"background 0.15s" }}>
-            {showIng?"▲":"▼"} Ingredients
-          </button>
-        )}
-        {dinner.steps && (
-          <button onClick={()=>setShowSteps(!showSteps)} style={{ background:showSteps?T.accentSoft:T.tag, border:`1px solid ${T.tagBorder}`, borderRadius:20, padding:"4px 12px", cursor:"pointer", fontSize:11, color:T.textMid, transition:"background 0.15s" }}>
-            {showSteps?"▲":"▼"} Steps
-          </button>
-        )}
+      <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+        {dinner.ingredients&&<button onClick={()=>setShowIng(!showIng)} style={{background:showIng?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showIng?"▲":"▼"} Ingredients</button>}
+        {dinner.steps&&<button onClick={()=>setShowSteps(!showSteps)} style={{background:showSteps?T.accentSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showSteps?"▲":"▼"} Steps</button>}
       </div>
- 
-      {showIng && (
-        <div style={{ marginTop:12, paddingTop:12, borderTop:`1px solid ${T.divider}` }}>
-          <SectionLabel>Ingredients</SectionLabel>
-          <IngredientList ingredients={dinner.ingredients}/>
-        </div>
-      )}
-      {showSteps && (
-        <div style={{ marginTop:12, paddingTop:12, borderTop:`1px solid ${T.divider}` }}>
-          <SectionLabel>Method</SectionLabel>
-          <Steps items={dinner.steps}/>
-        </div>
-      )}
+      {showIng&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Ingredients</SectionLabel><IngList ingredients={dinner.ingredients}/></div>}
+      {showSteps&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Method</SectionLabel><Steps items={dinner.steps}/></div>}
       <MealRating mealKey={mealKey}/>
     </div>
   );
 }
- 
+
 // ── Tab Bar ───────────────────────────────────────────────────────────
-const TAB_ICONS = {
-  "Dinners":    ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M3 20h18M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/></svg>,
-  "Jake":       ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>,
-  "Laine":      ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>,
-  "Breakfasts": ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>,
-  "Snacks":     ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M12 2a4 4 0 014 4v1H8V6a4 4 0 014-4z"/><path d="M8 7v13h8V7"/></svg>,
-  "Shopping":   ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>,
-  "Nutrition":  ()=><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+const ICONS = {
+  Dinners:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M3 20h18M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/></svg>,
+  Jake:       ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>,
+  Laine:      ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>,
+  Breakfasts: ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2"/></svg>,
+  Snacks:     ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M12 2a4 4 0 014 4v1H8V6a4 4 0 014-4z"/><path d="M8 7v13h8V7"/></svg>,
+  Shopping:   ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>,
+  Nutrition:  ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
 };
- 
-function TabBar({ tabs, active, setActive, activeColor }) {
+function TabBar({tabs,active,setActive}) {
+  const T = getT(useDark());
   return (
-    <div style={{ display:"flex", gap:3, flexWrap:"wrap", background:"#ede8de", borderRadius:12, padding:4, marginBottom:24 }}>
-      {tabs.map((t,i)=>{
-        const isAct = active===i;
-        const Icon = TAB_ICONS[t];
-        return (
-          <button key={t} onClick={()=>setActive(i)} style={{ flex:1, minWidth:75, padding:"8px 6px", background:isAct?"#fff":"none", border:"none", borderRadius:8, cursor:"pointer", color:isAct?(activeColor||T.text):T.textLight, fontSize:10, letterSpacing:"0.04em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace", transition:"all 0.15s", display:"flex", flexDirection:"column", alignItems:"center", gap:4 }}>
-            {Icon && <Icon/>}
-            {t}
-          </button>
-        );
-      })}
+    <div style={{display:"flex",gap:3,flexWrap:"wrap",background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:24}}>
+      {tabs.map((t,i)=>{const Icon=ICONS[t];const isA=active===i;return(
+        <button key={t} onClick={()=>setActive(i)} style={{flex:1,minWidth:72,padding:"8px 6px",background:isA?T.card:"none",border:`1px solid ${isA?T.border:"transparent"}`,borderRadius:10,color:isA?T.text:T.textLight,fontSize:10,letterSpacing:"0.04em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace",transition:"all 0.15s",display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
+          {Icon&&<Icon/>}{t}
+        </button>
+      );})}
     </div>
   );
 }
- 
-// ── Days-selector + scale helpers ────────────────────────────────────
-function DaysSelector({ days, setDays, color }) {
+
+// ── Batch Lunch ───────────────────────────────────────────────────────
+function scaleN(n,r){const v=Math.round(parseFloat(n)*r*8)/8;if(v===Math.floor(v))return String(v);const w=Math.floor(v),f=v-w;for(const[a,b,s]of[[1,8,"⅛"],[1,4,"¼"],[3,8,"⅜"],[1,2,"½"],[5,8,"⅝"],[3,4,"¾"],[7,8,"⅞"]])if(Math.abs(f-a/b)<0.07)return w>0?w+" "+s:s;return parseFloat((parseFloat(n)*r).toFixed(1)).toString();}
+function scaleText(t,d){if(d===5)return t;return t.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml)/gi,(m,n,u)=>scaleN(n,d/5)+" "+u);}
+function LunchSection({lunch,label,labelColor,personColor}) {
+  const T = getT(useDark());
+  const [open,setOpen]=useState(false);
+  const [days,setDays]=useState(5);
+  const sIngs=(lunch.ingredients||[]).map(i=>({...i,item:scaleText(i.item||"",days)}));
+  const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days).replace(/5 containers/g,days+" container"+(days!==1?"s":"")).replace(/all 5/g,"all "+days));
   return (
-    <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
-      <span style={{ fontSize:11, color:T.textLight, fontFamily:"'DM Mono',monospace", letterSpacing:"0.06em", textTransform:"uppercase" }}>Prepping for</span>
-      <div style={{ display:"flex", gap:3 }}>
-        {[1,2,3,4,5].map(n=>(
-          <button key={n} onClick={()=>setDays(n)} style={{ width:28, height:28, borderRadius:6, border:`1px solid ${days===n?color:T.tagBorder}`, background:days===n?color+"22":"none", color:days===n?color:T.textLight, fontSize:12, cursor:"pointer", fontFamily:"'DM Mono',monospace", transition:"all 0.15s" }}>{n}</button>
-        ))}
-      </div>
-      <span style={{ fontSize:11, color:T.textLight }}>day{days!==1?"s":""}</span>
-    </div>
-  );
-}
-function scaleN(num, ratio) {
-  const r=Math.round(parseFloat(num)*ratio*8)/8;
-  if(r===Math.floor(r)) return String(r);
-  const whole=Math.floor(r),frac=r-whole;
-  for(const [n,d,s] of [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]])
-    if(Math.abs(frac-n/d)<0.07) return whole>0?whole+" "+s:s;
-  return parseFloat((parseFloat(num)*ratio).toFixed(1)).toString();
-}
-function scaleText(text,days){
-  if(days===5) return text;
-  return text.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml)/gi,(m,num,unit)=>scaleN(num,days/5)+" "+unit);
-}
- 
-// ── Lunch Section (batch-cook with scaler) ───────────────────────────
-function LunchSection({ lunch, label, labelColor, personColor }) {
-  const [open, setOpen] = useState(false);
-  const [days, setDays] = useState(5);
- 
-  const scaledIngs = (lunch.ingredients||[]).map(ing=>({...ing,item:scaleText(ing.item||"",days)}));
-  const scaledSteps = (lunch.steps||[]).map(s=>scaleText(s,days)
-    .replace(/5 containers/g,days+" container"+(days!==1?"s":""))
-    .replace(/all 5/g,"all "+days));
- 
-  return (
-    <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:16, padding:"18px 20px", marginBottom:12 }}>
-      <div style={{ fontSize:10, color:labelColor, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>{label} · Batch Prep</div>
-      <div style={{ fontSize:16, fontWeight:500, color:T.text, fontFamily:"'Lora',serif", marginBottom:4 }}>{lunch.name}</div>
-      {lunch.note && <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:8, fontStyle:"italic" }}>{lunch.note}</div>}
+    <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
+      <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
+      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{lunch.name}</div>
+      {lunch.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:8,fontStyle:"italic"}}>{lunch.note}</div>}
       <MacroRow macros={lunch.macros}/>
- 
-      <button onClick={()=>setOpen(!open)} style={{ background:open?T.goldSoft:T.tag, border:`1px solid ${T.tagBorder}`, borderRadius:20, padding:"4px 14px", cursor:"pointer", fontSize:11, color:T.textMid, transition:"background 0.15s" }}>
-        {open?"▲":"▼"} {open?"Hide":"Show"} recipe
-      </button>
- 
-      {open && (
-        <div style={{ marginTop:14, paddingTop:14, borderTop:`1px solid ${T.divider}` }}>
-          <DaysSelector days={days} setDays={setDays} color={personColor}/>
-          {days<5 && <div style={{ background:T.accentSoft, borderRadius:8, padding:"8px 12px", marginBottom:12, fontSize:11, color:T.accent, lineHeight:1.5 }}>Scaled to {days} day{days!==1?"s":""} — amounts adjusted automatically.</div>}
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
-            <div>
-              <SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel>
-              <ul style={{ listStyle:"none", margin:0, padding:0, display:"flex", flexDirection:"column", gap:6 }}>
-                {scaledIngs.map((ing,i)=>(
-                  <li key={i} style={{ fontSize:13, color:T.textMid, display:"flex", alignItems:"flex-start" }}>
-                    <span style={{ color:T.gold, marginRight:8, fontSize:10, marginTop:3, flexShrink:0 }}>◆</span>
-                    <span>{ing.item}</span>
-                  </li>
-                ))}
+      <button onClick={()=>setOpen(!open)} style={{background:open?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 14px",fontSize:11,color:T.textMid}}>{open?"▲ Hide":"▼ Show"} recipe</button>
+      {open&&(
+        <div style={{marginTop:14,paddingTop:14,borderTop:`1px solid ${T.divider}`}}>
+          <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
+            <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:"0.06em"}}>Prepping for</span>
+            <div style={{display:"flex",gap:3}}>
+              {[1,2,3,4,5].map(n=><button key={n} onClick={()=>setDays(n)} style={{width:28,height:28,borderRadius:6,border:`1px solid ${days===n?personColor:T.tagBorder}`,background:days===n?personColor+"22":"none",color:days===n?personColor:T.textLight,fontSize:12,fontFamily:"'DM Mono',monospace"}}>{n}</button>)}
+            </div>
+            <span style={{fontSize:11,color:T.textLight}}>day{days!==1?"s":""}</span>
+          </div>
+          {days<5&&<div style={{background:T.accentSoft,borderRadius:8,padding:"8px 12px",marginBottom:12,fontSize:11,color:T.accent,lineHeight:1.5}}>Scaled to {days} day{days!==1?"s":""}.</div>}
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+            <div><SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel>
+              <ul style={{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:6}}>
+                {sIngs.map((ing,i)=><li key={i} style={{fontSize:13,color:T.textMid,display:"flex",alignItems:"flex-start"}}><span style={{color:T.gold,marginRight:8,fontSize:10,marginTop:3}}>◆</span>{ing.item}</li>)}
               </ul>
             </div>
-            <div>
-              <SectionLabel>Method</SectionLabel>
-              <ol style={{ paddingLeft:18, margin:0, display:"flex", flexDirection:"column", gap:8 }}>
-                {scaledSteps.map((s,i)=><li key={i} style={{ fontSize:13, lineHeight:1.65, color:T.textMid }}>{s}</li>)}
-              </ol>
-            </div>
+            <div><SectionLabel>Method</SectionLabel><ol style={{paddingLeft:18,margin:0,display:"flex",flexDirection:"column",gap:8}}>{sSteps.map((s,i)=><li key={i} style={{fontSize:13,lineHeight:1.65,color:T.textMid}}>{s}</li>)}</ol></div>
           </div>
         </div>
       )}
@@ -591,207 +475,248 @@ function LunchSection({ lunch, label, labelColor, personColor }) {
     </div>
   );
 }
- 
-// ── Shopping Tab ─────────────────────────────────────────────────────
-function ShoppingTab({ week }) {
-  const [checked, setChecked] = useState(()=>{ try{return JSON.parse(localStorage.getItem("jl_shop_"+week.id)||"{}");} catch{return {};} });
-  const toggle = key => setChecked(prev=>{ const next={...prev,[key]:!prev[key]}; localStorage.setItem("jl_shop_"+week.id,JSON.stringify(next)); return next; });
-  const cats = Object.entries(week.shopping||{});
-  const total = cats.reduce((n,[,items])=>n+items.length,0);
-  const done  = Object.values(checked).filter(Boolean).length;
-  const catColors = { "Must Buy":T.accent, "Check Supply":T.blue, "Already Have":T.green };
+
+// ── Shopping ──────────────────────────────────────────────────────────
+function ShoppingTab({week}) {
+  const T = getT(useDark());
+  const SK="jl_shop_"+week.id;
+  const [ck,setCk]=useState(()=>{try{return JSON.parse(localStorage.getItem(SK)||"{}");}catch{return {};}});
+  const tog=k=>setCk(p=>{const n={...p,[k]:!p[k]};localStorage.setItem(SK,JSON.stringify(n));return n;});
+  const cats=Object.entries(week.shopping||{});
+  const tot=cats.reduce((n,[,v])=>n+v.length,0);
+  const done=Object.values(ck).filter(Boolean).length;
+  const catClr={"Must Buy":T.accent,"Check Supply":T.blue,"Already Have":T.green};
   return (
     <div>
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:20 }}>
-        <div style={{ fontSize:13, color:T.textLight }}>{done}/{total} items</div>
-        {done>0 && <button onClick={()=>{setChecked({});localStorage.removeItem("jl_shop_"+week.id);}} style={{ background:"none", border:`1px solid ${T.border}`, borderRadius:8, color:T.textLight, padding:"4px 12px", cursor:"pointer", fontSize:11 }}>Clear all</button>}
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
+        <div style={{fontSize:13,color:T.textLight}}>{done}/{tot} items</div>
+        {done>0&&<button onClick={()=>{setCk({});localStorage.removeItem(SK);}} style={{background:"none",border:`1px solid ${T.border}`,borderRadius:8,color:T.textLight,padding:"4px 12px",fontSize:11}}>Clear all</button>}
       </div>
       {cats.map(([cat,items])=>(
-        <div key={cat} style={{ marginBottom:28 }}>
-          <div style={{ fontSize:12, letterSpacing:"0.1em", textTransform:"uppercase", color:catColors[cat]||T.gold, fontWeight:500, marginBottom:10, fontFamily:"'Lora',serif", paddingBottom:6, borderBottom:`1px solid ${T.divider}` }}>{cat}</div>
-          <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
-            {items.map((item,i)=>{
-              const key=cat+":"+i; const isDone=!!checked[key];
-              return (
-                <div key={key} onClick={()=>toggle(key)} style={{ display:"flex", alignItems:"flex-start", gap:12, padding:"10px 14px", borderRadius:10, cursor:"pointer", background:isDone?T.greenSoft:T.card, border:`1px solid ${isDone?"#c8e0c8":T.border}`, transition:"all 0.15s" }}>
-                  <div style={{ width:18, height:18, borderRadius:"50%", flexShrink:0, marginTop:1, border:`2px solid ${isDone?T.green:T.textLight}`, background:isDone?T.green:"none", display:"flex", alignItems:"center", justifyContent:"center" }}>
-                    {isDone&&<span style={{ color:"#fff", fontSize:10 }}>✓</span>}
-                  </div>
-                  <span style={{ fontSize:13, color:isDone?T.textLight:T.text, textDecoration:isDone?"line-through":"none", lineHeight:1.5 }}>{typeof item==="string"?item:item.display||item}</span>
+        <div key={cat} style={{marginBottom:28}}>
+          <div style={{fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",color:catClr[cat]||T.gold,marginBottom:10,fontFamily:"'Lora',serif",paddingBottom:6,borderBottom:`1px solid ${T.divider}`}}>{cat}</div>
+          <div style={{display:"flex",flexDirection:"column",gap:4}}>
+            {items.map((item,i)=>{const k=cat+":"+i;const isDone=!!ck[k];return(
+              <div key={k} onClick={()=>tog(k)} style={{display:"flex",alignItems:"flex-start",gap:12,padding:"10px 14px",borderRadius:10,cursor:"pointer",background:isDone?T.greenSoft:T.card,border:`1px solid ${isDone?"#c8e0c820":T.border}`,transition:"all 0.15s"}}>
+                <div style={{width:18,height:18,borderRadius:"50%",flexShrink:0,marginTop:1,border:`2px solid ${isDone?T.green:T.textLight}`,background:isDone?T.green:"none",display:"flex",alignItems:"center",justifyContent:"center"}}>
+                  {isDone&&<span style={{color:"#fff",fontSize:10}}>✓</span>}
                 </div>
-              );
-            })}
+                <span style={{fontSize:13,color:isDone?T.textLight:T.text,textDecoration:isDone?"line-through":"none",lineHeight:1.5}}>{typeof item==="string"?item:item.display||item}</span>
+              </div>
+            );})}
           </div>
         </div>
       ))}
     </div>
   );
 }
- 
-// ── Nutrition Tab ─────────────────────────────────────────────────────
-function MicroBar({ label, value, dri, unit, isUpper, color }) {
-  const pct = Math.min(100,Math.round((value/dri)*100));
-  const over = value > dri;
+
+// ── Nutrition Tab — full micro aggregation ────────────────────────────
+function MicroBar({label,value,dri,unit,isUpper,color}) {
+  const T = getT(useDark());
+  const pct=Math.min(100,Math.round((value/dri)*100));
+  const over=value>dri&&isUpper;
   return (
-    <div style={{ marginBottom:14 }}>
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:4 }}>
-        <span style={{ fontSize:12, color:T.textMid, textTransform:"capitalize" }}>{label.replace(/_/g," ")}</span>
-        <span style={{ fontSize:11, fontFamily:"monospace", color:over?"#c05050":T.textLight }}>
-          {value}{unit} <span style={{ color:T.textLight }}>/ {dri}{unit}</span>
-        </span>
+    <div style={{marginBottom:14}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:4}}>
+        <span style={{fontSize:12,color:T.textMid,textTransform:"capitalize"}}>{label.replace(/_/g," ")}</span>
+        <span style={{fontSize:11,fontFamily:"monospace",color:over?"#c05050":T.textLight}}>{value}{unit} <span style={{color:T.textLight}}>/ {dri}{unit}</span></span>
       </div>
-      <div style={{ height:6, background:"#ede8de", borderRadius:3, overflow:"hidden" }}>
-        <div style={{ height:"100%", width:`${pct}%`, background:over?"#e07070":(color||T.gold), borderRadius:3, transition:"width 0.4s" }}/>
+      <div style={{height:6,background:T.divider,borderRadius:3,overflow:"hidden"}}>
+        <div style={{height:"100%",width:`${pct}%`,background:over?"#e07070":(color||T.gold),borderRadius:3,transition:"width 0.4s"}}/>
       </div>
-      {over&&isUpper&&<div style={{ fontSize:10, color:"#c05050", marginTop:2 }}>↑ above target</div>}
+      {over&&<div style={{fontSize:10,color:"#c05050",marginTop:2}}>↑ above limit</div>}
     </div>
   );
 }
- 
-function NutritionTab({ week, nutritionDB }) {
-  const [person, setPerson] = useState("jake");
-  const targets = week.targets && week.targets[person];
-  if (!targets) return null;
-  const goal = targets.goal;
-  const dri = nutritionDB._dri && nutritionDB._dri.padre; // reuse padre DRI
-  const color = person==="jake"?T.blue:T.accent;
-  const bg    = person==="jake"?T.blueSoft:T.accentSoft;
+
+function NutritionTab({week,nutritionDB}) {
+  const T = getT(useDark());
+  const dark = useDark();
+  const [person,setPerson]=useState("jake");
+  const targets=week.targets&&week.targets[person];
+  if(!targets) return null;
+  const goal=targets.goal;
+  const dri=nutritionDB._dri&&nutritionDB._dri[person];
+
+  // ── Aggregate micros across all meals (Padre's approach) ────────────
+  const microKeys = dri ? Object.keys(dri) : [];
+  const weekMicros = {};
+  microKeys.forEach(k=>weekMicros[k]=0);
+
+  const allMeals = [
+    ...(person==="jake"
+      ? [...(week.jakeSnacks||[]).map(s=>({ingredients:[]})), {ingredients:week.jakeLunch?.ingredients||[]}]
+      : [...(week.laineSnacks||[]).map(s=>({ingredients:[]})), {ingredients:week.laineLunch?.ingredients||[]}, ...(week.laineBreakfasts||[])]
+    ),
+    ...(week.dinners||[])
+  ];
+
+  allMeals.forEach(meal=>{
+    (meal.ingredients||[]).forEach(ing=>{
+      const db=nutritionDB[ing.nutritionKey];
+      if(!db||!db.micros) return;
+      microKeys.forEach(k=>{if(db.micros[k]!=null) weekMicros[k]+=db.micros[k];});
+    });
+  });
+  const dailyMicros={};
+  microKeys.forEach(k=>dailyMicros[k]=Math.round(weekMicros[k]/7));
+
+  const color=person==="jake"?T.blue:T.accent;
+  const bg=person==="jake"?T.blueSoft:T.accentSoft;
+
+  // Water cells estimated pct — rough weekly avg vs goal
+  const waterCells=[
+    {label:"Calories",value:goal[0],unit:"kcal",pct:Math.round((targets.total[0]/goal[0])*100),color:"#c8814a",bg:dark?"#261a10":"#fdf6e8"},
+    {label:"Protein", value:goal[1],unit:"g",   pct:Math.round((targets.total[1]/goal[1])*100),color:"#6b9e6b",bg:dark?"#131e13":"#edf5ed"},
+    {label:"Carbs",   value:goal[2],unit:"g",   pct:Math.round((targets.total[2]/goal[2])*100),color:"#c8a96a",bg:dark?"#231e10":"#fdf4e3"},
+    {label:"Fat",     value:goal[3],unit:"g",   pct:Math.round((targets.total[3]/goal[3])*100),color:"#7a9ec0",bg:dark?"#101c26":"#eef3f7"},
+  ];
+
   return (
     <div>
-      {/* Person toggle */}
-      <div style={{ display:"flex", gap:2, background:"#ede8de", borderRadius:7, padding:3, marginBottom:24, width:"fit-content" }}>
+      <div style={{display:"flex",gap:2,background:T.tag,borderRadius:7,padding:3,marginBottom:24,width:"fit-content"}}>
         {["jake","laine"].map(p=>(
-          <button key={p} onClick={()=>setPerson(p)} style={{ padding:"5px 18px", background:person===p?"#fff":"none", border:"none", borderRadius:5, cursor:"pointer", color:person===p?(p==="jake"?T.blue:T.accent):T.textLight, fontSize:11, letterSpacing:"0.06em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace" }}>{p}</button>
+          <button key={p} onClick={()=>setPerson(p)} style={{padding:"5px 18px",background:person===p?T.card:"none",border:"none",borderRadius:5,color:person===p?(p==="jake"?T.blue:T.accent):T.textLight,fontSize:11,letterSpacing:"0.06em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace"}}>{p}</button>
         ))}
       </div>
- 
-      {/* Goal cards */}
-      <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:16, padding:"18px 20px", marginBottom:16 }}>
-        <SectionLabel>Daily Macro Targets</SectionLabel>
-        <div style={{ display:"flex", gap:10, flexWrap:"wrap", marginBottom:16 }}>
-          {[["Cal","cal","kcal",CLR.cal],["Protein","protein","g",CLR.protein],["Carbs","carbs","g",CLR.carbs],["Fat","fat","g",CLR.fat]].map(([label,key,unit,clr],i)=>(
-            <div key={key} style={{ flex:"1 1 70px", minWidth:65, background:bg, borderRadius:12, padding:"12px 14px", textAlign:"center" }}>
-              <div style={{ fontSize:22, fontWeight:500, color:clr, fontFamily:"'Lora',serif" }}>{goal[i]}</div>
-              <div style={{ fontSize:10, color:T.textLight, textTransform:"uppercase", letterSpacing:"0.08em", marginTop:2 }}>{label}{unit!=="kcal"?" (g)":""}</div>
-            </div>
-          ))}
-        </div>
- 
-        {/* Breakdown table */}
-        <div style={{ overflowX:"auto" }}>
-          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
+
+      {/* Water-level macro cells */}
+      <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:20}}>
+        {waterCells.map(c=><WaterCell key={c.label} {...c} dark={dark}/>)}
+      </div>
+
+      {/* Breakdown table */}
+      <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:16}}>
+        <SectionLabel>Daily Breakdown</SectionLabel>
+        <div style={{overflowX:"auto"}}>
+          <table style={{width:"100%",borderCollapse:"collapse",fontSize:12}}>
             <thead>
               <tr>
-                <th style={{ textAlign:"left", padding:"6px 10px", color:T.textLight, fontWeight:400, fontFamily:"monospace", fontSize:10, textTransform:"uppercase", letterSpacing:"0.08em", borderBottom:`1px solid ${T.divider}` }}>Meal</th>
+                <th style={{textAlign:"left",padding:"6px 10px",color:T.textLight,fontWeight:400,fontFamily:"monospace",fontSize:10,textTransform:"uppercase",letterSpacing:"0.08em",borderBottom:`1px solid ${T.divider}`}}>Meal</th>
                 {[["cal","kcal"],["pro","g"],["carbs","g"],["fat","g"],["fiber","g"]].map(([k])=>(
-                  <th key={k} style={{ textAlign:"right", padding:"6px 8px", color:CLR[k]||T.textLight, fontWeight:400, fontFamily:"monospace", fontSize:10, textTransform:"uppercase", borderBottom:`1px solid ${T.divider}` }}>{k}</th>
+                  <th key={k} style={{textAlign:"right",padding:"6px 8px",color:CLR[k]||T.textLight,fontWeight:400,fontFamily:"monospace",fontSize:10,textTransform:"uppercase",letterSpacing:"0.08em",borderBottom:`1px solid ${T.divider}`}}>{k}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {targets.rows.map(([label,...vals],i)=>(
-                <tr key={i} style={{ borderBottom:`1px solid ${T.divider}` }}>
-                  <td style={{ padding:"9px 10px", color:T.text, fontSize:13 }}>{label}</td>
-                  {vals.map((v,j)=><td key={j} style={{ padding:"9px 8px", textAlign:"right", color:CLR[["cal","protein","carbs","fat","fiber"][j]]||T.textLight, fontFamily:"monospace", fontWeight:500, fontSize:12 }}>{v}{j>0?"g":""}</td>)}
+                <tr key={i} style={{borderBottom:`1px solid ${T.divider}`}}>
+                  <td style={{padding:"9px 10px",color:T.text,fontSize:13}}>{label}</td>
+                  {vals.map((v,j)=><td key={j} style={{padding:"9px 8px",textAlign:"right",color:CLR[["cal","protein","carbs","fat","fiber"][j]]||T.textLight,fontFamily:"monospace",fontWeight:500,fontSize:12}}>{v}{j>0?"g":""}</td>)}
                 </tr>
               ))}
-              <tr style={{ background:T.goldSoft }}>
-                <td style={{ padding:"9px 10px", color:T.textMid, fontFamily:"monospace", fontSize:10, textTransform:"uppercase", letterSpacing:"0.08em" }}>Goal</td>
-                {goal.map((v,i)=><td key={i} style={{ padding:"9px 8px", textAlign:"right", color:T.textMid, fontFamily:"monospace", fontWeight:500, fontSize:12 }}>{v}{i>0?"g":""}</td>)}
+              <tr style={{background:T.goldSoft}}>
+                <td style={{padding:"9px 10px",color:T.textMid,fontFamily:"monospace",fontSize:10,textTransform:"uppercase",letterSpacing:"0.08em"}}>Goal</td>
+                {goal.map((v,i)=><td key={i} style={{padding:"9px 8px",textAlign:"right",color:T.textMid,fontFamily:"monospace",fontWeight:500,fontSize:12}}>{v}{i>0?"g":""}</td>)}
               </tr>
             </tbody>
           </table>
         </div>
       </div>
- 
+
       {/* Micros */}
-      {dri && (
-        <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:16, padding:"18px 20px" }}>
-          <SectionLabel>Micronutrients — Est. Daily Average</SectionLabel>
-          <div style={{ fontSize:11, color:T.textLight, lineHeight:1.6, marginBottom:16, background:T.goldSoft, borderRadius:8, padding:"10px 12px" }}>
-            Estimated from ingredient nutritionKey data. Mediterranean diet is naturally high in potassium, vitamin C, folate, and healthy fats.
-          </div>
-          <div style={{ columns:"1 auto" }}>
-            {Object.entries(dri).map(([key,entry])=>{
-              if (!entry) return null;
-              const val = 0;
-              return <MicroBar key={key} label={key} value={val} dri={entry.dri} unit={entry.unit} isUpper={!!entry.upper} color={T.green}/>;
+      <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px"}}>
+        <SectionLabel>Micronutrients — Est. Daily Average</SectionLabel>
+        <div style={{fontSize:11,color:T.textLight,lineHeight:1.6,marginBottom:18,background:T.goldSoft,borderRadius:8,padding:"10px 12px"}}>
+          Estimated from ingredient data averaged across the week. Mediterranean diet is naturally high in potassium, vitamin C, folate, and omega-3s.
+        </div>
+        {microKeys.length===0||Object.values(dailyMicros).every(v=>v===0)
+          ?<div style={{fontSize:12,color:T.textLight}}>Add <code>nutritionKey</code> fields to ingredients in nutrition.json to see micronutrient estimates.</div>
+          :<div style={{columns:"2 auto",columnGap:32}}>
+            {/* Fiber first */}
+            {dri?.fiber&&<MicroBar label="Fiber" value={goal[4]||0} dri={dri.fiber.dri} unit="g" isUpper={false} color={MICRO_CLR.fiber}/>}
+            {microKeys.filter(k=>k!=="fiber").map(k=>{
+              if(!dri[k]) return null;
+              const val=dailyMicros[k]||0;
+              return <MicroBar key={k} label={k} value={val} dri={dri[k].dri} unit={dri[k].unit==="mcg"?"mcg":dri[k].unit==="g"?"g":"mg"} isUpper={!!dri[k].upper} color={MICRO_CLR[k]||T.gold}/>;
             })}
           </div>
-        </div>
-      )}
+        }
+      </div>
     </div>
   );
 }
- 
+
 // ── Week View ─────────────────────────────────────────────────────────
-function WeekView({ week, nutritionDB }) {
-  const TABS = ["Dinners","Jake","Laine","Breakfasts","Snacks"];
-  const [tab, setTab] = useState(0);
-  const tabColors = { "Dinners":T.text, "Jake":T.blue, "Laine":T.accent, "Breakfasts":T.gold, "Snacks":T.green };
+function WeekView({week,nutritionDB}) {
+  const T = getT(useDark());
+  const TABS=["Dinners","Jake","Laine","Breakfasts","Snacks"];
+  const [tab,setTab]=useState(0);
   return (
     <div>
-      <TabBar tabs={TABS} active={tab} setActive={setTab} activeColor={tabColors[TABS[tab]]}/>
- 
-      {tab===0 && (
+      <TabBar tabs={TABS} active={tab} setActive={setTab}/>
+
+      {tab===0&&(
         <div>
-          <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:16, background:T.goldSoft, border:`1px solid ${T.tagBorder}`, borderRadius:10, padding:"10px 14px" }}>
-            Every dinner cooked together — same recipe, different portions. Jake's portion is always bigger.
+          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
+            Every dinner cooked together — same recipe, different portions. Jake's is always bigger.
           </div>
-          {(week.dinners||[]).map((d,i)=><DinnerCard key={i} dinner={d}/>)}
+          {week.dinners.map((d,i)=><DinnerCard key={i} dinner={d} week={week}/>)}
         </div>
       )}
- 
-      {tab===1 && (
+
+      {tab===1&&(
         <div>
-          <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:16, background:T.blueSoft, border:`1px solid #c5d9e8`, borderRadius:10, padding:"10px 14px" }}>
-            Batch cook on Sunday — divide into 5 containers. Keeps all week.
-          </div>
+          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.blueSoft,border:`1px solid ${T.blue}22`,borderRadius:10,padding:"10px 14px"}}>Batch cook Sunday — 5 containers, keeps all week.</div>
           <LunchSection lunch={week.jakeLunch} label="Jake" labelColor={T.blue} personColor={T.blue}/>
-          <div style={{ marginTop:16, marginBottom:8 }}>
-            <div style={{ fontSize:10, color:T.textLight, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:12 }}>Jake's Snacks — pick 1–2 per day</div>
+          <div style={{marginTop:20}}>
+            <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Jake's Snacks — pick 1–2 per day</div>
             {(week.jakeSnacks||[]).map((s,i)=>(
-              <div key={i} style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:14, padding:"14px 18px", marginBottom:10 }}>
-                <div style={{ fontSize:15, fontWeight:500, color:T.text, fontFamily:"'Lora',serif", marginBottom:4 }}>{s.name}</div>
+              <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
+                <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
                 <MacroRow macros={s.macros}/>
-                <div style={{ fontSize:12, color:T.textMid, lineHeight:1.6 }}>{s.desc}</div>
+                <div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
                 <MealRating mealKey={"jsnack_"+(s.name||"")}/>
               </div>
             ))}
           </div>
         </div>
       )}
- 
-      {tab===2 && (
+
+      {tab===2&&(
         <div>
-          <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:16, background:T.accentSoft, border:`1px solid #e8cfc5`, borderRadius:10, padding:"10px 14px" }}>
-            Mason jars batch-made Sunday. Dressing kept separate. Two sittings per jar.
-          </div>
+          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>Mason jars batch-made Sunday. Dressing separate. Two sittings per jar.</div>
           <LunchSection lunch={week.laineLunch} label="Laine" labelColor={T.accent} personColor={T.accent}/>
+          <div style={{marginTop:20}}>
+            <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Laine's Snacks</div>
+            {(week.laineSnacks||[]).map((s,i)=>(
+              <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
+                <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
+                <MacroRow macros={s.macros}/>
+                <div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
+                <MealRating mealKey={"lsnack_"+(s.name||"")}/>
+              </div>
+            ))}
+          </div>
         </div>
       )}
- 
-      {tab===3 && (
+
+      {tab===3&&(
         <div>
-          <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:16, background:T.goldSoft, border:`1px solid ${T.tagBorder}`, borderRadius:10, padding:"10px 14px" }}>
-            Laine only — Jake has coffee.
-          </div>
+          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>Laine only — Jake has coffee.</div>
           {(week.laineBreakfasts||[]).map((b,i)=><MealCard key={i} meal={b} personLabel="Laine" personColor={T.accent}/>)}
         </div>
       )}
- 
-      {tab===4 && (
+
+      {tab===4&&(
         <div>
-          <div style={{ fontSize:12, color:T.textLight, lineHeight:1.65, marginBottom:16, background:T.greenSoft, border:`1px solid #c8e0c8`, borderRadius:10, padding:"10px 14px" }}>
-            Jake's snacks are in his tab. These show up here too for reference.
-          </div>
+          {/* Tzatziki recipe card */}
+          {week.tzatziki&&<MealCard meal={week.tzatziki} personLabel="Recipe" personColor={T.green}/>}
+          <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginTop:8,marginBottom:12}}>Jake's Snacks</div>
           {(week.jakeSnacks||[]).map((s,i)=>(
-            <div key={i} style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:14, padding:"14px 18px", marginBottom:10 }}>
-              <div style={{ fontSize:10, color:T.blue, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>Jake</div>
-              <div style={{ fontSize:15, fontWeight:500, color:T.text, fontFamily:"'Lora',serif", marginBottom:4 }}>{s.name}</div>
-              <MacroRow macros={s.macros}/>
-              <div style={{ fontSize:12, color:T.textMid, lineHeight:1.6 }}>{s.desc}</div>
-              <MealRating mealKey={"snack_"+(s.name||"")}/>
+            <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
+              <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
+              <MacroRow macros={s.macros}/><div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
+              <MealRating mealKey={"jsnack_"+(s.name||"")}/>
+            </div>
+          ))}
+          <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginTop:20,marginBottom:12}}>Laine's Snacks</div>
+          {(week.laineSnacks||[]).map((s,i)=>(
+            <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
+              <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
+              <MacroRow macros={s.macros}/><div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
+              <MealRating mealKey={"lsnack_"+(s.name||"")}/>
             </div>
           ))}
         </div>
@@ -799,119 +724,136 @@ function WeekView({ week, nutritionDB }) {
     </div>
   );
 }
- 
-// ── History Tab ───────────────────────────────────────────────────────
-function HistoryTab({ allWeeks, nutritionDB }) {
-  const [viewing, setViewing] = useState(null);
-  const past = allWeeks.filter(w=>w.id!==CURRENT_WEEK_ID).reverse();
-  if (viewing) return (
+
+// ── History ───────────────────────────────────────────────────────────
+function HistoryTab({allWeeks,nutritionDB}) {
+  const T = getT(useDark());
+  const [viewing,setViewing]=useState(null);
+  const past=allWeeks.filter(w=>w.id!==CURRENT_WEEK_ID).reverse();
+  if(viewing) return (
     <div>
-      <button onClick={()=>setViewing(null)} style={{ display:"flex", alignItems:"center", gap:8, background:"none", border:`1px solid ${T.border}`, borderRadius:8, color:T.textMid, padding:"7px 14px", cursor:"pointer", fontSize:12, marginBottom:24 }}>← Back</button>
-      <div style={{ fontSize:13, color:T.accent, fontFamily:"'Lora',serif", marginBottom:20 }}>{viewing.label}</div>
+      <button onClick={()=>setViewing(null)} style={{display:"flex",alignItems:"center",gap:8,background:"none",border:`1px solid ${T.border}`,borderRadius:8,color:T.textMid,padding:"7px 14px",fontSize:12,marginBottom:24}}>← Back</button>
+      <div style={{fontSize:13,color:T.accent,fontFamily:"'Lora',serif",marginBottom:20}}>{viewing.label}</div>
       <WeekView week={viewing} nutritionDB={nutritionDB}/>
     </div>
   );
-  if (!past.length) return (
-    <div style={{ textAlign:"center", padding:"60px 0", color:T.textLight }}>
-      <div style={{ fontSize:32, marginBottom:12 }}>🫙</div>
-      <div style={{ fontSize:14 }}>No past weeks yet.</div>
-      <div style={{ fontSize:12, marginTop:6 }}>Past weeks appear here as you add new JSON files to weeks/.</div>
-    </div>
-  );
+  if(!past.length) return <div style={{textAlign:"center",padding:"60px 0",color:T.textLight,fontSize:14}}>No past weeks yet.</div>;
   return (
     <div>
-      <div style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.1em", color:T.textLight, marginBottom:16 }}>{past.length} past week{past.length!==1?"s":""}</div>
+      <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:"0.1em",color:T.textLight,fontFamily:"'DM Mono',monospace",marginBottom:16}}>{past.length} past week{past.length!==1?"s":""}</div>
       {past.map(week=>(
-        <div key={week.id} style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:14, padding:"16px 20px", display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:10 }}>
+        <div key={week.id} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"16px 20px",display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
           <div>
-            <div style={{ fontSize:15, fontFamily:"'Lora',serif", marginBottom:4 }}>{week.label}</div>
-            <div style={{ fontSize:11, color:T.textLight, fontFamily:"monospace" }}>{(week.dinners||[]).length} dinners</div>
+            <div style={{fontSize:15,fontFamily:"'Lora',serif",color:T.text,marginBottom:4}}>{week.label}</div>
+            <div style={{fontSize:11,color:T.textLight,fontFamily:"monospace"}}>{(week.dinners||[]).length} dinners</div>
           </div>
-          <button onClick={()=>setViewing(week)} style={{ background:T.accentSoft, border:`1px solid ${T.tagBorder}`, borderRadius:8, color:T.accent, padding:"7px 14px", cursor:"pointer", fontSize:12 }}>View</button>
+          <button onClick={()=>setViewing(week)} style={{background:T.accentSoft,border:`1px solid ${T.tagBorder}`,borderRadius:8,color:T.accent,padding:"7px 14px",fontSize:12}}>View</button>
         </div>
       ))}
     </div>
   );
 }
- 
+
+// ── Dark Mode Toggle ──────────────────────────────────────────────────
+function DarkToggle({dark,setDark}) {
+  const T = getT(dark);
+  return (
+    <button onClick={()=>{setDark(!dark);localStorage.setItem(DARK_KEY,String(!dark));document.body.className=!dark?"dark":"light";}}
+      style={{background:T.tag,border:`1px solid ${T.border}`,borderRadius:20,padding:"5px 14px",fontSize:11,color:T.textMid,display:"flex",alignItems:"center",gap:7,transition:"all 0.2s"}}>
+      <span style={{fontSize:14}}>{dark?"☀️":"🌙"}</span>
+      <span style={{fontFamily:"'DM Mono',monospace",letterSpacing:"0.06em",textTransform:"uppercase"}}>{dark?"Light":"Dark"}</span>
+    </button>
+  );
+}
+
 // ── App ───────────────────────────────────────────────────────────────
 function App() {
-  const [mainTab, setMainTab]   = useState(0);
-  const [allWeeks, setAllWeeks] = useState([]);
-  const [loading, setLoading]   = useState(true);
-  const [error, setError]       = useState(null);
-  const [nutritionDB, setNutritionDB] = useState({});
-  const [subs, setSubs] = useState(()=>{ try{return JSON.parse(localStorage.getItem("jl_subs")||"{}");} catch{return {};} });
-  const setSub = useCallback((key,val)=>setSubs(prev=>{ const next={...prev}; if(val==null) delete next[key]; else next[key]=val; localStorage.setItem("jl_subs",JSON.stringify(next)); return next; }), []);
-  const [openKey, setOpenKey] = useState(null);
- 
+  const [dark,setDark]=useState(()=>{const s=localStorage.getItem(DARK_KEY);if(s!=null)return s==="true";return window.matchMedia("(prefers-color-scheme: dark)").matches;});
+  const T = getT(dark);
+  const [mainTab,setMainTab]=useState(0);
+  const [allWeeks,setAllWeeks]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [error,setError]=useState(null);
+  const [nutritionDB,setNutritionDB]=useState({});
+  const [subs,setSubs]=useState(()=>{try{return JSON.parse(localStorage.getItem("jl_subs")||"{}");}catch{return {};}});
+  const setSub=useCallback((k,v)=>setSubs(p=>{const n={...p};if(v==null)delete n[k];else n[k]=v;localStorage.setItem("jl_subs",JSON.stringify(n));return n;}),[]);
+  const [openKey,setOpenKey]=useState(null);
+
+  useEffect(()=>{
+    document.body.className=dark?"dark":"light";
+    document.body.style.setProperty("--scroll-track",dark?"#1a1710":"#f5f0e8");
+  },[dark]);
+
   useEffect(()=>{
     fetch("nutrition.json").then(r=>r.json()).then(setNutritionDB).catch(()=>{});
     (async()=>{
-      try {
-        const results = await Promise.all(WEEK_REGISTRY.map(async({id,label})=>{
-          const res = await fetch("weeks/"+id+".json");
+      try{
+        const results=await Promise.all(WEEK_REGISTRY.map(async({id,label})=>{
+          const res=await fetch("weeks/"+id+".json");
           if(!res.ok) throw new Error("Could not load "+id+".json");
-          return {...await res.json(), id, label};
+          return{...await res.json(),id,label};
         }));
         setAllWeeks(results);
-      } catch(e) { setError(e.message); }
-      finally { setLoading(false); }
+      }catch(e){setError(e.message);}
+      finally{setLoading(false);}
     })();
   },[]);
- 
-  const currentWeek = allWeeks.find(w=>w.id===CURRENT_WEEK_ID);
-  const MAIN_TABS = ["This Week","Shopping","Nutrition","Past Weeks"];
- 
-  if (loading) return <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", color:T.textLight, fontSize:13, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em" }}>Loading…</div>;
-  if (error) return <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center" }}><div style={{ textAlign:"center" }}><div style={{ color:T.accent, fontFamily:"'Lora',serif", fontSize:18, marginBottom:8 }}>Something's off</div><div style={{ color:T.textLight, fontSize:11 }}>{error}</div></div></div>;
- 
+
+  const currentWeek=allWeeks.find(w=>w.id===CURRENT_WEEK_ID);
+  const MAIN_TABS=["This Week","Shopping","Nutrition","Past Weeks"];
+
+  if(loading) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.textLight,fontSize:13,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em"}}>Loading…</div>;
+  if(error) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{textAlign:"center"}}><div style={{color:T.accent,fontFamily:"'Lora',serif",fontSize:18,marginBottom:8}}>Something's off</div><div style={{color:T.textLight,fontSize:11}}>{error}</div></div></div>;
+
   return (
-    <OpenDropCtx.Provider value={{ openKey, setOpenKey }}>
-    <SubsCtx.Provider value={{ subs, setSub }}>
-    <NutritionDBCtx.Provider value={nutritionDB}>
-      <div style={{ minHeight:"100vh", padding:"40px 20px 80px" }}>
-        <div style={{ maxWidth:860, margin:"0 auto" }}>
- 
+    <DarkCtx.Provider value={dark}>
+    <DropCtx.Provider value={{openKey,setOpenKey}}>
+    <SubsCtx.Provider value={{subs,setSub}}>
+    <NutCtx.Provider value={nutritionDB}>
+      <div style={{minHeight:"100vh",background:T.bg,color:T.text,padding:"40px 20px 80px",transition:"background 0.3s,color 0.3s"}}>
+        <div style={{maxWidth:860,margin:"0 auto"}}>
+
           {/* Header */}
-          <div style={{ marginBottom:24, borderBottom:`1px solid ${T.divider}`, paddingBottom:24 }}>
-            <div style={{ fontSize:10, letterSpacing:"0.2em", textTransform:"uppercase", color:T.textLight, marginBottom:8, fontFamily:"'DM Mono',monospace" }}>Mediterranean · Meal Plan</div>
-            <h1 style={{ fontFamily:"'Lora',serif", fontSize:"clamp(2rem,6vw,3.2rem)", fontWeight:400, lineHeight:1.1, color:T.text }}>
-              Jake <span style={{ color:T.gold }}>&amp;</span> <span style={{ color:T.accent, fontStyle:"italic" }}>Laine.</span>
-            </h1>
-            {currentWeek && <div style={{ fontSize:11, color:T.textLight, fontFamily:"'DM Mono',monospace", textTransform:"uppercase", letterSpacing:"0.1em", marginTop:10 }}>{currentWeek.label}</div>}
-          </div>
- 
-          {/* Water Tracker */}
-          <WaterTracker/>
- 
-          {/* Main nav */}
-          <div style={{ display:"flex", gap:3, background:"#ede8de", border:`1px solid ${T.border}`, borderRadius:14, padding:4, marginBottom:28, maxWidth:520 }}>
-            {MAIN_TABS.map((t,i)=>(
-              <button key={t} onClick={()=>setMainTab(i)} style={{ flex:1, padding:"9px 12px", background:mainTab===i?T.card:"none", border:`1px solid ${mainTab===i?T.border:"transparent"}`, borderRadius:10, cursor:"pointer", color:mainTab===i?T.text:T.textLight, fontSize:12, fontWeight:mainTab===i?500:400, transition:"all 0.15s" }}>{t}</button>
-            ))}
-          </div>
- 
-          {mainTab===0 && currentWeek && <WeekView week={currentWeek} nutritionDB={nutritionDB}/>}
-          {mainTab===1 && currentWeek && <ShoppingTab week={currentWeek}/>}
-          {mainTab===2 && currentWeek && <NutritionTab week={currentWeek} nutritionDB={nutritionDB}/>}
-          {mainTab===3 && <HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
- 
-          {/* Footer */}
-          <div style={{ marginTop:64, paddingTop:28, borderTop:`1px solid ${T.divider}`, textAlign:"center" }}>
-            <div style={{ fontFamily:"'Lora',serif", fontSize:"clamp(1.1rem,3vw,1.4rem)", fontWeight:400, fontStyle:"italic", color:T.textLight, letterSpacing:"0.02em" }}>
-              Love you both. <span style={{ color:T.accent }}>♥</span>
+          <div style={{marginBottom:24,borderBottom:`1px solid ${T.divider}`,paddingBottom:24}}>
+            <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",flexWrap:"wrap",gap:12}}>
+              <div>
+                <div style={{fontSize:10,letterSpacing:"0.2em",textTransform:"uppercase",color:T.textLight,marginBottom:8,fontFamily:"'DM Mono',monospace"}}>Mediterranean · Meal Plan</div>
+                <h1 style={{fontFamily:"'Lora',serif",fontSize:"clamp(2rem,6vw,3.2rem)",fontWeight:400,lineHeight:1.1,color:T.text}}>
+                  Jake <span style={{color:T.gold}}>&amp;</span> <span style={{color:T.accent,fontStyle:"italic"}}>Laine.</span>
+                </h1>
+                {currentWeek&&<div style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:"0.1em",marginTop:10}}>{currentWeek.label}</div>}
+              </div>
+              <DarkToggle dark={dark} setDark={setDark}/>
             </div>
           </div>
- 
+
+          <WaterTracker/>
+
+          {/* Nav */}
+          <div style={{display:"flex",gap:3,background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:28,maxWidth:520}}>
+            {MAIN_TABS.map((t,i)=>(
+              <button key={t} onClick={()=>setMainTab(i)} style={{flex:1,padding:"9px 12px",background:mainTab===i?T.card:"none",border:`1px solid ${mainTab===i?T.border:"transparent"}`,borderRadius:10,color:mainTab===i?T.text:T.textLight,fontSize:12,fontWeight:mainTab===i?500:400,transition:"all 0.15s"}}>{t}</button>
+            ))}
+          </div>
+
+          {mainTab===0&&currentWeek&&<WeekView week={currentWeek} nutritionDB={nutritionDB}/>}
+          {mainTab===1&&currentWeek&&<ShoppingTab week={currentWeek}/>}
+          {mainTab===2&&currentWeek&&<NutritionTab week={currentWeek} nutritionDB={nutritionDB}/>}
+          {mainTab===3&&<HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
+
+          <div style={{marginTop:64,paddingTop:28,borderTop:`1px solid ${T.divider}`,textAlign:"center"}}>
+            <div style={{fontFamily:"'Lora',serif",fontSize:"clamp(1.1rem,3vw,1.4rem)",fontWeight:400,fontStyle:"italic",color:T.textLight}}>
+              Love you both. <span style={{color:T.accent}}>♥</span>
+            </div>
+          </div>
         </div>
       </div>
-    </NutritionDBCtx.Provider>
+    </NutCtx.Provider>
     </SubsCtx.Provider>
-    </OpenDropCtx.Provider>
+    </DropCtx.Provider>
+    </DarkCtx.Provider>
   );
 }
- 
 ReactDOM.render(<App/>, document.getElementById("root"));
 </script>
 </body>
