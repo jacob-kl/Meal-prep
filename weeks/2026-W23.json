@@ -1,4 +1,3 @@
-
 {
   "_v": 4,
   "_note": "Week of June 1–7, 2026. Mediterranean. Pita Tuesday = shrimp + pork tenderloin. Chicken swapped out of dinners where possible per Laine preference. Tzatziki appears on Pita Tuesday and is a standalone recipe. Laine waffle Sunday instead of pancakes.",
@@ -68,7 +67,7 @@
     {
       "day": "Monday (June 1)",
       "name": "Lemon Herb Cod + Quinoa + Cherry Tomatoes",
-      "note": "Clean Mediterranean opener. Cod baked in olive oil and lemon, quinoa for fiber, cherry tomatoes tossed in at the end. Simple and fast.",
+      "note": "Clean Mediterranean opener. Cod baked in olive oil and lemon, quinoa for fiber, cherry tomatoes tossed in at the end. Simple and fast. Sweet potato added as a side — big potassium hit, vitamin A.",
       "jake": {
         "cal": 622,
         "protein": 56,
@@ -111,6 +110,10 @@
         {
           "item": "Garlic powder, oregano, paprika, salt",
           "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        },
+        {
+          "item": "Sweet potato — Jake 1 medium, Laine ½ medium (roasted alongside cod)",
+          "nutritionKey": "Sweet potato"
         }
       ],
       "steps": [
@@ -124,7 +127,7 @@
     {
       "day": "Tuesday (June 2) — Pita Night",
       "name": "Shrimp & Pork Tenderloin Pita Pockets with Tzatziki",
-      "note": "Both are genuinely Mediterranean — shrimp is coastal Greek cooking, pork tenderloin is lean enough to work. Jake gets both proteins loaded in, Laine goes heavier shrimp. Tzatziki sauce makes it. Cook pork ahead or alongside shrimp — it's fast.",
+      "note": "Both are genuinely Mediterranean — shrimp is coastal Greek cooking, pork tenderloin is lean enough to work. Jake gets both proteins loaded in, Laine goes heavier shrimp. Tzatziki sauce makes it. Cook pork ahead or alongside shrimp — it's fast. Avocado added — potassium, healthy fat, and it's genuinely delicious in a pita.",
       "jake": {
         "cal": 710,
         "protein": 72,
@@ -180,6 +183,10 @@
         {
           "item": "Garlic powder, oregano, smoked paprika, salt",
           "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        },
+        {
+          "item": "Avocado — ½ avocado shared, sliced into pitas",
+          "nutritionKey": "Avocado"
         }
       ],
       "steps": [
@@ -188,13 +195,14 @@
         "Heat olive oil in a pan over medium-high. Sear pork 2–3 min per side until just cooked through — don't overdo it. Set aside.",
         "In the same pan, cook shrimp with remaining seasoning 2 min per side. They go fast.",
         "Warm pitas directly on the gas burner 30 sec per side, or in a dry pan.",
-        "Build pitas: generous spread of tzatziki, then pork + shrimp, then tomatoes, cucumber, spinach. Jake loads both proteins. Laine goes shrimp-forward."
+        "Build pitas: generous spread of tzatziki, then pork + shrimp, then tomatoes, cucumber, spinach. Jake loads both proteins. Laine goes shrimp-forward.",
+        "Slice avocado. Add to pitas with everything else — it pairs perfectly with the tzatziki."
       ]
     },
     {
       "day": "Wednesday (June 4)",
       "name": "Shrimp & Chickpea Skillet",
-      "note": "Swapped chicken for shrimp per Laine preference. Shrimp + chickpeas + cherry tomatoes + spinach in one pan. Mediterranean and fast — 15 minutes total once the shrimp is thawed.",
+      "note": "Swapped chicken for shrimp per Laine preference. Shrimp + chickpeas + cherry tomatoes + spinach in one pan. Mediterranean and fast — 15 minutes total once the shrimp is thawed. Sweet potato + broccoli added. Broccoli = sulforaphane (important for Laine).",
       "jake": {
         "cal": 740,
         "protein": 62,
@@ -237,6 +245,14 @@
         {
           "item": "Garlic powder, oregano, cumin, salt",
           "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        },
+        {
+          "item": "Sweet potato — Jake 1 medium, Laine ½ medium (roasted)",
+          "nutritionKey": "Sweet potato"
+        },
+        {
+          "item": "Broccoli florets — 1 cup shared, roasted",
+          "nutritionKey": "Broccoli florets"
         }
       ],
       "steps": [
@@ -302,7 +318,7 @@
     {
       "day": "Friday (June 6)",
       "name": "Cod + Cannellini Bean Skillet",
-      "note": "Lean clean Friday. Cod on white beans with cherry tomatoes and spinach. Very coastal Mediterranean. The beans handle the carbs and fiber — no grain needed.",
+      "note": "Lean clean Friday. Cod on white beans with cherry tomatoes and spinach. Very coastal Mediterranean. The beans handle the carbs and fiber — no grain needed. Broccoli + sweet potato added. Potassium, fiber, sulforaphane.",
       "jake": {
         "cal": 548,
         "protein": 60,
@@ -345,6 +361,14 @@
         {
           "item": "Garlic powder, oregano, salt",
           "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        },
+        {
+          "item": "Broccoli florets — 1 cup shared, steamed or roasted",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Sweet potato — Jake 1 medium, Laine ½ medium",
+          "nutritionKey": "Sweet potato"
         }
       ],
       "steps": [
@@ -457,7 +481,7 @@
   ],
   "jakeLunch": {
     "name": "Chicken + Chickpea Bowl with Lemon Herb Sauce",
-    "note": "Mediterranean batch bowl. Same 5-container Sunday format. Chickpeas, lemon, garlic basil sauce, edamame. Still the workhorse.",
+    "note": "Mediterranean batch bowl. Same 5-container Sunday format. Chickpeas, lemon, garlic basil sauce, edamame. Still the workhorse. Add ½ fresh avocado per container when eating — don't batch it, it'll brown.",
     "macros": {
       "cal": 897,
       "protein": 74,
@@ -497,6 +521,10 @@
       {
         "item": "Garlic powder, oregano, cumin, salt",
         "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+      },
+      {
+        "item": "Avocado — ½ avocado per container, diced on top (add fresh, not batch-cooked)",
+        "nutritionKey": "Avocado"
       }
     ],
     "steps": [
@@ -663,6 +691,27 @@
   ],
   "laineSnacks": [
     {
+      "name": "Banana + Greek Yogurt",
+      "macros": {
+        "cal": 205,
+        "protein": 18,
+        "carbs": 33,
+        "fat": 0,
+        "fiber": 3
+      },
+      "desc": "1 banana + 1 Oikos Triple Zero. 422mg potassium from banana, 200mg calcium from yogurt. Laine's potassium + calcium snack.",
+      "ingredients": [
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        },
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        }
+      ]
+    },
+    {
       "name": "Greek Yogurt + Berries",
       "macros": {
         "cal": 130,
@@ -766,23 +815,23 @@
       ]
     },
     {
-      "name": "Egg White Mug + Cheese",
+      "name": "Cottage Cheese + Banana",
       "macros": {
-        "cal": 130,
-        "protein": 22,
-        "carbs": 1,
-        "fat": 5,
-        "fiber": 0
+        "cal": 195,
+        "protein": 13,
+        "carbs": 31,
+        "fat": 2,
+        "fiber": 3
       },
-      "desc": "½ cup liquid egg whites microwaved 90 sec. Top with 1 tbsp shredded cheese.",
+      "desc": "½ cup cottage cheese + 1 banana. High potassium, solid calcium, good protein. Jake's bone-density snack.",
       "ingredients": [
         {
-          "item": "Liquid egg whites — ½ cup",
-          "nutritionKey": "Liquid egg whites"
+          "item": "Cottage cheese 2% — ½ cup",
+          "nutritionKey": "Cottage cheese 2%"
         },
         {
-          "item": "Shredded cheese — 1 tbsp",
-          "nutritionKey": "Shredded cheese (4-blend)"
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
         }
       ]
     },
@@ -844,6 +893,23 @@
           "nutritionKey": "Ground flaxseed"
         }
       ]
+    },
+    {
+      "name": "Kefir (plain lowfat)",
+      "macros": {
+        "cal": 110,
+        "protein": 11,
+        "carbs": 12,
+        "fat": 2,
+        "fiber": 0
+      },
+      "desc": "1 cup plain lowfat kefir. 316mg calcium per cup — best single-serve calcium source outside sardines. Also has B12, potassium, and probiotics.",
+      "ingredients": [
+        {
+          "item": "Kefir (plain lowfat) — 1 cup",
+          "nutritionKey": "Kefir (plain lowfat)"
+        }
+      ]
     }
   ],
   "shopping": {
@@ -859,7 +925,13 @@
       "Canned tuna — 5 cans (Laine's mason jars)",
       "Bell pepper — 3–4 large (Laine jars + Tue scramble + Laine snacks)",
       "English cucumber — 2 large (tzatziki + Laine jars + Laine snacks)",
-      "Fresh or dried dill (for tzatziki)"
+      "Fresh or dried dill (for tzatziki)",
+      "Bananas — 2 bunches (Jake + Laine daily snacks)",
+      "Avocados — 6–8 ripe (Jake lunch daily + Pita Tuesday)",
+      "Kefir (plain lowfat) — 1–2 cartons (Jake bone-density snack)",
+      "Cottage cheese 2% — 1 large container (Jake snack)",
+      "Broccoli florets — 2 bags frozen or 2 large heads fresh (Wed + Fri dinners)",
+      "Sweet potatoes — 6–8 medium (Mon + Wed + Fri dinners for both)"
     ],
     "Check Supply": [
       "Frozen cod — need ~1.2 lbs total (Mon + Fri dinners)",
