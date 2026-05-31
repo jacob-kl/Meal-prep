@@ -1,6 +1,6 @@
 # Jake & Laine — Meal Plan
 
-A personal household meal planning app. Single-page, no server needed — just open `index.html` in a browser with the JSON files in the right places.
+A personal household meal planning app. Single-page, no server needed beyond a static file server.
 
 ---
 
@@ -14,22 +14,18 @@ weeks/
   2026-W20.json
   2026-W21.json
   2026-W22.json
-  2026-W23.json
-  2026-W24.json     ← current week (June 8–14)
+  2026-W23.json     ← current week (June 1–7) · Mediterranean pivot
 ```
 
-Open locally by serving with any static server (e.g. `python3 -m http.server`) — the app fetches JSON files via `fetch()` so it won't work from `file://` directly. Or just use VS Code Live Server.
+Open with any static server (e.g. `python3 -m http.server`) or VS Code Live Server — the app fetches JSON via `fetch()` and won't work from `file://` directly.
 
 ---
 
 ## Adding a new week
 
-1. Copy the most recent week JSON (e.g. `2026-W23.json`) into `weeks/`.
-2. Rename it to the new week ID (e.g. `2026-W24.json`).
-3. Edit the contents — dinners, lunches, macros, shopping.
-4. In `index.html`, add the new week to `WEEK_REGISTRY` and update `CURRENT_WEEK_ID`.
-
-The `_note` field at the top is a free-text memo for yourself — week theme, what's new, what was swapped. It's not displayed in the UI.
+1. Copy the current week JSON into `weeks/` with the new ID (e.g. `2026-W24.json`).
+2. Edit dinners, lunches, macros, shopping list.
+3. Add the new week to `WEEK_REGISTRY` in `index.html` and update `CURRENT_WEEK_ID`.
 
 ---
 
@@ -42,64 +38,53 @@ The `_note` field at the top is a free-text memo for yourself — week theme, wh
 | Carbs | 102 g | 152 g |
 | Fat | 90 g | 37 g |
 
-Jake's goal is high-protein, moderate-carb, fat-flexible. Laine's goal is lean, higher-carb, lower-fat — picky eater rules apply (no onion chunks, no strong spice, no mushrooms, no weird textures).
-
 ---
 
 ## Laine's rules
 
-- **No raw onion** (cooked is fine; no visible chunks)
-- **No mushrooms**
-- **Mild spice only** — no jalapeño directly in her portion
-- **No slimy textures** — eggplant, okra, overcooked zucchini are out
-- **Fish is fine** — cod and shrimp are favorites; salmon accepted
-- **Pasta salad format works great** for her lunch — mason jar style, dressing separate
-- **Cherry tomatoes or bell pepper** rotate each week for variety
-- **Egg whites** are fine scrambled; whole eggs are acceptable
-- **Birch Benders pancakes** = Sunday tradition (breakfast-for-dinner)
+- No raw onion (cooked fine, no visible chunks)
+- No mushrooms
+- Mild spice only — nothing hot directly in her portion
+- No slimy textures (eggplant, okra, overcooked zucchini out)
+- Fish is fine — cod and shrimp are favorites; salmon accepted
+- Pasta salad mason jar format works great for lunch
+- Egg whites are fine scrambled
+- Birch Benders pancakes = Sunday tradition
 
 ---
 
 ## Lunch format
 
-Both lunches are batch-cooked Sunday for the full week (5 containers).
+Both batch-cooked Sunday for the full week (5 containers).
 
-**Jake:** Ground turkey + black bean bowl. Roasted onion garlic sauce, edamame, mixed veggies, cheese on top. Reheats well. ~917 cal / 72g protein per container.
+**Jake (W23):** Chicken + chickpea bowl. Garlic basil sauce, edamame, mixed veggies, lemon herb finish. ~897 cal / 74g protein per container.
 
-**Laine:** Mason jar pasta salad. Garofalo pasta + canned tuna + chicken breast + crunchy veg + spinach. Dressing kept separate in a small container. 2 sittings per jar (~300 cal per sitting). ~597 cal / 76g protein per jar.
+**Laine:** Mason jar pasta salad. Garofalo pasta + canned tuna + chicken breast + bell pepper + cucumber + spinach. Dressing separate. 2 sittings per jar. ~597 cal / 76g protein per jar.
 
-The app has a days selector (1–5) that scales ingredient amounts for the batch automatically.
-
----
-
-## Nutrition database (`nutrition.json`)
-
-Every ingredient used across all week JSONs has an entry here with:
-- `serving_qty` and `serving_unit` (the reference portion)
-- `cal`, `protein`, `carbs`, `fat` per serving
-- `micros` object with per-serving micronutrient values (sodium, potassium, vitamin D, etc.)
-- `fiber` where tracked
-
-The app uses this to show per-ingredient nutrition inline in recipes, and to estimate daily micronutrient intake on the Targets tab.
-
-DRI values for sodium, potassium, calcium, vitamin D, magnesium, zinc, vitamin C, B12, iron, vitamin A, folate, phosphorus, selenium, and fiber are stored in `_dri` — split by person since Jake and Laine have different targets based on body size.
+The days selector (1–5) scales ingredient amounts automatically for partial-week batches.
 
 ---
 
-## Week W24 notes (June 8–14)
+## Week W23 — Mediterranean Pivot (June 1–7)
 
-- Taco Tuesday switches to fresh chicken + shrimp (no leftover reliance)
-- Salmon moves to Wednesday for a midweek omega-3 hit
-- Thursday runs pinto beans instead of black beans for variety
-- Friday is a shrimp + egg white skillet — fast, high-protein, low-carb
-- Saturday keeps the beloved garlic basil shrimp pasta
-- Laine's mason jars rotate cherry tomatoes in (bell pepper was W23)
-- Jake's bowl stays the same format — it works
+Key changes from previous weeks:
+- **Olive oil replaces** most other fats throughout
+- **Garlic + lemon + herbs** (oregano, paprika, cumin) are the flavor base on everything
+- **Legumes take center stage** — chickpeas Wed dinner, cannellini beans Fri, Jake's lunch switches to chickpea bowl
+- **Cherry tomatoes added** to Mon/Wed/Fri dinners — they're forgiving for Laine
+- **Taco Tuesday stays** — chicken + shrimp, corn tortillas, sour cream
+- **Saturday pasta goes olive oil + lemon** instead of jarred sauce
+- **Sunday pancake night unchanged** — it's sacred
 
 ---
 
 ## Tech
 
-Plain HTML + React 18 (UMD, loaded from CDN). No build step. State is stored in `localStorage` (shopping checklist, unit preference, ingredient substitutions). The app fetches week JSONs and the nutrition DB dynamically — so it needs to be served over HTTP (not `file://`).
+Plain HTML + React 18 (UMD CDN). No build step. State stored in `localStorage`.
 
-Typography: [Lora](https://fonts.google.com/specimen/Lora) (serif display) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) (data/labels) + [Barlow](https://fonts.google.com/specimen/Barlow) (body).
+**New in this version:**
+- Water fill animations on the Targets tab — macro goals fill like a tank
+- SVG tab icons (plate, fork, sun, bottle, bag, bullseye) that match each section
+- Earthy warm palette: cream background, Lora serif for titles, DM Mono for data
+
+Typography: [Lora](https://fonts.google.com/specimen/Lora) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) + [Barlow](https://fonts.google.com/specimen/Barlow).
