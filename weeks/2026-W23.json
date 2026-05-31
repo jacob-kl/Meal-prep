@@ -270,7 +270,8 @@
           "nutritionKey": "Atlantic salmon (raw)"
         },
         {
-          "item": "White rice (dry) — Jake 70g, Laine 75g"
+          "item": "White rice (dry) — Jake 70g, Laine 75g",
+          "nutritionKey": "White rice (dry)"
         },
         {
           "item": "Baby spinach — 2 cups shared",
@@ -377,7 +378,8 @@
           "nutritionKey": "Frozen shrimp"
         },
         {
-          "item": "Garofalo pasta — Jake 90g dry, Laine 75g dry"
+          "item": "Garofalo pasta — Jake 90g dry, Laine 75g dry",
+          "nutritionKey": "Garofalo organic pasta"
         },
         {
           "item": "Cherry tomatoes — 1 cup shared",
@@ -472,13 +474,16 @@
         "nutritionKey": "Garbanzo beans"
       },
       {
-        "item": "Garlic basil pasta sauce — 2.5 cups total (½ cup per container)"
+        "item": "Garlic basil pasta sauce — 2.5 cups total (½ cup per container)",
+        "nutritionKey": "Signature Select pasta sauce"
       },
       {
-        "item": "Frozen edamame (shelled) — 2.5 cups total (½ cup per container)"
+        "item": "Frozen edamame (shelled) — 2.5 cups total (½ cup per container)",
+        "nutritionKey": "Frozen edamame (shelled)"
       },
       {
-        "item": "Frozen mixed veggies — 5 cups total (1 cup per container)"
+        "item": "Frozen mixed veggies — 5 cups total (1 cup per container)",
+        "nutritionKey": "Frozen veggies (mixed)"
       },
       {
         "item": "Olive oil — 1 tbsp per container",
@@ -519,7 +524,8 @@
         "nutritionKey": "Frozen shrimp"
       },
       {
-        "item": "Garofalo pasta (rotini or penne) — 250g dry total, 50g per jar"
+        "item": "Garofalo pasta (rotini or penne) — 250g dry total, 50g per jar",
+        "nutritionKey": "Garofalo organic pasta"
       },
       {
         "item": "Canned tuna in water — 1 can per jar (5 cans total)",
@@ -538,7 +544,8 @@
         "nutritionKey": "Baby spinach"
       },
       {
-        "item": "Light Italian or Caesar dressing — 2 tbsp per jar, kept separate"
+        "item": "Light Italian or Caesar dressing — 2 tbsp per jar, kept separate",
+        "nutritionKey": "Italian dressing (light)"
       },
       {
         "item": "Lemon juice, garlic powder, salt",
@@ -607,7 +614,8 @@
           "nutritionKey": "Baby spinach"
         },
         {
-          "item": "Shredded cheese — 1 tbsp"
+          "item": "Shredded cheese — 1 tbsp",
+          "nutritionKey": "Shredded cheese (4-blend)"
         }
       ],
       "steps": [
@@ -662,7 +670,17 @@
         "fat": 0,
         "fiber": 2
       },
-      "desc": "1 Oikos Triple Zero container + small handful frozen berries thawed. Fast, high protein, feels like dessert."
+      "desc": "1 Oikos Triple Zero container + small handful frozen berries thawed.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        }
+      ]
     },
     {
       "name": "Cucumber + Tzatziki",
@@ -673,7 +691,17 @@
         "fat": 0,
         "fiber": 1
       },
-      "desc": "½ cucumber sliced + 4 tbsp tzatziki for dipping. Refreshing and filling."
+      "desc": "½ cucumber sliced + 4 tbsp tzatziki for dipping.",
+      "ingredients": [
+        {
+          "item": "English cucumber — ½ large (~150g)",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Greek yogurt (nonfat) — 4 tbsp (tzatziki base)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        }
+      ]
     },
     {
       "name": "Bell Pepper Strips + Hummus",
@@ -684,7 +712,17 @@
         "fat": 6,
         "fiber": 5
       },
-      "desc": "1 medium bell pepper sliced + 4 tbsp hummus. Good crunch, good dip."
+      "desc": "1 medium bell pepper sliced + 4 tbsp hummus.",
+      "ingredients": [
+        {
+          "item": "Bell pepper — 1 medium (150g)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Hummus — 4 tbsp (60g)",
+          "nutritionKey": "Hummus"
+        }
+      ]
     },
     {
       "name": "Egg White Mug",
@@ -695,7 +733,13 @@
         "fat": 0,
         "fiber": 0
       },
-      "desc": "½ cup liquid egg whites in a mug, microwave 90 sec. Add a pinch of salt. Quick protein hit."
+      "desc": "½ cup liquid egg whites in a mug, microwave 90 sec. Quick protein hit.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ½ cup",
+          "nutritionKey": "Liquid egg whites"
+        }
+      ]
     }
   ],
   "jakeSnacks": [
@@ -708,7 +752,17 @@
         "fat": 4,
         "fiber": 2
       },
-      "desc": "1 container + 1 tbsp ground flaxseed."
+      "desc": "1 container + 1 tbsp ground flaxseed.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ]
     },
     {
       "name": "Egg White Mug + Cheese",
@@ -719,7 +773,17 @@
         "fat": 5,
         "fiber": 0
       },
-      "desc": "½ cup liquid egg whites microwaved 90 sec. Top with 1 tbsp shredded cheese."
+      "desc": "½ cup liquid egg whites microwaved 90 sec. Top with 1 tbsp shredded cheese.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ½ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Shredded cheese — 1 tbsp",
+          "nutritionKey": "Shredded cheese (4-blend)"
+        }
+      ]
     },
     {
       "name": "Tuna Straight from Can",
@@ -730,7 +794,13 @@
         "fat": 1,
         "fiber": 0
       },
-      "desc": "Drain and eat with a fork. Add hot sauce or lemon."
+      "desc": "Drain and eat with a fork. Add hot sauce or lemon.",
+      "ingredients": [
+        {
+          "item": "Canned tuna in water — 1 can",
+          "nutritionKey": "Canned tuna (in water)"
+        }
+      ]
     },
     {
       "name": "Tzatziki + Pita",
@@ -741,7 +811,17 @@
         "fat": 3,
         "fiber": 5
       },
-      "desc": "1 whole wheat pita torn into strips + 4 tbsp tzatziki. Use the batch from Pita Tuesday."
+      "desc": "1 whole wheat pita torn into strips + 4 tbsp tzatziki.",
+      "ingredients": [
+        {
+          "item": "Whole wheat pita — 1",
+          "nutritionKey": "Whole wheat pita"
+        },
+        {
+          "item": "Greek yogurt (nonfat) — 4 tbsp (tzatziki base)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        }
+      ]
     },
     {
       "name": "Frozen Edamame + Flaxseed",
@@ -752,7 +832,17 @@
         "fat": 12,
         "fiber": 8
       },
-      "desc": "1 cup edamame thawed/microwaved + 1 tbsp flaxseed."
+      "desc": "1 cup edamame thawed/microwaved + 1 tbsp flaxseed.",
+      "ingredients": [
+        {
+          "item": "Frozen edamame (shelled) — 1 cup",
+          "nutritionKey": "Frozen edamame (shelled)"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ]
     }
   ],
   "shopping": {
