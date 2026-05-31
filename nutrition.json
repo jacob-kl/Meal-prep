@@ -59,6 +59,31 @@
     },
     "fiber": 0
   },
+    "Ground turkey 93/7": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FDC 172945)",
+    "cal": 148,
+    "protein": 19,
+    "carbs": 0,
+    "fat": 8,
+    "fiber": 0,
+    "micros": {
+      "sodium": 82,
+      "potassium": 237,
+      "calcium": 14,
+      "vitamin_d": 0,
+      "magnesium": 22,
+      "zinc": 2.4,
+      "vitamin_c": 0,
+      "vitamin_b12": 1.5,
+      "iron": 1,
+      "vitamin_a": 0,
+      "folate": 8,
+      "phosphorus": 196,
+      "selenium": 20.6
+    }
+  },
   "Frozen shrimp": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
@@ -211,6 +236,32 @@
     },
     "fiber": 3.2
   },
+    "Sardines (canned in olive oil)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g drained (USDA FDC 175139)",
+    "cal": 208,
+    "protein": 25,
+    "carbs": 0,
+    "fat": 11,
+    "fiber": 0,
+    "micros": {
+      "sodium": 505,
+      "potassium": 397,
+      "calcium": 382,
+      "vitamin_d": 4.8,
+      "magnesium": 39,
+      "zinc": 1.3,
+      "vitamin_c": 0,
+      "vitamin_b12": 8.9,
+      "iron": 2.9,
+      "vitamin_a": 54,
+      "folate": 10,
+      "phosphorus": 490,
+      "selenium": 52.7
+    }
+  },
+
   "Garbanzo beans": {
     "serving_qty": 1,
     "serving_unit": "can",
@@ -355,6 +406,32 @@
     },
     "fiber": 0
   },
+    "Eggs (large)": {
+    "serving_qty": 1,
+    "serving_unit": "egg",
+    "serving": "per 1 large egg (50g)",
+    "cal": 72,
+    "protein": 6,
+    "carbs": 0,
+    "fat": 5,
+    "fiber": 0,
+    "micros": {
+      "sodium": 71,
+      "potassium": 69,
+      "calcium": 28,
+      "vitamin_d": 1.1,
+      "magnesium": 6,
+      "zinc": 0.6,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.6,
+      "iron": 0.9,
+      "vitamin_a": 80,
+      "folate": 24,
+      "phosphorus": 99,
+      "selenium": 15.4
+    }
+  },
+
   "Daisy sour cream": {
     "serving_qty": 2,
     "serving_unit": "tbsp",
@@ -550,6 +627,27 @@
     },
     "fiber": 0
   },
+    "Apple": {
+    "serving_qty": 1,
+    "serving_unit": "medium",
+    "serving": "per 1 medium apple (~182g)",
+    "cal": 95,
+    "protein": 0,
+    "carbs": 25,
+    "fat": 0,
+    "fiber": 4.4
+  },
+  "Orange": {
+    "serving_qty": 1,
+    "serving_unit": "medium",
+    "serving": "per 1 medium orange (~131g)",
+    "cal": 62,
+    "protein": 1,
+    "carbs": 15,
+    "fat": 0,
+    "fiber": 3.1
+  },
+
   "Cottage cheese 1%": {
     "serving_qty": 0.5,
     "serving_unit": "cup",
@@ -627,6 +725,17 @@
     "carbs": 1,
     "fat": 0
   },
+    "Mixed berries (frozen)": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (140g)",
+    "cal": 70,
+    "protein": 1,
+    "carbs": 17,
+    "fat": 0,
+    "fiber": 4.5
+  },
+
   "Spices (cumin/paprika/garlic powder/salt)": {
     "serving_qty": 1,
     "serving_unit": "tsp",
@@ -661,6 +770,27 @@
     },
     "fiber": 7.0
   },
+    "Farro (dry)": {
+    "serving_qty": 100,
+    "serving_unit": "g_dry",
+    "serving": "per 100g dry",
+    "cal": 340,
+    "protein": 15,
+    "carbs": 68,
+    "fat": 2,
+    "fiber": 8
+  },
+  "Whole wheat pita": {
+    "serving_qty": 1,
+    "serving_unit": "pita",
+    "serving": "per 1 pita (60g)",
+    "cal": 165,
+    "protein": 6,
+    "carbs": 33,
+    "fat": 2,
+    "fiber": 4.5
+  },
+
   "Shredded cheese (4-blend)": {
     "serving_qty": 2,
     "serving_unit": "tbsp",
@@ -995,6 +1125,137 @@
     },
     "fiber": 8.1
   },
+    "Zucchini": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw",
+    "cal": 17,
+    "protein": 1,
+    "carbs": 3,
+    "fat": 0,
+    "fiber": 1
+  },
+    "Kalamata olives": {
+    "serving_qty": 5,
+    "serving_unit": "olives",
+    "serving": "per 5 olives (~20g)",
+    "cal": 36,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 3,
+    "fiber": 0.7
+  },
+  "Feta cheese (reduced fat)": {
+    "serving_qty": 30,
+    "serving_unit": "g",
+    "serving": "per 30g (1 oz)",
+    "cal": 60,
+    "protein": 5,
+    "carbs": 1,
+    "fat": 4,
+    "fiber": 0
+  },
+  "Greek yogurt (plain nonfat)": {
+    "serving_qty": 170,
+    "serving_unit": "g",
+    "serving": "per 170g container",
+    "cal": 100,
+    "protein": 17,
+    "carbs": 6,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "sodium": 65,
+      "potassium": 240,
+      "calcium": 200,
+      "vitamin_d": 0,
+      "magnesium": 17,
+      "zinc": 1.1,
+      "vitamin_c": 0,
+      "vitamin_b12": 1.1,
+      "iron": 0,
+      "vitamin_a": 0,
+      "folate": 14,
+      "phosphorus": 215,
+      "selenium": 9.7
+    }
+  "Whole grain bread": {
+    "serving_qty": 1,
+    "serving_unit": "slice",
+    "serving": "per 1 slice (40g)",
+    "cal": 100,
+    "protein": 4,
+    "carbs": 19,
+    "fat": 2,
+    "fiber": 3
+  },
+  "Almond butter": {
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "serving": "per 2 tbsp (32g)",
+    "cal": 196,
+    "protein": 7,
+    "carbs": 7,
+    "fat": 18,
+    "fiber": 3.3
+  },
+  "Walnuts": {
+    "serving_qty": 28,
+    "serving_unit": "g",
+    "serving": "per 28g (1 oz / ~14 halves)",
+    "cal": 185,
+    "protein": 4,
+    "carbs": 4,
+    "fat": 18,
+    "fiber": 1.9,
+    "micros": {
+      "sodium": 1,
+      "potassium": 125,
+      "calcium": 28,
+      "vitamin_d": 0,
+      "magnesium": 45,
+      "zinc": 0.9,
+      "vitamin_c": 0.4,
+      "vitamin_b12": 0,
+      "iron": 0.8,
+      "vitamin_a": 1,
+      "folate": 28,
+      "phosphorus": 98,
+      "selenium": 1.4
+    }
+  },
+  "Almonds": {
+    "serving_qty": 28,
+    "serving_unit": "g",
+    "serving": "per 28g (1 oz / ~23 almonds)",
+    "cal": 164,
+    "protein": 6,
+    "carbs": 6,
+    "fat": 14,
+    "fiber": 3.5
+  },
+  "Hummus": {
+    "serving_qty": 60,
+    "serving_unit": "g",
+    "serving": "per 60g (~4 tbsp)",
+    "cal": 100,
+    "protein": 5,
+    "carbs": 9,
+    "fat": 6,
+    "fiber": 3
+  },
+
+    "Eggplant": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw",
+    "cal": 25,
+    "protein": 1,
+    "carbs": 6,
+    "fat": 0,
+    "fiber": 3
+  },
+
   "Bell pepper": {
     "serving_qty": 100,
     "serving_unit": "g",
