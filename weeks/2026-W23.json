@@ -1,6 +1,6 @@
 {
   "_v": 3,
-  "_note": "Week of June 8–14, 2026. Taco Tuesday (fresh chicken + shrimp). Salmon midweek boost on Wed. Jake lunch: turkey black bean bowl v2 — same format, added jalapeño kick. Laine lunch: mason jar pasta salad v2 — cucumber swap for cherry tomatoes, still tuna + chicken. Slight protein bump week over week.",
+  "_note": "Week of June 1–7, 2026. Mediterranean diet pivot. Taco Tuesday stays (shrimp + chicken, corn tortillas). Fish-forward (cod Mon+Fri, salmon Thu). Jake lunch: chicken + chickpea bowl with lemon herb sauce. Laine lunch: cold pasta salad with tuna + bell pepper, mason jar style. Olive oil replaces most other fats. Garlic, lemon, herbs everywhere.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -15,140 +15,144 @@
   },
   "dinners": [
     {
-      "day": "Monday (June 8)",
-      "name": "Garlic Herb Cod + Sweet Potato + Frozen Veg",
-      "note": "Clean Monday reset. Cod stays mild and easy. Sweet potato swaps in for quinoa — more carbs for Jake's volume, better texture variety.",
-      "jake": { "cal": 648, "protein": 52, "carbs": 64, "fat": 22, "fiber": 8 },
-      "laine": { "cal": 489, "protein": 40, "carbs": 55, "fat": 14, "fiber": 7 },
+      "day": "Monday (June 1)",
+      "name": "Lemon Herb Cod + Quinoa + Cherry Tomatoes",
+      "note": "Classic Mediterranean opener. Cod baked with olive oil and lemon, quinoa for fiber, fresh cherry tomatoes stirred in at the end.",
+      "jake": { "cal": 622, "protein": 56, "carbs": 58, "fat": 22, "fiber": 7 },
+      "laine": { "cal": 474, "protein": 43, "carbs": 50, "fat": 14, "fiber": 6 },
       "ingredients": [
         { "item": "Frozen cod", "jake": { "qty": 220, "unit": "g_raw" }, "laine": { "qty": 160, "unit": "g_raw" }, "nutritionKey": "Frozen cod" },
-        { "item": "Sweet potato", "jake": { "qty": 200, "unit": "g_raw" }, "laine": { "qty": 150, "unit": "g_raw" }, "nutritionKey": "Sweet potato" },
-        { "item": "Frozen veggies", "shared": { "qty": 1.5, "unit": "cup" }, "nutritionKey": "Frozen veggies (mixed)" },
-        { "item": "Olive oil", "shared": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
-        { "item": "Lemon juice", "shared": { "qty": 2, "unit": "tbsp" }, "nutritionKey": "Lemon juice" },
-        { "item": "Garlic powder, paprika, dried oregano, salt", "shared": { "qty": 1.5, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+        { "item": "Quinoa (dry)", "jake": { "qty": 60, "unit": "g_dry" }, "laine": { "qty": 50, "unit": "g_dry" }, "nutritionKey": "Quinoa (dry)" },
+        { "item": "Cherry tomatoes", "shared": { "qty": 1, "unit": "cup" }, "nutritionKey": "Cherry tomatoes" },
+        { "item": "Baby spinach", "shared": { "qty": 1, "unit": "cup" }, "nutritionKey": "Baby spinach" },
+        { "item": "Olive oil", "shared": { "qty": 1.5, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
+        { "item": "Lemon juice", "shared": { "qty": 3, "unit": "tbsp" }, "nutritionKey": "Lemon juice" },
+        { "item": "Garlic powder, oregano, paprika, salt", "shared": { "qty": 1.5, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
       ],
       "steps": [
-        "Preheat oven to 400°F. Cube sweet potato, toss in oil + salt, roast 25 min until fork-tender.",
-        "Thaw cod in cold water 20 min. Pat dry, season with garlic powder, paprika, oregano, salt.",
-        "Heat remaining oil in non-stick over medium-high. Cook cod 3-4 min per side.",
-        "Steam/microwave frozen veggies.",
-        "Plate: sweet potato base, cod on top, veggies alongside. Squeeze lemon over fish."
+        "Preheat oven to 400°F. Pat cod dry, place in baking dish. Drizzle with olive oil and lemon juice, season with garlic powder, oregano, paprika, salt.",
+        "Bake 14–16 min until fish flakes easily.",
+        "Cook quinoa: rinse, simmer in 2× water 15 min, fluff. Jake 60g dry, Laine 50g dry.",
+        "Halve cherry tomatoes. Toss into warm quinoa with spinach — let the heat wilt the spinach slightly.",
+        "Plate: quinoa base, cod on top. Finish with a squeeze of fresh lemon."
       ]
     },
     {
-      "day": "Tuesday (June 9) — Taco Tuesday",
+      "day": "Tuesday (June 2) — Taco Tuesday",
       "name": "Chicken + Shrimp Tacos",
-      "note": "Fresh chicken taco Tuesday — no leftover reliance. Jake loads up on chicken, Laine keeps shrimp as the lead protein. Simple seasoning, fast cook.",
-      "jake": { "cal": 702, "protein": 78, "carbs": 44, "fat": 22, "fiber": 3 },
-      "laine": { "cal": 428, "protein": 50, "carbs": 28, "fat": 12, "fiber": 2 },
+      "note": "Taco Tuesday stays. Fresh chicken and shrimp, corn tortillas. Jake more chicken, Laine more shrimp. Feta crumble instead of cheddar for the med lean.",
+      "jake": { "cal": 698, "protein": 79, "carbs": 45, "fat": 22, "fiber": 3 },
+      "laine": { "cal": 426, "protein": 51, "carbs": 28, "fat": 12, "fiber": 2 },
       "ingredients": [
         { "item": "Chicken breast", "jake": { "qty": 200, "unit": "g_raw" }, "laine": { "qty": 100, "unit": "g_raw" }, "nutritionKey": "Chicken breast" },
         { "item": "Frozen shrimp", "jake": { "qty": 120, "unit": "g_raw" }, "laine": { "qty": 130, "unit": "g_raw" }, "nutritionKey": "Frozen shrimp" },
         { "item": "Corn tortillas (small)", "jake": { "qty": 3, "unit": "tortilla" }, "laine": { "qty": 2, "unit": "tortilla" }, "nutritionKey": "Corn tortilla (small)" },
-        { "item": "Shredded cheese", "jake": { "qty": 2, "unit": "tbsp" }, "laine": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Shredded cheese (4-blend)" },
         { "item": "Daisy sour cream", "jake": { "qty": 2, "unit": "tbsp" }, "laine": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Daisy sour cream" },
+        { "item": "Cherry tomatoes (halved)", "shared": { "qty": 0.5, "unit": "cup" }, "nutritionKey": "Cherry tomatoes" },
         { "item": "Olive oil", "shared": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
-        { "item": "Cumin, chili powder, garlic powder", "shared": { "qty": 2, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+        { "item": "Cumin, smoked paprika, garlic powder, salt", "shared": { "qty": 2, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
       ],
       "steps": [
-        "Slice chicken thin. Season with cumin, chili powder, garlic powder, salt.",
-        "Cook chicken in oil over medium-high 3-4 min per side until cooked through. Rest 2 min, slice.",
+        "Slice chicken thin. Season with cumin, smoked paprika, garlic powder, salt.",
+        "Cook chicken in olive oil over medium-high 3–4 min per side until cooked through. Rest 2 min, slice.",
         "In same pan, cook shrimp 2 min per side with remaining seasoning.",
         "Warm tortillas on dry pan or open flame 30 sec each side.",
-        "Build tacos: Jake more chicken, Laine more shrimp. Top with cheese + sour cream."
+        "Build tacos: Jake more chicken, Laine more shrimp. Top with cherry tomatoes + sour cream."
       ]
     },
     {
-      "day": "Wednesday (June 11)",
-      "name": "Baked Salmon + Quinoa + Roasted Veg",
-      "note": "Salmon midweek — omega-3 boost. Quinoa for fiber. Jake gets the bigger fillet. Roasted frozen veg instead of steamed for better texture.",
-      "jake": { "cal": 798, "protein": 48, "carbs": 62, "fat": 41, "fiber": 7 },
-      "laine": { "cal": 651, "protein": 38, "carbs": 55, "fat": 29, "fiber": 6 },
+      "day": "Wednesday (June 3)",
+      "name": "Lemon Herb Chicken + Garbanzo Bean Skillet",
+      "note": "Full Mediterranean Wednesday. Chicken thighs + chickpeas + lemon + garlic + spinach. No grain — fiber from chickpeas. Olive oil does the work.",
+      "jake": { "cal": 818, "protein": 65, "carbs": 72, "fat": 32, "fiber": 14 },
+      "laine": { "cal": 641, "protein": 50, "carbs": 60, "fat": 22, "fiber": 11 },
+      "ingredients": [
+        { "item": "Chicken breast", "jake": { "qty": 200, "unit": "g_raw" }, "laine": { "qty": 140, "unit": "g_raw" }, "nutritionKey": "Chicken breast" },
+        { "item": "Garbanzo beans (1 can, split)", "shared": { "qty": 0.5, "unit": "can" }, "nutritionKey": "Garbanzo beans" },
+        { "item": "Baby spinach", "shared": { "qty": 2, "unit": "cup" }, "nutritionKey": "Baby spinach" },
+        { "item": "Cherry tomatoes", "shared": { "qty": 1, "unit": "cup" }, "nutritionKey": "Cherry tomatoes" },
+        { "item": "Olive oil", "shared": { "qty": 1.5, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
+        { "item": "Lemon juice", "shared": { "qty": 3, "unit": "tbsp" }, "nutritionKey": "Lemon juice" },
+        { "item": "Garlic powder, oregano, cumin, salt", "shared": { "qty": 2, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+      ],
+      "steps": [
+        "Slice chicken. Season with garlic powder, oregano, cumin, salt.",
+        "Heat olive oil in skillet over medium-high. Cook chicken 3–4 min per side. Remove and rest.",
+        "Add chickpeas to pan, toss and warm 2 min. Add cherry tomatoes and cook 2 more min.",
+        "Stir in spinach until wilted. Return chicken to pan.",
+        "Deglaze with lemon juice. Jake gets bigger portion. Serve immediately."
+      ]
+    },
+    {
+      "day": "Thursday (June 4)",
+      "name": "Baked Salmon + Rice + Spinach",
+      "note": "Salmon Thursday. Omega-3 night — fat numbers look high but it's all salmon. Jake bigger fillet. White rice for easy carbs, spinach wilted in lemon oil.",
+      "jake": { "cal": 784, "protein": 47, "carbs": 62, "fat": 40, "fiber": 4 },
+      "laine": { "cal": 655, "protein": 38, "carbs": 65, "fat": 28, "fiber": 4 },
       "ingredients": [
         { "item": "Atlantic salmon fillet", "jake": { "qty": 180, "unit": "g_raw" }, "laine": { "qty": 140, "unit": "g_raw" }, "nutritionKey": "Atlantic salmon (raw)" },
-        { "item": "Quinoa (dry)", "jake": { "qty": 60, "unit": "g_dry" }, "laine": { "qty": 50, "unit": "g_dry" }, "nutritionKey": "Quinoa (dry)" },
-        { "item": "Frozen veggies", "shared": { "qty": 1.5, "unit": "cup" }, "nutritionKey": "Frozen veggies (mixed)" },
-        { "item": "Olive oil", "shared": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
+        { "item": "White rice (dry)", "jake": { "qty": 70, "unit": "g_dry" }, "laine": { "qty": 75, "unit": "g_dry" }, "nutritionKey": "White rice (dry)" },
+        { "item": "Baby spinach", "shared": { "qty": 2, "unit": "cup" }, "nutritionKey": "Baby spinach" },
+        { "item": "Olive oil", "shared": { "qty": 1.5, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
         { "item": "Lemon juice", "shared": { "qty": 2, "unit": "tbsp" }, "nutritionKey": "Lemon juice" },
-        { "item": "Garlic powder, paprika, salt", "shared": { "qty": 1, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+        { "item": "Garlic powder, paprika, oregano, salt", "shared": { "qty": 1, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
       ],
       "steps": [
-        "Preheat oven to 400°F. Line a baking sheet with foil.",
-        "Pat salmon dry, brush with oil, season with garlic powder, paprika, salt. Bake 14-16 min.",
-        "Cook quinoa: rinse, simmer in 2x water 15 min, fluff. Jake 60g dry, Laine 50g dry.",
-        "Toss frozen veg with a splash of oil and roast alongside salmon last 12 min.",
-        "Plate: quinoa base, salmon on top. Finish with lemon over the fish."
+        "Preheat oven to 400°F. Brush salmon with olive oil, season with garlic powder, paprika, oregano, salt.",
+        "Bake 14–16 min. Rest 2 min.",
+        "Cook rice per package directions. Jake 70g dry, Laine 75g dry.",
+        "Wilt spinach in remaining olive oil + lemon in a small pan over medium, 2 min.",
+        "Plate: rice base, salmon on top, wilted spinach alongside."
       ]
     },
     {
-      "day": "Thursday (June 12)",
-      "name": "Ground Turkey + Pinto Bean Skillet",
-      "note": "Pinto bean variation on the W23 black bean skillet. Slightly different flavor profile — earthier, good with garlic basil sauce this time. Jake bigger bowl.",
-      "jake": { "cal": 862, "protein": 60, "carbs": 82, "fat": 34, "fiber": 13 },
-      "laine": { "cal": 728, "protein": 50, "carbs": 79, "fat": 24, "fiber": 11 },
+      "day": "Friday (June 5)",
+      "name": "Cod + Cannellini Bean Skillet",
+      "note": "Lean clean Friday. Cod on white beans is very Med. Quick pan sauce with lemon + olive oil. No grain — beans handle the carbs.",
+      "jake": { "cal": 548, "protein": 60, "carbs": 42, "fat": 16, "fiber": 8 },
+      "laine": { "cal": 420, "protein": 46, "carbs": 38, "fat": 11, "fiber": 7 },
       "ingredients": [
-        { "item": "Ground turkey 85/15", "jake": { "qty": 185, "unit": "g_raw" }, "laine": { "qty": 130, "unit": "g_raw" }, "nutritionKey": "Ground turkey 85/15" },
-        { "item": "Pinto beans (1 can, split)", "shared": { "qty": 0.5, "unit": "can" }, "nutritionKey": "Pinto beans" },
-        { "item": "Signature Select pasta sauce", "jake": { "qty": 0.75, "unit": "cup" }, "laine": { "qty": 0.75, "unit": "cup" }, "nutritionKey": "Signature Select pasta sauce" },
-        { "item": "Frozen veggies", "shared": { "qty": 1.5, "unit": "cup" }, "nutritionKey": "Frozen veggies (mixed)" },
-        { "item": "Shredded cheese", "jake": { "qty": 2, "unit": "tbsp" }, "laine": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Shredded cheese (4-blend)" },
-        { "item": "Cumin, chili powder, garlic powder", "shared": { "qty": 2, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
-      ],
-      "steps": [
-        "Brown turkey in skillet over medium-high, breaking up. Season with cumin, chili, garlic powder.",
-        "Add pinto beans + pasta sauce. Stir in frozen veggies.",
-        "Simmer 8-10 min until thickened and veggies tender.",
-        "Jake gets bigger bowl. Top both with shredded cheese."
-      ]
-    },
-    {
-      "day": "Friday (June 13)",
-      "name": "Shrimp + Egg White Skillet",
-      "note": "High protein, low carb Friday. Shrimp and egg whites in one pan — fast, clean, filling. Cheese on top. Veggies folded in.",
-      "jake": { "cal": 512, "protein": 66, "carbs": 10, "fat": 22, "fiber": 3 },
-      "laine": { "cal": 388, "protein": 52, "carbs": 8, "fat": 16, "fiber": 3 },
-      "ingredients": [
-        { "item": "Frozen shrimp", "jake": { "qty": 220, "unit": "g_raw" }, "laine": { "qty": 180, "unit": "g_raw" }, "nutritionKey": "Frozen shrimp" },
-        { "item": "Liquid egg whites", "jake": { "qty": 0.75, "unit": "cup" }, "laine": { "qty": 0.5, "unit": "cup" }, "nutritionKey": "Liquid egg whites" },
-        { "item": "Frozen veggies", "shared": { "qty": 1.5, "unit": "cup" }, "nutritionKey": "Frozen veggies (mixed)" },
-        { "item": "Shredded cheese", "jake": { "qty": 2, "unit": "tbsp" }, "laine": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Shredded cheese (4-blend)" },
+        { "item": "Frozen cod", "jake": { "qty": 220, "unit": "g_raw" }, "laine": { "qty": 160, "unit": "g_raw" }, "nutritionKey": "Frozen cod" },
+        { "item": "Cannellini beans (1 can, split)", "shared": { "qty": 0.5, "unit": "can" }, "nutritionKey": "Cannellini beans" },
+        { "item": "Baby spinach", "shared": { "qty": 2, "unit": "cup" }, "nutritionKey": "Baby spinach" },
+        { "item": "Cherry tomatoes", "shared": { "qty": 0.5, "unit": "cup" }, "nutritionKey": "Cherry tomatoes" },
         { "item": "Olive oil", "shared": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
-        { "item": "Garlic powder, paprika, salt", "shared": { "qty": 1, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+        { "item": "Lemon juice", "shared": { "qty": 3, "unit": "tbsp" }, "nutritionKey": "Lemon juice" },
+        { "item": "Garlic powder, oregano, salt", "shared": { "qty": 1, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
       ],
       "steps": [
-        "Thaw shrimp, pat dry, season with garlic powder, paprika, salt.",
-        "Cook shrimp in oil over medium-high 2 min per side. Remove and set aside.",
-        "In same pan over medium-low, add veggies and cook 3 min. Pour in egg whites.",
-        "Stir gently until egg whites just set. Fold shrimp back in.",
-        "Top with cheese. Plate immediately."
+        "Thaw cod, pat dry. Season with garlic powder, oregano, salt.",
+        "Heat olive oil over medium-high. Cook cod 3–4 min per side. Remove.",
+        "Add beans and cherry tomatoes to pan. Warm 2 min, crushing a few beans with back of spoon.",
+        "Stir in spinach until wilted. Add lemon juice and stir.",
+        "Plate beans mixture, cod on top. Extra lemon squeeze to finish."
       ]
     },
     {
-      "day": "Saturday (June 14)",
-      "name": "Garlic Basil Shrimp Pasta",
-      "note": "Same crowd-pleaser as W23 Saturday. Signature Select garlic basil sauce, spinach stirred in, bread crumbs on top. Jake bigger portion.",
-      "jake": { "cal": 810, "protein": 58, "carbs": 80, "fat": 28, "fiber": 6 },
-      "laine": { "cal": 590, "protein": 44, "carbs": 66, "fat": 18, "fiber": 5 },
+      "day": "Saturday (June 6)",
+      "name": "Shrimp + Lemon Garlic Pasta",
+      "note": "Weekend pasta night, Mediterranean style. Olive oil, lemon, garlic — no heavy cream sauce. Spinach stirred in. Jake bigger bowl.",
+      "jake": { "cal": 798, "protein": 56, "carbs": 78, "fat": 28, "fiber": 6 },
+      "laine": { "cal": 582, "protein": 42, "carbs": 64, "fat": 18, "fiber": 5 },
       "ingredients": [
         { "item": "Frozen shrimp", "jake": { "qty": 220, "unit": "g_raw" }, "laine": { "qty": 180, "unit": "g_raw" }, "nutritionKey": "Frozen shrimp" },
         { "item": "Garofalo organic pasta", "jake": { "qty": 90, "unit": "g_dry" }, "laine": { "qty": 75, "unit": "g_dry" }, "nutritionKey": "Garofalo organic pasta" },
-        { "item": "Signature Select pasta sauce", "jake": { "qty": 0.75, "unit": "cup" }, "laine": { "qty": 0.5, "unit": "cup" }, "nutritionKey": "Signature Select pasta sauce" },
         { "item": "Baby spinach", "shared": { "qty": 2, "unit": "cup" }, "nutritionKey": "Baby spinach" },
-        { "item": "Progresso garlic herb bread crumbs", "jake": { "qty": 2, "unit": "tbsp" }, "laine": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Progresso garlic herb bread crumbs" },
-        { "item": "Olive oil", "shared": { "qty": 1, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
-        { "item": "Garlic powder, salt", "shared": { "qty": 1, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+        { "item": "Cherry tomatoes", "shared": { "qty": 1, "unit": "cup" }, "nutritionKey": "Cherry tomatoes" },
+        { "item": "Olive oil", "shared": { "qty": 2, "unit": "tbsp" }, "nutritionKey": "Olive oil" },
+        { "item": "Lemon juice", "shared": { "qty": 3, "unit": "tbsp" }, "nutritionKey": "Lemon juice" },
+        { "item": "Garlic powder, oregano, red pepper flakes, salt", "shared": { "qty": 1.5, "unit": "tsp" }, "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
       ],
       "steps": [
         "Boil pasta in salted water until al dente. Reserve ¼ cup pasta water. Drain.",
-        "Cook shrimp in oil over medium-high with garlic powder + salt, 2 min per side.",
-        "Add pasta sauce to pan, stir in spinach until wilted (1-2 min). Add splash of pasta water to loosen.",
-        "Toss in cooked pasta. Jake bigger bowl.",
-        "Top with bread crumbs. Serve immediately."
+        "Cook shrimp in olive oil over medium-high with garlic powder, oregano, red pepper flakes, salt — 2 min per side.",
+        "Add cherry tomatoes to pan, cook 2 min until slightly blistered.",
+        "Add spinach, stir until wilted. Add pasta + splash of pasta water. Squeeze in lemon.",
+        "Toss to coat. Jake bigger bowl. Serve immediately."
       ]
     },
     {
-      "day": "Sunday (June 15)",
+      "day": "Sunday (June 7)",
       "name": "Birch Benders Pancake Night + Egg White Scramble",
       "note": "Standing Sunday breakfast-for-dinner. Flaxseed in the batter. Thawed frozen fruit on top. Jake bigger stack.",
       "jake": { "cal": 520, "protein": 38, "carbs": 62, "fat": 14, "fiber": 6 },
@@ -161,54 +165,56 @@
       ],
       "steps": [
         "Thaw frozen fruit at room temp or microwave 60 sec.",
-        "Mix pancake mix + egg whites + water (per pkg). Stir in flaxseed.",
-        "Cook on greased griddle over medium, 2-3 min per side.",
+        "Mix pancake mix + egg whites + water per pkg. Stir in flaxseed.",
+        "Cook on greased griddle over medium, 2–3 min per side.",
         "Jake gets bigger stack. Top both with thawed fruit."
       ]
     }
   ],
   "jakeLunch": {
-    "name": "Ground Turkey + Black Bean Bowl with Roasted Onion Garlic Sauce",
-    "note": "W24 version. Same format as W23 — make 5 containers Sunday. Added small jalapeño kick option. Jake's workhorse lunch.",
-    "macros": { "cal": 917, "protein": 72, "carbs": 70, "fat": 43, "fiber": 15 },
+    "name": "Chicken + Chickpea Bowl with Lemon Herb Sauce",
+    "note": "W23 Mediterranean pivot. Same batch-cook format — 5 containers Sunday. Chickpeas replace black beans for the med lean. Lemon herb sauce instead of roasted onion garlic. Edamame still in for protein.",
+    "macros": { "cal": 897, "protein": 74, "carbs": 68, "fat": 38, "fiber": 16 },
     "ingredients": [
-      { "item": "Ground turkey 85/15 — 2.5 lbs total, 227g raw per container", "qty": 2.5, "unit": "lbs", "nutritionKey": "Ground turkey 85/15" },
-      { "item": "Black beans — 2 cans total, 0.4 can per container", "qty": 0.4, "unit": "can", "nutritionKey": "Black beans" },
-      { "item": "Signature Select roasted onion & garlic sauce — 2.5 cups total, 1/2 cup per container", "qty": 0.5, "unit": "cup", "nutritionKey": "Roasted onion & garlic pasta sauce" },
+      { "item": "Chicken breast — 2.5 lbs total, 227g raw per container", "qty": 2.5, "unit": "lbs", "nutritionKey": "Chicken breast" },
+      { "item": "Garbanzo beans — 2 cans total, 0.4 can per container", "qty": 0.4, "unit": "can", "nutritionKey": "Garbanzo beans" },
+      { "item": "Signature Select pasta sauce (garlic basil) — 2.5 cups total, 1/2 cup per container", "qty": 0.5, "unit": "cup", "nutritionKey": "Signature Select pasta sauce" },
       { "item": "Frozen edamame (shelled) — 2.5 cups total, 1/2 cup per container", "qty": 0.5, "unit": "cup", "nutritionKey": "Frozen edamame (shelled)" },
       { "item": "Frozen veggies — 5 cups total, 1 cup per container", "qty": 1, "unit": "cup", "nutritionKey": "Frozen veggies (mixed)" },
-      { "item": "Shredded cheese — 2 tbsp per container", "qty": 2, "unit": "tbsp", "nutritionKey": "Shredded cheese (4-blend)" },
-      { "item": "Cumin, chili powder, garlic powder, salt", "qty": 1, "unit": "tsp", "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
+      { "item": "Olive oil — 1 tbsp per container", "qty": 1, "unit": "tbsp", "nutritionKey": "Olive oil" },
+      { "item": "Lemon juice — 2 tbsp per container", "qty": 2, "unit": "tbsp", "nutritionKey": "Lemon juice" },
+      { "item": "Garlic powder, oregano, cumin, salt", "qty": 1.5, "unit": "tsp", "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)" }
     ],
     "steps": [
-      "Brown ALL turkey (2.5 lbs) in large pan over medium-high, breaking up. Season with cumin, chili powder, garlic powder, salt.",
-      "Add roasted onion garlic sauce. Stir in black beans and edamame. Simmer 8-10 min.",
+      "Bake ALL chicken (2.5 lbs) at 400°F for 24 min. Cool and dice or shred.",
+      "Cook chickpeas: heat in pan with olive oil, garlic powder, cumin, salt until slightly crispy — 5 min.",
+      "Add pasta sauce, edamame, lemon juice. Stir together and simmer 5 min.",
       "Steam/microwave all frozen veggies separately. Set aside.",
-      "Divide into 5 containers: turkey+bean mixture base, then 1 cup veggies on top.",
-      "Top each with 2 tbsp shredded cheese. Seal and refrigerate. Reheat 2 min with a splash of water."
+      "Divide into 5 containers: chicken + chickpea mixture base, then 1 cup veggies on top.",
+      "Drizzle with remaining lemon + olive oil. Seal and refrigerate. Reheat 2 min with a splash of water."
     ]
   },
   "laineLunch": {
-    "name": "Tuna & Chicken Pasta Salad — Mason Jar Style (Cherry Tomato Edition)",
-    "note": "W24 rotation: cherry tomatoes replace bell pepper for variety. Same mason jar format, dressing separate. 2 sittings per jar. Laine approved.",
+    "name": "Tuna & Chicken Pasta Salad — Mason Jar Style (Bell Pepper Edition)",
+    "note": "Same mason jar format. Bell pepper for crunch and color. Dressing separate. 2 sittings per jar. Laine approved.",
     "macros": { "cal": 597, "protein": 76, "carbs": 51, "fat": 8, "fiber": 6 },
     "dressingNote": "Light Italian or Caesar — 2 tbsp per jar in a separate container.",
     "ingredients": [
       { "item": "Chicken breast — 2 breasts (~800g raw), 147g raw per jar", "qty": 147, "unit": "g_raw", "nutritionKey": "Chicken breast" },
       { "item": "Garofalo pasta (rotini or penne) — 250g dry total, 50g per jar", "qty": 50, "unit": "g_dry", "nutritionKey": "Garofalo organic pasta" },
       { "item": "Canned tuna in water — 1 can per jar (5 cans total)", "qty": 1, "unit": "can", "nutritionKey": "Canned tuna (in water)" },
-      { "item": "Cherry tomatoes — 1 pint total, ~80g per jar", "qty": 80, "unit": "g", "nutritionKey": "Cherry tomatoes" },
+      { "item": "Bell pepper — 1 large diced, ~100g per jar", "qty": 100, "unit": "g", "nutritionKey": "Bell pepper" },
       { "item": "English cucumber — 1 large, ~80g per jar", "qty": 80, "unit": "g", "nutritionKey": "English cucumber" },
       { "item": "Fresh baby spinach — big handful per jar (~30g)", "qty": 30, "unit": "g", "nutritionKey": "Baby spinach" },
       { "item": "Light Italian or Caesar dressing — 2 tbsp per jar (kept separate)", "qty": 2, "unit": "tbsp", "nutritionKey": "Italian dressing (light)" },
       { "item": "Lemon juice, garlic powder, salt (for chicken)", "qty": 1, "unit": "tbsp", "nutritionKey": "Lemon juice" }
     ],
     "steps": [
-      "Season chicken with garlic powder, salt, pepper. Bake at 400°F for 24 min. Cool completely, dice small.",
+      "Season chicken with garlic powder, salt, pepper, squeeze of lemon. Bake at 400°F for 24 min. Cool completely, dice small.",
       "Cook all pasta in salted water. Drain, rinse cold, toss with tiny bit of olive oil.",
-      "Halve cherry tomatoes. Slice cucumber. Rinse spinach.",
+      "Dice bell pepper. Slice cucumber. Rinse spinach.",
       "Drain tuna cans well.",
-      "Layer each mason jar: pasta → tuna → cucumber → cherry tomatoes → chicken → spinach on top.",
+      "Layer each mason jar: pasta → tuna → cucumber → bell pepper → chicken → spinach on top.",
       "Put 2 tbsp dressing in a separate small container per jar. Refrigerate.",
       "When eating: pour dressing in, shake, eat half — reseal for second sitting."
     ]
@@ -237,7 +243,7 @@
       "steps": ["Scramble egg whites over medium-low with frozen veggies until just set. Top with cheese."]
     },
     {
-      "day": "Sun (June 15)",
+      "day": "Sun (June 7)",
       "name": "Birch Benders Pancakes + Fruit",
       "macros": { "cal": 360, "protein": 18, "carbs": 50, "fat": 8, "fiber": 4 },
       "ingredients": [
@@ -251,72 +257,72 @@
   ],
   "jakeSnacks": [
     { "name": "Oikos Triple Zero + Flaxseed", "macros": { "cal": 175, "protein": 17, "carbs": 17, "fat": 4, "fiber": 2 }, "desc": "1 container + 1 tbsp ground flaxseed." },
-    { "name": "Egg White Mug + Shredded Cheese", "macros": { "cal": 130, "protein": 22, "carbs": 1, "fat": 5, "fiber": 0 }, "desc": "1/2 cup liquid egg whites microwaved in a mug 90 sec. Top with 1 tbsp shredded cheese." },
+    { "name": "Egg White Mug + Cheese", "macros": { "cal": 130, "protein": 22, "carbs": 1, "fat": 5, "fiber": 0 }, "desc": "1/2 cup liquid egg whites microwaved 90 sec. Top with 1 tbsp shredded cheese." },
     { "name": "Tuna Straight from Can", "macros": { "cal": 150, "protein": 33, "carbs": 0, "fat": 1, "fiber": 0 }, "desc": "Drain and eat with a fork. Add hot sauce or lemon." },
-    { "name": "Frozen Edamame (shelled) + Flaxseed", "macros": { "cal": 244, "protein": 19, "carbs": 17, "fat": 12, "fiber": 8 }, "desc": "1 cup edamame thawed/microwaved + 1 tbsp flaxseed. Great fiber + protein combo." }
+    { "name": "Frozen Edamame + Flaxseed", "macros": { "cal": 244, "protein": 19, "carbs": 17, "fat": 12, "fiber": 8 }, "desc": "1 cup edamame thawed/microwaved + 1 tbsp flaxseed. Great fiber + protein combo." }
   ],
   "shopping": {
     "Must Buy": [
-      "Cherry tomatoes — 1 pint (Laine's mason jar jars)",
+      "Atlantic salmon — 2 fillets (~320g raw total for Thu dinner)",
+      "Garbanzo beans — 3 cans (Jake lunch batch × 2 + Wed dinner × 1)",
+      "Cannellini beans — 1 can (Fri dinner)",
+      "Cherry tomatoes — 1 pint (Mon + Tue + Wed + Fri + Sat)",
+      "Bell pepper — 2–3 large (Laine's pasta salad jars)",
       "Canned tuna in water — 5 cans (Laine's jars)",
-      "Chicken breast — 3 breasts (~1.2kg: 2 for Laine jars, 1 for Tue tacos)",
-      "Atlantic salmon — 2 fillets (~320g raw total for Wed dinner)",
-      "Sweet potato — 2 medium (Mon dinner)",
-      "Pinto beans — 1 can (Thu skillet)"
+      "Corn tortillas (small) — 1 pack (Taco Tuesday)"
     ],
     "Check Supply": [
-      "Frozen shrimp — need ~1.6 lbs total (Tue tacos + Fri skillet + Sat pasta)",
-      "Frozen cod — need ~1.2 lbs for Mon dinner",
-      "Ground turkey 85/15 — need ~3 lbs (Jake lunch batch 2.5 lbs + Thu dinner)",
-      "Black beans — 2 cans for Jake lunch batch",
-      "Liquid egg whites — 2 cartons (Fri dinner, Sun dinner, Laine breakfasts)",
-      "Garofalo pasta — check supply (~370g dry total: Laine jars + Sat dinner)",
-      "Signature Select pasta sauce (garlic basil) — 1 jar for Sat + Thu",
-      "Signature Select roasted onion & garlic sauce — 1 jar (Jake lunch)",
-      "English cucumber — 1 large (Laine jars)",
-      "Baby spinach — 1 bag (Laine jars + Sat pasta)",
-      "Light Italian or Caesar dressing — check bottle",
-      "Oikos Triple Zero — need 3+ containers (Laine breakfasts)"
+      "Frozen cod — need ~1.2 lbs total for Mon + Fri dinners",
+      "Frozen shrimp — need ~1.4 lbs total for Tue tacos + Sat pasta",
+      "Chicken breast — need ~3.5 lbs (Jake lunch 2.5 lbs + Tue tacos + Wed dinner + Laine jars)",
+      "Liquid egg whites — 2 cartons (lunches, dinners, breakfasts)",
+      "Light Italian or Caesar dressing — check bottle from last week",
+      "Signature Select pasta sauce (garlic basil) — 1 jar (Jake lunch)",
+      "Garofalo pasta — check supply (need ~370g dry total)",
+      "Oikos Triple Zero — need 3+ containers (Laine breakfasts)",
+      "Frozen edamame (shelled) — Jake lunch batch"
     ],
     "Already Have — Pantry": [
+      "Garofalo spaghetti (Sat pasta)",
+      "White rice (Thu salmon)",
       "Birch Benders pancake mix (Sun)",
       "Ground flaxseed",
-      "Progresso garlic herb bread crumbs (Sat pasta)"
+      "Olive oil — make sure you have a full bottle"
     ],
     "Already Have — Canned & Jarred": [
-      "Corn tortillas — check pack from W23",
+      "Signature Select pasta sauce — garlic basil (Sat + Jake lunch)",
       "Signature Select Alfredo sauce (future use)",
-      "Garbanzo beans (leftover)"
+      "Pinto beans (leftover from W22)"
     ],
     "Already Have — Refrigerated & Frozen": [
       "Shredded cheese (big bag)",
       "Daisy sour cream",
-      "Lemon juice",
+      "Lemon juice — probably need a fresh bottle or lemons",
       "Frozen veggies assortment",
       "Frozen fruit",
-      "Frozen edamame (shelled) — check quantity",
-      "Quinoa — small amount needed Wed"
+      "Baby spinach",
+      "English cucumber (check freshness)"
     ]
   },
   "targets": {
     "jake": {
       "rows": [
-        ["Lunch Bowl", 917, 72, 70, 43, 15],
-        ["Dinner (avg)", 693, 0, 0, 0, 0],
-        ["1-2 Snacks", 430, 48, 18, 28, 4],
+        ["Lunch Bowl", 897, 74, 68, 38, 16],
+        ["Dinner (avg)", 684, 0, 0, 0, 0],
+        ["1–2 Snacks", 430, 48, 18, 28, 4],
         ["Coffee", 20, 1, 2, 1, 0]
       ],
-      "total": [2060, 121, 90, 72, 19],
+      "total": [2031, 123, 88, 67, 20],
       "goal": [2030, 203, 102, 90, 35]
     },
     "laine": {
       "rows": [
         ["Breakfast (avg)", 297, 23, 29, 6, 3],
         ["Lunch Jar", 597, 76, 51, 8, 6],
-        ["Dinner (avg)", 523, 0, 0, 0, 0],
+        ["Dinner (avg)", 512, 0, 0, 0, 0],
         ["Coffee", 20, 1, 2, 1, 0]
       ],
-      "total": [1437, 100, 82, 15, 9],
+      "total": [1426, 100, 82, 15, 9],
       "goal": [1363, 103, 152, 37, 30]
     }
   }
