@@ -741,23 +741,6 @@
           "nutritionKey": "Liquid egg whites"
         }
       ]
-    },
-    {
-      "name": "One A Day Women's Multi",
-      "macros": {
-        "cal": 0,
-        "protein": 0,
-        "carbs": 0,
-        "fat": 0,
-        "fiber": 0
-      },
-      "desc": "1 tablet daily with food. High iron (18mg), B12, vitamin D, folate, zinc.",
-      "ingredients": [
-        {
-          "item": "One A Day Women's Multi — 1 tablet daily",
-          "nutritionKey": "One A Day Women's Multi"
-        }
-      ]
     }
   ],
   "jakeSnacks": [
@@ -859,23 +842,6 @@
         {
           "item": "Ground flaxseed — 1 tbsp",
           "nutritionKey": "Ground flaxseed"
-        }
-      ]
-    },
-    {
-      "name": "One A Day Men's Multi",
-      "macros": {
-        "cal": 0,
-        "protein": 0,
-        "carbs": 0,
-        "fat": 0,
-        "fiber": 0
-      },
-      "desc": "1 tablet daily with food. Covers vitamin D, zinc, selenium, B12, magnesium, and vitamin A.",
-      "ingredients": [
-        {
-          "item": "One A Day Men's Multi — 1 tablet daily",
-          "nutritionKey": "One A Day Men's Multi"
         }
       ]
     }
@@ -1027,5 +993,21 @@
         30
       ]
     }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
   }
 }
