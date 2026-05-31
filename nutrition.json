@@ -1,3 +1,4 @@
+
 {
   "Almond butter": {
     "serving_qty": 2,
@@ -1449,7 +1450,7 @@
     "fat": 0,
     "fiber": 1
   },
-  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Edit here and values update across all weeks. Mediterranean-leaning + household staples. Both spice name variants kept as aliases so all week JSONs resolve correctly. DRI section at the bottom sets per-person daily reference intakes for the micronutrient panel.",
+  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
   "_dri": {
     "jake": {
       "sodium": {
@@ -1672,5 +1673,130 @@
       "phosphorus": 0
     },
     "note": "One A Day Women's Multi. Laine takes 1 daily. High iron (18mg = 100% DV) and B12 (400%)."
+  },
+  "Banana": {
+    "serving_qty": 1,
+    "serving_unit": "medium",
+    "serving": "per 1 medium banana (~118g)",
+    "cal": 105,
+    "protein": 1,
+    "carbs": 27,
+    "fat": 0,
+    "fiber": 3.1,
+    "micros": {
+      "sodium": 1,
+      "potassium": 422,
+      "calcium": 6,
+      "vitamin_d": 0,
+      "magnesium": 32,
+      "zinc": 0.2,
+      "vitamin_c": 10,
+      "vitamin_b12": 0,
+      "iron": 0.3,
+      "vitamin_a": 4,
+      "folate": 24,
+      "phosphorus": 26,
+      "selenium": 1.2
+    }
+  },
+  "Avocado": {
+    "serving_qty": 0.5,
+    "serving_unit": "avocado",
+    "serving": "per ½ avocado (~100g)",
+    "cal": 160,
+    "protein": 2,
+    "carbs": 9,
+    "fat": 15,
+    "fiber": 6.7,
+    "micros": {
+      "sodium": 7,
+      "potassium": 485,
+      "calcium": 12,
+      "vitamin_d": 0,
+      "magnesium": 29,
+      "zinc": 0.6,
+      "vitamin_c": 10,
+      "vitamin_b12": 0,
+      "iron": 0.6,
+      "vitamin_a": 7,
+      "folate": 81,
+      "phosphorus": 52,
+      "selenium": 0.4
+    }
+  },
+  "Whole milk": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (244ml)",
+    "cal": 149,
+    "protein": 8,
+    "carbs": 12,
+    "fat": 8,
+    "fiber": 0,
+    "micros": {
+      "sodium": 105,
+      "potassium": 322,
+      "calcium": 276,
+      "vitamin_d": 3.2,
+      "magnesium": 24,
+      "zinc": 0.9,
+      "vitamin_c": 0,
+      "vitamin_b12": 1.1,
+      "iron": 0.1,
+      "vitamin_a": 68,
+      "folate": 12,
+      "phosphorus": 205,
+      "selenium": 4.8
+    }
+  },
+  "Cottage cheese 2%": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per ½ cup (113g)",
+    "cal": 90,
+    "protein": 12,
+    "carbs": 4,
+    "fat": 2,
+    "fiber": 0,
+    "micros": {
+      "sodium": 350,
+      "potassium": 103,
+      "calcium": 115,
+      "vitamin_d": 0,
+      "magnesium": 7,
+      "zinc": 0.4,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.5,
+      "iron": 0.1,
+      "vitamin_a": 18,
+      "folate": 7,
+      "phosphorus": 150,
+      "selenium": 10
+    }
+  },
+  "Kefir (plain lowfat)": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (243ml)",
+    "cal": 110,
+    "protein": 11,
+    "carbs": 12,
+    "fat": 2,
+    "fiber": 0,
+    "micros": {
+      "sodium": 125,
+      "potassium": 380,
+      "calcium": 316,
+      "vitamin_d": 3,
+      "magnesium": 33,
+      "zinc": 1.1,
+      "vitamin_c": 0,
+      "vitamin_b12": 1.5,
+      "iron": 0.1,
+      "vitamin_a": 56,
+      "folate": 14,
+      "phosphorus": 272,
+      "selenium": 7.6
+    }
   }
 }
