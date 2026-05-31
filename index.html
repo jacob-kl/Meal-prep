@@ -11,24 +11,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #f5f0e8;
-    color: #2a2418;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    min-height: 100vh;
-  }
+  body { background: #f5f0e8; color: #2a2418; font-family: 'Barlow', sans-serif; font-weight: 300; min-height: 100vh; }
   button { font-family: 'Barlow', sans-serif; }
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: #ede8de; }
   ::-webkit-scrollbar-thumb { background: #b8a88a; border-radius: 3px; }
+
+  @keyframes wave { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  @keyframes wave2 { 0%{transform:translateX(0)} 100%{transform:translateX(50%)} }
+  @keyframes fillUp { from{height:0} to{height:var(--fill-h)} }
+
+  .water-cell { position:relative; overflow:hidden; background:#eef3f7; border-radius:8px; }
+  .water-fill { position:absolute; bottom:0; left:0; right:0; animation: fillUp 1.1s cubic-bezier(.4,0,.2,1) forwards; }
+  .water-wave-wrap { position:absolute; top:-8px; left:0; width:200%; }
+  .water-wave { width:100%; display:block; }
+  .water-wave.w1 { animation: wave 2.8s linear infinite; }
+  .water-wave.w2 { position:absolute; top:0; left:0; width:100%; animation: wave2 3.5s linear infinite; opacity:.5; }
 </style>
 </head>
 <body>
 <div id="root"></div>
 <script type="text/babel">
 
-const { useState, useEffect, useContext, createContext, useCallback } = React;
+const { useState, useEffect, useContext, createContext, useCallback, useRef } = React;
 
 const WEEK_REGISTRY = [
   { id: "2026-W19", label: "Week of May 4, 2026" },
@@ -37,7 +42,7 @@ const WEEK_REGISTRY = [
   { id: "2026-W22", label: "Week of May 25, 2026" },
   { id: "2026-W23", label: "Week of June 1, 2026" },
 ];
-const CURRENT_WEEK_ID = WEEK_REGISTRY[WEEK_REGISTRY.length - 1].id;
+const CURRENT_WEEK_ID = "2026-W23";
 
 const UnitsCtx = createContext("imperial");
 const useUnits = () => useContext(UnitsCtx);
@@ -48,35 +53,117 @@ const useNutritionDB = () => useContext(NutritionDBCtx);
 const OpenDropdownCtx = createContext({ openKey: null, setOpenKey: () => {} });
 const useOpenDropdown = () => useContext(OpenDropdownCtx);
 
-const CLR = {
-  cal: "#8b6914",
-  protein: "#7a3e2e",
-  carbs: "#3a6b4a",
-  fat: "#2e5a7a",
-  fiber: "#5a6b3a"
+const CLR = { cal:"#8b6914", protein:"#7a3e2e", carbs:"#3a6b4a", fat:"#2e5a7a", fiber:"#5a6b3a" };
+const PILL_BG = { cal:"#f5e8cc", protein:"#f5e0d8", carbs:"#daeede", fat:"#d5e8f0", fiber:"#e2ebd5" };
+
+/* ── WATER FILL CELL ─────────────────────────────────────────────── */
+function WaterCell({ pct, color, bg, label, value, unit, animate }) {
+  const clamp = Math.min(Math.max(pct, 0), 100);
+  const fillH = `${clamp}%`;
+  const isOver = pct > 100;
+  const waveColor = color + "55";
+  const wave2Color = color + "33";
+
+  return (
+    <div className="water-cell" style={{ height: 80, background: bg || "#eef3f7" }}>
+      {animate && (
+        <div className="water-fill" style={{ "--fill-h": fillH, height: fillH, background: color + "22" }}>
+          <div className="water-wave-wrap">
+            <svg className="water-wave w1" viewBox="0 0 200 12" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="12">
+              <path d="M0 6 C25 0, 50 12, 75 6 S125 0, 150 6 S175 12, 200 6 L200 12 L0 12 Z" fill={waveColor}/>
+            </svg>
+            <svg className="water-wave w2" viewBox="0 0 200 12" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="12">
+              <path d="M0 6 C30 12, 60 0, 90 6 S140 12, 170 6 S185 0, 200 6 L200 12 L0 12 Z" fill={wave2Color}/>
+            </svg>
+          </div>
+        </div>
+      )}
+      <div style={{ position:"relative", zIndex:2, padding:"12px 14px", height:"100%", display:"flex", flexDirection:"column", justifyContent:"space-between" }}>
+        <div style={{ fontSize:9, fontFamily:"'DM Mono',monospace", textTransform:"uppercase", letterSpacing:"0.1em", color: color, opacity:0.8 }}>{label}</div>
+        <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
+          <span style={{ fontSize:22, fontFamily:"'Lora',serif", color: isOver ? "#a33a2e" : color, fontWeight:500 }}>{value}</span>
+          <span style={{ fontSize:11, color: color, opacity:0.6, fontFamily:"'DM Mono',monospace" }}>{unit}</span>
+        </div>
+        <div style={{ height:2, background: bg || "#eef3f7", borderRadius:2, overflow:"hidden" }}>
+          <div style={{ height:"100%", width: Math.min(clamp,100)+"%", background: isOver ? "#c4524a" : color, borderRadius:2, transition:"width 1s cubic-bezier(.4,0,.2,1)" }}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── TAB ICONS ───────────────────────────────────────────────────── */
+const TAB_ICONS = {
+  "Lunch Prep": (active) => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? "#7a3e2e" : "#9a8a6e"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 7h18M3 12h18M8 17h8"/><rect x="5" y="3" width="14" height="18" rx="2" fill="none"/>
+    </svg>
+  ),
+  "Dinners": (active) => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? "#2e5a7a" : "#9a8a6e"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 20h18"/><path d="M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/>
+    </svg>
+  ),
+  "Breakfasts": (active) => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? "#7a3e2e" : "#9a8a6e"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  ),
+  "Snacks": (active) => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? "#3a6b4a" : "#9a8a6e"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2a4 4 0 014 4v1H8V6a4 4 0 014-4z"/><path d="M8 7v13h8V7"/><path d="M10 11v5M14 11v5"/>
+    </svg>
+  ),
+  "Shopping": (active) => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? "#8b6914" : "#9a8a6e"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+    </svg>
+  ),
+  "Targets": (active) => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? "#5a6b3a" : "#9a8a6e"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+    </svg>
+  ),
 };
 
-const PILL_BG = {
-  cal: "#f5e8cc",
-  protein: "#f5e0d8",
-  carbs: "#daeede",
-  fat: "#d5e8f0",
-  fiber: "#e2ebd5"
-};
+function TabBar({ tabs, active, setActive }) {
+  return (
+    <div style={{ display:"flex", gap:3, flexWrap:"wrap", background:"#ede8de", borderRadius:12, padding:4, marginBottom:28 }}>
+      {tabs.map((t, i) => {
+        const isActive = active === i;
+        const icon = TAB_ICONS[t];
+        return (
+          <button key={t} onClick={() => setActive(i)} style={{
+            flex:1, minWidth:90, padding:"9px 8px",
+            background: isActive ? "#fff" : "none",
+            border: "none", borderRadius:8, cursor:"pointer",
+            color: isActive ? "#2a2418" : "#9a8a6e",
+            fontSize:10, letterSpacing:"0.04em", textTransform:"uppercase",
+            fontFamily:"'DM Mono',monospace",
+            transition:"all 0.15s",
+            display:"flex", flexDirection:"column", alignItems:"center", gap:5,
+          }}>
+            {icon && icon(isActive)}
+            {t}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
+/* ── HELPERS ─────────────────────────────────────────────────────── */
 function resolveVal(val, units) {
   if (!val) return "";
   if (typeof val === "string") return val;
   return val[units] || val.metric || val.imperial || "";
 }
-
 function resolveIngredient(ing, subs, units) {
   if (!ing.subKey || !subs[ing.subKey]) return ing;
   const sub = ing.substitutions && ing.substitutions.find(s => s.id === subs[ing.subKey]);
   if (!sub) return ing;
   return { ...ing, item: sub.item, jake: sub.jake || ing.jake, laine: sub.laine || ing.laine, shared: sub.shared || ing.shared };
 }
-
 function resolveDinner(d, subs) {
   let jake = d.jake, laine = d.laine, steps = d.steps;
   for (const ing of d.ingredients) {
@@ -91,7 +178,17 @@ function resolveDinner(d, subs) {
   }
   return { jake, laine, steps };
 }
-
+function parseQty(s) {
+  if (!s || typeof s !== "string") return 1;
+  const frac = s.match(/(\d+)\s*\/\s*(\d+)/);
+  if (frac) { const whole = s.match(/^(\d+)\s+\d+\/\d+/); return (whole ? parseInt(whole[1]) : 0) + parseInt(frac[1]) / parseInt(frac[2]); }
+  const num = s.match(/(\d+\.?\d*)/);
+  return num ? parseFloat(num[1]) : 1;
+}
+function scaleNutrition(base, ratio) {
+  if (!base) return null;
+  return { cal: Math.round(base.cal*ratio), protein: Math.round(base.protein*ratio), carbs: Math.round(base.carbs*ratio), fat: Math.round(base.fat*ratio) };
+}
 function buildShoppingList(week, subs, units) {
   const list = {};
   Object.entries(week.shopping).forEach(([cat, items]) => {
@@ -107,20 +204,15 @@ function buildShoppingList(week, subs, units) {
   return list;
 }
 
+/* ── MACRO ROW ───────────────────────────────────────────────────── */
 function MacroRow({ macros }) {
-  const items = [["cal", macros.cal, "kcal"], ["protein", macros.protein, "g"], ["carbs", macros.carbs, "g"], ["fat", macros.fat, "g"]];
-  if (macros.fiber != null) items.push(["fiber", macros.fiber, "g"]);
+  const items = [["cal",macros.cal,"kcal"],["protein",macros.protein,"g"],["carbs",macros.carbs,"g"],["fat",macros.fat,"g"]];
+  if (macros.fiber != null) items.push(["fiber",macros.fiber,"g"]);
   return (
-    <div style={{ display: "flex", gap: 5, flexWrap: "wrap", margin: "10px 0 16px" }}>
-      {items.map(([key, val, unit]) => (
-        <span key={key} style={{
-          display: "inline-flex", alignItems: "center", gap: 3,
-          background: PILL_BG[key],
-          borderRadius: 5, padding: "3px 9px",
-          fontFamily: "'DM Mono', monospace", fontSize: 11,
-          color: CLR[key], border: "none"
-        }}>
-          <span style={{ fontSize: 9, textTransform: "uppercase", letterSpacing: 1, opacity: 0.6 }}>{key}</span>{val}{unit}
+    <div style={{ display:"flex", gap:5, flexWrap:"wrap", margin:"10px 0 16px" }}>
+      {items.map(([key,val,unit]) => (
+        <span key={key} style={{ display:"inline-flex", alignItems:"center", gap:3, background:PILL_BG[key], borderRadius:5, padding:"3px 9px", fontFamily:"'DM Mono',monospace", fontSize:11, color:CLR[key] }}>
+          <span style={{ fontSize:9, textTransform:"uppercase", letterSpacing:1, opacity:0.6 }}>{key}</span>{val}{unit}
         </span>
       ))}
     </div>
@@ -128,26 +220,12 @@ function MacroRow({ macros }) {
 }
 
 function SectionLabel({ children }) {
-  return (
-    <div style={{
-      fontFamily: "'DM Mono', monospace",
-      fontSize: 9,
-      letterSpacing: "0.14em",
-      textTransform: "uppercase",
-      color: "#9a8a6e",
-      marginBottom: 11
-    }}>{children}</div>
-  );
+  return <div style={{ fontFamily:"'DM Mono',monospace", fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:"#9a8a6e", marginBottom:11 }}>{children}</div>;
 }
 
-function Card({ title, children, accent }) {
+function Card({ title, children }) {
   return (
-    <div style={{
-      background: "#fff",
-      borderRadius: 10,
-      padding: "16px 18px",
-      borderLeft: accent ? `3px solid ${accent}` : "3px solid #e8dfc8"
-    }}>
+    <div style={{ background:"#fff", borderRadius:10, padding:"16px 18px", borderLeft:"3px solid #e8dfc8" }}>
       <SectionLabel>{title}</SectionLabel>
       {children}
     </div>
@@ -156,16 +234,17 @@ function Card({ title, children, accent }) {
 
 function Steps({ items }) {
   return (
-    <ol style={{ paddingLeft: 16, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
-      {items.map((item, i) => <li key={i} style={{ fontSize: 12, lineHeight: 1.6, color: "#4a3f2e" }}>{item}</li>)}
+    <ol style={{ paddingLeft:16, margin:0, display:"flex", flexDirection:"column", gap:7 }}>
+      {items.map((item,i) => <li key={i} style={{ fontSize:12, lineHeight:1.6, color:"#4a3f2e" }}>{item}</li>)}
     </ol>
   );
 }
 
+/* ── SUBDROPDOWN ─────────────────────────────────────────────────── */
 function SubDropdown({ ing }) {
   const { subs, setSub } = useSubs();
   const { openKey, setOpenKey } = useOpenDropdown();
-  const btnRef = React.useRef(null);
+  const btnRef = useRef(null);
   const isOpen = openKey === ing.subKey;
   const current = subs[ing.subKey] || "default";
   const [menuStyle, setMenuStyle] = useState({});
@@ -180,36 +259,19 @@ function SubDropdown({ ing }) {
     setOpenKey(isOpen ? null : ing.subKey);
   };
   return (
-    <div style={{ display: "inline-block" }}>
-      <button ref={btnRef} onClick={toggle} style={{
-        background: "#f5ede0", border: "none", borderRadius: 4,
-        color: "#9a7a52", padding: "1px 7px", cursor: "pointer",
-        fontSize: 10, lineHeight: 1.4, marginLeft: 6, fontFamily: "'DM Mono', monospace"
-      }}>swap {isOpen ? "▲" : "▼"}</button>
+    <div style={{ display:"inline-block" }}>
+      <button ref={btnRef} onClick={toggle} style={{ background:"#f5ede0", border:"none", borderRadius:4, color:"#9a7a52", padding:"1px 7px", cursor:"pointer", fontSize:10, lineHeight:1.4, marginLeft:6, fontFamily:"'DM Mono',monospace" }}>
+        swap {isOpen ? "▲" : "▼"}
+      </button>
       {isOpen && (
-        <div style={{
-          position: "fixed", ...menuStyle, zIndex: 1000,
-          background: "#fff", border: "1px solid #e0d5c0",
-          borderRadius: 10, padding: 6, width: 210,
-          boxShadow: "0 6px 24px rgba(80,60,20,0.12)"
-        }}>
-          <div onClick={() => { setSub(ing.subKey, null); setOpenKey(null); }} style={{
-            padding: "8px 10px", fontSize: 12,
-            color: current === "default" ? "#7a3e2e" : "#4a3f2e",
-            cursor: "pointer", borderRadius: 7,
-            background: current === "default" ? "#f5ede0" : "none"
-          }}>
-            {ing.item} <span style={{ color: "#b8a88a", fontSize: 10 }}>(original)</span>
+        <div style={{ position:"fixed", ...menuStyle, zIndex:1000, background:"#fff", border:"1px solid #e0d5c0", borderRadius:10, padding:6, width:210, boxShadow:"0 6px 24px rgba(80,60,20,0.12)" }}>
+          <div onClick={() => { setSub(ing.subKey, null); setOpenKey(null); }} style={{ padding:"8px 10px", fontSize:12, color: current==="default" ? "#7a3e2e" : "#4a3f2e", cursor:"pointer", borderRadius:7, background: current==="default" ? "#f5ede0" : "none" }}>
+            {ing.item} <span style={{ color:"#b8a88a", fontSize:10 }}>(original)</span>
           </div>
           {ing.substitutions.map(sub => (
-            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpenKey(null); }} style={{
-              padding: "8px 10px", fontSize: 12,
-              color: current === sub.id ? "#7a3e2e" : "#4a3f2e",
-              cursor: "pointer", borderRadius: 7,
-              background: current === sub.id ? "#f5ede0" : "none"
-            }}>
+            <div key={sub.id} onClick={() => { setSub(ing.subKey, sub.id); setOpenKey(null); }} style={{ padding:"8px 10px", fontSize:12, color: current===sub.id ? "#7a3e2e" : "#4a3f2e", cursor:"pointer", borderRadius:7, background: current===sub.id ? "#f5ede0" : "none" }}>
               {sub.item}
-              {sub.note && <div style={{ fontSize: 10, color: "#9a8a6e", marginTop: 2 }}>{sub.note}</div>}
+              {sub.note && <div style={{ fontSize:10, color:"#9a8a6e", marginTop:2 }}>{sub.note}</div>}
             </div>
           ))}
         </div>
@@ -220,34 +282,15 @@ function SubDropdown({ ing }) {
 
 function IngNutrition({ n, color }) {
   if (!n) return null;
-  const pills = [["cal", n.cal, "kcal"], ["pro", n.protein, "g"], ["carb", n.carbs, "g"], ["fat", n.fat, "g"]];
   return (
-    <span style={{ display: "flex", flexWrap: "wrap", gap: 3, marginTop: 4 }}>
-      {pills.map(([k, v, u]) => (
-        <span key={k} style={{
-          fontSize: 9, fontFamily: "'DM Mono', monospace",
-          color: color || "#8b6914",
-          background: "#f5f0e8",
-          borderRadius: 4, padding: "1px 5px", letterSpacing: "0.02em"
-        }}>
-          <span style={{ opacity: 0.5, marginRight: 2 }}>{k}</span>{v}{u}
+    <span style={{ display:"flex", flexWrap:"wrap", gap:3, marginTop:4 }}>
+      {[["cal",n.cal,"kcal"],["pro",n.protein,"g"],["carb",n.carbs,"g"],["fat",n.fat,"g"]].map(([k,v,u]) => (
+        <span key={k} style={{ fontSize:9, fontFamily:"'DM Mono',monospace", color: color||"#8b6914", background:"#f5f0e8", borderRadius:4, padding:"1px 5px" }}>
+          <span style={{ opacity:0.5, marginRight:2 }}>{k}</span>{v}{u}
         </span>
       ))}
     </span>
   );
-}
-
-function scaleNutrition(base, ratio) {
-  if (!base) return null;
-  return { cal: Math.round(base.cal * ratio), protein: Math.round(base.protein * ratio), carbs: Math.round(base.carbs * ratio), fat: Math.round(base.fat * ratio) };
-}
-
-function parseQty(s) {
-  if (!s || typeof s !== "string") return 1;
-  const frac = s.match(/(\d+)\s*\/\s*(\d+)/);
-  if (frac) { const whole = s.match(/^(\d+)\s+\d+\/\d+/); return (whole ? parseInt(whole[1]) : 0) + parseInt(frac[1]) / parseInt(frac[2]); }
-  const num = s.match(/(\d+\.?\d*)/);
-  return num ? parseFloat(num[1]) : 1;
 }
 
 function IngredientList({ items, nutritionColor }) {
@@ -255,20 +298,18 @@ function IngredientList({ items, nutritionColor }) {
   const units = useUnits();
   const db = useNutritionDB();
   return (
-    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+    <ul style={{ listStyle:"none", padding:0, margin:0, display:"flex", flexDirection:"column", gap:10 }}>
       {items.map((rawIng, i) => {
-        const text = typeof rawIng === "string"
-          ? rawIng
-          : rawIng.item
-            ? resolveIngredient(rawIng, subs, units).item
-            : rawIng[units] || rawIng.metric || rawIng.imperial || "";
+        const text = typeof rawIng === "string" ? rawIng
+          : rawIng.item ? resolveIngredient(rawIng, subs, units).item
+          : rawIng[units] || rawIng.metric || rawIng.imperial || "";
         const hasSubs = rawIng && rawIng.substitutions && rawIng.substitutions.length > 0;
         const base = rawIng.nutritionKey ? db[rawIng.nutritionKey] : null;
         return (
-          <li key={i} style={{ paddingLeft: 13, position: "relative" }}>
-            <span style={{ position: "absolute", left: 0, top: 3, color: "#c4a86e", fontSize: 10 }}>◆</span>
-            <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
-              <span style={{ fontSize: 12, lineHeight: 1.5, color: "#4a3f2e" }}>{text}</span>
+          <li key={i} style={{ paddingLeft:13, position:"relative" }}>
+            <span style={{ position:"absolute", left:0, top:3, color:"#c4a86e", fontSize:10 }}>◆</span>
+            <div style={{ display:"flex", alignItems:"center", flexWrap:"wrap", gap:4 }}>
+              <span style={{ fontSize:12, lineHeight:1.5, color:"#4a3f2e" }}>{text}</span>
               {hasSubs && <SubDropdown ing={rawIng} />}
             </div>
             {base && <IngNutrition n={base} color={nutritionColor} />}
@@ -279,37 +320,25 @@ function IngredientList({ items, nutritionColor }) {
   );
 }
 
+/* ── ACCORDION ───────────────────────────────────────────────────── */
 function Accordion({ label, labelColor, name, note, macros, ingredients, steps, isOpen, onToggle }) {
   return (
-    <div style={{
-      background: "#fff",
-      border: "1px solid #e8dfc8",
-      borderRadius: 12,
-      marginBottom: 10,
-      overflow: "hidden"
-    }}>
-      <button onClick={onToggle} style={{
-        width: "100%", display: "flex", alignItems: "center",
-        justifyContent: "space-between", padding: "16px 20px",
-        background: "none", border: "none", cursor: "pointer", color: "inherit"
-      }}>
-        <div style={{ textAlign: "left" }}>
-          {label && <div style={{
-            fontSize: 10, color: labelColor || "#8b6914",
-            fontFamily: "'DM Mono', monospace", marginBottom: 4, letterSpacing: "0.08em"
-          }}>{label}</div>}
-          <div style={{ fontSize: 15, fontFamily: "'Lora', serif", color: "#1e1810" }}>{name}</div>
-          {note && <div style={{ fontSize: 12, color: "#9a8a6e", marginTop: 3 }}>{note}</div>}
+    <div style={{ background:"#fff", border:"1px solid #e8dfc8", borderRadius:12, marginBottom:10, overflow:"hidden" }}>
+      <button onClick={onToggle} style={{ width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"16px 20px", background:"none", border:"none", cursor:"pointer", color:"inherit" }}>
+        <div style={{ textAlign:"left" }}>
+          {label && <div style={{ fontSize:10, color:labelColor||"#8b6914", fontFamily:"'DM Mono',monospace", marginBottom:4, letterSpacing:"0.08em" }}>{label}</div>}
+          <div style={{ fontSize:15, fontFamily:"'Lora',serif", color:"#1e1810" }}>{name}</div>
+          {note && <div style={{ fontSize:12, color:"#9a8a6e", marginTop:3 }}>{note}</div>}
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, marginLeft: 12 }}>
-          <span style={{ fontSize: 11, color: "#7a3e2e", fontFamily: "'DM Mono', monospace" }}>{macros.protein}g P</span>
-          <span style={{ color: "#c4a86e", fontSize: 11 }}>{isOpen ? "▲" : "▼"}</span>
+        <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0, marginLeft:12 }}>
+          <span style={{ fontSize:11, color:"#7a3e2e", fontFamily:"'DM Mono',monospace" }}>{macros.protein}g P</span>
+          <span style={{ color:"#c4a86e", fontSize:11 }}>{isOpen ? "▲" : "▼"}</span>
         </div>
       </button>
       {isOpen && (
-        <div style={{ padding: "0 20px 20px" }}>
+        <div style={{ padding:"0 20px 20px" }}>
           <MacroRow macros={macros} />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
             <Card title="Ingredients"><IngredientList items={ingredients} /></Card>
             <Card title="Instructions"><Steps items={steps} /></Card>
           </div>
@@ -319,79 +348,63 @@ function Accordion({ label, labelColor, name, note, macros, ingredients, steps, 
   );
 }
 
+/* ── DINNER CARD ─────────────────────────────────────────────────── */
 function DinnerCard({ d, isOpen, onToggle }) {
   const { subs } = useSubs();
   const units = useUnits();
-  const nutritionDB = useNutritionDB();
+  const db = useNutritionDB();
   const { jake, laine, steps } = resolveDinner(d, subs);
   return (
-    <div style={{
-      background: "#fff",
-      border: "1px solid #e8dfc8",
-      borderRadius: 12,
-      overflow: "hidden"
-    }}>
-      <button onClick={onToggle} style={{
-        width: "100%", display: "flex", alignItems: "center",
-        justifyContent: "space-between", padding: "16px 20px",
-        background: "none", border: "none", cursor: "pointer", color: "inherit"
-      }}>
-        <div style={{ textAlign: "left" }}>
-          <div style={{ fontSize: 10, color: "#8b6914", fontFamily: "'DM Mono', monospace", marginBottom: 4, letterSpacing: "0.08em" }}>{d.day}</div>
-          <div style={{ fontSize: 15, fontFamily: "'Lora', serif", color: "#1e1810", marginBottom: 3 }}>{d.name}</div>
-          <div style={{ fontSize: 11, color: "#9a8a6e" }}>{d.note}</div>
+    <div style={{ background:"#fff", border:"1px solid #e8dfc8", borderRadius:12, overflow:"hidden" }}>
+      <button onClick={onToggle} style={{ width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"16px 20px", background:"none", border:"none", cursor:"pointer", color:"inherit" }}>
+        <div style={{ textAlign:"left" }}>
+          <div style={{ fontSize:10, color:"#8b6914", fontFamily:"'DM Mono',monospace", marginBottom:4, letterSpacing:"0.08em" }}>{d.day}</div>
+          <div style={{ fontSize:15, fontFamily:"'Lora',serif", color:"#1e1810", marginBottom:3 }}>{d.name}</div>
+          <div style={{ fontSize:11, color:"#9a8a6e" }}>{d.note}</div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, marginLeft: 12 }}>
-          <div style={{ textAlign: "right" }}>
-            <div style={{ fontSize: 10, color: "#2e5a7a", fontFamily: "'DM Mono', monospace" }}>J {jake.cal}</div>
-            <div style={{ fontSize: 10, color: "#7a3e2e", fontFamily: "'DM Mono', monospace" }}>L {laine.cal}</div>
+        <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0, marginLeft:12 }}>
+          <div style={{ textAlign:"right" }}>
+            <div style={{ fontSize:10, color:"#2e5a7a", fontFamily:"'DM Mono',monospace" }}>J {jake.cal}</div>
+            <div style={{ fontSize:10, color:"#7a3e2e", fontFamily:"'DM Mono',monospace" }}>L {laine.cal}</div>
           </div>
-          <span style={{ color: "#c4a86e", fontSize: 11 }}>{isOpen ? "▲" : "▼"}</span>
+          <span style={{ color:"#c4a86e", fontSize:11 }}>{isOpen ? "▲" : "▼"}</span>
         </div>
       </button>
       {isOpen && (
-        <div style={{ padding: "0 20px 20px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 14 }}>
+        <div style={{ padding:"0 20px 20px" }}>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8, marginBottom:14 }}>
             <div>
-              <div style={{ fontSize: 10, color: "#2e5a7a", fontFamily: "'DM Mono', monospace", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.06em" }}>Jake</div>
+              <div style={{ fontSize:10, color:"#2e5a7a", fontFamily:"'DM Mono',monospace", marginBottom:6, textTransform:"uppercase", letterSpacing:"0.06em" }}>Jake</div>
               <MacroRow macros={jake} />
             </div>
             <div>
-              <div style={{ fontSize: 10, color: "#7a3e2e", fontFamily: "'DM Mono', monospace", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.06em" }}>Laine</div>
+              <div style={{ fontSize:10, color:"#7a3e2e", fontFamily:"'DM Mono',monospace", marginBottom:6, textTransform:"uppercase", letterSpacing:"0.06em" }}>Laine</div>
               <MacroRow macros={laine} />
             </div>
           </div>
-          <div style={{ background: "#faf7f0", border: "1px solid #e8dfc8", borderRadius: 10, overflow: "visible", marginBottom: 12 }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", borderBottom: "1px solid #e8dfc8" }}>
-              {["Ingredient", "Jake", "Laine"].map(h => (
-                <div key={h} style={{ padding: "8px 12px", fontSize: 9, color: "#9a8a6e", fontFamily: "'DM Mono', monospace", letterSpacing: "0.1em", textTransform: "uppercase" }}>{h}</div>
+          <div style={{ background:"#faf7f0", border:"1px solid #e8dfc8", borderRadius:10, overflow:"visible", marginBottom:12 }}>
+            <div style={{ display:"grid", gridTemplateColumns:"1.5fr 1fr 1fr", borderBottom:"1px solid #e8dfc8" }}>
+              {["Ingredient","Jake","Laine"].map(h => (
+                <div key={h} style={{ padding:"8px 12px", fontSize:9, color:"#9a8a6e", fontFamily:"'DM Mono',monospace", letterSpacing:"0.1em", textTransform:"uppercase" }}>{h}</div>
               ))}
             </div>
             {d.ingredients.map((rawIng, i) => {
               const ing = resolveIngredient(rawIng, subs, units);
-              const jakeVal = ing.jake ? resolveVal(ing.jake, units) : resolveVal(ing.shared, units);
-              const laineVal = ing.laine ? resolveVal(ing.laine, units) : resolveVal(ing.shared, units);
-              const base = rawIng.nutritionKey ? nutritionDB[rawIng.nutritionKey] : null;
-              const jq = parseQty(jakeVal), lq = parseQty(laineVal), total = jq + lq || 2;
-              const jakeN = scaleNutrition(base, total > 0 ? jq / total : 0.5);
-              const laineN = scaleNutrition(base, total > 0 ? lq / total : 0.5);
+              const jv = ing.jake ? resolveVal(ing.jake, units) : resolveVal(ing.shared, units);
+              const lv = ing.laine ? resolveVal(ing.laine, units) : resolveVal(ing.shared, units);
+              const base = rawIng.nutritionKey ? db[rawIng.nutritionKey] : null;
+              const jq = parseQty(jv), lq = parseQty(lv), tot = jq + lq || 2;
               return (
-                <div key={i} style={{
-                  display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr",
-                  borderBottom: i < d.ingredients.length - 1 ? "1px solid #ede8de" : "none",
-                  alignItems: "start"
-                }}>
-                  <div style={{ padding: "9px 12px", fontSize: 12, color: "#4a3f2e", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4 }}>
+                <div key={i} style={{ display:"grid", gridTemplateColumns:"1.5fr 1fr 1fr", borderBottom: i < d.ingredients.length-1 ? "1px solid #ede8de" : "none", alignItems:"start" }}>
+                  <div style={{ padding:"9px 12px", fontSize:12, color:"#4a3f2e", display:"flex", alignItems:"center", flexWrap:"wrap", gap:4 }}>
                     {ing.item}
                     {rawIng.substitutions && rawIng.substitutions.length > 0 && <SubDropdown ing={rawIng} />}
                   </div>
-                  <div style={{ padding: "9px 12px", fontSize: 12, color: "#2e5a7a", fontFamily: "'DM Mono', monospace" }}>
-                    {jakeVal}
-                    <IngNutrition n={jakeN} color="#2e5a7a" />
+                  <div style={{ padding:"9px 12px", fontSize:12, color:"#2e5a7a", fontFamily:"'DM Mono',monospace" }}>
+                    {jv}<IngNutrition n={scaleNutrition(base, tot>0?jq/tot:0.5)} color="#2e5a7a" />
                   </div>
-                  <div style={{ padding: "9px 12px", fontSize: 12, color: "#7a3e2e", fontFamily: "'DM Mono', monospace" }}>
-                    {laineVal}
-                    <IngNutrition n={laineN} color="#7a3e2e" />
+                  <div style={{ padding:"9px 12px", fontSize:12, color:"#7a3e2e", fontFamily:"'DM Mono',monospace" }}>
+                    {lv}<IngNutrition n={scaleNutrition(base, tot>0?lq/tot:0.5)} color="#7a3e2e" />
                   </div>
                 </div>
               );
@@ -404,131 +417,98 @@ function DinnerCard({ d, isOpen, onToggle }) {
   );
 }
 
+/* ── UNITS TOGGLE ────────────────────────────────────────────────── */
 function UnitsToggle({ units, setUnits }) {
   return (
-    <div style={{ display: "flex", gap: 2, background: "#ede8de", borderRadius: 7, padding: 3 }}>
-      {["imperial", "metric"].map(u => (
-        <button key={u} onClick={() => { setUnits(u); localStorage.setItem("mealplan_units", u); }} style={{
-          padding: "5px 11px",
-          background: units === u ? "#fff" : "none",
-          border: "none",
-          borderRadius: 5, cursor: "pointer",
-          color: units === u ? "#3a2e1a" : "#9a8a6e",
-          fontSize: 10, letterSpacing: "0.06em", textTransform: "uppercase",
-          fontFamily: "'DM Mono', monospace",
-          transition: "all 0.15s"
-        }}>{u === "imperial" ? "US" : "Metric"}</button>
+    <div style={{ display:"flex", gap:2, background:"#ede8de", borderRadius:7, padding:3 }}>
+      {["imperial","metric"].map(u => (
+        <button key={u} onClick={() => { setUnits(u); localStorage.setItem("mealplan_units",u); }} style={{ padding:"5px 11px", background: units===u ? "#fff" : "none", border:"none", borderRadius:5, cursor:"pointer", color: units===u ? "#3a2e1a" : "#9a8a6e", fontSize:10, letterSpacing:"0.06em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace", transition:"all 0.15s" }}>
+          {u==="imperial" ? "US" : "Metric"}
+        </button>
       ))}
     </div>
   );
 }
 
+/* ── DAYS SELECTOR ───────────────────────────────────────────────── */
 function DaysSelector({ days, setDays, color }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-      <span style={{ fontSize: 11, color: "#9a8a6e", fontFamily: "'DM Mono', monospace", letterSpacing: "0.06em", textTransform: "uppercase" }}>Prepping for</span>
-      <div style={{ display: "flex", gap: 3 }}>
+    <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
+      <span style={{ fontSize:11, color:"#9a8a6e", fontFamily:"'DM Mono',monospace", letterSpacing:"0.06em", textTransform:"uppercase" }}>Prepping for</span>
+      <div style={{ display:"flex", gap:3 }}>
         {[1,2,3,4,5].map(n => (
-          <button key={n} onClick={() => setDays(n)} style={{
-            width: 28, height: 28, borderRadius: 6,
-            border: `1px solid ${days === n ? color : "#e0d5c0"}`,
-            background: days === n ? color + "22" : "none",
-            color: days === n ? color : "#9a8a6e",
-            fontSize: 12, cursor: "pointer",
-            fontFamily: "'DM Mono', monospace", transition: "all 0.15s"
-          }}>{n}</button>
+          <button key={n} onClick={() => setDays(n)} style={{ width:28, height:28, borderRadius:6, border:`1px solid ${days===n ? color : "#e0d5c0"}`, background: days===n ? color+"22" : "none", color: days===n ? color : "#9a8a6e", fontSize:12, cursor:"pointer", fontFamily:"'DM Mono',monospace", transition:"all 0.15s" }}>{n}</button>
         ))}
       </div>
-      <span style={{ fontSize: 11, color: "#9a8a6e" }}>day{days !== 1 ? "s" : ""}</span>
+      <span style={{ fontSize:11, color:"#9a8a6e" }}>day{days!==1?"s":""}</span>
     </div>
   );
 }
 
+/* ── SCALE HELPERS ───────────────────────────────────────────────── */
 function scaleNumber(num, ratio) {
-  const scaled = parseFloat(num) * ratio;
-  const rounded = Math.round(scaled * 8) / 8;
-  if (rounded === Math.floor(rounded)) return String(rounded);
-  const fracs = [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]];
-  const whole = Math.floor(rounded);
-  const frac = rounded - whole;
-  for (const [n,d,s] of fracs) { if (Math.abs(frac - n/d) < 0.07) return whole > 0 ? whole + " " + s : s; }
-  return parseFloat(scaled.toFixed(1)).toString();
+  const r = Math.round(parseFloat(num)*ratio*8)/8;
+  if (r === Math.floor(r)) return String(r);
+  const whole = Math.floor(r), frac = r-whole;
+  for (const [n,d,s] of [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]]) {
+    if (Math.abs(frac-n/d)<0.07) return whole>0 ? whole+" "+s : s;
+  }
+  return parseFloat((parseFloat(num)*ratio).toFixed(1)).toString();
 }
-
 function scaleIngredient(text, days) {
-  if (days === 5) return text;
-  const ratio = days / 5;
+  if (days===5) return text;
   return text.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|handfuls?|cloves?|bunches?|pints?|ml)/gi,
-    (match, num, unit) => scaleNumber(num, ratio) + " " + unit);
+    (match,num,unit) => scaleNumber(num,days/5)+" "+unit);
 }
-
 function scaleStep(text, days) {
-  if (days === 5) return text;
-  const ratio = days / 5;
+  if (days===5) return text;
   return text.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|handfuls?|ml)/gi,
-    (match, num, unit) => scaleNumber(num, ratio) + " " + unit);
+    (match,num,unit) => scaleNumber(num,days/5)+" "+unit);
 }
 
+/* ── LUNCH ACCORDION ─────────────────────────────────────────────── */
 function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, isOpen, onToggle }) {
   const units = useUnits();
-  const scaledIngredients = lunch.ingredients.map(ing => {
-    if (typeof ing === "string") return scaleIngredient(ing, days);
-    const item = ing.item ? scaleIngredient(ing.item, days) : (ing[units] || ing.metric || ing.imperial || "");
-    return { ...ing, item };
+  const scaledIngs = lunch.ingredients.map(ing => {
+    if (typeof ing==="string") return scaleIngredient(ing,days);
+    return { ...ing, item: scaleIngredient(ing.item||"", days) };
   });
-  const scaledSteps = lunch.steps.map(s => scaleStep(s, days));
-  const finalSteps = scaledSteps.map(s =>
-    s.replace(/5 containers/g, days + " container" + (days !== 1 ? "s" : ""))
-     .replace(/5 equal containers/g, days + " equal container" + (days !== 1 ? "s" : ""))
-     .replace(/all 5/g, "all " + days)
-     .replace(/for all 5/g, "for all " + days)
-  );
+  const finalSteps = lunch.steps.map(s => scaleStep(s,days))
+    .map(s => s.replace(/5 containers/g, days+" container"+(days!==1?"s":"")).replace(/all 5/g,"all "+days));
   return (
-    <div style={{
-      background: "#fff",
-      border: "1px solid #e8dfc8",
-      borderRadius: 12, marginBottom: 10, overflow: "hidden"
-    }}>
-      <button onClick={onToggle} style={{
-        width: "100%", display: "flex", alignItems: "center",
-        justifyContent: "space-between", padding: "16px 20px",
-        background: "none", border: "none", cursor: "pointer", color: "inherit"
-      }}>
-        <div style={{ textAlign: "left" }}>
-          <div style={{ fontSize: 10, color: labelColor, fontFamily: "'DM Mono', monospace", marginBottom: 4, letterSpacing: "0.08em" }}>{label}</div>
-          <div style={{ fontSize: 15, fontFamily: "'Lora', serif", color: "#1e1810" }}>{lunch.name}</div>
-          {lunch.note && <div style={{ fontSize: 12, color: "#9a8a6e", marginTop: 3 }}>{lunch.note}</div>}
+    <div style={{ background:"#fff", border:"1px solid #e8dfc8", borderRadius:12, marginBottom:10, overflow:"hidden" }}>
+      <button onClick={onToggle} style={{ width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"16px 20px", background:"none", border:"none", cursor:"pointer", color:"inherit" }}>
+        <div style={{ textAlign:"left" }}>
+          <div style={{ fontSize:10, color:labelColor, fontFamily:"'DM Mono',monospace", marginBottom:4, letterSpacing:"0.08em" }}>{label}</div>
+          <div style={{ fontSize:15, fontFamily:"'Lora',serif", color:"#1e1810" }}>{lunch.name}</div>
+          {lunch.note && <div style={{ fontSize:12, color:"#9a8a6e", marginTop:3 }}>{lunch.note}</div>}
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, marginLeft: 12 }}>
-          <span style={{ fontSize: 11, color: "#7a3e2e", fontFamily: "'DM Mono', monospace" }}>{lunch.macros.protein}g P</span>
-          <span style={{ color: "#c4a86e", fontSize: 11 }}>{isOpen ? "▲" : "▼"}</span>
+        <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0, marginLeft:12 }}>
+          <span style={{ fontSize:11, color:"#7a3e2e", fontFamily:"'DM Mono',monospace" }}>{lunch.macros.protein}g P</span>
+          <span style={{ color:"#c4a86e", fontSize:11 }}>{isOpen?"▲":"▼"}</span>
         </div>
       </button>
       {isOpen && (
-        <div style={{ padding: "0 20px 20px" }}>
+        <div style={{ padding:"0 20px 20px" }}>
           <DaysSelector days={days} setDays={setDays} color={personColor} />
-          {days < 5 && (
-            <div style={{ background: "#f5ede0", borderRadius: 8, padding: "8px 12px", marginBottom: 12, fontSize: 11, color: "#7a3e2e", lineHeight: 1.5 }}>
-              Scaled to {days} day{days !== 1 ? "s" : ""} — all amounts adjusted automatically.
-            </div>
-          )}
+          {days < 5 && <div style={{ background:"#f5ede0", borderRadius:8, padding:"8px 12px", marginBottom:12, fontSize:11, color:"#7a3e2e", lineHeight:1.5 }}>Scaled to {days} day{days!==1?"s":""} — all amounts adjusted.</div>}
           <MacroRow macros={lunch.macros} />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            <div style={{ background: "#faf7f0", borderRadius: 10, padding: "16px 18px" }}>
-              <SectionLabel>Ingredients — {days} portion{days !== 1 ? "s" : ""}</SectionLabel>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
-                {scaledIngredients.map((ing, i) => (
-                  <li key={i} style={{ fontSize: 12, lineHeight: 1.5, color: "#4a3f2e", paddingLeft: 13, position: "relative" }}>
-                    <span style={{ position: "absolute", left: 0, top: 3, color: "#c4a86e", fontSize: 10 }}>◆</span>
-                    {typeof ing === "string" ? ing : ing.item}
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
+            <div style={{ background:"#faf7f0", borderRadius:10, padding:"16px 18px" }}>
+              <SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel>
+              <ul style={{ listStyle:"none", padding:0, margin:0, display:"flex", flexDirection:"column", gap:7 }}>
+                {scaledIngs.map((ing,i) => (
+                  <li key={i} style={{ fontSize:12, lineHeight:1.5, color:"#4a3f2e", paddingLeft:13, position:"relative" }}>
+                    <span style={{ position:"absolute", left:0, top:3, color:"#c4a86e", fontSize:10 }}>◆</span>
+                    {typeof ing==="string" ? ing : ing.item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div style={{ background: "#faf7f0", borderRadius: 10, padding: "16px 18px" }}>
+            <div style={{ background:"#faf7f0", borderRadius:10, padding:"16px 18px" }}>
               <SectionLabel>Instructions</SectionLabel>
-              <ol style={{ paddingLeft: 16, margin: 0, display: "flex", flexDirection: "column", gap: 7 }}>
-                {finalSteps.map((s, i) => <li key={i} style={{ fontSize: 12, lineHeight: 1.6, color: "#4a3f2e" }}>{s}</li>)}
+              <ol style={{ paddingLeft:16, margin:0, display:"flex", flexDirection:"column", gap:7 }}>
+                {finalSteps.map((s,i) => <li key={i} style={{ fontSize:12, lineHeight:1.6, color:"#4a3f2e" }}>{s}</li>)}
               </ol>
             </div>
           </div>
@@ -538,225 +518,83 @@ function LunchAccordion({ label, labelColor, lunch, days, setDays, personColor, 
   );
 }
 
+/* ── MICRONUTRIENT BAR ───────────────────────────────────────────── */
 function MicroBar({ label, value, dri, unit, isUpper }) {
-  const pct = Math.min(Math.round((value / dri) * 100), 150);
+  const pct = Math.min(Math.round((value/dri)*100), 150);
   const over = pct > 100;
-  const color = isUpper
-    ? (pct > 100 ? "#a33a2e" : pct > 80 ? "#8b6914" : "#3a6b4a")
-    : (pct >= 100 ? "#3a6b4a" : pct >= 60 ? "#5a8b3a" : pct >= 30 ? "#8b6914" : "#a33a2e");
-  const barColor = isUpper ? (pct > 100 ? "#c4524a" : "#8b6914") : color;
+  const color = isUpper ? (pct>100?"#a33a2e":pct>80?"#8b6914":"#3a6b4a") : (pct>=100?"#3a6b4a":pct>=60?"#5a8b3a":pct>=30?"#8b6914":"#a33a2e");
   return (
-    <div style={{ marginBottom: 10 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 3 }}>
-        <span style={{ fontSize: 11, color: "#4a3f2e" }}>{label}</span>
-        <span style={{ fontSize: 10, fontFamily: "'DM Mono', monospace", color }}>
-          {value % 1 === 0 ? value : value.toFixed(1)}{unit} / {dri}{unit}
-          {isUpper && over && <span style={{ color: "#a33a2e", marginLeft: 4 }}>↑</span>}
+    <div style={{ marginBottom:10 }}>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:3 }}>
+        <span style={{ fontSize:11, color:"#4a3f2e" }}>{label}</span>
+        <span style={{ fontSize:10, fontFamily:"'DM Mono',monospace", color }}>
+          {value%1===0?value:value.toFixed(1)}{unit}/{dri}{unit}
+          {isUpper&&over&&<span style={{ color:"#a33a2e", marginLeft:4 }}>↑</span>}
         </span>
       </div>
-      <div style={{ height: 4, background: "#ede8de", borderRadius: 3, overflow: "hidden" }}>
-        <div style={{ width: Math.min(pct, 100) + "%", height: "100%", background: barColor, borderRadius: 3, transition: "width 0.3s" }} />
+      <div style={{ height:4, background:"#ede8de", borderRadius:3, overflow:"hidden" }}>
+        <div style={{ width:Math.min(pct,100)+"%", height:"100%", background:isUpper?(pct>100?"#c4524a":"#8b6914"):color, borderRadius:3, transition:"width 0.3s" }}/>
       </div>
     </div>
   );
 }
 
-function MicroTargets({ week, db }) {
-  const [person, setPerson] = React.useState("jake");
-  if (!db || !db._dri) return null;
-  const dri = db._dri[person];
-
-  function getMicros(nutritionKey, qty) {
-    const entry = db[nutritionKey];
-    if (!entry || !entry.serving_qty) return null;
-    const ratio = qty / entry.serving_qty;
-    const result = {};
-    if (entry.micros) { Object.keys(entry.micros).forEach(k => { result[k] = Math.round(entry.micros[k] * ratio * 10) / 10; }); }
-    if (entry.fiber != null) { result.fiber = Math.round(entry.fiber * ratio * 10) / 10; }
-    return Object.keys(result).length > 0 ? result : null;
-  }
-
-  function addMicros(a, b) {
-    if (!b) return a;
-    const out = { ...a };
-    Object.keys(b).forEach(k => { out[k] = (out[k] || 0) + (b[k] || 0); });
-    return out;
-  }
-
-  function sumIngs(ingredients, personKey) {
-    let total = {};
-    for (const ing of ingredients) {
-      if (!ing.nutritionKey) continue;
-      let qty = null;
-      if (ing.qty != null) qty = ing.qty;
-      else if (personKey && ing[personKey] && ing[personKey].qty != null) qty = ing[personKey].qty;
-      else if (ing.shared && ing.shared.qty != null) qty = ing.shared.qty;
-      if (qty == null) continue;
-      const m = getMicros(ing.nutritionKey, qty);
-      total = addMicros(total, m);
-    }
-    return total;
-  }
-
-  const lunchIngs = person === "jake" ? week.jakeLunch.ingredients : week.laineLunch.ingredients;
-  let daily = sumIngs(lunchIngs, person);
-  let dinnerTotal = {};
-  for (const dinner of week.dinners) {
-    const dm = sumIngs(dinner.ingredients, person);
-    dinnerTotal = addMicros(dinnerTotal, dm);
-  }
-  Object.keys(dinnerTotal).forEach(k => { dinnerTotal[k] = Math.round((dinnerTotal[k] / 7) * 10) / 10; });
-  daily = addMicros(daily, dinnerTotal);
-  if (person === "laine" && week.laineBreakfasts) {
-    let bfTotal = {};
-    for (const b of week.laineBreakfasts) {
-      if (!b.ingredients) continue;
-      const bm = sumIngs(b.ingredients, null);
-      bfTotal = addMicros(bfTotal, bm);
-    }
-    Object.keys(bfTotal).forEach(k => { bfTotal[k] = Math.round((bfTotal[k] / week.laineBreakfasts.length) * 10) / 10; });
-    daily = addMicros(daily, bfTotal);
-  }
-
-  const microLabels = {
-    sodium:"Sodium", potassium:"Potassium", calcium:"Calcium", vitamin_d:"Vitamin D",
-    magnesium:"Magnesium", zinc:"Zinc", vitamin_c:"Vitamin C", vitamin_b12:"Vitamin B12",
-    iron:"Iron", vitamin_a:"Vitamin A", folate:"Folate", phosphorus:"Phosphorus",
-    selenium:"Selenium", fiber:"Fiber"
-  };
-
-  const color = person === "jake" ? "#2e5a7a" : "#7a3e2e";
-
-  return (
-    <div style={{ marginTop: 36 }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-        <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9a8a6e", fontFamily: "'DM Mono', monospace" }}>Estimated Daily Micros</div>
-        <div style={{ display: "flex", gap: 2, background: "#ede8de", borderRadius: 7, padding: 3 }}>
-          {["jake", "laine"].map(p => (
-            <button key={p} onClick={() => setPerson(p)} style={{
-              padding: "5px 12px",
-              background: person === p ? "#fff" : "none",
-              border: "none", borderRadius: 5, cursor: "pointer",
-              color: person === p ? (p === "jake" ? "#2e5a7a" : "#7a3e2e") : "#9a8a6e",
-              fontSize: 10, letterSpacing: "0.06em", textTransform: "uppercase",
-              fontFamily: "'DM Mono', monospace"
-            }}>{p}</button>
-          ))}
-        </div>
-      </div>
-      <div style={{ fontSize: 11, color: "#9a8a6e", marginBottom: 16, lineHeight: 1.6 }}>
-        Based on lunch + avg dinner{person === "laine" ? " + avg breakfast" : ""}. Sodium is an upper limit. Estimates from DB values.
-      </div>
-      <div style={{ background: "#fff", border: "1px solid #e8dfc8", borderRadius: 12, padding: "20px 22px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px 32px" }}>
-          {Object.entries(microLabels).map(([key, label]) => {
-            const driEntry = dri[key];
-            if (!driEntry) return null;
-            const val = Math.round((daily[key] || 0) * 10) / 10;
-            return <MicroBar key={key} label={label} value={val} dri={driEntry.dri} unit={driEntry.unit} isUpper={!!driEntry.upper} />;
-          })}
-        </div>
-      </div>
-    </div>
-  );
-}
-
+/* ── SHOPPING LIST ───────────────────────────────────────────────── */
 function ShoppingList({ week, jakeDays, laineDays }) {
   const { subs } = useSubs();
   const units = useUnits();
   const storageKey = "mealplan_shopchecked_" + week.id;
-  const [checked, setChecked] = useState(() => {
-    try { return JSON.parse(localStorage.getItem(storageKey) || "{}"); } catch { return {}; }
-  });
-  const toggle = (key) => setChecked(prev => {
-    const next = { ...prev, [key]: !prev[key] };
-    localStorage.setItem(storageKey, JSON.stringify(next));
-    return next;
-  });
+  const [checked, setChecked] = useState(() => { try { return JSON.parse(localStorage.getItem(storageKey)||"{}"); } catch { return {}; }});
+  const toggle = key => setChecked(prev => { const next={...prev,[key]:!prev[key]}; localStorage.setItem(storageKey,JSON.stringify(next)); return next; });
   const clearAll = () => { setChecked({}); localStorage.removeItem(storageKey); };
   const list = buildShoppingList(week, subs, units);
-
-  function scaleText(text, ratio) {
-    if (ratio === 1) return text;
-    return text.replace(/(\d+\.?\d*)/g, (m, n) => {
-      const scaled = parseFloat(n) * ratio;
-      const r = Math.round(scaled * 8) / 8;
-      if (r === Math.floor(r)) return String(r);
-      const whole = Math.floor(r);
-      const frac = r - whole;
-      const fracs = [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]];
-      for (const [n2,d,s] of fracs) { if (Math.abs(frac - n2/d) < 0.07) return whole > 0 ? whole + " " + s : s; }
+  function scaleText(text,ratio) {
+    if (ratio===1) return text;
+    return text.replace(/(\d+\.?\d*)/g,(m,n) => {
+      const scaled=parseFloat(n)*ratio;
+      const r=Math.round(scaled*8)/8;
+      if (r===Math.floor(r)) return String(r);
+      const whole=Math.floor(r),frac=r-whole;
+      for (const [n2,d,s] of [[1,8,"1/8"],[1,4,"1/4"],[3,8,"3/8"],[1,2,"1/2"],[5,8,"5/8"],[3,4,"3/4"],[7,8,"7/8"]]) {
+        if (Math.abs(frac-n2/d)<0.07) return whole>0?whole+" "+s:s;
+      }
       return parseFloat(scaled.toFixed(1)).toString();
     });
   }
-
-  const jakeLunchKeywords = ["turkey", "black bean", "edamame", "roasted onion"];
-  const laineLunchKeywords = ["chicken breast", "tuna", "cherry tomato", "pasta", "cucumber", "mason"];
-
+  const jakeLunchKw = ["chicken","garbanzo","chickpea","edamame","pasta sauce"];
+  const laineLunchKw = ["tuna","bell pepper","cucumber","pasta","mason"];
   const scaledList = {};
-  Object.entries(list).forEach(([cat, items]) => {
-    scaledList[cat] = items.map(({ display, key }) => {
-      const lower = display.toLowerCase();
-      const isJakeLunch = jakeLunchKeywords.some(k => lower.includes(k));
-      const isLaineLunch = laineLunchKeywords.some(k => lower.includes(k));
-      if (isJakeLunch && jakeDays !== 5) return { display: scaleText(display, jakeDays / 5), key };
-      if (isLaineLunch && laineDays !== 5) return { display: scaleText(display, laineDays / 5), key };
-      return { display, key };
+  Object.entries(list).forEach(([cat,items]) => {
+    scaledList[cat] = items.map(({display,key}) => {
+      const lower=display.toLowerCase();
+      if (jakeLunchKw.some(k=>lower.includes(k))&&jakeDays!==5) return {display:scaleText(display,jakeDays/5),key};
+      if (laineLunchKw.some(k=>lower.includes(k))&&laineDays!==5) return {display:scaleText(display,laineDays/5),key};
+      return {display,key};
     });
   });
-
-  const totalItems = Object.values(scaledList).flat().length;
-  const checkedCount = Object.values(checked).filter(Boolean).length;
-
-  const catColors = {
-    "Must Buy": "#7a3e2e",
-    "Check Supply": "#2e5a7a",
-    "Already Have — Pantry": "#3a6b4a",
-    "Already Have — Canned & Jarred": "#3a6b4a",
-    "Already Have — Refrigerated & Frozen": "#3a6b4a"
-  };
-
+  const total = Object.values(scaledList).flat().length;
+  const done = Object.values(checked).filter(Boolean).length;
+  const catColors = { "Must Buy":"#7a3e2e","Check Supply":"#2e5a7a","Already Have — Pantry":"#3a6b4a","Already Have — Canned & Jarred":"#3a6b4a","Already Have — Refrigerated & Frozen":"#3a6b4a" };
   return (
     <div>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-        <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9a8a6e", fontFamily: "'DM Mono', monospace" }}>Full household — one run</div>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          {checkedCount > 0 && <span style={{ fontSize: 11, color: "#3a6b4a", fontFamily: "'DM Mono', monospace" }}>{checkedCount}/{totalItems} done</span>}
-          {checkedCount > 0 && <button onClick={clearAll} style={{
-            background: "none", border: "1px solid #e8dfc8", borderRadius: 6,
-            color: "#9a8a6e", padding: "4px 10px", cursor: "pointer", fontSize: 11
-          }}>Clear</button>}
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:20 }}>
+        <div style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.1em", color:"#9a8a6e", fontFamily:"'DM Mono',monospace" }}>Full household — one run</div>
+        <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+          {done>0 && <span style={{ fontSize:11, color:"#3a6b4a", fontFamily:"'DM Mono',monospace" }}>{done}/{total} done</span>}
+          {done>0 && <button onClick={clearAll} style={{ background:"none", border:"1px solid #e8dfc8", borderRadius:6, color:"#9a8a6e", padding:"4px 10px", cursor:"pointer", fontSize:11 }}>Clear</button>}
         </div>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 20 }}>
-        {Object.entries(scaledList).map(([cat, items]) => (
+      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(200px,1fr))", gap:20 }}>
+        {Object.entries(scaledList).map(([cat,items]) => (
           <div key={cat}>
-            <div style={{
-              fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase",
-              color: catColors[cat] || "#8b6914",
-              marginBottom: 10, paddingBottom: 6,
-              borderBottom: `1px solid ${catColors[cat] || "#e8dfc8"}`,
-              fontFamily: "'DM Mono', monospace"
-            }}>{cat}</div>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 4 }}>
-              {items.map(({ display, key }) => {
-                const done = !!checked[key];
+            <div style={{ fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase", color:catColors[cat]||"#8b6914", marginBottom:10, paddingBottom:6, borderBottom:`1px solid ${catColors[cat]||"#e8dfc8"}`, fontFamily:"'DM Mono',monospace" }}>{cat}</div>
+            <ul style={{ listStyle:"none", padding:0, margin:0, display:"flex", flexDirection:"column", gap:4 }}>
+              {items.map(({display,key}) => {
+                const isDone = !!checked[key];
                 return (
-                  <li key={key} onClick={() => toggle(key)} style={{
-                    fontSize: 12, color: done ? "#c4a86e" : "#4a3f2e",
-                    display: "flex", gap: 8, lineHeight: 1.5,
-                    cursor: "pointer", alignItems: "flex-start",
-                    padding: "3px 0", userSelect: "none"
-                  }}>
-                    <span style={{
-                      flexShrink: 0, marginTop: 2, width: 15, height: 15,
-                      border: `1px solid ${done ? "#8b6914" : "#c4a86e"}`,
-                      borderRadius: 3,
-                      background: done ? "#f5e8cc" : "none",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 9, color: "#8b6914"
-                    }}>{done ? "✓" : ""}</span>
-                    <span style={{ textDecoration: done ? "line-through" : "none", opacity: done ? 0.5 : 1, transition: "all 0.15s" }}>{display}</span>
+                  <li key={key} onClick={() => toggle(key)} style={{ fontSize:12, color:isDone?"#c4a86e":"#4a3f2e", display:"flex", gap:8, lineHeight:1.5, cursor:"pointer", alignItems:"flex-start", padding:"3px 0", userSelect:"none" }}>
+                    <span style={{ flexShrink:0, marginTop:2, width:15, height:15, border:`1px solid ${isDone?"#8b6914":"#c4a86e"}`, borderRadius:3, background:isDone?"#f5e8cc":"none", display:"flex", alignItems:"center", justifyContent:"center", fontSize:9, color:"#8b6914" }}>{isDone?"✓":""}</span>
+                    <span style={{ textDecoration:isDone?"line-through":"none", opacity:isDone?0.5:1, transition:"all 0.15s" }}>{display}</span>
                   </li>
                 );
               })}
@@ -768,6 +606,145 @@ function ShoppingList({ week, jakeDays, laineDays }) {
   );
 }
 
+/* ── TARGETS + WATER CELLS ───────────────────────────────────────── */
+function TargetsTab({ week, db }) {
+  const [person, setPerson] = useState("jake");
+  const [animated, setAnimated] = useState(false);
+  useEffect(() => { const t = setTimeout(() => setAnimated(true), 100); return () => clearTimeout(t); }, [person]);
+
+  function getMicros(nutritionKey, qty) {
+    const entry = db[nutritionKey];
+    if (!entry || !entry.serving_qty) return null;
+    const ratio = qty / entry.serving_qty;
+    const result = {};
+    if (entry.micros) Object.keys(entry.micros).forEach(k => { result[k] = Math.round(entry.micros[k]*ratio*10)/10; });
+    if (entry.fiber != null) result.fiber = Math.round(entry.fiber*ratio*10)/10;
+    return Object.keys(result).length>0 ? result : null;
+  }
+  function addMicros(a,b) {
+    if (!b) return a;
+    const out={...a}; Object.keys(b).forEach(k => { out[k]=(out[k]||0)+(b[k]||0); }); return out;
+  }
+  function sumIngs(ingredients, personKey) {
+    let total={};
+    for (const ing of ingredients) {
+      if (!ing.nutritionKey) continue;
+      let qty = ing.qty!=null ? ing.qty : (personKey&&ing[personKey]?.qty!=null ? ing[personKey].qty : ing.shared?.qty);
+      if (qty==null) continue;
+      total = addMicros(total, getMicros(ing.nutritionKey,qty));
+    }
+    return total;
+  }
+
+  const lunchIngs = person==="jake" ? week.jakeLunch.ingredients : week.laineLunch.ingredients;
+  let daily = sumIngs(lunchIngs, person);
+  let dinnerTotal = {};
+  for (const d of week.dinners) dinnerTotal = addMicros(dinnerTotal, sumIngs(d.ingredients, person));
+  Object.keys(dinnerTotal).forEach(k => { dinnerTotal[k]=Math.round((dinnerTotal[k]/7)*10)/10; });
+  daily = addMicros(daily, dinnerTotal);
+  if (person==="laine"&&week.laineBreakfasts) {
+    let bf={};
+    for (const b of week.laineBreakfasts) { if (b.ingredients) bf=addMicros(bf,sumIngs(b.ingredients,null)); }
+    Object.keys(bf).forEach(k => { bf[k]=Math.round((bf[k]/week.laineBreakfasts.length)*10)/10; });
+    daily=addMicros(daily,bf);
+  }
+
+  const personData = week.targets[person];
+  const goal = personData.goal;
+  const color = person==="jake" ? "#2e5a7a" : "#7a3e2e";
+  const bg = person==="jake" ? "#eef3f7" : "#f7efed";
+
+  const waterCells = [
+    { label:"Calories", value: goal[0], unit:"kcal", pct:95, color:"#8b6914", bg:"#fdf6e8" },
+    { label:"Protein", value: goal[1], unit:"g", pct:82, color:"#7a3e2e", bg:"#f9eeeb" },
+    { label:"Carbs", value: goal[2], unit:"g", pct:68, color:"#3a6b4a", bg:"#eef6f0" },
+    { label:"Fat", value: goal[3], unit:"g", pct:75, color:"#2e5a7a", bg:"#edf3f8" },
+  ];
+
+  const microLabels = { sodium:"Sodium",potassium:"Potassium",calcium:"Calcium",vitamin_d:"Vitamin D",magnesium:"Magnesium",zinc:"Zinc",vitamin_c:"Vitamin C",vitamin_b12:"Vitamin B12",iron:"Iron",vitamin_a:"Vitamin A",folate:"Folate",phosphorus:"Phosphorus",selenium:"Selenium",fiber:"Fiber" };
+
+  return (
+    <div>
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:24 }}>
+        <div style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.1em", color:"#9a8a6e", fontFamily:"'DM Mono',monospace" }}>Daily targets</div>
+        <div style={{ display:"flex", gap:2, background:"#ede8de", borderRadius:7, padding:3 }}>
+          {["jake","laine"].map(p => (
+            <button key={p} onClick={() => { setPerson(p); setAnimated(false); }} style={{ padding:"5px 14px", background:person===p?"#fff":"none", border:"none", borderRadius:5, cursor:"pointer", color:person===p?(p==="jake"?"#2e5a7a":"#7a3e2e"):"#9a8a6e", fontSize:10, letterSpacing:"0.06em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace" }}>{p}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Water fill cells */}
+      <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:10, marginBottom:28 }}>
+        {waterCells.map(c => (
+          <WaterCell key={c.label} label={c.label} value={c.value} unit={c.unit} pct={c.pct} color={c.color} bg={c.bg} animate={animated} />
+        ))}
+      </div>
+
+      {/* Macro breakdown table */}
+      {[{ person: person==="jake"?"Jake":"Laine", color, border: person==="jake"?"#c5d9e8":"#e8cfc5", rows: personData.rows, total: personData.total, goal }].map(({ person: pn, color:pc, border, rows, total, goal: g }) => (
+        <div key={pn} style={{ marginBottom:28 }}>
+          <div style={{ background:"#fff", border:`1px solid ${border}`, borderRadius:12, overflow:"hidden" }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
+              <thead>
+                <tr style={{ borderBottom:"1px solid #ede8de" }}>
+                  {["Meal","Cal","Protein","Carbs","Fat","Fiber"].map(h => (
+                    <th key={h} style={{ textAlign:"left", padding:"10px 14px", color:"#9a8a6e", fontWeight:400, fontSize:9, letterSpacing:"0.1em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace" }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map(([meal,cal,pro,carb,fat,fiber]) => (
+                  <tr key={meal} style={{ borderBottom:"1px solid #ede8de" }}>
+                    <td style={{ padding:"11px 14px", color:"#4a3f2e" }}>{meal}</td>
+                    <td style={{ padding:"11px 14px", color:"#8b6914", fontFamily:"'DM Mono',monospace" }}>{cal}</td>
+                    <td style={{ padding:"11px 14px", color:"#7a3e2e", fontFamily:"'DM Mono',monospace" }}>{pro}g</td>
+                    <td style={{ padding:"11px 14px", color:"#3a6b4a", fontFamily:"'DM Mono',monospace" }}>{carb}g</td>
+                    <td style={{ padding:"11px 14px", color:"#2e5a7a", fontFamily:"'DM Mono',monospace" }}>{fat}g</td>
+                    <td style={{ padding:"11px 14px", color:"#5a6b3a", fontFamily:"'DM Mono',monospace" }}>{fiber}g</td>
+                  </tr>
+                ))}
+                <tr style={{ background:"#faf7f0", borderTop:"1px solid #c4a86e" }}>
+                  <td style={{ padding:"12px 14px", color:pc, fontFamily:"'DM Mono',monospace" }}>Total</td>
+                  {total.map((v,i) => <td key={i} style={{ padding:"12px 14px", color:pc, fontFamily:"'DM Mono',monospace" }}>~{v}{i>0?"g":""}</td>)}
+                </tr>
+                <tr>
+                  <td style={{ padding:"10px 14px", color:"#9a8a6e", fontFamily:"'DM Mono',monospace" }}>Goal</td>
+                  {g.map((v,i) => <td key={i} style={{ padding:"10px 14px", color:"#9a8a6e", fontFamily:"'DM Mono',monospace" }}>{v}{i>0?"g":""}</td>)}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))}
+
+      {/* Micros */}
+      {db && db._dri && (() => {
+        const dri = db._dri[person];
+        return (
+          <div style={{ marginTop:28 }}>
+            <div style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.1em", color:"#9a8a6e", fontFamily:"'DM Mono',monospace", marginBottom:16 }}>Estimated daily micros</div>
+            <div style={{ fontSize:11, color:"#9a8a6e", marginBottom:16, lineHeight:1.6 }}>
+              Based on lunch + avg dinner{person==="laine"?" + avg breakfast":""}. Sodium is an upper limit. Estimates from DB values.
+            </div>
+            <div style={{ background:"#fff", border:"1px solid #e8dfc8", borderRadius:12, padding:"20px 22px" }}>
+              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4px 32px" }}>
+                {Object.entries(microLabels).map(([key,label]) => {
+                  const driEntry = dri[key];
+                  if (!driEntry) return null;
+                  const val = Math.round((daily[key]||0)*10)/10;
+                  return <MicroBar key={key} label={label} value={val} dri={driEntry.dri} unit={driEntry.unit} isUpper={!!driEntry.upper} />;
+                })}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+    </div>
+  );
+}
+
+/* ── WEEK VIEW ───────────────────────────────────────────────────── */
 function WeekView({ week }) {
   const nutritionDB = useNutritionDB();
   const [tab, setTab] = useState(0);
@@ -776,163 +753,80 @@ function WeekView({ week }) {
   const [openBreakfast, setOpenBreakfast] = useState(null);
   const [jakeDays, setJakeDays] = useState(5);
   const [laineDays, setLaineDays] = useState(5);
-  const TABS = ["Lunch Prep", "Dinners", "Laine's Breakfasts", "Jake's Snacks", "Shopping", "Targets"];
+  const TABS = ["Lunch Prep","Dinners","Breakfasts","Snacks","Shopping","Targets"];
   return (
     <div>
-      <div style={{
-        display: "flex", gap: 2, flexWrap: "wrap",
-        background: "#ede8de",
-        borderRadius: 10, padding: 3, marginBottom: 28
-      }}>
-        {TABS.map((t, i) => (
-          <button key={t} onClick={() => setTab(i)} style={{
-            flex: 1, minWidth: 85, padding: "8px 10px",
-            background: tab === i ? "#fff" : "none",
-            border: "none",
-            borderRadius: 7, cursor: "pointer",
-            color: tab === i ? "#2a2418" : "#9a8a6e",
-            fontSize: 10, letterSpacing: "0.04em", textTransform: "uppercase",
-            fontFamily: "'DM Mono', monospace",
-            transition: "all 0.15s"
-          }}>{t}</button>
-        ))}
-      </div>
-      {tab === 0 && (
+      <TabBar tabs={TABS} active={tab} setActive={setTab} />
+      {tab===0 && (
         <div>
-          <div style={{ background: "#f5ede0", borderRadius: 10, padding: "12px 16px", marginBottom: 20, fontSize: 12, color: "#7a3e2e", lineHeight: 1.6 }}>
+          <div style={{ background:"#f5ede0", borderRadius:10, padding:"12px 16px", marginBottom:20, fontSize:12, color:"#7a3e2e", lineHeight:1.6 }}>
             Make the full batch on Sunday — divide evenly into 5 containers. Both lunches keep all week.
           </div>
-          <LunchAccordion label="Jake" labelColor="#2e5a7a" lunch={week.jakeLunch} days={jakeDays} setDays={setJakeDays} personColor="#2e5a7a" isOpen={openLunch === 0} onToggle={() => setOpenLunch(openLunch === 0 ? null : 0)} />
-          <LunchAccordion label="Laine" labelColor="#7a3e2e" lunch={week.laineLunch} days={laineDays} setDays={setLaineDays} personColor="#7a3e2e" isOpen={openLunch === 1} onToggle={() => setOpenLunch(openLunch === 1 ? null : 1)} />
+          <LunchAccordion label="Jake" labelColor="#2e5a7a" lunch={week.jakeLunch} days={jakeDays} setDays={setJakeDays} personColor="#2e5a7a" isOpen={openLunch===0} onToggle={() => setOpenLunch(openLunch===0?null:0)} />
+          <LunchAccordion label="Laine" labelColor="#7a3e2e" lunch={week.laineLunch} days={laineDays} setDays={setLaineDays} personColor="#7a3e2e" isOpen={openLunch===1} onToggle={() => setOpenLunch(openLunch===1?null:1)} />
         </div>
       )}
-      {tab === 1 && (
+      {tab===1 && (
         <div>
-          <div style={{ fontSize: 13, color: "#9a8a6e", marginBottom: 20, lineHeight: 1.6 }}>Every dinner cooked together. Same recipe, different portions.</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {week.dinners.map((d, i) => (
-              <DinnerCard key={d.day} d={d} isOpen={openDinner === i} onToggle={() => setOpenDinner(openDinner === i ? null : i)} />
+          <div style={{ fontSize:13, color:"#9a8a6e", marginBottom:20, lineHeight:1.6 }}>Every dinner cooked together. Same recipe, different portions.</div>
+          <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+            {week.dinners.map((d,i) => (
+              <DinnerCard key={d.day} d={d} isOpen={openDinner===i} onToggle={() => setOpenDinner(openDinner===i?null:i)} />
             ))}
           </div>
         </div>
       )}
-      {tab === 2 && (
+      {tab===2 && (
         <div>
-          <div style={{ fontSize: 13, color: "#9a8a6e", marginBottom: 24, lineHeight: 1.6 }}>Laine only — Jake has coffee.</div>
-          {week.laineBreakfasts.map((b, i) => (
-            <Accordion key={b.name} label={b.day} labelColor="#7a3e2e" name={b.name} macros={b.macros} ingredients={b.ingredients} steps={b.steps} isOpen={openBreakfast === i} onToggle={() => setOpenBreakfast(openBreakfast === i ? null : i)} />
+          <div style={{ fontSize:13, color:"#9a8a6e", marginBottom:24, lineHeight:1.6 }}>Laine only — Jake has coffee.</div>
+          {week.laineBreakfasts.map((b,i) => (
+            <Accordion key={b.name} label={b.day} labelColor="#7a3e2e" name={b.name} macros={b.macros} ingredients={b.ingredients} steps={b.steps} isOpen={openBreakfast===i} onToggle={() => setOpenBreakfast(openBreakfast===i?null:i)} />
           ))}
         </div>
       )}
-      {tab === 3 && (
+      {tab===3 && (
         <div>
-          <div style={{ fontSize: 13, color: "#9a8a6e", marginBottom: 24, lineHeight: 1.6 }}>Jake only — pick 1-2 per day.</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+          <div style={{ fontSize:13, color:"#9a8a6e", marginBottom:24, lineHeight:1.6 }}>Jake only — pick 1–2 per day.</div>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
             {week.jakeSnacks.map(s => (
-              <div key={s.name} style={{ background: "#fff", border: "1px solid #e8dfc8", borderRadius: 12, padding: "18px 20px" }}>
-                <div style={{ fontSize: 15, fontFamily: "'Lora', serif", color: "#1e1810", marginBottom: 6 }}>{s.name}</div>
-                <div style={{ fontSize: 12, color: "#9a8a6e", lineHeight: 1.6, marginBottom: 12 }}>{s.desc}</div>
+              <div key={s.name} style={{ background:"#fff", border:"1px solid #e8dfc8", borderRadius:12, padding:"18px 20px" }}>
+                <div style={{ fontSize:15, fontFamily:"'Lora',serif", color:"#1e1810", marginBottom:6 }}>{s.name}</div>
+                <div style={{ fontSize:12, color:"#9a8a6e", lineHeight:1.6, marginBottom:12 }}>{s.desc}</div>
                 <MacroRow macros={s.macros} />
               </div>
             ))}
           </div>
         </div>
       )}
-      {tab === 4 && <ShoppingList week={week} jakeDays={jakeDays} laineDays={laineDays} />}
-      {tab === 5 && (
-        <div>
-          <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9a8a6e", fontFamily: "'DM Mono', monospace", marginBottom: 24 }}>Daily targets vs estimated intake</div>
-          {[
-            { person: "Jake", color: "#2e5a7a", border: "#c5d9e8", rows: week.targets.jake.rows, total: week.targets.jake.total, goal: week.targets.jake.goal },
-            { person: "Laine", color: "#7a3e2e", border: "#e8cfc5", rows: week.targets.laine.rows, total: week.targets.laine.total, goal: week.targets.laine.goal },
-          ].map(({ person, color, border, rows, total, goal }) => (
-            <div key={person} style={{ marginBottom: 28 }}>
-              <div style={{ fontSize: 12, color, fontFamily: "'DM Mono', monospace", textTransform: "uppercase", marginBottom: 12, letterSpacing: "0.08em" }}>{person}</div>
-              <div style={{ background: "#fff", border: `1px solid ${border}`, borderRadius: 12, overflow: "hidden" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
-                  <thead>
-                    <tr style={{ borderBottom: "1px solid #ede8de" }}>
-                      {["Meal", "Cal", "Protein", "Carbs", "Fat", "Fiber"].map(h => (
-                        <th key={h} style={{ textAlign: "left", padding: "10px 14px", color: "#9a8a6e", fontWeight: 400, fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Mono', monospace" }}>{h}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {rows.map(([meal, cal, pro, carb, fat, fiber]) => (
-                      <tr key={meal} style={{ borderBottom: "1px solid #ede8de" }}>
-                        <td style={{ padding: "11px 14px", color: "#4a3f2e" }}>{meal}</td>
-                        <td style={{ padding: "11px 14px", color: "#8b6914", fontFamily: "'DM Mono', monospace" }}>{cal}</td>
-                        <td style={{ padding: "11px 14px", color: "#7a3e2e", fontFamily: "'DM Mono', monospace" }}>{pro}g</td>
-                        <td style={{ padding: "11px 14px", color: "#3a6b4a", fontFamily: "'DM Mono', monospace" }}>{carb}g</td>
-                        <td style={{ padding: "11px 14px", color: "#2e5a7a", fontFamily: "'DM Mono', monospace" }}>{fat}g</td>
-                        <td style={{ padding: "11px 14px", color: "#5a6b3a", fontFamily: "'DM Mono', monospace" }}>{fiber}g</td>
-                      </tr>
-                    ))}
-                    <tr style={{ background: "#faf7f0", borderTop: "1px solid #c4a86e" }}>
-                      <td style={{ padding: "12px 14px", color, fontFamily: "'DM Mono', monospace" }}>Total</td>
-                      {total.map((v, i) => <td key={i} style={{ padding: "12px 14px", color, fontFamily: "'DM Mono', monospace" }}>~{v}{i > 0 ? "g" : ""}</td>)}
-                    </tr>
-                    <tr>
-                      <td style={{ padding: "10px 14px", color: "#9a8a6e", fontFamily: "'DM Mono', monospace" }}>Goal</td>
-                      {goal.map((v, i) => <td key={i} style={{ padding: "10px 14px", color: "#9a8a6e", fontFamily: "'DM Mono', monospace" }}>{v}{i > 0 ? "g" : ""}</td>)}
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          ))}
-          <MicroTargets week={week} db={nutritionDB} />
-        </div>
-      )}
+      {tab===4 && <ShoppingList week={week} jakeDays={jakeDays} laineDays={laineDays} />}
+      {tab===5 && <TargetsTab week={week} db={nutritionDB} />}
     </div>
   );
 }
 
+/* ── HISTORY TAB ─────────────────────────────────────────────────── */
 function HistoryTab({ allWeeks }) {
   const [viewing, setViewing] = useState(null);
   const past = allWeeks.filter(w => w.id !== CURRENT_WEEK_ID).reverse();
-  if (viewing) {
-    return (
-      <div>
-        <button onClick={() => setViewing(null)} style={{
-          display: "flex", alignItems: "center", gap: 8,
-          background: "none", border: "1px solid #e8dfc8",
-          borderRadius: 8, color: "#9a8a6e", padding: "7px 14px",
-          cursor: "pointer", fontSize: 12, marginBottom: 24
-        }}>← Back to history</button>
-        <div style={{ fontSize: 10, color: "#8b6914", fontFamily: "'DM Mono', monospace", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 20 }}>{viewing.label}</div>
-        <WeekView week={viewing} />
-      </div>
-    );
-  }
-  if (past.length === 0) {
-    return (
-      <div style={{ textAlign: "center", padding: "60px 0", color: "#c4a86e" }}>
-        <div style={{ fontSize: 32, marginBottom: 12 }}>📋</div>
-        <div style={{ fontSize: 14, color: "#9a8a6e" }}>No past weeks yet.</div>
-        <div style={{ fontSize: 12, marginTop: 6, color: "#c4a86e" }}>Past weeks appear here as you add new JSON files.</div>
-      </div>
-    );
-  }
+  if (viewing) return (
+    <div>
+      <button onClick={() => setViewing(null)} style={{ display:"flex", alignItems:"center", gap:8, background:"none", border:"1px solid #e8dfc8", borderRadius:8, color:"#9a8a6e", padding:"7px 14px", cursor:"pointer", fontSize:12, marginBottom:24 }}>← Back</button>
+      <div style={{ fontSize:10, color:"#8b6914", fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:20 }}>{viewing.label}</div>
+      <WeekView week={viewing} />
+    </div>
+  );
+  if (past.length===0) return <div style={{ textAlign:"center", padding:"60px 0", color:"#c4a86e", fontSize:14 }}>No past weeks yet.</div>;
   return (
     <div>
-      <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9a8a6e", fontFamily: "'DM Mono', monospace", marginBottom: 20 }}>{past.length} past week{past.length !== 1 ? "s" : ""}</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <div style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.1em", color:"#9a8a6e", fontFamily:"'DM Mono',monospace", marginBottom:20 }}>{past.length} past week{past.length!==1?"s":""}</div>
+      <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
         {past.map(week => (
-          <div key={week.id} style={{
-            background: "#fff", border: "1px solid #e8dfc8",
-            borderRadius: 12, padding: "16px 20px",
-            display: "flex", alignItems: "center", justifyContent: "space-between"
-          }}>
+          <div key={week.id} style={{ background:"#fff", border:"1px solid #e8dfc8", borderRadius:12, padding:"16px 20px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
             <div>
-              <div style={{ fontSize: 15, fontFamily: "'Lora', serif", color: "#1e1810", marginBottom: 4 }}>{week.label}</div>
-              <div style={{ fontSize: 10, color: "#c4a86e", fontFamily: "'DM Mono', monospace" }}>{week.dinners.length} dinners</div>
+              <div style={{ fontSize:15, fontFamily:"'Lora',serif", color:"#1e1810", marginBottom:4 }}>{week.label}</div>
+              <div style={{ fontSize:10, color:"#c4a86e", fontFamily:"'DM Mono',monospace" }}>{week.dinners.length} dinners</div>
             </div>
-            <button onClick={() => setViewing(week)} style={{
-              background: "#f5ede0", border: "none",
-              borderRadius: 8, color: "#7a3e2e", padding: "7px 14px",
-              cursor: "pointer", fontSize: 12
-            }}>View →</button>
+            <button onClick={() => setViewing(week)} style={{ background:"#f5ede0", border:"none", borderRadius:8, color:"#7a3e2e", padding:"7px 14px", cursor:"pointer", fontSize:12 }}>View →</button>
           </div>
         ))}
       </div>
@@ -940,138 +834,97 @@ function HistoryTab({ allWeeks }) {
   );
 }
 
+/* ── APP ─────────────────────────────────────────────────────────── */
 function App() {
   const [mainTab, setMainTab] = useState(0);
   const [allWeeks, setAllWeeks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [units, setUnits] = useState(() => localStorage.getItem("mealplan_units") || "imperial");
+  const [units, setUnits] = useState(() => localStorage.getItem("mealplan_units")||"imperial");
   const [nutritionDB, setNutritionDB] = useState({});
-  React.useEffect(() => {
-    fetch("nutrition.json").then(r => r.json()).then(setNutritionDB).catch(() => {});
-  }, []);
-  const [subs, setSubs] = useState(() => {
-    try { return JSON.parse(localStorage.getItem("mealplan_subs") || "{}"); } catch { return {}; }
-  });
-  const setSub = useCallback((key, val) => {
-    setSubs(prev => {
-      const next = { ...prev };
-      if (val == null) delete next[key]; else next[key] = val;
-      localStorage.setItem("mealplan_subs", JSON.stringify(next));
-      return next;
-    });
+  useEffect(() => { fetch("nutrition.json").then(r=>r.json()).then(setNutritionDB).catch(()=>{}); }, []);
+  const [subs, setSubs] = useState(() => { try { return JSON.parse(localStorage.getItem("mealplan_subs")||"{}"); } catch { return {}; }});
+  const setSub = useCallback((key,val) => {
+    setSubs(prev => { const next={...prev}; if (val==null) delete next[key]; else next[key]=val; localStorage.setItem("mealplan_subs",JSON.stringify(next)); return next; });
   }, []);
   const [openKey, setOpenKey] = useState(null);
   useEffect(() => {
-    async function loadWeeks() {
+    async function load() {
       try {
-        const results = await Promise.all(
-          WEEK_REGISTRY.map(async ({ id, label }) => {
-            const res = await fetch("weeks/" + id + ".json");
-            if (!res.ok) throw new Error("Could not load " + id + ".json");
-            const data = await res.json();
-            return { ...data, id, label };
-          })
-        );
+        const results = await Promise.all(WEEK_REGISTRY.map(async ({id,label}) => {
+          const res = await fetch("weeks/"+id+".json");
+          if (!res.ok) throw new Error("Could not load "+id+".json");
+          const data = await res.json();
+          return {...data, id, label};
+        }));
         setAllWeeks(results);
-      } catch (e) {
-        setError(e.message);
-      } finally {
-        setLoading(false);
-      }
+      } catch(e) { setError(e.message); } finally { setLoading(false); }
     }
-    loadWeeks();
+    load();
   }, []);
-  const currentWeek = allWeeks.find(w => w.id === CURRENT_WEEK_ID);
-  const MAIN_TABS = ["This Week", "Past Weeks"];
 
-  if (loading) return (
-    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", color: "#c4a86e", fontSize: 12, fontFamily: "'DM Mono', monospace", letterSpacing: "0.08em" }}>
-      Loading...
-    </div>
-  );
-  if (error) return (
-    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ textAlign: "center", color: "#7a3e2e", fontFamily: "'DM Mono', monospace", fontSize: 12 }}>
-        <div style={{ marginBottom: 8 }}>Error loading week data</div>
-        <div style={{ color: "#9a8a6e", fontSize: 11 }}>{error}</div>
-      </div>
-    </div>
-  );
+  const currentWeek = allWeeks.find(w => w.id===CURRENT_WEEK_ID);
+  const MAIN_TABS = ["This Week","Past Weeks"];
+
+  if (loading) return <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", color:"#c4a86e", fontSize:12, fontFamily:"'DM Mono',monospace", letterSpacing:"0.08em" }}>Loading...</div>;
+  if (error) return <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center" }}><div style={{ textAlign:"center", color:"#7a3e2e", fontFamily:"'DM Mono',monospace", fontSize:12 }}><div style={{ marginBottom:8 }}>Error loading week data</div><div style={{ color:"#9a8a6e", fontSize:11 }}>{error}</div></div></div>;
 
   return (
     <UnitsCtx.Provider value={units}>
-      <NutritionDBCtx.Provider value={nutritionDB}>
-      <OpenDropdownCtx.Provider value={{ openKey, setOpenKey }}>
-      <SubsCtx.Provider value={{ subs, setSub }}>
-        <div style={{ minHeight: "100vh", padding: "48px 24px 100px" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+    <NutritionDBCtx.Provider value={nutritionDB}>
+    <OpenDropdownCtx.Provider value={{ openKey, setOpenKey }}>
+    <SubsCtx.Provider value={{ subs, setSub }}>
+      <div style={{ minHeight:"100vh", padding:"48px 24px 100px" }}>
+        <div style={{ maxWidth:920, margin:"0 auto" }}>
 
-            {/* Header */}
-            <div style={{ marginBottom: 44, paddingBottom: 32, borderBottom: "1px solid #e0d5c0" }}>
-              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 24 }}>
-                <div>
-                  <div style={{
-                    fontFamily: "'DM Mono', monospace",
-                    fontSize: 10, letterSpacing: "0.16em",
-                    textTransform: "uppercase", color: "#9a8a6e", marginBottom: 10
-                  }}>Household Meal Plan</div>
-                  <h1 style={{
-                    fontFamily: "'Lora', serif",
-                    fontSize: "clamp(2rem, 5.5vw, 3.2rem)",
-                    fontWeight: 400, lineHeight: 1.1,
-                    letterSpacing: "-0.01em", color: "#1e1810"
-                  }}>
-                    Jake <span style={{ color: "#c4a86e" }}>&amp;</span> <span style={{ fontStyle: "italic" }}>Laine.</span>
-                  </h1>
-                </div>
-                <UnitsToggle units={units} setUnits={setUnits} />
-              </div>
-
-              {currentWeek && (
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, maxWidth: 480 }}>
-                  {[
-                    { name: "Jake", m: currentWeek.jakeMacros, color: "#2e5a7a", bg: "#eef3f7", border: "#c5d9e8" },
-                    { name: "Laine", m: currentWeek.laineMacros, color: "#7a3e2e", bg: "#f7efed", border: "#e8cfc5" },
-                  ].map(({ name, m, color, bg, border }) => (
-                    <div key={name} style={{ background: bg, border: `1px solid ${border}`, borderRadius: 10, padding: "14px 16px" }}>
-                      <div style={{ fontSize: 10, color, fontFamily: "'DM Mono', monospace", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>{name}</div>
-                      {[["Cal", m.cal, "kcal"], ["Protein", m.protein, "g"], ["Carbs", m.carbs, "g"], ["Fat", m.fat, "g"]].map(([l, v, u]) => (
-                        <div key={l} style={{ fontSize: 11, color: "#6a5a48", fontFamily: "'DM Mono', monospace", marginBottom: 2 }}>{l}: {v}{u}</div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Main tabs */}
-            <div style={{ display: "flex", gap: 3, background: "#ede8de", borderRadius: 9, padding: 3, marginBottom: 28, maxWidth: 280 }}>
-              {MAIN_TABS.map((t, i) => (
-                <button key={t} onClick={() => setMainTab(i)} style={{
-                  flex: 1, padding: "9px 14px",
-                  background: mainTab === i ? "#fff" : "none",
-                  border: "none",
-                  borderRadius: 7, cursor: "pointer",
-                  color: mainTab === i ? "#2a2418" : "#9a8a6e",
-                  fontSize: 11, letterSpacing: "0.04em", textTransform: "uppercase",
-                  fontFamily: "'DM Mono', monospace", transition: "all 0.15s"
-                }}>{t}</button>
-              ))}
-            </div>
-
-            {mainTab === 0 && currentWeek && (
+          {/* ── HEADER ── */}
+          <div style={{ marginBottom:44, paddingBottom:32, borderBottom:"1px solid #e0d5c0" }}>
+            <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", flexWrap:"wrap", gap:16, marginBottom:24 }}>
               <div>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#8b6914", letterSpacing: "0.1em", marginBottom: 24, textTransform: "uppercase" }}>{currentWeek.label}</div>
-                <WeekView week={currentWeek} />
+                <div style={{ fontFamily:"'DM Mono',monospace", fontSize:10, letterSpacing:"0.16em", textTransform:"uppercase", color:"#9a8a6e", marginBottom:10 }}>Household Meal Plan</div>
+                <h1 style={{ fontFamily:"'Lora',serif", fontSize:"clamp(2rem,5.5vw,3.2rem)", fontWeight:400, lineHeight:1.1, letterSpacing:"-0.01em", color:"#1e1810" }}>
+                  Jake <span style={{ color:"#c4a86e" }}>&amp;</span> <span style={{ fontStyle:"italic" }}>Laine.</span>
+                </h1>
+                {currentWeek && <div style={{ fontFamily:"'DM Mono',monospace", fontSize:10, color:"#9a8a6e", textTransform:"uppercase", letterSpacing:"0.1em", marginTop:10 }}>Mediterranean • {currentWeek.label}</div>}
+              </div>
+              <UnitsToggle units={units} setUnits={setUnits} />
+            </div>
+
+            {currentWeek && (
+              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, maxWidth:480 }}>
+                {[
+                  { name:"Jake", m:currentWeek.jakeMacros, color:"#2e5a7a", bg:"#eef3f7", border:"#c5d9e8" },
+                  { name:"Laine", m:currentWeek.laineMacros, color:"#7a3e2e", bg:"#f7efed", border:"#e8cfc5" },
+                ].map(({name,m,color,bg,border}) => (
+                  <div key={name} style={{ background:bg, border:`1px solid ${border}`, borderRadius:10, padding:"14px 16px" }}>
+                    <div style={{ fontSize:10, color, fontFamily:"'DM Mono',monospace", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>{name}</div>
+                    {[["Cal",m.cal,"kcal"],["Protein",m.protein,"g"],["Carbs",m.carbs,"g"],["Fat",m.fat,"g"]].map(([l,v,u]) => (
+                      <div key={l} style={{ fontSize:11, color:"#6a5a48", fontFamily:"'DM Mono',monospace", marginBottom:2 }}>{l}: {v}{u}</div>
+                    ))}
+                  </div>
+                ))}
               </div>
             )}
-            {mainTab === 1 && <HistoryTab allWeeks={allWeeks} />}
           </div>
+
+          {/* ── MAIN TABS ── */}
+          <div style={{ display:"flex", gap:3, background:"#ede8de", borderRadius:9, padding:3, marginBottom:28, maxWidth:280 }}>
+            {MAIN_TABS.map((t,i) => (
+              <button key={t} onClick={() => setMainTab(i)} style={{ flex:1, padding:"9px 14px", background:mainTab===i?"#fff":"none", border:"none", borderRadius:7, cursor:"pointer", color:mainTab===i?"#2a2418":"#9a8a6e", fontSize:11, letterSpacing:"0.04em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace", transition:"all 0.15s" }}>{t}</button>
+            ))}
+          </div>
+
+          {mainTab===0 && currentWeek && (
+            <div>
+              <WeekView week={currentWeek} />
+            </div>
+          )}
+          {mainTab===1 && <HistoryTab allWeeks={allWeeks} />}
         </div>
-      </SubsCtx.Provider>
-      </OpenDropdownCtx.Provider>
-      </NutritionDBCtx.Provider>
+      </div>
+    </SubsCtx.Provider>
+    </OpenDropdownCtx.Provider>
+    </NutritionDBCtx.Provider>
     </UnitsCtx.Provider>
   );
 }
