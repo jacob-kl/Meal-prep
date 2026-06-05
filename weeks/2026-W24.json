@@ -1,0 +1,1056 @@
+{
+  "_v": 4,
+  "_note": "Week of June 8–14, 2026. Indian. Monday is non-fish (tandoori chicken) — standing rule. Fish midweek (Wed shrimp coconut curry, Thu cod masala) + shrimp in Tue wraps. Raita is the standalone sauce card (Indian cousin of tzatziki). Tikka Tuesday = paneer + leftover shrimp naan wraps. Sunday breakfast-for-dinner = masala egg bhurji + besan chilla (Indian, not waffles). Chicken OK at dinner in moderation — only Mon for Laine; her lunches stay non-chicken. Onion only cooked (no raw); no mushrooms/okra/eggplant; no lentils (chana uses chickpeas). Mild for Laine, Jake adds chili to his portion. Paneer nights for calcium; cauliflower + peas for cruciferous + fiber.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
+  "tzatziki": {
+    "name": "Mint Cucumber Raita",
+    "note": "Jake's tzatziki, gone to India. Cool yogurt sauce that tames every curry and makes the naan wraps. Nonfat Greek yogurt keeps the fat negligible. Makes ~1.5 cups, keeps 4–5 days. Mild — leave the green chili out for Laine, add a pinch to your own bowl, Jake.",
+    "macros": {
+      "cal": 28,
+      "protein": 3,
+      "carbs": 2,
+      "fat": 0,
+      "fiber": 0
+    },
+    "macrosNote": "Per 2 tbsp serving.",
+    "ingredients": [
+      {
+        "item": "Greek yogurt (plain nonfat) — 1 cup (240g)",
+        "nutritionKey": "Greek yogurt (plain nonfat)"
+      },
+      {
+        "item": "English cucumber — ½ large, grated and squeezed dry",
+        "nutritionKey": "Cucumber"
+      },
+      {
+        "item": "Lemon juice — 1 tbsp",
+        "nutritionKey": "Lemon juice"
+      },
+      {
+        "item": "Ground cumin — ½ tsp (toasted if you can)",
+        "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+      },
+      {
+        "item": "Dried mint — 1 tsp (or 2 tbsp fresh, chopped)"
+      },
+      {
+        "item": "Fresh cilantro — 1 tbsp chopped (optional)"
+      },
+      {
+        "item": "Salt — ¼ tsp"
+      },
+      {
+        "item": "Green chili — Jake's bowl only, finely minced (skip for Laine)"
+      }
+    ],
+    "steps": [
+      "Grate cucumber on the large holes of a box grater. Squeeze out as much liquid as possible in a towel — this keeps the raita thick.",
+      "Stir together yogurt, squeezed cucumber, lemon juice, cumin, mint, cilantro, and salt.",
+      "Taste and adjust — more cumin, more salt, more lemon. It should be cool and herby.",
+      "Chill at least 30 min before serving so the flavors meld.",
+      "Keep Laine's portion mild; Jake stirs a little minced green chili into his own bowl. Keeps 4–5 days covered."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (June 8)",
+      "name": "Tandoori Chicken + Basmati + Cumin Cauliflower",
+      "note": "Non-fish opener — chicken marinated in spiced yogurt (the tandoori trick, no grill needed), roasted with cauliflower for a cruciferous hit, basmati underneath. Chicken's fine for Laine at dinner; this is the only chicken on her plate all week. Jake adds chili to his.",
+      "jake": {
+        "cal": 672,
+        "protein": 67,
+        "carbs": 59,
+        "fat": 19,
+        "fiber": 4.7
+      },
+      "laine": {
+        "cal": 509,
+        "protein": 50,
+        "carbs": 49,
+        "fat": 12,
+        "fiber": 4.0
+      },
+      "ingredients": [
+        {
+          "item": "Chicken breast — Jake 230g, Laine 165g raw",
+          "nutritionKey": "Chicken breast"
+        },
+        {
+          "item": "Basmati rice (dry) — Jake 55g, Laine 45g",
+          "nutritionKey": "Basmati rice (dry)"
+        },
+        {
+          "item": "Cauliflower — Jake 200g, Laine 170g, cut into florets",
+          "nutritionKey": "Cauliflower"
+        },
+        {
+          "item": "Greek yogurt (plain nonfat) — 4 tbsp shared (tandoori marinade)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Olive oil — ~1.3 tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garam masala, turmeric, cumin, paprika, ginger, salt",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        },
+        {
+          "item": "Lemon juice + fresh cilantro to finish",
+          "nutritionKey": "Lemon juice"
+        }
+      ],
+      "steps": [
+        "Mix yogurt with garam masala, turmeric, cumin, paprika, ginger, salt, and a squeeze of lemon. Coat the chicken and let it sit 30 min if you can (longer is better).",
+        "Preheat oven to 425°F. Toss cauliflower with olive oil, cumin, salt on a sheet pan.",
+        "Roast cauliflower 10 min, then add the marinated chicken to the same pan. Roast 18–22 min more until chicken hits 165°F and the edges char.",
+        "Cook basmati: rinse until clear, simmer in 1.5× water 12 min, rest 5 min, fluff.",
+        "Slice chicken, plate over rice with cauliflower. Cilantro + lemon to finish. Jake gets more chicken and adds chili."
+      ]
+    },
+    {
+      "day": "Tuesday (June 9) — Tikka Tuesday",
+      "name": "Paneer & Shrimp Tikka Naan Wraps with Raita",
+      "note": "This week's leftovers-plus-a-treat night. Last week's shrimp gets a tikka spice rub, paneer is the treat protein — both seared hot and tucked into warm naan with cool raita, cucumber, and tomato. Jake loads both proteins and adds chili to his; Laine goes shrimp-forward and mild.",
+      "jake": {
+        "cal": 1061,
+        "protein": 72,
+        "carbs": 101,
+        "fat": 42,
+        "fiber": 6.3
+      },
+      "laine": {
+        "cal": 651,
+        "protein": 53,
+        "carbs": 54,
+        "fat": 26,
+        "fiber": 3.3
+      },
+      "tzatzikiRef": true,
+      "sauceLabel": "Raita",
+      "ingredients": [
+        {
+          "item": "Paneer — Jake 90g, Laine 60g, cubed",
+          "nutritionKey": "Paneer"
+        },
+        {
+          "item": "Frozen shrimp — Jake 130g, Laine 110g raw",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Whole wheat naan — Jake 2, Laine 1",
+          "nutritionKey": "Whole wheat naan"
+        },
+        {
+          "item": "Raita — 3–4 tbsp per wrap (see recipe card)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Cucumber — ~60g per person, sliced",
+          "nutritionKey": "Cucumber"
+        },
+        {
+          "item": "Cherry tomatoes — ½ cup shared, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Olive oil — ~1 tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garam masala, paprika, cumin, salt — green chili for Jake",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        }
+      ],
+      "steps": [
+        "Make raita ahead if you can (see recipe) — better after 30 min in the fridge.",
+        "Toss shrimp and paneer (separately) with olive oil, garam masala, paprika, cumin, salt.",
+        "Sear paneer in a hot pan 1–2 min per side until golden. Set aside.",
+        "In the same pan, cook shrimp 2 min per side until just pink.",
+        "Warm naan directly over a gas flame ~20 sec per side, or in a dry pan.",
+        "Build wraps: smear of raita, then shrimp + paneer, cucumber, tomato. Jake loads both proteins and adds minced green chili; Laine goes shrimp-forward and mild."
+      ]
+    },
+    {
+      "day": "Wednesday (June 10)",
+      "name": "Shrimp Coconut Curry + Basmati + Spinach",
+      "note": "A mild, creamy coconut curry — light coconut milk keeps the fat in check. Onion is fully cooked into the base (no raw), spinach wilted in at the end for iron. Jake stirs chili into his bowl.",
+      "jake": {
+        "cal": 659,
+        "protein": 63,
+        "carbs": 59,
+        "fat": 21,
+        "fiber": 3.5
+      },
+      "laine": {
+        "cal": 498,
+        "protein": 46,
+        "carbs": 50,
+        "fat": 15,
+        "fiber": 3.4
+      },
+      "ingredients": [
+        {
+          "item": "Frozen shrimp — Jake 230g, Laine 160g raw",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Basmati rice (dry) — Jake 55g, Laine 45g",
+          "nutritionKey": "Basmati rice (dry)"
+        },
+        {
+          "item": "Light coconut milk (canned) — ~½ cup shared",
+          "nutritionKey": "Light coconut milk (canned)"
+        },
+        {
+          "item": "Yellow onion — ½ cup shared, finely diced (cooked down)",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Diced tomatoes — 1 cup shared",
+          "nutritionKey": "Diced tomatoes"
+        },
+        {
+          "item": "Baby spinach — ~120g shared",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Olive oil — ~1.5 tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garam masala, turmeric, cumin, ginger, salt — chili for Jake",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        }
+      ],
+      "steps": [
+        "Cook basmati (rinse, simmer in 1.5× water 12 min, rest, fluff).",
+        "Sauté onion in olive oil over medium until soft and golden, 5–6 min. Add garam masala, turmeric, cumin, ginger — bloom 30 sec.",
+        "Add diced tomatoes, simmer 5 min until jammy. Stir in coconut milk, warm through.",
+        "Add shrimp, simmer gently 3–4 min until just cooked. Don't boil hard or the coconut splits.",
+        "Wilt in spinach off the heat. Serve over basmati. Jake's bowl gets chili; Laine's stays mild."
+      ]
+    },
+    {
+      "day": "Thursday (June 11)",
+      "name": "Baked Cod Masala + Basmati + Peas",
+      "note": "Easiest night of the week. Cod baked in a jarred tikka masala sauce, peas stirred in for fiber and color, basmati underneath. Mild and weeknight-fast.",
+      "jake": {
+        "cal": 642,
+        "protein": 53,
+        "carbs": 71,
+        "fat": 16,
+        "fiber": 5.8
+      },
+      "laine": {
+        "cal": 479,
+        "protein": 38,
+        "carbs": 54,
+        "fat": 12,
+        "fiber": 4.6
+      },
+      "ingredients": [
+        {
+          "item": "Frozen cod — Jake 240g, Laine 165g raw",
+          "nutritionKey": "Frozen cod"
+        },
+        {
+          "item": "Basmati rice (dry) — Jake 60g, Laine 45g",
+          "nutritionKey": "Basmati rice (dry)"
+        },
+        {
+          "item": "Tikka masala simmer sauce — ~¾ cup shared",
+          "nutritionKey": "Tikka masala simmer sauce"
+        },
+        {
+          "item": "Frozen peas — ~1 cup shared",
+          "nutritionKey": "Frozen peas"
+        },
+        {
+          "item": "Olive oil — ~½ tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Fresh cilantro + lemon to finish",
+          "nutritionKey": "Lemon juice"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F. Pat cod dry, place in a baking dish.",
+        "Spoon tikka masala sauce over the cod to coat. Scatter peas around.",
+        "Bake 16–18 min until cod flakes and the sauce bubbles.",
+        "Meanwhile cook basmati.",
+        "Plate rice, cod, sauce, and peas. Finish with cilantro and a squeeze of lemon. Jake gets the bigger piece and extra sauce."
+      ]
+    },
+    {
+      "day": "Friday (June 12)",
+      "name": "Chana Masala + Cauliflower + Basmati",
+      "note": "Vegetarian fiber night — chickpeas, not lentils. A proper chana masala with a cooked onion-tomato base, plus roasted cauliflower on the side. Big fiber, plant-forward, satisfying.",
+      "jake": {
+        "cal": 897,
+        "protein": 35,
+        "carbs": 143,
+        "fat": 22,
+        "fiber": 22.1
+      },
+      "laine": {
+        "cal": 633,
+        "protein": 25,
+        "carbs": 105,
+        "fat": 14,
+        "fiber": 15.9
+      },
+      "ingredients": [
+        {
+          "item": "Garbanzo beans — Jake 0.7 can, Laine ~0.45 can",
+          "nutritionKey": "Garbanzo beans"
+        },
+        {
+          "item": "Basmati rice (dry) — Jake 55g, Laine 45g",
+          "nutritionKey": "Basmati rice (dry)"
+        },
+        {
+          "item": "Diced tomatoes — 1 cup shared",
+          "nutritionKey": "Diced tomatoes"
+        },
+        {
+          "item": "Yellow onion — ½ cup shared, finely diced (cooked down)",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Cauliflower — 150g per person, roasted",
+          "nutritionKey": "Cauliflower"
+        },
+        {
+          "item": "Olive oil — ~1.75 tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garam masala, cumin, coriander, turmeric, ginger, salt — chili for Jake",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        }
+      ],
+      "steps": [
+        "Roast cauliflower at 425°F with a little oil, cumin, and salt, ~20 min.",
+        "Sauté onion in olive oil until golden, 6–7 min. Add garam masala, cumin, coriander, turmeric, ginger — bloom 30 sec.",
+        "Add diced tomatoes, simmer 5 min. Add drained chickpeas + a splash of water, simmer 10 min, lightly mashing some for body.",
+        "Cook basmati.",
+        "Serve chana over rice with cauliflower alongside. Jake adds chili; Laine stays mild. Cilantro and lemon to finish."
+      ]
+    },
+    {
+      "day": "Saturday (June 13)",
+      "name": "Palak Paneer + Basmati",
+      "note": "Calcium + iron night for Laine: paneer in a silky spinach gravy. Onion cooked all the way down, mild and creamy. Jake gets more paneer and a little chili.",
+      "jake": {
+        "cal": 728,
+        "protein": 31,
+        "carbs": 60,
+        "fat": 40,
+        "fiber": 3.9
+      },
+      "laine": {
+        "cal": 512,
+        "protein": 22,
+        "carbs": 49,
+        "fat": 26,
+        "fiber": 3.3
+      },
+      "ingredients": [
+        {
+          "item": "Paneer — Jake 130g, Laine 85g, cubed",
+          "nutritionKey": "Paneer"
+        },
+        {
+          "item": "Baby spinach — ~220g shared (it cooks way down)",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Basmati rice (dry) — Jake 55g, Laine 45g",
+          "nutritionKey": "Basmati rice (dry)"
+        },
+        {
+          "item": "Yellow onion — ½ cup shared, finely diced (cooked down)",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Olive oil — ~1.25 tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garam masala, cumin, ginger, garlic, salt — chili for Jake",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        }
+      ],
+      "steps": [
+        "Lightly sear paneer cubes in a little oil until golden; set aside.",
+        "Sauté onion until soft, add cumin, garam masala, ginger, garlic — bloom 30 sec.",
+        "Add spinach in batches until wilted, then blend the mixture smooth (immersion blender). Loosen with a splash of water.",
+        "Return to low heat, fold paneer back in, warm 3–4 min. Keep it mild for Laine.",
+        "Serve over basmati. Jake gets more paneer and stirs chili into his."
+      ]
+    },
+    {
+      "day": "Sunday (June 14)",
+      "name": "Masala Egg Bhurji + Besan Chilla",
+      "note": "Standing breakfast-for-dinner, Indian edition. Egg bhurji is spiced Indian scrambled eggs; besan chilla are savory chickpea-flour pancakes (the 'pancake' of the night) — high protein, naturally gluten-free, mild. Cool raita on the side. Jake gets the bigger portion and chili; Laine stays mild. Onion cooked, not raw.",
+      "jake": {
+        "cal": 545,
+        "protein": 34,
+        "carbs": 38,
+        "fat": 27,
+        "fiber": 6.5
+      },
+      "laine": {
+        "cal": 323,
+        "protein": 20,
+        "carbs": 28,
+        "fat": 14,
+        "fiber": 4.8
+      },
+      "tzatzikiRef": true,
+      "sauceLabel": "Raita",
+      "ingredients": [
+        {
+          "item": "Eggs — Jake 2, Laine 1",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Liquid egg whites — Jake ½ cup, Laine ¼ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Chickpea flour (besan) — Jake 45g, Laine 30g (for chilla)",
+          "nutritionKey": "Chickpea flour (besan)"
+        },
+        {
+          "item": "Yellow onion — ½ cup shared, finely diced (cooked into the bhurji)",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Diced tomatoes — 1 cup shared",
+          "nutritionKey": "Diced tomatoes"
+        },
+        {
+          "item": "Olive oil — ~1.5 tbsp shared",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Turmeric, cumin, garam masala, salt — chili for Jake",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        },
+        {
+          "item": "Raita on the side (see recipe card)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Fresh cilantro to finish"
+        }
+      ],
+      "steps": [
+        "Chilla batter: whisk besan with water to a thin pancake batter, plus a pinch of turmeric, cumin, and salt. Let it sit while you start the bhurji.",
+        "Bhurji: sauté onion in a little oil until soft, add turmeric, cumin, garam masala, then the tomatoes; cook 3–4 min.",
+        "Beat eggs + egg whites, pour in, and scramble gently until just set. Keep Laine's mild; Jake stirs chili into his.",
+        "Chilla: ladle batter into a hot oiled nonstick pan, spread thin, cook 2 min per side until golden. Make Jake's bigger.",
+        "Serve bhurji with the chilla and a scoop of raita. Cilantro on top."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Chicken Tikka & Chickpea Bowl",
+    "note": "Indian batch bowl, same 5-container Sunday format, no fish (office-friendly). Yogurt-marinated chicken tikka, chickpeas, cumin-roasted cauliflower, basmati, with a raita drizzle. Add the raita fresh when eating so it stays cool. Heads-up: basmati pushes carbs up — sub cauliflower rice on the bowl (substitution dropdown) to pull carbs toward your 102g target.",
+    "macros": {
+      "cal": 865,
+      "protein": 74,
+      "carbs": 93,
+      "fat": 22,
+      "fiber": 12.6
+    },
+    "ingredients": [
+      {
+        "item": "Chicken breast — ~2.3 lbs total (210g raw per container)",
+        "nutritionKey": "Chicken breast"
+      },
+      {
+        "item": "Garbanzo beans — 2 cans total (0.4 can per container)",
+        "nutritionKey": "Garbanzo beans"
+      },
+      {
+        "item": "Basmati rice (dry) — 45g per container",
+        "nutritionKey": "Basmati rice (dry)"
+      },
+      {
+        "item": "Cauliflower — 120g per container, cumin-roasted",
+        "nutritionKey": "Cauliflower"
+      },
+      {
+        "item": "Greek yogurt (plain nonfat) — ~3 tbsp per container (tikka marinade + drizzle)",
+        "nutritionKey": "Greek yogurt (plain nonfat)"
+      },
+      {
+        "item": "Olive oil — ~0.8 tbsp per container",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Garam masala, turmeric, cumin, paprika, ginger, garlic, salt",
+        "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+      }
+    ],
+    "steps": [
+      "Marinate all chicken in yogurt + garam masala, turmeric, cumin, paprika, ginger, garlic, salt — 30 min if you have it.",
+      "Roast chicken at 425°F ~22–24 min until cooked through. Rest, then dice.",
+      "Roast cauliflower with oil, cumin, salt, ~20 min.",
+      "Warm chickpeas in a pan with a little oil and spice 5 min.",
+      "Cook all basmati at once.",
+      "Divide into 5 containers: rice, chicken, chickpeas, cauliflower. Add raita fresh when eating, not batched."
+    ]
+  },
+  "laineLunch": {
+    "name": "Curried Tuna & Chickpea Pasta Jar — Mason Jar Style",
+    "note": "Indian-spin on the cold jar. Curry-yogurt dressing kept separate, chickpeas and peas for fiber, bell pepper and cucumber for crunch. No chicken, no lentils, eaten cold over two sittings.",
+    "macros": {
+      "cal": 602,
+      "protein": 57,
+      "carbs": 81,
+      "fat": 5,
+      "fiber": 12.4
+    },
+    "dressingNote": "Curry-yogurt: 3 tbsp nonfat Greek yogurt + ½ tsp curry powder + squeeze of lemon, in a separate container per jar.",
+    "ingredients": [
+      {
+        "item": "Canned tuna in water — 1 can per jar (5 cans total)",
+        "nutritionKey": "Canned tuna (in water)"
+      },
+      {
+        "item": "Garofalo pasta (rotini or penne) — 225g dry total, 45g per jar",
+        "nutritionKey": "Garofalo organic pasta"
+      },
+      {
+        "item": "Garbanzo beans — ~0.25 can per jar",
+        "nutritionKey": "Garbanzo beans"
+      },
+      {
+        "item": "Bell pepper — ~90g per jar, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "English cucumber — ~80g per jar, sliced",
+        "nutritionKey": "Cucumber"
+      },
+      {
+        "item": "Frozen peas — ~¼ cup per jar, thawed",
+        "nutritionKey": "Frozen peas"
+      },
+      {
+        "item": "Baby spinach — big handful per jar (~30g)",
+        "nutritionKey": "Baby spinach"
+      },
+      {
+        "item": "Greek yogurt (plain nonfat) — ~3 tbsp per jar (curry dressing, separate)",
+        "nutritionKey": "Greek yogurt (plain nonfat)"
+      },
+      {
+        "item": "Curry powder, lemon juice, salt",
+        "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+      }
+    ],
+    "steps": [
+      "Cook pasta in salted water, drain, rinse cold, toss with a tiny bit of olive oil.",
+      "Thaw peas. Dice bell pepper, slice cucumber, drain tuna well, rinse chickpeas.",
+      "Layer each jar: pasta → chickpeas → tuna → peas → bell pepper + cucumber → spinach on top.",
+      "Mix the curry-yogurt dressing; portion into a small separate container per jar.",
+      "To eat: pour in dressing, shake, eat half — reseal for the second sitting."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed / Fri",
+      "name": "Greek Yogurt Parfait",
+      "macros": {
+        "cal": 180,
+        "protein": 18,
+        "carbs": 18,
+        "fat": 4,
+        "fiber": 5.0
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl. Top with thawed berries and flaxseed."
+      ]
+    },
+    {
+      "days": "Tue / Thu / Sat",
+      "name": "Masala Egg White Scramble",
+      "macros": {
+        "cal": 124,
+        "protein": 20,
+        "carbs": 6,
+        "fat": 2,
+        "fiber": 1.3
+      },
+      "note": "Mild masala scramble — just a pinch of turmeric and cumin, no heat.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ¾ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Bell pepper — ~40g diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Baby spinach — handful",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Shredded cheese — 1 tbsp",
+          "nutritionKey": "Shredded cheese (4-blend)"
+        },
+        {
+          "item": "Pinch turmeric + cumin",
+          "nutritionKey": "Spices (garam masala/turmeric/cumin/coriander)"
+        }
+      ],
+      "steps": [
+        "Sauté bell pepper 2 min with a pinch of turmeric and cumin.",
+        "Add egg whites, scramble over medium-low until just set.",
+        "Toss in spinach at the end. Top with cheese."
+      ]
+    },
+    {
+      "days": "Sun (June 14)",
+      "name": "Birch Benders Waffles + Berries",
+      "macros": {
+        "cal": 344,
+        "protein": 16,
+        "carbs": 57,
+        "fat": 7,
+        "fiber": 8.1
+      },
+      "note": "Waffles, not pancakes. Same batter, crisp edges.",
+      "ingredients": [
+        {
+          "item": "Birch Benders pancake/waffle mix — ½ cup dry",
+          "nutritionKey": "Birch Benders pancake mix"
+        },
+        {
+          "item": "Liquid egg whites — ¼ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Mix batter: mix + egg whites + water per package. Stir in flaxseed.",
+        "Cook in a preheated waffle iron 3–4 min until crisp.",
+        "Top with thawed berries."
+      ]
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Banana + Greek Yogurt",
+      "macros": {
+        "cal": 195,
+        "protein": 16,
+        "carbs": 33,
+        "fat": 0,
+        "fiber": 3.1
+      },
+      "desc": "1 banana + 1 Oikos Triple Zero. Potassium + calcium snack.",
+      "ingredients": [
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        },
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber + Raita",
+      "macros": {
+        "cal": 59,
+        "protein": 8,
+        "carbs": 8,
+        "fat": 0,
+        "fiber": 0.8
+      },
+      "desc": "½ cucumber sliced + 4 tbsp raita for dipping. Cool and mild.",
+      "ingredients": [
+        {
+          "item": "English cucumber — ½ large (~150g)",
+          "nutritionKey": "Cucumber"
+        },
+        {
+          "item": "Greek yogurt (nonfat) — 4 tbsp (raita base)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas",
+      "macros": {
+        "cal": 120,
+        "protein": 5,
+        "carbs": 18,
+        "fat": 3,
+        "fiber": 5.0
+      },
+      "desc": "¼ cup crunchy roasted chickpeas. Fiber + plant protein, lightly spiced.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup (~40g)",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        }
+      ]
+    },
+    {
+      "name": "Bell Pepper Strips + Hummus",
+      "macros": {
+        "cal": 146,
+        "protein": 6,
+        "carbs": 20,
+        "fat": 6,
+        "fiber": 6.2
+      },
+      "desc": "1 bell pepper sliced + 4 tbsp hummus.",
+      "ingredients": [
+        {
+          "item": "Bell pepper — 1 medium (150g)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Hummus — 4 tbsp (60g)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Berries",
+      "macros": {
+        "cal": 125,
+        "protein": 16,
+        "carbs": 14,
+        "fat": 0,
+        "fiber": 2.2
+      },
+      "desc": "1 Oikos Triple Zero + small handful thawed berries.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Tuna Straight from Can",
+      "macros": {
+        "cal": 150,
+        "protein": 33,
+        "carbs": 0,
+        "fat": 1,
+        "fiber": 0.0
+      },
+      "desc": "Drain and eat with a fork. Lemon + a pinch of cumin.",
+      "ingredients": [
+        {
+          "item": "Canned tuna in water — 1 can",
+          "nutritionKey": "Canned tuna (in water)"
+        }
+      ]
+    },
+    {
+      "name": "Cottage Cheese + Banana",
+      "macros": {
+        "cal": 195,
+        "protein": 13,
+        "carbs": 31,
+        "fat": 2,
+        "fiber": 3.1
+      },
+      "desc": "½ cup cottage cheese + 1 banana. Calcium + potassium.",
+      "ingredients": [
+        {
+          "item": "Cottage cheese 2% — ½ cup",
+          "nutritionKey": "Cottage cheese 2%"
+        },
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas + Almonds",
+      "macros": {
+        "cal": 237,
+        "protein": 9,
+        "carbs": 22,
+        "fat": 13,
+        "fiber": 7.5
+      },
+      "desc": "¼ cup roasted chickpeas + a small handful of almonds. Crunchy, fat + fiber to round out the day.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        },
+        {
+          "item": "Almonds — ~20g",
+          "nutritionKey": "Almonds"
+        }
+      ]
+    },
+    {
+      "name": "Oikos Triple Zero + Flaxseed",
+      "macros": {
+        "cal": 145,
+        "protein": 17,
+        "carbs": 9,
+        "fat": 4,
+        "fiber": 2.8
+      },
+      "desc": "1 container + 1 tbsp ground flaxseed.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ]
+    },
+    {
+      "name": "Kefir (plain lowfat)",
+      "macros": {
+        "cal": 110,
+        "protein": 11,
+        "carbs": 12,
+        "fat": 2,
+        "fiber": 0.0
+      },
+      "desc": "1 cup plain lowfat kefir. Strong calcium + B12 + probiotics.",
+      "ingredients": [
+        {
+          "item": "Kefir (plain lowfat) — 1 cup",
+          "nutritionKey": "Kefir (plain lowfat)"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Must Buy": [
+      "Atlantic salmon — 2 fillets (~320g raw, Mon tandoori)",
+      "Paneer — ~2 blocks (~450g total, Tue wraps + Sat palak paneer)",
+      "Frozen shrimp — ~1.5 lbs (Tue wraps + Wed curry)",
+      "Frozen cod — ~1 lb (Thu cod masala)",
+      "Chicken breast — ~2.3 lbs (Jake lunch batch only)",
+      "Whole wheat naan — 1–2 packs (Tue wraps)",
+      "Basmati rice — 1 bag (dinners + Jake lunch all week)",
+      "Tikka masala simmer sauce — 1 jar (Thu cod)",
+      "Light coconut milk — 1 can (Wed curry)",
+      "Cauliflower — 2–3 heads (Mon + Fri dinners + Jake lunch)",
+      "Yellow onions — 3–4 (Wed + Fri + Sat, all cooked)",
+      "Diced tomatoes — 3 cans (Wed + Fri)",
+      "Garbanzo beans — 4 cans (Fri chana + Jake lunch + Laine jars)",
+      "Cherry tomatoes — 1 pint (Tue wraps)",
+      "English cucumbers — 2–3 large (raita + Tue + Laine jars + snacks)",
+      "Plain nonfat Greek yogurt — 1 large tub (raita + marinades + dressings)",
+      "Canned tuna — 5 cans (Laine jars)",
+      "Bell peppers — 3–4 (Laine jars + scramble + snacks)",
+      "Bananas — 2 bunches (Jake + Laine snacks)",
+      "Fresh cilantro + fresh ginger + garlic (curries, raita)",
+      "Roasted chickpeas — 1 bag/tub (snacks)",
+      "Kefir (plain lowfat) — 1–2 cartons (Jake snack)",
+      "Cottage cheese 2% — 1 container (Jake snack)"
+    ],
+    "Check Supply": [
+      "Frozen peas — 1 bag (Thu + Laine jars)",
+      "Garofalo pasta — ~225g dry (Laine jars)",
+      "Liquid egg whites — 2 cartons (Sun + Laine scrambles)",
+      "Oikos Triple Zero — 6+ containers (Laine breakfasts + snacks)",
+      "Baby spinach — 2 big bags (Wed + Sat cook way down, + jars)",
+      "Hummus — 1 tub (Laine snacks)",
+      "Almonds — (Jake snack)",
+      "Lemon juice — fresh bottle",
+      "Garam masala / turmeric / cumin / coriander / curry powder — restock the spice tin",
+      "Birch Benders mix (Sunday waffles)"
+    ],
+    "Already Have": [
+      "Olive oil — check bottle is at least half full",
+      "Ground flaxseed",
+      "Frozen mixed berries",
+      "Shredded cheese",
+      "Salt",
+      "White rice (backup)"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Lunch Bowl",
+          865,
+          74,
+          93,
+          22,
+          13
+        ],
+        [
+          "Dinner (avg)",
+          743,
+          51,
+          76,
+          27,
+          8
+        ],
+        [
+          "1–2 Snacks",
+          430,
+          50,
+          18,
+          21,
+          5
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        2058,
+        176,
+        189,
+        71,
+        26
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          216,
+          18,
+          27,
+          4,
+          5
+        ],
+        [
+          "Lunch Jar",
+          602,
+          57,
+          81,
+          5,
+          12
+        ],
+        [
+          "Dinner (avg)",
+          515,
+          36,
+          56,
+          17,
+          6
+        ],
+        [
+          "1 Snack",
+          100,
+          8,
+          12,
+          2,
+          3
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1453,
+        120,
+        178,
+        29,
+        26
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  }
+}
