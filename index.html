@@ -36,8 +36,9 @@ const WEEK_REGISTRY = [
   { id:"2026-W21", label:"Week of May 18, 2026" },
   { id:"2026-W22", label:"Week of May 25, 2026" },
   { id:"2026-W23", label:"Week of June 1, 2026" },
+  { id:"2026-W24", label:"Week of June 8, 2026" },
 ];
-const CURRENT_WEEK_ID = "2026-W23";
+const CURRENT_WEEK_ID = "2026-W24";
 const WATER_GLASSES   = 8;
 const WATER_OZ_EACH   = 16;
 const WATER_TOTAL_OZ  = 128;
@@ -387,7 +388,7 @@ function DinnerCard({dinner,week}) {
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
       <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
       <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
-      {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🫒 Tzatziki night — see recipe card in Snacks tab</div>}
+      {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🥣 {(dinner.sauceLabel||"Tzatziki")} night — see recipe card in Snacks tab</div>}
       {dinner.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{dinner.note}</div>}
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
         {[["Jake",dinner.jake,T.blue,T.blueSoft],["Laine",dinner.laine,T.accent,T.accentSoft]].map(([name,m,clr,bg])=>m&&(
@@ -947,4 +948,3 @@ ReactDOM.render(<App/>, document.getElementById("root"));
 </script>
 </body>
 </html>
- 
