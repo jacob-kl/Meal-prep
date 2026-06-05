@@ -1,5 +1,125 @@
-
 {
+  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
+  "_dri": {
+    "jake": {
+      "sodium": {
+        "dri": 2300,
+        "unit": "mg",
+        "upper": true
+      },
+      "potassium": {
+        "dri": 4700,
+        "unit": "mg"
+      },
+      "calcium": {
+        "dri": 1200,
+        "unit": "mg"
+      },
+      "vitamin_d": {
+        "dri": 20,
+        "unit": "mcg"
+      },
+      "magnesium": {
+        "dri": 420,
+        "unit": "mg"
+      },
+      "zinc": {
+        "dri": 11,
+        "unit": "mg"
+      },
+      "vitamin_c": {
+        "dri": 90,
+        "unit": "mg"
+      },
+      "vitamin_b12": {
+        "dri": 2.4,
+        "unit": "mcg"
+      },
+      "iron": {
+        "dri": 8,
+        "unit": "mg"
+      },
+      "vitamin_a": {
+        "dri": 900,
+        "unit": "mcg"
+      },
+      "folate": {
+        "dri": 400,
+        "unit": "mcg"
+      },
+      "phosphorus": {
+        "dri": 700,
+        "unit": "mg"
+      },
+      "selenium": {
+        "dri": 55,
+        "unit": "mcg"
+      },
+      "fiber": {
+        "dri": 30,
+        "unit": "g"
+      }
+    },
+    "laine": {
+      "sodium": {
+        "dri": 2300,
+        "unit": "mg",
+        "upper": true
+      },
+      "potassium": {
+        "dri": 4700,
+        "unit": "mg"
+      },
+      "calcium": {
+        "dri": 1000,
+        "unit": "mg"
+      },
+      "vitamin_d": {
+        "dri": 20,
+        "unit": "mcg"
+      },
+      "magnesium": {
+        "dri": 320,
+        "unit": "mg"
+      },
+      "zinc": {
+        "dri": 8,
+        "unit": "mg"
+      },
+      "vitamin_c": {
+        "dri": 75,
+        "unit": "mg"
+      },
+      "vitamin_b12": {
+        "dri": 2.4,
+        "unit": "mcg"
+      },
+      "iron": {
+        "dri": 18,
+        "unit": "mg"
+      },
+      "vitamin_a": {
+        "dri": 900,
+        "unit": "mcg"
+      },
+      "folate": {
+        "dri": 400,
+        "unit": "mcg"
+      },
+      "phosphorus": {
+        "dri": 700,
+        "unit": "mg"
+      },
+      "selenium": {
+        "dri": 55,
+        "unit": "mcg"
+      },
+      "fiber": {
+        "dri": 25,
+        "unit": "g"
+      }
+    }
+  },
   "Almond butter": {
     "serving_qty": 2,
     "serving_unit": "tbsp",
@@ -55,6 +175,31 @@
       "selenium": 36.5
     }
   },
+  "Avocado": {
+    "serving_qty": 0.5,
+    "serving_unit": "avocado",
+    "serving": "per ½ avocado (~100g)",
+    "cal": 160,
+    "protein": 2,
+    "carbs": 9,
+    "fat": 15,
+    "fiber": 6.7,
+    "micros": {
+      "sodium": 7,
+      "potassium": 485,
+      "calcium": 12,
+      "vitamin_d": 0,
+      "magnesium": 29,
+      "zinc": 0.6,
+      "vitamin_c": 10,
+      "vitamin_b12": 0,
+      "iron": 0.6,
+      "vitamin_a": 7,
+      "folate": 81,
+      "phosphorus": 52,
+      "selenium": 0.4
+    }
+  },
   "Baby spinach": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -79,6 +224,56 @@
       "phosphorus": 49,
       "selenium": 1
     }
+  },
+  "Banana": {
+    "serving_qty": 1,
+    "serving_unit": "medium",
+    "serving": "per 1 medium banana (~118g)",
+    "cal": 105,
+    "protein": 1,
+    "carbs": 27,
+    "fat": 0,
+    "fiber": 3.1,
+    "micros": {
+      "sodium": 1,
+      "potassium": 422,
+      "calcium": 6,
+      "vitamin_d": 0,
+      "magnesium": 32,
+      "zinc": 0.2,
+      "vitamin_c": 10,
+      "vitamin_b12": 0,
+      "iron": 0.3,
+      "vitamin_a": 4,
+      "folate": 24,
+      "phosphorus": 26,
+      "selenium": 1.2
+    }
+  },
+  "Basmati rice (dry)": {
+    "cal": 360,
+    "protein": 7,
+    "carbs": 80,
+    "fat": 1,
+    "fiber": 1.3,
+    "micros": {
+      "calcium": 10,
+      "folate": 8,
+      "iron": 0.8,
+      "magnesium": 25,
+      "phosphorus": 108,
+      "potassium": 115,
+      "selenium": 15.1,
+      "sodium": 1,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 1.1
+    },
+    "serving": "per 100g dry",
+    "serving_qty": 100,
+    "serving_unit": "g_dry"
   },
   "Bell pepper": {
     "serving_qty": 100,
@@ -250,6 +445,31 @@
     "fat": 1,
     "fiber": 19.8
   },
+  "Cauliflower": {
+    "cal": 25,
+    "protein": 2,
+    "carbs": 5,
+    "fat": 0,
+    "fiber": 2,
+    "micros": {
+      "calcium": 22,
+      "folate": 57,
+      "iron": 0.4,
+      "magnesium": 15,
+      "phosphorus": 44,
+      "potassium": 299,
+      "selenium": 0,
+      "sodium": 30,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 48,
+      "vitamin_d": 0,
+      "zinc": 0.3
+    },
+    "serving": "per 1 cup (100g)",
+    "serving_qty": 100,
+    "serving_unit": "g"
+  },
   "Cherry tomatoes": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -310,6 +530,31 @@
       "selenium": 27.6
     }
   },
+  "Chickpea flour (besan)": {
+    "cal": 387,
+    "protein": 22,
+    "carbs": 58,
+    "fat": 7,
+    "fiber": 11,
+    "micros": {
+      "calcium": 45,
+      "folate": 437,
+      "iron": 4.9,
+      "magnesium": 166,
+      "phosphorus": 318,
+      "potassium": 846,
+      "selenium": 8,
+      "sodium": 64,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 2.8
+    },
+    "serving": "per 100g dry",
+    "serving_qty": 100,
+    "serving_unit": "g_dry"
+  },
   "Corn tortilla (small)": {
     "serving_qty": 1,
     "serving_unit": "tortilla",
@@ -357,6 +602,31 @@
       "vitamin_a": 12,
       "folate": 7,
       "phosphorus": 152,
+      "selenium": 10
+    }
+  },
+  "Cottage cheese 2%": {
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "serving": "per ½ cup (113g)",
+    "cal": 90,
+    "protein": 12,
+    "carbs": 4,
+    "fat": 2,
+    "fiber": 0,
+    "micros": {
+      "sodium": 350,
+      "potassium": 103,
+      "calcium": 115,
+      "vitamin_d": 0,
+      "magnesium": 7,
+      "zinc": 0.4,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.5,
+      "iron": 0.1,
+      "vitamin_a": 18,
+      "folate": 7,
+      "phosphorus": 150,
       "selenium": 10
     }
   },
@@ -710,6 +980,31 @@
       "selenium": 0.4
     }
   },
+  "Frozen peas": {
+    "cal": 62,
+    "protein": 4,
+    "carbs": 11,
+    "fat": 0,
+    "fiber": 4,
+    "micros": {
+      "calcium": 21,
+      "folate": 51,
+      "iron": 1.2,
+      "magnesium": 22,
+      "phosphorus": 77,
+      "potassium": 110,
+      "selenium": 0,
+      "sodium": 72,
+      "vitamin_a": 600,
+      "vitamin_b12": 0,
+      "vitamin_c": 15,
+      "vitamin_d": 0,
+      "zinc": 0.6
+    },
+    "serving": "per 1/2 cup (80g)",
+    "serving_qty": 0.5,
+    "serving_unit": "cup"
+  },
   "Frozen shrimp": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
@@ -950,6 +1245,31 @@
       "selenium": 0.1
     }
   },
+  "Jake's Multivitamin": {
+    "serving_qty": 1,
+    "serving_unit": "tablet",
+    "serving": "1 tablet daily",
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "vitamin_a": 900,
+      "vitamin_c": 99,
+      "vitamin_d": 25,
+      "folate": 400,
+      "vitamin_b12": 6.24,
+      "calcium": 210,
+      "iron": 0,
+      "magnesium": 120,
+      "zinc": 11,
+      "selenium": 55,
+      "sodium": 0,
+      "potassium": 0,
+      "phosphorus": 0
+    }
+  },
   "Kalamata olives": {
     "serving_qty": 5,
     "serving_unit": "olives",
@@ -959,6 +1279,56 @@
     "carbs": 2,
     "fat": 3,
     "fiber": 0.7
+  },
+  "Kefir (plain lowfat)": {
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "per 1 cup (243ml)",
+    "cal": 110,
+    "protein": 11,
+    "carbs": 12,
+    "fat": 2,
+    "fiber": 0,
+    "micros": {
+      "sodium": 125,
+      "potassium": 380,
+      "calcium": 316,
+      "vitamin_d": 3,
+      "magnesium": 33,
+      "zinc": 1.1,
+      "vitamin_c": 0,
+      "vitamin_b12": 1.5,
+      "iron": 0.1,
+      "vitamin_a": 56,
+      "folate": 14,
+      "phosphorus": 272,
+      "selenium": 7.6
+    }
+  },
+  "Laine's Multivitamin": {
+    "serving_qty": 1,
+    "serving_unit": "tablet",
+    "serving": "1 tablet daily",
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "vitamin_a": 700,
+      "vitamin_c": 90,
+      "vitamin_d": 25,
+      "folate": 400,
+      "vitamin_b12": 9.6,
+      "calcium": 130,
+      "iron": 18,
+      "magnesium": 42,
+      "zinc": 8,
+      "selenium": 41,
+      "sodium": 0,
+      "potassium": 0,
+      "phosphorus": 0
+    }
   },
   "Lemon juice": {
     "serving_qty": 2,
@@ -994,6 +1364,31 @@
       "phosphorus": 281,
       "selenium": 0.6
     }
+  },
+  "Light coconut milk (canned)": {
+    "cal": 70,
+    "protein": 1,
+    "carbs": 2,
+    "fat": 7,
+    "fiber": 0,
+    "micros": {
+      "calcium": 8,
+      "folate": 0,
+      "iron": 1.0,
+      "magnesium": 18,
+      "phosphorus": 30,
+      "potassium": 130,
+      "selenium": 2,
+      "sodium": 15,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.3
+    },
+    "serving": "per 1/4 cup (60g)",
+    "serving_qty": 0.25,
+    "serving_unit": "cup"
   },
   "Liquid egg whites": {
     "serving_qty": 0.5,
@@ -1080,6 +1475,59 @@
       "selenium": 0
     }
   },
+  "One A Day Men's Multi": {
+    "serving_qty": 1,
+    "serving_unit": "tablet",
+    "serving": "per 1 tablet daily",
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "vitamin_a": 900,
+      "vitamin_c": 99,
+      "vitamin_d": 25,
+      "vitamin_e": 15,
+      "vitamin_b12": 6.24,
+      "folate": 400,
+      "calcium": 210,
+      "iron": 0,
+      "magnesium": 120,
+      "zinc": 11,
+      "selenium": 55,
+      "potassium": 0,
+      "sodium": 0,
+      "phosphorus": 0
+    },
+    "note": "One A Day Men's Multi. Jake takes 1 daily. Iron = 0mg (standard for men's formula)."
+  },
+  "One A Day Women's Multi": {
+    "serving_qty": 1,
+    "serving_unit": "tablet",
+    "serving": "per 1 tablet daily",
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "vitamin_a": 700,
+      "vitamin_c": 90,
+      "vitamin_d": 25,
+      "vitamin_b12": 9.6,
+      "folate": 665,
+      "calcium": 130,
+      "iron": 18,
+      "magnesium": 42,
+      "zinc": 8,
+      "selenium": 41,
+      "potassium": 0,
+      "sodium": 0,
+      "phosphorus": 0
+    },
+    "note": "One A Day Women's Multi. Laine takes 1 daily. High iron (18mg = 100% DV) and B12 (400%)."
+  },
   "Open Nature protein granola": {
     "serving_qty": 0.333,
     "serving_unit": "cup",
@@ -1099,6 +1547,31 @@
     "carbs": 15,
     "fat": 0,
     "fiber": 3.1
+  },
+  "Paneer": {
+    "cal": 296,
+    "protein": 18,
+    "carbs": 4,
+    "fat": 23,
+    "fiber": 0,
+    "micros": {
+      "calcium": 420,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 20,
+      "phosphorus": 300,
+      "potassium": 120,
+      "selenium": 14,
+      "sodium": 18,
+      "vitamin_a": 180,
+      "vitamin_b12": 1.1,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 1.5
+    },
+    "serving": "per 100g (whole-milk paneer)",
+    "serving_qty": 100,
+    "serving_unit": "g"
   },
   "Pinto beans": {
     "serving_qty": 1,
@@ -1204,6 +1677,31 @@
       "phosphorus": 457,
       "selenium": 8.5
     }
+  },
+  "Roasted chickpeas (snack)": {
+    "cal": 120,
+    "protein": 5,
+    "carbs": 18,
+    "fat": 3,
+    "fiber": 5,
+    "micros": {
+      "calcium": 35,
+      "folate": 70,
+      "iron": 1.2,
+      "magnesium": 26,
+      "phosphorus": 90,
+      "potassium": 130,
+      "selenium": 0,
+      "sodium": 200,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.8
+    },
+    "serving": "per 1/4 cup (40g)",
+    "serving_qty": 0.25,
+    "serving_unit": "cup"
   },
   "Roasted onion & garlic pasta sauce": {
     "serving_qty": 0.5,
@@ -1325,6 +1823,16 @@
     "fat": 0,
     "fiber": 0
   },
+  "Spices (garam masala/turmeric/cumin/coriander)": {
+    "cal": 6,
+    "protein": 0,
+    "carbs": 1,
+    "fat": 0,
+    "fiber": 0,
+    "serving": "per 1 tsp mixed",
+    "serving_qty": 1,
+    "serving_unit": "tsp"
+  },
   "Spices (oregano/thyme/cumin/paprika/salt)": {
     "serving_qty": 1,
     "serving_unit": "tsp",
@@ -1359,6 +1867,31 @@
       "phosphorus": 54,
       "selenium": 0.6
     }
+  },
+  "Tikka masala simmer sauce": {
+    "cal": 120,
+    "protein": 2,
+    "carbs": 12,
+    "fat": 7,
+    "fiber": 1,
+    "micros": {
+      "calcium": 40,
+      "folate": 0,
+      "iron": 0.8,
+      "magnesium": 15,
+      "phosphorus": 0,
+      "potassium": 260,
+      "selenium": 0,
+      "sodium": 480,
+      "vitamin_a": 120,
+      "vitamin_b12": 0,
+      "vitamin_c": 6,
+      "vitamin_d": 0,
+      "zinc": 0
+    },
+    "serving": "per 1/2 cup (125g)",
+    "serving_qty": 0.5,
+    "serving_unit": "cup"
   },
   "TJ's Mandarin Orange Chicken": {
     "serving_qty": 100,
@@ -1430,300 +1963,6 @@
     "fat": 2,
     "fiber": 3
   },
-  "Whole wheat pita": {
-    "serving_qty": 1,
-    "serving_unit": "pita",
-    "serving": "per 1 pita (60g)",
-    "cal": 165,
-    "protein": 6,
-    "carbs": 33,
-    "fat": 2,
-    "fiber": 4.5
-  },
-  "Zucchini": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g raw",
-    "cal": 17,
-    "protein": 1,
-    "carbs": 3,
-    "fat": 0,
-    "fiber": 1
-  },
-  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
-  "_dri": {
-    "jake": {
-      "sodium": {
-        "dri": 2300,
-        "unit": "mg",
-        "upper": true
-      },
-      "potassium": {
-        "dri": 4700,
-        "unit": "mg"
-      },
-      "calcium": {
-        "dri": 1200,
-        "unit": "mg"
-      },
-      "vitamin_d": {
-        "dri": 20,
-        "unit": "mcg"
-      },
-      "magnesium": {
-        "dri": 420,
-        "unit": "mg"
-      },
-      "zinc": {
-        "dri": 11,
-        "unit": "mg"
-      },
-      "vitamin_c": {
-        "dri": 90,
-        "unit": "mg"
-      },
-      "vitamin_b12": {
-        "dri": 2.4,
-        "unit": "mcg"
-      },
-      "iron": {
-        "dri": 8,
-        "unit": "mg"
-      },
-      "vitamin_a": {
-        "dri": 900,
-        "unit": "mcg"
-      },
-      "folate": {
-        "dri": 400,
-        "unit": "mcg"
-      },
-      "phosphorus": {
-        "dri": 700,
-        "unit": "mg"
-      },
-      "selenium": {
-        "dri": 55,
-        "unit": "mcg"
-      },
-      "fiber": {
-        "dri": 30,
-        "unit": "g"
-      }
-    },
-    "laine": {
-      "sodium": {
-        "dri": 2300,
-        "unit": "mg",
-        "upper": true
-      },
-      "potassium": {
-        "dri": 4700,
-        "unit": "mg"
-      },
-      "calcium": {
-        "dri": 1000,
-        "unit": "mg"
-      },
-      "vitamin_d": {
-        "dri": 20,
-        "unit": "mcg"
-      },
-      "magnesium": {
-        "dri": 320,
-        "unit": "mg"
-      },
-      "zinc": {
-        "dri": 8,
-        "unit": "mg"
-      },
-      "vitamin_c": {
-        "dri": 75,
-        "unit": "mg"
-      },
-      "vitamin_b12": {
-        "dri": 2.4,
-        "unit": "mcg"
-      },
-      "iron": {
-        "dri": 18,
-        "unit": "mg"
-      },
-      "vitamin_a": {
-        "dri": 900,
-        "unit": "mcg"
-      },
-      "folate": {
-        "dri": 400,
-        "unit": "mcg"
-      },
-      "phosphorus": {
-        "dri": 700,
-        "unit": "mg"
-      },
-      "selenium": {
-        "dri": 55,
-        "unit": "mcg"
-      },
-      "fiber": {
-        "dri": 25,
-        "unit": "g"
-      }
-    }
-  },
-  "Jake's Multivitamin": {
-    "serving_qty": 1,
-    "serving_unit": "tablet",
-    "serving": "1 tablet daily",
-    "cal": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0,
-    "micros": {
-      "vitamin_a": 900,
-      "vitamin_c": 99,
-      "vitamin_d": 25,
-      "folate": 400,
-      "vitamin_b12": 6.24,
-      "calcium": 210,
-      "iron": 0,
-      "magnesium": 120,
-      "zinc": 11,
-      "selenium": 55,
-      "sodium": 0,
-      "potassium": 0,
-      "phosphorus": 0
-    }
-  },
-  "Laine's Multivitamin": {
-    "serving_qty": 1,
-    "serving_unit": "tablet",
-    "serving": "1 tablet daily",
-    "cal": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0,
-    "micros": {
-      "vitamin_a": 700,
-      "vitamin_c": 90,
-      "vitamin_d": 25,
-      "folate": 400,
-      "vitamin_b12": 9.6,
-      "calcium": 130,
-      "iron": 18,
-      "magnesium": 42,
-      "zinc": 8,
-      "selenium": 41,
-      "sodium": 0,
-      "potassium": 0,
-      "phosphorus": 0
-    }
-  },
-  "One A Day Men's Multi": {
-    "serving_qty": 1,
-    "serving_unit": "tablet",
-    "serving": "per 1 tablet daily",
-    "cal": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0,
-    "micros": {
-      "vitamin_a": 900,
-      "vitamin_c": 99,
-      "vitamin_d": 25,
-      "vitamin_e": 15,
-      "vitamin_b12": 6.24,
-      "folate": 400,
-      "calcium": 210,
-      "iron": 0,
-      "magnesium": 120,
-      "zinc": 11,
-      "selenium": 55,
-      "potassium": 0,
-      "sodium": 0,
-      "phosphorus": 0
-    },
-    "note": "One A Day Men's Multi. Jake takes 1 daily. Iron = 0mg (standard for men's formula)."
-  },
-  "One A Day Women's Multi": {
-    "serving_qty": 1,
-    "serving_unit": "tablet",
-    "serving": "per 1 tablet daily",
-    "cal": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0,
-    "micros": {
-      "vitamin_a": 700,
-      "vitamin_c": 90,
-      "vitamin_d": 25,
-      "vitamin_b12": 9.6,
-      "folate": 665,
-      "calcium": 130,
-      "iron": 18,
-      "magnesium": 42,
-      "zinc": 8,
-      "selenium": 41,
-      "potassium": 0,
-      "sodium": 0,
-      "phosphorus": 0
-    },
-    "note": "One A Day Women's Multi. Laine takes 1 daily. High iron (18mg = 100% DV) and B12 (400%)."
-  },
-  "Banana": {
-    "serving_qty": 1,
-    "serving_unit": "medium",
-    "serving": "per 1 medium banana (~118g)",
-    "cal": 105,
-    "protein": 1,
-    "carbs": 27,
-    "fat": 0,
-    "fiber": 3.1,
-    "micros": {
-      "sodium": 1,
-      "potassium": 422,
-      "calcium": 6,
-      "vitamin_d": 0,
-      "magnesium": 32,
-      "zinc": 0.2,
-      "vitamin_c": 10,
-      "vitamin_b12": 0,
-      "iron": 0.3,
-      "vitamin_a": 4,
-      "folate": 24,
-      "phosphorus": 26,
-      "selenium": 1.2
-    }
-  },
-  "Avocado": {
-    "serving_qty": 0.5,
-    "serving_unit": "avocado",
-    "serving": "per ½ avocado (~100g)",
-    "cal": 160,
-    "protein": 2,
-    "carbs": 9,
-    "fat": 15,
-    "fiber": 6.7,
-    "micros": {
-      "sodium": 7,
-      "potassium": 485,
-      "calcium": 12,
-      "vitamin_d": 0,
-      "magnesium": 29,
-      "zinc": 0.6,
-      "vitamin_c": 10,
-      "vitamin_b12": 0,
-      "iron": 0.6,
-      "vitamin_a": 7,
-      "folate": 81,
-      "phosphorus": 52,
-      "selenium": 0.4
-    }
-  },
   "Whole milk": {
     "serving_qty": 1,
     "serving_unit": "cup",
@@ -1749,54 +1988,74 @@
       "selenium": 4.8
     }
   },
-  "Cottage cheese 2%": {
-    "serving_qty": 0.5,
-    "serving_unit": "cup",
-    "serving": "per ½ cup (113g)",
-    "cal": 90,
-    "protein": 12,
-    "carbs": 4,
-    "fat": 2,
-    "fiber": 0,
+  "Whole wheat naan": {
+    "cal": 260,
+    "protein": 9,
+    "carbs": 45,
+    "fat": 5,
+    "fiber": 3,
     "micros": {
-      "sodium": 350,
-      "potassium": 103,
-      "calcium": 115,
+      "calcium": 40,
+      "folate": 60,
+      "iron": 2.5,
+      "magnesium": 35,
+      "phosphorus": 110,
+      "potassium": 120,
+      "selenium": 20,
+      "sodium": 420,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
       "vitamin_d": 0,
-      "magnesium": 7,
-      "zinc": 0.4,
-      "vitamin_c": 0,
-      "vitamin_b12": 0.5,
-      "iron": 0.1,
-      "vitamin_a": 18,
-      "folate": 7,
-      "phosphorus": 150,
-      "selenium": 10
-    }
-  },
-  "Kefir (plain lowfat)": {
+      "zinc": 1.0
+    },
+    "serving": "per 1 piece (~90g)",
     "serving_qty": 1,
-    "serving_unit": "cup",
-    "serving": "per 1 cup (243ml)",
-    "cal": 110,
-    "protein": 11,
-    "carbs": 12,
+    "serving_unit": "piece"
+  },
+  "Whole wheat pita": {
+    "serving_qty": 1,
+    "serving_unit": "pita",
+    "serving": "per 1 pita (60g)",
+    "cal": 165,
+    "protein": 6,
+    "carbs": 33,
     "fat": 2,
-    "fiber": 0,
+    "fiber": 4.5
+  },
+  "Yellow onion": {
+    "cal": 32,
+    "protein": 1,
+    "carbs": 7,
+    "fat": 0,
+    "fiber": 1,
     "micros": {
-      "sodium": 125,
-      "potassium": 380,
-      "calcium": 316,
-      "vitamin_d": 3,
-      "magnesium": 33,
-      "zinc": 1.1,
-      "vitamin_c": 0,
-      "vitamin_b12": 1.5,
-      "iron": 0.1,
-      "vitamin_a": 56,
-      "folate": 14,
-      "phosphorus": 272,
-      "selenium": 7.6
-    }
+      "calcium": 18,
+      "folate": 15,
+      "iron": 0.2,
+      "magnesium": 8,
+      "phosphorus": 23,
+      "potassium": 116,
+      "selenium": 0,
+      "sodium": 3,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 6,
+      "vitamin_d": 0,
+      "zinc": 0.2
+    },
+    "serving": "per 1/2 cup chopped (80g)",
+    "serving_qty": 0.5,
+    "serving_unit": "cup"
+  },
+  "Zucchini": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw",
+    "cal": 17,
+    "protein": 1,
+    "carbs": 3,
+    "fat": 0,
+    "fiber": 1
   }
 }
