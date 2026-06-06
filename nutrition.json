@@ -1569,9 +1569,10 @@
       "vitamin_d": 0,
       "zinc": 1.5
     },
-    "serving": "per 100g (whole-milk paneer)",
+    "serving": "per 100g (whole-milk paneer, store or homemade)",
     "serving_qty": 100,
-    "serving_unit": "g"
+    "serving_unit": "g",
+    "note": "Homemade from ~1 gal whole milk + lemon/vinegar yields ~450-500g; macros match store paneer."
   },
   "Pinto beans": {
     "serving_qty": 1,
