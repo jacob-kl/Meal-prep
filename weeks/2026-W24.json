@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "Week of June 8–14, 2026. Indian. Monday is non-fish (tandoori chicken) — standing rule. Fish midweek (Wed shrimp coconut curry, Thu cod masala) + shrimp in Tue wraps. Raita is the standalone sauce card (Indian cousin of tzatziki). Tikka Tuesday = paneer + leftover shrimp naan wraps. Sunday breakfast-for-dinner = masala egg bhurji + besan chilla (Indian, not waffles). Chicken OK at dinner in moderation — only Mon for Laine; her lunches stay non-chicken. Onion only cooked (no raw); no mushrooms/okra/eggplant; no lentils (chana uses chickpeas). Mild for Laine, Jake adds chili to his portion. Paneer nights for calcium; cauliflower + peas for cruciferous + fiber.",
+  "_note": "Week of June 8–14, 2026. Indian. Monday is non-fish (tandoori chicken) — standing rule. Fish midweek (Wed shrimp coconut curry, Thu cod masala) + shrimp in Tue wraps. Raita is the standalone sauce card (Indian cousin of tzatziki). Tikka Tuesday = paneer + leftover shrimp naan wraps. Sunday breakfast-for-dinner = masala egg bhurji + besan chilla (Indian, not waffles). Chicken OK at dinner in moderation — only Mon for Laine; her lunches stay non-chicken. Onion only cooked (no raw); no mushrooms/okra/eggplant; no lentils (chana uses chickpeas). Mild for Laine, Jake adds chili to his portion. Paneer (homemade — stores don't carry it) for calcium; cauliflower + peas for cruciferous + fiber.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -122,7 +122,7 @@
     {
       "day": "Tuesday (June 9) — Tikka Tuesday",
       "name": "Paneer & Shrimp Tikka Naan Wraps with Raita",
-      "note": "This week's leftovers-plus-a-treat night. Last week's shrimp gets a tikka spice rub, paneer is the treat protein — both seared hot and tucked into warm naan with cool raita, cucumber, and tomato. Jake loads both proteins and adds chili to his; Laine goes shrimp-forward and mild.",
+      "note": "This week's leftovers-plus-a-treat night. Our stores don't carry paneer, so we make it at home (foolproof — milk + lemon); make the full batch now and save some for Saturday's palak paneer. Last week's shrimp gets a tikka rub, the homemade paneer is the treat protein — both seared hot and tucked into warm naan with cool raita, cucumber, and tomato. Jake loads both proteins and adds chili to his; Laine goes shrimp-forward and mild.",
       "jake": {
         "cal": 1061,
         "protein": 72,
@@ -141,7 +141,7 @@
       "sauceLabel": "Raita",
       "ingredients": [
         {
-          "item": "Paneer — Jake 90g, Laine 60g, cubed",
+          "item": "Homemade paneer — Jake 90g, Laine 60g, cubed (from whole milk + lemon; see method)",
           "nutritionKey": "Paneer"
         },
         {
@@ -174,10 +174,13 @@
         }
       ],
       "steps": [
-        "Make raita ahead if you can (see recipe) — better after 30 min in the fridge.",
-        "Toss shrimp and paneer (separately) with olive oil, garam masala, paprika, cumin, salt.",
-        "Sear paneer in a hot pan 1–2 min per side until golden. Set aside.",
-        "In the same pan, cook shrimp 2 min per side until just pink.",
+        "Make the paneer first — it's foolproof, just milk + acid. Bring 1 gallon whole milk to a gentle boil in a big pot, stirring now and then so it doesn't scorch.",
+        "Kill the heat and stir in 3–4 tbsp lemon juice (or white vinegar), a splash at a time, until the milk curdles — white curds separating from greenish, clear-ish whey (~30 sec). If it hasn't fully split, add a little more acid.",
+        "Pour through a cheesecloth-lined colander. Rinse the curds under cool water to wash off the tang, then gather the cloth and squeeze out the excess whey.",
+        "Wrap the curds tight in the cloth and press under a heavy pot or a couple of cans for 20–30 min until firm, then cut into cubes. Makes ~450–500g — enough for both Tuesday and Saturday. Keeps 4–5 days covered in the fridge.",
+        "Set aside ~215g of the paneer for Saturday. Make the raita ahead if you can (see recipe) — better after 30 min in the fridge.",
+        "Toss shrimp and the remaining paneer (separately) with olive oil, garam masala, paprika, cumin, salt.",
+        "Sear paneer in a hot pan 1–2 min per side until golden; set aside. In the same pan, cook shrimp 2 min per side until just pink.",
         "Warm naan directly over a gas flame ~20 sec per side, or in a dry pan.",
         "Build wraps: smear of raita, then shrimp + paneer, cucumber, tomato. Jake loads both proteins and adds minced green chili; Laine goes shrimp-forward and mild."
       ]
@@ -353,7 +356,7 @@
     {
       "day": "Saturday (June 13)",
       "name": "Palak Paneer + Basmati",
-      "note": "Calcium + iron night for Laine: paneer in a silky spinach gravy. Onion cooked all the way down, mild and creamy. Jake gets more paneer and a little chili.",
+      "note": "Calcium + iron night for Laine: paneer in a silky spinach gravy. Use the homemade paneer you made on Tuesday (or make a fresh batch — same method). Onion cooked all the way down, mild and creamy. Jake gets more paneer and a little chili.",
       "jake": {
         "cal": 728,
         "protein": 31,
@@ -370,7 +373,7 @@
       },
       "ingredients": [
         {
-          "item": "Paneer — Jake 130g, Laine 85g, cubed",
+          "item": "Homemade paneer — Jake 130g, Laine 85g, cubed (Tuesday's batch, or make fresh — see Tuesday)",
           "nutritionKey": "Paneer"
         },
         {
@@ -395,10 +398,11 @@
         }
       ],
       "steps": [
-        "Lightly sear paneer cubes in a little oil until golden; set aside.",
+        "Use the paneer you made Tuesday (or make a fresh batch: boil 1 gallon whole milk, curdle with 3–4 tbsp lemon juice, strain through cheesecloth, rinse, and press 20–30 min until firm; cube).",
+        "Lightly sear the paneer cubes in a little oil until golden; set aside.",
         "Sauté onion until soft, add cumin, garam masala, ginger, garlic — bloom 30 sec.",
         "Add spinach in batches until wilted, then blend the mixture smooth (immersion blender). Loosen with a splash of water.",
-        "Return to low heat, fold paneer back in, warm 3–4 min. Keep it mild for Laine.",
+        "Return to low heat, fold the paneer back in, warm 3–4 min. Keep it mild for Laine.",
         "Serve over basmati. Jake gets more paneer and stirs chili into his."
       ]
     },
@@ -883,7 +887,7 @@
   "shopping": {
     "Must Buy": [
       "Atlantic salmon — 2 fillets (~320g raw, Mon tandoori)",
-      "Paneer — ~2 blocks (~450g total, Tue wraps + Sat palak paneer)",
+      "Whole milk — 1 gallon (to make paneer at home; yields ~450–500g for Tue + Sat)",
       "Frozen shrimp — ~1.5 lbs (Tue wraps + Wed curry)",
       "Frozen cod — ~1 lb (Thu cod masala)",
       "Chicken breast — ~2.3 lbs (Jake lunch batch only)",
@@ -916,7 +920,8 @@
       "Almonds — (Jake snack)",
       "Lemon juice — fresh bottle",
       "Garam masala / turmeric / cumin / coriander / curry powder — restock the spice tin",
-      "Birch Benders mix (Sunday waffles)"
+      "Birch Benders mix (Sunday waffles)",
+      "Lemon juice or white vinegar — to curdle the paneer (a few tbsp; you likely have this)"
     ],
     "Already Have": [
       "Olive oil — check bottle is at least half full",
