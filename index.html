@@ -27,7 +27,7 @@ button { font-family:'Barlow',sans-serif; cursor:pointer; }
 <body class="light">
 <div id="root"></div>
 <script type="text/babel">
-const { useState, useEffect, useContext, createContext, useCallback, useRef } = React;
+const { useState, useEffect, useContext, createContext, useCallback, useRef, useMemo } = React;
  
 // ── Config ────────────────────────────────────────────────────────────
 const WEEK_REGISTRY = [
@@ -388,7 +388,7 @@ function DinnerCard({dinner,week}) {
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
       <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
       <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
-      {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🥣 {(dinner.sauceLabel||"Tzatziki")} night — see recipe card in Snacks tab</div>}
+      {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🥣 {(dinner.sauceLabel||"Tzatziki")} night — see recipe card in the Recipes tab</div>}
       {dinner.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{dinner.note}</div>}
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
         {[["Jake",dinner.jake,T.blue,T.blueSoft],["Laine",dinner.laine,T.accent,T.accentSoft]].map(([name,m,clr,bg])=>m&&(
@@ -815,6 +815,98 @@ function WeekView({week,nutritionDB}) {
   );
 }
  
+// ── Recipes ───────────────────────────────────────────────────────────
+function RecipesTab({allWeeks}) {
+  const T = getT(useDark());
+  const [query,setQuery]=useState("");
+  const [cat,setCat]=useState(0);
+  const CATS=["All","Dinners","Lunches","Breakfasts","Sauces"];
+
+  // Aggregate every method-bearing recipe + sauce across all weeks (newest first).
+  const recipes = useMemo(()=>{
+    const ordered=[...allWeeks].reverse(); // newest week first
+    const byKey={}; // dedupe by category+name, keep newest, collect source weeks
+    const add=(category,obj)=>{
+      if(!obj||!obj.name) return;
+      const key=category+"::"+obj.name.trim().toLowerCase();
+      if(!byKey[key]) byKey[key]={category,name:obj.name,obj,weeks:[]};
+      // keep the first (newest) obj seen; append week labels in order
+    };
+    ordered.forEach(w=>{
+      (w.dinners||[]).forEach(d=>add("Dinners",d));
+      add("Lunches",w.jakeLunch);
+      add("Lunches",w.laineLunch);
+      (w.laineBreakfasts||[]).forEach(b=>add("Breakfasts",b));
+      add("Sauces",w.tzatziki);
+    });
+    // second pass to record which weeks each recipe appears in
+    ordered.forEach(w=>{
+      const note=(category,obj)=>{
+        if(!obj||!obj.name) return;
+        const key=category+"::"+obj.name.trim().toLowerCase();
+        if(byKey[key]&&!byKey[key].weeks.includes(w.label)) byKey[key].weeks.push(w.label);
+      };
+      (w.dinners||[]).forEach(d=>note("Dinners",d));
+      note("Lunches",w.jakeLunch);
+      note("Lunches",w.laineLunch);
+      (w.laineBreakfasts||[]).forEach(b=>note("Breakfasts",b));
+      note("Sauces",w.tzatziki);
+    });
+    return Object.values(byKey);
+  },[allWeeks]);
+
+  const q=query.trim().toLowerCase();
+  const filtered=recipes.filter(r=>{
+    if(cat!==0 && r.category!==CATS[cat]) return false;
+    if(!q) return true;
+    if(r.name.toLowerCase().includes(q)) return true;
+    if((r.obj.note||"").toLowerCase().includes(q)) return true;
+    return (r.obj.ingredients||[]).some(i=>(i.item||"").toLowerCase().includes(q));
+  });
+
+  const order={Dinners:0,Lunches:1,Breakfasts:2,Sauces:3};
+  filtered.sort((a,b)=> (order[a.category]-order[b.category]) || a.name.localeCompare(b.name));
+
+  const catColor={Dinners:T.accent,Lunches:T.blue,Breakfasts:T.gold,Sauces:T.green};
+
+  return (
+    <div>
+      {/* Search */}
+      <div style={{position:"relative",marginBottom:14}}>
+        <span style={{position:"absolute",left:14,top:"50%",transform:"translateY(-50%)",color:T.textLight,pointerEvents:"none",fontSize:14}}>⌕</span>
+        <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search recipes or ingredients…"
+          style={{width:"100%",boxSizing:"border-box",background:T.inputBg,border:`1px solid ${T.border}`,borderRadius:12,padding:"11px 38px 11px 36px",color:T.text,fontSize:13,fontFamily:"'DM Mono',monospace",outline:"none"}}/>
+        {query&&<button onClick={()=>setQuery("")} style={{position:"absolute",right:10,top:"50%",transform:"translateY(-50%)",background:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:14,width:22,height:22,color:T.textMid,fontSize:12,lineHeight:1}}>×</button>}
+      </div>
+
+      {/* Category filter */}
+      <div style={{display:"flex",gap:3,flexWrap:"wrap",background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:20}}>
+        {CATS.map((c,i)=>{const isA=cat===i;return(
+          <button key={c} onClick={()=>setCat(i)} style={{flex:1,minWidth:64,padding:"8px 6px",background:isA?T.card:"none",border:`1px solid ${isA?T.border:"transparent"}`,borderRadius:10,color:isA?T.text:T.textLight,fontSize:10,letterSpacing:"0.04em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace",transition:"all 0.15s"}}>{c}</button>
+        );})}
+      </div>
+
+      <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:"0.1em",color:T.textLight,fontFamily:"'DM Mono',monospace",marginBottom:16}}>
+        {filtered.length} recipe{filtered.length!==1?"s":""}{q?` matching “${query}”`:""}
+      </div>
+
+      {filtered.length===0&&<div style={{textAlign:"center",padding:"50px 0",color:T.textLight,fontSize:14}}>Nothing found. Try another search.</div>}
+
+      {filtered.map((r,idx)=>(
+        <div key={r.category+r.name+idx} style={{marginBottom:4}}>
+          <div style={{display:"flex",alignItems:"center",gap:8,margin:"0 2px 6px"}}>
+            <span style={{fontSize:9,letterSpacing:"0.08em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace",color:catColor[r.category]||T.textLight,border:`1px solid ${(catColor[r.category]||T.textLight)}44`,borderRadius:20,padding:"2px 8px"}}>{r.category.replace(/s$/,"")}</span>
+            <span style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace"}}>{r.weeks.length>1?`${r.weeks.length} weeks`:r.weeks[0]}</span>
+          </div>
+          {r.category==="Dinners"
+            ? <DinnerCard dinner={r.obj} week={{}}/>
+            : <MealCard meal={r.obj} personLabel={r.category==="Sauces"?"Sauce":(r.obj.name&&r.obj.name.toLowerCase().includes("jake"))?"Jake":undefined} personColor={catColor[r.category]} forceOpen={false}/>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ── History ───────────────────────────────────────────────────────────
 function HistoryTab({allWeeks,nutritionDB}) {
   const T = getT(useDark());
@@ -890,7 +982,7 @@ function App() {
   },[]);
  
   const currentWeek=allWeeks.find(w=>w.id===CURRENT_WEEK_ID);
-  const MAIN_TABS=["This Week","Shopping","Nutrition","Past Weeks"];
+  const MAIN_TABS=["This Week","Shopping","Nutrition","Recipes","Past Weeks"];
  
   if(loading) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.textLight,fontSize:13,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em"}}>Loading…</div>;
   if(error) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{textAlign:"center"}}><div style={{color:T.accent,fontFamily:"'Lora',serif",fontSize:18,marginBottom:8}}>Something's off</div><div style={{color:T.textLight,fontSize:11}}>{error}</div></div></div>;
@@ -929,7 +1021,8 @@ function App() {
           {mainTab===0&&currentWeek&&<WeekView week={currentWeek} nutritionDB={nutritionDB}/>}
           {mainTab===1&&currentWeek&&<ShoppingTab week={currentWeek}/>}
           {mainTab===2&&currentWeek&&<NutritionTab week={currentWeek} nutritionDB={nutritionDB}/>}
-          {mainTab===3&&<HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
+          {mainTab===3&&<RecipesTab allWeeks={allWeeks}/>}
+          {mainTab===4&&<HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
  
           <div style={{marginTop:64,paddingTop:28,borderTop:`1px solid ${T.divider}`,textAlign:"center"}}>
             <div style={{fontFamily:"'Lora',serif",fontSize:"clamp(1.1rem,3vw,1.4rem)",fontWeight:400,fontStyle:"italic",color:T.textLight}}>
