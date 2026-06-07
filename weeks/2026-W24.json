@@ -122,20 +122,20 @@
     {
       "day": "Tuesday (June 9) — Tikka Tuesday",
       "name": "Paneer & Shrimp Tikka Naan Wraps with Raita",
-      "note": "This week's leftovers-plus-a-treat night. Our stores don't carry paneer, so we make it at home (foolproof — milk + lemon); make the full batch now and save some for Saturday's palak paneer. Last week's shrimp gets a tikka rub, the homemade paneer is the treat protein — both seared hot and tucked into warm naan with cool raita, cucumber, and tomato. Jake loads both proteins and adds chili to his; Laine goes shrimp-forward and mild.",
+      "note": "This week's leftovers-plus-a-treat night. Our stores don't carry paneer, so we make it at home (foolproof — milk + lemon); make the full batch now and save some for Saturday's palak paneer. Last week's shrimp gets a tikka rub, the homemade paneer is the treat protein — both seared hot and tucked into warm homemade garlic naan with cool raita, cucumber, and tomato. Jake loads both proteins and adds chili to his; Laine goes shrimp-forward and mild.",
       "jake": {
-        "cal": 1061,
-        "protein": 72,
-        "carbs": 101,
-        "fat": 42,
-        "fiber": 6.3
+        "cal": 1015,
+        "protein": 67,
+        "carbs": 79,
+        "fat": 48,
+        "fiber": 2.7
       },
       "laine": {
-        "cal": 651,
-        "protein": 53,
-        "carbs": 54,
-        "fat": 26,
-        "fiber": 3.3
+        "cal": 628,
+        "protein": 50,
+        "carbs": 43,
+        "fat": 29,
+        "fiber": 1.5
       },
       "tzatzikiRef": true,
       "sauceLabel": "Raita",
@@ -149,8 +149,24 @@
           "nutritionKey": "Frozen shrimp"
         },
         {
-          "item": "Whole wheat naan — Jake 2, Laine 1",
-          "nutritionKey": "Whole wheat naan"
+          "item": "Homemade garlic naan — Jake 2, Laine 1 (batch makes ~6; see method)",
+          "nutritionKey": "Homemade garlic naan"
+        },
+        {
+          "item": "  ↳ All-purpose flour — 2 cups (250g) for the naan batch"
+        },
+        {
+          "item": "  ↳ Plain yogurt — ½ cup (from the Greek yogurt tub)"
+        },
+        {
+          "item": "  ↳ Butter or ghee — ~4 tbsp (2 in dough, 2 for garlic butter)"
+        },
+        {
+          "item": "  ↳ Garlic — 3–4 cloves, minced (for the garlic butter)",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "  ↳ Instant yeast 1 tsp (or 1 tsp baking powder + ¼ tsp soda), 1 tsp sugar, ¾ tsp salt"
         },
         {
           "item": "Raita — 3–4 tbsp per wrap (see recipe card)",
@@ -174,15 +190,18 @@
         }
       ],
       "steps": [
-        "Make the paneer first — it's foolproof, just milk + acid. Bring 1 gallon whole milk to a gentle boil in a big pot, stirring now and then so it doesn't scorch.",
-        "Kill the heat and stir in 3–4 tbsp lemon juice (or white vinegar), a splash at a time, until the milk curdles — white curds separating from greenish, clear-ish whey (~30 sec). If it hasn't fully split, add a little more acid.",
+        "Start the naan dough so it can rest while you make the paneer: bloom 1 tsp yeast + 1 tsp sugar in ⅓ cup warm water 5 min (or skip yeast and use 1 tsp baking powder + ¼ tsp baking soda for a quick version).",
+        "Mix 2 cups (250g) flour with ¾ tsp salt (and the baking powder/soda if not using yeast). Stir in ½ cup yogurt, 2 tbsp melted butter, and the yeast water; knead to a soft dough ~5 min. Cover and rest — 1 hr with yeast, 15 min without.",
+        "Make the paneer: bring 1 gallon whole milk to a gentle boil in a big pot, stirring now and then so it does not scorch.",
+        "Kill the heat and stir in 3–4 tbsp lemon juice (or white vinegar), a splash at a time, until the milk curdles — white curds separating from greenish, clear-ish whey (~30 sec). If it has not fully split, add a little more acid.",
         "Pour through a cheesecloth-lined colander. Rinse the curds under cool water to wash off the tang, then gather the cloth and squeeze out the excess whey.",
-        "Wrap the curds tight in the cloth and press under a heavy pot or a couple of cans for 20–30 min until firm, then cut into cubes. Makes ~450–500g — enough for both Tuesday and Saturday. Keeps 4–5 days covered in the fridge.",
-        "Set aside ~215g of the paneer for Saturday. Make the raita ahead if you can (see recipe) — better after 30 min in the fridge.",
+        "Wrap the curds tight in the cloth and press under a heavy pot or a couple of cans for 20–30 min until firm, then cube. Makes ~450–500g — set aside ~215g for Saturday. Keeps 4–5 days covered.",
+        "Make the raita ahead if you can (see recipe) — better after 30 min in the fridge.",
         "Toss shrimp and the remaining paneer (separately) with olive oil, garam masala, paprika, cumin, salt.",
         "Sear paneer in a hot pan 1–2 min per side until golden; set aside. In the same pan, cook shrimp 2 min per side until just pink.",
-        "Warm naan directly over a gas flame ~20 sec per side, or in a dry pan.",
-        "Build wraps: smear of raita, then shrimp + paneer, cucumber, tomato. Jake loads both proteins and adds minced green chili; Laine goes shrimp-forward and mild."
+        "Cook the naan: divide the rested dough into 6, roll each into an oval ~¼-inch thick. Heat a cast-iron skillet over high. Cook 1–2 min until big bubbles form, flip, 1 min more until charred spots. Keep warm under a towel.",
+        "Garlic butter: melt 2 tbsp butter with the minced garlic; brush over the hot naan and finish with cilantro. You will have ~3 extra naan — great with Wednesday's curry.",
+        "Build wraps: smear of raita on a warm naan, then shrimp + paneer, cucumber, tomato. Jake loads both proteins and adds minced green chili; Laine goes shrimp-forward and mild."
       ]
     },
     {
@@ -891,7 +910,6 @@
       "Frozen shrimp — ~1.5 lbs (Tue wraps + Wed curry)",
       "Frozen cod — ~1 lb (Thu cod masala)",
       "Chicken breast — ~2.3 lbs (Jake lunch batch only)",
-      "Whole wheat naan — 1–2 packs (Tue wraps)",
       "Basmati rice — 1 bag (dinners + Jake lunch all week)",
       "Tikka masala simmer sauce — 1 jar (Thu cod)",
       "Light coconut milk — 1 can (Wed curry)",
@@ -905,10 +923,12 @@
       "Canned tuna — 5 cans (Laine jars)",
       "Bell peppers — 3–4 (Laine jars + scramble + snacks)",
       "Bananas — 2 bunches (Jake + Laine snacks)",
-      "Fresh cilantro + fresh ginger + garlic (curries, raita)",
+      "Fresh cilantro + fresh ginger + garlic (curries, raita) (garlic also for the naan butter)",
       "Roasted chickpeas — 1 bag/tub (snacks)",
       "Kefir (plain lowfat) — 1–2 cartons (Jake snack)",
-      "Cottage cheese 2% — 1 container (Jake snack)"
+      "Cottage cheese 2% — 1 container (Jake snack)",
+      "All-purpose flour — 1 bag (homemade garlic naan; ~2 cups needed)",
+      "Butter or ghee — 1 stick (naan dough + garlic butter)"
     ],
     "Check Supply": [
       "Frozen peas — 1 bag (Thu + Laine jars)",
@@ -921,7 +941,8 @@
       "Lemon juice — fresh bottle",
       "Garam masala / turmeric / cumin / coriander / curry powder — restock the spice tin",
       "Birch Benders mix (Sunday waffles)",
-      "Lemon juice or white vinegar — to curdle the paneer (a few tbsp; you likely have this)"
+      "Lemon juice or white vinegar — to curdle the paneer (a few tbsp; you likely have this)",
+      "Instant yeast — 1 tsp (or baking powder + baking soda) for the naan"
     ],
     "Already Have": [
       "Olive oil — check bottle is at least half full",
@@ -945,11 +966,11 @@
         ],
         [
           "Dinner (avg)",
-          743,
-          51,
-          76,
-          27,
-          8
+          737,
+          50,
+          73,
+          28,
+          7
         ],
         [
           "1–2 Snacks",
@@ -969,11 +990,11 @@
         ]
       ],
       "total": [
-        2058,
-        176,
-        189,
-        71,
-        26
+        2052,
+        175,
+        186,
+        72,
+        25
       ],
       "goal": [
         2030,
@@ -1003,11 +1024,11 @@
         ],
         [
           "Dinner (avg)",
-          515,
+          512,
           36,
-          56,
+          54,
           17,
-          6
+          5
         ],
         [
           "1 Snack",
@@ -1027,11 +1048,11 @@
         ]
       ],
       "total": [
-        1453,
+        1450,
         120,
-        178,
+        176,
         29,
-        26
+        25
       ],
       "goal": [
         1363,
