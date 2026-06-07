@@ -31,7 +31,7 @@ function App() {
   },[]);
  
   const currentWeek=allWeeks.find(w=>w.id===CURRENT_WEEK_ID);
-  const MAIN_TABS=["This Week","Shopping","Nutrition","Recipes","Past Weeks"];
+  const MAIN_TABS=["This Week","Shopping","Nutrition","Recipes","Pantry","Past Weeks"];
  
   if(loading) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.textLight,fontSize:13,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em"}}>Loading…</div>;
   if(error) return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{textAlign:"center"}}><div style={{color:T.accent,fontFamily:"'Lora',serif",fontSize:18,marginBottom:8}}>Something's off</div><div style={{color:T.textLight,fontSize:11}}>{error}</div></div></div>;
@@ -71,7 +71,8 @@ function App() {
           {mainTab===1&&currentWeek&&<ShoppingTab week={currentWeek}/>}
           {mainTab===2&&currentWeek&&<NutritionTab week={currentWeek} nutritionDB={nutritionDB}/>}
           {mainTab===3&&<RecipesTab allWeeks={allWeeks}/>}
-          {mainTab===4&&<HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
+          {mainTab===4&&<PantryTab allWeeks={allWeeks}/>}
+          {mainTab===5&&<HistoryTab allWeeks={allWeeks} nutritionDB={nutritionDB}/>}
  
           <div style={{marginTop:64,paddingTop:28,borderTop:`1px solid ${T.divider}`,textAlign:"center"}}>
             <div style={{fontFamily:"'Lora',serif",fontSize:"clamp(1.1rem,3vw,1.4rem)",fontWeight:400,fontStyle:"italic",color:T.textLight}}>
