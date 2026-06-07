@@ -120,6 +120,31 @@
       }
     }
   },
+  "All-purpose flour": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (enriched)",
+    "cal": 364,
+    "protein": 10.3,
+    "carbs": 76.3,
+    "fat": 1.0,
+    "fiber": 2.7,
+    "micros": {
+      "calcium": 15,
+      "folate": 183,
+      "iron": 4.6,
+      "magnesium": 22,
+      "phosphorus": 108,
+      "potassium": 107,
+      "selenium": 33,
+      "sodium": 2,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.7
+    }
+  },
   "Almond butter": {
     "serving_qty": 2,
     "serving_unit": "tbsp",
@@ -408,6 +433,31 @@
       "folate": 63,
       "phosphorus": 66,
       "selenium": 2.5
+    }
+  },
+  "Butter": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (14g)",
+    "cal": 102,
+    "protein": 0.1,
+    "carbs": 0,
+    "fat": 11.5,
+    "fiber": 0,
+    "micros": {
+      "calcium": 3,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 3,
+      "selenium": 0,
+      "sodium": 2,
+      "vitamin_a": 97,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0.2,
+      "zinc": 0
     }
   },
   "Canned tuna (in water)": {
@@ -1210,6 +1260,32 @@
     "fat": 0,
     "fiber": 0.6
   },
+  "Homemade garlic naan": {
+    "serving_qty": 1,
+    "serving_unit": "piece",
+    "serving": "per 1 piece (homemade garlic naan, batch of 6)",
+    "cal": 237,
+    "protein": 6.4,
+    "carbs": 33.9,
+    "fat": 8.1,
+    "fiber": 1.2,
+    "micros": {
+      "calcium": 20,
+      "folate": 32,
+      "iron": 0.8,
+      "magnesium": 6,
+      "phosphorus": 30,
+      "potassium": 35,
+      "selenium": 6,
+      "sodium": 150,
+      "vitamin_a": 20,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    },
+    "note": "Homemade: AP flour, yogurt, garlic butter. Batch of 6; macros per piece."
+  },
   "Hummus": {
     "serving_qty": 60,
     "serving_unit": "g",
@@ -1843,6 +1919,31 @@
     "carbs": 1,
     "fat": 0,
     "fiber": 0
+  },
+  "Sugar (white)": {
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "per 1 tsp (4g)",
+    "cal": 16,
+    "protein": 0,
+    "carbs": 4.2,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
   },
   "Sweet potato": {
     "serving_qty": 130,
