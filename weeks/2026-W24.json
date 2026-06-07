@@ -149,24 +149,8 @@
           "nutritionKey": "Frozen shrimp"
         },
         {
-          "item": "Homemade garlic naan — Jake 2, Laine 1 (batch makes ~6; see method)",
+          "item": "Homemade garlic naan — Jake 2, Laine 1 (see the Homemade Garlic Naan recipe → Sides)",
           "nutritionKey": "Homemade garlic naan"
-        },
-        {
-          "item": "  ↳ All-purpose flour — 2 cups (250g) for the naan batch"
-        },
-        {
-          "item": "  ↳ Plain yogurt — ½ cup (from the Greek yogurt tub)"
-        },
-        {
-          "item": "  ↳ Butter or ghee — ~4 tbsp (2 in dough, 2 for garlic butter)"
-        },
-        {
-          "item": "  ↳ Garlic — 3–4 cloves, minced (for the garlic butter)",
-          "nutritionKey": "Garlic"
-        },
-        {
-          "item": "  ↳ Instant yeast 1 tsp (or 1 tsp baking powder + ¼ tsp soda), 1 tsp sugar, ¾ tsp salt"
         },
         {
           "item": "Raita — 3–4 tbsp per wrap (see recipe card)",
@@ -190,8 +174,7 @@
         }
       ],
       "steps": [
-        "Start the naan dough so it can rest while you make the paneer: bloom 1 tsp yeast + 1 tsp sugar in ⅓ cup warm water 5 min (or skip yeast and use 1 tsp baking powder + ¼ tsp baking soda for a quick version).",
-        "Mix 2 cups (250g) flour with ¾ tsp salt (and the baking powder/soda if not using yeast). Stir in ½ cup yogurt, 2 tbsp melted butter, and the yeast water; knead to a soft dough ~5 min. Cover and rest — 1 hr with yeast, 15 min without.",
+        "Make the garlic naan ahead — see the Homemade Garlic Naan recipe (Sides tab). Start its dough first so it can rest while you make the paneer.",
         "Make the paneer: bring 1 gallon whole milk to a gentle boil in a big pot, stirring now and then so it does not scorch.",
         "Kill the heat and stir in 3–4 tbsp lemon juice (or white vinegar), a splash at a time, until the milk curdles — white curds separating from greenish, clear-ish whey (~30 sec). If it has not fully split, add a little more acid.",
         "Pour through a cheesecloth-lined colander. Rinse the curds under cool water to wash off the tang, then gather the cloth and squeeze out the excess whey.",
@@ -199,8 +182,6 @@
         "Make the raita ahead if you can (see recipe) — better after 30 min in the fridge.",
         "Toss shrimp and the remaining paneer (separately) with olive oil, garam masala, paprika, cumin, salt.",
         "Sear paneer in a hot pan 1–2 min per side until golden; set aside. In the same pan, cook shrimp 2 min per side until just pink.",
-        "Cook the naan: divide the rested dough into 6, roll each into an oval ~¼-inch thick. Heat a cast-iron skillet over high. Cook 1–2 min until big bubbles form, flip, 1 min more until charred spots. Keep warm under a towel.",
-        "Garlic butter: melt 2 tbsp butter with the minced garlic; brush over the hot naan and finish with cilantro. You will have ~3 extra naan — great with Wednesday's curry.",
         "Build wraps: smear of raita on a warm naan, then shrimp + paneer, cucumber, tomato. Jake loads both proteins and adds minced green chili; Laine goes shrimp-forward and mild."
       ]
     },
@@ -1078,5 +1059,66 @@
         "desc": "1 tablet daily with food."
       }
     ]
-  }
+  },
+  "extras": [
+    {
+      "name": "Homemade Garlic Naan",
+      "recipeCategory": "Sides",
+      "nutritionKey": "Homemade garlic naan",
+      "note": "Soft, blistered garlic naan on the stovetop — no tandoor needed. Batch makes ~6. Great with any of the curries this week; we use it for Tuesday's wraps and the extras go with Wednesday's coconut curry. With yeast it's pillowy; the quick baking-powder version is weeknight-fast.",
+      "macros": {
+        "cal": 237,
+        "protein": 6,
+        "carbs": 34,
+        "fat": 8,
+        "fiber": 1.2
+      },
+      "macrosNote": "Per piece (batch of 6).",
+      "ingredients": [
+        {
+          "item": "All-purpose flour — 2 cups (250g)",
+          "nutritionKey": "All-purpose flour"
+        },
+        {
+          "item": "Plain yogurt — ½ cup (120g)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Butter or ghee — 4 tbsp total (2 in dough, 2 for garlic butter)",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Garlic — 3–4 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Instant yeast — 1 tsp (or 1 tsp baking powder + ¼ tsp baking soda for a quick version)"
+        },
+        {
+          "item": "Sugar — 1 tsp",
+          "nutritionKey": "Sugar (white)"
+        },
+        {
+          "item": "Salt — ¾ tsp"
+        },
+        {
+          "item": "Warm water or milk — ⅓ cup"
+        },
+        {
+          "item": "Fresh cilantro — to finish"
+        }
+      ],
+      "steps": [
+        "If using yeast: bloom 1 tsp yeast + 1 tsp sugar in ⅓ cup warm water for 5 min until foamy. (Quick version: skip the yeast and use 1 tsp baking powder + ¼ tsp baking soda instead.)",
+        "Mix 2 cups (250g) flour with ¾ tsp salt (and the baking powder/soda if using the quick version).",
+        "Stir in ½ cup yogurt, 2 tbsp melted butter, and the yeast water. Knead into a soft, slightly tacky dough ~5 min.",
+        "Cover and rest: ~1 hr with yeast (until puffy), or 15 min for the quick version.",
+        "Divide into 6 balls. Roll each into an oval about ¼-inch thick.",
+        "Heat a cast-iron skillet over high. Lay a naan down, cook 1–2 min until big bubbles form, then flip and cook ~1 min more until charred spots appear. (Brush the top with a little water before flipping for extra puff.)",
+        "Keep cooked naan warm under a towel while you do the rest.",
+        "Garlic butter: melt 2 tbsp butter with the minced garlic. Brush over the hot naan and finish with chopped cilantro.",
+        "Best fresh, but they reheat well wrapped in foil in a warm oven, or 15 sec in the microwave under a damp towel."
+      ]
+    }
+  ]
 }
