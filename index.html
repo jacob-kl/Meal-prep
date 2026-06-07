@@ -541,6 +541,18 @@ function ShoppingTab({week}) {
   const SK="jl_shop_"+week.id;
   const [ck,setCk]=useState(()=>{try{return JSON.parse(localStorage.getItem(SK)||"{}");}catch{return {};}});
   const save=next=>{setCk(next);localStorage.setItem(SK,JSON.stringify(next));};
+  const AK="jl_added_"+week.id;
+  const [addedItems,setAddedItems]=useState(()=>{try{return JSON.parse(localStorage.getItem(AK)||"[]");}catch{return [];}});
+  const saveAdded=items=>{setAddedItems(items);localStorage.setItem(AK,JSON.stringify(items));};
+  const [newItem,setNewItem]=useState("");
+  const [newQty,setNewQty]=useState("");
+  const submitItem=()=>{
+    const t=newItem.trim(); if(!t) return;
+    saveAdded([...addedItems,{id:Date.now(),text:t,qty:newQty.trim(),done:false}]);
+    setNewItem(""); setNewQty("");
+  };
+  const toggleAdded=id=>saveAdded(addedItems.map(x=>x.id===id?{...x,done:!x.done}:x));
+  const removeAdded=id=>saveAdded(addedItems.filter(x=>x.id!==id));
   const cats=Object.entries(week.shopping||{});
   const catClr={"Must Buy":T.accent,"Check Supply":T.blue,"Already Have":T.green};
  
@@ -587,6 +599,38 @@ function ShoppingTab({week}) {
           </div>
         </div>
       ))}
+
+      {/* Added Items */}
+      {addedItems.length>0&&(
+        <div style={{marginBottom:28}}>
+          <div style={{fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",color:T.gold,marginBottom:10,fontFamily:"'Lora',serif",paddingBottom:6,borderBottom:`1px solid ${T.divider}`}}>Added Items</div>
+          <div style={{display:"flex",flexDirection:"column",gap:4}}>
+            {addedItems.map(item=>(
+              <div key={item.id} style={{display:"flex",alignItems:"center",gap:12,padding:"10px 14px",borderRadius:10,background:item.done?T.greenSoft:T.card,border:`1px solid ${item.done?T.gold+"30":T.border}`,transition:"background 0.15s,border 0.15s"}}>
+                <div onClick={()=>toggleAdded(item.id)} style={{cursor:"pointer",flexShrink:0}}>
+                  <SegmentedCircle total={1} filled={item.done?1:0} color={T.gold} borderColor={item.done?T.gold:T.textLight} size={22}/>
+                </div>
+                <div style={{flex:1,minWidth:0,cursor:"pointer"}} onClick={()=>toggleAdded(item.id)}>
+                  <span style={{fontSize:13,color:item.done?T.textLight:T.text,textDecoration:item.done?"line-through":"none",lineHeight:1.5}}>{item.text}{item.qty&&<span style={{color:T.textLight}}> — {item.qty}</span>}</span>
+                </div>
+                <button onClick={()=>removeAdded(item.id)} style={{background:"none",border:"none",color:T.textLight,fontSize:16,lineHeight:1,cursor:"pointer",padding:"0 4px",flexShrink:0}}>×</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Add item form */}
+      <div style={{borderTop:`1px solid ${T.divider}`,paddingTop:20,marginTop:4}}>
+        <div style={{fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",color:T.textLight,marginBottom:12,fontFamily:"'Lora',serif"}}>Add an item</div>
+        <div style={{display:"flex",gap:8,alignItems:"stretch"}}>
+          <input value={newItem} onChange={e=>setNewItem(e.target.value)} onKeyDown={e=>e.key==="Enter"&&submitItem()}
+            placeholder="Item" style={{flex:3,background:T.inputBg,border:`1px solid ${T.border}`,borderRadius:10,padding:"10px 14px",color:T.text,fontSize:13,fontFamily:"'DM Mono',monospace",outline:"none",minWidth:0}}/>
+          <input value={newQty} onChange={e=>setNewQty(e.target.value)} onKeyDown={e=>e.key==="Enter"&&submitItem()}
+            placeholder="Qty" style={{flex:1,background:T.inputBg,border:`1px solid ${T.border}`,borderRadius:10,padding:"10px 14px",color:T.text,fontSize:13,fontFamily:"'DM Mono',monospace",outline:"none",minWidth:0}}/>
+          <button onClick={submitItem} style={{background:T.accent,border:"none",borderRadius:10,color:"#fff",padding:"10px 18px",fontSize:13,fontFamily:"'DM Mono',monospace",cursor:"pointer",flexShrink:0}}>Add</button>
+        </div>
+      </div>
     </div>
   );
 }
