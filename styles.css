@@ -10,3 +10,5 @@ button { font-family:'Barlow',sans-serif; cursor:pointer; }
 @keyframes wave1 { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 @keyframes wave2 { 0%{transform:translateX(0)} 100%{transform:translateX(50%)} }
 @keyframes fillRise { from{height:0} to{height:var(--fh)} }
+.main-tabs { scrollbar-width:none; -ms-overflow-style:none; }
+.main-tabs::-webkit-scrollbar { display:none; }

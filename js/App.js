@@ -61,9 +61,9 @@ function App() {
           <WaterTracker/>
  
           {/* Nav */}
-          <div style={{display:"flex",gap:3,background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:28,maxWidth:520}}>
+          <div className="main-tabs" style={{display:"flex",gap:3,background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:28,overflowX:"auto"}}>
             {MAIN_TABS.map((t,i)=>(
-              <button key={t} onClick={()=>setMainTab(i)} style={{flex:1,padding:"9px 12px",background:mainTab===i?T.card:"none",border:`1px solid ${mainTab===i?T.border:"transparent"}`,borderRadius:10,color:mainTab===i?T.text:T.textLight,fontSize:12,fontWeight:mainTab===i?500:400,transition:"all 0.15s"}}>{t}</button>
+              <button key={t} onClick={()=>setMainTab(i)} style={{flexShrink:0,padding:"9px 14px",background:mainTab===i?T.card:"none",border:`1px solid ${mainTab===i?T.border:"transparent"}`,borderRadius:10,color:mainTab===i?T.text:T.textLight,fontSize:12,fontWeight:mainTab===i?500:400,transition:"all 0.15s",whiteSpace:"nowrap"}}>{t}</button>
             ))}
           </div>
  
