@@ -474,7 +474,7 @@
   ],
   "jakeLunch": {
     "name": "Chicken Tikka & Chickpea Bowl",
-    "note": "Indian batch bowl, same 5-container Sunday format, no fish (office-friendly). Yogurt-marinated chicken tikka, chickpeas, cumin-roasted cauliflower, basmati, with a raita drizzle. Add the raita fresh when eating so it stays cool. Heads-up: basmati pushes carbs up — sub cauliflower rice on the bowl (substitution dropdown) to pull carbs toward your 102g target.",
+    "note": "Indian batch bowl, same 5-container Sunday format, no fish (office-friendly). Yogurt-marinated chicken tikka, chickpeas, cumin-roasted cauliflower, basmati, with a raita drizzle. Add the raita fresh when eating so it stays cool. Heads-up: basmati pushes carbs up this week. You can swap it for cauliflower rice using the dropdown — if you do, drop the roasted cauliflower florets from your batch so you're not doing double-cauliflower.",
     "macros": {
       "cal": 865,
       "protein": 74,
@@ -493,7 +493,14 @@
       },
       {
         "item": "Basmati rice (dry) — 45g per container",
-        "nutritionKey": "Basmati rice (dry)"
+        "nutritionKey": "Basmati rice (dry)",
+        "subKey": "jlunch_rice",
+        "substitutions": [
+          {
+            "id": "caulirice",
+            "item": "Cauliflower rice (cooked) — same volume, ~1 cup per container"
+          }
+        ]
       },
       {
         "item": "Cauliflower — 120g per container, cumin-roasted",

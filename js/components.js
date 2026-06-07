@@ -353,9 +353,7 @@ function LunchSection({lunch,label,labelColor,personColor}) {
           {days<5&&<div style={{background:T.accentSoft,borderRadius:8,padding:"8px 12px",marginBottom:12,fontSize:11,color:T.accent,lineHeight:1.5}}>Scaled to {days} day{days!==1?"s":""}.</div>}
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
             <div><SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel>
-              <ul style={{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:6}}>
-                {sIngs.map((ing,i)=><li key={i} style={{fontSize:13,color:T.textMid,display:"flex",alignItems:"flex-start"}}><span style={{color:T.gold,marginRight:8,fontSize:10,marginTop:3}}>◆</span>{ing.item}</li>)}
-              </ul>
+              <IngList ingredients={sIngs}/>
             </div>
             <div><SectionLabel>Method</SectionLabel><ol style={{paddingLeft:18,margin:0,display:"flex",flexDirection:"column",gap:8}}>{sSteps.map((s,i)=><li key={i} style={{fontSize:13,lineHeight:1.65,color:T.textMid}}>{s}</li>)}</ol></div>
           </div>
