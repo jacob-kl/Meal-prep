@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "Week of June 15–21, 2026. Mediterranean, cold-leaning per Laine's request. Monday is the new Shrimp Caesar Salad — Caesar dressing (Greek-yogurt base) is this week's standalone sauce card, replacing the usual tzatziki/raita slot. Tuesday is standing Pita Tuesday: the pork tenderloin on hand + extra shrimp from Monday become Mediterranean pork & shrimp pita pockets. Wed (salmon) and Fri (cod) keep the 'more fish' push; Thursday is a fully cold no-cook Greek tuna & white bean salad for Laine's cold-Mediterranean craving. Saturday is a cold vegetarian chickpea salad. Sunday is standing breakfast-for-dinner — a Mediterranean egg + feta + spinach scramble with pita, not waffles (Birch Benders stay Sunday morning only). No raw onion, no mushrooms, no lentils, no okra/eggplant anywhere. Chicken stays out of dinners (Jake's lunch batch only); pork is the one moderate red-meat night.",
+  "_note": "Week of June 22–28, 2026. Mediterranean, cold-leaning per Laine's request. Monday is the new Shrimp Caesar Salad — Caesar dressing (Greek-yogurt base) is this week's standalone sauce card, replacing the usual tzatziki/raita slot. Tuesday is standing Pita Tuesday: the pork tenderloin on hand + extra shrimp from Monday become Mediterranean pork & shrimp pita pockets. Wed (salmon) and Fri (cod) keep the 'more fish' push; Thursday is a fully cold no-cook Greek tuna & white bean salad for Laine's cold-Mediterranean craving. Saturday is a cold vegetarian chickpea salad. Sunday is standing breakfast-for-dinner — a Mediterranean egg + feta + spinach scramble with pita, not waffles (Birch Benders stay Sunday morning only). No raw onion, no mushrooms, no lentils, no okra/eggplant anywhere. Chicken stays out of dinners (Jake's lunch batch only); pork is the one moderate red-meat night.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -70,7 +70,7 @@
   },
   "dinners": [
     {
-      "day": "Monday (June 15)",
+      "day": "Monday (June 22)",
       "name": "Shrimp Caesar Salad",
       "note": "The new standing favorite — seared shrimp over crisp romaine with the Greek-yogurt Caesar dressing and quick stovetop croutons. Not a fish night, so it doesn't touch the Monday no-fish rule. Jake gets extra shrimp, croutons, and dressing; Laine's stays lighter on the croutons.",
       "jake": {
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "day": "Tuesday (June 16) — Pita Tuesday",
+      "day": "Tuesday (June 23) — Pita Tuesday",
       "name": "Pork Tenderloin & Shrimp Pita Pockets",
       "note": "Standing leftovers-plus-a-treat night, Mediterranean style. The pork tenderloin you've got on hand is the treat protein; the extra shrimp from Monday's Caesar shopping is the leftover-style component. Lemon-garlic yogurt sauce keeps it cool, feta and cucumber round it out.",
       "jake": {
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "day": "Wednesday (June 17)",
+      "day": "Wednesday (June 24)",
       "name": "Baked Salmon + Farro + Greek Salad",
       "note": "More-fish night. Simple roasted salmon alongside a lemony farro and a small Greek salad — olives, feta, cucumber, cherry tomato. Onion-free, mild, and quick.",
       "jake": {
@@ -265,7 +265,7 @@
       ]
     },
     {
-      "day": "Thursday (June 18)",
+      "day": "Thursday (June 25)",
       "name": "Cold Greek Tuna & White Bean Salad",
       "note": "Laine's cold-Mediterranean request, fully realized — no stove needed. Tuna, cannellini beans, cucumber, tomato, olives, feta, and a big handful of spinach, dressed simply in lemon and olive oil. Make it ahead and eat it cold straight from the fridge.",
       "jake": {
@@ -332,7 +332,7 @@
       ]
     },
     {
-      "day": "Friday (June 19)",
+      "day": "Friday (June 26)",
       "name": "Mediterranean Baked Cod + Quinoa + Cherry Tomatoes",
       "note": "Second fish night of the week. Cod roasted with garlic, lemon, and burst cherry tomatoes over quinoa — light, fast, and mild.",
       "jake": {
@@ -391,7 +391,7 @@
       ]
     },
     {
-      "day": "Saturday (June 20)",
+      "day": "Saturday (June 27)",
       "name": "Greek Chickpea Salad with Feta",
       "note": "Vegetarian, fully cold-friendly night — chickpeas (not lentils), cucumber, tomato, olives, feta, and spinach, with warm pita on the side for Jake. Keeps the week's onion-free, mild streak going.",
       "jake": {
@@ -458,7 +458,7 @@
       ]
     },
     {
-      "day": "Sunday (June 21)",
+      "day": "Sunday (June 28)",
       "name": "Mediterranean Egg, Feta & Spinach Scramble with Pita",
       "note": "Standing breakfast-for-dinner — doesn't have to be waffles, and isn't this week. Soft scrambled eggs with spinach, feta, and burst cherry tomatoes, warm pita on the side. Mild, fast, and a nice bookend to the week.",
       "jake": {
