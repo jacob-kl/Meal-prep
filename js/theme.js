@@ -8,8 +8,9 @@ const WEEK_REGISTRY = [
   { id:"2026-W22", label:"Week of May 25, 2026" },
   { id:"2026-W23", label:"Week of June 1, 2026" },
   { id:"2026-W24", label:"Week of June 8, 2026" },
+  { id:"2026-W25", label:"Week of June 15, 2026" },
 ];
-const CURRENT_WEEK_ID = "2026-W24";
+const CURRENT_WEEK_ID = "2026-W25";
 const WATER_GLASSES   = 8;
 const WATER_OZ_EACH   = 16;
 const WATER_TOTAL_OZ  = 128;
