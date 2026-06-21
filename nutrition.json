@@ -2284,5 +2284,30 @@
       "vitamin_d": 0,
       "zinc": 0
     }
+  },
+  "Couscous (dry)": {
+    "serving_qty": 100,
+    "serving_unit": "g_dry",
+    "serving": "per 100g dry (USDA FDC 169736)",
+    "cal": 376,
+    "protein": 13,
+    "carbs": 77,
+    "fat": 1,
+    "fiber": 5,
+    "micros": {
+      "calcium": 24,
+      "folate": 23,
+      "iron": 1.1,
+      "magnesium": 44,
+      "phosphorus": 153,
+      "potassium": 166,
+      "selenium": 39.4,
+      "sodium": 10,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.8
+    }
   }
 }
