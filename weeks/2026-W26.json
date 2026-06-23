@@ -14,24 +14,20 @@
     "fat": 37
   },
   "tzatziki": {
-    "name": "Light Caesar Dressing",
-    "note": "Jake's tzatziki slot, gone Mediterranean-classic. A Greek-yogurt Caesar — anchovy paste and parmesan give it the real punch without a cup of olive oil and raw egg. Makes ~1.25 cups (about 10 servings), keeps 4–5 days. This is Monday's salad dressing, but it's also great as a dip for extra veg through the week.",
+    "name": "Caesar Dressing",
+    "note": "Classic Caesar — egg yolk emulsified with oil, anchovy paste, garlic, lemon, Dijon, and Worcestershire. Makes ~10 tbsp (5 servings). Keeps 3–4 days refrigerated.",
     "macros": {
-      "cal": 50,
-      "protein": 3,
+      "cal": 164,
+      "protein": 1,
       "carbs": 1,
-      "fat": 3,
+      "fat": 18,
       "fiber": 0
     },
     "macrosNote": "Per 2 tbsp serving.",
     "ingredients": [
       {
-        "item": "Greek yogurt (plain nonfat) — 1 cup (240g)",
-        "nutritionKey": "Greek yogurt (plain nonfat)"
-      },
-      {
-        "item": "Parmesan cheese, grated — 3 tbsp",
-        "nutritionKey": "Parmesan cheese (grated)"
+        "item": "Egg yolk — 1 large",
+        "nutritionKey": "Eggs (large)"
       },
       {
         "item": "Anchovy paste — 2 tsp",
@@ -54,7 +50,7 @@
         "nutritionKey": "Garlic"
       },
       {
-        "item": "Olive oil — 2 tbsp",
+        "item": "Olive oil — 6 tbsp",
         "nutritionKey": "Olive oil"
       },
       {
@@ -62,17 +58,17 @@
       }
     ],
     "steps": [
-      "Whisk the yogurt, parmesan, anchovy paste, Dijon, and Worcestershire together until smooth.",
-      "Stir in lemon juice, minced garlic, and olive oil. Whisk until the dressing is glossy and emulsified.",
-      "Season with black pepper. Thin with a splash of water if you want it pourable rather than spoonable.",
-      "Chill at least 20 min before serving so the garlic and anchovy mellow. Keeps 4–5 days covered."
+      "Whisk together the egg yolk, anchovy paste, Dijon, Worcestershire, lemon juice, and garlic until combined.",
+      "Slowly drizzle in the olive oil while whisking constantly to emulsify. Start with a few drops at a time, then a thin stream once it begins to thicken.",
+      "Season with black pepper. Taste and adjust lemon or anchovy. Should coat the back of a spoon.",
+      "Refrigerate until ready to use. Keeps 3–4 days."
     ]
   },
   "dinners": [
     {
       "day": "Monday (June 22)",
       "name": "Shrimp Caesar Salad",
-      "note": "The new standing favorite — seared shrimp over crisp romaine with the Greek-yogurt Caesar dressing and quick stovetop croutons. Not a fish night, so it doesn't touch the Monday no-fish rule. Jake gets extra shrimp, croutons, and dressing; Laine's stays lighter on the croutons.",
+      "note": "Seared shrimp over crisp romaine with Caesar dressing and quick stovetop croutons. Not a fish night, so it doesn't touch the Monday no-fish rule. Jake gets extra shrimp, croutons, and dressing; Laine's stays lighter on the croutons.",
       "jake": {
         "cal": 670,
         "protein": 70,
@@ -333,21 +329,21 @@
     },
     {
       "day": "Friday (June 26)",
-      "name": "Mediterranean Baked Cod + Couscous + Cherry Tomatoes",
-      "note": "Second fish night of the week. Cod roasted with garlic, lemon, and burst cherry tomatoes over couscous — light, fast, and mild. Using up the couscous on hand instead of quinoa this week.",
+      "name": "Mediterranean Baked Cod + Quinoa + Cherry Tomatoes",
+      "note": "Second fish night of the week. Cod roasted with garlic, lemon, and burst cherry tomatoes over quinoa — light, fast, and mild.",
       "jake": {
         "cal": 660,
-        "protein": 53,
-        "carbs": 54,
-        "fat": 26,
-        "fiber": 5.7
+        "protein": 54,
+        "carbs": 48,
+        "fat": 29,
+        "fiber": 6.8
       },
       "laine": {
-        "cal": 504,
+        "cal": 505,
         "protein": 37,
-        "carbs": 43,
-        "fat": 21,
-        "fiber": 4.8
+        "carbs": 38,
+        "fat": 23,
+        "fiber": 5.6
       },
       "ingredients": [
         {
@@ -355,8 +351,8 @@
           "nutritionKey": "Frozen cod"
         },
         {
-          "item": "Couscous (dry) — Jake 55g, Laine 42g",
-          "nutritionKey": "Couscous (dry)"
+          "item": "Quinoa (dry) — Jake 55g, Laine 42g",
+          "nutritionKey": "Quinoa (dry)"
         },
         {
           "item": "Cherry tomatoes — Jake 110g, Laine 100g",
@@ -386,8 +382,8 @@
       "steps": [
         "Preheat oven to 400°F. Place cod in a baking dish, scatter cherry tomatoes and olives around it, drizzle with olive oil, lemon juice, garlic, oregano, and salt.",
         "Bake 16–18 min until the cod flakes and the tomatoes blister.",
-        "Meanwhile make the couscous: bring water to a boil (1:1 ratio), pour over the dry couscous in a covered bowl, let sit off-heat 5 min, then fluff with a fork.",
-        "Plate couscous, top with cod and the pan juices/tomatoes. Jake gets the bigger piece."
+        "Meanwhile cook quinoa: rinse, simmer in 2× water 15 min, rest 5 min, fluff.",
+        "Plate quinoa, top with cod and the pan juices/tomatoes. Jake gets the bigger piece."
       ]
     },
     {
@@ -970,6 +966,7 @@
     ],
     "Check Supply": [
       "Parmesan cheese, grated — small wedge or shaker (~⅓ cup needed)",
+      "Quinoa — ~100g needed (Fri)",
       "Garofalo pasta — ~225g dry (Laine jars)",
       "Whole grain bread — a few slices (Mon croutons)",
       "Eggs — at least 3 (Sun dinner)",
@@ -987,7 +984,6 @@
       "Roasted chickpeas — 1 bag/tub (snacks)"
     ],
     "Already Have": [
-      "Couscous — the bunch you're using up (Fri dinner, ~100g needed)",
       "Pork tenderloin — the one already in the freezer/fridge (Tue pita)",
       "Olive oil — check bottle is at least half full",
       "Salt, pepper, garlic powder",
