@@ -165,6 +165,31 @@
     "fat": 14,
     "fiber": 3.5
   },
+  "Anchovy paste": {
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "per 1 tsp (6g)",
+    "cal": 13,
+    "protein": 2,
+    "carbs": 0,
+    "fat": 0.6,
+    "fiber": 0,
+    "micros": {
+      "calcium": 7,
+      "folate": 0,
+      "iron": 0.1,
+      "magnesium": 2,
+      "phosphorus": 20,
+      "potassium": 22,
+      "selenium": 2.6,
+      "sodium": 220,
+      "vitamin_a": 2,
+      "vitamin_b12": 0.2,
+      "vitamin_c": 0,
+      "vitamin_d": 0.1,
+      "zinc": 0.1
+    }
+  },
   "Apple": {
     "serving_qty": 1,
     "serving_unit": "medium",
@@ -605,6 +630,56 @@
     "serving_qty": 100,
     "serving_unit": "g_dry"
   },
+  "Cilantro": {
+    "cal": 1,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0.1,
+    "serving": "per 1/4 cup chopped (~4g)",
+    "serving_qty": 0.25,
+    "serving_unit": "cup",
+    "micros": {
+      "calcium": 3,
+      "folate": 2,
+      "iron": 0.1,
+      "magnesium": 1,
+      "phosphorus": 2,
+      "potassium": 21,
+      "selenium": 0.04,
+      "sodium": 2,
+      "vitamin_a": 13,
+      "vitamin_b12": 0,
+      "vitamin_c": 1,
+      "vitamin_d": 0,
+      "zinc": 0.02
+    }
+  },
+  "Corn kernels (frozen)": {
+    "cal": 82,
+    "protein": 3,
+    "carbs": 18,
+    "fat": 1,
+    "fiber": 2.0,
+    "serving": "per 1/2 cup (85g), cooked",
+    "serving_qty": 0.5,
+    "serving_unit": "cup",
+    "micros": {
+      "calcium": 3,
+      "folate": 17,
+      "iron": 0.4,
+      "magnesium": 22,
+      "phosphorus": 76,
+      "potassium": 185,
+      "selenium": 0.3,
+      "sodium": 1,
+      "vitamin_a": 8,
+      "vitamin_b12": 0,
+      "vitamin_c": 4,
+      "vitamin_d": 0,
+      "zinc": 0.4
+    }
+  },
   "Corn tortilla (small)": {
     "serving_qty": 1,
     "serving_unit": "tortilla",
@@ -628,6 +703,31 @@
       "folate": 2,
       "phosphorus": 66,
       "selenium": 3.1
+    }
+  },
+  "Cotija cheese": {
+    "cal": 56,
+    "protein": 3,
+    "carbs": 0.5,
+    "fat": 4.5,
+    "fiber": 0,
+    "serving": "per 2 tbsp crumbled (~15g)",
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "micros": {
+      "calcium": 105,
+      "folate": 3,
+      "iron": 0.1,
+      "magnesium": 3,
+      "phosphorus": 60,
+      "potassium": 14,
+      "selenium": 0.8,
+      "sodium": 195,
+      "vitamin_a": 30,
+      "vitamin_b12": 0.1,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.5
     }
   },
   "Cottage cheese 1%": {
@@ -774,6 +874,31 @@
     "carbs": 9,
     "fat": 0,
     "fiber": 2
+  },
+  "Dijon mustard": {
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "per 1 tsp (5g)",
+    "cal": 5,
+    "protein": 0.3,
+    "carbs": 0.4,
+    "fat": 0.3,
+    "fiber": 0.2,
+    "micros": {
+      "calcium": 3,
+      "folate": 1,
+      "iron": 0.1,
+      "magnesium": 2,
+      "phosphorus": 6,
+      "potassium": 11,
+      "selenium": 0.5,
+      "sodium": 120,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.03
+    }
   },
   "Dry green lentils": {
     "serving_qty": 100,
@@ -1466,6 +1591,31 @@
     "serving_qty": 0.25,
     "serving_unit": "cup"
   },
+  "Lime juice": {
+    "cal": 7,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 0,
+    "fiber": 0,
+    "serving": "per 2 tbsp (30ml)",
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "micros": {
+      "calcium": 3,
+      "folate": 2,
+      "iron": 0.01,
+      "magnesium": 2,
+      "phosphorus": 2,
+      "potassium": 35,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 9,
+      "vitamin_d": 0,
+      "zinc": 0.02
+    }
+  },
   "Liquid egg whites": {
     "serving_qty": 0.5,
     "serving_unit": "cup",
@@ -1650,6 +1800,31 @@
     "serving_unit": "g",
     "note": "Homemade from ~1 gal whole milk + lemon/vinegar yields ~450-500g; macros match store paneer."
   },
+  "Parmesan cheese (grated)": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp grated (5g)",
+    "cal": 22,
+    "protein": 2,
+    "carbs": 0.2,
+    "fat": 1.4,
+    "fiber": 0,
+    "micros": {
+      "calcium": 59,
+      "folate": 0.4,
+      "iron": 0.05,
+      "magnesium": 1,
+      "phosphorus": 35,
+      "potassium": 6,
+      "selenium": 1,
+      "sodium": 76,
+      "vitamin_a": 10,
+      "vitamin_b12": 0.05,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0.14
+    }
+  },
   "Pinto beans": {
     "serving_qty": 1,
     "serving_unit": "can",
@@ -1803,6 +1978,31 @@
       "folate": 10,
       "phosphorus": 45,
       "selenium": 0.5
+    }
+  },
+  "Romaine lettuce": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (USDA FDC 169247)",
+    "cal": 17,
+    "protein": 1.2,
+    "carbs": 3.3,
+    "fat": 0.3,
+    "fiber": 2.1,
+    "micros": {
+      "calcium": 33,
+      "folate": 136,
+      "iron": 1.0,
+      "magnesium": 14,
+      "phosphorus": 30,
+      "potassium": 247,
+      "selenium": 0.4,
+      "sodium": 8,
+      "vitamin_a": 436,
+      "vitamin_b12": 0,
+      "vitamin_c": 4,
+      "vitamin_d": 0,
+      "zinc": 0.2
     }
   },
   "Sardines (canned in olive oil)": {
@@ -1970,6 +2170,16 @@
       "selenium": 0.6
     }
   },
+  "TJ's Mandarin Orange Chicken": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9,
+    "fiber": 0
+  },
   "Tikka masala simmer sauce": {
     "cal": 120,
     "protein": 2,
@@ -1994,16 +2204,6 @@
     "serving": "per 1/2 cup (125g)",
     "serving_qty": 0.5,
     "serving_unit": "cup"
-  },
-  "TJ's Mandarin Orange Chicken": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g (package weight)",
-    "cal": 220,
-    "protein": 13,
-    "carbs": 22,
-    "fat": 9,
-    "fiber": 0
   },
   "Walnuts": {
     "serving_qty": 28,
@@ -2125,6 +2325,31 @@
     "fat": 2,
     "fiber": 4.5
   },
+  "Worcestershire sauce": {
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "per 1 tsp (5g)",
+    "cal": 4,
+    "protein": 0,
+    "carbs": 1,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {
+      "calcium": 2,
+      "folate": 0,
+      "iron": 0.1,
+      "magnesium": 1,
+      "phosphorus": 1,
+      "potassium": 19,
+      "selenium": 0,
+      "sodium": 65,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
   "Yellow onion": {
     "cal": 32,
     "protein": 1,
@@ -2159,155 +2384,5 @@
     "carbs": 3,
     "fat": 0,
     "fiber": 1
-  },
-  "Romaine lettuce": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g (USDA FDC 169247)",
-    "cal": 17,
-    "protein": 1.2,
-    "carbs": 3.3,
-    "fat": 0.3,
-    "fiber": 2.1,
-    "micros": {
-      "calcium": 33,
-      "folate": 136,
-      "iron": 1.0,
-      "magnesium": 14,
-      "phosphorus": 30,
-      "potassium": 247,
-      "selenium": 0.4,
-      "sodium": 8,
-      "vitamin_a": 436,
-      "vitamin_b12": 0,
-      "vitamin_c": 4,
-      "vitamin_d": 0,
-      "zinc": 0.2
-    }
-  },
-  "Parmesan cheese (grated)": {
-    "serving_qty": 1,
-    "serving_unit": "tbsp",
-    "serving": "per 1 tbsp grated (5g)",
-    "cal": 22,
-    "protein": 2,
-    "carbs": 0.2,
-    "fat": 1.4,
-    "fiber": 0,
-    "micros": {
-      "calcium": 59,
-      "folate": 0.4,
-      "iron": 0.05,
-      "magnesium": 1,
-      "phosphorus": 35,
-      "potassium": 6,
-      "selenium": 1,
-      "sodium": 76,
-      "vitamin_a": 10,
-      "vitamin_b12": 0.05,
-      "vitamin_c": 0,
-      "vitamin_d": 0,
-      "zinc": 0.14
-    }
-  },
-  "Anchovy paste": {
-    "serving_qty": 1,
-    "serving_unit": "tsp",
-    "serving": "per 1 tsp (6g)",
-    "cal": 13,
-    "protein": 2,
-    "carbs": 0,
-    "fat": 0.6,
-    "fiber": 0,
-    "micros": {
-      "calcium": 7,
-      "folate": 0,
-      "iron": 0.1,
-      "magnesium": 2,
-      "phosphorus": 20,
-      "potassium": 22,
-      "selenium": 2.6,
-      "sodium": 220,
-      "vitamin_a": 2,
-      "vitamin_b12": 0.2,
-      "vitamin_c": 0,
-      "vitamin_d": 0.1,
-      "zinc": 0.1
-    }
-  },
-  "Dijon mustard": {
-    "serving_qty": 1,
-    "serving_unit": "tsp",
-    "serving": "per 1 tsp (5g)",
-    "cal": 5,
-    "protein": 0.3,
-    "carbs": 0.4,
-    "fat": 0.3,
-    "fiber": 0.2,
-    "micros": {
-      "calcium": 3,
-      "folate": 1,
-      "iron": 0.1,
-      "magnesium": 2,
-      "phosphorus": 6,
-      "potassium": 11,
-      "selenium": 0.5,
-      "sodium": 120,
-      "vitamin_a": 0,
-      "vitamin_b12": 0,
-      "vitamin_c": 0,
-      "vitamin_d": 0,
-      "zinc": 0.03
-    }
-  },
-  "Worcestershire sauce": {
-    "serving_qty": 1,
-    "serving_unit": "tsp",
-    "serving": "per 1 tsp (5g)",
-    "cal": 4,
-    "protein": 0,
-    "carbs": 1,
-    "fat": 0,
-    "fiber": 0,
-    "micros": {
-      "calcium": 2,
-      "folate": 0,
-      "iron": 0.1,
-      "magnesium": 1,
-      "phosphorus": 1,
-      "potassium": 19,
-      "selenium": 0,
-      "sodium": 65,
-      "vitamin_a": 0,
-      "vitamin_b12": 0,
-      "vitamin_c": 0,
-      "vitamin_d": 0,
-      "zinc": 0
-    }
-  },
-  "Couscous (dry)": {
-    "serving_qty": 100,
-    "serving_unit": "g_dry",
-    "serving": "per 100g dry (USDA FDC 169736)",
-    "cal": 376,
-    "protein": 13,
-    "carbs": 77,
-    "fat": 1,
-    "fiber": 5,
-    "micros": {
-      "calcium": 24,
-      "folate": 23,
-      "iron": 1.1,
-      "magnesium": 44,
-      "phosphorus": 153,
-      "potassium": 166,
-      "selenium": 39.4,
-      "sodium": 10,
-      "vitamin_a": 0,
-      "vitamin_b12": 0,
-      "vitamin_c": 0,
-      "vitamin_d": 0,
-      "zinc": 0.8
-    }
   }
 }
