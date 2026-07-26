@@ -12,7 +12,7 @@ const WEEK_REGISTRY = [
   { id:"2026-W29", label:"Week of July 13, 2026" },
   { id:"2026-W31", label:"Week of July 27, 2026" },
 ];
-const CURRENT_WEEK_ID = "2026-W29";
+const CURRENT_WEEK_ID = "2026-W31";
 const WATER_GLASSES   = 8;
 const WATER_OZ_EACH   = 16;
 const WATER_TOTAL_OZ  = 128;
