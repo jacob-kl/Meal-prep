@@ -1,5 +1,5 @@
 {
-  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy \u2014 calcium and potassium priority. Laine: breast cancer recovery \u2014 calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
+  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
   "_dri": {
     "jake": {
       "sodium": {
@@ -228,7 +228,7 @@
   "Avocado": {
     "serving_qty": 0.5,
     "serving_unit": "avocado",
-    "serving": "per \u00bd avocado (~100g)",
+    "serving": "per ½ avocado (~100g)",
     "cal": 160,
     "protein": 2,
     "carbs": 9,
@@ -403,7 +403,7 @@
   "Birch Benders pancake mix": {
     "serving_qty": 0.33,
     "serving_unit": "cup",
-    "serving": "per \u2153 cup dry (40g)",
+    "serving": "per ⅓ cup dry (40g)",
     "cal": 150,
     "protein": 5,
     "carbs": 30,
@@ -545,6 +545,31 @@
     "serving_qty": 100,
     "serving_unit": "g"
   },
+  "Cheddar cheese (shredded)": {
+    "serving_qty": 0.25,
+    "serving_unit": "cup",
+    "serving": "per ¼ cup shredded (28g/1oz, USDA FDC 173414)",
+    "cal": 113,
+    "protein": 7,
+    "carbs": 0.4,
+    "fat": 9.3,
+    "fiber": 0,
+    "micros": {
+      "sodium": 174,
+      "potassium": 27,
+      "calcium": 202,
+      "vitamin_d": 0.2,
+      "magnesium": 8,
+      "zinc": 0.9,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.2,
+      "iron": 0.2,
+      "vitamin_a": 74,
+      "folate": 5,
+      "phosphorus": 143,
+      "selenium": 3.9
+    }
+  },
   "Cherry tomatoes": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -630,56 +655,6 @@
     "serving_qty": 100,
     "serving_unit": "g_dry"
   },
-  "Cilantro": {
-    "cal": 1,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0.1,
-    "serving": "per 1/4 cup chopped (~4g)",
-    "serving_qty": 0.25,
-    "serving_unit": "cup",
-    "micros": {
-      "calcium": 3,
-      "folate": 2,
-      "iron": 0.1,
-      "magnesium": 1,
-      "phosphorus": 2,
-      "potassium": 21,
-      "selenium": 0.04,
-      "sodium": 2,
-      "vitamin_a": 13,
-      "vitamin_b12": 0,
-      "vitamin_c": 1,
-      "vitamin_d": 0,
-      "zinc": 0.02
-    }
-  },
-  "Corn kernels (frozen)": {
-    "cal": 82,
-    "protein": 3,
-    "carbs": 18,
-    "fat": 1,
-    "fiber": 2.0,
-    "serving": "per 1/2 cup (85g), cooked",
-    "serving_qty": 0.5,
-    "serving_unit": "cup",
-    "micros": {
-      "calcium": 3,
-      "folate": 17,
-      "iron": 0.4,
-      "magnesium": 22,
-      "phosphorus": 76,
-      "potassium": 185,
-      "selenium": 0.3,
-      "sodium": 1,
-      "vitamin_a": 8,
-      "vitamin_b12": 0,
-      "vitamin_c": 4,
-      "vitamin_d": 0,
-      "zinc": 0.4
-    }
-  },
   "Corn tortilla (small)": {
     "serving_qty": 1,
     "serving_unit": "tortilla",
@@ -703,31 +678,6 @@
       "folate": 2,
       "phosphorus": 66,
       "selenium": 3.1
-    }
-  },
-  "Cotija cheese": {
-    "cal": 56,
-    "protein": 3,
-    "carbs": 0.5,
-    "fat": 4.5,
-    "fiber": 0,
-    "serving": "per 2 tbsp crumbled (~15g)",
-    "serving_qty": 2,
-    "serving_unit": "tbsp",
-    "micros": {
-      "calcium": 105,
-      "folate": 3,
-      "iron": 0.1,
-      "magnesium": 3,
-      "phosphorus": 60,
-      "potassium": 14,
-      "selenium": 0.8,
-      "sodium": 195,
-      "vitamin_a": 30,
-      "vitamin_b12": 0.1,
-      "vitamin_c": 0,
-      "vitamin_d": 0,
-      "zinc": 0.5
     }
   },
   "Cottage cheese 1%": {
@@ -758,7 +708,7 @@
   "Cottage cheese 2%": {
     "serving_qty": 0.5,
     "serving_unit": "cup",
-    "serving": "per \u00bd cup (113g)",
+    "serving": "per ½ cup (113g)",
     "cal": 90,
     "protein": 12,
     "carbs": 4,
@@ -1315,6 +1265,31 @@
       "selenium": 9.7
     }
   },
+  "Ground beef 85/15": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw, 85% lean / 15% fat (USDA FDC)",
+    "cal": 215,
+    "protein": 18,
+    "carbs": 0,
+    "fat": 15,
+    "fiber": 0,
+    "micros": {
+      "sodium": 66,
+      "potassium": 295,
+      "calcium": 15,
+      "vitamin_d": 0.1,
+      "magnesium": 18,
+      "zinc": 4.5,
+      "vitamin_c": 0,
+      "vitamin_b12": 2.3,
+      "iron": 2,
+      "vitamin_a": 4,
+      "folate": 6,
+      "phosphorus": 171,
+      "selenium": 15.9
+    }
+  },
   "Ground flaxseed": {
     "serving_qty": 1,
     "serving_unit": "tbsp",
@@ -1324,6 +1299,16 @@
     "carbs": 3,
     "fat": 4,
     "fiber": 2.8
+  },
+  "Ground sausage (pork)": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw, bulk breakfast/Italian style (USDA)",
+    "cal": 231,
+    "protein": 14,
+    "carbs": 0,
+    "fat": 18,
+    "fiber": 0
   },
   "Ground turkey 85/15": {
     "serving_qty": 100,
@@ -1591,35 +1576,10 @@
     "serving_qty": 0.25,
     "serving_unit": "cup"
   },
-  "Lime juice": {
-    "cal": 7,
-    "protein": 0,
-    "carbs": 2,
-    "fat": 0,
-    "fiber": 0,
-    "serving": "per 2 tbsp (30ml)",
-    "serving_qty": 2,
-    "serving_unit": "tbsp",
-    "micros": {
-      "calcium": 3,
-      "folate": 2,
-      "iron": 0.01,
-      "magnesium": 2,
-      "phosphorus": 2,
-      "potassium": 35,
-      "selenium": 0,
-      "sodium": 0,
-      "vitamin_a": 0,
-      "vitamin_b12": 0,
-      "vitamin_c": 9,
-      "vitamin_d": 0,
-      "zinc": 0.02
-    }
-  },
   "Liquid egg whites": {
     "serving_qty": 0.5,
     "serving_unit": "cup",
-    "serving": "per \u00bd cup (120ml)",
+    "serving": "per ½ cup (120ml)",
     "cal": 53,
     "protein": 11,
     "carbs": 1,
@@ -2005,6 +1965,31 @@
       "zinc": 0.2
     }
   },
+  "Russet potato": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw, flesh and skin (USDA FDC)",
+    "cal": 82,
+    "protein": 2,
+    "carbs": 18,
+    "fat": 0,
+    "fiber": 2.1,
+    "micros": {
+      "sodium": 6,
+      "potassium": 425,
+      "calcium": 10,
+      "vitamin_d": 0,
+      "magnesium": 23,
+      "zinc": 0.3,
+      "vitamin_c": 20,
+      "vitamin_b12": 0,
+      "iron": 0.8,
+      "vitamin_a": 0,
+      "folate": 16,
+      "phosphorus": 57,
+      "selenium": 0.4
+    }
+  },
   "Sardines (canned in olive oil)": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -2170,16 +2155,6 @@
       "selenium": 0.6
     }
   },
-  "TJ's Mandarin Orange Chicken": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g (package weight)",
-    "cal": 220,
-    "protein": 13,
-    "carbs": 22,
-    "fat": 9,
-    "fiber": 0
-  },
   "Tikka masala simmer sauce": {
     "cal": 120,
     "protein": 2,
@@ -2204,6 +2179,16 @@
     "serving": "per 1/2 cup (125g)",
     "serving_qty": 0.5,
     "serving_unit": "cup"
+  },
+  "TJ's Mandarin Orange Chicken": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9,
+    "fiber": 0
   },
   "Walnuts": {
     "serving_qty": 28,
