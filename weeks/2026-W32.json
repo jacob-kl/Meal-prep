@@ -1,0 +1,1071 @@
+{
+  "_v": 4,
+  "_note": "Week of August 3–9, 2026. Back to the normal rotation — no special theme requested, so this is a Greek/Mediterranean week that brings back a couple of standing favorites: real tzatziki (hasn't been the actual sauce in a while) and pork tenderloin, both of which Jake's always liked. Wed and Fri are back to being fish nights now that there's no cost constraint. Monday's pork tenderloin makes extra for Tuesday's standing Pita Tuesday (pork + a shrimp treat, tzatziki, pita). Saturday is vegetarian (Mediterranean stuffed peppers). Sunday is standing breakfast-for-dinner — a Greek spinach, feta, and egg white scramble with pita. Laine's Tue/Thu/Sat breakfast scramble is back to feta (it was swapped to cheddar last week only to help use up that surplus). No raw onion, mushrooms, lentils, okra, or eggplant anywhere; no reheated chicken in Laine's lunch, which stays the same standing tuna jar as always.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
+  "tzatziki": {
+    "name": "Tzatziki",
+    "note": "The real thing this week, not a stand-in. Classic Greek yogurt sauce with cucumber, garlic, lemon, and fresh dill — goes on Tuesday's pita as the main event, but a spoonful also works over Jake's lunch bowl, the salmon, or the stuffed peppers if there's extra. Makes about 2 cups (9 servings of ¼ cup), keeps 4–5 days. Grate the cucumber and squeeze out the water first or the sauce goes watery fast.",
+    "macros": {
+      "cal": 64,
+      "protein": 7,
+      "carbs": 4,
+      "fat": 2,
+      "fiber": 0.2
+    },
+    "macrosNote": "Per ¼ cup serving.",
+    "ingredients": [
+      {
+        "item": "Greek yogurt (plain nonfat) — 3½ containers (~600g)",
+        "nutritionKey": "Greek yogurt (plain nonfat)"
+      },
+      {
+        "item": "English cucumber — 1½ (150g), grated and squeezed dry",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Garlic — 3 cloves, minced or grated",
+        "nutritionKey": "Garlic"
+      },
+      {
+        "item": "Lemon juice — 2 tbsp",
+        "nutritionKey": "Lemon juice"
+      },
+      {
+        "item": "Olive oil — 1½ tbsp",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Fresh dill — ~15g, chopped",
+        "nutritionKey": "Fresh dill"
+      },
+      {
+        "item": "Salt — to taste"
+      }
+    ],
+    "steps": [
+      "Grate the cucumber, then squeeze it hard in a clean towel or cheesecloth to get as much water out as possible — this is the step that keeps the sauce thick.",
+      "Stir the drained cucumber into the Greek yogurt.",
+      "Add the garlic, lemon juice, olive oil, and chopped dill. Stir to combine.",
+      "Season with salt to taste. Chill at least 30 min before serving so the flavors settle — better the next day."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (August 3)",
+      "name": "Greek Lemon-Garlic Pork Tenderloin",
+      "note": "Not a fish night, so Monday's rule is fine. Roasted pork tenderloin with potatoes and zucchini, lemon and oregano doing the work. Cook extra pork alongside for Tuesday.",
+      "jake": {
+        "cal": 797,
+        "protein": 74,
+        "carbs": 46,
+        "fat": 35,
+        "fiber": 6.0
+      },
+      "laine": {
+        "cal": 508,
+        "protein": 44,
+        "carbs": 33,
+        "fat": 22,
+        "fiber": 4.4
+      },
+      "ingredients": [
+        {
+          "item": "Pork tenderloin — Jake 340g, Laine 200g raw (buy ~230g extra for Tuesday)",
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Russet potato — Jake 200g, Laine 140g, cut into wedges",
+          "nutritionKey": "Russet potato"
+        },
+        {
+          "item": "Zucchini — Jake 150g, Laine 130g, sliced",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Olive oil — Jake scant 2 tbsp, Laine 1¼ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — 4–5 cloves total, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 425°F. Toss the potato wedges with half the olive oil and spice mix, roast 15 min.",
+        "Rub the pork tenderloin (both Monday's and Tuesday's extra portion, cooked together) with the remaining oil, garlic, lemon juice, and spice mix.",
+        "Add the pork and zucchini to the roasting pan with the potatoes. Roast 18–22 min more, until the pork hits 145°F internal. Rest 5 min before slicing.",
+        "Set aside the extra plain pork for Tuesday once it's cooled slightly. Jake gets the bigger portion of everything."
+      ]
+    },
+    {
+      "day": "Tuesday (August 4) — Pita Tuesday",
+      "name": "Pork & Shrimp Pita Pockets with Tzatziki",
+      "note": "Standing leftovers-plus-a-treat night. Monday's reserved pork gets warmed through with a treat of pan-seared shrimp, stuffed into pita with romaine, tomato, and a generous spoonful of this week's tzatziki.",
+      "jake": {
+        "cal": 725,
+        "protein": 84,
+        "carbs": 52,
+        "fat": 22,
+        "fiber": 7.7
+      },
+      "laine": {
+        "cal": 481,
+        "protein": 54,
+        "carbs": 38,
+        "fat": 14,
+        "fiber": 5.6
+      },
+      "tzatzikiRef": true,
+      "sauceLabel": "Tzatziki",
+      "ingredients": [
+        {
+          "item": "Reserved pork tenderloin from Monday — Jake 180g, Laine 110g, sliced",
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Frozen shrimp — Jake 130g, Laine 80g raw, peeled",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Whole wheat pita — Jake 1¼, Laine ¾",
+          "nutritionKey": "Whole wheat pita"
+        },
+        {
+          "item": "Romaine lettuce — Jake 50g, Laine 40g, shredded",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 50g, Laine 40g, chopped",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Tzatziki — Jake 1¼ servings, Laine scant 1 serving (see recipe card)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Olive oil — Jake scant 1 tbsp, Laine ½ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — 2–3 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Warm the sliced pork through in a skillet with a little olive oil.",
+        "In the same pan, sear the shrimp with garlic and spice mix, 2–3 min per side until just pink and opaque.",
+        "Warm the pitas. Split and fill with pork, shrimp, romaine, and cherry tomato.",
+        "Finish with a generous spoonful of tzatziki. Jake gets the bigger pita and more filling."
+      ]
+    },
+    {
+      "day": "Wednesday (August 5)",
+      "name": "Baked Lemon-Dill Salmon, Quinoa & Broccoli",
+      "note": "Back to a normal fish night. Simple baked salmon with fresh dill and lemon, quinoa, and steamed broccoli.",
+      "jake": {
+        "cal": 914,
+        "protein": 60,
+        "carbs": 57,
+        "fat": 48,
+        "fiber": 8.6
+      },
+      "laine": {
+        "cal": 612,
+        "protein": 40,
+        "carbs": 41,
+        "fat": 32,
+        "fiber": 6.4
+      },
+      "ingredients": [
+        {
+          "item": "Atlantic salmon — Jake 230g, Laine 150g raw",
+          "nutritionKey": "Atlantic salmon (raw)"
+        },
+        {
+          "item": "Quinoa (dry) — Jake 70g, Laine 48g",
+          "nutritionKey": "Quinoa (dry)"
+        },
+        {
+          "item": "Broccoli florets — Jake 130g, Laine 110g",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine scant ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Fresh dill — Jake ~8g, Laine ~5g, chopped",
+          "nutritionKey": "Fresh dill"
+        },
+        {
+          "item": "Garlic — 2–3 cloves, minced",
+          "nutritionKey": "Garlic"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F. Cook the quinoa according to package directions.",
+        "Pat the salmon dry, place on a lined sheet pan. Rub with olive oil, garlic, and lemon juice, top with the fresh dill.",
+        "Bake 12–15 min until it flakes easily. Steam the broccoli alongside.",
+        "Plate quinoa, salmon, and broccoli together. Jake gets the bigger fillet."
+      ]
+    },
+    {
+      "day": "Thursday (August 6)",
+      "name": "Lemon-Garlic Chicken with Farro, Zucchini & Walnuts",
+      "note": "Free night. Seared chicken over farro and zucchini, finished with toasted walnuts for crunch.",
+      "jake": {
+        "cal": 887,
+        "protein": 79,
+        "carbs": 63,
+        "fat": 37,
+        "fiber": 8.8
+      },
+      "laine": {
+        "cal": 566,
+        "protein": 50,
+        "carbs": 44,
+        "fat": 22,
+        "fiber": 6.1
+      },
+      "ingredients": [
+        {
+          "item": "Chicken breast — Jake 280g, Laine 175g raw",
+          "nutritionKey": "Chicken breast"
+        },
+        {
+          "item": "Farro (dry) — Jake 75g, Laine 52g",
+          "nutritionKey": "Farro (dry)"
+        },
+        {
+          "item": "Zucchini — Jake 150g, Laine 130g, sliced",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Olive oil — Jake scant 1½ tbsp, Laine scant 1 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Walnuts, toasted — Jake ½oz (~7 halves), Laine ¼oz, chopped",
+          "nutritionKey": "Walnuts"
+        },
+        {
+          "item": "Garlic — 4–5 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Cook the farro according to package directions.",
+        "Toast the walnuts in a dry pan 2–3 min until fragrant, set aside.",
+        "Season the chicken with the spice mix. Sear in olive oil 6–7 min per side until cooked through. Rest 5 min, slice.",
+        "In the same pan, sauté the zucchini and garlic 3–4 min. Toss with the farro and lemon juice.",
+        "Plate farro and zucchini, top with sliced chicken and the toasted walnuts. Jake gets more of everything."
+      ]
+    },
+    {
+      "day": "Friday (August 7)",
+      "name": "Garlic Shrimp, Cod & White Bean Skillet",
+      "note": "Second fish night. Shrimp and cod together with cannellini beans and cherry tomatoes over a little rice — the beans add some heft and fiber alongside the fish.",
+      "jake": {
+        "cal": 665,
+        "protein": 64,
+        "carbs": 61,
+        "fat": 20,
+        "fiber": 7.6
+      },
+      "laine": {
+        "cal": 473,
+        "protein": 46,
+        "carbs": 47,
+        "fat": 13,
+        "fiber": 5.9
+      },
+      "ingredients": [
+        {
+          "item": "Frozen shrimp — Jake 120g, Laine 85g raw, peeled",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Frozen cod — Jake 130g, Laine 90g raw",
+          "nutritionKey": "Frozen cod"
+        },
+        {
+          "item": "Cannellini beans — Jake ¼ can+, Laine scant ¼ can, rinsed",
+          "nutritionKey": "Cannellini beans"
+        },
+        {
+          "item": "White rice (dry) — Jake 40g, Laine 30g",
+          "nutritionKey": "White rice (dry)"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 100g, Laine 80g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Olive oil — Jake scant 1¼ tbsp, Laine scant 1 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — 4–5 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Cook the rice separately.",
+        "Pat the cod dry and season. Sear in olive oil 3–4 min per side until just cooked through, remove.",
+        "In the same pan, add the shrimp and garlic, cook 2–3 min until pink. Add the cherry tomatoes and cannellini beans, cook 2–3 min more.",
+        "Flake the cod back in gently. Season with lemon juice and spice mix. Serve over rice. Jake gets more of everything."
+      ]
+    },
+    {
+      "day": "Saturday (August 8)",
+      "name": "Mediterranean Stuffed Bell Peppers",
+      "note": "Vegetarian night. Rice, garbanzo beans, feta, and tomato stuffed into roasted bell peppers, finished with a dollop of Greek yogurt.",
+      "jake": {
+        "cal": 771,
+        "protein": 38,
+        "carbs": 105,
+        "fat": 23,
+        "fiber": 15.7
+      },
+      "laine": {
+        "cal": 617,
+        "protein": 31,
+        "carbs": 85,
+        "fat": 18,
+        "fiber": 12.9
+      },
+      "ingredients": [
+        {
+          "item": "Bell pepper — Jake 200g (2 large, halved), Laine 160g (1½ large)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "White rice (dry) — Jake 40g, Laine 32g",
+          "nutritionKey": "White rice (dry)"
+        },
+        {
+          "item": "Garbanzo beans — Jake scant ½ can, Laine ⅓ can, rinsed",
+          "nutritionKey": "Garbanzo beans"
+        },
+        {
+          "item": "Feta cheese, reduced fat — Jake ⅔ cup (60g), Laine ½ cup (48g)",
+          "nutritionKey": "Feta cheese (reduced fat)"
+        },
+        {
+          "item": "Diced tomatoes (canned) — Jake ⅓ cup, Laine ¼ cup",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Olive oil — Jake scant 1 tbsp, Laine ½ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Greek yogurt (plain nonfat) — Jake ~2¾ tbsp, Laine ~2 tbsp, to top",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Garlic — 4 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 375°F. Halve the peppers and remove seeds, brush lightly with olive oil, roast 12–15 min to soften.",
+        "Cook the rice. Warm the garbanzo beans with the diced tomatoes, garlic, and spice mix.",
+        "Fold in the rice and most of the feta. Spoon the filling into the roasted pepper halves.",
+        "Return to the oven 8–10 min until heated through. Top with a dollop of Greek yogurt and the remaining feta. Jake gets the bigger peppers and more filling."
+      ]
+    },
+    {
+      "day": "Sunday (August 9)",
+      "name": "Greek Spinach, Feta & Egg White Scramble with Pita",
+      "note": "Standing breakfast-for-dinner. A Greek-style scramble — spinach and feta, warm pita on the side.",
+      "jake": {
+        "cal": 691,
+        "protein": 49,
+        "carbs": 44,
+        "fat": 36,
+        "fiber": 7.6
+      },
+      "laine": {
+        "cal": 468,
+        "protein": 32,
+        "carbs": 32,
+        "fat": 24,
+        "fiber": 5.7
+      },
+      "ingredients": [
+        {
+          "item": "Eggs — Jake 3, Laine 2",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Liquid egg whites — Jake scant ⅔ cup, Laine ⅓ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Baby spinach — Jake 130g, Laine 100g",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Feta cheese, reduced fat — Jake scant ½ cup (48g), Laine ⅓ cup (36g)",
+          "nutritionKey": "Feta cheese (reduced fat)"
+        },
+        {
+          "item": "Whole wheat pita — Jake 1, Laine ¾",
+          "nutritionKey": "Whole wheat pita"
+        },
+        {
+          "item": "Olive oil — Jake scant 1 tbsp, Laine ½ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — 2–3 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Wilt the spinach and garlic in olive oil, 2 min. Push to one side.",
+        "Beat the eggs and egg whites together, pour into the pan. Scramble gently over medium-low until just set.",
+        "Fold the spinach through, crumble in the feta, season with spice mix.",
+        "Warm the pita and serve alongside. Jake gets the bigger portion."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Greek Chicken & Rice Bowl with Feta & Olives",
+    "note": "Sunday-batch, 5 containers, no fish (office-friendly). Chicken and rice batch-cooked, feta and olives added after reheating so they stay distinct, with a spoonful of extra tzatziki drizzled on top if there's any left from Tuesday's batch.",
+    "macros": {
+      "cal": 746,
+      "protein": 77,
+      "carbs": 47,
+      "fat": 28,
+      "fiber": 3.9
+    },
+    "ingredients": [
+      {
+        "item": "Chicken breast — ~3 lbs total (280g raw per container)",
+        "nutritionKey": "Chicken breast"
+      },
+      {
+        "item": "White rice (dry) — 40g per container",
+        "nutritionKey": "White rice (dry)"
+      },
+      {
+        "item": "Bell pepper — 100g per container, roasted",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Feta cheese, reduced fat — ~2 tbsp (33g) per container",
+        "nutritionKey": "Feta cheese (reduced fat)"
+      },
+      {
+        "item": "Kalamata olives — 8 olives per container",
+        "nutritionKey": "Kalamata olives"
+      },
+      {
+        "item": "Tzatziki — ½ serving per container, if extra is on hand",
+        "nutritionKey": "Greek yogurt (plain nonfat)"
+      },
+      {
+        "item": "Olive oil — ~½ tbsp per container",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Garlic — 1 clove per container",
+        "nutritionKey": "Garlic"
+      },
+      {
+        "item": "Oregano, thyme, cumin, paprika, salt",
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+      }
+    ],
+    "steps": [
+      "Cook all the rice at once. Season the chicken with the spice mix and garlic, sear or grill in batches, ~6–7 min per side until 165°F. Rest, then slice.",
+      "Roast the bell pepper (or sear it) until just tender.",
+      "Divide into 5 containers: rice, chicken, roasted pepper.",
+      "To eat: reheat, then top with feta, olives, and a drizzle of olive oil (and tzatziki if you have it) after — keeps the feta from going stringy in the microwave."
+    ]
+  },
+  "laineLunch": {
+    "name": "Cold Tuna & Black Bean Mason Jar",
+    "note": "Standing cold format, unchanged again this week — same as always.",
+    "macros": {
+      "cal": 615,
+      "protein": 47,
+      "carbs": 44,
+      "fat": 31,
+      "fiber": 16.7
+    },
+    "dressingNote": "Olive oil + lemon juice, kept separate and added just before eating.",
+    "ingredients": [
+      {
+        "item": "Canned tuna in water — 1 can per jar (5 cans total)",
+        "nutritionKey": "Canned tuna (in water)"
+      },
+      {
+        "item": "Black beans — ~¼ can per jar, rinsed",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Avocado — ½ avocado per jar, added fresh when eating",
+        "nutritionKey": "Avocado"
+      },
+      {
+        "item": "English cucumber — ~70g per jar, diced",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Bell pepper — ~60g per jar, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Olive oil — 1 tbsp per jar (dressing, separate)",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Lemon juice — scant ½ tbsp per jar",
+        "nutritionKey": "Lemon juice"
+      }
+    ],
+    "steps": [
+      "Drain tuna, rinse black beans. Dice cucumber and bell pepper.",
+      "Layer each jar: black beans → tuna → cucumber → bell pepper.",
+      "Portion the olive oil + lemon juice dressing into a small separate container per jar.",
+      "To eat: add dressing and fresh-cut avocado, stir, eat straight from the jar."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed / Fri",
+      "name": "Greek Yogurt Parfait",
+      "macros": {
+        "cal": 180,
+        "protein": 18,
+        "carbs": 18,
+        "fat": 4,
+        "fiber": 5.0
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl. Top with thawed berries and flaxseed."
+      ]
+    },
+    {
+      "days": "Tue / Thu / Sat",
+      "name": "Spinach & Feta Egg White Scramble",
+      "macros": {
+        "cal": 154,
+        "protein": 23,
+        "carbs": 7,
+        "fat": 3,
+        "fiber": 2.2
+      },
+      "note": "Back to feta this week — the cheddar swap last week was only to help use up that surplus.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ¾ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Baby spinach — handful (~40g)",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Cherry tomatoes — ~40g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Feta cheese, reduced fat — ~1½ tbsp (22g)",
+          "nutritionKey": "Feta cheese (reduced fat)"
+        },
+        {
+          "item": "Pinch oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Sauté cherry tomatoes 1–2 min in a dry nonstick pan until they start to soften.",
+        "Add egg whites, scramble over medium-low until just set.",
+        "Toss in spinach at the end. Top with feta and a pinch of spice mix."
+      ]
+    },
+    {
+      "days": "Sun (August 9)",
+      "name": "Birch Benders Waffles + Berries",
+      "macros": {
+        "cal": 266,
+        "protein": 13,
+        "carbs": 42,
+        "fat": 6,
+        "fiber": 7.0
+      },
+      "note": "Standing Sunday-morning waffles — separate from Sunday's breakfast-for-dinner, unchanged as always.",
+      "ingredients": [
+        {
+          "item": "Birch Benders pancake/waffle mix — ½ cup dry",
+          "nutritionKey": "Birch Benders pancake mix"
+        },
+        {
+          "item": "Liquid egg whites — ¼ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Mix batter: mix + egg whites + water per package. Stir in flaxseed.",
+        "Cook in a preheated waffle iron 3–4 min until crisp.",
+        "Top with thawed berries."
+      ]
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Banana + Greek Yogurt",
+      "macros": {
+        "cal": 195,
+        "protein": 16,
+        "carbs": 33,
+        "fat": 0,
+        "fiber": 3.1
+      },
+      "desc": "1 banana + 1 Oikos Triple Zero. Potassium + calcium snack.",
+      "ingredients": [
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        },
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber + Hummus",
+      "macros": {
+        "cal": 124,
+        "protein": 6,
+        "carbs": 15,
+        "fat": 6,
+        "fiber": 3.8
+      },
+      "desc": "¾ cucumber sliced + hummus for dipping.",
+      "ingredients": [
+        {
+          "item": "English cucumber — ¾ large (~150g)",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Hummus — 60g (~4 tbsp)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas",
+      "macros": {
+        "cal": 120,
+        "protein": 5,
+        "carbs": 18,
+        "fat": 3,
+        "fiber": 5
+      },
+      "desc": "¼ cup crunchy roasted chickpeas. Fiber + plant protein, lightly spiced.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup (~40g)",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        }
+      ]
+    },
+    {
+      "name": "Bell Pepper Strips + Hummus",
+      "macros": {
+        "cal": 146,
+        "protein": 6,
+        "carbs": 20,
+        "fat": 6,
+        "fiber": 6.2
+      },
+      "desc": "1.5 bell peppers sliced + hummus.",
+      "ingredients": [
+        {
+          "item": "Bell pepper — 1.5 medium (150g)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Hummus — 4 tbsp (60g)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Berries",
+      "macros": {
+        "cal": 125,
+        "protein": 16,
+        "carbs": 14,
+        "fat": 0,
+        "fiber": 2.2
+      },
+      "desc": "1 Oikos Triple Zero + small handful thawed berries.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Apple & Cheddar",
+      "macros": {
+        "cal": 236,
+        "protein": 9,
+        "carbs": 26,
+        "fat": 12,
+        "fiber": 4.4
+      },
+      "desc": "1 apple, sliced, with cheddar.",
+      "ingredients": [
+        {
+          "item": "Apple — 1 medium",
+          "nutritionKey": "Apple"
+        },
+        {
+          "item": "Cheddar cheese, shredded — generous ¼ cup (or a sliced chunk)",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        }
+      ]
+    },
+    {
+      "name": "Cottage Cheese + Banana",
+      "macros": {
+        "cal": 195,
+        "protein": 13,
+        "carbs": 31,
+        "fat": 2,
+        "fiber": 3.1
+      },
+      "desc": "1 cup cottage cheese + 1 banana. High protein, calcium + potassium.",
+      "ingredients": [
+        {
+          "item": "Cottage cheese 2% — 1 cup",
+          "nutritionKey": "Cottage cheese 2%"
+        },
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas + Almonds",
+      "macros": {
+        "cal": 237,
+        "protein": 9,
+        "carbs": 22,
+        "fat": 13,
+        "fiber": 7.5
+      },
+      "desc": "¼ cup roasted chickpeas + a small handful of almonds.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        },
+        {
+          "item": "Almonds — ~20g",
+          "nutritionKey": "Almonds"
+        }
+      ]
+    },
+    {
+      "name": "Oikos + Flaxseed",
+      "macros": {
+        "cal": 145,
+        "protein": 17,
+        "carbs": 9,
+        "fat": 4,
+        "fiber": 2.8
+      },
+      "desc": "1 container + 1 tbsp ground flaxseed.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Almonds",
+      "macros": {
+        "cal": 182,
+        "protein": 20,
+        "carbs": 9,
+        "fat": 7,
+        "fiber": 1.8
+      },
+      "desc": "1 container plain Greek yogurt + a small handful of almonds. High-protein pick.",
+      "ingredients": [
+        {
+          "item": "Greek yogurt (plain nonfat) — 1 container (170g)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Almonds — ~14g",
+          "nutritionKey": "Almonds"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Must Buy": [
+      "Pork tenderloin — ~1.25 lbs (Monday roast + Tuesday leftovers)",
+      "Frozen shrimp — ~1 lb (Tuesday treat + Friday)",
+      "Frozen cod — ~0.5 lb (Friday)",
+      "Atlantic salmon — ~0.85 lb (Wednesday)",
+      "Chicken breast — ~4.25 lbs (Thursday dinner + Jake's 5-container lunch batch)",
+      "Feta cheese, reduced fat — large tub (Saturday, Sunday, lunch, breakfast scramble)",
+      "Fresh dill — 1 small bunch (tzatziki + Wednesday salmon)",
+      "English cucumber — 2–3 (tzatziki + Laine's lunch/snacks)",
+      "Zucchini — 2–3 medium (Monday + Thursday)",
+      "Bell peppers — 4–5 large (Saturday's stuffed peppers need the biggest ones, plus Jake's lunch and Laine's lunch/snacks)",
+      "Cherry tomatoes — 1 pint (Tuesday, Friday, breakfast scramble)",
+      "Broccoli florets — 1 bag (Wednesday)",
+      "Whole wheat pita — 1 bag (Tuesday + Sunday)",
+      "Kalamata olives — 1 jar (Jake's lunch)",
+      "Walnuts — small bag (Thursday)",
+      "Canned tuna in water — 5 cans (Laine's lunch)",
+      "Avocados — 3 (Laine's lunch, added fresh)",
+      "Russet potatoes — 4–5 medium (Monday)",
+      "Eggs — 1 dozen (Sunday dinner + breakfasts)"
+    ],
+    "Check Supply": [
+      "Farro (dry), Quinoa (dry), White rice (dry) — small amounts of each needed this week",
+      "Garbanzo beans, Cannellini beans, Black beans, Diced tomatoes (canned) — 1 can each",
+      "Greek yogurt (plain nonfat) — 1 tub, used across the tzatziki batch, Saturday topping, and a snack",
+      "Oikos Triple Zero — 6+ containers (Laine's breakfasts + snacks)",
+      "Liquid egg whites — 1 carton",
+      "Olive oil — this is a heavier-oil week, check the bottle is mostly full",
+      "Garlic — a full bulb, used almost every night",
+      "Lemon juice — small bottle, used most nights",
+      "Frozen mixed berries, ground flaxseed — breakfast staples",
+      "Hummus, roasted chickpeas, almonds, cottage cheese — snack staples",
+      "Romaine lettuce — 1 small head",
+      "Oregano / thyme / cumin / paprika — restock the spice tin if low",
+      "Birch Benders mix (Sunday morning waffles)"
+    ],
+    "Already Have": [
+      "Cheddar cheese, shredded — only needed for one snack this week, so the rest of last week's surplus should still be around",
+      "Salt, pepper, garlic powder",
+      "Corn tortillas / other pantry backups"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Lunch Bowl",
+          746,
+          77,
+          47,
+          28,
+          3.9
+        ],
+        [
+          "Dinner (avg)",
+          778.6,
+          64.0,
+          61.1,
+          31.6,
+          8.9
+        ],
+        [
+          "1–2 Snacks",
+          327,
+          37,
+          18,
+          11,
+          4.6
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1872,
+        179,
+        128,
+        72,
+        17.4
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          181.4,
+          19.3,
+          16.6,
+          3.9,
+          4.1
+        ],
+        [
+          "Lunch Jar",
+          615,
+          47,
+          44,
+          31,
+          16.7
+        ],
+        [
+          "Dinner (avg)",
+          532.1,
+          42.4,
+          45.7,
+          20.7,
+          6.7
+        ],
+        [
+          "1 Snack",
+          195,
+          16,
+          33,
+          0,
+          3.1
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1544,
+        126,
+        141,
+        57,
+        30.6
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  }
+}

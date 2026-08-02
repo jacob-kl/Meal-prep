@@ -980,6 +980,31 @@
       "selenium": 22
     }
   },
+  "Fresh dill": {
+    "cal": 43,
+    "protein": 3,
+    "carbs": 7,
+    "fat": 1,
+    "fiber": 2.1,
+    "serving": "100g raw",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 61,
+      "potassium": 738,
+      "calcium": 208,
+      "vitamin_d": 0,
+      "magnesium": 55,
+      "zinc": 0.9,
+      "vitamin_c": 85,
+      "vitamin_b12": 0,
+      "iron": 6.6,
+      "vitamin_a": 386,
+      "folate": 150,
+      "phosphorus": 66,
+      "selenium": 0
+    }
+  },
   "Frozen cod": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
