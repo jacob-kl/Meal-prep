@@ -238,21 +238,21 @@
     },
     {
       "day": "Thursday (August 6)",
-      "name": "Lemon-Garlic Chicken with Farro, Zucchini & Walnuts",
-      "note": "Free night. Seared chicken over farro and zucchini, finished with toasted walnuts for crunch.",
+      "name": "Lemon-Garlic Chicken with Quinoa, Zucchini & Walnuts",
+      "note": "Free night. Seared chicken over quinoa and zucchini, finished with toasted walnuts for crunch.",
       "jake": {
-        "cal": 887,
-        "protein": 79,
-        "carbs": 63,
-        "fat": 37,
-        "fiber": 8.8
+        "cal": 889,
+        "protein": 78,
+        "carbs": 57,
+        "fat": 40,
+        "fiber": 7.6
       },
       "laine": {
         "cal": 566,
-        "protein": 50,
-        "carbs": 44,
-        "fat": 22,
-        "fiber": 6.1
+        "protein": 49,
+        "carbs": 39,
+        "fat": 24,
+        "fiber": 5.3
       },
       "ingredients": [
         {
@@ -260,8 +260,8 @@
           "nutritionKey": "Chicken breast"
         },
         {
-          "item": "Farro (dry) — Jake 75g, Laine 52g",
-          "nutritionKey": "Farro (dry)"
+          "item": "Quinoa (dry) — Jake 70g, Laine 48g",
+          "nutritionKey": "Quinoa (dry)"
         },
         {
           "item": "Zucchini — Jake 150g, Laine 130g, sliced",
@@ -289,11 +289,11 @@
         }
       ],
       "steps": [
-        "Cook the farro according to package directions.",
+        "Cook the quinoa according to package directions.",
         "Toast the walnuts in a dry pan 2–3 min until fragrant, set aside.",
         "Season the chicken with the spice mix. Sear in olive oil 6–7 min per side until cooked through. Rest 5 min, slice.",
-        "In the same pan, sauté the zucchini and garlic 3–4 min. Toss with the farro and lemon juice.",
-        "Plate farro and zucchini, top with sliced chicken and the toasted walnuts. Jake gets more of everything."
+        "In the same pan, sauté the zucchini and garlic 3–4 min. Toss with the quinoa and lemon juice.",
+        "Plate quinoa and zucchini, top with sliced chicken and the toasted walnuts. Jake gets more of everything."
       ]
     },
     {
@@ -483,47 +483,43 @@
     }
   ],
   "jakeLunch": {
-    "name": "Greek Chicken & Rice Bowl with Feta & Olives",
-    "note": "Sunday-batch, 5 containers, no fish (office-friendly). Chicken and rice batch-cooked, feta and olives added after reheating so they stay distinct, with a spoonful of extra tzatziki drizzled on top if there's any left from Tuesday's batch.",
+    "name": "Braised Lemon-Garlic Pork & Quinoa Bowl",
+    "note": "Sunday-batch, 5 containers, no fish. Pork simmered in a light lemon-garlic tomato sauce with spinach wilted in, over quinoa — everything's mixed into one container, nothing to add after reheating. The sauce is what keeps it moist through a week of microwave reheats.",
     "macros": {
-      "cal": 746,
-      "protein": 77,
-      "carbs": 47,
-      "fat": 28,
-      "fiber": 3.9
+      "cal": 741,
+      "protein": 79,
+      "carbs": 48,
+      "fat": 26,
+      "fiber": 6.7
     },
     "ingredients": [
       {
-        "item": "Chicken breast — ~3 lbs total (280g raw per container)",
-        "nutritionKey": "Chicken breast"
+        "item": "Pork tenderloin — ~3.75 lbs total (340g raw per container)",
+        "nutritionKey": "Pork tenderloin"
       },
       {
-        "item": "White rice (dry) — 40g per container",
-        "nutritionKey": "White rice (dry)"
+        "item": "Quinoa (dry) — 55g per container",
+        "nutritionKey": "Quinoa (dry)"
       },
       {
-        "item": "Bell pepper — 100g per container, roasted",
-        "nutritionKey": "Bell pepper"
+        "item": "Diced tomatoes (canned) — scant ¾ cup per container",
+        "nutritionKey": "Diced tomatoes (canned)"
       },
       {
-        "item": "Feta cheese, reduced fat — ~2 tbsp (33g) per container",
-        "nutritionKey": "Feta cheese (reduced fat)"
+        "item": "Baby spinach — 50g per container",
+        "nutritionKey": "Baby spinach"
       },
       {
-        "item": "Kalamata olives — 8 olives per container",
-        "nutritionKey": "Kalamata olives"
-      },
-      {
-        "item": "Tzatziki — ½ serving per container, if extra is on hand",
-        "nutritionKey": "Greek yogurt (plain nonfat)"
-      },
-      {
-        "item": "Olive oil — ~½ tbsp per container",
+        "item": "Olive oil — scant 1 tbsp per container",
         "nutritionKey": "Olive oil"
       },
       {
-        "item": "Garlic — 1 clove per container",
+        "item": "Garlic — 2 cloves per container",
         "nutritionKey": "Garlic"
+      },
+      {
+        "item": "Lemon juice — scant 1 tbsp per container",
+        "nutritionKey": "Lemon juice"
       },
       {
         "item": "Oregano, thyme, cumin, paprika, salt",
@@ -531,10 +527,11 @@
       }
     ],
     "steps": [
-      "Cook all the rice at once. Season the chicken with the spice mix and garlic, sear or grill in batches, ~6–7 min per side until 165°F. Rest, then slice.",
-      "Roast the bell pepper (or sear it) until just tender.",
-      "Divide into 5 containers: rice, chicken, roasted pepper.",
-      "To eat: reheat, then top with feta, olives, and a drizzle of olive oil (and tzatziki if you have it) after — keeps the feta from going stringy in the microwave."
+      "Cook all the quinoa at once.",
+      "Cube the pork. Sear in batches in olive oil until browned on the outside, doesn't need to be fully cooked through yet.",
+      "Add garlic, diced tomatoes, lemon juice, and spice mix to the pan. Return all the pork, simmer 8–10 min until the pork is cooked through and the sauce has thickened slightly.",
+      "Stir in the spinach at the end, just until wilted.",
+      "Divide quinoa and the saucy pork evenly across 5 containers. Reheats as one dish — nothing to add after."
     ]
   },
   "laineLunch": {
@@ -901,39 +898,41 @@
   ],
   "shopping": {
     "Must Buy": [
-      "Pork tenderloin — ~1.25 lbs (Monday roast + Tuesday leftovers)",
+      "Pork tenderloin — ~4.75 lbs total (Monday roast + Tuesday leftovers + Jake's 5-container lunch batch — buy it as one bigger cut, cheaper per pound than smaller portions)",
       "Frozen shrimp — ~1 lb (Tuesday treat + Friday)",
       "Frozen cod — ~0.5 lb (Friday)",
       "Atlantic salmon — ~0.85 lb (Wednesday)",
-      "Chicken breast — ~4.25 lbs (Thursday dinner + Jake's 5-container lunch batch)",
-      "Feta cheese, reduced fat — large tub (Saturday, Sunday, lunch, breakfast scramble)",
+      "Chicken breast — ~1 lb (Thursday dinner only this week)",
+      "Feta cheese, reduced fat — medium tub (Saturday, Sunday, breakfast scramble)",
       "Fresh dill — 1 small bunch (tzatziki + Wednesday salmon)",
       "English cucumber — 2–3 (tzatziki + Laine's lunch/snacks)",
       "Zucchini — 2–3 medium (Monday + Thursday)",
-      "Bell peppers — 4–5 large (Saturday's stuffed peppers need the biggest ones, plus Jake's lunch and Laine's lunch/snacks)",
+      "Bell peppers — 2–3 large (Saturday's stuffed peppers, plus Laine's lunch/snacks)",
       "Cherry tomatoes — 1 pint (Tuesday, Friday, breakfast scramble)",
       "Broccoli florets — 1 bag (Wednesday)",
       "Whole wheat pita — 1 bag (Tuesday + Sunday)",
-      "Kalamata olives — 1 jar (Jake's lunch)",
       "Walnuts — small bag (Thursday)",
+      "Baby spinach — larger bag this week (Jake's lunch + Sunday dinner)",
+      "Diced tomatoes (canned) — 3 cans (Saturday's peppers, and a bigger chunk for Jake's lunch batch)",
       "Canned tuna in water — 5 cans (Laine's lunch)",
       "Avocados — 3 (Laine's lunch, added fresh)",
       "Russet potatoes — 4–5 medium (Monday)",
       "Eggs — 1 dozen (Sunday dinner + breakfasts)"
     ],
     "Check Supply": [
-      "Farro (dry), Quinoa (dry), White rice (dry) — small amounts of each needed this week",
-      "Garbanzo beans, Cannellini beans, Black beans, Diced tomatoes (canned) — 1 can each",
-      "Greek yogurt (plain nonfat) — 1 tub, used across the tzatziki batch, Saturday topping, and a snack",
+      "Quinoa (dry) — more than usual this week: Wednesday, Thursday, AND Jake's lunch batch all use it — make sure there's enough in the pantry",
+      "White rice (dry) — small amount (Friday + Saturday)",
+      "Garbanzo beans, Cannellini beans, Black beans — 1 can each",
+      "Greek yogurt (plain nonfat) — 1 tub, used across the tzatziki batch and Saturday topping",
       "Oikos Triple Zero — 6+ containers (Laine's breakfasts + snacks)",
       "Liquid egg whites — 1 carton",
       "Olive oil — this is a heavier-oil week, check the bottle is mostly full",
-      "Garlic — a full bulb, used almost every night",
-      "Lemon juice — small bottle, used most nights",
+      "Garlic — a full bulb, used almost every night plus lunch",
+      "Lemon juice — small bottle, used most nights plus lunch",
       "Frozen mixed berries, ground flaxseed — breakfast staples",
       "Hummus, roasted chickpeas, almonds, cottage cheese — snack staples",
       "Romaine lettuce — 1 small head",
-      "Oregano / thyme / cumin / paprika — restock the spice tin if low",
+      "Oregano / thyme / cumin / paprika — restock the spice tin if low, goes into the lunch batch too now",
       "Birch Benders mix (Sunday morning waffles)"
     ],
     "Already Have": [
@@ -947,19 +946,19 @@
       "rows": [
         [
           "Lunch Bowl",
-          746,
-          77,
-          47,
-          28,
-          3.9
+          741,
+          79,
+          48,
+          26,
+          6.7
         ],
         [
           "Dinner (avg)",
-          778.6,
-          64.0,
-          61.1,
-          31.6,
-          8.9
+          778.9,
+          63.9,
+          60.3,
+          32.0,
+          8.7
         ],
         [
           "1–2 Snacks",
@@ -979,11 +978,11 @@
         ]
       ],
       "total": [
-        1872,
-        179,
+        1867,
+        181,
         128,
-        72,
-        17.4
+        70,
+        20.0
       ],
       "goal": [
         2030,
@@ -1014,10 +1013,10 @@
         [
           "Dinner (avg)",
           532.1,
-          42.4,
-          45.7,
-          20.7,
-          6.7
+          42.3,
+          45.0,
+          21.0,
+          6.6
         ],
         [
           "1 Snack",
@@ -1041,7 +1040,7 @@
         126,
         141,
         57,
-        30.6
+        30.5
       ],
       "goal": [
         1363,
