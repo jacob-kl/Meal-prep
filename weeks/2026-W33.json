@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "Week of August 10–16, 2026. Built around Jake's inflammation and enlarged spleen — leaning on general, doctor-safe anti-inflammatory eating principles (more fatty fish, colorful vegetables and fruit, whole grains, legumes, and healthy fats; less processed food, fried food, heavy cream/cheese, and added sugar). Turmeric and fresh ginger show up across a few dishes for their anti-inflammatory reputation. The frozen pork loin anchors Monday (lean-trimmed, roasted, not fried), with extra for Tuesday's Pita Tuesday. Wed and Fri stay fish nights, which fits nicely here. Sunday leans on avocado for healthy fat instead of a heavier cheese pour. Cheese generally stays light-handed this week rather than a headline ingredient. No raw onion, mushrooms, lentils, okra, or eggplant; Laine's lunch and Jake's reheat-friendly saucy lunch format stay as established.",
+  "_note": "Week of August 10–16, 2026 — Asian flair, same core proteins as usual (pork, chicken, salmon, shrimp, cod) reworked with soy sauce, sesame oil, ginger, and garlic. This week's sauce card is a Soy-Ginger Sesame Sauce, used formally on Tuesday's lettuce wraps (swapped in for pita this week — same standing structure, leftover Monday pork plus a shrimp treat, just in butter-style romaine cups instead of bread). Saturday's vegetarian night is a sesame tofu and vegetable stir-fry. Sunday's breakfast-for-dinner is a vegetable and scallion egg fried rice. Reduced-sodium soy sauce used throughout given the kidney markers from Jake's recent labs; scallions are cooked into dishes rather than used raw on top, consistent with Laine's no-raw-onion preference. Kept the existing lower-purine, anti-inflammatory leanings — no organ meats or high-purine shellfish, tart cherries still in Jake's snack rotation. No mushrooms, lentils, okra, or eggplant; Jake's lunch stays saucy and reheat-friendly (broccoli, not spinach); Laine's lunch stays the standing tuna jar.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -14,200 +14,196 @@
     "fat": 37
   },
   "tzatziki": {
-    "name": "Turmeric-Ginger Yogurt Sauce",
-    "note": "This week's tzatziki-slot sauce, built around two of the more well-known anti-inflammatory spices. Nonfat Greek yogurt base, so it stays light rather than a heavy high-fat dairy sauce. Goes on Tuesday's pita as the main event; a spoonful also works over the salmon or the chickpea bowl if there's extra. Makes about 2 cups (9 servings of ¼ cup), keeps 4–5 days.",
+    "name": "Soy-Ginger Sesame Sauce",
+    "note": "This week's tzatziki-slot sauce — soy sauce, honey, rice vinegar, sesame oil, ginger, and garlic, whisked together. Goes on Tuesday's lettuce wraps as the main event; a drizzle also works over the fried rice or the tofu stir-fry if there's extra. Makes about ¾ cup (8 servings of ~2 tbsp), keeps 1–2 weeks refrigerated since it's mostly soy sauce and vinegar.",
     "macros": {
-      "cal": 57,
-      "protein": 7,
-      "carbs": 3,
-      "fat": 2,
+      "cal": 65,
+      "protein": 1,
+      "carbs": 8,
+      "fat": 4,
       "fiber": 0.1
     },
-    "macrosNote": "Per ¼ cup serving.",
+    "macrosNote": "Per ~2 tbsp serving.",
     "ingredients": [
       {
-        "item": "Greek yogurt (plain nonfat) — 3½ containers (~600g)",
-        "nutritionKey": "Greek yogurt (plain nonfat)"
+        "item": "Soy sauce, reduced sodium — 6 tbsp",
+        "nutritionKey": "Soy sauce (reduced sodium)"
       },
       {
-        "item": "Fresh ginger — ~15g, grated",
+        "item": "Honey — 3 tbsp",
+        "nutritionKey": "Honey"
+      },
+      {
+        "item": "Rice vinegar — 3 tbsp",
+        "nutritionKey": "Rice vinegar"
+      },
+      {
+        "item": "Sesame oil — 2 tbsp",
+        "nutritionKey": "Sesame oil"
+      },
+      {
+        "item": "Fresh ginger — ~20g, grated",
         "nutritionKey": "Fresh ginger"
       },
       {
-        "item": "Ground turmeric — 1 tsp",
-        "nutritionKey": "Ground turmeric"
-      },
-      {
-        "item": "Garlic — 3 cloves, minced or grated",
+        "item": "Garlic — 4 cloves, minced or grated",
         "nutritionKey": "Garlic"
-      },
-      {
-        "item": "Lemon juice — 2 tbsp",
-        "nutritionKey": "Lemon juice"
-      },
-      {
-        "item": "Olive oil — 1 tbsp",
-        "nutritionKey": "Olive oil"
-      },
-      {
-        "item": "Salt, black pepper — to taste"
       }
     ],
     "steps": [
-      "Grate the fresh ginger and garlic directly into the yogurt — a microplane works well for both.",
-      "Stir in the turmeric, lemon juice, and olive oil until the color is even.",
-      "Season with salt and pepper to taste. Chill at least 20 min before serving.",
-      "Keeps 4–5 days — the flavor mellows and rounds out by day 2."
+      "Grate the ginger and garlic directly into a jar or bowl.",
+      "Add the soy sauce, honey, rice vinegar, and sesame oil.",
+      "Whisk or shake until the honey is fully dissolved.",
+      "Keeps well refrigerated — shake before using since the ginger settles."
     ]
   },
   "dinners": [
     {
       "day": "Monday (August 10)",
-      "name": "Herb-Roasted Pork Loin with Sweet Potato & Broccoli",
-      "note": "Uses the frozen pork loin — trimmed of visible fat and roasted, not fried or creamed, which is the main dietary lever for inflammation: lean preparation over rich or fried. Sweet potato instead of white for more fiber and beta-carotene. Cook extra pork alongside for Tuesday.",
+      "name": "Teriyaki Pork Tenderloin with Sesame Broccoli & Rice",
+      "note": "Not a fish night, so no conflict there. Homemade teriyaki glaze instead of a bottled sauce, so the sodium and sugar stay in check. Cook extra pork alongside for Tuesday.",
       "jake": {
-        "cal": 834,
-        "protein": 64,
-        "carbs": 64,
-        "fat": 37,
-        "fiber": 12.0
+        "cal": 824,
+        "protein": 75,
+        "carbs": 80,
+        "fat": 24,
+        "fiber": 5.2
       },
       "laine": {
-        "cal": 553,
-        "protein": 41,
-        "carbs": 48,
-        "fat": 23,
-        "fiber": 9.2
+        "cal": 544,
+        "protein": 46,
+        "carbs": 57,
+        "fat": 15,
+        "fiber": 4.1
       },
       "ingredients": [
         {
-          "item": "Pork loin — Jake 260g, Laine 160g raw, trimmed (buy ~160g extra for Tuesday)",
-          "nutritionKey": "Pork loin"
+          "item": "Pork tenderloin — Jake 320g, Laine 190g raw (buy ~210g extra for Tuesday)",
+          "nutritionKey": "Pork tenderloin"
         },
         {
-          "item": "Sweet potato — Jake ~235g, Laine ~170g, cut into wedges",
-          "nutritionKey": "Sweet potato"
+          "item": "White rice (dry) — Jake 60g, Laine 42g",
+          "nutritionKey": "White rice (dry)"
         },
         {
           "item": "Broccoli florets — Jake 130g, Laine 110g",
           "nutritionKey": "Broccoli florets"
         },
         {
-          "item": "Olive oil — Jake scant 1½ tbsp total, Laine scant 1 tbsp total (roasting + salad)",
-          "nutritionKey": "Olive oil"
+          "item": "Soy sauce, reduced sodium — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
+        },
+        {
+          "item": "Honey — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Honey"
         },
         {
           "item": "Garlic — 4–5 cloves total, minced",
           "nutritionKey": "Garlic"
         },
         {
-          "item": "Oregano, thyme, cumin, paprika, salt",
-          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+          "item": "Fresh ginger — Jake ~8g, Laine ~5g, grated",
+          "nutritionKey": "Fresh ginger"
         },
         {
-          "item": "Baby spinach — Jake 50g, Laine 40g, for a fresh side salad",
-          "nutritionKey": "Baby spinach"
+          "item": "Sesame oil — Jake scant 1 tbsp, Laine scant ¾ tbsp",
+          "nutritionKey": "Sesame oil"
         },
         {
-          "item": "Cherry tomatoes — Jake 30g, Laine 25g, halved, for the salad",
-          "nutritionKey": "Cherry tomatoes"
-        },
-        {
-          "item": "Lemon juice — Jake ¼ tbsp, Laine scant ¼ tbsp, for the salad dressing",
-          "nutritionKey": "Lemon juice"
+          "item": "Sesame seeds — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Sesame seeds"
         }
       ],
       "steps": [
-        "Preheat oven to 400°F. Trim any visible fat cap on the pork loin down to a thin layer.",
-        "Toss the sweet potato wedges with half the olive oil and spice mix, roast 15 min.",
-        "Rub the pork loin (both Monday's and Tuesday's extra piece, roasted together) with the remaining oil, garlic, and spice mix.",
-        "Add the pork to the pan with the potatoes, roast 20–25 min more until the pork hits 145°F internal. Rest 5 min before slicing. Steam the broccoli separately.",
-        "Toss the baby spinach and cherry tomatoes with a drizzle of olive oil and the lemon juice for a simple fresh side salad — no cooking, just plate it alongside.",
+        "Whisk soy sauce, honey, garlic, ginger, and sesame oil into a quick teriyaki glaze.",
+        "Cook the rice. Sear the pork tenderloin (both Monday's and Tuesday's extra piece, cooked together) in a hot pan 2–3 min per side, then brush generously with the glaze.",
+        "Transfer to a 400°F oven 10–12 min until the pork hits 145°F internal. Baste once more with glaze halfway through. Rest 5 min, slice.",
+        "Steam the broccoli, toss with a little of the remaining glaze and the sesame seeds.",
         "Set the extra plain pork aside once cooled for Tuesday. Jake gets the bigger portion."
       ]
     },
     {
-      "day": "Tuesday (August 11) — Pita Tuesday",
-      "name": "Pork & Shrimp Pita Pockets with Turmeric-Ginger Yogurt Sauce",
-      "note": "Standing leftovers-plus-a-treat night. Monday's reserved pork warmed through with a shrimp treat, pita, and a generous spoonful of this week's sauce.",
+      "day": "Tuesday (August 11) — Lettuce Wrap Tuesday",
+      "name": "Pork & Shrimp Lettuce Wraps with Soy-Ginger Sesame Sauce",
+      "note": "Standing leftovers-plus-a-treat night, reskinned for the week — romaine cups instead of pita. Monday's reserved pork plus a shrimp treat, quick-sautéed with carrot and scallion, sauced generously.",
       "jake": {
-        "cal": 689,
-        "protein": 78,
-        "carbs": 47,
-        "fat": 22,
-        "fiber": 7.0
+        "cal": 604,
+        "protein": 82,
+        "carbs": 29,
+        "fat": 20,
+        "fiber": 5.2
       },
       "laine": {
-        "cal": 457,
-        "protein": 51,
-        "carbs": 34,
-        "fat": 14,
-        "fiber": 5.1
+        "cal": 395,
+        "protein": 52,
+        "carbs": 21,
+        "fat": 13,
+        "fiber": 4.0
       },
       "tzatzikiRef": true,
-      "sauceLabel": "Turmeric-Ginger Yogurt Sauce",
+      "sauceLabel": "Soy-Ginger Sesame Sauce",
       "ingredients": [
         {
-          "item": "Reserved pork loin from Monday — Jake 160g, Laine 100g, sliced",
-          "nutritionKey": "Pork loin"
+          "item": "Reserved pork tenderloin from Monday — Jake 210g, Laine 130g, sliced thin",
+          "nutritionKey": "Pork tenderloin"
         },
         {
-          "item": "Frozen shrimp — Jake 120g, Laine 75g raw, peeled",
+          "item": "Frozen shrimp — Jake 150g, Laine 95g raw, peeled, chopped",
           "nutritionKey": "Frozen shrimp"
         },
         {
-          "item": "Whole wheat pita — Jake 1⅓, Laine ⅘",
-          "nutritionKey": "Whole wheat pita"
-        },
-        {
-          "item": "Romaine lettuce — Jake 50g, Laine 40g, shredded",
+          "item": "Romaine lettuce — Jake 100g, Laine 80g, leaves separated for cups",
           "nutritionKey": "Romaine lettuce"
         },
         {
-          "item": "Cherry tomatoes — Jake 50g, Laine 40g, chopped",
-          "nutritionKey": "Cherry tomatoes"
+          "item": "Carrots — Jake 60g, Laine 45g, shredded",
+          "nutritionKey": "Carrots"
         },
         {
-          "item": "Turmeric-Ginger Yogurt Sauce — Jake 1¼ servings, Laine scant 1 serving",
-          "nutritionKey": "Greek yogurt (plain nonfat)"
+          "item": "Scallions — Jake 35g, Laine 30g, sliced (cooked into the filling, not raw on top)",
+          "nutritionKey": "Scallions"
         },
         {
-          "item": "Olive oil — Jake ½ tbsp, Laine scant ⅓ tbsp",
-          "nutritionKey": "Olive oil"
+          "item": "Sesame oil — Jake scant ½ tbsp, Laine ¼ tbsp",
+          "nutritionKey": "Sesame oil"
         },
         {
           "item": "Garlic — 2–3 cloves, minced",
           "nutritionKey": "Garlic"
         },
         {
-          "item": "Oregano, thyme, cumin, paprika, salt",
-          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+          "item": "Fresh ginger — Jake ~5g, Laine ~3g, grated",
+          "nutritionKey": "Fresh ginger"
+        },
+        {
+          "item": "Soy-Ginger Sesame Sauce — Jake 1¾ servings, Laine 1¼ servings (see recipe card)",
+          "nutritionKey": "Soy sauce (reduced sodium)"
         }
       ],
       "steps": [
-        "Warm the sliced pork through in a skillet with a little olive oil.",
-        "In the same pan, sear the shrimp with garlic and spice mix, 2–3 min per side until just pink.",
-        "Warm the pitas. Split and fill with pork, shrimp, romaine, and cherry tomato.",
-        "Finish with a generous spoonful of the turmeric-ginger sauce. Jake gets the bigger pita."
+        "Warm the sliced pork through in a skillet with the sesame oil.",
+        "Add the shrimp, garlic, and ginger, cook 2–3 min until the shrimp is just pink.",
+        "Stir in the shredded carrot and scallions, cook 1–2 min more until the scallions soften (not raw).",
+        "Spoon the filling into romaine cups, drizzle generously with the sauce. Jake gets more filling and more cups."
       ]
     },
     {
       "day": "Wednesday (August 12)",
-      "name": "Ginger-Turmeric Baked Salmon, Quinoa & Broccoli",
-      "note": "Fish night. Salmon already brings good omega-3s; ginger and turmeric layer on top of that.",
+      "name": "Teriyaki Salmon with Bok Choy & Broccoli",
+      "note": "Fish night. Same homemade glaze approach as Monday, on salmon this time, with bok choy for something different from the usual broccoli-only side.",
       "jake": {
-        "cal": 938,
-        "protein": 61,
-        "carbs": 60,
-        "fat": 50,
-        "fiber": 10.1
+        "cal": 901,
+        "protein": 58,
+        "carbs": 77,
+        "fat": 39,
+        "fiber": 4.6
       },
       "laine": {
-        "cal": 630,
-        "protein": 41,
-        "carbs": 43,
-        "fat": 33,
-        "fiber": 7.6
+        "cal": 604,
+        "protein": 38,
+        "carbs": 53,
+        "fat": 26,
+        "fiber": 3.6
       },
       "ingredients": [
         {
@@ -215,71 +211,70 @@
           "nutritionKey": "Atlantic salmon (raw)"
         },
         {
-          "item": "Quinoa (dry) — Jake 65g, Laine 45g",
-          "nutritionKey": "Quinoa (dry)"
+          "item": "White rice (dry) — Jake 60g, Laine 40g",
+          "nutritionKey": "White rice (dry)"
         },
         {
-          "item": "Broccoli florets — Jake 130g, Laine 110g",
+          "item": "Bok choy — Jake 160g, Laine 130g, halved lengthwise",
+          "nutritionKey": "Bok choy"
+        },
+        {
+          "item": "Broccoli florets — Jake 60g, Laine 50g",
           "nutritionKey": "Broccoli florets"
         },
         {
-          "item": "Olive oil — Jake scant 1¼ tbsp total, Laine scant ¾ tbsp total (rub + salad)",
-          "nutritionKey": "Olive oil"
+          "item": "Soy sauce, reduced sodium — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
         },
         {
-          "item": "Fresh ginger — Jake ~6g, Laine ~4g, grated",
-          "nutritionKey": "Fresh ginger"
-        },
-        {
-          "item": "Ground turmeric — Jake ½ tsp, Laine ⅓ tsp",
-          "nutritionKey": "Ground turmeric"
-        },
-        {
-          "item": "Lemon juice — Jake ¾ tbsp total, Laine scant ¾ tbsp total (rub + salad)",
-          "nutritionKey": "Lemon juice"
+          "item": "Honey — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Honey"
         },
         {
           "item": "Garlic — 2–3 cloves, minced",
           "nutritionKey": "Garlic"
         },
         {
-          "item": "Baby spinach — Jake 50g, Laine 40g, for a fresh side salad",
-          "nutritionKey": "Baby spinach"
+          "item": "Fresh ginger — Jake ~6g, Laine ~4g, grated",
+          "nutritionKey": "Fresh ginger"
         },
         {
-          "item": "Cherry tomatoes — Jake 30g, Laine 25g, halved, for the salad",
-          "nutritionKey": "Cherry tomatoes"
+          "item": "Sesame oil — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sesame seeds — Jake scant ½ tbsp, Laine ¼ tbsp",
+          "nutritionKey": "Sesame seeds"
         }
       ],
       "steps": [
-        "Preheat oven to 400°F. Cook the quinoa according to package directions.",
-        "Pat the salmon dry, place on a lined sheet pan. Mix grated ginger, turmeric, garlic, most of the olive oil, and half the lemon juice into a paste, rub over the salmon.",
-        "Bake 12–15 min until it flakes easily. Steam the broccoli alongside.",
-        "Toss the baby spinach and cherry tomatoes with the remaining olive oil and lemon juice for a light side salad \u2014 keep it simple, this one's meant to be fresh, not cooked.",
-        "Plate quinoa, salmon, and broccoli together with the salad on the side. Jake gets the bigger fillet."
+        "Preheat oven to 400°F. Cook the rice.",
+        "Whisk soy sauce, honey, garlic, ginger, and sesame oil into a glaze. Rub over the salmon on a lined sheet pan.",
+        "Bake 12–15 min until it flakes easily.",
+        "Steam or stir-fry the bok choy and broccoli until just tender. Top the salmon with sesame seeds. Jake gets the bigger fillet."
       ]
     },
     {
       "day": "Thursday (August 13)",
-      "name": "Turmeric-Lemon Chicken with Quinoa & Vegetable Medley",
-      "note": "Free night. Chicken over quinoa with a colorful mix of zucchini and bell pepper — the kind of plate the \"eat the rainbow\" anti-inflammatory advice is pointing at.",
+      "name": "Sesame Ginger Chicken Stir-Fry",
+      "note": "Free night. Classic stir-fry format — chicken, a colorful vegetable mix, quinoa instead of rice tonight for a bit more fiber.",
       "jake": {
-        "cal": 779,
-        "protein": 73,
-        "carbs": 58,
-        "fat": 29,
-        "fiber": 8.3
+        "cal": 819,
+        "protein": 78,
+        "carbs": 68,
+        "fat": 28,
+        "fiber": 11.4
       },
       "laine": {
-        "cal": 517,
-        "protein": 47,
-        "carbs": 42,
+        "cal": 552,
+        "protein": 50,
+        "carbs": 49,
         "fat": 18,
-        "fiber": 6.2
+        "fiber": 8.7
       },
       "ingredients": [
         {
-          "item": "Chicken breast — Jake 270g, Laine 170g raw",
+          "item": "Chicken breast — Jake 270g, Laine 170g raw, cubed",
           "nutritionKey": "Chicken breast"
         },
         {
@@ -287,193 +282,200 @@
           "nutritionKey": "Quinoa (dry)"
         },
         {
-          "item": "Zucchini — Jake 100g, Laine 85g, sliced",
-          "nutritionKey": "Zucchini"
+          "item": "Carrots — Jake 80g, Laine 65g, sliced",
+          "nutritionKey": "Carrots"
         },
         {
-          "item": "Bell pepper — Jake 100g, Laine 85g, sliced",
+          "item": "Bell pepper — Jake 80g, Laine 65g, sliced",
           "nutritionKey": "Bell pepper"
-        },
-        {
-          "item": "Olive oil — Jake scant 1¼ tbsp, Laine scant 1 tbsp",
-          "nutritionKey": "Olive oil"
-        },
-        {
-          "item": "Ground turmeric — Jake ½ tsp, Laine ⅓ tsp",
-          "nutritionKey": "Ground turmeric"
-        },
-        {
-          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
-          "nutritionKey": "Lemon juice"
-        },
-        {
-          "item": "Garlic — 4–5 cloves, minced",
-          "nutritionKey": "Garlic"
-        },
-        {
-          "item": "Oregano, thyme, cumin, paprika, salt",
-          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
-        }
-      ],
-      "steps": [
-        "Cook the quinoa according to package directions.",
-        "Season the chicken with the spice mix and turmeric. Sear in olive oil 6–7 min per side until cooked through. Rest 5 min, slice.",
-        "In the same pan, sauté the zucchini, bell pepper, and garlic 4–5 min until just tender.",
-        "Plate quinoa and vegetables, top with sliced chicken, finish with a squeeze of lemon. Jake gets more of everything."
-      ]
-    },
-    {
-      "day": "Friday (August 14)",
-      "name": "Mediterranean Cod & White Bean Skillet with Spinach",
-      "note": "Second fish night. Light and simple — cod, cannellini beans, tomato, and spinach, nothing fried or heavy.",
-      "jake": {
-        "cal": 532,
-        "protein": 55,
-        "carbs": 44,
-        "fat": 17,
-        "fiber": 11.6
-      },
-      "laine": {
-        "cal": 369,
-        "protein": 39,
-        "carbs": 33,
-        "fat": 10,
-        "fiber": 8.8
-      },
-      "ingredients": [
-        {
-          "item": "Frozen cod — Jake 220g, Laine 150g raw",
-          "nutritionKey": "Frozen cod"
-        },
-        {
-          "item": "Cannellini beans — Jake scant ½ can, Laine ⅓ can, rinsed",
-          "nutritionKey": "Cannellini beans"
-        },
-        {
-          "item": "Baby spinach — Jake 100g, Laine 80g",
-          "nutritionKey": "Baby spinach"
-        },
-        {
-          "item": "Diced tomatoes (canned) — Jake ⅔ cup, Laine scant ½ cup",
-          "nutritionKey": "Diced tomatoes (canned)"
-        },
-        {
-          "item": "Olive oil — Jake 1 tbsp, Laine scant ¾ tbsp",
-          "nutritionKey": "Olive oil"
-        },
-        {
-          "item": "Garlic — 4–5 cloves, minced",
-          "nutritionKey": "Garlic"
-        },
-        {
-          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
-          "nutritionKey": "Lemon juice"
-        },
-        {
-          "item": "Oregano, thyme, cumin, paprika, salt",
-          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
-        }
-      ],
-      "steps": [
-        "Pat the cod dry, season with spice mix. Sear in olive oil 3–4 min per side until just cooked through, remove.",
-        "In the same pan, add garlic, diced tomatoes, and cannellini beans, simmer 4–5 min.",
-        "Stir in the spinach until just wilted. Flake the cod back in gently, finish with lemon juice.",
-        "Jake gets more of everything."
-      ]
-    },
-    {
-      "day": "Saturday (August 15)",
-      "name": "Turmeric Chickpea & Vegetable Bowl",
-      "note": "Vegetarian night, and a very classic anti-inflammatory combination — turmeric and chickpeas, roasted vegetables, a light lemony dressing, feta kept light-handed rather than loaded on.",
-      "jake": {
-        "cal": 839,
-        "protein": 40,
-        "carbs": 118,
-        "fat": 24,
-        "fiber": 21.6
-      },
-      "laine": {
-        "cal": 667,
-        "protein": 33,
-        "carbs": 97,
-        "fat": 17,
-        "fiber": 17.8
-      },
-      "ingredients": [
-        {
-          "item": "Garbanzo beans — Jake scant ½ can, Laine ⅓ can, rinsed",
-          "nutritionKey": "Garbanzo beans"
-        },
-        {
-          "item": "Quinoa (dry) — Jake 35g, Laine 28g",
-          "nutritionKey": "Quinoa (dry)"
-        },
-        {
-          "item": "Sweet potato — Jake ~65g, Laine ~50g, roasted in small cubes",
-          "nutritionKey": "Sweet potato"
         },
         {
           "item": "Broccoli florets — Jake 80g, Laine 65g",
           "nutritionKey": "Broccoli florets"
         },
         {
-          "item": "Olive oil — Jake scant 1 tbsp, Laine scant ¾ tbsp",
-          "nutritionKey": "Olive oil"
+          "item": "Soy sauce, reduced sodium — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
         },
         {
-          "item": "Ground turmeric — Jake ¾ tsp, Laine ½ tsp",
-          "nutritionKey": "Ground turmeric"
-        },
-        {
-          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
-          "nutritionKey": "Lemon juice"
-        },
-        {
-          "item": "Feta cheese, reduced fat — Jake ¾oz (24g), Laine ⅔oz (20g)",
-          "nutritionKey": "Feta cheese (reduced fat)"
-        },
-        {
-          "item": "Greek yogurt (plain nonfat) — Jake ~1¾ tbsp, Laine ~1½ tbsp, stirred through",
-          "nutritionKey": "Greek yogurt (plain nonfat)"
-        },
-        {
-          "item": "Garlic — 4 cloves, minced",
+          "item": "Garlic — 4–5 cloves, minced",
           "nutritionKey": "Garlic"
         },
         {
-          "item": "Oregano, thyme, cumin, paprika, salt",
-          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+          "item": "Fresh ginger — Jake ~8g, Laine ~5g, grated",
+          "nutritionKey": "Fresh ginger"
+        },
+        {
+          "item": "Sesame oil — Jake 1 tbsp, Laine scant ¾ tbsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sesame seeds — Jake scant ½ tbsp, Laine ⅓ tbsp",
+          "nutritionKey": "Sesame seeds"
         }
       ],
       "steps": [
-        "Preheat oven to 400°F. Toss the sweet potato cubes with a little olive oil and roast 20 min. Steam the broccoli separately.",
         "Cook the quinoa according to package directions.",
-        "Warm the garbanzo beans in a pan with garlic, turmeric, and spice mix, 3–4 min.",
-        "Combine quinoa, roasted sweet potato, broccoli, and garbanzo beans in a bowl. Dress with olive oil and lemon juice.",
-        "Top with crumbled feta and a dollop of Greek yogurt. Jake gets the bigger bowl."
+        "Sear the chicken in sesame oil over high heat until browned and cooked through, remove.",
+        "In the same pan, stir-fry carrots, bell pepper, broccoli, garlic, and ginger 4–5 min until crisp-tender.",
+        "Return the chicken, add soy sauce, toss to coat. Serve over quinoa, top with sesame seeds. Jake gets more of everything."
+      ]
+    },
+    {
+      "day": "Friday (August 14)",
+      "name": "Garlic Soy Shrimp & Cod Stir-Fry",
+      "note": "Second fish night. Shrimp and cod together again like a couple weeks back, this time with a garlic-soy-ginger stir-fry treatment over quinoa.",
+      "jake": {
+        "cal": 645,
+        "protein": 66,
+        "carbs": 54,
+        "fat": 20,
+        "fiber": 8.1
+      },
+      "laine": {
+        "cal": 443,
+        "protein": 44,
+        "carbs": 38,
+        "fat": 14,
+        "fiber": 6.0
+      },
+      "ingredients": [
+        {
+          "item": "Frozen shrimp — Jake 120g, Laine 80g raw, peeled",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Frozen cod — Jake 140g, Laine 95g raw, cubed",
+          "nutritionKey": "Frozen cod"
+        },
+        {
+          "item": "Quinoa (dry) — Jake 55g, Laine 38g",
+          "nutritionKey": "Quinoa (dry)"
+        },
+        {
+          "item": "Bell pepper — Jake 80g, Laine 65g, sliced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Carrots — Jake 60g, Laine 50g, sliced",
+          "nutritionKey": "Carrots"
+        },
+        {
+          "item": "Soy sauce, reduced sodium — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
+        },
+        {
+          "item": "Garlic — 4–5 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Fresh ginger — Jake ~8g, Laine ~5g, grated",
+          "nutritionKey": "Fresh ginger"
+        },
+        {
+          "item": "Sesame oil — Jake scant 1 tbsp, Laine scant ⅔ tbsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sesame seeds — Jake scant ½ tbsp, Laine ¼ tbsp",
+          "nutritionKey": "Sesame seeds"
+        }
+      ],
+      "steps": [
+        "Cook the quinoa according to package directions.",
+        "Pat the cod dry. Sear cod and shrimp in sesame oil 2–3 min per side until just cooked through, remove.",
+        "In the same pan, stir-fry bell pepper, carrots, garlic, and ginger 3–4 min.",
+        "Return the seafood, add soy sauce, toss gently to coat. Serve over quinoa, top with sesame seeds. Jake gets more of everything."
+      ]
+    },
+    {
+      "day": "Saturday (August 15)",
+      "name": "Sesame Tofu & Vegetable Stir-Fry",
+      "note": "Vegetarian night. Pan-crisped tofu with a big mix of vegetables and quinoa — quinoa instead of rice tonight for extra fiber and protein.",
+      "jake": {
+        "cal": 820,
+        "protein": 60,
+        "carbs": 64,
+        "fat": 43,
+        "fiber": 12.4
+      },
+      "laine": {
+        "cal": 606,
+        "protein": 45,
+        "carbs": 47,
+        "fat": 32,
+        "fiber": 9.4
+      },
+      "ingredients": [
+        {
+          "item": "Tofu (firm) — Jake 260g, Laine 200g, pressed and cubed",
+          "nutritionKey": "Tofu (firm)"
+        },
+        {
+          "item": "Quinoa (dry) — Jake 55g, Laine 38g",
+          "nutritionKey": "Quinoa (dry)"
+        },
+        {
+          "item": "Broccoli florets — Jake 90g, Laine 75g",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Carrots — Jake 60g, Laine 50g, sliced",
+          "nutritionKey": "Carrots"
+        },
+        {
+          "item": "Bok choy — Jake 90g, Laine 75g, chopped",
+          "nutritionKey": "Bok choy"
+        },
+        {
+          "item": "Soy sauce, reduced sodium — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
+        },
+        {
+          "item": "Garlic — 4–5 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Fresh ginger — Jake ~8g, Laine ~5g, grated",
+          "nutritionKey": "Fresh ginger"
+        },
+        {
+          "item": "Sesame oil — Jake 1 tbsp, Laine scant 1 tbsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sesame seeds — Jake ½ tbsp, Laine scant ½ tbsp",
+          "nutritionKey": "Sesame seeds"
+        }
+      ],
+      "steps": [
+        "Press the tofu (wrap in a towel, weigh down 10 min) to remove excess water, then cube.",
+        "Cook the quinoa. Pan-fry the tofu in sesame oil until golden and crisp on most sides, remove.",
+        "In the same pan, stir-fry broccoli, carrots, bok choy, garlic, and ginger 4–5 min.",
+        "Return the tofu, add soy sauce, toss gently. Serve over quinoa, top with sesame seeds. Jake gets the bigger portion."
       ]
     },
     {
       "day": "Sunday (August 16)",
-      "name": "Veggie & Avocado Egg White Scramble with Whole Grain Toast",
-      "note": "Standing breakfast-for-dinner. Avocado stands in for a heavier cheese pour this time — still rich and satisfying, just from a different kind of fat. Feta stays light-handed rather than loaded.",
+      "name": "Vegetable & Scallion Egg Fried Rice",
+      "note": "Standing breakfast-for-dinner — classic fried rice, eggs carrying the breakfast callback. Scallions cooked in rather than used raw on top.",
       "jake": {
-        "cal": 743,
-        "protein": 46,
-        "carbs": 62,
-        "fat": 38,
-        "fiber": 17.1
+        "cal": 684,
+        "protein": 42,
+        "carbs": 60,
+        "fat": 30,
+        "fiber": 4.6
       },
       "laine": {
-        "cal": 437,
+        "cal": 455,
         "protein": 26,
-        "carbs": 36,
-        "fat": 24,
-        "fiber": 10.9
+        "carbs": 42,
+        "fat": 20,
+        "fiber": 3.4
       },
       "ingredients": [
         {
-          "item": "Eggs — Jake 2, Laine 1",
+          "item": "Eggs — Jake 3, Laine 2",
           "nutritionKey": "Eggs (large)"
         },
         {
@@ -481,109 +483,105 @@
           "nutritionKey": "Liquid egg whites"
         },
         {
-          "item": "Baby spinach — Jake 100g, Laine 80g",
-          "nutritionKey": "Baby spinach"
+          "item": "White rice (dry, cooked and cooled) — Jake 55g dry-equivalent, Laine 38g",
+          "nutritionKey": "White rice (dry)"
         },
         {
-          "item": "Cherry tomatoes — Jake 60g, Laine 40g, halved",
-          "nutritionKey": "Cherry tomatoes"
+          "item": "Carrots — Jake 50g, Laine 40g, diced small",
+          "nutritionKey": "Carrots"
         },
         {
-          "item": "Bell pepper — Jake 60g, Laine 40g, diced",
+          "item": "Bell pepper — Jake 40g, Laine 30g, diced",
           "nutritionKey": "Bell pepper"
         },
         {
-          "item": "Avocado — Jake ½, Laine ⅓, sliced on top",
-          "nutritionKey": "Avocado"
+          "item": "Scallions — Jake 40g, Laine 30g, sliced, cooked into the rice",
+          "nutritionKey": "Scallions"
         },
         {
-          "item": "Feta cheese, reduced fat — Jake ⅗oz (18g), Laine ½oz (15g)",
-          "nutritionKey": "Feta cheese (reduced fat)"
-        },
-        {
-          "item": "Whole grain bread — Jake 2 slices, Laine 1 slice, toasted",
-          "nutritionKey": "Whole grain bread"
-        },
-        {
-          "item": "Olive oil — Jake ½ tbsp, Laine ⅓ tbsp",
-          "nutritionKey": "Olive oil"
+          "item": "Soy sauce, reduced sodium — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
         },
         {
           "item": "Garlic — 2–3 cloves, minced",
           "nutritionKey": "Garlic"
         },
         {
-          "item": "Oregano, thyme, cumin, paprika, salt",
-          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+          "item": "Sesame oil — Jake scant 1 tbsp, Laine scant ⅔ tbsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sesame seeds — Jake scant ½ tbsp, Laine ¼ tbsp",
+          "nutritionKey": "Sesame seeds"
         }
       ],
       "steps": [
-        "Sauté cherry tomatoes, bell pepper, and garlic in olive oil, 2–3 min.",
-        "Beat the eggs and egg whites together, pour in. Scramble gently over medium-low until just set.",
-        "Fold in the spinach at the end, season with spice mix. Crumble the feta through lightly.",
-        "Toast the bread. Serve the scramble topped with sliced avocado, toast alongside. Jake gets the bigger portion."
+        "Cook the rice ahead of time and let it cool (day-old or fridge-cooled rice fries up much better than fresh).",
+        "Scramble the eggs and egg whites in sesame oil, just until set, break into small pieces, set aside.",
+        "In the same pan, stir-fry carrots, bell pepper, garlic, and scallions 3–4 min until the scallions soften.",
+        "Add the rice, breaking up clumps, stir-fry 3–4 min. Return the eggs, add soy sauce, toss to combine. Top with sesame seeds. Jake gets the bigger portion."
       ]
     }
   ],
   "jakeLunch": {
-    "name": "Turmeric-Ginger Chicken & Quinoa Bowl",
-    "note": "Sunday-batch, 5 containers, no fish. Chicken simmered in a light turmeric-tomato sauce with broccoli stirred in, over quinoa — same saucy, everything-in-one-container format as last week's pork bowl, so nothing needs adding after reheating.",
+    "name": "Sesame-Ginger Chicken & Quinoa Bowl",
+    "note": "Sunday-batch, 5 containers, no fish. Chicken and vegetables stir-fried with a soy-ginger-sesame sauce cooked in, over quinoa — same reheat-friendly, everything-in-one-container format as recent weeks. Broccoli, not spinach.",
     "macros": {
-      "cal": 771,
+      "cal": 764,
       "protein": 86,
-      "carbs": 50,
-      "fat": 26,
-      "fiber": 7.1
+      "carbs": 48,
+      "fat": 27,
+      "fiber": 7.6
     },
     "ingredients": [
       {
-        "item": "Chicken breast — ~3.6 lbs total (330g raw per container)",
+        "item": "Chicken breast — ~3.5 lbs total (320g raw per container)",
         "nutritionKey": "Chicken breast"
       },
       {
-        "item": "Quinoa (dry) — 55g per container",
+        "item": "Quinoa (dry) — 50g per container",
         "nutritionKey": "Quinoa (dry)"
       },
       {
-        "item": "Diced tomatoes (canned) — scant ⅔ cup per container",
-        "nutritionKey": "Diced tomatoes (canned)"
-      },
-      {
-        "item": "Broccoli florets — 50g per container, chopped small",
+        "item": "Broccoli florets — 80g per container",
         "nutritionKey": "Broccoli florets"
       },
       {
-        "item": "Ground turmeric — scant ⅛ tsp per container",
-        "nutritionKey": "Ground turmeric"
+        "item": "Carrots — 50g per container, sliced",
+        "nutritionKey": "Carrots"
       },
       {
-        "item": "Olive oil — scant 1 tbsp per container",
-        "nutritionKey": "Olive oil"
+        "item": "Soy sauce, reduced sodium — 1½ tbsp per container",
+        "nutritionKey": "Soy sauce (reduced sodium)"
       },
       {
         "item": "Garlic — 2 cloves per container",
         "nutritionKey": "Garlic"
       },
       {
-        "item": "Lemon juice — scant 1 tbsp per container",
-        "nutritionKey": "Lemon juice"
+        "item": "Fresh ginger — ~6g per container, grated",
+        "nutritionKey": "Fresh ginger"
       },
       {
-        "item": "Oregano, thyme, cumin, paprika, salt",
-        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        "item": "Sesame oil — scant 1 tbsp per container",
+        "nutritionKey": "Sesame oil"
+      },
+      {
+        "item": "Sesame seeds — scant ½ tbsp per container",
+        "nutritionKey": "Sesame seeds"
       }
     ],
     "steps": [
       "Cook all the quinoa at once.",
-      "Cube the chicken. Sear in batches in olive oil until browned on the outside.",
-      "Add garlic, turmeric, diced tomatoes, and lemon juice to the pan. Return the chicken, simmer 6–7 min.",
-      "Stir in the chopped broccoli and simmer another 3–4 min, until the broccoli is just tender and the sauce has thickened slightly.",
-      "Divide quinoa and the saucy chicken evenly across 5 containers."
+      "Cube the chicken. Sear in batches in sesame oil until browned and cooked through.",
+      "Add garlic, ginger, broccoli, and carrots to the pan, stir-fry 4–5 min until just tender.",
+      "Return the chicken, add soy sauce, toss to coat. Top with sesame seeds.",
+      "Divide quinoa and the chicken mixture evenly across 5 containers."
     ]
   },
   "laineLunch": {
     "name": "Cold Tuna & Black Bean Mason Jar",
-    "note": "Standing cold format, unchanged — already a pretty lean, anti-inflammatory-friendly lunch as it stands.",
+    "note": "Standing cold format, unchanged.",
     "macros": {
       "cal": 615,
       "protein": 47,
@@ -668,6 +666,7 @@
         "fat": 3,
         "fiber": 2.2
       },
+      "note": "Kept as-is — same-day cooked, so it doesn't have the reheating issue lunch spinach had.",
       "ingredients": [
         {
           "item": "Liquid egg whites — ¾ cup",
@@ -845,7 +844,7 @@
         "fat": 18,
         "fiber": 7.7
       },
-      "desc": "1 apple, sliced, with almond butter — swapped in for the usual cheddar pairing this week for a lighter, nuts-based fat instead.",
+      "desc": "1 apple, sliced, with almond butter.",
       "ingredients": [
         {
           "item": "Apple — 1 medium",
@@ -866,7 +865,7 @@
         "fat": 2,
         "fiber": 2.2
       },
-      "desc": "1 cup cottage cheese + 1 cup frozen tart cherries, thawed — swapped in for the usual banana since tart cherries have some evidence behind them for helping lower uric acid, which came back elevated on your labs.",
+      "desc": "1 cup cottage cheese + 1 cup frozen tart cherries, thawed — the uric-acid-friendly swap from last week, kept in.",
       "ingredients": [
         {
           "item": "Cottage cheese 2% — 1 cup",
@@ -942,66 +941,24 @@
       ]
     }
   ],
-  "shopping": {
-    "Must Buy": [
-      "Frozen pork loin — have on hand (Monday roast + Tuesday leftovers). If it's less than ~1.15 lbs total, grab a bit more.",
-      "Chicken breast — ~4.7 lbs total (Thursday dinner + Jake's 5-container lunch batch)",
-      "Frozen shrimp — ~0.5 lb (Tuesday treat)",
-      "Frozen cod — ~0.8 lb (Friday)",
-      "Atlantic salmon — ~0.85 lb (Wednesday)",
-      "Sweet potatoes — 4–5 medium (Monday + Saturday)",
-      "Fresh ginger — 1 small knob (sauce + Wednesday salmon)",
-      "Avocados — 4 (Sunday dinner + Laine's lunch jars)",
-      "Whole grain bread — 1 loaf (Sunday)",
-      "Zucchini, bell peppers — for Thursday's medley + Sunday + Laine's lunch/snacks",
-      "Baby spinach — larger bag (Friday, Jake's lunch, Sunday, breakfast scramble)",
-      "Broccoli florets — 1 bag (Monday, Wednesday, Saturday)",
-      "Cherry tomatoes — 1 pint",
-      "Whole wheat pita — 1 bag (Tuesday)",
-      "Canned tuna in water — 5 cans (Laine's lunch)",
-      "English cucumber — 1–2",
-      "Eggs — 1 dozen (Sunday dinner + breakfasts)"
-    ],
-    "Check Supply": [
-      "Ground turmeric, quinoa (dry) — both used often this week, worth double-checking you have enough of each",
-      "Garbanzo beans, cannellini beans, black beans, diced tomatoes (canned) — a couple cans each",
-      "Feta cheese, reduced fat — small amount needed (Saturday, Sunday, breakfast scramble) — kept light-handed this week",
-      "Greek yogurt (plain nonfat) — 1 tub (sauce batch + Saturday)",
-      "Almond butter — for the swapped-in Monday snack",
-      "Oikos Triple Zero — 6+ containers",
-      "Liquid egg whites — 1 carton",
-      "Olive oil, garlic, lemon juice — used most nights",
-      "Frozen mixed berries, ground flaxseed — breakfast staples",
-      "Frozen tart cherries — new this week, for Jake's swapped snack",
-      "Hummus, roasted chickpeas, almonds, cottage cheese — snack staples",
-      "Romaine lettuce — 1 small head",
-      "Oregano / thyme / cumin / paprika — restock if low",
-      "Birch Benders mix (Sunday morning waffles)"
-    ],
-    "Already Have": [
-      "Cheddar cheese, shredded — not used this week; whatever's left from a couple weeks ago keeps fine",
-      "Salt, pepper, garlic powder",
-      "Corn tortillas / other pantry backups"
-    ]
-  },
   "targets": {
     "jake": {
       "rows": [
         [
           "Lunch Bowl",
-          771,
+          764,
           86,
-          50,
-          26,
-          7.1
+          48,
+          27,
+          7.6
         ],
         [
           "Dinner (avg)",
-          764.9,
-          59.6,
-          64.7,
-          31.0,
-          12.5
+          756.7,
+          65.9,
+          61.7,
+          29.1,
+          7.4
         ],
         [
           "1–2 Snacks",
@@ -1021,11 +978,11 @@
         ]
       ],
       "total": [
-        1883,
-        184,
-        135,
-        69,
-        24.2
+        1868,
+        190,
+        130,
+        68,
+        19.6
       ],
       "goal": [
         2030,
@@ -1055,11 +1012,11 @@
         ],
         [
           "Dinner (avg)",
-          518.6,
-          39.7,
-          47.6,
-          19.9,
-          9.4
+          514.1,
+          43.0,
+          43.9,
+          19.7,
+          5.6
         ],
         [
           "1 Snack",
@@ -1079,11 +1036,11 @@
         ]
       ],
       "total": [
-        1530,
-        123,
-        143,
+        1526,
+        126,
+        140,
         56,
-        33.3
+        29.5
       ],
       "goal": [
         1363,
@@ -1108,6 +1065,53 @@
         "nutritionKey": "One A Day Women's Multi",
         "desc": "1 tablet daily with food."
       }
+    ]
+  },
+  "shopping": {
+    "Must Buy": [
+      "Pork tenderloin — ~1.9 lbs (Monday roast + Tuesday leftovers)",
+      "Chicken breast — ~4.5 lbs (Thursday dinner + Jake's 5-container lunch batch)",
+      "Frozen shrimp — ~1 lb (Tuesday + Friday)",
+      "Frozen cod — ~0.5 lb (Friday)",
+      "Atlantic salmon — ~0.85 lb (Wednesday)",
+      "Tofu, firm — ~1 lb / 2 standard 14oz blocks (Saturday)",
+      "Broccoli florets — ~2.3 lbs total, the week's biggest vegetable (Monday, Wednesday, Thursday, Saturday, Jake's lunch)",
+      "Bell peppers — ~1.8 lbs / 3–4 large (Thursday, Friday, Sunday, Laine's lunch/snacks)",
+      "Carrots — ~1.8 lbs / 1 bag (Tuesday, Thursday, Friday, Saturday, Sunday, Jake's lunch)",
+      "Bok choy — ~1 lb / 2–3 heads (Wednesday, Saturday)",
+      "Fresh ginger — one good-sized knob, ~4oz (used across nearly every dinner plus the sauce)",
+      "Scallions — 1 bunch (Tuesday, Sunday)",
+      "Romaine lettuce — 1 head (Tuesday, for the wrap cups)",
+      "English cucumber — 2 (Laine's lunch + snack)",
+      "Avocados — 3 (Laine's lunch, added fresh)",
+      "Canned tuna in water — 5 cans (Laine's lunch)",
+      "Eggs — 1 dozen (Sunday dinner)",
+      "Frozen tart cherries — if last week's is used up (Jake's snack)"
+    ],
+    "Check Supply": [
+      "Soy sauce, reduced sodium — this week uses a lot (~14oz total across everything) — probably needs a fresh bottle",
+      "Sesame oil — ~8oz total used — check the bottle, likely needs replacing",
+      "Rice vinegar — small amount, just for the sauce batch",
+      "Honey — ~3oz total (Monday, Wednesday, the sauce)",
+      "Sesame seeds — small jar, used as a finishing touch most nights",
+      "White rice (dry) — ~0.65 lb needed (Monday, Wednesday, Sunday)",
+      "Quinoa (dry) — ~1.2 lb needed (Thursday, Friday, Saturday, Jake's lunch)",
+      "Black beans — 1 can (Laine's lunch)",
+      "Garlic — used in almost everything, make sure you have a full bulb",
+      "Olive oil, lemon juice — small amounts, Laine's lunch only this week",
+      "Greek yogurt (plain nonfat), Oikos Triple Zero — sauce batch + breakfasts/snacks",
+      "Liquid egg whites — 1 carton",
+      "Feta cheese, reduced fat — small amount, breakfast scramble only this week",
+      "Baby spinach, cherry tomatoes — small amounts, breakfast scramble only this week",
+      "Frozen mixed berries, ground flaxseed — breakfast staples",
+      "Hummus, roasted chickpeas, almonds, almond butter, cottage cheese, apples, bananas — snack staples",
+      "Oregano / thyme / cumin / paprika spice blend — only needed for the breakfast scramble this week",
+      "Birch Benders mix (Sunday morning waffles)"
+    ],
+    "Already Have": [
+      "Cheddar cheese, shredded — not used anywhere this week, still fine sitting from a couple weeks back",
+      "Salt, pepper, garlic powder",
+      "Corn tortillas / other pantry backups"
     ]
   }
 }

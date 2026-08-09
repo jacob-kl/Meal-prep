@@ -435,6 +435,31 @@
       "selenium": 3
     }
   },
+  "Bok choy": {
+    "cal": 13,
+    "protein": 2,
+    "carbs": 2,
+    "fat": 0,
+    "fiber": 1.0,
+    "serving": "100g raw",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 65,
+      "potassium": 252,
+      "calcium": 105,
+      "vitamin_d": 0,
+      "magnesium": 19,
+      "zinc": 0.2,
+      "vitamin_c": 45,
+      "vitamin_b12": 0,
+      "iron": 0.8,
+      "vitamin_a": 318,
+      "folate": 66,
+      "phosphorus": 37,
+      "selenium": 0.5
+    }
+  },
   "Broccoli florets": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -519,6 +544,31 @@
     "carbs": 74,
     "fat": 1,
     "fiber": 19.8
+  },
+  "Carrots": {
+    "cal": 41,
+    "protein": 1,
+    "carbs": 10,
+    "fat": 0,
+    "fiber": 2.8,
+    "serving": "100g raw",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 69,
+      "potassium": 320,
+      "calcium": 33,
+      "vitamin_d": 0,
+      "magnesium": 12,
+      "zinc": 0.2,
+      "vitamin_c": 6,
+      "vitamin_b12": 0,
+      "iron": 0.3,
+      "vitamin_a": 835,
+      "folate": 19,
+      "phosphorus": 35,
+      "selenium": 0.1
+    }
   },
   "Cauliflower": {
     "cal": 25,
@@ -1205,6 +1255,16 @@
       "selenium": 38
     }
   },
+  "Frozen tart cherries": {
+    "cal": 42,
+    "protein": 1,
+    "carbs": 10,
+    "fat": 0,
+    "fiber": 1.5,
+    "serving": "100g frozen, pitted, unsweetened",
+    "serving_qty": 100,
+    "serving_unit": "g"
+  },
   "Frozen veggies (mixed)": {
     "serving_qty": 1,
     "serving_unit": "cup",
@@ -1470,6 +1530,31 @@
       "zinc": 0
     },
     "note": "Homemade: AP flour, yogurt, garlic butter. Batch of 6; macros per piece."
+  },
+  "Honey": {
+    "cal": 64,
+    "protein": 0,
+    "carbs": 17,
+    "fat": 0,
+    "fiber": 0,
+    "serving": "1 tbsp",
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "micros": {
+      "sodium": 1,
+      "potassium": 11,
+      "calcium": 1,
+      "vitamin_d": 0,
+      "magnesium": 1,
+      "zinc": 0.1,
+      "vitamin_c": 0.1,
+      "vitamin_b12": 0,
+      "iron": 0.1,
+      "vitamin_a": 0,
+      "folate": 0,
+      "phosphorus": 1,
+      "selenium": 0.1
+    }
   },
   "Hummus": {
     "serving_qty": 60,
@@ -1990,6 +2075,16 @@
       "selenium": 8.5
     }
   },
+  "Rice vinegar": {
+    "cal": 3,
+    "protein": 0,
+    "carbs": 0.5,
+    "fat": 0,
+    "fiber": 0,
+    "serving": "1 tbsp",
+    "serving_qty": 1,
+    "serving_unit": "tbsp"
+  },
   "Roasted chickpeas (snack)": {
     "cal": 120,
     "protein": 5,
@@ -2115,6 +2210,81 @@
       "selenium": 52.7
     }
   },
+  "Scallions": {
+    "cal": 32,
+    "protein": 2,
+    "carbs": 7,
+    "fat": 0,
+    "fiber": 2.6,
+    "serving": "100g raw",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 16,
+      "potassium": 276,
+      "calcium": 72,
+      "vitamin_d": 0,
+      "magnesium": 20,
+      "zinc": 0.4,
+      "vitamin_c": 19,
+      "vitamin_b12": 0,
+      "iron": 1.5,
+      "vitamin_a": 50,
+      "folate": 64,
+      "phosphorus": 37,
+      "selenium": 0.6
+    }
+  },
+  "Sesame oil": {
+    "cal": 120,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 14,
+    "fiber": 0,
+    "serving": "1 tbsp",
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "micros": {
+      "sodium": 0,
+      "potassium": 0,
+      "calcium": 0,
+      "vitamin_d": 0,
+      "magnesium": 0,
+      "zinc": 0,
+      "vitamin_c": 0,
+      "vitamin_b12": 0,
+      "iron": 0.1,
+      "vitamin_a": 0,
+      "folate": 0,
+      "phosphorus": 2,
+      "selenium": 0
+    }
+  },
+  "Sesame seeds": {
+    "cal": 52,
+    "protein": 2,
+    "carbs": 2,
+    "fat": 4.5,
+    "fiber": 1.1,
+    "serving": "1 tbsp (9g)",
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "micros": {
+      "sodium": 1,
+      "potassium": 42,
+      "calcium": 88,
+      "vitamin_d": 0,
+      "magnesium": 32,
+      "zinc": 0.7,
+      "vitamin_c": 0,
+      "vitamin_b12": 0,
+      "iron": 1.3,
+      "vitamin_a": 0,
+      "folate": 9,
+      "phosphorus": 57,
+      "selenium": 1.7
+    }
+  },
   "Shredded cheese (4-blend)": {
     "serving_qty": 2,
     "serving_unit": "tbsp",
@@ -2173,6 +2343,31 @@
       "folate": 10,
       "phosphorus": 45,
       "selenium": 0.5
+    }
+  },
+  "Soy sauce (reduced sodium)": {
+    "cal": 8,
+    "protein": 1,
+    "carbs": 1,
+    "fat": 0,
+    "fiber": 0,
+    "serving": "1 tbsp",
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "micros": {
+      "sodium": 533,
+      "potassium": 29,
+      "calcium": 3,
+      "vitamin_d": 0,
+      "magnesium": 3,
+      "zinc": 0,
+      "vitamin_c": 0,
+      "vitamin_b12": 0,
+      "iron": 0.3,
+      "vitamin_a": 0,
+      "folate": 1,
+      "phosphorus": 17,
+      "selenium": 1.4
     }
   },
   "Spices (cumin/paprika/garlic powder/salt)": {
@@ -2289,6 +2484,31 @@
     "carbs": 22,
     "fat": 9,
     "fiber": 0
+  },
+  "Tofu (firm)": {
+    "cal": 144,
+    "protein": 17,
+    "carbs": 3,
+    "fat": 9,
+    "fiber": 1,
+    "serving": "100g raw",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 14,
+      "potassium": 179,
+      "calcium": 683,
+      "vitamin_d": 0,
+      "magnesium": 58,
+      "zinc": 1.6,
+      "vitamin_c": 0,
+      "vitamin_b12": 0,
+      "iron": 2.7,
+      "vitamin_a": 0,
+      "folate": 19,
+      "phosphorus": 190,
+      "selenium": 9
+    }
   },
   "Walnuts": {
     "serving_qty": 28,
