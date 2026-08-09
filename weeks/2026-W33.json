@@ -66,18 +66,18 @@
       "name": "Herb-Roasted Pork Loin with Sweet Potato & Broccoli",
       "note": "Uses the frozen pork loin — trimmed of visible fat and roasted, not fried or creamed, which is the main dietary lever for inflammation: lean preparation over rich or fried. Sweet potato instead of white for more fiber and beta-carotene. Cook extra pork alongside for Tuesday.",
       "jake": {
-        "cal": 756,
-        "protein": 62,
-        "carbs": 60,
-        "fat": 30,
-        "fiber": 10.5
+        "cal": 834,
+        "protein": 64,
+        "carbs": 64,
+        "fat": 37,
+        "fiber": 12.0
       },
       "laine": {
-        "cal": 496,
-        "protein": 40,
-        "carbs": 45,
-        "fat": 18,
-        "fiber": 8.0
+        "cal": 553,
+        "protein": 41,
+        "carbs": 48,
+        "fat": 23,
+        "fiber": 9.2
       },
       "ingredients": [
         {
@@ -93,7 +93,7 @@
           "nutritionKey": "Broccoli florets"
         },
         {
-          "item": "Olive oil — Jake 1 tbsp, Laine scant ¾ tbsp",
+          "item": "Olive oil — Jake scant 1½ tbsp total, Laine scant 1 tbsp total (roasting + salad)",
           "nutritionKey": "Olive oil"
         },
         {
@@ -103,6 +103,18 @@
         {
           "item": "Oregano, thyme, cumin, paprika, salt",
           "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        },
+        {
+          "item": "Baby spinach — Jake 50g, Laine 40g, for a fresh side salad",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 30g, Laine 25g, halved, for the salad",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Lemon juice — Jake ¼ tbsp, Laine scant ¼ tbsp, for the salad dressing",
+          "nutritionKey": "Lemon juice"
         }
       ],
       "steps": [
@@ -110,6 +122,7 @@
         "Toss the sweet potato wedges with half the olive oil and spice mix, roast 15 min.",
         "Rub the pork loin (both Monday's and Tuesday's extra piece, roasted together) with the remaining oil, garlic, and spice mix.",
         "Add the pork to the pan with the potatoes, roast 20–25 min more until the pork hits 145°F internal. Rest 5 min before slicing. Steam the broccoli separately.",
+        "Toss the baby spinach and cherry tomatoes with a drizzle of olive oil and the lemon juice for a simple fresh side salad — no cooking, just plate it alongside.",
         "Set the extra plain pork aside once cooled for Tuesday. Jake gets the bigger portion."
       ]
     },
@@ -183,18 +196,18 @@
       "name": "Ginger-Turmeric Baked Salmon, Quinoa & Broccoli",
       "note": "Fish night. Salmon already brings good omega-3s; ginger and turmeric layer on top of that.",
       "jake": {
-        "cal": 890,
-        "protein": 59,
-        "carbs": 56,
-        "fat": 46,
-        "fiber": 8.6
+        "cal": 938,
+        "protein": 61,
+        "carbs": 60,
+        "fat": 50,
+        "fiber": 10.1
       },
       "laine": {
-        "cal": 594,
-        "protein": 40,
-        "carbs": 40,
-        "fat": 30,
-        "fiber": 6.4
+        "cal": 630,
+        "protein": 41,
+        "carbs": 43,
+        "fat": 33,
+        "fiber": 7.6
       },
       "ingredients": [
         {
@@ -210,7 +223,7 @@
           "nutritionKey": "Broccoli florets"
         },
         {
-          "item": "Olive oil — Jake scant 1 tbsp, Laine scant ½ tbsp",
+          "item": "Olive oil — Jake scant 1¼ tbsp total, Laine scant ¾ tbsp total (rub + salad)",
           "nutritionKey": "Olive oil"
         },
         {
@@ -222,19 +235,28 @@
           "nutritionKey": "Ground turmeric"
         },
         {
-          "item": "Lemon juice — Jake ½ tbsp, Laine scant ½ tbsp",
+          "item": "Lemon juice — Jake ¾ tbsp total, Laine scant ¾ tbsp total (rub + salad)",
           "nutritionKey": "Lemon juice"
         },
         {
           "item": "Garlic — 2–3 cloves, minced",
           "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Baby spinach — Jake 50g, Laine 40g, for a fresh side salad",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 30g, Laine 25g, halved, for the salad",
+          "nutritionKey": "Cherry tomatoes"
         }
       ],
       "steps": [
         "Preheat oven to 400°F. Cook the quinoa according to package directions.",
-        "Pat the salmon dry, place on a lined sheet pan. Mix grated ginger, turmeric, garlic, olive oil, and lemon juice into a paste, rub over the salmon.",
+        "Pat the salmon dry, place on a lined sheet pan. Mix grated ginger, turmeric, garlic, most of the olive oil, and half the lemon juice into a paste, rub over the salmon.",
         "Bake 12–15 min until it flakes easily. Steam the broccoli alongside.",
-        "Plate quinoa, salmon, and broccoli together. Jake gets the bigger fillet."
+        "Toss the baby spinach and cherry tomatoes with the remaining olive oil and lemon juice for a light side salad \u2014 keep it simple, this one's meant to be fresh, not cooked.",
+        "Plate quinoa, salmon, and broccoli together with the salad on the side. Jake gets the bigger fillet."
       ]
     },
     {
@@ -505,13 +527,13 @@
   ],
   "jakeLunch": {
     "name": "Turmeric-Ginger Chicken & Quinoa Bowl",
-    "note": "Sunday-batch, 5 containers, no fish. Chicken simmered in a light turmeric-tomato sauce with spinach wilted in, over quinoa — same saucy, everything-in-one-container format as last week's pork bowl, so nothing needs adding after reheating.",
+    "note": "Sunday-batch, 5 containers, no fish. Chicken simmered in a light turmeric-tomato sauce with broccoli stirred in, over quinoa — same saucy, everything-in-one-container format as last week's pork bowl, so nothing needs adding after reheating.",
     "macros": {
-      "cal": 766,
+      "cal": 771,
       "protein": 86,
-      "carbs": 48,
+      "carbs": 50,
       "fat": 26,
-      "fiber": 6.9
+      "fiber": 7.1
     },
     "ingredients": [
       {
@@ -527,8 +549,8 @@
         "nutritionKey": "Diced tomatoes (canned)"
       },
       {
-        "item": "Baby spinach — 50g per container",
-        "nutritionKey": "Baby spinach"
+        "item": "Broccoli florets — 50g per container, chopped small",
+        "nutritionKey": "Broccoli florets"
       },
       {
         "item": "Ground turmeric — scant ⅛ tsp per container",
@@ -554,8 +576,8 @@
     "steps": [
       "Cook all the quinoa at once.",
       "Cube the chicken. Sear in batches in olive oil until browned on the outside.",
-      "Add garlic, turmeric, diced tomatoes, and lemon juice to the pan. Return the chicken, simmer 8–10 min until cooked through and the sauce has thickened slightly.",
-      "Stir in the spinach at the end, just until wilted.",
+      "Add garlic, turmeric, diced tomatoes, and lemon juice to the pan. Return the chicken, simmer 6–7 min.",
+      "Stir in the chopped broccoli and simmer another 3–4 min, until the broccoli is just tender and the sauce has thickened slightly.",
       "Divide quinoa and the saucy chicken evenly across 5 containers."
     ]
   },
@@ -836,23 +858,23 @@
       ]
     },
     {
-      "name": "Cottage Cheese + Banana",
+      "name": "Cottage Cheese + Tart Cherries",
       "macros": {
-        "cal": 195,
-        "protein": 13,
-        "carbs": 31,
+        "cal": 153,
+        "protein": 14,
+        "carbs": 19,
         "fat": 2,
-        "fiber": 3.1
+        "fiber": 2.2
       },
-      "desc": "1 cup cottage cheese + 1 banana.",
+      "desc": "1 cup cottage cheese + 1 cup frozen tart cherries, thawed — swapped in for the usual banana since tart cherries have some evidence behind them for helping lower uric acid, which came back elevated on your labs.",
       "ingredients": [
         {
           "item": "Cottage cheese 2% — 1 cup",
           "nutritionKey": "Cottage cheese 2%"
         },
         {
-          "item": "Banana — 1 medium",
-          "nutritionKey": "Banana"
+          "item": "Frozen tart cherries — 1 cup (150g), thawed",
+          "nutritionKey": "Frozen tart cherries"
         }
       ]
     },
@@ -950,6 +972,7 @@
       "Liquid egg whites — 1 carton",
       "Olive oil, garlic, lemon juice — used most nights",
       "Frozen mixed berries, ground flaxseed — breakfast staples",
+      "Frozen tart cherries — new this week, for Jake's swapped snack",
       "Hummus, roasted chickpeas, almonds, cottage cheese — snack staples",
       "Romaine lettuce — 1 small head",
       "Oregano / thyme / cumin / paprika — restock if low",
@@ -966,19 +989,19 @@
       "rows": [
         [
           "Lunch Bowl",
-          766,
+          771,
           86,
-          48,
+          50,
           26,
-          6.9
+          7.1
         ],
         [
           "Dinner (avg)",
-          746.9,
-          59.0,
-          63.6,
-          29.4,
-          12.1
+          764.9,
+          59.6,
+          64.7,
+          31.0,
+          12.5
         ],
         [
           "1–2 Snacks",
@@ -998,11 +1021,11 @@
         ]
       ],
       "total": [
-        1860,
-        183,
-        132,
-        67,
-        23.6
+        1883,
+        184,
+        135,
+        69,
+        24.2
       ],
       "goal": [
         2030,
@@ -1032,11 +1055,11 @@
         ],
         [
           "Dinner (avg)",
-          505.3,
-          39.4,
-          46.7,
-          18.7,
-          9.0
+          518.6,
+          39.7,
+          47.6,
+          19.9,
+          9.4
         ],
         [
           "1 Snack",
@@ -1056,11 +1079,11 @@
         ]
       ],
       "total": [
-        1517,
+        1530,
         123,
-        142,
-        55,
-        32.9
+        143,
+        56,
+        33.3
       ],
       "goal": [
         1363,
