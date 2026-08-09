@@ -1005,6 +1005,31 @@
       "selenium": 0
     }
   },
+  "Fresh ginger": {
+    "cal": 80,
+    "protein": 2,
+    "carbs": 18,
+    "fat": 1,
+    "fiber": 2.0,
+    "serving": "100g raw",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 13,
+      "potassium": 415,
+      "calcium": 16,
+      "vitamin_d": 0,
+      "magnesium": 43,
+      "zinc": 0.3,
+      "vitamin_c": 5,
+      "vitamin_b12": 0,
+      "iron": 0.6,
+      "vitamin_a": 0,
+      "folate": 11,
+      "phosphorus": 34,
+      "selenium": 0.7
+    }
+  },
   "Frozen cod": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
@@ -1383,6 +1408,31 @@
       "folate": 8,
       "phosphorus": 196,
       "selenium": 20.6
+    }
+  },
+  "Ground turmeric": {
+    "cal": 9,
+    "protein": 0,
+    "carbs": 2,
+    "fat": 0,
+    "fiber": 0.7,
+    "serving": "1 tsp (3g)",
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "micros": {
+      "sodium": 1,
+      "potassium": 62,
+      "calcium": 4,
+      "vitamin_d": 0,
+      "magnesium": 6,
+      "zinc": 0.1,
+      "vitamin_c": 0.3,
+      "vitamin_b12": 0,
+      "iron": 1.6,
+      "vitamin_a": 0,
+      "folate": 0.6,
+      "phosphorus": 7,
+      "selenium": 0.2
     }
   },
   "Hatch diced green chiles": {
@@ -1833,6 +1883,31 @@
       "folate": 476,
       "phosphorus": 420,
       "selenium": 2.5
+    }
+  },
+  "Pork loin": {
+    "cal": 143,
+    "protein": 21,
+    "carbs": 0,
+    "fat": 6,
+    "fiber": 0,
+    "serving": "100g raw, lean only trimmed",
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "micros": {
+      "sodium": 58,
+      "potassium": 423,
+      "calcium": 19,
+      "vitamin_d": 0.5,
+      "magnesium": 26,
+      "zinc": 2.0,
+      "vitamin_c": 0.4,
+      "vitamin_b12": 0.6,
+      "iron": 0.8,
+      "vitamin_a": 2,
+      "folate": 4,
+      "phosphorus": 227,
+      "selenium": 32
     }
   },
   "Pork shoulder (pulled)": {
