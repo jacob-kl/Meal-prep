@@ -1,5 +1,5 @@
 {
-  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
+  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy \u2014 calcium and potassium priority. Laine: breast cancer recovery \u2014 calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
   "_dri": {
     "jake": {
       "sodium": {
@@ -228,7 +228,7 @@
   "Avocado": {
     "serving_qty": 0.5,
     "serving_unit": "avocado",
-    "serving": "per ½ avocado (~100g)",
+    "serving": "per \u00bd avocado (~100g)",
     "cal": 160,
     "protein": 2,
     "carbs": 9,
@@ -403,7 +403,7 @@
   "Birch Benders pancake mix": {
     "serving_qty": 0.33,
     "serving_unit": "cup",
-    "serving": "per ⅓ cup dry (40g)",
+    "serving": "per \u2153 cup dry (40g)",
     "cal": 150,
     "protein": 5,
     "carbs": 30,
@@ -598,7 +598,7 @@
   "Cheddar cheese (shredded)": {
     "serving_qty": 0.25,
     "serving_unit": "cup",
-    "serving": "per ¼ cup shredded (28g/1oz, USDA FDC 173414)",
+    "serving": "per \u00bc cup shredded (28g/1oz, USDA FDC 173414)",
     "cal": 113,
     "protein": 7,
     "carbs": 0.4,
@@ -680,6 +680,31 @@
       "selenium": 27.6
     }
   },
+  "Chicken thighs (boneless, skinless)": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw, boneless skinless (USDA FDC 171077)",
+    "cal": 119,
+    "protein": 20,
+    "carbs": 0,
+    "fat": 4,
+    "fiber": 0,
+    "micros": {
+      "sodium": 86,
+      "potassium": 231,
+      "calcium": 10,
+      "vitamin_d": 0.1,
+      "magnesium": 20,
+      "zinc": 2.0,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.3,
+      "iron": 1.0,
+      "vitamin_a": 20,
+      "folate": 6,
+      "phosphorus": 165,
+      "selenium": 19
+    }
+  },
   "Chickpea flour (besan)": {
     "cal": 387,
     "protein": 22,
@@ -758,7 +783,7 @@
   "Cottage cheese 2%": {
     "serving_qty": 0.5,
     "serving_unit": "cup",
-    "serving": "per ½ cup (113g)",
+    "serving": "per \u00bd cup (113g)",
     "cal": 90,
     "protein": 12,
     "carbs": 4,
@@ -1739,7 +1764,7 @@
   "Liquid egg whites": {
     "serving_qty": 0.5,
     "serving_unit": "cup",
-    "serving": "per ½ cup (120ml)",
+    "serving": "per \u00bd cup (120ml)",
     "cal": 53,
     "protein": 11,
     "carbs": 1,
