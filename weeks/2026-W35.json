@@ -499,14 +499,14 @@
     }
   ],
   "jakeLunch": {
-    "name": "Sesame-Ginger Chicken Thigh & Quinoa Bowl",
-    "note": "Sunday-batch, 5 containers, no fish. Chicken thighs instead of breast this time — holds up better over 5 days of reheating. Same saucy, everything-in-one-container format. Broccoli, not spinach.",
+    "name": "Teriyaki Chicken Thigh & Quinoa Bowl",
+    "note": "Sunday-batch, 5 containers, no fish. Same reheat-friendly format, different sauce this time — a soy-honey-garlic-ginger teriyaki glaze instead of the plain soy-ginger-sesame from last time. Broccoli, not spinach.",
     "macros": {
-      "cal": 783,
-      "protein": 77,
-      "carbs": 48,
-      "fat": 32,
-      "fiber": 7.9
+      "cal": 805,
+      "protein": 76,
+      "carbs": 59,
+      "fat": 30,
+      "fiber": 7.7
     },
     "ingredients": [
       {
@@ -526,8 +526,12 @@
         "nutritionKey": "Carrots"
       },
       {
-        "item": "Soy sauce, reduced sodium — 1½ tbsp per container",
+        "item": "Soy sauce, reduced sodium — 1 tbsp per container",
         "nutritionKey": "Soy sauce (reduced sodium)"
+      },
+      {
+        "item": "Honey — 2 tsp per container",
+        "nutritionKey": "Honey"
       },
       {
         "item": "Garlic — 2 cloves per container",
@@ -548,10 +552,11 @@
     ],
     "steps": [
       "Cook all the quinoa at once.",
+      "Whisk soy sauce, honey, garlic, and ginger into a teriyaki glaze.",
       "Cube the chicken thighs. Sear in batches in sesame oil until browned and cooked through.",
-      "Add garlic, ginger, carrots, and broccoli to the pan, stir-fry 4-5 min until just tender.",
-      "Return the chicken, add soy sauce, toss to coat.",
-      "Divide quinoa and the chicken mixture evenly across 5 containers."
+      "Add broccoli and carrots to the pan, stir-fry 4-5 min until just tender.",
+      "Return the chicken, add the glaze, toss to coat and let it reduce slightly, 1-2 min.",
+      "Divide quinoa and the chicken mixture evenly across 5 containers. Top with sesame seeds."
     ]
   },
   "laineLunch": {
@@ -921,11 +926,11 @@
       "rows": [
         [
           "Lunch Bowl",
-          783,
-          77,
-          48,
-          32,
-          7.9
+          805,
+          76,
+          59,
+          30,
+          7.7
         ],
         [
           "Dinner (avg)",
@@ -953,11 +958,11 @@
         ]
       ],
       "total": [
-        1903,
-        179,
-        125,
-        77,
-        20.1
+        1925,
+        178,
+        136,
+        75,
+        19.9
       ],
       "goal": [
         2030,
@@ -1070,7 +1075,7 @@
     "Check Supply": [
       "Soy sauce, reduced sodium — used in nearly every dish this week (~13oz total), likely needs a fresh bottle",
       "Sesame oil — ~7oz total used, check the bottle",
-      "Honey — ~3oz total (Monday, the sauce)",
+      "Honey — ~5oz total now (Monday, the sauce, and Jake’s lunch batch) — probably needs a fresh bottle",
       "Rice vinegar — small amount, Monday + the sauce",
       "Sesame seeds — small jar, used as a finishing touch most nights",
       "White rice (dry) — ~0.45 lb needed (Monday, Wednesday)",
