@@ -48,7 +48,7 @@ function App() {
           <div style={{marginBottom:24,borderBottom:`1px solid ${T.divider}`,paddingBottom:24}}>
             <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",flexWrap:"wrap",gap:12}}>
               <div>
-                <div style={{fontSize:10,letterSpacing:"0.2em",textTransform:"uppercase",color:T.textLight,marginBottom:8,fontFamily:"'DM Mono',monospace"}}>Mediterranean · Meal Plan</div>
+                <div style={{fontSize:10,letterSpacing:"0.2em",textTransform:"uppercase",color:T.textLight,marginBottom:8,fontFamily:"'DM Mono',monospace"}}>Sheet Pan Season · Meal Plan</div>
                 <h1 style={{fontFamily:"'Lora',serif",fontSize:"clamp(2rem,6vw,3.2rem)",fontWeight:400,lineHeight:1.1,color:T.text}}>
                   Jake <span style={{color:T.gold}}>&amp;</span> <span style={{color:T.accent,fontStyle:"italic"}}>Laine.</span>
                 </h1>

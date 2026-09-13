@@ -33,10 +33,14 @@ function NutritionTab({week,nutritionDB}) {
  
   const allMeals = [
     ...(person==="jake"
-      ? [...(week.jakeSnacks||[]).map(s=>({ingredients:s.ingredients||[]})), {ingredients:week.jakeLunch?.ingredients||[]}]
+      ? [...(week.jakeSnacks||[]).map(s=>({ingredients:s.ingredients||[]})),
+         {ingredients:week.jakeLunch?.ingredients||[]},
+         {ingredients:week.jakeLunch2?.ingredients||[]},
+         {ingredients:week.jakeBreakfast?.ingredients||[]}]
       : [...(week.laineSnacks||[]).map(s=>({ingredients:s.ingredients||[]})), {ingredients:week.laineLunch?.ingredients||[]}, ...(week.laineBreakfasts||[])]
     ),
-    ...(week.dinners||[])
+    ...(week.dinners||[]),
+    ...(week.weekendMeals||[])
   ];
  
   allMeals.forEach(meal=>{

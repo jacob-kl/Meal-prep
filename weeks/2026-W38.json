@@ -1,0 +1,1159 @@
+{
+  "_v": 4,
+  "_note": "Week of September 14-20, 2026 — an energy experiment for Jake: breakfast + two smaller lunches instead of skipping breakfast and eating one big lunch, testing whether it helps his energy. Laine's breakfast/lunch routine is unchanged. Dinners are built around Monday's long day (frozen Bertolli bagged pasta + a Taylor Farms salad bag, ~15 min, nothing to prep), an easy sheet-pan run Tuesday-Friday (Wednesday and Friday keep the standing fish-night rule), and more involved weekend dinners — Saturday vegetarian stuffed shells, Sunday shakshuka for breakfast-for-dinner. Weekends are fully planned this week: Saturday is avocado toast + a grilled chicken salad, Sunday is bagels & lox + a chickpea salad. No mushrooms, lentils, okra, eggplant, or farro; onion cooked in, never raw. Jake's Lunch 2 is intentionally off the Mediterranean palette (Southwest black bean & turkey) since recent weeks leaned Mediterranean hard.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
+  "dinners": [
+    {
+      "day": "Monday (September 14)",
+      "name": "Bertolli Frozen Pasta + Taylor Farms Salad Bag",
+      "note": "Long day for both of you — nothing to cook, nothing to prep. Pick whichever Bertolli bag looks good; no need for a specific variety.",
+      "jake": {
+        "cal": 750,
+        "protein": 29,
+        "carbs": 76,
+        "fat": 36,
+        "fiber": 7.0
+      },
+      "laine": {
+        "cal": 488,
+        "protein": 18,
+        "carbs": 49,
+        "fat": 24,
+        "fiber": 4.8
+      },
+      "ingredients": [
+        {
+          "item": "Bertolli frozen pasta bag — Jake 2 cups prepared, Laine 1¼ cups",
+          "nutritionKey": "Bertolli frozen pasta bag"
+        },
+        {
+          "item": "Taylor Farms ready-to-go salad bag — Jake 1 serving, Laine ¾ serving",
+          "nutritionKey": "Taylor Farms salad kit"
+        }
+      ],
+      "steps": [
+        "Cook the Bertolli bag per package instructions (stovetop skillet, ~10 min).",
+        "Toss the Taylor Farms salad bag with its included dressing.",
+        "Portion — Jake gets the bigger share of both."
+      ]
+    },
+    {
+      "day": "Tuesday (September 15)",
+      "name": "Sheet Pan Pork Tenderloin, Sweet Potato & Carrots",
+      "note": "Not a fish night. Prep Monday night: marinate the pork and chop the sweet potato and carrots, fridge it — straight into the oven tonight.",
+      "jake": {
+        "cal": 620,
+        "protein": 44,
+        "carbs": 52,
+        "fat": 27,
+        "fiber": 8.8
+      },
+      "laine": {
+        "cal": 426,
+        "protein": 31,
+        "carbs": 36,
+        "fat": 18,
+        "fiber": 6.2
+      },
+      "ingredients": [
+        {
+          "item": "Pork tenderloin — Jake 200g, Laine 140g raw",
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Sweet potato — Jake 1½ medium, Laine 1 medium, cubed",
+          "nutritionKey": "Sweet potato"
+        },
+        {
+          "item": "Carrots — Jake 100g, Laine 80g, sliced",
+          "nutritionKey": "Carrots"
+        },
+        {
+          "item": "Olive oil — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — 4 cloves total, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano/thyme/cumin/paprika/salt spice mix — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Monday night: whisk olive oil, garlic, and spice mix. Toss the pork tenderloin in it, and cube the sweet potato and carrots. Fridge everything separately.",
+        "Tuesday: toss the sweet potato and carrots with a little more oil, spread on a sheet pan, roast at 425°F 15 min.",
+        "Push the vegetables aside, add the marinated pork. Roast another 18-20 min until the pork hits 145°F.",
+        "Rest the pork 5 min, slice, and serve."
+      ]
+    },
+    {
+      "day": "Wednesday (September 16)",
+      "name": "Sheet Pan Salmon with Broccoli, Cherry Tomatoes & Quinoa",
+      "note": "Fish night.",
+      "jake": {
+        "cal": 796,
+        "protein": 54,
+        "carbs": 41,
+        "fat": 45,
+        "fiber": 7.4
+      },
+      "laine": {
+        "cal": 568,
+        "protein": 38,
+        "carbs": 31,
+        "fat": 32,
+        "fiber": 5.8
+      },
+      "ingredients": [
+        {
+          "item": "Atlantic salmon — Jake 220g, Laine 150g raw",
+          "nutritionKey": "Atlantic salmon (raw)"
+        },
+        {
+          "item": "Broccoli florets — Jake 120g, Laine 100g",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 100g, Laine 80g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Quinoa (dry) — Jake 40g, Laine 30g",
+          "nutritionKey": "Quinoa (dry)"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Lemon juice — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Garlic — 3 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Fresh dill — ~5g, chopped",
+          "nutritionKey": "Fresh dill"
+        }
+      ],
+      "steps": [
+        "Cook the quinoa.",
+        "Toss broccoli and cherry tomatoes with olive oil, garlic, and half the dill on a sheet pan. Roast at 400°F 8 min.",
+        "Push vegetables aside, add the salmon, drizzle with lemon juice and remaining dill.",
+        "Roast another 12-15 min until the salmon flakes easily. Serve over quinoa."
+      ]
+    },
+    {
+      "day": "Thursday (September 17)",
+      "name": "Sheet Pan Honey-Mustard Chicken Thighs with Broccoli & Carrots",
+      "note": "Not a fish night.",
+      "jake": {
+        "cal": 585,
+        "protein": 57,
+        "carbs": 37,
+        "fat": 25,
+        "fiber": 6.0
+      },
+      "laine": {
+        "cal": 423,
+        "protein": 40,
+        "carbs": 28,
+        "fat": 18,
+        "fiber": 4.7
+      },
+      "ingredients": [
+        {
+          "item": "Chicken thighs, boneless skinless — Jake 260g, Laine 180g raw",
+          "nutritionKey": "Chicken thighs (boneless, skinless)"
+        },
+        {
+          "item": "Broccoli florets — Jake 100g, Laine 80g",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Carrots — Jake 100g, Laine 80g, sliced",
+          "nutritionKey": "Carrots"
+        },
+        {
+          "item": "Honey — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Honey"
+        },
+        {
+          "item": "Dijon mustard — Jake 2 tsp, Laine 1½ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — 3 cloves, minced",
+          "nutritionKey": "Garlic"
+        }
+      ],
+      "steps": [
+        "Whisk honey, dijon, olive oil, and garlic into a glaze.",
+        "Toss the chicken thighs in the glaze, place on a sheet pan with broccoli and carrots.",
+        "Roast at 425°F 22-25 min until chicken hits 165°F, tossing vegetables halfway."
+      ]
+    },
+    {
+      "day": "Friday (September 18)",
+      "name": "Sheet Pan Cod with Zucchini & Cherry Tomatoes",
+      "note": "Second fish night, last sheet pan of the week.",
+      "jake": {
+        "cal": 359,
+        "protein": 42,
+        "carbs": 12,
+        "fat": 16,
+        "fiber": 2.9
+      },
+      "laine": {
+        "cal": 257,
+        "protein": 29,
+        "carbs": 9,
+        "fat": 12,
+        "fiber": 2.3
+      },
+      "ingredients": [
+        {
+          "item": "Frozen cod — Jake 220g, Laine 150g raw",
+          "nutritionKey": "Frozen cod"
+        },
+        {
+          "item": "Zucchini — Jake 150g, Laine 120g, sliced",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 100g, Laine 80g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Lemon juice — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Garlic — 3 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano/thyme/cumin/paprika/salt spice mix — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Toss zucchini and cherry tomatoes with olive oil, garlic, and spice mix on a sheet pan. Roast at 400°F 8 min.",
+        "Push vegetables aside, add the cod, drizzle with lemon juice.",
+        "Roast another 10-12 min until the cod flakes easily."
+      ]
+    },
+    {
+      "day": "Saturday (September 19)",
+      "name": "Three-Cheese Vegetable Stuffed Shells",
+      "note": "Vegetarian night — more involved, worth the extra time on a weekend.",
+      "jake": {
+        "cal": 820,
+        "protein": 45,
+        "carbs": 93,
+        "fat": 31,
+        "fiber": 10.4
+      },
+      "laine": {
+        "cal": 586,
+        "protein": 32,
+        "carbs": 67,
+        "fat": 22,
+        "fiber": 7.8
+      },
+      "ingredients": [
+        {
+          "item": "Jumbo pasta shells (dry) — Jake 70g, Laine 50g",
+          "nutritionKey": "Jumbo pasta shells (dry)"
+        },
+        {
+          "item": "Ricotta cheese, part-skim — Jake ¾ cup, Laine ½ cup",
+          "nutritionKey": "Ricotta cheese (part-skim)"
+        },
+        {
+          "item": "Shredded cheese (4-blend) — Jake 4 tbsp, Laine 3 tbsp",
+          "nutritionKey": "Shredded cheese (4-blend)"
+        },
+        {
+          "item": "Baby spinach — Jake 80g, Laine 60g, chopped",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Roasted onion & garlic pasta sauce — Jake 1 cup, Laine ¾ cup",
+          "nutritionKey": "Roasted onion & garlic pasta sauce"
+        },
+        {
+          "item": "Romaine lettuce — Jake 100g, Laine 80g (side salad)",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Italian dressing (light) — Jake 2 tbsp, Laine 1½ tbsp",
+          "nutritionKey": "Italian dressing (light)"
+        }
+      ],
+      "steps": [
+        "Boil the pasta shells until just al dente. Drain and cool slightly.",
+        "Mix ricotta, half the shredded cheese, and the chopped spinach. Season with salt and pepper.",
+        "Stuff each shell with the ricotta mixture, arrange in a baking dish over a layer of pasta sauce.",
+        "Top with remaining sauce and shredded cheese. Bake at 375°F, covered, 25 min, then uncovered 5 min.",
+        "Serve with the side salad, dressed."
+      ]
+    },
+    {
+      "day": "Sunday (September 20)",
+      "name": "Shakshuka with Feta & Toast",
+      "note": "Breakfast-for-dinner — eggs poached in a spiced tomato sauce.",
+      "jake": {
+        "cal": 772,
+        "protein": 40,
+        "carbs": 64,
+        "fat": 41,
+        "fiber": 11.4
+      },
+      "laine": {
+        "cal": 587,
+        "protein": 31,
+        "carbs": 49,
+        "fat": 31,
+        "fiber": 8.8
+      },
+      "ingredients": [
+        {
+          "item": "Eggs — Jake 4, Laine 3",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Diced tomatoes, canned — Jake 1½ cups, Laine scant 1¼ cups",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Bell pepper — Jake 80g, Laine 60g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Yellow onion — Jake ¼ cup, Laine scant ¼ cup, diced and cooked",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Garlic — 3 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Feta cheese, reduced fat — Jake 25g, Laine 20g, crumbled",
+          "nutritionKey": "Feta cheese (reduced fat)"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Oregano/thyme/cumin/paprika/salt spice mix — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        },
+        {
+          "item": "Whole grain bread — Jake 2 slices, Laine 1½ slices",
+          "nutritionKey": "Whole grain bread"
+        }
+      ],
+      "steps": [
+        "Sauté onion and bell pepper in olive oil until soft. Add garlic, cook 1 min.",
+        "Add diced tomatoes and spice mix, simmer 8-10 min until slightly thickened.",
+        "Make wells in the sauce, crack in the eggs. Cover and cook 6-8 min until whites are set.",
+        "Top with crumbled feta. Serve with toasted bread for scooping."
+      ]
+    }
+  ],
+  "jakeBreakfast": {
+    "name": "Egg White & Turkey Sausage Muffins",
+    "note": "New this week — Sunday-batch, 5 servings, same every weekday. Testing whether a real breakfast helps energy. Bell pepper and onion cooked in, a little sweet potato mixed in for real carbs, not just protein.",
+    "macros": {
+      "cal": 408,
+      "protein": 45,
+      "carbs": 18,
+      "fat": 17,
+      "fiber": 2.6
+    },
+    "ingredients": [
+      {
+        "item": "Liquid egg whites — 1 cup per day (5 cups total)",
+        "nutritionKey": "Liquid egg whites"
+      },
+      {
+        "item": "Turkey breakfast sausage — 110g per day, cooked and crumbled",
+        "nutritionKey": "Turkey breakfast sausage"
+      },
+      {
+        "item": "Bell pepper — 40g per day, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Yellow onion — ~20g per day, diced and cooked",
+        "nutritionKey": "Yellow onion"
+      },
+      {
+        "item": "Cheddar cheese, shredded — ~7g per day",
+        "nutritionKey": "Cheddar cheese (shredded)"
+      },
+      {
+        "item": "Sweet potato — ~50g per day, diced small and pre-cooked",
+        "nutritionKey": "Sweet potato"
+      },
+      {
+        "item": "Olive oil — 1 tsp per day, for the pan",
+        "nutritionKey": "Olive oil"
+      }
+    ],
+    "steps": [
+      "Dice and pre-cook the sweet potato (steam or microwave until just tender).",
+      "Sauté onion and bell pepper in olive oil until soft. Stir in the diced sweet potato.",
+      "Whisk egg whites, pour into a greased muffin tin or baking dish with the vegetable-sausage mixture and crumbled turkey sausage.",
+      "Top with cheddar. Bake at 350°F 18-20 min until set.",
+      "Portion into 5 containers, refrigerate."
+    ]
+  },
+  "jakeLunch": {
+    "name": "Chicken Thigh & Quinoa Bowl",
+    "note": "Lunch 1 of 2. Sunday-batch, 5 containers, no fish. Reheat-friendly, saucy, broccoli not spinach.",
+    "macros": {
+      "cal": 548,
+      "protein": 40,
+      "carbs": 46,
+      "fat": 23,
+      "fiber": 7.3
+    },
+    "ingredients": [
+      {
+        "item": "Chicken thighs, boneless skinless — 150g raw per container (~1.65 lbs total)",
+        "nutritionKey": "Chicken thighs (boneless, skinless)"
+      },
+      {
+        "item": "Quinoa (dry) — 50g per container",
+        "nutritionKey": "Quinoa (dry)"
+      },
+      {
+        "item": "Broccoli florets — 100g per container",
+        "nutritionKey": "Broccoli florets"
+      },
+      {
+        "item": "Bell pepper — 50g per container, sliced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Lemon juice — 1 tbsp per container",
+        "nutritionKey": "Lemon juice"
+      },
+      {
+        "item": "Olive oil — 1 tbsp per container",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Garlic — 2 cloves per container",
+        "nutritionKey": "Garlic"
+      },
+      {
+        "item": "Oregano/thyme/cumin/paprika/salt spice mix — 1 tsp per container",
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+      }
+    ],
+    "steps": [
+      "Cook all the quinoa at once.",
+      "Whisk lemon juice, olive oil, garlic, and spice mix into a marinade. Toss the cubed chicken thighs in it.",
+      "Sear the chicken in a hot pan until browned and cooked through.",
+      "Add broccoli and bell pepper, stir-fry 4-5 min until just tender.",
+      "Divide quinoa and the chicken-vegetable mixture evenly across 5 containers."
+    ]
+  },
+  "jakeLunch2": {
+    "name": "Southwest Black Bean & Turkey Salad",
+    "note": "Lunch 2 of 2. Cold, no reheat needed — off the Mediterranean palette on purpose. Avocado added fresh each morning. Sunday-batch, 5 containers.",
+    "macros": {
+      "cal": 577,
+      "protein": 48,
+      "carbs": 51,
+      "fat": 23,
+      "fiber": 16.5
+    },
+    "ingredients": [
+      {
+        "item": "Turkey breast, cooked — 100g per container",
+        "nutritionKey": "Turkey breast (cooked)"
+      },
+      {
+        "item": "Black beans — ¼ can per container, rinsed",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Corn kernels (frozen) — 50g per container",
+        "nutritionKey": "Corn kernels (frozen)"
+      },
+      {
+        "item": "Bell pepper — 50g per container, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Cotija cheese — 20g per container, crumbled",
+        "nutritionKey": "Cotija cheese"
+      },
+      {
+        "item": "Avocado — ½ avocado per container, added fresh when eating",
+        "nutritionKey": "Avocado"
+      },
+      {
+        "item": "Lime juice — 1 tbsp per container",
+        "nutritionKey": "Lime juice"
+      },
+      {
+        "item": "Cumin/paprika/garlic powder/salt spice mix — 1 tsp per container",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      }
+    ],
+    "steps": [
+      "Grill or pan-sear the turkey breast, let cool, dice.",
+      "Cook the corn if using frozen (quick blanch or sauté).",
+      "Layer each container: black beans, corn, bell pepper, diced turkey, cotija.",
+      "Portion the lime juice and spice mix into a small separate container per lunch.",
+      "To eat: add dressing and fresh-cut avocado, toss, eat cold."
+    ]
+  },
+  "laineLunch": {
+    "name": "Cold Tuna & Black Bean Mason Jar",
+    "note": "Standing cold format, unchanged.",
+    "macros": {
+      "cal": 615,
+      "protein": 47,
+      "carbs": 44,
+      "fat": 31,
+      "fiber": 16.7
+    },
+    "dressingNote": "Olive oil + lemon juice, kept separate and added just before eating.",
+    "ingredients": [
+      {
+        "item": "Canned tuna in water — 1 can per jar (5 cans total)",
+        "nutritionKey": "Canned tuna (in water)"
+      },
+      {
+        "item": "Black beans — ~¼ can per jar, rinsed",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Avocado — ½ avocado per jar, added fresh when eating",
+        "nutritionKey": "Avocado"
+      },
+      {
+        "item": "English cucumber — ~70g per jar, diced",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Bell pepper — ~60g per jar, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Olive oil — 1 tbsp per jar (dressing, separate)",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Lemon juice — scant ½ tbsp per jar",
+        "nutritionKey": "Lemon juice"
+      }
+    ],
+    "steps": [
+      "Drain tuna, rinse black beans. Dice cucumber and bell pepper.",
+      "Layer each jar: black beans → tuna → cucumber → bell pepper.",
+      "Portion the dressing into a small separate container per jar.",
+      "To eat: add dressing and fresh-cut avocado, stir, eat straight from the jar."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed / Fri",
+      "name": "Greek Yogurt Parfait",
+      "macros": {
+        "cal": 180,
+        "protein": 18,
+        "carbs": 18,
+        "fat": 4,
+        "fiber": 5.0
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl. Top with thawed berries and flaxseed."
+      ]
+    },
+    {
+      "days": "Tue / Thu",
+      "name": "Spinach & Feta Egg White Scramble",
+      "macros": {
+        "cal": 154,
+        "protein": 23,
+        "carbs": 7,
+        "fat": 3,
+        "fiber": 2.2
+      },
+      "note": "Same-day cooked, so no reheating issue.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ¾ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Baby spinach — handful (~40g)",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Cherry tomatoes — ~40g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Feta cheese, reduced fat — ~1½ tbsp (22g)",
+          "nutritionKey": "Feta cheese (reduced fat)"
+        },
+        {
+          "item": "Pinch oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Sauté cherry tomatoes 1-2 min in a dry nonstick pan until they start to soften.",
+        "Add egg whites, scramble over medium-low until just set.",
+        "Toss in spinach at the end. Top with feta and a pinch of spice mix."
+      ]
+    }
+  ],
+  "jakeSnacks": [],
+  "laineSnacks": [
+    {
+      "name": "Banana + Greek Yogurt",
+      "macros": {
+        "cal": 195,
+        "protein": 16,
+        "carbs": 33,
+        "fat": 0,
+        "fiber": 3.1
+      },
+      "desc": "1 banana + 1 Oikos Triple Zero.",
+      "ingredients": [
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        },
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber + Hummus",
+      "macros": {
+        "cal": 124,
+        "protein": 6,
+        "carbs": 15,
+        "fat": 6,
+        "fiber": 3.8
+      },
+      "desc": "¾ cucumber sliced + hummus for dipping.",
+      "ingredients": [
+        {
+          "item": "English cucumber — ¾ large (~150g)",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Hummus — 60g (~4 tbsp)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas",
+      "macros": {
+        "cal": 120,
+        "protein": 5,
+        "carbs": 18,
+        "fat": 3,
+        "fiber": 5
+      },
+      "desc": "¼ cup crunchy roasted chickpeas.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup (~40g)",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        }
+      ]
+    },
+    {
+      "name": "Bell Pepper Strips + Hummus",
+      "macros": {
+        "cal": 146,
+        "protein": 6,
+        "carbs": 20,
+        "fat": 6,
+        "fiber": 6.2
+      },
+      "desc": "1.5 bell peppers sliced + hummus.",
+      "ingredients": [
+        {
+          "item": "Bell pepper — 1.5 medium (150g)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Hummus — 4 tbsp (60g)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Berries",
+      "macros": {
+        "cal": 125,
+        "protein": 16,
+        "carbs": 14,
+        "fat": 0,
+        "fiber": 2.2
+      },
+      "desc": "1 Oikos Triple Zero + small handful thawed berries.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        }
+      ]
+    }
+  ],
+  "weekendMeals": [
+    {
+      "day": "Saturday (September 19) — Breakfast",
+      "name": "Avocado Toast Bar",
+      "note": "Decorated-top avocado toast, Laine's favorite weekend breakfast. Extra egg on Jake's for protein.",
+      "jake": {
+        "cal": 670,
+        "protein": 23,
+        "carbs": 57,
+        "fat": 42,
+        "fiber": 16.6
+      },
+      "laine": {
+        "cal": 337,
+        "protein": 12,
+        "carbs": 29,
+        "fat": 21,
+        "fiber": 8.5
+      },
+      "ingredients": [
+        {
+          "item": "Sourdough bread — Jake 2 slices, Laine 1 slice, toasted",
+          "nutritionKey": "Sourdough bread"
+        },
+        {
+          "item": "Avocado — Jake 1, Laine ½, mashed",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Eggs — Jake 2, Laine 1, soft-boiled",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Everything bagel seasoning — Jake 2 tsp, Laine 1 tsp",
+          "nutritionKey": "Everything bagel seasoning"
+        },
+        {
+          "item": "Radish — Jake 40g, Laine 30g, thinly sliced",
+          "nutritionKey": "Radish"
+        }
+      ],
+      "steps": [
+        "Soft-boil the eggs (6-7 min), cool, peel, halve.",
+        "Toast the bread. Mash the avocado with a pinch of salt, spread on top.",
+        "Top with sliced radish, everything bagel seasoning, and the soft-boiled egg halves."
+      ]
+    },
+    {
+      "day": "Saturday (September 19) — Lunch",
+      "name": "Grilled Chicken & Greens Salad",
+      "note": "Fresh, quick, feeds both.",
+      "jake": {
+        "cal": 383,
+        "protein": 44,
+        "carbs": 11,
+        "fat": 20,
+        "fiber": 3.8
+      },
+      "laine": {
+        "cal": 272,
+        "protein": 30,
+        "carbs": 8,
+        "fat": 14,
+        "fiber": 3.1
+      },
+      "ingredients": [
+        {
+          "item": "Chicken breast — Jake 180g, Laine 120g raw, grilled and sliced",
+          "nutritionKey": "Chicken breast"
+        },
+        {
+          "item": "Romaine lettuce — Jake 120g, Laine 100g, chopped",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 80g, Laine 60g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Cucumber — Jake 60g, Laine 50g, sliced",
+          "nutritionKey": "Cucumber"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Lemon juice — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Lemon juice"
+        }
+      ],
+      "steps": [
+        "Season and grill the chicken breast, let rest, slice.",
+        "Toss lettuce, tomatoes, and cucumber with olive oil and lemon juice.",
+        "Top with sliced chicken."
+      ]
+    },
+    {
+      "day": "Sunday (September 20) — Breakfast",
+      "name": "Bagels & Lox",
+      "note": "Laine's other weekend favorite. Capers, cucumber, and tomato stand in for raw onion.",
+      "jake": {
+        "cal": 433,
+        "protein": 24,
+        "carbs": 54,
+        "fat": 14,
+        "fiber": 3.1
+      },
+      "laine": {
+        "cal": 319,
+        "protein": 17,
+        "carbs": 40,
+        "fat": 10,
+        "fiber": 2.3
+      },
+      "ingredients": [
+        {
+          "item": "Plain bagel — Jake 1, Laine ¾, toasted",
+          "nutritionKey": "Plain bagel"
+        },
+        {
+          "item": "Cream cheese — Jake 2 tbsp, Laine 1½ tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Smoked salmon (lox) — Jake 60g, Laine 40g",
+          "nutritionKey": "Smoked salmon (lox)"
+        },
+        {
+          "item": "Capers — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Capers"
+        },
+        {
+          "item": "Cucumber — Jake 40g, Laine 30g, thinly sliced",
+          "nutritionKey": "Cucumber"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 40g, Laine 30g, sliced",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Fresh dill — ~5g, chopped",
+          "nutritionKey": "Fresh dill"
+        }
+      ],
+      "steps": [
+        "Toast and split the bagels. Spread with cream cheese.",
+        "Top with lox, sliced cucumber, tomato, capers, and fresh dill."
+      ]
+    },
+    {
+      "day": "Sunday (September 20) — Lunch",
+      "name": "Mediterranean Chickpea & Veggie Salad",
+      "note": "Light before the shakshuka dinner. Bell pepper stands in for raw onion.",
+      "jake": {
+        "cal": 575,
+        "protein": 26,
+        "carbs": 70,
+        "fat": 24,
+        "fiber": 14.6
+      },
+      "laine": {
+        "cal": 407,
+        "protein": 18,
+        "carbs": 47,
+        "fat": 17,
+        "fiber": 9.9
+      },
+      "ingredients": [
+        {
+          "item": "Garbanzo beans — Jake ½ can, Laine ⅓ can, rinsed",
+          "nutritionKey": "Garbanzo beans"
+        },
+        {
+          "item": "English cucumber — Jake 80g, Laine 60g, diced",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 70g, Laine 50g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Bell pepper — Jake 60g, Laine 45g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Feta cheese, reduced fat — Jake 30g, Laine 25g, crumbled",
+          "nutritionKey": "Feta cheese (reduced fat)"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Lemon juice — Jake 1 tbsp, Laine ¾ tbsp",
+          "nutritionKey": "Lemon juice"
+        }
+      ],
+      "steps": [
+        "Combine garbanzo beans, cucumber, cherry tomatoes, and bell pepper.",
+        "Toss with olive oil and lemon juice, top with crumbled feta."
+      ]
+    }
+  ],
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Breakfast",
+          408,
+          45,
+          18,
+          17,
+          2.6
+        ],
+        [
+          "Lunch 1",
+          548,
+          40,
+          46,
+          23,
+          7.3
+        ],
+        [
+          "Lunch 2",
+          577,
+          48,
+          51,
+          23,
+          16.5
+        ],
+        [
+          "Dinner (avg)",
+          671.7,
+          44.4,
+          53.6,
+          31.6,
+          7.7
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        2225,
+        178,
+        171,
+        96,
+        34.1
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          167,
+          20.5,
+          12.5,
+          3.5,
+          3.6
+        ],
+        [
+          "Lunch Jar",
+          615,
+          47,
+          44,
+          31,
+          16.7
+        ],
+        [
+          "Dinner (avg)",
+          476.4,
+          31.3,
+          38.4,
+          22.4,
+          5.8
+        ],
+        [
+          "1 Snack",
+          195,
+          16,
+          33,
+          0,
+          3.1
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1473,
+        116,
+        130,
+        58,
+        29.2
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "shopping": {
+    "Must Buy": [
+      "Bertolli frozen pasta bag — 2 bags (Monday dinner)",
+      "Taylor Farms ready-to-go salad bag — 1-2 bags (Monday dinner)",
+      "Pork tenderloin — ~0.75 lb (Tuesday)",
+      "Sweet potatoes — ~1.2 lb (Tuesday, Jake's breakfast batch)",
+      "Carrots — ~0.5 lb (Tuesday, Thursday)",
+      "Atlantic salmon — ~0.8 lb (Wednesday)",
+      "Chicken thighs, boneless skinless — ~4.7 lbs (Thursday + Jake's lunch batch)",
+      "Frozen cod — ~0.8 lb (Friday)",
+      "Zucchini — ~0.6 lb (Friday)",
+      "Jumbo pasta shells — 1 box (Saturday)",
+      "Ricotta cheese, part-skim — 1 container (Saturday)",
+      "Baby spinach — restock (Saturday, Laine's breakfast)",
+      "Eggs — 2 dozen (Sunday dinner, Jake's breakfast batch, Saturday breakfast)",
+      "Diced tomatoes, canned — 2 cans (Sunday)",
+      "Whole grain bread — if low (Sunday dinner)",
+      "Turkey breakfast sausage — ~1.2 lb (Jake's breakfast batch)",
+      "Bell peppers — ~4-5 large (Jake's breakfast &amp; lunches, several dinners)",
+      "Sourdough bread — 1 loaf (Saturday breakfast)",
+      "Avocados — 5-6 (Saturday breakfast, Jake's Lunch 2 batch, Laine's lunch)",
+      "Everything bagel seasoning — 1 jar if you don't have it (Saturday breakfast)",
+      "Radishes — 1 bunch (Saturday breakfast)",
+      "Chicken breast — ~0.66 lb (Saturday lunch)",
+      "Plain bagels — 2 (Sunday breakfast)",
+      "Cream cheese — 1 tub (Sunday breakfast)",
+      "Smoked salmon (lox) — ~3.5oz (Sunday breakfast)",
+      "Capers — 1 small jar (Sunday breakfast)",
+      "Garbanzo beans — 1 can (Sunday lunch)",
+      "Feta cheese, reduced fat — restock, used across the weekend and Sunday dinner",
+      "Black beans — 1 can (Jake's Lunch 2 batch, Laine's lunch)",
+      "Corn kernels, frozen — small bag (Jake's Lunch 2 batch)",
+      "Cotija cheese — small block (Jake's Lunch 2 batch)",
+      "Turkey breast, cooked/deli — ~0.5 lb (Jake's Lunch 2 batch)",
+      "Limes — 2-3 (Jake's Lunch 2 batch)",
+      "Canned tuna in water — 5 cans (Laine's lunch)"
+    ],
+    "Check Supply": [
+      "Olive oil — used across nearly every dish this week",
+      "Lemon juice — used across Wednesday, Friday, Sunday's lunch, Jake's Lunch 1, Laine's lunch",
+      "Garlic — used in almost everything, make sure you have a full bulb",
+      "Quinoa (dry) — ~0.3 lb needed (Wednesday, Jake's Lunch 1 batch)",
+      "Broccoli florets — Tuesday's leftover, Wednesday, Thursday, Jake's Lunch 1 batch",
+      "Honey, dijon mustard — Thursday's glaze",
+      "Cherry tomatoes — 1-2 pints, used most of the week",
+      "Cucumber and English cucumber — Saturday lunch, Sunday breakfast/lunch, Laine's lunch",
+      "Roasted onion &amp; garlic pasta sauce — 1 jar (Saturday)",
+      "Shredded cheese (4-blend) — Saturday",
+      "Italian dressing (light) — Saturday side salad",
+      "Cheddar cheese, shredded — Jake's breakfast batch",
+      "Yellow onion — Tuesday's prep, Sunday",
+      "Liquid egg whites — 2 cartons (Jake's breakfast batch, Laine's Tue/Thu breakfast)",
+      "Fresh dill — small bunch (Wednesday, Sunday breakfast)",
+      "Oregano/thyme/cumin/paprika/salt spice blend, cumin/paprika/garlic powder/salt spice blend — check both jars",
+      "Greek yogurt (plain nonfat), Oikos Triple Zero — Laine's breakfasts and snacks",
+      "Ground flaxseed, frozen mixed berries — Laine's parfait",
+      "Banana, hummus, roasted chickpeas — Laine's snack staples"
+    ]
+  }
+}
