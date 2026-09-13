@@ -388,13 +388,13 @@
   ],
   "jakeBreakfast": {
     "name": "Egg White & Turkey Sausage Muffins",
-    "note": "New this week — Sunday-batch, 5 servings, same every weekday. Testing whether a real breakfast helps energy. Bell pepper and onion cooked in, a little sweet potato mixed in for real carbs, not just protein.",
+    "note": "New this week — Sunday-batch, 5 servings, same every weekday. Kept under 400 cal on purpose — lighter than the old skip-breakfast-then-huge-lunch pattern, not another big meal on top of it.",
     "macros": {
-      "cal": 408,
-      "protein": 45,
-      "carbs": 18,
-      "fat": 17,
-      "fiber": 2.6
+      "cal": 334,
+      "protein": 43,
+      "carbs": 15,
+      "fat": 11,
+      "fiber": 2.1
     },
     "ingredients": [
       {
@@ -402,7 +402,7 @@
         "nutritionKey": "Liquid egg whites"
       },
       {
-        "item": "Turkey breakfast sausage — 110g per day, cooked and crumbled",
+        "item": "Turkey breakfast sausage — 100g per day, cooked and crumbled",
         "nutritionKey": "Turkey breakfast sausage"
       },
       {
@@ -414,21 +414,17 @@
         "nutritionKey": "Yellow onion"
       },
       {
-        "item": "Cheddar cheese, shredded — ~7g per day",
+        "item": "Cheddar cheese, shredded — ~6g per day",
         "nutritionKey": "Cheddar cheese (shredded)"
       },
       {
-        "item": "Sweet potato — ~50g per day, diced small and pre-cooked",
+        "item": "Sweet potato — ~35g per day, diced small and pre-cooked",
         "nutritionKey": "Sweet potato"
-      },
-      {
-        "item": "Olive oil — 1 tsp per day, for the pan",
-        "nutritionKey": "Olive oil"
       }
     ],
     "steps": [
       "Dice and pre-cook the sweet potato (steam or microwave until just tender).",
-      "Sauté onion and bell pepper in olive oil until soft. Stir in the diced sweet potato.",
+      "Sauté onion and bell pepper in a nonstick pan (cooking spray, no oil needed). Stir in the diced sweet potato.",
       "Whisk egg whites, pour into a greased muffin tin or baking dish with the vegetable-sausage mixture and crumbled turkey sausage.",
       "Top with cheddar. Bake at 350°F 18-20 min until set.",
       "Portion into 5 containers, refrigerate."
@@ -436,13 +432,13 @@
   },
   "jakeLunch": {
     "name": "Chicken Thigh & Quinoa Bowl",
-    "note": "Lunch 1 of 2. Sunday-batch, 5 containers, no fish. Reheat-friendly, saucy, broccoli not spinach.",
+    "note": "Lunch 1 of 2. Trimmed to stay under 500 cal — less oil, slightly less quinoa than a typical batch lunch. Sunday-batch, 5 containers, no fish. Reheat-friendly, saucy, broccoli not spinach.",
     "macros": {
-      "cal": 548,
+      "cal": 489,
       "protein": 40,
-      "carbs": 46,
-      "fat": 23,
-      "fiber": 7.3
+      "carbs": 43,
+      "fat": 18,
+      "fiber": 7.0
     },
     "ingredients": [
       {
@@ -450,7 +446,7 @@
         "nutritionKey": "Chicken thighs (boneless, skinless)"
       },
       {
-        "item": "Quinoa (dry) — 50g per container",
+        "item": "Quinoa (dry) — 45g per container",
         "nutritionKey": "Quinoa (dry)"
       },
       {
@@ -466,7 +462,7 @@
         "nutritionKey": "Lemon juice"
       },
       {
-        "item": "Olive oil — 1 tbsp per container",
+        "item": "Olive oil — 2 tsp per container",
         "nutritionKey": "Olive oil"
       },
       {
@@ -488,13 +484,13 @@
   },
   "jakeLunch2": {
     "name": "Southwest Black Bean & Turkey Salad",
-    "note": "Lunch 2 of 2. Cold, no reheat needed — off the Mediterranean palette on purpose. Avocado added fresh each morning. Sunday-batch, 5 containers.",
+    "note": "Lunch 2 of 2. Trimmed to stay under 500 cal — a bit less avocado, cotija, corn, and beans than a full-size batch. Cold, no reheat needed — off the Mediterranean palette on purpose. Avocado added fresh each morning. Sunday-batch, 5 containers.",
     "macros": {
-      "cal": 577,
-      "protein": 48,
-      "carbs": 51,
-      "fat": 23,
-      "fiber": 16.5
+      "cal": 469,
+      "protein": 44,
+      "carbs": 40,
+      "fat": 17,
+      "fiber": 12.6
     },
     "ingredients": [
       {
@@ -502,11 +498,11 @@
         "nutritionKey": "Turkey breast (cooked)"
       },
       {
-        "item": "Black beans — ¼ can per container, rinsed",
+        "item": "Black beans — scant ¼ can per container, rinsed",
         "nutritionKey": "Black beans"
       },
       {
-        "item": "Corn kernels (frozen) — 50g per container",
+        "item": "Corn kernels (frozen) — 35g per container",
         "nutritionKey": "Corn kernels (frozen)"
       },
       {
@@ -514,11 +510,11 @@
         "nutritionKey": "Bell pepper"
       },
       {
-        "item": "Cotija cheese — 20g per container, crumbled",
+        "item": "Cotija cheese — 15g per container, crumbled",
         "nutritionKey": "Cotija cheese"
       },
       {
-        "item": "Avocado — ½ avocado per container, added fresh when eating",
+        "item": "Avocado — ~70g per container, added fresh when eating",
         "nutritionKey": "Avocado"
       },
       {
@@ -968,27 +964,27 @@
       "rows": [
         [
           "Breakfast",
-          408,
-          45,
-          18,
-          17,
-          2.6
+          334,
+          43,
+          15,
+          11,
+          2.1
         ],
         [
           "Lunch 1",
-          548,
+          489,
           40,
-          46,
-          23,
-          7.3
+          43,
+          18,
+          7.0
         ],
         [
           "Lunch 2",
-          577,
-          48,
-          51,
-          23,
-          16.5
+          469,
+          44,
+          40,
+          17,
+          12.6
         ],
         [
           "Dinner (avg)",
@@ -1008,11 +1004,11 @@
         ]
       ],
       "total": [
-        2225,
-        178,
-        171,
-        96,
-        34.1
+        1984,
+        172,
+        154,
+        79,
+        29.4
       ],
       "goal": [
         2030,
@@ -1117,7 +1113,7 @@
       "Turkey breakfast sausage — ~1.2 lb (Jake's breakfast batch)",
       "Bell peppers — ~4-5 large (Jake's breakfast &amp; lunches, several dinners)",
       "Sourdough bread — 1 loaf (Saturday breakfast)",
-      "Avocados — 5-6 (Saturday breakfast, Jake's Lunch 2 batch, Laine's lunch)",
+      "Avocados — 4-5 (Saturday breakfast, Jake's Lunch 2 batch, Laine's lunch)",
       "Everything bagel seasoning — 1 jar if you don't have it (Saturday breakfast)",
       "Radishes — 1 bunch (Saturday breakfast)",
       "Chicken breast — ~0.66 lb (Saturday lunch)",
