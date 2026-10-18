@@ -1,0 +1,1140 @@
+{
+  "_v": 4,
+  "_note": "Week of October 19–25, 2026. Keto week: 20 g NET carbs per day for each of you, so every 'carbs' value in this file is net carbs (total carbs minus fiber) and the carbs goal is 20. Protein targets are unchanged; fat fills the rest of the calories. Standing structure kept: Monday no fish, Tuesday leftover-plus-treat (pork + shrimp lettuce wraps), Wednesday and Friday fish, Jake's 5-container Sunday batch lunch, Laine's cold tuna jar. The vegetarian Saturday and breakfast-for-dinner Sunday are paused this week. Jake eats breakfast with Laine on Saturday and Sunday (jakeBreakfasts). Shakes use almond milk. Cauliflower rice replaces quinoa; no lemon-garlic flavoring anywhere this week. No raw onion, mushrooms, lentils, okra, eggplant, farro, or paneer.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 20,
+    "fat": 126
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 20,
+    "fat": 97
+  },
+  "tzatziki": {
+    "name": "Dill Sour Cream Sauce",
+    "note": "This week's sauce card, for Wednesday's salmon. Mild, cool, and no lemon or garlic. Makes enough for both plates (about 50 g sour cream total). Keeps 3 days; also good on Thursday's meatballs or the Sunday steak.",
+    "macros": {
+      "cal": 61,
+      "protein": 1,
+      "carbs": 1.5,
+      "fat": 6,
+      "fiber": 0.1
+    },
+    "macrosNote": "Per ~2 tbsp serving (30 g sour cream plus dill).",
+    "ingredients": [
+      {
+        "item": "Sour cream — 50 g total (about 3 tbsp)",
+        "nutritionKey": "Daisy sour cream"
+      },
+      {
+        "item": "Fresh dill — 7 g, finely chopped",
+        "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+      },
+      {
+        "item": "Salt and black pepper — to taste"
+      }
+    ],
+    "steps": [
+      "Stir the sour cream and chopped dill together with a pinch of salt and pepper.",
+      "Thin with a teaspoon of water until it is spoonable.",
+      "Chill 10 min before serving."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (October 19)",
+      "name": "Pork Medallions in Dijon Cream + Roasted Zucchini",
+      "note": "Sear medallions, pan sauce of Dijon + cream + butter. Cook about 580 g pork total; Tuesday uses 150 g of it.",
+      "jake": {
+        "cal": 669,
+        "protein": 65,
+        "carbs": 4.4,
+        "fat": 42,
+        "fiber": 1.6
+      },
+      "laine": {
+        "cal": 421,
+        "protein": 37,
+        "carbs": 3.9,
+        "fat": 28,
+        "fiber": 1.5
+      },
+      "ingredients": [
+        {
+          "item": "Pork tenderloin — Jake 280 g, Laine 150 g raw",
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Heavy cream — Jake 2 ½ tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Dijon mustard — Jake 2 tsp, Laine 1 ½ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Butter — Jake 2 ¼ tsp, Laine 1 ½ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Zucchini — Jake 130 g, Laine 130 g",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Parmesan cheese, grated — Jake 2 tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Olive oil — Jake 1 ¾ tsp, Laine 1 tsp",
+          "nutritionKey": "Olive oil"
+        }
+      ],
+      "steps": [
+        "Slice the pork tenderloin into 1-inch medallions. Season with salt, pepper, and a little paprika. Cook all of it tonight (about 580 g raw); Tuesday's tacos use 150 g.",
+        "Toss zucchini planks with half the olive oil and the parmesan. Roast at 425°F for 15–18 min until golden at the edges.",
+        "Sear the pork in the remaining olive oil 2–3 min per side to 145°F. Rest 5 min. Set Tuesday's portion aside to cool and refrigerate.",
+        "Pan sauce: lower the heat, add butter, Dijon, and cream to the same pan. Simmer 2 min until it coats a spoon. Spoon over the pork. Jake gets the bigger portion."
+      ]
+    },
+    {
+      "day": "Tuesday (October 20) — Leftover + Treat",
+      "name": "Leftover Pork + Shrimp Lettuce-Wrap Tacos",
+      "note": "Leftover-plus-treat night: Monday's pork sliced and crisped, plus lime-seasoned shrimp. No raw onion; tomato pico only. Mild.",
+      "jake": {
+        "cal": 652,
+        "protein": 54,
+        "carbs": 5.4,
+        "fat": 45,
+        "fiber": 6.6
+      },
+      "laine": {
+        "cal": 403,
+        "protein": 30,
+        "carbs": 5.0,
+        "fat": 28,
+        "fiber": 6.4
+      },
+      "ingredients": [
+        {
+          "item": "Pork tenderloin — Jake 100 g, Laine 50 g raw",
+          "nutritionKey": "Pork tenderloin"
+        },
+        {
+          "item": "Frozen shrimp — Jake 150 g, Laine 80 g raw",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Romaine lettuce — Jake 80 g, Laine 70 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Avocado — Jake 60 g, Laine 60 g",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Sour cream — Jake 1 ½ tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Lime juice — Jake 1 ½ tsp, Laine 1 ¼ tsp",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 20 g, Laine 25 g",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Olive oil — Jake 1 ½ tbsp, Laine 2 ½ tsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Seasoning (salt, pepper, paprika) — Jake ¾ tsp, Laine ¾ tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 3 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        },
+        {
+          "item": "Butter — Jake 1 ¾ tsp",
+          "nutritionKey": "Butter"
+        }
+      ],
+      "steps": [
+        "Slice Monday's pork thin. Warm in a hot pan with half the olive oil and the taco seasoning until the edges crisp, 3–4 min.",
+        "Pat the shrimp dry, season lightly, and sear in the remaining olive oil and butter 1–2 min per side until just pink. Finish with a squeeze of the lime juice.",
+        "Avocado-lime crema: mash the avocado with the sour cream and the rest of the lime juice until smooth. Fold in chopped cilantro.",
+        "Dice the tomato for a no-onion pico with cilantro and a pinch of salt.",
+        "Fill romaine leaves with pork and shrimp, then crema and pico. Jake gets more of both proteins."
+      ]
+    },
+    {
+      "day": "Wednesday (October 21)",
+      "name": "Creamy Dill Salmon + Roasted Asparagus",
+      "note": "Fish night. Bake salmon 12 to 14 min at 400F; spoon over dill-sour cream sauce.",
+      "jake": {
+        "cal": 796,
+        "protein": 59,
+        "carbs": 4.6,
+        "fat": 59,
+        "fiber": 3.3
+      },
+      "laine": {
+        "cal": 478,
+        "protein": 35,
+        "carbs": 3.5,
+        "fat": 35,
+        "fiber": 2.6
+      },
+      "tzatzikiRef": true,
+      "sauceLabel": "Dill sour cream",
+      "ingredients": [
+        {
+          "item": "Atlantic salmon — Jake 250 g, Laine 140 g raw",
+          "nutritionKey": "Atlantic salmon (raw)"
+        },
+        {
+          "item": "Sour cream — Jake 2 tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 4 g, Laine 3 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        },
+        {
+          "item": "Butter — Jake 2 ¼ tsp, Laine 1 ¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Asparagus — Jake 150 g, Laine 120 g",
+          "nutritionKey": "Asparagus"
+        },
+        {
+          "item": "Olive oil — Jake 1 ¾ tsp, Laine 1 tsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Parmesan cheese, grated — Jake 2 tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F. Toss asparagus with half the olive oil and the parmesan; roast 10–12 min.",
+        "Pat salmon dry, season with salt and pepper, brush with the remaining olive oil. Roast skin-side down 12–14 min until just opaque and flaky.",
+        "Stir the sour cream with chopped dill and a splash of water to a spoonable sauce (see the sauce card).",
+        "Melt the butter over the salmon as it rests, then spoon over the dill sauce. Jake gets the bigger fillet."
+      ]
+    },
+    {
+      "day": "Thursday (October 22)",
+      "name": "Turkey Meatballs in Parmesan Cream + Zucchini Noodles",
+      "note": "Meatballs bound with parmesan, egg and a little almond flour; simmer in cream sauce. Onion cooked in. Mild.",
+      "jake": {
+        "cal": 792,
+        "protein": 68,
+        "carbs": 5.7,
+        "fat": 55,
+        "fiber": 2.3
+      },
+      "laine": {
+        "cal": 484,
+        "protein": 34,
+        "carbs": 5.6,
+        "fat": 36,
+        "fiber": 2.3
+      },
+      "ingredients": [
+        {
+          "item": "Ground turkey 93/7 — Jake 280 g, Laine 120 g raw",
+          "nutritionKey": "Ground turkey 93/7"
+        },
+        {
+          "item": "Parmesan cheese, grated — Jake 4 tbsp, Laine 2 ½ tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Eggs — Jake ½ eggs, Laine ½ eggs",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Almond flour — Jake 10 g, Laine 8 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Heavy cream — Jake 2 ½ tbsp, Laine 2 tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Zucchini — Jake 100 g, Laine 120 g",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Olive oil — Jake 1 ¼ tsp, Laine 1 tsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Yellow onion (cooked in) — Jake 6 g, Laine 8 g",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 3 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        }
+      ],
+      "steps": [
+        "Mix turkey, half the parmesan, the egg, almond flour, and a pinch of salt. Roll into 1-inch meatballs.",
+        "Brown in the olive oil over medium-high heat 5–6 min, turning, then lower the heat and cover 6–8 min until cooked through (165°F).",
+        "Push meatballs aside, cook the onion in the pan 2–3 min until soft. Add the cream and remaining parmesan; simmer 2–3 min.",
+        "Spiralize or peel the zucchini into noodles; toss in the hot sauce 1 min until just tender (don't overcook). Finish with parsley. Mild throughout."
+      ]
+    },
+    {
+      "day": "Friday (October 23)",
+      "name": "Parmesan-Herb Baked Cod + Cauliflower Mash",
+      "note": "Fish night. Top cod with butter, parmesan and herbs, then bake. Mash steamed cauliflower with cream cheese and butter.",
+      "jake": {
+        "cal": 745,
+        "protein": 68,
+        "carbs": 5.2,
+        "fat": 49,
+        "fiber": 2.5
+      },
+      "laine": {
+        "cal": 427,
+        "protein": 39,
+        "carbs": 4.1,
+        "fat": 28,
+        "fiber": 2.1
+      },
+      "ingredients": [
+        {
+          "item": "Frozen cod — Jake 330 g, Laine 180 g raw",
+          "nutritionKey": "Frozen cod"
+        },
+        {
+          "item": "Butter — Jake 2 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Parmesan cheese, grated — Jake 3 tbsp, Laine 2 tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 4 g, Laine 3 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        },
+        {
+          "item": "Cauliflower — Jake 120 g, Laine 100 g",
+          "nutritionKey": "Cauliflower"
+        },
+        {
+          "item": "Cream cheese — Jake 1 ½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine 1 tsp",
+          "nutritionKey": "Olive oil"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F. Steam the cauliflower 10–12 min until very tender.",
+        "Pat cod dry. Top with the butter, parmesan, and chopped parsley. Bake 12–15 min until it flakes.",
+        "Blend or mash the cauliflower with cream cheese, a little butter, and salt until smooth. Drizzle with olive oil.",
+        "Plate cod over the mash. Jake gets the bigger fillet."
+      ]
+    },
+    {
+      "day": "Saturday (October 24)",
+      "name": "Roasted Chicken Thighs with Herb Butter + Green Beans",
+      "note": "Roast thighs at 425F; finish with herb butter. Toss green beans in butter. Mild.",
+      "jake": {
+        "cal": 676,
+        "protein": 71,
+        "carbs": 5.8,
+        "fat": 39,
+        "fiber": 6.8
+      },
+      "laine": {
+        "cal": 494,
+        "protein": 36,
+        "carbs": 5.6,
+        "fat": 34,
+        "fiber": 7.8
+      },
+      "ingredients": [
+        {
+          "item": "Chicken thighs, boneless skinless — Jake 320 g, Laine 150 g raw",
+          "nutritionKey": "Chicken thighs (boneless, skinless)"
+        },
+        {
+          "item": "Butter — Jake 2 ¼ tsp, Laine 2 ¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 3 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        },
+        {
+          "item": "Green beans — Jake 90 g, Laine 80 g",
+          "nutritionKey": "Green beans"
+        },
+        {
+          "item": "Avocado — Jake 60 g, Laine 80 g",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Olive oil — Jake 1 ¼ tsp, Laine 1 ¼ tsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Parmesan cheese, grated — Jake 2 tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Seasoning (salt, pepper, paprika) — Jake 0.4 tsp, Laine 0.4 tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 425°F. Pat thighs dry, rub with olive oil, salt, pepper, and paprika. Roast 25–30 min until 175°F.",
+        "Mash the butter with chopped parsley and thyme to make herb butter.",
+        "Sauté green beans in a little butter 6–8 min until crisp-tender. Sprinkle with parmesan.",
+        "Rest the chicken 5 min, top with herb butter, and serve with sliced avocado."
+      ]
+    },
+    {
+      "day": "Sunday (October 25)",
+      "name": "Seared Sirloin with Herb Butter + Creamed Spinach",
+      "note": "Sear steak 3 to 4 min per side. Creamed spinach: cream, parmesan, onion cooked in. Mild.",
+      "jake": {
+        "cal": 768,
+        "protein": 68,
+        "carbs": 3.4,
+        "fat": 52,
+        "fiber": 2.4
+      },
+      "laine": {
+        "cal": 494,
+        "protein": 39,
+        "carbs": 3.0,
+        "fat": 35,
+        "fiber": 2.4
+      },
+      "ingredients": [
+        {
+          "item": "Sirloin steak — Jake 280 g, Laine 150 g raw",
+          "nutritionKey": "Flank/sirloin steak"
+        },
+        {
+          "item": "Butter — Jake 2 ¼ tsp, Laine 2 ¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 3 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        },
+        {
+          "item": "Baby spinach — Jake 100 g, Laine 100 g",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Heavy cream — Jake 2 ½ tbsp, Laine 2 tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Parmesan cheese, grated — Jake 2 tbsp, Laine 1 ½ tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Yellow onion (cooked in) — Jake 5 g, Laine 5 g",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Olive oil — Jake 1 ¾ tsp, Laine ¾ tsp",
+          "nutritionKey": "Olive oil"
+        }
+      ],
+      "steps": [
+        "Pull the steak out 20 min before cooking; pat dry and season well with salt and pepper.",
+        "Sear in a hot pan with half the olive oil 3–4 min per side for medium-rare (Laine's can go a touch longer). Add herb butter in the last minute. Rest 5 min.",
+        "Creamed spinach: cook the onion in the remaining olive oil 2–3 min until soft, add spinach to wilt, then cream and parmesan; simmer 3 min.",
+        "Slice the steak against the grain. Mild seasoning; Jake can add pepper at the table."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Creamy Smoked-Paprika Chicken Thighs + Broccoli Cauli-Rice",
+    "note": "Keto batch bowl, same 5-container Sunday format. Chicken thighs cooked in a cream-parmesan paprika sauce so they stay moist through 5 days of reheating. Broccoli and cauliflower rice stand in for quinoa. No spinach, no fish, no garnish that fades. Cauliflower rice is raw-weight; steam it in the container when reheating.",
+    "macros": {
+      "cal": 716,
+      "protein": 59,
+      "carbs": 8.6,
+      "fat": 49,
+      "fiber": 4.2
+    },
+    "ingredients": [
+      {
+        "item": "Chicken thighs, boneless skinless — 1200 g raw total (240 g per container)",
+        "nutritionKey": "Chicken thighs (boneless, skinless)"
+      },
+      {
+        "item": "Heavy cream — 15 tbsp total (3 tbsp per container)",
+        "nutritionKey": "Heavy cream"
+      },
+      {
+        "item": "Parmesan cheese, grated — 15 tbsp total (3 tbsp per container)",
+        "nutritionKey": "Parmesan cheese (grated)"
+      },
+      {
+        "item": "Olive oil — 6 ½ tbsp total (1 ½ tbsp per container)",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Yellow onion (cooked in) — 50 g total (10 g per container)",
+        "nutritionKey": "Yellow onion"
+      },
+      {
+        "item": "Seasoning (salt, pepper, paprika) — 5 tsp total (1 tsp per container)",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      },
+      {
+        "item": "Broccoli florets — 350 g total (70 g per container)",
+        "nutritionKey": "Broccoli florets"
+      },
+      {
+        "item": "Cauliflower — 400 g total (80 g per container)",
+        "nutritionKey": "Cauliflower"
+      }
+    ],
+    "steps": [
+      "Pat the chicken thighs dry and season with salt, pepper, and half the paprika. Sear in the olive oil in batches, 4–5 min per side until browned. Remove.",
+      "In the same pan, cook the onion 2–3 min until soft. Stir in the remaining paprika, then the cream and parmesan. Simmer 3–4 min until the sauce thickens.",
+      "Return the chicken to the sauce and simmer 8–10 min until cooked through (175°F for thighs). Slice or leave whole.",
+      "Steam the broccoli 4–5 min until just tender (it keeps cooking when reheated). Rice the cauliflower raw or pulse in a processor.",
+      "Divide into 5 containers: cauliflower rice and broccoli on one side, chicken with plenty of sauce on the other. Reheat with a splash of water."
+    ]
+  },
+  "laineLunch": {
+    "name": "Tuna-Avocado Mason Jar (keto)",
+    "note": "Standing cold tuna jar with the black beans swapped for egg, celery, cucumber, and avocado to fit keto. No reheating. Add the avocado fresh when you eat it so it doesn't brown.",
+    "macros": {
+      "cal": 408,
+      "protein": 39,
+      "carbs": 3.2,
+      "fat": 25,
+      "fiber": 4.3
+    },
+    "ingredients": [
+      {
+        "item": "Canned tuna in water — 1 can per jar (5 cans for 5)",
+        "nutritionKey": "Canned tuna (in water)"
+      },
+      {
+        "item": "Mayonnaise (avocado oil) — 1 tbsp per jar (5 ½ tbsp for 5)",
+        "nutritionKey": "Mayonnaise (avocado oil)"
+      },
+      {
+        "item": "Celery — 30 g per jar (150 g for 5)",
+        "nutritionKey": "Celery"
+      },
+      {
+        "item": "English cucumber — 40 g per jar (200 g for 5)",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Avocado — 50 g per jar (250 g for 5)",
+        "nutritionKey": "Avocado"
+      },
+      {
+        "item": "Dijon mustard — 1 tsp per jar",
+        "nutritionKey": "Dijon mustard"
+      },
+      {
+        "item": "Eggs — 1 egg per jar (5 eggs for 5)",
+        "nutritionKey": "Eggs (large)"
+      },
+      {
+        "item": "Fresh herbs (parsley/dill/cilantro) — 2 g per jar",
+        "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+      }
+    ],
+    "steps": [
+      "Hard-boil 5 eggs (cook 10 min, cool in ice water). Dice the celery and cucumber.",
+      "Mix tuna, mayo, and Dijon per jar. Fold in the celery.",
+      "Layer each jar: tuna salad, cucumber, sliced hard-boiled egg, parsley. Keep the avocado whole until eating.",
+      "To eat: slice the avocado on top and mix, or eat it layered. Two sittings per jar if you like."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed / Fri",
+      "name": "Keto Berry-Pecan Parfait",
+      "macros": {
+        "cal": 317,
+        "protein": 19,
+        "carbs": 6.6,
+        "fat": 22,
+        "fiber": 4.7
+      },
+      "note": "Full-fat Greek yogurt with a few raspberries and pecans.",
+      "ingredients": [
+        {
+          "item": "Greek yogurt (plain 5%) — 150 g",
+          "nutritionKey": "Greek yogurt (plain 5%)"
+        },
+        {
+          "item": "Raspberries — 25 g",
+          "nutritionKey": "Raspberries"
+        },
+        {
+          "item": "Pecans — 15 g",
+          "nutritionKey": "Pecans"
+        },
+        {
+          "item": "Ground flaxseed — 6 g",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Spoon the yogurt into a bowl. Top with raspberries, pecans, and flaxseed."
+      ]
+    },
+    {
+      "days": "Tue / Thu / Sat",
+      "name": "Egg White Scramble with Cheddar & Spinach",
+      "macros": {
+        "cal": 294,
+        "protein": 28,
+        "carbs": 2.4,
+        "fat": 18,
+        "fiber": 0.7
+      },
+      "note": "Mild, quick, no raw onion.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — 150 g",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Eggs — 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cheddar cheese — 20 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Baby spinach — 30 g",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Butter — 1 ¾ tsp",
+          "nutritionKey": "Butter"
+        }
+      ],
+      "steps": [
+        "Melt the butter in a nonstick pan over medium-low. Add the egg whites and whole egg(s); scramble gently.",
+        "Add the spinach at the end and wilt 30 seconds. Fold in the cheddar off the heat and serve."
+      ]
+    },
+    {
+      "days": "Sun (October 25)",
+      "name": "Almond-Flour Waffle + Raspberries",
+      "macros": {
+        "cal": 407,
+        "protein": 18,
+        "carbs": 6.5,
+        "fat": 34,
+        "fiber": 4.5
+      },
+      "note": "Keto stand-in for Sunday's Birch Benders waffles (the regular mix doesn't fit 20 g net).",
+      "ingredients": [
+        {
+          "item": "Almond flour — 30 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Eggs — 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cream cheese — 1 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Butter — 1 ¾ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Raspberries — 20 g",
+          "nutritionKey": "Raspberries"
+        },
+        {
+          "item": "Greek yogurt (plain 5%) — 40 g",
+          "nutritionKey": "Greek yogurt (plain 5%)"
+        }
+      ],
+      "steps": [
+        "Whisk almond flour, egg, softened cream cheese, and a pinch of baking powder and salt into a batter. Rest 3 min.",
+        "Cook in a preheated, buttered waffle iron 3–4 min until crisp. Top with raspberries and the yogurt dollop."
+      ]
+    }
+  ],
+  "jakeBreakfasts": [
+    {
+      "days": "Sat (October 24)",
+      "name": "Egg White Scramble with Cheddar & Spinach",
+      "macros": {
+        "cal": 449,
+        "protein": 43,
+        "carbs": 3.6,
+        "fat": 28,
+        "fiber": 0.9
+      },
+      "note": "Weekend only: Jake eats with Laine. Bigger portion; weekdays Jake skips breakfast.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — 200 g",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Eggs — 2 eggs",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cheddar cheese — 30 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Baby spinach — 40 g",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Butter — 2 ¼ tsp",
+          "nutritionKey": "Butter"
+        }
+      ],
+      "steps": [
+        "Melt the butter in a nonstick pan over medium-low. Add the egg whites and whole egg(s); scramble gently.",
+        "Add the spinach at the end and wilt 30 seconds. Fold in the cheddar off the heat and serve."
+      ]
+    },
+    {
+      "days": "Sun (October 25)",
+      "name": "Almond-Flour Waffle + Raspberries",
+      "macros": {
+        "cal": 519,
+        "protein": 26,
+        "carbs": 7.0,
+        "fat": 43,
+        "fiber": 4.4
+      },
+      "note": "Weekend only: Jake eats with Laine.",
+      "ingredients": [
+        {
+          "item": "Almond flour — 35 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Eggs — 2 eggs",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cream cheese — 1 ½ tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Butter — 1 ¾ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Raspberries — 10 g",
+          "nutritionKey": "Raspberries"
+        },
+        {
+          "item": "Greek yogurt (plain 5%) — 40 g",
+          "nutritionKey": "Greek yogurt (plain 5%)"
+        }
+      ],
+      "steps": [
+        "Whisk almond flour, egg, softened cream cheese, and a pinch of baking powder and salt into a batter. Rest 3 min.",
+        "Cook in a preheated, buttered waffle iron 3–4 min until crisp. Top with raspberries and the yogurt dollop."
+      ]
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Whey Shake (almond milk)",
+      "macros": {
+        "cal": 96,
+        "protein": 14,
+        "carbs": 1.2,
+        "fat": 3,
+        "fiber": 0.7
+      },
+      "desc": "3/4 scoop whey isolate with 1 cup unsweetened almond milk. Weekdays; weekends use 1⅓ scoops (35 g).",
+      "ingredients": [
+        {
+          "item": "Whey protein isolate — 15 g",
+          "nutritionKey": "Whey protein isolate"
+        },
+        {
+          "item": "Unsweetened almond milk — 240 g",
+          "nutritionKey": "Almond milk (unsweetened)"
+        }
+      ]
+    },
+    {
+      "name": "Walnuts",
+      "macros": {
+        "cal": 98,
+        "protein": 2,
+        "carbs": 1.0,
+        "fat": 10,
+        "fiber": 1.0
+      },
+      "desc": "15 g, about 7 halves. Weekends: 8 g.",
+      "ingredients": [
+        {
+          "item": "Walnuts — 15 g",
+          "nutritionKey": "Walnuts"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Whey Shake (almond milk)",
+      "macros": {
+        "cal": 156,
+        "protein": 26,
+        "carbs": 1.7,
+        "fat": 4,
+        "fiber": 0.7
+      },
+      "desc": "1 scoop whey isolate shaken or blended with 1 cup unsweetened almond milk. Plan: 2 a day (Sat/Sun: also 2, breakfast covers the rest).",
+      "ingredients": [
+        {
+          "item": "Whey protein isolate — 30 g",
+          "nutritionKey": "Whey protein isolate"
+        },
+        {
+          "item": "Unsweetened almond milk — 240 g",
+          "nutritionKey": "Almond milk (unsweetened)"
+        }
+      ]
+    },
+    {
+      "name": "Hard-Boiled Eggs (3)",
+      "macros": {
+        "cal": 214,
+        "protein": 19,
+        "carbs": 1.0,
+        "fat": 14,
+        "fiber": 0.0
+      },
+      "desc": "Peel and salt. Plan: 3 on Mon–Fri, 2 on Sunday.",
+      "ingredients": [
+        {
+          "item": "Eggs — 3 eggs",
+          "nutritionKey": "Eggs (large)"
+        }
+      ]
+    },
+    {
+      "name": "Macadamia Nuts",
+      "macros": {
+        "cal": 144,
+        "protein": 2,
+        "carbs": 1.0,
+        "fat": 15,
+        "fiber": 1.7
+      },
+      "desc": "20 g, about a small handful. Plan: Mon 20 g, Tue 5 g, Fri 10 g.",
+      "ingredients": [
+        {
+          "item": "Macadamia nuts — 20 g",
+          "nutritionKey": "Macadamia nuts"
+        }
+      ]
+    },
+    {
+      "name": "Cheddar Cubes",
+      "macros": {
+        "cal": 60,
+        "protein": 3,
+        "carbs": 0.5,
+        "fat": 5,
+        "fiber": 0.0
+      },
+      "desc": "15 g. Plan: Tue 15 g, Wed and Thu 10 g.",
+      "ingredients": [
+        {
+          "item": "Cheddar cheese — 15 g",
+          "nutritionKey": "Cheddar cheese"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Must Buy": [
+      "Chicken thighs, boneless skinless — ~3.75 lbs (Sunday batch for Jake's Mon–Fri lunches; Saturday dinner)",
+      "Pork tenderloin — ~1.3 lbs (Monday dinner; Tuesday tacos)",
+      "Frozen shrimp — ~½ lb (Tuesday tacos)",
+      "Atlantic salmon — 2 fillets, ~14 oz raw total (Wednesday dinner)",
+      "Frozen cod — ~1.2 lbs (Friday dinner)",
+      "Ground turkey 93/7 — 1 lb (Thursday meatballs)",
+      "Sirloin steak — ~1 lb (Sunday dinner)",
+      "Canned tuna in water — 5 cans (Laine's Mon–Fri lunch jars)",
+      "Smoked salmon — 8 oz (Sunday lunch)",
+      "Eggs — 3 dozen (Laine's jars and Tue/Thu/Sat scrambles, Jake's Mon–Fri and Sunday snacks, Saturday breakfast and lunch, Sunday waffles, Thursday meatballs)",
+      "Liquid egg whites — 1 carton, ~650 g used (Tue/Thu/Sat scrambles, Saturday breakfast)",
+      "Heavy cream — 1 pint, ~14 oz used (Jake's lunch batch, Monday pan sauce, Thursday meatballs, Sunday creamed spinach)",
+      "Greek yogurt, plain 5% — 1 large tub, ~530 g used (Laine's Mon/Wed/Fri parfaits, Sunday waffles)",
+      "Parmesan cheese, grated — ~7 oz (Jake's lunch batch, Monday zucchini, Wednesday asparagus, Thursday meatballs, Friday cod, Saturday green beans, Sunday creamed spinach)",
+      "Cheddar cheese — 1 small block, ~125 g used (Tue/Thu/Sat scrambles, Jake's Tue/Wed/Thu snacks)",
+      "Cream cheese — 1 block, 8 oz (Friday mash, Sunday waffles, Sunday lunch)",
+      "Sour cream — 1 small tub (Tuesday crema, Wednesday dill sauce)",
+      "Unsweetened almond milk — 3 half-gallons (all shakes, Jake 2 a day, Laine 1 a day)",
+      "Avocados — 6 (Laine's jars Mon–Fri, Tuesday tacos, Saturday lunch and dinner, Sunday lunch)",
+      "Broccoli — 1 large head or ~12 oz crowns (Jake's lunch batch)",
+      "Cauliflower — 1 large head + 1 small head (Jake's lunch batch cauli rice; Friday mash)",
+      "Zucchini — 3 medium (Monday roasted; Thursday noodles)",
+      "Asparagus — 1 bunch (Wednesday dinner)",
+      "Green beans — 6 oz (Saturday dinner)",
+      "Romaine hearts — 2 (Tuesday tacos; Saturday lunch)",
+      "Baby spinach — 12 oz (Tue/Thu/Sat scrambles, Saturday breakfast, Sunday creamed spinach)",
+      "English cucumbers — 2 (Laine's jars, Sunday lunch)",
+      "Celery — 1 small bunch (Laine's jars, Saturday lunch)",
+      "Raspberries — 1 small clamshell (Laine's Mon/Wed/Fri parfaits; Sunday waffles)",
+      "Cherry tomatoes — 1 small pint (Tuesday pico)",
+      "Yellow onion — 1 small (Jake's lunch batch, Thursday meatballs, Sunday creamed spinach)",
+      "Fresh dill, parsley, cilantro — 1 bunch each (Wednesday sauce, Monday–Sunday garnishes, Tuesday tacos)",
+      "Lime — 1 (Tuesday tacos)",
+      "Whey protein isolate — ~565 g, about 19 scoops (all shakes this week)",
+      "Almond flour — 1 small bag, ~85 g used (Thursday meatballs; Sunday waffles)"
+    ],
+    "Check Supply": [
+      "Butter — ~173 g (Monday sauce, Tuesday shrimp, Wednesday salmon, Friday cod and mash, Saturday and Sunday herb butter, scrambles, waffles)",
+      "Olive oil — ~200 g (Jake's lunch batch, all dinners)",
+      "Mayonnaise (avocado oil) — small jar, ~115 g used (Laine's jars, Saturday lunch)",
+      "Dijon mustard — ~50 g (Monday pan sauce, Laine's jars, Saturday lunch)",
+      "Walnuts — ~90 g (Laine's snacks)",
+      "Pecans — ~45 g (Laine's parfaits)",
+      "Macadamia nuts — ~35 g (Jake's Mon/Tue/Fri snacks)",
+      "Ground flaxseed — 3 tbsp (Laine's parfaits)",
+      "Smoked paprika and mild taco seasoning — ~18 g total (Jake's lunch batch, Tuesday tacos, Saturday chicken)",
+      "Salt and black pepper (all savory dishes)"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Weekend Breakfast (avg)",
+          138,
+          10,
+          1.5,
+          10,
+          0.8
+        ],
+        [
+          "Lunch (avg)",
+          650,
+          51,
+          7.3,
+          45,
+          4.3
+        ],
+        [
+          "Dinner (avg)",
+          728,
+          65,
+          4.9,
+          49,
+          3.6
+        ],
+        [
+          "Snacks (avg)",
+          542,
+          70,
+          4.7,
+          25,
+          1.9
+        ]
+      ],
+      "total": [
+        2058,
+        196,
+        18.4,
+        129,
+        10.6
+      ],
+      "goal": [
+        2030,
+        203,
+        20,
+        126,
+        12
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          320,
+          23,
+          4.8,
+          22,
+          2.9
+        ],
+        [
+          "Lunch (avg)",
+          376,
+          32,
+          3.2,
+          24,
+          4.1
+        ],
+        [
+          "Dinner (avg)",
+          457,
+          36,
+          4.4,
+          32,
+          3.6
+        ],
+        [
+          "Snacks (avg)",
+          204,
+          21,
+          2.3,
+          12,
+          1.6
+        ]
+      ],
+      "total": [
+        1357,
+        112,
+        14.7,
+        90,
+        12.2
+      ],
+      "goal": [
+        1363,
+        103,
+        20,
+        97,
+        14
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "extras": [
+    {
+      "name": "Egg Salad Lettuce Cups with Avocado",
+      "recipeCategory": "Lunch",
+      "note": "Saturday lunch for both of you. Cold, no reheating.",
+      "macros": {
+        "cal": 627,
+        "protein": 34,
+        "carbs": 4.1,
+        "fat": 50,
+        "fiber": 5.3
+      },
+      "macrosNote": "Jake portion shown. Laine: 326 cal / 15 P / 2.6 net C / 27 F / 4.4 fiber.",
+      "ingredients": [
+        {
+          "item": "Eggs — Jake 5 eggs, Laine 2 eggs",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 2 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Celery — Jake 30 g, Laine 25 g",
+          "nutritionKey": "Celery"
+        },
+        {
+          "item": "Romaine lettuce — Jake 60 g, Laine 50 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Avocado — Jake 50 g, Laine 40 g",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Dijon mustard — Jake 1 tsp, Laine 1 tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 2 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        }
+      ],
+      "steps": [
+        "Hard-boil the eggs (10 min), cool, and chop.",
+        "Mix with mayo, Dijon, and diced celery. Season with salt and pepper.",
+        "Spoon into lettuce leaves and top with sliced avocado and parsley."
+      ]
+    },
+    {
+      "name": "Smoked Salmon & Cream Cheese Cucumber Stacks",
+      "recipeCategory": "Lunch",
+      "note": "Sunday lunch for both of you. Cold, no cooking.",
+      "macros": {
+        "cal": 343,
+        "protein": 27,
+        "carbs": 3.7,
+        "fat": 23,
+        "fiber": 3.7
+      },
+      "macrosNote": "Jake portion shown. Laine: 268 cal / 18 P / 3.6 net C / 20 F / 3.0 fiber.",
+      "ingredients": [
+        {
+          "item": "Smoked salmon — Jake 130 g, Laine 80 g",
+          "nutritionKey": "Smoked salmon (lox)"
+        },
+        {
+          "item": "Cream cheese — Jake 2 tbsp, Laine 2 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "English cucumber — Jake 50 g, Laine 50 g",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Avocado — Jake 50 g, Laine 40 g",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Fresh herbs (parsley/dill/cilantro) — Jake 2 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)"
+        }
+      ],
+      "steps": [
+        "Slice the cucumber into thick rounds.",
+        "Spread each round with cream cheese, then top with smoked salmon, a slice of avocado, and dill."
+      ]
+    }
+  ]
+}

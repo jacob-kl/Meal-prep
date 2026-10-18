@@ -155,6 +155,26 @@
     "fat": 18,
     "fiber": 3.3
   },
+  "Almond flour": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 571,
+    "protein": 21.4,
+    "carbs": 21.4,
+    "fat": 50.0,
+    "fiber": 10.7
+  },
+  "Almond milk (unsweetened)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 15,
+    "protein": 0.6,
+    "carbs": 0.6,
+    "fat": 1.2,
+    "fiber": 0.3
+  },
   "Almonds": {
     "serving_qty": 28,
     "serving_unit": "g",
@@ -199,6 +219,16 @@
     "carbs": 25,
     "fat": 0,
     "fiber": 4.4
+  },
+  "Asparagus": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 20,
+    "protein": 2.2,
+    "carbs": 3.9,
+    "fat": 0.1,
+    "fiber": 2.1
   },
   "Atlantic salmon (raw)": {
     "serving_qty": 100,
@@ -644,6 +674,26 @@
     "serving": "per 1 cup (100g)",
     "serving_qty": 100,
     "serving_unit": "g"
+  },
+  "Celery": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 16,
+    "protein": 0.7,
+    "carbs": 3.0,
+    "fat": 0.2,
+    "fiber": 1.6
+  },
+  "Cheddar cheese": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 403,
+    "protein": 22.9,
+    "carbs": 3.1,
+    "fat": 33.0,
+    "fiber": 0
   },
   "Cheddar cheese (shredded)": {
     "serving_qty": 0.25,
@@ -1255,6 +1305,16 @@
       "selenium": 0.7
     }
   },
+  "Fresh herbs (parsley/dill/cilantro)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 36,
+    "protein": 3.0,
+    "carbs": 6.3,
+    "fat": 0.8,
+    "fiber": 3.3
+  },
   "Frozen cod": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
@@ -1525,6 +1585,16 @@
       "selenium": 63.2
     }
   },
+  "Greek yogurt (plain 5%)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 112,
+    "protein": 10.6,
+    "carbs": 3.0,
+    "fat": 5.9,
+    "fiber": 0
+  },
   "Greek yogurt (plain nonfat)": {
     "serving_qty": 170,
     "serving_unit": "g",
@@ -1549,6 +1619,16 @@
       "phosphorus": 215,
       "selenium": 9.7
     }
+  },
+  "Green beans": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 31,
+    "protein": 1.8,
+    "carbs": 7.0,
+    "fat": 0.2,
+    "fiber": 2.7
   },
   "Ground beef 85/15": {
     "serving_qty": 100,
@@ -1679,6 +1759,16 @@
     "carbs": 3,
     "fat": 0,
     "fiber": 0.6
+  },
+  "Heavy cream": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 340,
+    "protein": 2.8,
+    "carbs": 2.8,
+    "fat": 36.0,
+    "fiber": 0
   },
   "Homemade garlic naan": {
     "serving_qty": 1,
@@ -1986,6 +2076,26 @@
       "selenium": 15
     }
   },
+  "Macadamia nuts": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 718,
+    "protein": 7.9,
+    "carbs": 13.8,
+    "fat": 75.8,
+    "fiber": 8.6
+  },
+  "Mayonnaise (avocado oil)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 680,
+    "protein": 1.0,
+    "carbs": 0.6,
+    "fat": 75.0,
+    "fiber": 0
+  },
   "Mixed berries (frozen)": {
     "serving_qty": 1,
     "serving_unit": "cup",
@@ -2170,6 +2280,16 @@
       "zinc": 0.14
     }
   },
+  "Pecans": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 691,
+    "protein": 9.2,
+    "carbs": 13.9,
+    "fat": 72.0,
+    "fiber": 9.6
+  },
   "Pinto beans": {
     "serving_qty": 1,
     "serving_unit": "can",
@@ -2349,6 +2469,16 @@
       "phosphorus": 20,
       "selenium": 0.6
     }
+  },
+  "Raspberries": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 52,
+    "protein": 1.2,
+    "carbs": 11.9,
+    "fat": 0.7,
+    "fiber": 6.5
   },
   "Rice vinegar": {
     "cal": 3,
@@ -2959,6 +3089,17 @@
       "phosphorus": 98,
       "selenium": 1.4
     }
+  },
+  "Whey protein isolate": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g",
+    "cal": 400,
+    "protein": 83.0,
+    "carbs": 3.3,
+    "fat": 3.3,
+    "fiber": 0,
+    "note": "Per 100g; 1 scoop is about 30g (25g for some brands). Carbs are total carbs."
   },
   "White rice (dry)": {
     "serving_qty": 100,
