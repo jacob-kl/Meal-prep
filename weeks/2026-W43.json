@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "Week of October 19–25, 2026. Keto week: 20 g NET carbs per day for each of you, so every 'carbs' value in this file is net carbs (total carbs minus fiber) and the carbs goal is 20. Protein targets are unchanged; fat fills the rest of the calories. Standing structure kept: Monday no fish, Tuesday leftover-plus-treat (pork + shrimp lettuce wraps), Wednesday and Friday fish, Jake's 5-container Sunday batch lunch, Laine's cold tuna jar. The vegetarian Saturday and breakfast-for-dinner Sunday are paused this week. Jake eats breakfast with Laine on Saturday and Sunday (jakeBreakfasts). Shakes use almond milk. Cauliflower rice replaces quinoa; no lemon-garlic flavoring anywhere this week. No raw onion, mushrooms, lentils, okra, eggplant, farro, or paneer.",
+  "_note": "Week of October 19–25, 2026. Keto week: 20 g NET carbs per day for each of you, so every 'carbs' value in this file is net carbs (total carbs minus fiber) and the carbs goal is 20. Protein targets are unchanged; fat fills the rest of the calories. Standing structure kept: Monday no fish, Tuesday leftover-plus-treat (pork + shrimp lettuce wraps), Wednesday and Friday fish, Jake's 5-container Sunday batch lunch, Laine's cold tuna jar. The vegetarian Saturday and breakfast-for-dinner Sunday are paused this week. Jake eats breakfast with Laine on Saturday and Sunday (see the Weekend tab). Shakes use almond milk. Cauliflower rice replaces quinoa; no lemon-garlic flavoring anywhere this week. No raw onion, mushrooms, lentils, okra, eggplant, farro, or paneer.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -683,88 +683,6 @@
       ]
     }
   ],
-  "jakeBreakfasts": [
-    {
-      "days": "Sat (October 24)",
-      "name": "Egg White Scramble with Cheddar & Spinach",
-      "macros": {
-        "cal": 449,
-        "protein": 43,
-        "carbs": 3.6,
-        "fat": 28,
-        "fiber": 0.9
-      },
-      "note": "Weekend only: Jake eats with Laine. Bigger portion; weekdays Jake skips breakfast.",
-      "ingredients": [
-        {
-          "item": "Liquid egg whites — 200 g",
-          "nutritionKey": "Liquid egg whites"
-        },
-        {
-          "item": "Eggs — 2 eggs",
-          "nutritionKey": "Eggs (large)"
-        },
-        {
-          "item": "Cheddar cheese — 30 g",
-          "nutritionKey": "Cheddar cheese"
-        },
-        {
-          "item": "Baby spinach — 40 g",
-          "nutritionKey": "Baby spinach"
-        },
-        {
-          "item": "Butter — 2 ¼ tsp",
-          "nutritionKey": "Butter"
-        }
-      ],
-      "steps": [
-        "Melt the butter in a nonstick pan over medium-low. Add the egg whites and whole egg(s); scramble gently.",
-        "Add the spinach at the end and wilt 30 seconds. Fold in the cheddar off the heat and serve."
-      ]
-    },
-    {
-      "days": "Sun (October 25)",
-      "name": "Almond-Flour Waffle + Raspberries",
-      "macros": {
-        "cal": 519,
-        "protein": 26,
-        "carbs": 7.0,
-        "fat": 43,
-        "fiber": 4.4
-      },
-      "note": "Weekend only: Jake eats with Laine.",
-      "ingredients": [
-        {
-          "item": "Almond flour — 35 g",
-          "nutritionKey": "Almond flour"
-        },
-        {
-          "item": "Eggs — 2 eggs",
-          "nutritionKey": "Eggs (large)"
-        },
-        {
-          "item": "Cream cheese — 1 ½ tbsp",
-          "nutritionKey": "Cream cheese"
-        },
-        {
-          "item": "Butter — 1 ¾ tsp",
-          "nutritionKey": "Butter"
-        },
-        {
-          "item": "Raspberries — 10 g",
-          "nutritionKey": "Raspberries"
-        },
-        {
-          "item": "Greek yogurt (plain 5%) — 40 g",
-          "nutritionKey": "Greek yogurt (plain 5%)"
-        }
-      ],
-      "steps": [
-        "Whisk almond flour, egg, softened cream cheese, and a pinch of baking powder and salt into a batter. Rest 3 min.",
-        "Cook in a preheated, buttered waffle iron 3–4 min until crisp. Top with raspberries and the yogurt dollop."
-      ]
-    }
-  ],
   "laineSnacks": [
     {
       "name": "Whey Shake (almond milk)",
@@ -1048,19 +966,70 @@
       }
     ]
   },
-  "extras": [
+  "weekendMeals": [
     {
+      "day": "Saturday (October 24) — Breakfast",
+      "name": "Egg White Scramble with Cheddar & Spinach",
+      "note": "Jake eats breakfast with Laine on weekends. Weekdays he skips it.",
+      "jake": {
+        "cal": 449,
+        "protein": 43,
+        "carbs": 3.6,
+        "fat": 28,
+        "fiber": 0.9
+      },
+      "laine": {
+        "cal": 294,
+        "protein": 28,
+        "carbs": 2.4,
+        "fat": 18,
+        "fiber": 0.7
+      },
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — Jake 200 g, Laine 150 g",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Eggs — Jake 2 eggs, Laine 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cheddar cheese — Jake 30 g, Laine 20 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Baby spinach — Jake 40 g, Laine 30 g",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Butter — Jake 2 ¼ tsp, Laine 1 ¾ tsp",
+          "nutritionKey": "Butter"
+        }
+      ],
+      "steps": [
+        "Melt the butter in a nonstick pan over medium-low. Add the egg whites and whole egg(s); scramble gently.",
+        "Add the spinach at the end and wilt 30 seconds. Fold in the cheddar off the heat and serve."
+      ]
+    },
+    {
+      "day": "Saturday (October 24) — Lunch",
       "name": "Egg Salad Lettuce Cups with Avocado",
-      "recipeCategory": "Lunch",
-      "note": "Saturday lunch for both of you. Cold, no reheating.",
-      "macros": {
+      "note": "Cold, no reheating. Feeds both.",
+      "jake": {
         "cal": 627,
         "protein": 34,
         "carbs": 4.1,
         "fat": 50,
         "fiber": 5.3
       },
-      "macrosNote": "Jake portion shown. Laine: 326 cal / 15 P / 2.6 net C / 27 F / 4.4 fiber.",
+      "laine": {
+        "cal": 326,
+        "protein": 15,
+        "carbs": 2.6,
+        "fat": 27,
+        "fiber": 4.4
+      },
       "ingredients": [
         {
           "item": "Eggs — Jake 5 eggs, Laine 2 eggs",
@@ -1098,17 +1067,72 @@
       ]
     },
     {
+      "day": "Sunday (October 25) — Breakfast",
+      "name": "Almond-Flour Waffle + Raspberries",
+      "note": "Keto stand-in for Sunday's Birch Benders waffles (the regular mix doesn't fit 20 g net).",
+      "jake": {
+        "cal": 519,
+        "protein": 26,
+        "carbs": 7.0,
+        "fat": 43,
+        "fiber": 4.4
+      },
+      "laine": {
+        "cal": 407,
+        "protein": 18,
+        "carbs": 6.5,
+        "fat": 34,
+        "fiber": 4.5
+      },
+      "ingredients": [
+        {
+          "item": "Almond flour — Jake 35 g, Laine 30 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Eggs — Jake 2 eggs, Laine 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cream cheese — Jake 1 ½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Butter — Jake 1 ¾ tsp, Laine 1 ¾ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Raspberries — Jake 10 g, Laine 20 g",
+          "nutritionKey": "Raspberries"
+        },
+        {
+          "item": "Greek yogurt (plain 5%) — Jake 40 g, Laine 40 g",
+          "nutritionKey": "Greek yogurt (plain 5%)"
+        }
+      ],
+      "steps": [
+        "Whisk almond flour, egg, softened cream cheese, and a pinch of baking powder and salt into a batter. Rest 3 min.",
+        "Cook in a preheated, buttered waffle iron 3–4 min until crisp. Top with raspberries and the yogurt dollop."
+      ]
+    },
+    {
+      "day": "Sunday (October 25) — Lunch",
       "name": "Smoked Salmon & Cream Cheese Cucumber Stacks",
-      "recipeCategory": "Lunch",
-      "note": "Sunday lunch for both of you. Cold, no cooking.",
-      "macros": {
+      "note": "Cold, no cooking. Feeds both.",
+      "jake": {
         "cal": 343,
         "protein": 27,
         "carbs": 3.7,
         "fat": 23,
         "fiber": 3.7
       },
-      "macrosNote": "Jake portion shown. Laine: 268 cal / 18 P / 3.6 net C / 20 F / 3.0 fiber.",
+      "laine": {
+        "cal": 268,
+        "protein": 18,
+        "carbs": 3.6,
+        "fat": 20,
+        "fiber": 3.0
+      },
       "ingredients": [
         {
           "item": "Smoked salmon — Jake 130 g, Laine 80 g",
