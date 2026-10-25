@@ -305,6 +305,31 @@
       "selenium": 1
     }
   },
+  "Bacon (cooked)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g cooked bacon (USDA FoodData Central, pork cured bacon, pan-fried)",
+    "cal": 541,
+    "protein": 37,
+    "carbs": 1.4,
+    "fat": 42,
+    "fiber": 0,
+    "micros": {
+      "sodium": 1717,
+      "potassium": 565,
+      "calcium": 11,
+      "vitamin_d": 0,
+      "magnesium": 44,
+      "zinc": 3.6,
+      "vitamin_c": 0,
+      "vitamin_b12": 1.2,
+      "iron": 1.4,
+      "vitamin_a": 0,
+      "folate": 0,
+      "phosphorus": 547,
+      "selenium": 62
+    }
+  },
   "Banana": {
     "serving_qty": 1,
     "serving_unit": "medium",
@@ -830,6 +855,31 @@
     "serving_qty": 100,
     "serving_unit": "g_dry"
   },
+  "Coconut milk (full-fat, canned)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (USDA FoodData Central, canned coconut milk)",
+    "cal": 197,
+    "protein": 2,
+    "carbs": 2.8,
+    "fat": 21.3,
+    "fiber": 0,
+    "micros": {
+      "sodium": 13,
+      "potassium": 220,
+      "calcium": 16,
+      "vitamin_d": 0,
+      "magnesium": 37,
+      "zinc": 0.7,
+      "vitamin_c": 0.7,
+      "vitamin_b12": 0,
+      "iron": 1.6,
+      "vitamin_a": 0,
+      "folate": 16,
+      "phosphorus": 100,
+      "selenium": 6.2
+    }
+  },
   "Corn kernels (frozen)": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -955,6 +1005,31 @@
       "selenium": 10
     }
   },
+  "Cottage cheese 4%": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g, 4% milkfat (USDA FoodData Central)",
+    "cal": 98,
+    "protein": 11.1,
+    "carbs": 3.4,
+    "fat": 4.3,
+    "fiber": 0,
+    "micros": {
+      "sodium": 364,
+      "potassium": 104,
+      "calcium": 83,
+      "vitamin_d": 0.1,
+      "magnesium": 8,
+      "zinc": 0.5,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.4,
+      "iron": 0.1,
+      "vitamin_a": 37,
+      "folate": 12,
+      "phosphorus": 159,
+      "selenium": 9.7
+    }
+  },
   "Cream cheese": {
     "serving_qty": 1,
     "serving_unit": "tbsp",
@@ -1003,6 +1078,31 @@
       "folate": 7,
       "phosphorus": 24,
       "selenium": 0.3
+    }
+  },
+  "Curry powder": {
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "per 1 tsp (2g, USDA FoodData Central)",
+    "cal": 6,
+    "protein": 0.3,
+    "carbs": 1.2,
+    "fat": 0.3,
+    "fiber": 0.7,
+    "micros": {
+      "sodium": 1,
+      "potassium": 31,
+      "calcium": 10,
+      "vitamin_d": 0,
+      "magnesium": 5,
+      "zinc": 0.1,
+      "vitamin_c": 0,
+      "vitamin_b12": 0,
+      "iron": 0.6,
+      "vitamin_a": 0,
+      "folate": 0,
+      "phosphorus": 7,
+      "selenium": 0
     }
   },
   "Daisy sour cream": {
@@ -1098,6 +1198,31 @@
       "vitamin_c": 0,
       "vitamin_d": 0,
       "zinc": 0.03
+    }
+  },
+  "Dill pickles": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (USDA FoodData Central, dill pickles)",
+    "cal": 11,
+    "protein": 0.3,
+    "carbs": 2.3,
+    "fat": 0.2,
+    "fiber": 1.0,
+    "micros": {
+      "sodium": 809,
+      "potassium": 23,
+      "calcium": 9,
+      "vitamin_d": 0,
+      "magnesium": 4,
+      "zinc": 0.1,
+      "vitamin_c": 1,
+      "vitamin_b12": 0,
+      "iron": 0.3,
+      "vitamin_a": 3,
+      "folate": 0,
+      "phosphorus": 21,
+      "selenium": 0
     }
   },
   "Dry green lentils": {
@@ -1630,6 +1755,31 @@
     "fat": 0.2,
     "fiber": 2.7
   },
+  "Green cabbage": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw (USDA FoodData Central)",
+    "cal": 25,
+    "protein": 1.3,
+    "carbs": 5.8,
+    "fat": 0.1,
+    "fiber": 2.5,
+    "micros": {
+      "sodium": 18,
+      "potassium": 170,
+      "calcium": 40,
+      "vitamin_d": 0,
+      "magnesium": 12,
+      "zinc": 0.2,
+      "vitamin_c": 36.6,
+      "vitamin_b12": 0,
+      "iron": 0.5,
+      "vitamin_a": 5,
+      "folate": 43,
+      "phosphorus": 26,
+      "selenium": 0.3
+    }
+  },
   "Ground beef 85/15": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
@@ -1664,6 +1814,31 @@
     "carbs": 3,
     "fat": 4,
     "fiber": 2.8
+  },
+  "Ground pork": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw (USDA FoodData Central, ground pork)",
+    "cal": 263,
+    "protein": 16.9,
+    "carbs": 0,
+    "fat": 21.2,
+    "fiber": 0,
+    "micros": {
+      "sodium": 56,
+      "potassium": 287,
+      "calcium": 14,
+      "vitamin_d": 1.1,
+      "magnesium": 17,
+      "zinc": 2.4,
+      "vitamin_c": 0,
+      "vitamin_b12": 0.7,
+      "iron": 0.9,
+      "vitamin_a": 2,
+      "folate": 1,
+      "phosphorus": 148,
+      "selenium": 20.3
+    }
   },
   "Ground sausage (pork)": {
     "serving_qty": 100,
@@ -3013,6 +3188,31 @@
       "folate": 19,
       "phosphorus": 190,
       "selenium": 9
+    }
+  },
+  "Tomato (slicing)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g raw (USDA FoodData Central)",
+    "cal": 18,
+    "protein": 0.9,
+    "carbs": 3.9,
+    "fat": 0.2,
+    "fiber": 1.2,
+    "micros": {
+      "sodium": 5,
+      "potassium": 237,
+      "calcium": 10,
+      "vitamin_d": 0,
+      "magnesium": 11,
+      "zinc": 0.2,
+      "vitamin_c": 13.7,
+      "vitamin_b12": 0,
+      "iron": 0.3,
+      "vitamin_a": 42,
+      "folate": 15,
+      "phosphorus": 24,
+      "selenium": 0
     }
   },
   "Turkey breakfast sausage": {

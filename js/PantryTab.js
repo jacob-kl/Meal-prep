@@ -136,7 +136,7 @@ function PantryTab({allWeeks}) {
     };
     ordered.forEach(w=>{
       (w.dinners||[]).forEach(d=>add("Dinner",d));
-      add("Lunch",w.jakeLunch); add("Lunch",w.laineLunch);
+      add("Lunch",w.jakeLunch); add("Lunch",w.laineLunch); add("Lunch",w.laineLunch2);
       (w.laineBreakfasts||[]).forEach(b=>add("Breakfast",b));
       (w.extras||[]).forEach(e=>add(e.recipeCategory||"Sides",e));
       add("Sauce",w.tzatziki);

@@ -57,6 +57,7 @@ function WeekView({week,nutritionDB}) {
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>Mason jars batch-made Sunday. Dressing separate. Two sittings per jar.</div>
           <LunchSection lunch={week.laineLunch} label="Laine" labelColor={T.accent} personColor={T.accent}/>
+          {week.laineLunch2&&<LunchSection lunch={week.laineLunch2} label="Laine · Jar 2" labelColor={T.accent} personColor={T.accent}/>}
           <div style={{marginTop:20}}>
             <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Laine's Snacks</div>
             {(week.laineSnacks||[]).map((s,i)=>(

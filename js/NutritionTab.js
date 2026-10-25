@@ -37,7 +37,7 @@ function NutritionTab({week,nutritionDB}) {
          {ingredients:week.jakeLunch?.ingredients||[]},
          {ingredients:week.jakeLunch2?.ingredients||[]},
          {ingredients:week.jakeBreakfast?.ingredients||[]}]
-      : [...(week.laineSnacks||[]).map(s=>({ingredients:s.ingredients||[]})), {ingredients:week.laineLunch?.ingredients||[]}, ...(week.laineBreakfasts||[])]
+      : [...(week.laineSnacks||[]).map(s=>({ingredients:s.ingredients||[]})), {ingredients:week.laineLunch?.ingredients||[]}, {ingredients:week.laineLunch2?.ingredients||[]}, ...(week.laineBreakfasts||[])]
     ),
     ...(week.dinners||[]),
     ...(week.weekendMeals||[])

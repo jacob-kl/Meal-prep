@@ -36,7 +36,7 @@ function RecipesTab({allWeeks}) {
     };
     ordered.forEach(w=>{
       (w.dinners||[]).forEach(d=>add("Dinner",d));
-      add("Lunch",w.jakeLunch); add("Lunch",w.laineLunch);
+      add("Lunch",w.jakeLunch); add("Lunch",w.laineLunch); add("Lunch",w.laineLunch2);
       (w.laineBreakfasts||[]).forEach(b=>add("Breakfast",b));
       (w.jakeSnacks||[]).forEach(s=>add("Snack",s));
       (w.laineSnacks||[]).forEach(s=>add("Snack",s));
@@ -46,7 +46,7 @@ function RecipesTab({allWeeks}) {
     ordered.forEach(w=>{
       const note=(cat,o)=>{if(!o||!o.name)return;const k=cat+"::"+o.name.trim().toLowerCase();if(byKey[k]&&!byKey[k].weeks.includes(w.label))byKey[k].weeks.push(w.label);};
       (w.dinners||[]).forEach(d=>note("Dinner",d));
-      note("Lunch",w.jakeLunch); note("Lunch",w.laineLunch);
+      note("Lunch",w.jakeLunch); note("Lunch",w.laineLunch); note("Lunch",w.laineLunch2);
       (w.laineBreakfasts||[]).forEach(b=>note("Breakfast",b));
       (w.jakeSnacks||[]).forEach(s=>note("Snack",s));
       (w.laineSnacks||[]).forEach(s=>note("Snack",s));
