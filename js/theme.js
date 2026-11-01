@@ -18,8 +18,9 @@ const WEEK_REGISTRY = [
   { id:"2026-W38", label:"Week of September 14, 2026" },
   { id:"2026-W43", label:"Week of October 19, 2026" },
   { id:"2026-W44", label:"Week of October 26, 2026" },
+  { id:"2026-W45", label:"Week of November 2, 2026" },
 ];
-const CURRENT_WEEK_ID = "2026-W44";
+const CURRENT_WEEK_ID = "2026-W45";
 const WATER_GLASSES   = 8;
 const WATER_OZ_EACH   = 16;
 const WATER_TOTAL_OZ  = 128;

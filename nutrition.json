@@ -380,6 +380,31 @@
     "serving_qty": 100,
     "serving_unit": "g_dry"
   },
+  "Beef broth": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g, ready-to-serve (USDA FoodData Central)",
+    "cal": 7,
+    "protein": 1.1,
+    "carbs": 0.2,
+    "fat": 0.2,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
   "Bell pepper": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -2455,6 +2480,31 @@
       "zinc": 0.14
     }
   },
+  "Peanuts (dry roasted, unsalted)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (USDA FDC)",
+    "cal": 587,
+    "protein": 24,
+    "carbs": 21,
+    "fat": 50,
+    "fiber": 8,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
   "Pecans": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -2540,6 +2590,31 @@
       "selenium": 32
     }
   },
+  "Pork rinds": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (USDA FDC, pork skins, plain)",
+    "cal": 544,
+    "protein": 61,
+    "carbs": 0,
+    "fat": 31,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
   "Pork shoulder (pulled)": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -2549,6 +2624,31 @@
     "carbs": 0,
     "fat": 15,
     "fiber": 0
+  },
+  "Pork shoulder (raw)": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw, bone-in trimmed (USDA FDC, pork shoulder blade)",
+    "cal": 236,
+    "protein": 17,
+    "carbs": 0,
+    "fat": 18,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
   },
   "Pork tenderloin": {
     "serving_qty": 100,
@@ -3055,6 +3155,56 @@
     "fat": 0,
     "fiber": 0
   },
+  "Sriracha": {
+    "serving_qty": 1,
+    "serving_unit": "tbsp",
+    "serving": "per 1 tbsp (15g)",
+    "cal": 15,
+    "protein": 0,
+    "carbs": 3,
+    "fat": 0,
+    "fiber": 0.5,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
+  "String cheese (1 stick)": {
+    "serving_qty": 1,
+    "serving_unit": "stick",
+    "serving": "per 1 stick (28g), part-skim mozzarella",
+    "cal": 80,
+    "protein": 7,
+    "carbs": 1,
+    "fat": 6,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
   "Sugar (white)": {
     "serving_qty": 1,
     "serving_unit": "tsp",
@@ -3103,6 +3253,31 @@
       "folate": 11,
       "phosphorus": 54,
       "selenium": 0.6
+    }
+  },
+  "Swiss cheese": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (USDA FDC 172184, Swiss cheese)",
+    "cal": 380,
+    "protein": 27,
+    "carbs": 5.4,
+    "fat": 28,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
     }
   },
   "Taylor Farms salad kit": {

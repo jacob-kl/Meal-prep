@@ -1,0 +1,1310 @@
+{
+  "_v": 4,
+  "_note": "Week of November 2–8, 2026. Keto week 3: 20 g NET carbs per day for each of you, so every 'carbs' value in this file is net carbs (total carbs minus fiber) and the carbs goal is 20. A total-carb ceiling of 30 g per day applies this week and steps down to 28 g on November 9. One fish night (Friday) and one steak night (Wednesday). No vegetarian day and no breakfast-for-dinner. Jake has a team lunch on Thursday (no lunch container) and skips breakfast on work days. Friday is a flex day: breakfast and lunch are planned together on the Weekend tab. Jake also eats breakfast with Laine on Saturday and Sunday. Shakes use almond milk. Jake's lunch is a 3-container batch (Mon–Wed). Laine's lunches are cold jars: chicken-bacon Mon–Wed, shrimp Thursday (the second is the laineLunch2 field). No lemon or garlic flavoring, no paneer, no raw onion, mushrooms, lentils, okra, eggplant, or farro. Shopping tab is grouped by store section.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 20,
+    "fat": 126
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 20,
+    "fat": 97
+  },
+  "tzatziki": {
+    "name": "Sriracha Mayo",
+    "note": "This week's sauce card. Used on Thursday's beef bowls (slaw and drizzle) and Laine's Thursday shrimp jar. Per-meal amounts are in each recipe. Keeps 5 days.",
+    "macros": {
+      "cal": 80,
+      "protein": 0,
+      "carbs": 0.7,
+      "fat": 8,
+      "fiber": 0.1
+    },
+    "macrosNote": "Per 1 tbsp serving (batch makes about 4 tbsp).",
+    "ingredients": [
+      {
+        "item": "Mayonnaise (avocado oil) — 3 tbsp",
+        "nutritionKey": "Mayonnaise (avocado oil)"
+      },
+      {
+        "item": "Sriracha — 1 tbsp",
+        "nutritionKey": "Sriracha"
+      },
+      {
+        "item": "Rice vinegar — 1 tsp",
+        "nutritionKey": "Rice vinegar"
+      }
+    ],
+    "steps": [
+      "Stir the mayo, sriracha, and rice vinegar together until smooth.",
+      "Chill 10 min before using."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (November 2)",
+      "name": "Pork Chops with Bacon-Dijon Cream Sauce + Buttered Zucchini",
+      "note": "Cook all 780 g of pork loin tonight: 450 g is tonight's dinner and 330 g is set aside for Tuesday's wraps. Slice the loin into thick chops before searing.",
+      "jake": {
+        "cal": 864,
+        "protein": 72,
+        "carbs": 6.0,
+        "fat": 59,
+        "fiber": 1.9
+      },
+      "laine": {
+        "cal": 544,
+        "protein": 44,
+        "carbs": 4.2,
+        "fat": 38,
+        "fiber": 1.4
+      },
+      "ingredients": [
+        {
+          "item": "Pork loin — Jake 280 g, Laine 170 g",
+          "nutritionKey": "Pork loin"
+        },
+        {
+          "item": "Butter — Jake 1 tbsp, Laine 2¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Bacon, cooked — Jake 25 g, Laine 15 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Heavy cream — Jake 3¾ tbsp, Laine 2¼ tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Dijon mustard — Jake 1½ tsp, Laine 1 tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Yellow onion (cooked in) — Jake 10 g, Laine 8 g",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Zucchini — Jake 150 g, Laine 110 g",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Beef broth — Jake 20 g, Laine 15 g",
+          "nutritionKey": "Beef broth"
+        }
+      ],
+      "steps": [
+        "Pat the chops dry and season with salt and pepper. Sear in half the butter over medium-high, 3–4 min per side, until 145°F inside. Rest 5 min. Chill Tuesday's 330 g right away.",
+        "Cook the bacon pieces in the same pan until crisp, lift out, and pour off all but 1 tsp of fat. Cook the onion in the pan 2–3 min until soft.",
+        "Add the broth and scrape up the browned bits. Stir in the cream and Dijon and simmer 3–4 min until it coats a spoon. Fold the bacon back in.",
+        "Saute the zucchini in the remaining butter 4–5 min until just golden. Spoon the sauce over the pork. Jake gets the bigger portion."
+      ]
+    },
+    {
+      "day": "Tuesday (November 3) — Leftover + Treat",
+      "name": "Cubano Lettuce Wraps — Leftover Pork + Bacon + Swiss",
+      "note": "Leftover Monday pork plus the treat protein: crisp bacon and Swiss. Eaten cold or warmed briefly; the pork is sliced thin. Mustard-mayo goes on every leaf.",
+      "jake": {
+        "cal": 783,
+        "protein": 65,
+        "carbs": 6.5,
+        "fat": 53,
+        "fiber": 3.3
+      },
+      "laine": {
+        "cal": 558,
+        "protein": 44,
+        "carbs": 6.7,
+        "fat": 38,
+        "fiber": 3.0
+      },
+      "ingredients": [
+        {
+          "item": "Pork loin — Jake 200 g, Laine 130 g",
+          "nutritionKey": "Pork loin"
+        },
+        {
+          "item": "Bacon, cooked — Jake 25 g, Laine 15 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Swiss cheese — Jake 40 g, Laine 30 g",
+          "nutritionKey": "Swiss cheese"
+        },
+        {
+          "item": "Dill pickles — Jake 30 g, Laine 40 g",
+          "nutritionKey": "Dill pickles"
+        },
+        {
+          "item": "Romaine lettuce — Jake 110 g, Laine 90 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 1¾ tbsp, Laine 1½ tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Dijon mustard — Jake 2 tsp, Laine 1½ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "English cucumber — Jake 50 g, Laine 80 g",
+          "nutritionKey": "English cucumber"
+        }
+      ],
+      "steps": [
+        "Slice Monday's cold pork loin very thin. Warm it 1 min in a dry pan if you like.",
+        "Cook the bacon until crisp. Stir the mayo and Dijon together for the sauce.",
+        "Fill the romaine leaves with pork, Swiss, bacon, and pickle slices. Spoon the sauce over. Serve the cucumber on the side."
+      ]
+    },
+    {
+      "day": "Wednesday (November 4)",
+      "name": "Seared Chuck Tender + Peppercorn Cream, Bacon-Roasted Cabbage & Cauliflower Mash",
+      "note": "Steak night. Cook all 635 g of chuck tender tonight: 450 g for dinner and 185 g sliced and chilled for Friday's chopped salad.",
+      "jake": {
+        "cal": 968,
+        "protein": 71,
+        "carbs": 6.7,
+        "fat": 74,
+        "fiber": 3.3
+      },
+      "laine": {
+        "cal": 679,
+        "protein": 44,
+        "carbs": 5.7,
+        "fat": 54,
+        "fiber": 2.9
+      },
+      "ingredients": [
+        {
+          "item": "Chuck tender steak — Jake 280 g, Laine 170 g",
+          "nutritionKey": "Flank/sirloin steak"
+        },
+        {
+          "item": "Butter — Jake 1½ tbsp, Laine 1¼ tbsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Heavy cream — Jake 4 tbsp, Laine 3¼ tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Beef broth — Jake 30 g, Laine 20 g",
+          "nutritionKey": "Beef broth"
+        },
+        {
+          "item": "Green cabbage, shredded — Jake 60 g, Laine 50 g",
+          "nutritionKey": "Green cabbage"
+        },
+        {
+          "item": "Bacon, cooked — Jake 20 g, Laine 12 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Olive oil — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cauliflower — Jake 90 g, Laine 80 g",
+          "nutritionKey": "Cauliflower"
+        },
+        {
+          "item": "Black peppercorns, cracked — 1 tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Steam the cauliflower 8–10 min until very soft. Mash or blend with the cream, 2 tsp of the butter, salt, and pepper until smooth.",
+        "Cut the cabbage into wedges and toss with the olive oil, bacon pieces, salt, and pepper. Roast at 425°F 20 min until the edges brown.",
+        "Pat the steak dry and season with salt. Sear in the remaining butter in a very hot pan, 3–4 min per side to medium. Rest 8 min, slice against the grain, and chill Friday's 185 g.",
+        "In the same pan, simmer the broth with the cracked peppercorns 2 min, add the cream, and cook 2–3 min until thick. Spoon over the steak."
+      ]
+    },
+    {
+      "day": "Thursday (November 5)",
+      "name": "Sriracha-Sesame Beef Crunch Bowls",
+      "note": "Heat, acid, and crunch on purpose: sriracha mayo, a quick rice-vinegar cucumber, and peanuts over the slaw. Jake has team lunch today, so tonight is the day's one cooked meal.",
+      "jake": {
+        "cal": 894,
+        "protein": 55,
+        "carbs": 8.2,
+        "fat": 69,
+        "fiber": 2.5
+      },
+      "laine": {
+        "cal": 614,
+        "protein": 35,
+        "carbs": 7.5,
+        "fat": 48,
+        "fiber": 2.5
+      },
+      "ingredients": [
+        {
+          "item": "Ground beef 85/15 — Jake 280 g, Laine 170 g",
+          "nutritionKey": "Ground beef 85/15"
+        },
+        {
+          "item": "Yellow onion (cooked in) — Jake 8 g, Laine 8 g",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Fresh ginger — Jake 5 g, Laine 4 g",
+          "nutritionKey": "Fresh ginger"
+        },
+        {
+          "item": "Soy sauce — Jake 2¼ tsp, Laine 1½ tsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
+        },
+        {
+          "item": "Sesame oil — Jake 1¼ tsp, Laine 1 tsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sriracha — Jake 1¼ tsp, Laine 1 tsp",
+          "nutritionKey": "Sriracha"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 1½ tbsp, Laine 1¼ tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Rice vinegar — Jake 2 tsp, Laine 1½ tsp",
+          "nutritionKey": "Rice vinegar"
+        },
+        {
+          "item": "Green cabbage, shredded — Jake 45 g, Laine 45 g",
+          "nutritionKey": "Green cabbage"
+        },
+        {
+          "item": "English cucumber — Jake 60 g, Laine 50 g",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Peanuts, unsalted — Jake 8 g, Laine 10 g",
+          "nutritionKey": "Peanuts (dry roasted, unsalted)"
+        }
+      ],
+      "steps": [
+        "Quick-pickle the cucumber slices in the rice vinegar with a pinch of salt for 10 min.",
+        "Brown the beef with the onion and ginger, breaking it up, 7–8 min. Add the soy sauce and sesame oil and cook 1 min.",
+        "Stir the sriracha into the mayo (Sriracha Mayo card). Toss the cabbage with a spoonful of it for the slaw.",
+        "Build the bowls: slaw, beef, pickled cucumber. Drizzle with the sriracha mayo and top with the peanuts."
+      ]
+    },
+    {
+      "day": "Friday (November 6)",
+      "name": "Parmesan-Almond Crusted Salmon + Dill-Dijon Cream & Sauteed Zucchini",
+      "note": "The one fish night this week. The salmon is the only seafood tonight; lunch is steak.",
+      "jake": {
+        "cal": 918,
+        "protein": 57,
+        "carbs": 5.4,
+        "fat": 71,
+        "fiber": 2.6
+      },
+      "laine": {
+        "cal": 632,
+        "protein": 38,
+        "carbs": 4.2,
+        "fat": 49,
+        "fiber": 2.0
+      },
+      "ingredients": [
+        {
+          "item": "Atlantic salmon — Jake 230 g, Laine 150 g",
+          "nutritionKey": "Atlantic salmon (raw)"
+        },
+        {
+          "item": "Parmesan, grated — Jake 3 tbsp, Laine 2 tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Almond flour — Jake 10 g, Laine 7 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 2¼ tsp, Laine 1¾ tsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Butter — Jake 1 tbsp, Laine 2¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Heavy cream — Jake 2¼ tbsp, Laine 1¾ tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Dijon mustard — Jake 1½ tsp, Laine 1¼ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Fresh dill — Jake 3 g, Laine 2 g",
+          "nutritionKey": "Fresh dill"
+        },
+        {
+          "item": "Zucchini — Jake 110 g, Laine 100 g",
+          "nutritionKey": "Zucchini"
+        }
+      ],
+      "steps": [
+        "Mix the Parmesan and almond flour. Pat the salmon dry, brush the top with the mayo, and press the crumb onto it.",
+        "Bake at 425°F 10–12 min until the crust is golden and the fish flakes. Or sear in the butter, crumb side down first.",
+        "Warm the cream with the Dijon and dill in a small pan 3–4 min until it thickens. Do not boil hard.",
+        "Saute the zucchini in the butter 4–5 min until just golden. Spoon the sauce over the salmon."
+      ]
+    },
+    {
+      "day": "Saturday (November 7)",
+      "name": "Slow-Cooker Pulled Pork Lettuce Cups + Creamy Slaw",
+      "note": "Cook 840 g of pork shoulder in the slow cooker (480 g for tonight, 360 g for Sunday's lunch bowls). No sugar in the rub.",
+      "jake": {
+        "cal": 1120,
+        "protein": 61,
+        "carbs": 5.5,
+        "fat": 92,
+        "fiber": 3.6
+      },
+      "laine": {
+        "cal": 785,
+        "protein": 39,
+        "carbs": 5.2,
+        "fat": 65,
+        "fiber": 3.5
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder — Jake 300 g, Laine 180 g",
+          "nutritionKey": "Pork shoulder (raw)"
+        },
+        {
+          "item": "Butter — Jake 1¼ tsp, Laine 1¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Green cabbage, shredded — Jake 70 g, Laine 80 g",
+          "nutritionKey": "Green cabbage"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 1¾ tbsp, Laine 1½ tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Sour cream — Jake 1¼ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Dijon mustard — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Cheddar cheese — Jake 30 g, Laine 25 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Dill pickles — Jake 40 g, Laine 30 g",
+          "nutritionKey": "Dill pickles"
+        },
+        {
+          "item": "Romaine lettuce — Jake 60 g, Laine 50 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Smoked paprika — 1 tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Rub the shoulder with the smoked paprika, salt, and pepper. Slow cook on low 8 hours or high 4–5 hours until it shreds. Shred and keep the juices.",
+        "Stir the cabbage, mayo, sour cream, and Dijon together for the creamy slaw.",
+        "Fill the romaine leaves with the pork. Top with the cheddar, pickle, and slaw. Chill Sunday's pork (360 g raw weight, about 255 g cooked)."
+      ]
+    },
+    {
+      "day": "Sunday (November 8)",
+      "name": "Bacon-Cheddar Beef Meatballs in Creamy Gravy + Cauliflower Mash",
+      "note": "Cook the meatballs fresh. Cauliflower mash is Laine's favorite, so it is on the plate again tonight.",
+      "jake": {
+        "cal": 1192,
+        "protein": 76,
+        "carbs": 7.6,
+        "fat": 92,
+        "fiber": 3.2
+      },
+      "laine": {
+        "cal": 751,
+        "protein": 45,
+        "carbs": 5.9,
+        "fat": 59,
+        "fiber": 2.6
+      },
+      "ingredients": [
+        {
+          "item": "Ground beef 85/15 — Jake 260 g, Laine 130 g",
+          "nutritionKey": "Ground beef 85/15"
+        },
+        {
+          "item": "Almond flour — Jake 12 g, Laine 8 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Parmesan, grated — Jake 3 tbsp, Laine 2 tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Eggs — Jake 1 egg, Laine 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Yellow onion (cooked in) — Jake 10 g, Laine 8 g",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Bacon, cooked — Jake 20 g, Laine 12 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Cheddar cheese — Jake 15 g, Laine 10 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Heavy cream — Jake 3¼ tbsp, Laine 2¾ tbsp",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Beef broth — Jake 40 g, Laine 30 g",
+          "nutritionKey": "Beef broth"
+        },
+        {
+          "item": "Butter — Jake 1¾ tsp, Laine 1¼ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Cauliflower — Jake 90 g, Laine 80 g",
+          "nutritionKey": "Cauliflower"
+        }
+      ],
+      "steps": [
+        "Mix the beef with the almond flour, Parmesan, egg, finely chopped onion, crumbled bacon, and cheddar. Roll into meatballs.",
+        "Sear the meatballs in half the butter 6–8 min, turning, until browned. Bake at 400°F 8 min if needed to finish.",
+        "Add the broth and cream to the pan and simmer 3–4 min until it makes a gravy.",
+        "Steam the cauliflower 8–10 min. Mash with the remaining butter, cream, salt, and pepper. Serve the meatballs and gravy over the mash."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Paprika-Cream Chicken Thighs + Cauliflower Rice",
+    "note": "Sunday batch, 3 containers for Mon–Wed. Jake has team lunch Thursday and eats at home Friday, so nothing is prepped for those days. Chicken thighs simmered in a paprika cream sauce stay moist through reheating. No broccoli, no spinach, no fish, no lemon, no garlic. Cauliflower rice is raw-weight; steam it in the container when reheating.",
+    "macros": {
+      "cal": 687,
+      "protein": 61,
+      "carbs": 8.4,
+      "fat": 43,
+      "fiber": 2.7
+    },
+    "ingredients": [
+      {
+        "item": "Chicken thighs, boneless skinless — 780 g total (260 g per container)",
+        "nutritionKey": "Chicken thighs (boneless, skinless)"
+      },
+      {
+        "item": "Heavy cream — 8 tbsp total (2¾ tbsp per container)",
+        "nutritionKey": "Heavy cream"
+      },
+      {
+        "item": "Sour cream — 6 tbsp total (2 tbsp per container)",
+        "nutritionKey": "Daisy sour cream"
+      },
+      {
+        "item": "Smoked paprika — 2½ tsp total (¾ tsp per container)",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      },
+      {
+        "item": "Yellow onion (cooked in) — 30 g total (10 g per container)",
+        "nutritionKey": "Yellow onion"
+      },
+      {
+        "item": "Cauliflower — 330 g total (110 g per container)",
+        "nutritionKey": "Cauliflower"
+      },
+      {
+        "item": "Zucchini — 120 g total (40 g per container)",
+        "nutritionKey": "Zucchini"
+      },
+      {
+        "item": "Butter — 1¾ tbsp total (1¾ tsp per container)",
+        "nutritionKey": "Butter"
+      },
+      {
+        "item": "Cheddar cheese — 60 g total (20 g per container)",
+        "nutritionKey": "Cheddar cheese"
+      }
+    ],
+    "steps": [
+      "Pat the chicken thighs dry and season with salt and pepper. Sear in half the butter in batches, 4–5 min per side, until browned. Remove.",
+      "In the same pan, cook the onion 2–3 min until soft. Stir in the paprika for 30 seconds, then the cream and sour cream. Simmer 3–4 min.",
+      "Return the chicken to the sauce and simmer 8–10 min until cooked through (175°F for thighs). Slice or leave whole. Melt the cheddar into the sauce at the end.",
+      "Rice the cauliflower raw and slice the zucchini. Divide into 3 containers: cauliflower rice and zucchini on one side, chicken with plenty of sauce on the other. Reheat with a splash of water."
+    ]
+  },
+  "laineLunch": {
+    "name": "Chicken-Bacon Crunch Jar (Mon–Wed)",
+    "note": "Cold chicken salad over crunchy romaine, no reheating. Poach the chicken Sunday, chill, and chop. Dressing goes on the bottom; romaine on top. Made for 3 jars: Monday, Tuesday, Wednesday.",
+    "macros": {
+      "cal": 499,
+      "protein": 35,
+      "carbs": 4.4,
+      "fat": 37,
+      "fiber": 3.3
+    },
+    "ingredients": [
+      {
+        "item": "Chicken breast — 315 g total (105 g per jar)",
+        "nutritionKey": "Chicken breast"
+      },
+      {
+        "item": "Bacon, cooked — 36 g total (12 g per jar)",
+        "nutritionKey": "Bacon (cooked)"
+      },
+      {
+        "item": "Mayonnaise (avocado oil) — 4¾ tbsp total (1½ tbsp per jar)",
+        "nutritionKey": "Mayonnaise (avocado oil)"
+      },
+      {
+        "item": "Dijon mustard — 2½ tsp total (¾ tsp per jar)",
+        "nutritionKey": "Dijon mustard"
+      },
+      {
+        "item": "Celery — 90 g total (30 g per jar)",
+        "nutritionKey": "Celery"
+      },
+      {
+        "item": "Pecans — 30 g total (10 g per jar)",
+        "nutritionKey": "Pecans"
+      },
+      {
+        "item": "Romaine lettuce — 210 g total (70 g per jar)",
+        "nutritionKey": "Romaine lettuce"
+      },
+      {
+        "item": "English cucumber — 150 g total (50 g per jar)",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Cheddar cheese — 45 g total (15 g per jar)",
+        "nutritionKey": "Cheddar cheese"
+      }
+    ],
+    "steps": [
+      "Sunday: poach the chicken breast in salted water 12–14 min until 165°F. Chill and chop. Cook the bacon crisp and crumble.",
+      "Stir the chicken with the mayo, Dijon, celery, pecans, and bacon.",
+      "Layer each jar: chicken salad on the bottom, then cucumber, cheddar, and romaine on top.",
+      "Keep cold. Tip into a bowl to eat."
+    ]
+  },
+  "laineLunch2": {
+    "name": "Cold Shrimp Crunch Jar (Thu)",
+    "note": "Uses the shrimp already in the freezer. Cold and crunchy, no reheating, with a sriracha-mayo dressing. One jar for Thursday.",
+    "macros": {
+      "cal": 461,
+      "protein": 35,
+      "carbs": 4.9,
+      "fat": 33,
+      "fiber": 3.3
+    },
+    "ingredients": [
+      {
+        "item": "Shrimp (frozen, raw) — 110 g",
+        "nutritionKey": "Frozen shrimp"
+      },
+      {
+        "item": "Romaine lettuce — 80 g",
+        "nutritionKey": "Romaine lettuce"
+      },
+      {
+        "item": "English cucumber — 50 g",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Celery — 30 g",
+        "nutritionKey": "Celery"
+      },
+      {
+        "item": "Cheddar cheese — 15 g",
+        "nutritionKey": "Cheddar cheese"
+      },
+      {
+        "item": "Mayonnaise (avocado oil) — 1½ tbsp",
+        "nutritionKey": "Mayonnaise (avocado oil)"
+      },
+      {
+        "item": "Dijon mustard — ¾ tsp",
+        "nutritionKey": "Dijon mustard"
+      },
+      {
+        "item": "Sriracha — ¾ tsp",
+        "nutritionKey": "Sriracha"
+      },
+      {
+        "item": "Pecans — 6 g",
+        "nutritionKey": "Pecans"
+      },
+      {
+        "item": "Bacon, cooked — 8 g",
+        "nutritionKey": "Bacon (cooked)"
+      },
+      {
+        "item": "Butter — 1 tsp",
+        "nutritionKey": "Butter"
+      }
+    ],
+    "steps": [
+      "Wednesday night: thaw the shrimp in the fridge. Saute in the butter 2–3 min until pink, cool, and chill. Crumble the bacon.",
+      "Stir the mayo, Dijon, and sriracha together for the dressing.",
+      "Layer the jar: dressing and shrimp on the bottom, then celery, cucumber, cheddar, pecans, bacon, and romaine on top.",
+      "Keep cold. Tip into a bowl to eat."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed",
+      "name": "Oikos Parfait with Pecans",
+      "macros": {
+        "cal": 149,
+        "protein": 12,
+        "carbs": 4.9,
+        "fat": 9,
+        "fiber": 1.2
+      },
+      "note": "Cold, no cooking. Friday's parfait is on the Weekend tab because you eat it together.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero plain Greek yogurt — 110 g",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Pecans — 12 g",
+          "nutritionKey": "Pecans"
+        }
+      ],
+      "steps": [
+        "Spoon the Oikos into a bowl and top with the pecans."
+      ]
+    },
+    {
+      "days": "Tue / Thu",
+      "name": "Cheddar Egg-White Scramble",
+      "macros": {
+        "cal": 260,
+        "protein": 24,
+        "carbs": 3.0,
+        "fat": 16,
+        "fiber": 0.2
+      },
+      "note": "Mild, quick, onion cooked in.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — 150 g (about ½ cup)",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Eggs — 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cheddar cheese — 20 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Butter — 1 tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Yellow onion (cooked in) — 15 g",
+          "nutritionKey": "Yellow onion"
+        }
+      ],
+      "steps": [
+        "Cook the onion in half the butter over medium-low until soft, 2–3 min.",
+        "Add the remaining butter, the egg whites, and the egg; scramble gently. Fold in the cheddar off the heat and serve."
+      ]
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Cottage Cheese + Pecans",
+      "macros": {
+        "cal": 173,
+        "protein": 14,
+        "carbs": 4.4,
+        "fat": 11,
+        "fiber": 0.8
+      },
+      "desc": "120 g cottage cheese 4% with 8 g pecans, once a day.",
+      "ingredients": [
+        {
+          "item": "Cottage cheese 4% — 120 g",
+          "nutritionKey": "Cottage cheese 4%"
+        },
+        {
+          "item": "Pecans — 8 g",
+          "nutritionKey": "Pecans"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Whey Shake (almond milk)",
+      "macros": {
+        "cal": 258,
+        "protein": 27,
+        "carbs": 2.5,
+        "fat": 15,
+        "fiber": 0.7
+      },
+      "desc": "1 scoop whey isolate (30 g), 1 cup unsweetened almond milk, and 2 tbsp heavy cream. Plan: 1 a day Mon–Wed and Fri–Sun, 3 on Thursday (team lunch, no lunch container). Extra shakes any day are fine: skip the cream and each adds about 25 g protein and 2 g net carbs.",
+      "ingredients": [
+        {
+          "item": "Whey protein isolate — 30 g",
+          "nutritionKey": "Whey protein isolate"
+        },
+        {
+          "item": "Unsweetened almond milk — 240 g",
+          "nutritionKey": "Almond milk (unsweetened)"
+        },
+        {
+          "item": "Heavy cream — 2 tbsp",
+          "nutritionKey": "Heavy cream"
+        }
+      ]
+    },
+    {
+      "name": "String Cheese + Pork Rinds + Pecans",
+      "macros": {
+        "cal": 421,
+        "protein": 38,
+        "carbs": 1.4,
+        "fat": 29,
+        "fiber": 1.0
+      },
+      "desc": "1 string cheese, 50 g pork rinds, and 10 g pecans. Mon–Thu; on Friday drop the pecans.",
+      "ingredients": [
+        {
+          "item": "String cheese — 1 stick",
+          "nutritionKey": "String cheese (1 stick)"
+        },
+        {
+          "item": "Pork rinds — 50 g",
+          "nutritionKey": "Pork rinds"
+        },
+        {
+          "item": "Pecans — 10 g",
+          "nutritionKey": "Pecans"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Produce": [
+      "Cauliflower — 2 large heads, ~670 g used (Mon–Wed Jake lunch; Wed/Sun Jake & Laine dinner)",
+      "Green cabbage — 1 small head, ~470 g used (Wed/Thu/Sat Jake & Laine dinner; Sun Jake & Laine lunch)",
+      "Zucchini — 3 medium, ~590 g used (Mon/Fri Jake & Laine dinner; Mon–Wed Jake lunch)",
+      "Romaine hearts — 9 hearts (3 × 3-packs), ~1,240 g used (Tue/Sat Jake & Laine dinner; Mon–Thu Laine lunch jars; Fri/Sat Jake & Laine lunch)",
+      "English cucumbers — 3, ~680 g used (Tue/Thu Jake & Laine dinner; Mon–Thu Laine lunch jars; Fri/Sat Jake & Laine lunch)",
+      "Tomatoes on the vine — ~160 g (Fri/Sat Jake & Laine lunch)",
+      "Celery — 1 bunch, ~120 g used (Mon–Thu Laine lunch jars)",
+      "Yellow onion — 1 large, ~130 g used, always cooked in (Mon/Thu/Sun Jake & Laine dinner; Tue/Thu Laine breakfast; Sat Jake & Laine breakfast; Mon–Wed Jake lunch)",
+      "Fresh ginger — 1 small knob, ~9 g used (Thu Jake & Laine dinner)",
+      "Fresh dill — 1 small bunch, ~5 g used (Fri Jake & Laine dinner)"
+    ],
+    "Meat & Seafood": [
+      "Pork loin — ~1.75 lb (780 g raw), 1 pack (Mon Jake & Laine dinner; Tue Jake & Laine dinner, cooked Monday)",
+      "Pork shoulder — ~1.9 lb (840 g raw), 1 pack (Sat Jake & Laine dinner; Sun Jake & Laine lunch)",
+      "Chuck tender steak — ~1.4 lb (635 g raw), 1 pack (Wed Jake & Laine dinner; Fri Jake & Laine lunch)",
+      "Ground beef 85/15 — ~1.9 lb (840 g), 2 × 1 lb packs (Thu/Sun Jake & Laine dinner)",
+      "Atlantic salmon fillet — ~13 oz (380 g) (Fri Jake & Laine dinner)",
+      "Chicken thighs, boneless skinless — ~1.7 lb (780 g), 1 pack (Mon–Wed Jake lunch)",
+      "Chicken breast — ~1 lb (415 g), 1 pack (Mon–Wed Laine lunch jars; Sat Jake & Laine lunch)",
+      "Bacon — 3 × 12 oz packs, ~320 g cooked weight used (Mon/Tue/Wed/Sun Jake & Laine dinner; Fri/Sat Jake & Laine breakfast; Fri/Sat Jake & Laine lunch; Mon–Thu Laine lunch jars)"
+    ],
+    "Dairy & Eggs": [
+      "Heavy cream — 1 quart, ~590 g used (Mon/Wed/Fri/Sun Jake & Laine dinner; Mon–Wed Jake lunch; Jake shakes)",
+      "Sour cream — 16 oz, ~180 g used (Mon–Wed Jake lunch; Fri Jake & Laine lunch; Sat Jake & Laine dinner; Sun Jake & Laine lunch)",
+      "Cheddar block — 1 lb, ~430 g used, shred it yourself (Mon–Wed Jake lunch; Mon–Thu Laine lunch jars; Thu Laine breakfast; Fri/Sat/Sun Jake & Laine meals)",
+      "Swiss cheese — 6 oz, ~70 g used (Tue Jake & Laine dinner)",
+      "Parmesan, grated — 5 oz, ~50 g used (Fri Jake & Laine dinner; Sun Jake & Laine dinner)",
+      "Cottage cheese 4% — 2 × 16 oz tubs, ~890 g used (Mon–Sun Laine snack; Sun Jake & Laine breakfast)",
+      "Oikos Triple Zero plain Greek yogurt — 32 oz tub, ~480 g used (Mon/Wed Laine breakfast; Fri/Sun Jake & Laine breakfast)",
+      "Eggs — 18 count, 17 used (Tue/Thu Laine breakfast; Fri/Sat/Sun Jake & Laine breakfast; Sat Jake & Laine lunch; Sun Jake & Laine dinner)",
+      "Liquid egg whites — 32 oz carton, ~550 g used (Tue/Thu Laine breakfast; Sat Jake & Laine breakfast)",
+      "String cheese — 1 pack, 5 sticks used (Mon–Fri Jake snack)"
+    ],
+    "Pantry": [
+      "Pork rinds — 3 × 4 oz bags, ~250 g used (Mon–Fri Jake snack)",
+      "Pecans — 8 oz bag, ~190 g used (Mon–Fri Jake snack; Mon/Wed Laine breakfast; Fri/Sun Jake & Laine breakfast; Laine snack; Laine lunch jars)",
+      "Dill pickles — 1 jar, ~240 g used (Tue/Sat Jake & Laine dinner; Fri Jake & Laine lunch; Sun Jake & Laine lunch)",
+      "Beef broth — 1 carton (32 oz), ~155 g used (Mon/Wed/Sun Jake & Laine dinner)"
+    ],
+    "Check Supply": [
+      "Frozen shrimp — already in the freezer, ~110 g raw (Thu Laine lunch jar)",
+      "Butter — ~175 g (Mon/Wed/Fri/Sat/Sun Jake & Laine dinner; Mon–Wed Jake lunch; Tue/Thu Laine breakfast; Thu Laine lunch jar; Sat/Sun Jake & Laine breakfast)",
+      "Unsweetened almond milk — about 2.2 L, 2 half-gallons (Jake shakes, Mon–Sun; Sun Jake & Laine breakfast)",
+      "Whey protein isolate — ~9 scoops (Mon–Sun Jake shakes, including Thursday's extra two)",
+      "Almond flour — ~70 g (Fri/Sun Jake & Laine dinner; Sun Jake & Laine breakfast)",
+      "Mayonnaise (avocado oil) — ~340 g (Tue/Thu/Sat Jake & Laine dinner; Mon–Thu Laine lunch jars; Fri/Sat/Sun Jake & Laine lunch)",
+      "Dijon mustard — ~95 g (Mon/Tue/Fri Jake & Laine dinner; Mon–Thu Laine lunch jars; Fri/Sat Jake & Laine lunch)",
+      "Olive oil, sesame oil, soy sauce, rice vinegar, sriracha — small amounts (Wed/Thu Jake & Laine dinner; Sriracha Mayo card)",
+      "Smoked paprika — ~2 tsp (Mon–Wed Jake lunch; Sat Jake & Laine dinner)",
+      "Black peppercorns — 1 tsp (Wed Jake & Laine dinner)",
+      "Peanuts, unsalted — ~20 g (Thu Jake & Laine dinner)"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          209,
+          15,
+          1.7,
+          15,
+          0.6
+        ],
+        [
+          "Lunch (avg)",
+          601,
+          47,
+          5.9,
+          42,
+          2.7
+        ],
+        [
+          "Dinner (avg)",
+          963,
+          65,
+          6.6,
+          73,
+          2.9
+        ],
+        [
+          "Snacks & Shakes (avg)",
+          550,
+          62,
+          3.6,
+          31,
+          1.5
+        ]
+      ],
+      "total": [
+        2323,
+        189,
+        17.8,
+        161,
+        7.7
+      ],
+      "goal": [
+        2030,
+        203,
+        20,
+        126,
+        12
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          210,
+          18,
+          3.8,
+          13,
+          0.8
+        ],
+        [
+          "Lunch (avg)",
+          479,
+          31,
+          5.2,
+          36,
+          3.4
+        ],
+        [
+          "Dinner (avg)",
+          652,
+          41,
+          5.6,
+          50,
+          2.6
+        ],
+        [
+          "Snacks & Shakes (avg)",
+          173,
+          14,
+          4.4,
+          11,
+          0.8
+        ]
+      ],
+      "total": [
+        1514,
+        104,
+        19.0,
+        110,
+        7.6
+      ],
+      "goal": [
+        1363,
+        103,
+        20,
+        97,
+        14
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "weekendMeals": [
+    {
+      "day": "Friday (November 6) — Breakfast (flex day)",
+      "name": "Oikos-Pecan Parfait + Soft-Boiled Eggs & Bacon",
+      "note": "Flex-day Friday: you eat breakfast together. Jake adds soft-boiled eggs and bacon to his parfait.",
+      "jake": {
+        "cal": 402,
+        "protein": 31,
+        "carbs": 4.4,
+        "fat": 28,
+        "fiber": 1.0
+      },
+      "laine": {
+        "cal": 149,
+        "protein": 12,
+        "carbs": 4.9,
+        "fat": 9,
+        "fiber": 1.2
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero plain Greek yogurt — Jake 90 g, Laine 110 g",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Pecans — Jake 10 g, Laine 12 g",
+          "nutritionKey": "Pecans"
+        },
+        {
+          "item": "Eggs — Jake 2 eggs",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Bacon, cooked — Jake 25 g",
+          "nutritionKey": "Bacon (cooked)"
+        }
+      ],
+      "steps": [
+        "Boil the eggs 6½ min, then ice bath and peel. Cook the bacon crisp.",
+        "Spoon the Oikos into bowls and top with the pecans. Serve Jake's eggs and bacon alongside."
+      ]
+    },
+    {
+      "day": "Friday (November 6) — Lunch (flex day)",
+      "name": "Steakhouse Chopped Salad with Mustard–Sour Cream Dressing",
+      "note": "Uses Wednesday's chilled steak (185 g raw, cooked). Slice thin and eat cold.",
+      "jake": {
+        "cal": 610,
+        "protein": 41,
+        "carbs": 6.2,
+        "fat": 46,
+        "fiber": 4.4
+      },
+      "laine": {
+        "cal": 412,
+        "protein": 28,
+        "carbs": 6.1,
+        "fat": 30,
+        "fiber": 4.4
+      },
+      "ingredients": [
+        {
+          "item": "Chuck tender steak — Jake 110 g, Laine 75 g",
+          "nutritionKey": "Flank/sirloin steak"
+        },
+        {
+          "item": "Romaine lettuce — Jake 160 g, Laine 160 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Cheddar cheese — Jake 30 g, Laine 20 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Tomato — Jake 30 g, Laine 30 g",
+          "nutritionKey": "Tomato (slicing)"
+        },
+        {
+          "item": "English cucumber — Jake 30 g, Laine 50 g",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 1½ tbsp, Laine 1 tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Sour cream — Jake 1 tbsp, Laine 2 tsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Dijon mustard — Jake 1¼ tsp, Laine 1 tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Bacon, cooked — Jake 20 g, Laine 10 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Dill pickles — Jake 25 g, Laine 20 g",
+          "nutritionKey": "Dill pickles"
+        }
+      ],
+      "steps": [
+        "Slice the cold steak thin against the grain. Cook the bacon crisp and crumble.",
+        "Whisk the mayo, sour cream, and Dijon with a splash of water for the dressing.",
+        "Chop the romaine, cucumber, and tomato; toss with the cheddar, pickle, steak, and bacon. Drizzle with the dressing."
+      ]
+    },
+    {
+      "day": "Saturday (November 7) — Breakfast",
+      "name": "Cheddar-Bacon Egg Scramble",
+      "note": "Jake eats breakfast with Laine on weekends. Weekdays he skips it.",
+      "jake": {
+        "cal": 592,
+        "protein": 43,
+        "carbs": 2.8,
+        "fat": 44,
+        "fiber": 0.1
+      },
+      "laine": {
+        "cal": 257,
+        "protein": 24,
+        "carbs": 2.4,
+        "fat": 16,
+        "fiber": 0.1
+      },
+      "ingredients": [
+        {
+          "item": "Eggs — Jake 3 eggs, Laine 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Liquid egg whites — Jake 100 g (about ½ cup), Laine 150 g (about ½ cup)",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Cheddar cheese — Jake 30 g, Laine 20 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Butter — Jake 2¼ tsp, Laine 1 tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Yellow onion (cooked in) — Jake 10 g, Laine 8 g",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Bacon, cooked — Jake 25 g",
+          "nutritionKey": "Bacon (cooked)"
+        }
+      ],
+      "steps": [
+        "Cook the onion in half the butter over medium-low until soft, 2–3 min. Cook the bacon crisp and crumble.",
+        "Add the remaining butter and the beaten eggs and egg whites; scramble gently. Fold in the cheddar and bacon off the heat and serve."
+      ]
+    },
+    {
+      "day": "Saturday (November 7) — Lunch",
+      "name": "BLT Chicken Cobb Salad with Mustard-Mayo",
+      "note": "Made fresh, nothing batched. Jake's has extra bacon and sliced cold chicken breast from Sunday's poaching.",
+      "jake": {
+        "cal": 768,
+        "protein": 56,
+        "carbs": 6.7,
+        "fat": 55,
+        "fiber": 4.5
+      },
+      "laine": {
+        "cal": 467,
+        "protein": 23,
+        "carbs": 6.5,
+        "fat": 38,
+        "fiber": 4.4
+      },
+      "ingredients": [
+        {
+          "item": "Romaine lettuce — Jake 160 g, Laine 160 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Bacon, cooked — Jake 30 g, Laine 20 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Tomato — Jake 60 g, Laine 40 g",
+          "nutritionKey": "Tomato (slicing)"
+        },
+        {
+          "item": "Cheddar cheese — Jake 30 g, Laine 25 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Eggs — Jake 2 eggs, Laine 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 1¾ tbsp, Laine 1½ tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Dijon mustard — Jake 1¼ tsp, Laine 1¼ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "English cucumber — Jake 40 g, Laine 60 g",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Chicken breast — Jake 100 g",
+          "nutritionKey": "Chicken breast"
+        }
+      ],
+      "steps": [
+        "Hard-boil the eggs (10 min, ice bath) and slice. Cook the bacon crisp and crumble. Whisk the mayo and Dijon with a splash of water.",
+        "Build the salads: romaine, cucumber, tomato, egg, cheddar, bacon, and sliced chicken. Drizzle with the dressing."
+      ]
+    },
+    {
+      "day": "Sunday (November 8) — Breakfast",
+      "name": "Almond-Flour Waffles with Oikos and Pecans",
+      "note": "Jake eats with Laine. Fried eggs on the side for Jake.",
+      "jake": {
+        "cal": 469,
+        "protein": 29,
+        "carbs": 4.7,
+        "fat": 36,
+        "fiber": 2.9
+      },
+      "laine": {
+        "cal": 249,
+        "protein": 14,
+        "carbs": 3.4,
+        "fat": 19,
+        "fiber": 1.9
+      },
+      "ingredients": [
+        {
+          "item": "Almond flour — Jake 20 g, Laine 12 g",
+          "nutritionKey": "Almond flour"
+        },
+        {
+          "item": "Eggs — Jake 3 eggs, Laine 1 egg",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Cottage cheese 4% — Jake 30 g, Laine 20 g",
+          "nutritionKey": "Cottage cheese 4%"
+        },
+        {
+          "item": "Butter — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Oikos Triple Zero plain Greek yogurt — Jake 30 g, Laine 30 g",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Pecans — Jake 8 g, Laine 6 g",
+          "nutritionKey": "Pecans"
+        }
+      ],
+      "steps": [
+        "Whisk the almond flour with the egg, cottage cheese, a pinch of salt, and ¼ tsp baking powder. Rest 5 min.",
+        "Brush the waffle iron with butter and cook the batter until set and golden, 4–5 min.",
+        "Fry Jake's extra eggs. Top the waffles with the Oikos and pecans."
+      ]
+    },
+    {
+      "day": "Sunday (November 8) — Lunch",
+      "name": "Pulled Pork Bowls with Creamy Slaw and Cheddar",
+      "note": "Uses Saturday's pulled pork (360 g raw weight, already cooked and chilled). Eat cold or warm.",
+      "jake": {
+        "cal": 767,
+        "protein": 45,
+        "carbs": 3.6,
+        "fat": 61,
+        "fiber": 1.8
+      },
+      "laine": {
+        "cal": 520,
+        "protein": 28,
+        "carbs": 5.5,
+        "fat": 41,
+        "fiber": 2.0
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder — Jake 230 g, Laine 130 g",
+          "nutritionKey": "Pork shoulder (raw)"
+        },
+        {
+          "item": "Green cabbage, shredded — Jake 60 g, Laine 60 g",
+          "nutritionKey": "Green cabbage"
+        },
+        {
+          "item": "Mayonnaise (avocado oil) — Jake 1 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Mayonnaise (avocado oil)"
+        },
+        {
+          "item": "Sour cream — Jake 1 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Cheddar cheese — Jake 20 g, Laine 15 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Dill pickles — Jake 30 g, Laine 25 g",
+          "nutritionKey": "Dill pickles"
+        },
+        {
+          "item": "English cucumber — Laine 60 g",
+          "nutritionKey": "English cucumber"
+        }
+      ],
+      "steps": [
+        "Warm the pulled pork briefly, or eat it cold.",
+        "Stir the cabbage, mayo, and sour cream together for the creamy slaw.",
+        "Build the bowls: pork, slaw, cheddar, and pickle."
+      ]
+    }
+  ],
+  "weekendNote": "Friday is your flex day, so breakfast and lunch are planned together. Saturday and Sunday breakfast and lunch are planned too. Nothing is batched, everything is made fresh.",
+  "jakeTabNote": "Sunday batch: 3 containers for Mon–Wed. Thursday is team lunch and Friday is a flex day, so nothing is prepped for those days."
+}

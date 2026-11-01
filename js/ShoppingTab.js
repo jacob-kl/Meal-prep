@@ -75,7 +75,7 @@ function ShoppingTab({week}) {
   const toggleAdded=(id,total)=>saveAdded(addedItems.map(x=>x.id===id?{...x,count:((x.count||0)+1)%(total+1)}:x));
   const removeAdded=id=>saveAdded(addedItems.filter(x=>x.id!==id));
   const cats=Object.entries(week.shopping||{});
-  const catClr={"Must Buy":T.accent,"Check Supply":T.blue,"Already Have":T.green};
+  const catClr={"Must Buy":T.accent,"Check Supply":T.blue,"Already Have":T.green,"Produce":T.green,"Meat & Seafood":T.accent,"Dairy & Eggs":T.gold,"Pantry":T.textMid};
  
   let totalItems=0,doneItems=0;
   cats.forEach(([cat,items])=>items.forEach((item,i)=>{

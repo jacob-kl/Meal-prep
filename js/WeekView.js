@@ -23,7 +23,7 @@ function WeekView({week,nutritionDB}) {
       {hasWeekend&&tab===1&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
-            Weekend breakfast &amp; lunch, planned this week — nothing batched, made fresh each day.
+            {week.weekendNote||"Weekend breakfast & lunch, planned this week — nothing batched, made fresh each day."}
           </div>
           {week.weekendMeals.map((d,i)=><DinnerCard key={i} dinner={d} week={week}/>)}
         </div>
@@ -32,7 +32,7 @@ function WeekView({week,nutritionDB}) {
       {tab===jakeTabIdx&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.blueSoft,border:`1px solid ${T.blue}22`,borderRadius:10,padding:"10px 14px"}}>
-            {week.jakeBreakfast ? "Breakfast + two smaller lunches this week — all batch cooked Sunday, 5 containers each, same recipe all week." : "Batch cook Sunday — 5 containers, keeps all week."}
+            {week.jakeTabNote || (week.jakeBreakfast ? "Breakfast + two smaller lunches this week — all batch cooked Sunday, 5 containers each, same recipe all week." : "Batch cook Sunday — 5 containers, keeps all week.")}
           </div>
           {week.jakeBreakfast&&<MealCard meal={week.jakeBreakfast} personLabel="Jake · Breakfast" personColor={T.blue}/>}
           <LunchSection lunch={week.jakeLunch} label="Jake · Lunch 1" labelColor={T.blue} personColor={T.blue}/>
