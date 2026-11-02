@@ -2166,6 +2166,31 @@
       "phosphorus": 0
     }
   },
+  "Lamb shoulder chops (raw, bone-in)": {
+    "serving_qty": 100,
+    "serving_unit": "g_raw",
+    "serving": "per 100g raw bone-in (about 70% edible; USDA lamb shoulder, lean and fat, approx)",
+    "cal": 161,
+    "protein": 12,
+    "carbs": 0,
+    "fat": 12.3,
+    "fiber": 0,
+    "micros": {
+      "calcium": 0,
+      "folate": 0,
+      "iron": 0,
+      "magnesium": 0,
+      "phosphorus": 0,
+      "potassium": 0,
+      "selenium": 0,
+      "sodium": 0,
+      "vitamin_a": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0,
+      "vitamin_d": 0,
+      "zinc": 0
+    }
+  },
   "Lemon juice": {
     "serving_qty": 2,
     "serving_unit": "tbsp",

@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "Week of November 2–8, 2026. Keto week 3: 20 g NET carbs per day for each of you, so every 'carbs' value in this file is net carbs (total carbs minus fiber) and the carbs goal is 20. A total-carb ceiling of 30 g per day applies this week and steps down to 28 g on November 9. One fish night (Friday) and one steak night (Wednesday). No vegetarian day and no breakfast-for-dinner. Jake has a team lunch on Thursday (no lunch container) and skips breakfast on work days. Friday is a flex day: breakfast and lunch are planned together on the Weekend tab. Jake also eats breakfast with Laine on Saturday and Sunday. Shakes use almond milk. Jake's lunch is a 3-container batch (Mon–Wed). Laine's lunches are cold jars: chicken-bacon Mon–Wed, shrimp Thursday (the second is the laineLunch2 field). No lemon or garlic flavoring, no paneer, no raw onion, mushrooms, lentils, okra, eggplant, or farro. Shopping tab is grouped by store section.",
+  "_note": "Week of November 2–8, 2026. Keto week 3: 20 g NET carbs per day for each of you, so every 'carbs' value in this file is net carbs (total carbs minus fiber) and the carbs goal is 20. A total-carb ceiling of 30 g per day applies this week and steps down to 28 g on November 9. One fish night (Friday) and one lamb-chop night (Wednesday, in place of steak). No vegetarian day and no breakfast-for-dinner. Jake has a team lunch on Thursday (no lunch container) and skips breakfast on work days. Friday is a flex day: breakfast and lunch are planned together on the Weekend tab. Jake also eats breakfast with Laine on Saturday and Sunday. Shakes use almond milk. Jake's lunch is a 3-container batch (Mon–Wed). Laine's lunches are cold jars: chicken-bacon Mon–Wed, shrimp Thursday (the second is the laineLunch2 field). No lemon or garlic flavoring, no paneer, no raw onion, mushrooms, lentils, okra, eggplant, or farro. Shopping tab is grouped by store section.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -163,30 +163,26 @@
     },
     {
       "day": "Wednesday (November 4)",
-      "name": "Seared Chuck Tender + Peppercorn Cream, Bacon-Roasted Cabbage & Cauliflower Mash",
-      "note": "Steak night. Cook all 635 g of chuck tender tonight: 450 g for dinner and 185 g sliced and chilled for Friday's chopped salad.",
+      "name": "Seared Lamb Shoulder Chops + Peppercorn Cream, Bacon-Roasted Cabbage & Cauliflower Mash",
+      "note": "Lamb night (the swap for steak). Weights are bone-in. Cook 910 g tonight: 645 g for dinner and 265 g chilled for Friday's chopped salad. About 630 g (1.4 lb) of the lamb you bought is left over for the freezer.",
       "jake": {
-        "cal": 968,
-        "protein": 71,
+        "cal": 1097,
+        "protein": 60,
         "carbs": 6.7,
-        "fat": 74,
+        "fat": 91,
         "fiber": 3.3
       },
       "laine": {
-        "cal": 679,
-        "protein": 44,
+        "cal": 756,
+        "protein": 38,
         "carbs": 5.7,
-        "fat": 54,
+        "fat": 64,
         "fiber": 2.9
       },
       "ingredients": [
         {
-          "item": "Chuck tender steak — Jake 280 g, Laine 170 g",
-          "nutritionKey": "Flank/sirloin steak"
-        },
-        {
-          "item": "Butter — Jake 1½ tbsp, Laine 1¼ tbsp",
-          "nutritionKey": "Butter"
+          "item": "Lamb shoulder chops, bone-in — Jake 400 g, Laine 245 g",
+          "nutritionKey": "Lamb shoulder chops (raw, bone-in)"
         },
         {
           "item": "Heavy cream — Jake 4 tbsp, Laine 3¼ tbsp",
@@ -213,6 +209,10 @@
           "nutritionKey": "Cauliflower"
         },
         {
+          "item": "Butter — Jake 1¾ tsp, Laine 1¾ tsp",
+          "nutritionKey": "Butter"
+        },
+        {
           "item": "Black peppercorns, cracked — 1 tsp",
           "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
         }
@@ -220,8 +220,8 @@
       "steps": [
         "Steam the cauliflower 8–10 min until very soft. Mash or blend with the cream, 2 tsp of the butter, salt, and pepper until smooth.",
         "Cut the cabbage into wedges and toss with the olive oil, bacon pieces, salt, and pepper. Roast at 425°F 20 min until the edges brown.",
-        "Pat the steak dry and season with salt. Sear in the remaining butter in a very hot pan, 3–4 min per side to medium. Rest 8 min, slice against the grain, and chill Friday's 185 g.",
-        "In the same pan, simmer the broth with the cracked peppercorns 2 min, add the cream, and cook 2–3 min until thick. Spoon over the steak."
+        "Pat the lamb chops dry and season with salt. Sear in a hot dry cast-iron pan, in their own fat, 3–4 min per side until well browned. Finish in the 425°F oven 8–10 min to 145°F, since shoulder is tougher than steak. Rest 8 min. Chill Friday's 265 g right away.",
+        "In the same pan, simmer the broth with the cracked peppercorns 2 min, add the cream, and cook 2–3 min until thick. Spoon over the lamb."
       ]
     },
     {
@@ -298,7 +298,7 @@
     {
       "day": "Friday (November 6)",
       "name": "Parmesan-Almond Crusted Salmon + Dill-Dijon Cream & Sauteed Zucchini",
-      "note": "The one fish night this week. The salmon is the only seafood tonight; lunch is steak.",
+      "note": "The one fish night this week. The salmon is the only seafood tonight; lunch is lamb.",
       "jake": {
         "cal": 918,
         "protein": 57,
@@ -497,6 +497,7 @@
     }
   ],
   "jakeLunch": {
+    "batchDays": 3,
     "name": "Paprika-Cream Chicken Thighs + Cauliflower Rice",
     "note": "Sunday batch, 3 containers for Mon–Wed. Jake has team lunch Thursday and eats at home Friday, so nothing is prepped for those days. Chicken thighs simmered in a paprika cream sauce stay moist through reheating. No broccoli, no spinach, no fish, no lemon, no garlic. Cauliflower rice is raw-weight; steam it in the container when reheating.",
     "macros": {
@@ -512,7 +513,7 @@
         "nutritionKey": "Chicken thighs (boneless, skinless)"
       },
       {
-        "item": "Heavy cream — 8 tbsp total (2¾ tbsp per container)",
+        "item": "Heavy cream — 8¼ tbsp total (2¾ tbsp per container)",
         "nutritionKey": "Heavy cream"
       },
       {
@@ -520,7 +521,7 @@
         "nutritionKey": "Daisy sour cream"
       },
       {
-        "item": "Smoked paprika — 2½ tsp total (¾ tsp per container)",
+        "item": "Smoked paprika — 2¼ tsp total (¾ tsp per container)",
         "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
       },
       {
@@ -536,7 +537,7 @@
         "nutritionKey": "Zucchini"
       },
       {
-        "item": "Butter — 1¾ tbsp total (1¾ tsp per container)",
+        "item": "Butter — 5¼ tsp total (1¾ tsp per container)",
         "nutritionKey": "Butter"
       },
       {
@@ -552,6 +553,7 @@
     ]
   },
   "laineLunch": {
+    "batchDays": 3,
     "name": "Chicken-Bacon Crunch Jar (Mon–Wed)",
     "note": "Cold chicken salad over crunchy romaine, no reheating. Poach the chicken Sunday, chill, and chop. Dressing goes on the bottom; romaine on top. Made for 3 jars: Monday, Tuesday, Wednesday.",
     "macros": {
@@ -571,11 +573,11 @@
         "nutritionKey": "Bacon (cooked)"
       },
       {
-        "item": "Mayonnaise (avocado oil) — 4¾ tbsp total (1½ tbsp per jar)",
+        "item": "Mayonnaise (avocado oil) — 4½ tbsp total (1½ tbsp per jar)",
         "nutritionKey": "Mayonnaise (avocado oil)"
       },
       {
-        "item": "Dijon mustard — 2½ tsp total (¾ tsp per jar)",
+        "item": "Dijon mustard — 2¼ tsp total (¾ tsp per jar)",
         "nutritionKey": "Dijon mustard"
       },
       {
@@ -607,6 +609,7 @@
     ]
   },
   "laineLunch2": {
+    "batchDays": 1,
     "name": "Cold Shrimp Crunch Jar (Thu)",
     "note": "Uses the shrimp already in the freezer. Cold and crunchy, no reheating, with a sriracha-mayo dressing. One jar for Thursday.",
     "macros": {
@@ -825,7 +828,7 @@
     "Meat & Seafood": [
       "Pork loin — ~1.75 lb (780 g raw), 1 pack (Mon Jake & Laine dinner; Tue Jake & Laine dinner, cooked Monday)",
       "Pork shoulder — ~1.9 lb (840 g raw), 1 pack (Sat Jake & Laine dinner; Sun Jake & Laine lunch)",
-      "Chuck tender steak — ~1.4 lb (635 g raw), 1 pack (Wed Jake & Laine dinner; Fri Jake & Laine lunch)",
+      "Lamb shoulder chops, bone-in — ~3.4 lb bought, ~2 lb (910 g) used, rest to the freezer (Wed Jake & Laine dinner; Fri Jake & Laine lunch)",
       "Ground beef 85/15 — ~1.9 lb (840 g), 2 × 1 lb packs (Thu/Sun Jake & Laine dinner)",
       "Atlantic salmon fillet — ~13 oz (380 g) (Fri Jake & Laine dinner)",
       "Chicken thighs, boneless skinless — ~1.7 lb (780 g), 1 pack (Mon–Wed Jake lunch)",
@@ -877,18 +880,18 @@
         ],
         [
           "Lunch (avg)",
-          601,
-          47,
+          613,
+          46,
           5.9,
-          42,
+          43,
           2.7
         ],
         [
           "Dinner (avg)",
-          963,
-          65,
+          981,
+          64,
           6.6,
-          73,
+          75,
           2.9
         ],
         [
@@ -901,10 +904,10 @@
         ]
       ],
       "total": [
-        2323,
-        189,
+        2353,
+        187,
         17.8,
-        161,
+        164,
         7.7
       ],
       "goal": [
@@ -927,18 +930,18 @@
         ],
         [
           "Lunch (avg)",
-          479,
+          487,
           31,
           5.2,
-          36,
+          37,
           3.4
         ],
         [
           "Dinner (avg)",
-          652,
-          41,
+          663,
+          40,
           5.6,
-          50,
+          52,
           2.6
         ],
         [
@@ -951,10 +954,10 @@
         ]
       ],
       "total": [
-        1514,
-        104,
+        1533,
+        103,
         19.0,
-        110,
+        113,
         7.6
       ],
       "goal": [
@@ -1026,26 +1029,26 @@
     },
     {
       "day": "Friday (November 6) — Lunch (flex day)",
-      "name": "Steakhouse Chopped Salad with Mustard–Sour Cream Dressing",
-      "note": "Uses Wednesday's chilled steak (185 g raw, cooked). Slice thin and eat cold.",
+      "name": "Lamb Chopped Salad with Mustard–Sour Cream Dressing",
+      "note": "Uses Wednesday's chilled lamb (265 g bone-in raw weight, cooked). Cut it off the bone and slice thin; eat cold.",
       "jake": {
-        "cal": 610,
-        "protein": 41,
+        "cal": 699,
+        "protein": 37,
         "carbs": 6.2,
-        "fat": 46,
+        "fat": 56,
         "fiber": 4.4
       },
       "laine": {
-        "cal": 412,
-        "protein": 28,
+        "cal": 467,
+        "protein": 24,
         "carbs": 6.1,
-        "fat": 30,
+        "fat": 37,
         "fiber": 4.4
       },
       "ingredients": [
         {
-          "item": "Chuck tender steak — Jake 110 g, Laine 75 g",
-          "nutritionKey": "Flank/sirloin steak"
+          "item": "Lamb shoulder chops, bone-in — Jake 160 g, Laine 105 g",
+          "nutritionKey": "Lamb shoulder chops (raw, bone-in)"
         },
         {
           "item": "Romaine lettuce — Jake 160 g, Laine 160 g",
@@ -1085,9 +1088,9 @@
         }
       ],
       "steps": [
-        "Slice the cold steak thin against the grain. Cook the bacon crisp and crumble.",
+        "Cut the cold lamb off the bone and slice thin. Cook the bacon crisp and crumble.",
         "Whisk the mayo, sour cream, and Dijon with a splash of water for the dressing.",
-        "Chop the romaine, cucumber, and tomato; toss with the cheddar, pickle, steak, and bacon. Drizzle with the dressing."
+        "Chop the romaine, cucumber, and tomato; toss with the cheddar, pickle, lamb, and bacon. Drizzle with the dressing."
       ]
     },
     {

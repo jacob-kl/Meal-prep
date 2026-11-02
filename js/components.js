@@ -326,14 +326,16 @@ function TabBar({tabs,active,setActive}) {
 }
  
 // ── Batch Lunch ───────────────────────────────────────────────────────
-function scaleN(n,r){const v=Math.round(parseFloat(n)*r*8)/8;if(v===Math.floor(v))return String(v);const w=Math.floor(v),f=v-w;for(const[a,b,s]of[[1,8,"⅛"],[1,4,"¼"],[3,8,"⅜"],[1,2,"½"],[5,8,"⅝"],[3,4,"¾"],[7,8,"⅞"]])if(Math.abs(f-a/b)<0.07)return w>0?w+" "+s:s;return parseFloat((parseFloat(n)*r).toFixed(1)).toString();}
-function scaleText(t,d){if(d===5)return t;return t.replace(/(\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml)/gi,(m,n,u)=>scaleN(n,d/5)+" "+u);}
+function scaleN(n,r){const v=Math.round(parseFloat(n)*r*8)/8;if(v===Math.floor(v))return String(v);const w=Math.floor(v),f=v-w;for(const[a,b,s]of[[1,8,"⅛"],[1,4,"¼"],[3,8,"⅜"],[1,2,"½"],[5,8,"⅝"],[3,4,"¾"],[7,8,"⅞"]])if(Math.abs(f-a/b)<0.07)return w>0?w+s:s;return parseFloat((parseFloat(n)*r).toFixed(1)).toString();}
+// Scales amounts from a batch of `base` containers to `d`. Parentheticals like "(260 g per container)" are per-container amounts and never scale.
+function scaleText(t,d,base=5){if(d===base)return t;const FR={"¼":0.25,"½":0.5,"¾":0.75,"⅛":0.125,"⅜":0.375,"⅝":0.625,"⅞":0.875};const num=x=>{const l=x.slice(-1);return FR[l]!==undefined?(parseFloat(x.slice(0,-1)||"0")+FR[l]):parseFloat(x);};return t.replace(/(\([^)]*\bper\b[^)]*\))|((?:\d+\.?\d*)?[¼½¾⅛⅜⅝⅞]|\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml)\b/gi,(m,paren,n,u)=>paren?paren:scaleN(num(n),d/base)+" "+u);}
 function LunchSection({lunch,label,labelColor,personColor}) {
   const T = getT(useDark());
   const [open,setOpen]=useState(false);
-  const [days,setDays]=useState(5);
-  const sIngs=(lunch.ingredients||[]).map(i=>({...i,item:scaleText(i.item||"",days)}));
-  const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days).replace(/5 containers/g,days+" container"+(days!==1?"s":"")).replace(/all 5/g,"all "+days));
+  const base=lunch.batchDays||5;
+  const [days,setDays]=useState(base);
+  const sIngs=(lunch.ingredients||[]).map(i=>({...i,item:scaleText(i.item||"",days,base)}));
+  const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days,base).replace(new RegExp(base+" containers","g"),days+" container"+(days!==1?"s":"")).replace(new RegExp("all "+base,"g"),"all "+days));
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
       <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
@@ -343,14 +345,14 @@ function LunchSection({lunch,label,labelColor,personColor}) {
       <button onClick={()=>setOpen(!open)} style={{background:open?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 14px",fontSize:11,color:T.textMid}}>{open?"▲ Hide":"▼ Show"} recipe</button>
       {open&&(
         <div style={{marginTop:14,paddingTop:14,borderTop:`1px solid ${T.divider}`}}>
-          <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
+          {base>1&&<div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
             <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:"0.06em"}}>Prepping for</span>
             <div style={{display:"flex",gap:3}}>
-              {[1,2,3,4,5].map(n=><button key={n} onClick={()=>setDays(n)} style={{width:28,height:28,borderRadius:6,border:`1px solid ${days===n?personColor:T.tagBorder}`,background:days===n?personColor+"22":"none",color:days===n?personColor:T.textLight,fontSize:12,fontFamily:"'DM Mono',monospace"}}>{n}</button>)}
+              {Array.from({length:base},(_,i)=>i+1).map(n=><button key={n} onClick={()=>setDays(n)} style={{width:28,height:28,borderRadius:6,border:`1px solid ${days===n?personColor:T.tagBorder}`,background:days===n?personColor+"22":"none",color:days===n?personColor:T.textLight,fontSize:12,fontFamily:"'DM Mono',monospace"}}>{n}</button>)}
             </div>
             <span style={{fontSize:11,color:T.textLight}}>day{days!==1?"s":""}</span>
-          </div>
-          {days<5&&<div style={{background:T.accentSoft,borderRadius:8,padding:"8px 12px",marginBottom:12,fontSize:11,color:T.accent,lineHeight:1.5}}>Scaled to {days} day{days!==1?"s":""}.</div>}
+          </div>}
+          {days<base&&<div style={{background:T.accentSoft,borderRadius:8,padding:"8px 12px",marginBottom:12,fontSize:11,color:T.accent,lineHeight:1.5}}>Scaled to {days} day{days!==1?"s":""}.</div>}
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
             <div><SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel>
               <IngList ingredients={sIngs}/>
