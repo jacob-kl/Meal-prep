@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "November 9-15, 2026. Net carbs are stored in carbs for compatibility; totalCarbs is total dietary carbohydrate, with no sugar-alcohol subtraction. Maximum 20 g net / 28 g total each planned day. Three office lunches Mon/Tue/Fri; Wednesday is Veterans Day at home, Thursday team lunch. November 13 is a working Friday; alternate Friday off November 20. All ingredients are listed regardless of stock; pantry checkboxes start unchecked. Full-restock cost exceeds $150: see budget. No ground beef, tuna, egg lunch jars, office cauliflower or raw onion. Birthday dessert is on the Weekend tab with holiday/weekend meals. Macros are programmatically computed using the supplied nutrition database; brand labels and actual cooked yields may vary. Team lunch is an explicit estimate, not a measured meal.",
+  "_note": "November 9-15, 2026. Net carbs are stored in carbs for compatibility; totalCarbs is total dietary carbohydrate, with no sugar-alcohol subtraction. Maximum 20 g net / 28 g total each planned day. Three office lunches Mon/Tue/Fri; Wednesday is Veterans Day at home, Thursday team lunch. November 13 is a working Friday; alternate Friday off November 20. All ingredients are listed regardless of stock; pantry checkboxes start unchecked. Full-restock cost exceeds $150: see budget. No ground beef, tuna, egg lunch jars, office cauliflower or raw onion. Birthday dessert appears directly below Monday dinner. Macros are programmatically computed using the supplied nutrition database; brand labels and actual cooked yields may vary. Team lunch is an explicit estimate, not a measured meal.",
   "jakeMacros": {
     "cal": 2030,
     "protein": 203,
@@ -99,7 +99,7 @@
     {
       "day": "Monday (November 9) - Birthday",
       "name": "Rosemary-Braised Lamb + Cauliflower Mash & Parmesan Creamed Spinach",
-      "note": "Lamb quantities are bone-in RAW purchasing weights. Keep mash and spinach separate from the braising liquid. Dessert is the separate Monday cheesecake card. Total carbs (including fiber): Jake 12.0 g; Laine 8.6 g. Card carbs are NET.",
+      "note": "Lamb quantities are bone-in RAW purchasing weights. Keep mash and spinach separate from the braising liquid. Dessert is the cheesecake card directly below this dinner. Total carbs (including fiber): Jake 12.0 g; Laine 8.6 g. Card carbs are NET.",
       "jake": {
         "cal": 692.3,
         "protein": 44.9,
@@ -204,6 +204,87 @@
         "Steam the cauliflower until tender. Drain, then return to the hot uncovered pan for 3-5 minutes to drive off moisture. Blend with half the allocated butter and 20 g of the total cream. Salt to taste; do not add cooking water.",
         "Wilt the spinach in a separate pan, squeeze out liquid and chop. Reduce the remaining cream in a wide skillet until a spatula leaves a trail for 2 seconds. Fold in spinach, Parmesan and remaining butter. Heat gently until thick; serve beside mash and lamb.",
         "The ingredient list includes all finishing butter for each person. Melt any butter not used in the method into the finished sauce, or toss with the vegetable, and divide by the listed individual amounts. Do not add extra butter beyond the ingredient list."
+      ],
+      "desserts": [
+        {
+          "day": "Monday (November 9) - Dessert",
+          "name": "Birthday Lemon Cheesecake Cups",
+          "note": "One small cup per person. Dessert macros are separate from dinner and included in Monday's daily totals. Liquid stevia only; do not substitute a sugar-containing baking blend.",
+          "jake": {
+            "cal": 158.7,
+            "protein": 4.2,
+            "carbs": 3.0,
+            "fat": 15.0,
+            "fiber": 0.0,
+            "totalCarbs": 3.0
+          },
+          "laine": {
+            "cal": 158.7,
+            "protein": 4.2,
+            "carbs": 3.0,
+            "fat": 15.0,
+            "fiber": 0.0,
+            "totalCarbs": 3.0
+          },
+          "ingredients": [
+            {
+              "item": "Cream cheese - Jake 2.5 tbsp, Laine 2.5 tbsp",
+              "nutritionKey": "Cream cheese",
+              "quantity": 5.0,
+              "unit": "tbsp",
+              "personQuantities": {
+                "jake": 2.5,
+                "laine": 2.5
+              }
+            },
+            {
+              "item": "Eggs (large) - Jake 0.25 egg, Laine 0.25 egg",
+              "nutritionKey": "Eggs (large)",
+              "quantity": 0.5,
+              "unit": "egg",
+              "personQuantities": {
+                "jake": 0.25,
+                "laine": 0.25
+              }
+            },
+            {
+              "item": "Lemon juice - Jake 0.2 tbsp, Laine 0.2 tbsp",
+              "nutritionKey": "Lemon juice",
+              "quantity": 0.4,
+              "unit": "tbsp",
+              "personQuantities": {
+                "jake": 0.2,
+                "laine": 0.2
+              }
+            },
+            {
+              "item": "Daisy sour cream - Jake 0.5 tbsp, Laine 0.5 tbsp",
+              "nutritionKey": "Daisy sour cream",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "personQuantities": {
+                "jake": 0.5,
+                "laine": 0.5
+              }
+            },
+            {
+              "item": "Liquid stevia (zero calorie) - Jake 0.5 serving, Laine 0.5 serving",
+              "nutritionKey": "Liquid stevia (zero calorie)",
+              "quantity": 1.0,
+              "unit": "serving",
+              "personQuantities": {
+                "jake": 0.5,
+                "laine": 0.5
+              }
+            }
+          ],
+          "steps": [
+            "Make Sunday so dessert is fully chilled. Bring 5 tbsp cream cheese to room temperature. Beat smooth with 1 tbsp sour cream, 0.4 tbsp lemon juice and liquid zero-carb stevia to taste (start with the bottle's one-serving sweetness equivalent).",
+            "Beat 1 egg separately. Weigh it and add HALF to the cheesecake mixture; cook and eat the other half with Sunday prep-day food, outside this plan. Mix gently until just combined.",
+            "Divide between 2 butter-free silicone baking cups or small ramekins. Bake in a water bath at 300 F for about 20-30 minutes, until edges are set and center has a slight wobble; egg mixture should reach 160 F.",
+            "Cool, refrigerate within 2 hours, then chill at least 4 hours. Serve 1 cup each Monday. No crust and no bulk sugar-alcohol blend."
+          ]
+        }
       ]
     },
     {
@@ -2204,88 +2285,9 @@
       "steps": [
         "Brown sausage to 160 F. Add finely shredded cabbage and cook until browned, with a little crunch. Fry the eggs alongside and serve with thick sour cream."
       ]
-    },
-    {
-      "day": "Monday (November 9) - Dessert",
-      "name": "Birthday Lemon Cheesecake Cups",
-      "note": "One small cup per person. Dessert macros are separate from dinner and included in Monday's daily totals. Liquid stevia only; do not substitute a sugar-containing baking blend.",
-      "jake": {
-        "cal": 158.7,
-        "protein": 4.2,
-        "carbs": 3.0,
-        "fat": 15.0,
-        "fiber": 0.0,
-        "totalCarbs": 3.0
-      },
-      "laine": {
-        "cal": 158.7,
-        "protein": 4.2,
-        "carbs": 3.0,
-        "fat": 15.0,
-        "fiber": 0.0,
-        "totalCarbs": 3.0
-      },
-      "ingredients": [
-        {
-          "item": "Cream cheese - Jake 2.5 tbsp, Laine 2.5 tbsp",
-          "nutritionKey": "Cream cheese",
-          "quantity": 5.0,
-          "unit": "tbsp",
-          "personQuantities": {
-            "jake": 2.5,
-            "laine": 2.5
-          }
-        },
-        {
-          "item": "Eggs (large) - Jake 0.25 egg, Laine 0.25 egg",
-          "nutritionKey": "Eggs (large)",
-          "quantity": 0.5,
-          "unit": "egg",
-          "personQuantities": {
-            "jake": 0.25,
-            "laine": 0.25
-          }
-        },
-        {
-          "item": "Lemon juice - Jake 0.2 tbsp, Laine 0.2 tbsp",
-          "nutritionKey": "Lemon juice",
-          "quantity": 0.4,
-          "unit": "tbsp",
-          "personQuantities": {
-            "jake": 0.2,
-            "laine": 0.2
-          }
-        },
-        {
-          "item": "Daisy sour cream - Jake 0.5 tbsp, Laine 0.5 tbsp",
-          "nutritionKey": "Daisy sour cream",
-          "quantity": 1.0,
-          "unit": "tbsp",
-          "personQuantities": {
-            "jake": 0.5,
-            "laine": 0.5
-          }
-        },
-        {
-          "item": "Liquid stevia (zero calorie) - Jake 0.5 serving, Laine 0.5 serving",
-          "nutritionKey": "Liquid stevia (zero calorie)",
-          "quantity": 1.0,
-          "unit": "serving",
-          "personQuantities": {
-            "jake": 0.5,
-            "laine": 0.5
-          }
-        }
-      ],
-      "steps": [
-        "Make Sunday so dessert is fully chilled. Bring 5 tbsp cream cheese to room temperature. Beat smooth with 1 tbsp sour cream, 0.4 tbsp lemon juice and liquid zero-carb stevia to taste (start with the bottle's one-serving sweetness equivalent).",
-        "Beat 1 egg separately. Weigh it and add HALF to the cheesecake mixture; cook and eat the other half with Sunday prep-day food, outside this plan. Mix gently until just combined.",
-        "Divide between 2 butter-free silicone baking cups or small ramekins. Bake in a water bath at 300 F for about 20-30 minutes, until edges are set and center has a slight wobble; egg mixture should reach 160 F.",
-        "Cool, refrigerate within 2 hours, then chill at least 4 hours. Serve 1 cup each Monday. No crust and no bulk sugar-alcohol blend."
-      ]
     }
   ],
-  "weekendNote": "Wednesday holiday breakfast/lunch, weekend meals, and Monday birthday dessert. Jake-only cards show zero for Laine because her meal is on her breakfast/lunch card.",
+  "weekendNote": "Wednesday holiday breakfast/lunch, weekend meals, with Monday birthday dessert beneath its dinner. Jake-only cards show zero for Laine because her meal is on her breakfast/lunch card.",
   "jakeTabNote": "Sunday batch: 3 containers for Monday, Tuesday and Friday. Freeze Friday's on Sunday. Wednesday is a holiday at home; Thursday is team lunch. Follow only the snack card labeled for that day; Jake splits that card into two shakes. Carbs on cards are NET. Full-restock food estimate is $225.32 before supplements; it exceeds the $150 target. Check off anything already owned in Shopping.",
   "targets": {
     "jake": {

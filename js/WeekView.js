@@ -16,7 +16,12 @@ function WeekView({week,nutritionDB}) {
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
             Every dinner cooked together — same recipe, different portions. Jake's is always bigger.
           </div>
-          {week.dinners.map((d,i)=><DinnerCard key={i} dinner={d} week={week}/>)}
+          {week.dinners.map((d,i)=>(
+            <React.Fragment key={i}>
+              <DinnerCard dinner={d} week={week}/>
+              {(d.desserts||[]).map((dessert,j)=><DinnerCard key={j} dinner={dessert} week={week}/>)}
+            </React.Fragment>
+          ))}
         </div>
       )}
 
