@@ -2301,6 +2301,18 @@
       "selenium": 15
     }
   },
+  "Liquid stevia (zero calorie)": {
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "serving": "1 squeeze (approximately 1 dropper serving; follow bottle sweetness guide)",
+    "serving_qty": 1,
+    "serving_unit": "serving",
+    "micros": {},
+    "source": "Great Value Liquid No Calorie Stevia Sweetener label, https://www.walmart.com/ip/42279263. Choose liquid zero-carb stevia, not a dextrose/maltodextrin baking blend."
+  },
   "Macadamia nuts": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -3305,6 +3317,16 @@
       "zinc": 0
     }
   },
+  "TJ's Mandarin Orange Chicken": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9,
+    "fiber": 0
+  },
   "Taylor Farms salad kit": {
     "serving_qty": 1,
     "serving_unit": "serving",
@@ -3354,16 +3376,6 @@
     "serving": "per 1/2 cup (125g)",
     "serving_qty": 0.5,
     "serving_unit": "cup"
-  },
-  "TJ's Mandarin Orange Chicken": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g (package weight)",
-    "cal": 220,
-    "protein": 13,
-    "carbs": 22,
-    "fat": 9,
-    "fiber": 0
   },
   "Tofu (firm)": {
     "cal": 144,
