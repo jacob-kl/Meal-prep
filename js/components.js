@@ -305,20 +305,25 @@ function DinnerCard({dinner,week}) {
 // ── Tab Bar ───────────────────────────────────────────────────────────
 const ICONS = {
   Dinners:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M3 20h18M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/></svg>,
-  Jake:       ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>,
-  Laine:      ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>,
+  Weekend:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M8 15l3 3 5-5"/></svg>,
+  Jake:       ()=><span style={{fontSize:20,lineHeight:1}}>🍆</span>,
+  Laine:      ()=><span style={{fontSize:20,lineHeight:1}}>🍑</span>,
   Breakfasts: ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2"/></svg>,
   Snacks:     ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M12 2a4 4 0 014 4v1H8V6a4 4 0 014-4z"/><path d="M8 7v13h8V7"/></svg>,
   Shopping:   ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>,
   Nutrition:  ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
 };
 function TabBar({tabs,active,setActive}) {
-  const T = getT(useDark());
+  const dark = useDark();
+  const T = getT(dark);
+  const iconColors = dark
+    ? {Dinners:"#e89a70",Weekend:"#6dc4bc",Jake:"#bc9ae8",Laine:"#f0a184",Breakfasts:"#ebc65f",Snacks:"#bca0e3",Shopping:"#86bf8c",Nutrition:"#80b7df"}
+    : {Dinners:"#b95f32",Weekend:"#27847c",Jake:"#8255b4",Laine:"#c66f4b",Breakfasts:"#b18114",Snacks:"#8b5bb2",Shopping:"#3f8650",Nutrition:"#397fb0"};
   return (
     <div style={{display:"flex",gap:3,flexWrap:"wrap",background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:24}}>
       {tabs.map((t,i)=>{const Icon=ICONS[t];const isA=active===i;return(
         <button key={t} onClick={()=>setActive(i)} style={{flex:1,minWidth:72,padding:"8px 6px",background:isA?T.card:"none",border:`1px solid ${isA?T.border:"transparent"}`,borderRadius:10,color:isA?T.text:T.textLight,fontSize:10,letterSpacing:"0.04em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace",transition:"all 0.15s",display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
-          {Icon&&<Icon/>}{t}
+          {Icon&&<span aria-hidden="true" style={{display:"flex",alignItems:"center",justifyContent:"center",width:28,height:28,borderRadius:9,color:iconColors[t]||T.gold,background:(iconColors[t]||T.gold)+(dark?"22":"18")}}><Icon/></span>}{t}
         </button>
       );})}
     </div>
