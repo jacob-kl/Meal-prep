@@ -23,7 +23,7 @@ function RecipesTab({allWeeks}) {
   const [query,setQuery]=useState("");
   const [mealType,setMealType]=useState("All");
   const [themes,setThemes]=useState([]); // selected theme pills (OR-match)
-  const MEAL_TYPES=["All","Breakfast","Lunch","Dinner","Snack","Sauce","Sides"];
+  const MEAL_TYPES=["All","Breakfast","Lunch","Dinner","Dessert","Snack","Sauce","Sides"];
 
   const recipes = useMemo(()=>{
     const ordered=[...allWeeks].reverse(); // newest first
@@ -41,7 +41,7 @@ function RecipesTab({allWeeks}) {
       (w.jakeSnacks||[]).forEach(s=>add("Snack",s));
       (w.laineSnacks||[]).forEach(s=>add("Snack",s));
       add("Sauce",w.tzatziki);
-      (w.extras||[]).forEach(e=>add(e.recipeCategory||"Sides",e));
+      extraRecipeEntries(w).forEach(([category, recipe]) => add(category, recipe));
     });
     ordered.forEach(w=>{
       const note=(cat,o)=>{if(!o||!o.name)return;const k=cat+"::"+o.name.trim().toLowerCase();if(byKey[k]&&!byKey[k].weeks.includes(w.label))byKey[k].weeks.push(w.label);};
@@ -51,7 +51,7 @@ function RecipesTab({allWeeks}) {
       (w.jakeSnacks||[]).forEach(s=>note("Snack",s));
       (w.laineSnacks||[]).forEach(s=>note("Snack",s));
       note("Sauce",w.tzatziki);
-      (w.extras||[]).forEach(e=>note(e.recipeCategory||"Sides",e));
+      extraRecipeEntries(w).forEach(([category, recipe]) => note(category, recipe));
     });
     return Object.values(byKey).map(r=>({...r,themes:detectThemes(r)}));
   },[allWeeks]);
@@ -70,7 +70,7 @@ function RecipesTab({allWeeks}) {
     if((r.obj.note||"").toLowerCase().includes(q)) return true;
     return (r.obj.ingredients||[]).some(i=>(i.item||"").toLowerCase().includes(q));
   });
-  const order={Breakfast:0,Lunch:1,Dinner:2,Snack:3,Sauce:4,Sides:5};
+  const order={Breakfast:0,Lunch:1,Dinner:2,Dessert:3,Snack:4,Sauce:5,Sides:6};
   filtered.sort((a,b)=>(order[a.category]-order[b.category])||a.name.localeCompare(b.name));
 
   const tc=THEME_COLOR(T);
@@ -124,7 +124,7 @@ function RecipesTab({allWeeks}) {
             ))}
             <span style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",marginLeft:"auto"}}>{r.weeks.length>1?`${r.weeks.length} weeks`:r.weeks[0]}</span>
           </div>
-          {r.category==="Dinner"
+          {(r.category==="Dinner"||r.category==="Dessert")
             ? <DinnerCard dinner={r.obj} week={{}}/>
             : <MealCard meal={r.obj} personLabel={r.category==="Sauce"?"Sauce":r.category==="Sides"?"Side":undefined} personColor={r.category==="Sauce"?T.green:r.category==="Sides"?T.gold:T.accent} forceOpen={false}/>}
         </div>

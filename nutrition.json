@@ -3770,5 +3770,41 @@
     "serving": "1 cup brewed coffee",
     "source": "Generic plain brewed coffee estimate.",
     "micros": {}
+  },
+  "Unsweetened cocoa powder": {
+    "cal": 228,
+    "protein": 19.6,
+    "carbs": 57.9,
+    "fat": 13.7,
+    "fiber": 37,
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "100 g",
+    "source": "USDA SR Legacy, NDB 19165",
+    "micros": {}
+  },
+  "Vanilla extract": {
+    "cal": 12,
+    "protein": 0,
+    "carbs": 0.53,
+    "fat": 0,
+    "fiber": 0,
+    "serving_qty": 1,
+    "serving_unit": "tsp",
+    "serving": "1 tsp",
+    "source": "USDA SR Legacy, NDB 02050",
+    "micros": {}
+  },
+  "Monk fruit sweetener (zero-net-carb blend)": {
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "serving_qty": 1,
+    "serving_unit": "tbsp sugar equivalent",
+    "serving": "sweetness of 1 tbsp sugar",
+    "source": "Zero-net-carb blend assumption. Use the conversion on your package.",
+    "micros": {}
   }
 }

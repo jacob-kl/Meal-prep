@@ -1,0 +1,1158 @@
+{
+  "_v": 4,
+  "_note": "Week of July 13–19, 2026. Southwest / Tex-Mex theme, warm-weather leaning with several cold or no-cook nights. Monday's steak is bought in a larger batch so Tuesday's street tacos can run on the leftover portion plus a shrimp treat protein. Wednesday and Friday keep two fish nights (cod, salmon). Thursday is a fully cold shrimp and black bean salad. Saturday is a cold vegetarian quinoa and black bean salad. Sunday is standing breakfast-for-dinner — Southwest migas, not waffles (Birch Benders stay Sunday morning only). No raw onion, no mushrooms, no lentils, no okra/eggplant anywhere. Reheated chicken stays out of Laine's lunch; Jake's lunch batch uses chicken. Four new ingredients added to nutrition.json this week: Corn kernels (frozen), Cilantro, Lime juice, Cotija cheese.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
+  "tzatziki": {
+    "name": "Cilantro-Lime Crema",
+    "note": "This week's standalone sauce card, replacing the usual tzatziki/raita slot. A quick sour-cream crema with lime and garlic — used as the taco sauce Tuesday and as a bowl drizzle Monday. Makes about 1.25 cups (roughly 8 servings), keeps 4–5 days.",
+    "macros": {
+      "cal": 62,
+      "protein": 1,
+      "carbs": 2,
+      "fat": 5,
+      "fiber": 0.0
+    },
+    "macrosNote": "Per 2 tbsp serving.",
+    "ingredients": [
+      {
+        "item": "Daisy sour cream — 1 cup (16 tbsp)",
+        "nutritionKey": "Daisy sour cream"
+      },
+      {
+        "item": "Lime juice — 3 tbsp",
+        "nutritionKey": "Lime juice"
+      },
+      {
+        "item": "Cilantro, chopped — ½ cup",
+        "nutritionKey": "Cilantro"
+      },
+      {
+        "item": "Garlic — 1 clove, minced",
+        "nutritionKey": "Garlic"
+      },
+      {
+        "item": "Salt — pinch"
+      }
+    ],
+    "steps": [
+      "Whisk the sour cream, lime juice, and minced garlic together until smooth.",
+      "Stir in the chopped cilantro. Season with a pinch of salt.",
+      "Chill at least 15 min before serving. Thin with a splash of water or extra lime juice if you want it pourable. Keeps 4–5 days covered."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (July 13)",
+      "name": "Chili-Lime Steak Bowls",
+      "note": "Seared steak strips over rice with black beans, corn, bell pepper, and avocado, finished with cotija and a lime-cilantro drizzle. Buy extra steak tonight so Tuesday's tacos can run on the leftover portion.",
+      "jake": {
+        "cal": 963,
+        "protein": 61,
+        "carbs": 75,
+        "fat": 51,
+        "fiber": 15.9
+      },
+      "laine": {
+        "cal": 667,
+        "protein": 38,
+        "carbs": 57,
+        "fat": 35,
+        "fiber": 12.4
+      },
+      "tzatzikiRef": true,
+      "sauceLabel": "Crema",
+      "ingredients": [
+        {
+          "item": "Flank/sirloin steak — Jake 210g, Laine 120g raw, sliced into strips (buy extra for Tuesday)",
+          "nutritionKey": "Flank/sirloin steak"
+        },
+        {
+          "item": "White rice (dry) — Jake 35g, Laine 25g",
+          "nutritionKey": "White rice (dry)"
+        },
+        {
+          "item": "Black beans — Jake ~0.2 can, Laine ~0.15 can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Corn kernels (frozen) — Jake 0.3 cup, Laine 0.22 cup, thawed",
+          "nutritionKey": "Corn kernels (frozen)"
+        },
+        {
+          "item": "Bell pepper — Jake 70g, Laine 60g, sliced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Avocado — Jake ½, Laine ⅖, sliced",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Cotija cheese, crumbled — Jake 1.5 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Cotija cheese"
+        },
+        {
+          "item": "Lime juice — ~1.5 tbsp per person",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine 0.75 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cilantro, chopped — Jake ¼ cup, Laine ⅕ cup",
+          "nutritionKey": "Cilantro"
+        },
+        {
+          "item": "Cilantro-lime crema — 2–3 tbsp per person (see recipe card)",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Cook rice: simmer in salted water 15–18 min, fluff, keep warm.",
+        "Slice steak into thin strips, season with cumin, paprika, garlic powder, and salt. Sear in a hot pan 3–4 min per side to medium, rest 5 min, then slice thinner against the grain.",
+        "Warm black beans and corn together in a small pan with a squeeze of lime.",
+        "Build bowls: rice, steak, beans and corn, bell pepper, avocado. Top with cotija, cilantro, and a drizzle of the crema."
+      ]
+    },
+    {
+      "day": "Tuesday (July 14) — Street Taco Night",
+      "name": "Steak & Shrimp Street Tacos",
+      "note": "Standing leftovers-plus-a-treat night. Monday's leftover steak carries the tacos; shrimp is the treat protein. Corn tortillas, shredded romaine, cotija, and the cilantro-lime crema round it out.",
+      "jake": {
+        "cal": 565,
+        "protein": 53,
+        "carbs": 43,
+        "fat": 22,
+        "fiber": 5.0
+      },
+      "laine": {
+        "cal": 395,
+        "protein": 39,
+        "carbs": 29,
+        "fat": 15,
+        "fiber": 3.5
+      },
+      "ingredients": [
+        {
+          "item": "Leftover flank/sirloin steak — Jake 90g, Laine 65g, sliced/chopped",
+          "nutritionKey": "Flank/sirloin steak"
+        },
+        {
+          "item": "Frozen shrimp — Jake 100g, Laine 75g raw",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Corn tortillas (small) — Jake 3, Laine 2",
+          "nutritionKey": "Corn tortilla (small)"
+        },
+        {
+          "item": "Romaine lettuce, shredded — Jake 40g, Laine 35g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Cotija cheese, crumbled — Jake 1.5 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Cotija cheese"
+        },
+        {
+          "item": "Cilantro-lime crema — Jake 3 tbsp, Laine 2 tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Lime juice — ~1 tbsp shared, for the shrimp and to finish",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Warm the leftover steak in a dry skillet just until heated through.",
+        "Pat shrimp dry, season with cumin, paprika, garlic powder, and salt. Sear 1–2 min per side until just pink.",
+        "Warm the tortillas in a dry pan or over a low flame, 20–30 sec per side.",
+        "Fill tortillas with steak and shrimp, top with romaine, cotija, and a spoon of crema. Finish with a squeeze of lime. Jake gets the extra tortilla and more of both proteins."
+      ]
+    },
+    {
+      "day": "Wednesday (July 15)",
+      "name": "Baked Cod with Southwest Corn & Black Bean Salsa",
+      "note": "More-fish night. Cod roasted simply, served over rice with a warm corn, black bean, and tomato salsa spooned over the top, plus avocado and a squeeze of lime.",
+      "jake": {
+        "cal": 712,
+        "protein": 56,
+        "carbs": 67,
+        "fat": 27,
+        "fiber": 11.8
+      },
+      "laine": {
+        "cal": 523,
+        "protein": 39,
+        "carbs": 50,
+        "fat": 21,
+        "fiber": 9.0
+      },
+      "ingredients": [
+        {
+          "item": "Frozen cod — Jake 240g, Laine 165g raw",
+          "nutritionKey": "Frozen cod"
+        },
+        {
+          "item": "White rice (dry) — Jake 35g, Laine 25g",
+          "nutritionKey": "White rice (dry)"
+        },
+        {
+          "item": "Corn kernels (frozen) — Jake 0.3 cup, Laine 0.22 cup, thawed",
+          "nutritionKey": "Corn kernels (frozen)"
+        },
+        {
+          "item": "Black beans — Jake ~0.18 can, Laine ~0.13 can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Diced tomatoes (canned) — Jake 0.3 cup, Laine 0.25 cup",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Avocado — Jake ⅗, Laine ½, sliced",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Lime juice — ~1.5 tbsp per person",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine 0.75 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cilantro, chopped — Jake ⅕ cup, Laine 0.15 cup",
+          "nutritionKey": "Cilantro"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F. Pat cod dry, season with cumin, paprika, garlic powder, and salt. Bake 14–16 min until it flakes.",
+        "Cook rice: simmer in salted water 15–18 min, fluff.",
+        "Warm the corn, black beans, and diced tomatoes together in a small pan with a squeeze of lime — this is the salsa.",
+        "Plate cod over rice, spoon the salsa over the top, and add avocado and cilantro. Jake gets the bigger fillet."
+      ]
+    },
+    {
+      "day": "Thursday (July 16)",
+      "name": "Cold Shrimp & Black Bean Southwest Salad",
+      "note": "Fully cold, no stove needed at serving time. Shrimp, black beans, corn, bell pepper, and avocado over romaine, dressed in lime and olive oil with cotija on top.",
+      "jake": {
+        "cal": 740,
+        "protein": 68,
+        "carbs": 52,
+        "fat": 34,
+        "fiber": 17.9
+      },
+      "laine": {
+        "cal": 551,
+        "protein": 49,
+        "carbs": 40,
+        "fat": 26,
+        "fiber": 13.8
+      },
+      "ingredients": [
+        {
+          "item": "Frozen shrimp — Jake 210g, Laine 150g raw, cooked and chilled",
+          "nutritionKey": "Frozen shrimp"
+        },
+        {
+          "item": "Romaine lettuce, chopped — Jake 150g, Laine 130g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Black beans — Jake ~0.22 can, Laine ~0.16 can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Corn kernels (frozen) — Jake 0.3 cup, Laine 0.22 cup, thawed",
+          "nutritionKey": "Corn kernels (frozen)"
+        },
+        {
+          "item": "Bell pepper — Jake 70g, Laine 60g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Avocado — Jake ⅖, Laine ⅓, diced",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Cotija cheese, crumbled — Jake 2 tbsp, Laine 1.5 tbsp",
+          "nutritionKey": "Cotija cheese"
+        },
+        {
+          "item": "Lime juice — ~1.5 tbsp per person",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine 0.75 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cilantro, chopped — Jake ⅕ cup, Laine 0.15 cup",
+          "nutritionKey": "Cilantro"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Bring shrimp to a quick boil or sear if not already cooked, then chill in the fridge for at least 20 min.",
+        "Combine romaine, black beans, corn, bell pepper, and avocado in a large bowl.",
+        "Whisk olive oil, lime juice, cumin, and salt; toss through the salad.",
+        "Top with chilled shrimp, cotija, and cilantro. Serve cold — no reheating tonight."
+      ]
+    },
+    {
+      "day": "Friday (July 17)",
+      "name": "Chili-Lime Salmon with Sweet Potato & Black Beans",
+      "note": "Second fish night. Roasted salmon with a chili-lime rub alongside mashed sweet potato and warm black beans.",
+      "jake": {
+        "cal": 717,
+        "protein": 48,
+        "carbs": 37,
+        "fat": 40,
+        "fiber": 7.8
+      },
+      "laine": {
+        "cal": 509,
+        "protein": 33,
+        "carbs": 28,
+        "fat": 28,
+        "fiber": 5.8
+      },
+      "ingredients": [
+        {
+          "item": "Atlantic salmon — Jake 200g, Laine 135g raw",
+          "nutritionKey": "Atlantic salmon (raw)"
+        },
+        {
+          "item": "Sweet potato — Jake 80g, Laine 65g, cubed",
+          "nutritionKey": "Sweet potato"
+        },
+        {
+          "item": "Black beans — Jake ~0.18 can, Laine ~0.13 can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Lime juice — ~1.5 tbsp per person",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine 0.75 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cilantro, chopped — Jake ⅕ cup, Laine 0.1 cup",
+          "nutritionKey": "Cilantro"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 400°F. Pat salmon dry, rub with olive oil, cumin, paprika, garlic powder, salt, and a squeeze of lime. Roast skin-side down 12–14 min until just opaque.",
+        "Boil or steam the sweet potato cubes 12–15 min until fork-tender, then mash with a splash of water and a pinch of salt.",
+        "Warm the black beans in a small pan.",
+        "Plate salmon with the mashed sweet potato and beans alongside. Finish with cilantro and a final squeeze of lime. Jake gets the bigger fillet."
+      ]
+    },
+    {
+      "day": "Saturday (July 18)",
+      "name": "Southwest Black Bean & Quinoa Salad with Avocado and Cotija",
+      "note": "Vegetarian, cold-friendly night. Quinoa, black beans, corn, bell pepper, and avocado with lime and cotija, warm tortilla on the side for Jake.",
+      "jake": {
+        "cal": 792,
+        "protein": 25,
+        "carbs": 92,
+        "fat": 41,
+        "fiber": 21.9
+      },
+      "laine": {
+        "cal": 549,
+        "protein": 17,
+        "carbs": 58,
+        "fat": 30,
+        "fiber": 15.5
+      },
+      "ingredients": [
+        {
+          "item": "Quinoa (dry) — Jake 35g, Laine 25g",
+          "nutritionKey": "Quinoa (dry)"
+        },
+        {
+          "item": "Black beans — Jake ~0.28 can, Laine ~0.2 can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Corn kernels (frozen) — Jake 0.3 cup, Laine 0.22 cup, thawed",
+          "nutritionKey": "Corn kernels (frozen)"
+        },
+        {
+          "item": "Bell pepper — Jake 80g, Laine 70g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Avocado — Jake ½, Laine ⅖, diced",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Cotija cheese, crumbled — Jake 2 tbsp, Laine 1.5 tbsp",
+          "nutritionKey": "Cotija cheese"
+        },
+        {
+          "item": "Corn tortilla (small) — Jake 1 (Laine skips)",
+          "nutritionKey": "Corn tortilla (small)"
+        },
+        {
+          "item": "Lime juice — ~1.5 tbsp per person",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Olive oil — Jake 1.2 tbsp, Laine 0.9 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cilantro, chopped — Jake ¼ cup, Laine ⅕ cup",
+          "nutritionKey": "Cilantro"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Cook quinoa: rinse, simmer in 2× water 15 min, rest 5 min, fluff, then cool slightly.",
+        "Combine quinoa, black beans, corn, bell pepper, and avocado in a large bowl.",
+        "Whisk olive oil, lime juice, cumin, and salt; toss through the salad.",
+        "Top with cotija and cilantro. Warm Jake's tortilla on the side. Serve cold or room temp."
+      ]
+    },
+    {
+      "day": "Sunday (July 19)",
+      "name": "Southwest Migas — Scrambled Eggs with Tortillas, Black Beans & Avocado",
+      "note": "Standing breakfast-for-dinner — doesn't have to be waffles, and isn't this week. Soft scrambled eggs with crisped tortilla strips, black beans, bell pepper, and avocado, finished with cotija.",
+      "jake": {
+        "cal": 591,
+        "protein": 27,
+        "carbs": 40,
+        "fat": 38,
+        "fiber": 11.1
+      },
+      "laine": {
+        "cal": 412,
+        "protein": 17,
+        "carbs": 30,
+        "fat": 26,
+        "fiber": 8.3
+      },
+      "ingredients": [
+        {
+          "item": "Eggs — Jake 2, Laine 1",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Liquid egg whites — Jake ⅛ cup, Laine ⅛ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Corn tortillas (small) — Jake 1.25, Laine 1, torn into strips",
+          "nutritionKey": "Corn tortilla (small)"
+        },
+        {
+          "item": "Black beans — Jake ~0.15 can, Laine ~0.1 can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Avocado — Jake ⅗, Laine ½, sliced",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Cotija cheese, crumbled — Jake 1.5 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Cotija cheese"
+        },
+        {
+          "item": "Bell pepper — Jake 35g, Laine 25g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Olive oil — Jake 1 tbsp, Laine 0.75 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cilantro, chopped — Jake ⅕ cup, Laine 0.1 cup",
+          "nutritionKey": "Cilantro"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Warm olive oil in a nonstick pan. Add torn tortilla strips, crisp 2–3 min, then push to the side.",
+        "Add bell pepper and black beans to the pan, warm through 1–2 min.",
+        "Beat eggs and egg whites together, pour in, scramble gently over medium-low until just set, folding in the tortilla and beans.",
+        "Top with avocado, cotija, and cilantro."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Southwest Chicken & Black Bean Batch Bowl",
+    "note": "Southwest batch bowl, same 5-container Sunday format, no fish (office-friendly). Lime-cumin chicken, quinoa, black beans, corn, and bell pepper, cotija added fresh. No dressing batched in — add a squeeze of lime when eating.",
+    "macros": {
+      "cal": 704,
+      "protein": 67,
+      "carbs": 51,
+      "fat": 27,
+      "fiber": 8.9
+    },
+    "ingredients": [
+      {
+        "item": "Chicken breast — ~3.2 lbs total (230g raw per container)",
+        "nutritionKey": "Chicken breast"
+      },
+      {
+        "item": "Quinoa (dry) — 30g per container",
+        "nutritionKey": "Quinoa (dry)"
+      },
+      {
+        "item": "Black beans — ~0.15 can per container",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Corn kernels (frozen) — 0.3 cup per container, thawed",
+        "nutritionKey": "Corn kernels (frozen)"
+      },
+      {
+        "item": "Bell pepper — 50g per container, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Cotija cheese, crumbled — 1.5 tbsp per container",
+        "nutritionKey": "Cotija cheese"
+      },
+      {
+        "item": "Olive oil — ~1 tbsp per container",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Lime juice — ~1 tbsp per container",
+        "nutritionKey": "Lime juice"
+      },
+      {
+        "item": "Cilantro, chopped — ~2 tbsp per container",
+        "nutritionKey": "Cilantro"
+      },
+      {
+        "item": "Cumin, paprika, garlic powder, salt",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      }
+    ],
+    "steps": [
+      "Marinate chicken in olive oil, lime juice, cumin, paprika, garlic powder, and salt — 20–30 min if you have time.",
+      "Cook all the quinoa at once: rinse, simmer in 2× water 15 min, rest 5 min, fluff.",
+      "Grill or pan-sear the chicken in batches, ~6–7 min per side until 165°F. Rest, then slice or dice.",
+      "Divide into 5 containers: quinoa, chicken, black beans, corn, bell pepper. Top with cotija and cilantro fresh, plus a squeeze of lime when reheating/eating."
+    ]
+  },
+  "laineLunch": {
+    "name": "Cold Southwest Tuna & Black Bean Jar — Mason Jar Style",
+    "note": "Southwest cold jar. Tuna, black beans, corn, bell pepper, cotija, and romaine, eaten cold over two sittings. Avocado added fresh at the second sitting so it doesn't brown. No chicken, no lentils.",
+    "macros": {
+      "cal": 593,
+      "protein": 53,
+      "carbs": 38,
+      "fat": 28,
+      "fiber": 11.9
+    },
+    "dressingNote": "Lime-olive oil vinaigrette: 1 tbsp olive oil + ½ tbsp lime juice + pinch cumin + salt, drizzled in just before eating rather than batched.",
+    "ingredients": [
+      {
+        "item": "Canned tuna in water — 1.25 cans total, split across 5 jars",
+        "nutritionKey": "Canned tuna (in water)"
+      },
+      {
+        "item": "Black beans — ~0.15 can per jar, rinsed",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Corn kernels (frozen) — ~0.3 cup per jar, thawed",
+        "nutritionKey": "Corn kernels (frozen)"
+      },
+      {
+        "item": "Bell pepper — ~65g per jar, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Avocado — ~0.3 per jar, added fresh before eating",
+        "nutritionKey": "Avocado"
+      },
+      {
+        "item": "Cotija cheese, crumbled — ~1 tbsp per jar",
+        "nutritionKey": "Cotija cheese"
+      },
+      {
+        "item": "Romaine lettuce — ~35g per jar",
+        "nutritionKey": "Romaine lettuce"
+      },
+      {
+        "item": "Cilantro, chopped — ~1 tbsp per jar",
+        "nutritionKey": "Cilantro"
+      },
+      {
+        "item": "Olive oil — ~1 tbsp per jar (dressing, separate)",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Lime juice + cumin, salt",
+        "nutritionKey": "Lime juice"
+      }
+    ],
+    "steps": [
+      "Drain tuna well, rinse black beans, dice bell pepper.",
+      "Layer each jar: black beans → tuna → corn → bell pepper → cotija → romaine on top.",
+      "Mix the lime-olive oil dressing; portion into a small separate container per jar.",
+      "To eat: pour in dressing, shake, add fresh avocado, eat half — reseal for the second sitting."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed / Fri",
+      "name": "Greek Yogurt Parfait",
+      "macros": {
+        "cal": 180,
+        "protein": 18,
+        "carbs": 18,
+        "fat": 4,
+        "fiber": 5.0
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl. Top with thawed berries and flaxseed."
+      ]
+    },
+    {
+      "days": "Tue / Thu / Sat",
+      "name": "Southwest Egg White Scramble",
+      "macros": {
+        "cal": 126,
+        "protein": 20,
+        "carbs": 5,
+        "fat": 2,
+        "fiber": 1.0
+      },
+      "note": "Bell pepper and a pinch of cumin — mild, light, no heat.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ¾ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Bell pepper — ~40g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Cotija cheese, crumbled — ~1 tbsp",
+          "nutritionKey": "Cotija cheese"
+        },
+        {
+          "item": "Pinch cumin + salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Sauté bell pepper 1–2 min in a dry nonstick pan until it starts to soften.",
+        "Add egg whites, scramble over medium-low until just set.",
+        "Top with cotija and a pinch of cumin."
+      ]
+    },
+    {
+      "days": "Sun (July 19)",
+      "name": "Birch Benders Waffles + Berries",
+      "macros": {
+        "cal": 344,
+        "protein": 16,
+        "carbs": 57,
+        "fat": 7,
+        "fiber": 8.1
+      },
+      "note": "Standing Sunday-morning waffles — separate from Sunday's breakfast-for-dinner.",
+      "ingredients": [
+        {
+          "item": "Birch Benders pancake/waffle mix — ½ cup dry",
+          "nutritionKey": "Birch Benders pancake mix"
+        },
+        {
+          "item": "Liquid egg whites — ¼ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Mix batter: mix + egg whites + water per package. Stir in flaxseed.",
+        "Cook in a preheated waffle iron 3–4 min until crisp.",
+        "Top with thawed berries."
+      ]
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Banana + Greek Yogurt",
+      "macros": {
+        "cal": 195,
+        "protein": 16,
+        "carbs": 33,
+        "fat": 0,
+        "fiber": 3.1
+      },
+      "desc": "1 banana + 1 Oikos Triple Zero. Potassium + calcium snack.",
+      "ingredients": [
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        },
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        }
+      ]
+    },
+    {
+      "name": "Bell Pepper Strips + Hummus",
+      "macros": {
+        "cal": 146,
+        "protein": 6,
+        "carbs": 20,
+        "fat": 6,
+        "fiber": 6.2
+      },
+      "desc": "1 bell pepper sliced + 4 tbsp hummus.",
+      "ingredients": [
+        {
+          "item": "Bell pepper — 1 medium (150g)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Hummus — 4 tbsp (60g)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas",
+      "macros": {
+        "cal": 120,
+        "protein": 5,
+        "carbs": 18,
+        "fat": 3,
+        "fiber": 5.0
+      },
+      "desc": "¼ cup crunchy roasted chickpeas. Fiber + plant protein, lightly spiced.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup (~40g)",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber + Hummus",
+      "macros": {
+        "cal": 124,
+        "protein": 6,
+        "carbs": 15,
+        "fat": 6,
+        "fiber": 3.8
+      },
+      "desc": "½ cucumber sliced + ~4 tbsp hummus for dipping.",
+      "ingredients": [
+        {
+          "item": "English cucumber — ½ large (~150g)",
+          "nutritionKey": "Cucumber"
+        },
+        {
+          "item": "Hummus — 60g (~4 tbsp)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Berries",
+      "macros": {
+        "cal": 125,
+        "protein": 16,
+        "carbs": 14,
+        "fat": 0,
+        "fiber": 2.2
+      },
+      "desc": "1 Oikos Triple Zero + small handful thawed berries.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Tuna Straight from Can",
+      "macros": {
+        "cal": 150,
+        "protein": 33,
+        "carbs": 0,
+        "fat": 1,
+        "fiber": 0.0
+      },
+      "desc": "Drain and eat with a fork. Lime + a pinch of cumin.",
+      "ingredients": [
+        {
+          "item": "Canned tuna in water — 1 can",
+          "nutritionKey": "Canned tuna (in water)"
+        }
+      ]
+    },
+    {
+      "name": "Cottage Cheese + Banana",
+      "macros": {
+        "cal": 195,
+        "protein": 13,
+        "carbs": 31,
+        "fat": 2,
+        "fiber": 3.1
+      },
+      "desc": "½ cup cottage cheese + 1 banana. Calcium + potassium.",
+      "ingredients": [
+        {
+          "item": "Cottage cheese 2% — ½ cup",
+          "nutritionKey": "Cottage cheese 2%"
+        },
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas + Almonds",
+      "macros": {
+        "cal": 237,
+        "protein": 9,
+        "carbs": 22,
+        "fat": 13,
+        "fiber": 7.5
+      },
+      "desc": "¼ cup roasted chickpeas + a small handful of almonds.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        },
+        {
+          "item": "Almonds — ~20g",
+          "nutritionKey": "Almonds"
+        }
+      ]
+    },
+    {
+      "name": "Oikos Triple Zero + Flaxseed",
+      "macros": {
+        "cal": 145,
+        "protein": 17,
+        "carbs": 9,
+        "fat": 4,
+        "fiber": 2.8
+      },
+      "desc": "1 container + 1 tbsp ground flaxseed.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ]
+    },
+    {
+      "name": "Kefir (plain lowfat)",
+      "macros": {
+        "cal": 110,
+        "protein": 11,
+        "carbs": 12,
+        "fat": 2,
+        "fiber": 0.0
+      },
+      "desc": "1 cup plain lowfat kefir. Strong calcium + B12 + probiotics.",
+      "ingredients": [
+        {
+          "item": "Kefir (plain lowfat) — 1 cup",
+          "nutritionKey": "Kefir (plain lowfat)"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Must Buy": [
+      "Flank/sirloin steak — ~1.1 lbs (Mon bowls + Tue tacos)",
+      "Frozen shrimp — ~0.85 lbs (Tue tacos + Thu salad)",
+      "Atlantic salmon — 2 fillets (~335g raw, Fri)",
+      "Frozen cod — ~0.9 lb (Wed)",
+      "Canned tuna in water — 1.25 cans (Laine's 5 lunch jars)",
+      "Chicken breast — ~3.2 lbs (Jake's lunch batch only)",
+      "Black beans — 5–6 cans (used most nights + both lunches)",
+      "Corn kernels (frozen) — 1 large bag",
+      "Cotija cheese — 1 container (~8oz, used most nights)",
+      "Cilantro — 2 bunches",
+      "Limes — 6–8, or a bottle of lime juice",
+      "Bell peppers — 5–6 (dinners + Laine's lunch jars)",
+      "Avocados — 5–6",
+      "Corn tortillas (small) — 1–2 packs (Tue tacos + Sat side + Sun migas)",
+      "Romaine lettuce — 1–2 heads/hearts (Tue tacos + Thu salad + Laine lunch)",
+      "Diced tomatoes (canned) — 1 can (Wed salsa)",
+      "Daisy sour cream — 1 container (crema)",
+      "Sweet potato — 2 medium (Fri)",
+      "Quinoa — 1 bag (Sat dinner + Jake's lunch)",
+      "Bananas — 2 bunches (Jake + Laine snacks)"
+    ],
+    "Check Supply": [
+      "White rice — small amount needed (Mon, Wed)",
+      "Eggs — at least 3 (Sun dinner)",
+      "Liquid egg whites — 1–2 cartons (breakfasts + Sun dinner)",
+      "Oikos Triple Zero — 6+ containers (Laine breakfasts + snacks)",
+      "Frozen mixed berries — 1 bag (parfait + snack)",
+      "Hummus — 1 tub (Laine snacks)",
+      "Almonds — (Jake snack)",
+      "Cottage cheese 2% — 1 container (Jake snack)",
+      "Kefir (plain lowfat) — 1–2 cartons (Jake snack)",
+      "Ground flaxseed",
+      "Garlic — check you have a few cloves left",
+      "Cucumber — 1 (Laine snack)",
+      "Cumin / paprika / garlic powder — restock the spice tin if low",
+      "Birch Benders mix (Sunday morning waffles)",
+      "Roasted chickpeas — 1 bag/tub (snacks)"
+    ],
+    "Already Have": [
+      "Olive oil — check bottle is at least half full",
+      "Salt, pepper",
+      "White rice (backup)"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Lunch Bowl",
+          704,
+          67,
+          51,
+          27,
+          8.9
+        ],
+        [
+          "Dinner (avg)",
+          726,
+          48,
+          58,
+          36,
+          13.1
+        ],
+        [
+          "1–2 Snacks",
+          430,
+          50,
+          18,
+          21,
+          5
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1880,
+        167,
+        129,
+        85,
+        27.0
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          181,
+          19,
+          18,
+          4,
+          4
+        ],
+        [
+          "Lunch Jar",
+          593,
+          53,
+          38,
+          28,
+          11.9
+        ],
+        [
+          "Dinner (avg)",
+          515,
+          33,
+          42,
+          26,
+          9.8
+        ],
+        [
+          "1 Snack",
+          124,
+          6,
+          15,
+          6,
+          4
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1433,
+        112,
+        115,
+        64,
+        29.6
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "extras": [
+    {
+      "name": "Southwest Corn & Black Bean Salsa",
+      "recipeCategory": "Sides",
+      "nutritionKey": "Corn kernels (frozen)",
+      "note": "The warm salsa spooned over Wednesday's cod. Also good as a scoopable side on its own.",
+      "macros": {
+        "cal": 90,
+        "protein": 4,
+        "carbs": 17,
+        "fat": 1,
+        "fiber": 4.5
+      },
+      "macrosNote": "Per ~½ cup.",
+      "ingredients": [
+        {
+          "item": "Corn kernels (frozen) — ½ cup, thawed",
+          "nutritionKey": "Corn kernels (frozen)"
+        },
+        {
+          "item": "Black beans — ¼ can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Diced tomatoes (canned) — ¼ cup",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Lime juice — 1 tbsp",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Cumin, salt — pinch each",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Warm the corn, black beans, and diced tomatoes together in a small pan, 3–4 min.",
+        "Stir in lime juice, cumin, and salt off the heat."
+      ]
+    }
+  ]
+}

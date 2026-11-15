@@ -242,6 +242,34 @@ function IngList({ingredients}) {
   );
 }
  
+function MealHeading({photo,children}) {
+  if (!photo) return <>{children}</>;
+  const tile=photo.tile;
+  const tiled=Number.isInteger(tile);
+  return (
+    <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:10}}>
+      <div style={{position:"relative",flexShrink:0,width:"clamp(76px, 20vw, 118px)",aspectRatio:"1",overflow:"hidden",borderRadius:10}}>
+        <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" style={{
+          display:"block",position:"absolute",width:tiled?"200%":"100%",height:tiled?"200%":"100%",
+          left:tiled&&tile%2?"-100%":0,top:tiled&&tile>=2?"-100%":0,objectFit:"cover",maxWidth:"none"
+        }}/>
+      </div>
+      <div style={{minWidth:0}}>{children}</div>
+    </div>
+  );
+}
+ 
+function extraRecipeEntries(week) {
+  const desserts = (week.dinners || []).flatMap(dinner => dinner.desserts || []);
+  const dessertNames = new Set(desserts.map(dessert => dessert.name));
+  return [
+    ...desserts.map(dessert => ["Dessert", dessert]),
+    ...(week.extras || [])
+      .filter(extra => !dessertNames.has(extra.name))
+      .map(extra => [extra.recipeCategory || "Sides", extra])
+  ];
+}
+
 // ── Meal Card ─────────────────────────────────────────────────────────
 function MealCard({meal,personLabel,personColor,forceOpen}) {
   const T = getT(useDark());
@@ -251,8 +279,10 @@ function MealCard({meal,personLabel,personColor,forceOpen}) {
   const accentColor = personColor||T.accent;
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
-      {(meal.day||meal.days)&&<div style={{fontSize:10,color:accentColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{meal.day||meal.days}{personLabel?` · ${personLabel}`:""}</div>}
-      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{meal.name}</div>
+      <MealHeading photo={meal.photo}>
+        {(meal.day||meal.days)&&<div style={{fontSize:10,color:accentColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{meal.day||meal.days}{personLabel?` · ${personLabel}`:""}</div>}
+        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{meal.name}</div>
+      </MealHeading>
       {meal.macros&&<MacroRow macros={meal.macros}/>}
       {meal.macrosNote&&<div style={{fontSize:11,color:T.textLight,marginBottom:6,fontFamily:"'DM Mono',monospace"}}>{meal.macrosNote}</div>}
       {meal.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{meal.note}</div>}
@@ -275,8 +305,10 @@ function DinnerCard({dinner,week}) {
   const mealKey="dinner_"+(dinner.day||"")+"_"+(dinner.name||"");
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
-      <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
-      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
+      <MealHeading photo={dinner.photo}>
+        <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
+        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
+      </MealHeading>
       {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🥣 {(dinner.sauceLabel||"Tzatziki")} night — see recipe card in the Recipes tab</div>}
       {dinner.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{dinner.note}</div>}
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
@@ -347,8 +379,10 @@ function LunchSection({lunch,label,labelColor,personColor}) {
   const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days,base).replace(batchCountPattern,(_,unit)=>days+" "+unit+(days!==1?"s":"")).replace(new RegExp("all "+base,"g"),"all "+days));
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
-      <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
-      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{lunch.name}</div>
+      <MealHeading photo={lunch.photo}>
+        <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
+        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{lunch.name}</div>
+      </MealHeading>
       {lunch.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:8,fontStyle:"italic"}}>{lunch.note}</div>}
       <MacroRow macros={lunch.macros}/>
       <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>

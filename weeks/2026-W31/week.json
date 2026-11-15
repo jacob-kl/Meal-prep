@@ -1,0 +1,1065 @@
+{
+  "_v": 4,
+  "_note": "Week of July 27–August 2, 2026. Budget, land-meat comfort food — ground beef, ground sausage, ground turkey, and chicken carry the whole week, no fish or shellfish anywhere (Laine's tuna lunch jar is the one exception, since canned tuna is a cheap pantry staple rather than the pricey fresh stuff). The week's standalone sauce card is a Cheddar Cheese Sauce — built to work through a good chunk of the cheddar on hand, which also shows up shredded on five of the seven dinners, Jake's lunch bowl, and Laine's Tue/Thu/Sat breakfast scramble. Monday's ground beef skillet makes extra for Tuesday's standing Pita Tuesday (chopped-cheese style, ground sausage as the treat protein). Wed and Fri move off their usual fish slot onto chicken. Saturday is vegetarian (loaded cheddar potatoes). Sunday is standing breakfast-for-dinner, a sausage-potato-cheddar skillet using the back half of Friday's sausage. No raw onion, mushrooms, lentils, okra, or eggplant anywhere; no reheated chicken in Laine's lunch; red meat stays to one beef night (plus its Tuesday leftovers).",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 102,
+    "fat": 90
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 152,
+    "fat": 37
+  },
+  "tzatziki": {
+    "name": "Cheddar Cheese Sauce",
+    "note": "Jake's tzatziki slot, cheddar-ified — a basic roux-based cheese sauce sized to blanket Wednesday's chicken and rice, with extra left over to spoon onto the chili, the loaded potatoes, or anything else that wants it later in the week. Makes about 2¼ cups (9 servings of ¼ cup), keeps 4–5 days — reheat gently with a splash of milk, it thickens a lot in the fridge.",
+    "macros": {
+      "cal": 154,
+      "protein": 7,
+      "carbs": 4,
+      "fat": 12,
+      "fiber": 0.1
+    },
+    "macrosNote": "Per ¼ cup serving.",
+    "ingredients": [
+      {
+        "item": "Butter — 2½ tbsp",
+        "nutritionKey": "Butter"
+      },
+      {
+        "item": "All-purpose flour — 2½ tbsp (~20g)",
+        "nutritionKey": "All-purpose flour"
+      },
+      {
+        "item": "Whole milk — 1¾ cups",
+        "nutritionKey": "Whole milk"
+      },
+      {
+        "item": "Cheddar cheese, shredded — 1¾ cups",
+        "nutritionKey": "Cheddar cheese (shredded)"
+      },
+      {
+        "item": "Dijon mustard — 1 tsp",
+        "nutritionKey": "Dijon mustard"
+      },
+      {
+        "item": "Cumin, paprika, garlic powder, salt — 1 tsp",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      },
+      {
+        "item": "Black pepper — to taste"
+      }
+    ],
+    "steps": [
+      "Melt the butter in a saucepan over medium heat. Whisk in the flour and cook 1 min, stirring, until it smells toasty (this is your roux).",
+      "Whisk in the milk gradually, a splash at a time at first, until smooth. Simmer, whisking often, 4–5 min until it thickens enough to coat the back of a spoon.",
+      "Take off the heat. Stir in the cheddar a handful at a time until fully melted and smooth — off-heat keeps it from breaking.",
+      "Whisk in the Dijon and spices. Season with black pepper. Keep warm until serving; reheat leftovers low and slow with a splash of milk."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (July 27)",
+      "name": "Cheddar Beef & Potato Skillet",
+      "note": "One pan, budget-friendly, and not a fish night so it doesn't touch the Monday rule anyway. Extra beef gets browned alongside for Tuesday's leftovers — buy accordingly.",
+      "jake": {
+        "cal": 789,
+        "protein": 49,
+        "carbs": 35,
+        "fat": 49,
+        "fiber": 4.1
+      },
+      "laine": {
+        "cal": 518,
+        "protein": 31,
+        "carbs": 26,
+        "fat": 32,
+        "fiber": 3.1
+      },
+      "ingredients": [
+        {
+          "item": "Ground beef 85/15 — Jake 200g, Laine 115g raw (buy ~320g extra for Tuesday)",
+          "nutritionKey": "Ground beef 85/15"
+        },
+        {
+          "item": "Russet potato — Jake 130g, Laine 95g, diced",
+          "nutritionKey": "Russet potato"
+        },
+        {
+          "item": "Yellow onion — Jake ⅓ cup, Laine ¼ cup, diced",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Cheddar cheese, shredded — Jake ⅓ cup, Laine ¼ cup",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Diced tomatoes (canned) — Jake ⅓ cup, Laine ¼ cup",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Worcestershire sauce — Jake 1.5 tsp, Laine 1 tsp",
+          "nutritionKey": "Worcestershire sauce"
+        },
+        {
+          "item": "Dijon mustard — Jake 1 tsp, Laine ¾ tsp",
+          "nutritionKey": "Dijon mustard"
+        },
+        {
+          "item": "Garlic — 3–4 cloves total, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Olive oil — Jake ½ tbsp, Laine ⅓ tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Dice the potatoes small (½-inch) so they cook fast. Pan-fry in the olive oil over medium-high, 8–10 min, until golden and fork-tender. Set aside.",
+        "In the same pan, brown the ground beef with the onion and garlic, breaking it up as it cooks. Season with the spice mix.",
+        "Stir in the diced tomatoes, Worcestershire, and Dijon. Simmer 2–3 min. Fold the potatoes back in.",
+        "Top with cheddar, cover, and let it melt, 2 min. Jake gets the bigger portion. Cook a little extra beef on the side and set it aside, unseasoned with the tomato mix, for Tuesday."
+      ]
+    },
+    {
+      "day": "Tuesday (July 28) — Pita Tuesday",
+      "name": "Chopped Cheese Pitas",
+      "note": "Standing leftovers-plus-a-treat night. Monday's plain reserved beef gets crisped back up with a treat of ground sausage crumbled in for extra flavor, piled into warm pita with melted cheddar, lettuce, and tomato — bodega chopped-cheese energy.",
+      "jake": {
+        "cal": 794,
+        "protein": 46,
+        "carbs": 40,
+        "fat": 50,
+        "fiber": 6.4
+      },
+      "laine": {
+        "cal": 556,
+        "protein": 32,
+        "carbs": 30,
+        "fat": 34,
+        "fiber": 4.9
+      },
+      "ingredients": [
+        {
+          "item": "Reserved ground beef from Monday — Jake 120g, Laine 80g",
+          "nutritionKey": "Ground beef 85/15"
+        },
+        {
+          "item": "Ground sausage (treat protein) — Jake 60g, Laine 35g raw",
+          "nutritionKey": "Ground sausage (pork)"
+        },
+        {
+          "item": "Yellow onion — Jake ¼ cup, Laine scant ¼ cup, diced small",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Cheddar cheese, shredded — Jake ⅓ cup, Laine ¼ cup",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Whole wheat pita — Jake 1, Laine ¾",
+          "nutritionKey": "Whole wheat pita"
+        },
+        {
+          "item": "Romaine lettuce — Jake 50g, Laine 40g, shredded",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Cherry tomatoes — Jake 50g, Laine 40g, chopped",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        },
+        {
+          "item": "Olive oil — Jake ½ tbsp, Laine ⅓ tbsp",
+          "nutritionKey": "Olive oil"
+        }
+      ],
+      "steps": [
+        "Crumble the ground sausage into a hot skillet with the olive oil. Cook through, 4–5 min.",
+        "Add the reserved beef and onion. Cook, chopping everything smaller with your spatula (that's the \"chopped cheese\" bit), until crisp at the edges. Season with the spice mix.",
+        "Scatter cheddar over the meat, cover briefly until melted.",
+        "Warm the pitas. Split and fill with the meat and cheese, top with romaine and cherry tomato. Jake gets the bigger pita and more filling."
+      ]
+    },
+    {
+      "day": "Wednesday (July 29)",
+      "name": "Cheesy Chicken, Broccoli & Rice Skillet",
+      "note": "Off the usual fish slot this week — seared chicken and broccoli over rice, finished with a ladle of the week's cheddar sauce instead. Classic combo, budget protein.",
+      "jake": {
+        "cal": 777,
+        "protein": 76,
+        "carbs": 72,
+        "fat": 21,
+        "fiber": 5.0
+      },
+      "laine": {
+        "cal": 551,
+        "protein": 52,
+        "carbs": 54,
+        "fat": 15,
+        "fiber": 4.2
+      },
+      "tzatzikiRef": true,
+      "sauceLabel": "Cheddar Sauce",
+      "ingredients": [
+        {
+          "item": "Chicken breast — Jake 260g, Laine 170g raw",
+          "nutritionKey": "Chicken breast"
+        },
+        {
+          "item": "White rice (dry) — Jake 70g, Laine 50g",
+          "nutritionKey": "White rice (dry)"
+        },
+        {
+          "item": "Broccoli florets — Jake 150g, Laine 130g",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Cheddar Cheese Sauce — Jake ¼ cup, Laine 3 tbsp (see recipe card)",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Garlic — 2 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Cook the rice. Steam or blanch the broccoli until just bright green and tender-crisp.",
+        "Season the chicken with the spice mix and garlic. Sear in a hot pan 6–7 min per side until cooked through (165°F). Rest 5 min, then slice.",
+        "Plate rice, chicken, and broccoli together.",
+        "Warm the cheddar sauce if needed and ladle over the top. Jake gets more chicken and a bigger pour of sauce."
+      ]
+    },
+    {
+      "day": "Thursday (July 30)",
+      "name": "Ground Turkey & Black Bean Chili",
+      "note": "Free night, filled with a quick stovetop chili — lean ground turkey does most of the work, beans kept modest so the protein isn't diluted. Topped with cheddar and a spoon of sour cream.",
+      "jake": {
+        "cal": 718,
+        "protein": 69,
+        "carbs": 29,
+        "fat": 36,
+        "fiber": 6.6
+      },
+      "laine": {
+        "cal": 492,
+        "protein": 44,
+        "carbs": 27,
+        "fat": 23,
+        "fiber": 6.7
+      },
+      "ingredients": [
+        {
+          "item": "Ground turkey 93/7 — Jake 280g, Laine 160g raw",
+          "nutritionKey": "Ground turkey 93/7"
+        },
+        {
+          "item": "Black beans — Jake scant ⅓ can, Laine ¼ can, rinsed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Diced tomatoes (canned) — Jake ⅔ cup, Laine scant ½ cup",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Yellow onion — Jake ¼ cup, Laine scant ¼ cup, diced",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Garlic — 3–4 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Cheddar cheese, shredded — Jake ¼ cup, Laine 3 tbsp, for topping",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Daisy sour cream — Jake 1.5 tbsp, Laine 1 tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt — generous 2 tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Brown the turkey with the onion and garlic, breaking it up as it cooks.",
+        "Stir in the diced tomatoes, black beans, and spices. Simmer 15 min, stirring occasionally, until thickened.",
+        "Ladle into bowls. Top with cheddar and a dollop of sour cream. Jake gets the bigger bowl."
+      ]
+    },
+    {
+      "day": "Friday (July 31)",
+      "name": "Cajun Sausage & Chicken Skillet",
+      "note": "Also off the fish slot this week. A little ground sausage carries the Cajun flavor while chicken does the protein heavy-lifting, over rice with peppers and beans. No cheese tonight — not every dish needs it. Buy enough sausage to also cover Sunday's skillet.",
+      "jake": {
+        "cal": 686,
+        "protein": 58,
+        "carbs": 65,
+        "fat": 20,
+        "fiber": 8.2
+      },
+      "laine": {
+        "cal": 473,
+        "protein": 35,
+        "carbs": 53,
+        "fat": 12,
+        "fiber": 6.0
+      },
+      "ingredients": [
+        {
+          "item": "Ground sausage — Jake 80g, Laine 50g raw (buy extra for Sunday)",
+          "nutritionKey": "Ground sausage (pork)"
+        },
+        {
+          "item": "Chicken breast — Jake 160g, Laine 90g raw, cubed",
+          "nutritionKey": "Chicken breast"
+        },
+        {
+          "item": "White rice (dry) — Jake 45g, Laine 40g",
+          "nutritionKey": "White rice (dry)"
+        },
+        {
+          "item": "Bell pepper — Jake 100g, Laine 80g, sliced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Yellow onion — Jake ¼ cup, Laine scant ¼ cup",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Diced tomatoes (canned) — Jake ⅓ cup, Laine ¼ cup",
+          "nutritionKey": "Diced tomatoes (canned)"
+        },
+        {
+          "item": "Pinto beans — Jake ⅛ can, Laine scant ⅛ can, rinsed",
+          "nutritionKey": "Pinto beans"
+        },
+        {
+          "item": "Garlic — 3–4 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Oregano, thyme, cumin, paprika, salt",
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)"
+        }
+      ],
+      "steps": [
+        "Cook the rice separately. Brown the sausage in a skillet, breaking it up, then remove and set aside.",
+        "In the same pan, sear the cubed chicken until just cooked through. Add peppers, onion, and garlic, cook 4–5 min.",
+        "Stir in the diced tomatoes, pinto beans, spices, and the sausage. Simmer 8–10 min until it comes together.",
+        "Serve over rice. Jake gets more of everything."
+      ]
+    },
+    {
+      "day": "Saturday (August 1)",
+      "name": "Loaded Cheddar & Black Bean Baked Potatoes",
+      "note": "Vegetarian night. Baked potatoes loaded with black beans, cheddar, and broccoli — Greek yogurt stands in for sour cream on top for extra protein without much extra fat.",
+      "jake": {
+        "cal": 666,
+        "protein": 42,
+        "carbs": 81,
+        "fat": 19,
+        "fiber": 16.8
+      },
+      "laine": {
+        "cal": 531,
+        "protein": 32,
+        "carbs": 68,
+        "fat": 14,
+        "fiber": 13.3
+      },
+      "ingredients": [
+        {
+          "item": "Russet potato — Jake 200g (2 medium), Laine 200g (2 medium)",
+          "nutritionKey": "Russet potato"
+        },
+        {
+          "item": "Black beans — Jake ⅓ can, Laine ¼ can, warmed",
+          "nutritionKey": "Black beans"
+        },
+        {
+          "item": "Cheddar cheese, shredded — Jake ½ cup, Laine ⅓ cup",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Greek yogurt (plain nonfat) — Jake ~1.5 tbsp, Laine ~1 tbsp, in place of sour cream",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Broccoli florets — Jake 80g, Laine 60g, steamed",
+          "nutritionKey": "Broccoli florets"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Bake the potatoes at 400°F for 45–50 min (or microwave 8–10 min) until tender all the way through.",
+        "Steam the broccoli. Warm the black beans with a pinch of the spice mix.",
+        "Split the potatoes, fluff the inside a bit with a fork. Load with black beans, broccoli, and cheddar.",
+        "Top with a dollop of Greek yogurt. Jake gets the bigger potatoes and more topping."
+      ]
+    },
+    {
+      "day": "Sunday (August 2)",
+      "name": "Sausage, Potato & Cheddar Breakfast Skillet",
+      "note": "Standing breakfast-for-dinner — doesn't have to be waffles, and isn't tonight. The back half of Friday's sausage, potato, eggs, and cheddar in one skillet.",
+      "jake": {
+        "cal": 840,
+        "protein": 59,
+        "carbs": 32,
+        "fat": 50,
+        "fiber": 4.1
+      },
+      "laine": {
+        "cal": 557,
+        "protein": 38,
+        "carbs": 23,
+        "fat": 32,
+        "fiber": 3.0
+      },
+      "ingredients": [
+        {
+          "item": "Ground sausage (reserved from Friday) — Jake 115g, Laine 65g",
+          "nutritionKey": "Ground sausage (pork)"
+        },
+        {
+          "item": "Russet potato — Jake 120g, Laine 90g, diced small",
+          "nutritionKey": "Russet potato"
+        },
+        {
+          "item": "Eggs — Jake 3, Laine 2",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Liquid egg whites — Jake ½ cup, Laine ⅓ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Cheddar cheese, shredded — Jake ⅜ cup, Laine ⅓ cup",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Yellow onion — Jake ¼ cup, Laine scant ¼ cup",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Bell pepper — Jake 50g, Laine 35g, diced",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Garlic — 2 cloves, minced",
+          "nutritionKey": "Garlic"
+        },
+        {
+          "item": "Cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Pan-fry the diced potato over medium-high in a dry nonstick skillet (the sausage will render its own fat soon), 8–10 min until golden.",
+        "Add the sausage, onion, bell pepper, and garlic. Cook, breaking up the sausage, until browned through.",
+        "Push everything to one side. Beat the eggs and egg whites together, pour into the cleared space, scramble gently until just set, then fold together with the rest.",
+        "Scatter cheddar over the top, cover 1–2 min until melted. Jake gets the bigger portion."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Cheddar Ranch Chicken & Rice Bowl",
+    "note": "Sunday-batch, 5 containers, no fish (office-friendly), reheats fine — reheated chicken is no problem for Jake. Rice and chicken batch-cooked together, black beans and cheddar keep it from being boring.",
+    "macros": {
+      "cal": 780,
+      "protein": 79,
+      "carbs": 55,
+      "fat": 28,
+      "fiber": 8.5
+    },
+    "ingredients": [
+      {
+        "item": "Chicken breast — ~3 lbs total (250g raw per container)",
+        "nutritionKey": "Chicken breast"
+      },
+      {
+        "item": "White rice (dry) — 35g per container",
+        "nutritionKey": "White rice (dry)"
+      },
+      {
+        "item": "Frozen veggies (mixed) — 1 cup per container",
+        "nutritionKey": "Frozen veggies (mixed)"
+      },
+      {
+        "item": "Black beans — ~⅛ can per container, rinsed",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Cheddar cheese, shredded — ⅓ cup per container",
+        "nutritionKey": "Cheddar cheese (shredded)"
+      },
+      {
+        "item": "Cumin, paprika, garlic powder, salt",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      },
+      {
+        "item": "Olive oil — ~½ tbsp per container",
+        "nutritionKey": "Olive oil"
+      }
+    ],
+    "steps": [
+      "Cook all the rice at once. Season chicken with the spice mix and sear/grill in batches, ~6–7 min per side until 165°F. Rest, then dice.",
+      "Warm the frozen veggies through, rinse the black beans.",
+      "Divide into 5 containers: rice, chicken, veggies, black beans, cheddar on top.",
+      "Reheats well all week — that's the point."
+    ]
+  },
+  "laineLunch": {
+    "name": "Cold Tuna & Black Bean Mason Jar",
+    "note": "Standing cold format — unchanged this week, since canned tuna is a cheap pantry staple rather than the pricier fresh-fish stuff this week is steering away from. Avocado added fresh at the table so it doesn't brown in the jar.",
+    "macros": {
+      "cal": 617,
+      "protein": 47,
+      "carbs": 44,
+      "fat": 31,
+      "fiber": 16.7
+    },
+    "dressingNote": "Olive oil + lemon juice, ~1 tbsp oil + ½ tbsp lemon juice per jar, kept separate and added just before eating.",
+    "ingredients": [
+      {
+        "item": "Canned tuna in water — 1 can per jar (5 cans total)",
+        "nutritionKey": "Canned tuna (in water)"
+      },
+      {
+        "item": "Black beans — ~¼ can per jar, rinsed",
+        "nutritionKey": "Black beans"
+      },
+      {
+        "item": "Avocado — ½ avocado per jar, added fresh when eating",
+        "nutritionKey": "Avocado"
+      },
+      {
+        "item": "English cucumber — ~70g per jar, diced",
+        "nutritionKey": "English cucumber"
+      },
+      {
+        "item": "Bell pepper — ~60g per jar, diced",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Olive oil — 1 tbsp per jar (dressing, separate)",
+        "nutritionKey": "Olive oil"
+      },
+      {
+        "item": "Lemon juice — ½ tbsp per jar",
+        "nutritionKey": "Lemon juice"
+      }
+    ],
+    "steps": [
+      "Drain tuna, rinse black beans. Dice cucumber and bell pepper.",
+      "Layer each jar: black beans → tuna → cucumber → bell pepper.",
+      "Portion the olive oil + lemon juice dressing into a small separate container per jar.",
+      "To eat: add dressing and fresh-cut avocado, stir, eat straight from the jar."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "days": "Mon / Wed / Fri",
+      "name": "Greek Yogurt Parfait",
+      "macros": {
+        "cal": 180,
+        "protein": 18,
+        "carbs": 18,
+        "fat": 4,
+        "fiber": 5.0
+      },
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl. Top with thawed berries and flaxseed."
+      ]
+    },
+    {
+      "days": "Tue / Thu / Sat",
+      "name": "Cheddar & Veggie Egg White Scramble",
+      "macros": {
+        "cal": 152,
+        "protein": 22,
+        "carbs": 5,
+        "fat": 5,
+        "fiber": 1.4
+      },
+      "note": "Swapped the usual feta for cheddar this week — one more small dent in the surplus.",
+      "ingredients": [
+        {
+          "item": "Liquid egg whites — ¾ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Baby spinach — handful (~40g)",
+          "nutritionKey": "Baby spinach"
+        },
+        {
+          "item": "Cherry tomatoes — ~40g, halved",
+          "nutritionKey": "Cherry tomatoes"
+        },
+        {
+          "item": "Cheddar cheese, shredded — 2 tbsp",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        },
+        {
+          "item": "Pinch cumin, paprika, garlic powder, salt",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Sauté cherry tomatoes 1–2 min in a dry nonstick pan until they start to soften.",
+        "Add egg whites, scramble over medium-low until just set.",
+        "Toss in spinach at the end. Top with cheddar and a pinch of spice mix."
+      ]
+    },
+    {
+      "days": "Sun (August 2)",
+      "name": "Birch Benders Waffles + Berries",
+      "macros": {
+        "cal": 342,
+        "protein": 16,
+        "carbs": 57,
+        "fat": 7,
+        "fiber": 8.1
+      },
+      "note": "Standing Sunday-morning waffles — separate from Sunday's breakfast-for-dinner, unchanged as always.",
+      "ingredients": [
+        {
+          "item": "Birch Benders pancake/waffle mix — ½ cup dry",
+          "nutritionKey": "Birch Benders pancake mix"
+        },
+        {
+          "item": "Liquid egg whites — ¼ cup",
+          "nutritionKey": "Liquid egg whites"
+        },
+        {
+          "item": "Frozen mixed berries (thawed) — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ],
+      "steps": [
+        "Mix batter: mix + egg whites + water per package. Stir in flaxseed.",
+        "Cook in a preheated waffle iron 3–4 min until crisp.",
+        "Top with thawed berries."
+      ]
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Banana + Greek Yogurt",
+      "macros": {
+        "cal": 195,
+        "protein": 16,
+        "carbs": 33,
+        "fat": 0,
+        "fiber": 3.1
+      },
+      "desc": "1 banana + 1 Oikos Triple Zero. Potassium + calcium snack.",
+      "ingredients": [
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        },
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber + Hummus",
+      "macros": {
+        "cal": 124,
+        "protein": 6,
+        "carbs": 15,
+        "fat": 6,
+        "fiber": 3.8
+      },
+      "desc": "¾ cucumber sliced + hummus for dipping.",
+      "ingredients": [
+        {
+          "item": "English cucumber — ¾ large (~150g)",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Hummus — 60g (~4 tbsp)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas",
+      "macros": {
+        "cal": 120,
+        "protein": 5,
+        "carbs": 18,
+        "fat": 3,
+        "fiber": 5.0
+      },
+      "desc": "¼ cup crunchy roasted chickpeas. Fiber + plant protein, lightly spiced.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup (~40g)",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        }
+      ]
+    },
+    {
+      "name": "Bell Pepper Strips + Hummus",
+      "macros": {
+        "cal": 146,
+        "protein": 6,
+        "carbs": 20,
+        "fat": 6,
+        "fiber": 6.2
+      },
+      "desc": "1.5 bell peppers sliced + hummus.",
+      "ingredients": [
+        {
+          "item": "Bell pepper — 1.5 medium (150g)",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Hummus — 4 tbsp (60g)",
+          "nutritionKey": "Hummus"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Berries",
+      "macros": {
+        "cal": 125,
+        "protein": 16,
+        "carbs": 14,
+        "fat": 0,
+        "fiber": 2.2
+      },
+      "desc": "1 Oikos Triple Zero + small handful thawed berries.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Frozen mixed berries — ½ cup",
+          "nutritionKey": "Frozen mixed berries"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Apple & Cheddar",
+      "macros": {
+        "cal": 236,
+        "protein": 9,
+        "carbs": 26,
+        "fat": 12,
+        "fiber": 4.4
+      },
+      "desc": "1 apple, sliced, with cheddar. Simple, and another dent in the surplus.",
+      "ingredients": [
+        {
+          "item": "Apple — 1 medium",
+          "nutritionKey": "Apple"
+        },
+        {
+          "item": "Cheddar cheese, shredded — ⅓ cup (or a sliced chunk)",
+          "nutritionKey": "Cheddar cheese (shredded)"
+        }
+      ]
+    },
+    {
+      "name": "Cottage Cheese + Banana",
+      "macros": {
+        "cal": 285,
+        "protein": 25,
+        "carbs": 35,
+        "fat": 4,
+        "fiber": 3.1
+      },
+      "desc": "1 cup cottage cheese + 1 banana. High protein, calcium + potassium.",
+      "ingredients": [
+        {
+          "item": "Cottage cheese 2% — 1 cup",
+          "nutritionKey": "Cottage cheese 2%"
+        },
+        {
+          "item": "Banana — 1 medium",
+          "nutritionKey": "Banana"
+        }
+      ]
+    },
+    {
+      "name": "Roasted Chickpeas + Almonds",
+      "macros": {
+        "cal": 237,
+        "protein": 9,
+        "carbs": 22,
+        "fat": 13,
+        "fiber": 7.5
+      },
+      "desc": "¼ cup roasted chickpeas + a small handful of almonds.",
+      "ingredients": [
+        {
+          "item": "Roasted chickpeas — ¼ cup",
+          "nutritionKey": "Roasted chickpeas (snack)"
+        },
+        {
+          "item": "Almonds — ~20g",
+          "nutritionKey": "Almonds"
+        }
+      ]
+    },
+    {
+      "name": "Oikos + Flaxseed",
+      "macros": {
+        "cal": 145,
+        "protein": 17,
+        "carbs": 9,
+        "fat": 4,
+        "fiber": 2.8
+      },
+      "desc": "1 container + 1 tbsp ground flaxseed.",
+      "ingredients": [
+        {
+          "item": "Oikos Triple Zero yogurt — 1 container",
+          "nutritionKey": "Oikos Triple Zero yogurt"
+        },
+        {
+          "item": "Ground flaxseed — 1 tbsp",
+          "nutritionKey": "Ground flaxseed"
+        }
+      ]
+    },
+    {
+      "name": "Greek Yogurt + Almonds",
+      "macros": {
+        "cal": 182,
+        "protein": 20,
+        "carbs": 9,
+        "fat": 7,
+        "fiber": 1.8
+      },
+      "desc": "1 container plain Greek yogurt + a small handful of almonds. High-protein pick.",
+      "ingredients": [
+        {
+          "item": "Greek yogurt (plain nonfat) — 1 container (170g)",
+          "nutritionKey": "Greek yogurt (plain nonfat)"
+        },
+        {
+          "item": "Almonds — ~14g",
+          "nutritionKey": "Almonds"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Must Buy": [
+      "Ground beef 85/15 — ~1.25 lbs (Monday skillet + Tuesday leftovers)",
+      "Ground sausage (bulk, breakfast or Italian style) — ~1 lb (split across Tue treat / Fri / Sun)",
+      "Ground turkey 93/7 — ~1 lb (Thu chili)",
+      "Chicken breast — ~4.25 lbs (Wed + Fri dinners, plus Jake's 5-container lunch batch)",
+      "Russet potatoes — ~2 lbs (Mon, Sat, Sun)",
+      "Bell peppers — 2–3 (Fri, Sun, Laine's lunch jars)",
+      "Canned tuna in water — 5 cans (Laine's lunch jars)",
+      "Avocados — 3 (Laine's lunch jars, added fresh)",
+      "English cucumber — 1–2 (Laine's lunch + snacks)",
+      "Diced tomatoes (canned) — 2 cans (14.5oz)",
+      "Black beans — 3 cans (Thu, Sat, both lunches)",
+      "Pinto beans — 1 can (only need ¼, rest keeps)",
+      "Whole wheat pita — 1 bag (Tuesday)",
+      "Broccoli florets — 1 bag, fresh or frozen (Wed + Sat)",
+      "Frozen veggies (mixed) — 1 bag (Jake's lunch batch)",
+      "Romaine lettuce — 1 small head (Tuesday)",
+      "Cherry tomatoes — 1 pint",
+      "Eggs — 1 dozen (Sunday dinner + breakfasts)",
+      "Bananas, apples — for snacks"
+    ],
+    "Check Supply": [
+      "White rice (dry) — ~200g needed (Wed + Fri)",
+      "Yellow onion — 1–2, used most nights in small amounts",
+      "Garlic — check you have a good bulb left, used almost every night",
+      "Butter, all-purpose flour — for the cheddar sauce roux",
+      "Whole milk — for the cheddar sauce",
+      "Worcestershire sauce, Dijon mustard — small amounts, should still have some from past weeks",
+      "Daisy sour cream — small container, only needed for Thursday",
+      "Greek yogurt (plain nonfat) — 1 tub (Saturday topping + Jake's snack)",
+      "Oikos Triple Zero — 6+ containers (Laine's breakfasts + snacks)",
+      "Liquid egg whites — 1 carton (Sunday dinner + breakfasts)",
+      "Frozen mixed berries — 1 bag",
+      "Hummus, roasted chickpeas, almonds, cottage cheese — snack staples",
+      "Ground flaxseed",
+      "Lemon juice — small bottle (Laine's lunch dressing)",
+      "Cumin / paprika / garlic powder / oregano / thyme — restock the spice tin if low",
+      "Birch Benders mix (Sunday morning waffles)"
+    ],
+    "Already Have": [
+      "Cheddar cheese, shredded — this is the week that uses it up: roughly 6–6.5 cups total across the sauce, five dinners, Jake's lunch, and Laine's breakfast scramble. Should make a real dent in the surplus — only top up if you're running low partway through.",
+      "Olive oil — check the bottle is at least half full",
+      "Salt, pepper, garlic powder",
+      "Corn tortillas / other pantry backups"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Lunch Bowl",
+          780,
+          79,
+          55,
+          28,
+          8.5
+        ],
+        [
+          "Dinner (avg)",
+          752.9,
+          57.0,
+          50.6,
+          35.0,
+          7.3
+        ],
+        [
+          "1–2 Snacks",
+          327,
+          37,
+          18,
+          11,
+          4.6
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1880,
+        174,
+        126,
+        75,
+        20.4
+      ],
+      "goal": [
+        2030,
+        203,
+        102,
+        90,
+        35
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          191.1,
+          19.4,
+          18.0,
+          4.9,
+          3.9
+        ],
+        [
+          "Lunch Jar",
+          617,
+          47,
+          44,
+          31,
+          16.7
+        ],
+        [
+          "Dinner (avg)",
+          525.4,
+          37.7,
+          40.1,
+          23.1,
+          5.9
+        ],
+        [
+          "1 Snack",
+          195,
+          16,
+          33,
+          0,
+          3.1
+        ],
+        [
+          "Coffee",
+          20,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "total": [
+        1548,
+        121,
+        137,
+        60,
+        29.6
+      ],
+      "goal": [
+        1363,
+        103,
+        152,
+        37,
+        30
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  }
+}
