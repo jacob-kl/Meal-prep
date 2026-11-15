@@ -82,6 +82,9 @@ function NutritionTab({week,nutritionDB}) {
         ))}
       </div>
  
+      {targets.note&&(
+        <p style={{color:T.textMid,fontSize:12,lineHeight:1.6,margin:"0 0 12px"}}>{targets.note}</p>
+      )}
       {/* Water-level macro cells */}
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:20}}>
         {waterCells.map(c=><WaterCell key={c.label} {...c} dark={dark}/>)}

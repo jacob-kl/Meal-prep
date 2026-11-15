@@ -3734,5 +3734,41 @@
     "carbs": 3,
     "fat": 0,
     "fiber": 1
+  },
+  "Half-and-half": {
+    "cal": 40,
+    "protein": 1,
+    "carbs": 1,
+    "fat": 3.5,
+    "fiber": 0,
+    "serving_qty": 2,
+    "serving_unit": "tbsp",
+    "serving": "2 tbsp",
+    "source": "Standard half-and-half label estimate. Match your carton when available.",
+    "micros": {}
+  },
+  "Asiago Fresco (snacking cheese)": {
+    "cal": 110,
+    "protein": 7,
+    "carbs": 1,
+    "fat": 9,
+    "fiber": 0,
+    "serving_qty": 28,
+    "serving_unit": "g",
+    "serving": "28 g",
+    "source": "Generic Asiago cheese estimate. Use your package label if different.",
+    "micros": {}
+  },
+  "Brewed coffee (plain)": {
+    "cal": 2,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "serving_qty": 1,
+    "serving_unit": "cup",
+    "serving": "1 cup brewed coffee",
+    "source": "Generic plain brewed coffee estimate.",
+    "micros": {}
   }
 }

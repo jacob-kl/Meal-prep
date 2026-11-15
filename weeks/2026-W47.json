@@ -1,0 +1,4020 @@
+{
+  "_v": 4,
+  "_note": "November 16–22, 2026. Jake has team lunch Thursday and shared lunch at home on Flex Friday. Keep spinach out of Jake’s batch-prepped lunches. Carbs on cards are net. Net and total carbs are both tracked. Meat weights are raw. Shopping estimates combine recovered Albertsons receipt prices with estimated prices where receipt lines were unavailable.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 20,
+    "fat": 126
+  },
+  "laineMacros": {
+    "cal": 1363,
+    "protein": 103,
+    "carbs": 20,
+    "fat": 97
+  },
+  "dinners": [
+    {
+      "day": "Monday (November 16)",
+      "name": "Lemon-Dijon Chicken Thighs + Skillet Green Beans",
+      "note": "Total carbs: Jake 11.5 g, Laine 8.7 g. Card carbs are net.",
+      "jake": {
+        "cal": 793.5,
+        "protein": 78.1,
+        "carbs": 8.0,
+        "fat": 49.1,
+        "fiber": 3.6,
+        "totalCarbs": 11.5
+      },
+      "laine": {
+        "cal": 534.8,
+        "protein": 51.1,
+        "carbs": 6.0,
+        "fat": 33.5,
+        "fiber": 2.7,
+        "totalCarbs": 8.7
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Chicken thighs (boneless, skinless)",
+          "unit": "g_raw",
+          "item": "Chicken thighs (boneless, skinless) - Jake 370 g raw, Laine 240 g raw",
+          "quantity": 610,
+          "personQuantities": {
+            "jake": 370,
+            "laine": 240
+          }
+        },
+        {
+          "nutritionKey": "Green beans",
+          "unit": "g",
+          "item": "Green beans - Jake 125 g, Laine 95 g",
+          "quantity": 220,
+          "personQuantities": {
+            "jake": 125,
+            "laine": 95
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 1 tbsp, Laine 0.65 tbsp",
+          "quantity": 1.65,
+          "personQuantities": {
+            "jake": 1,
+            "laine": 0.65
+          }
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - Jake 55 g, Laine 40 g",
+          "quantity": 95,
+          "personQuantities": {
+            "jake": 55,
+            "laine": 40
+          }
+        },
+        {
+          "nutritionKey": "Dijon mustard",
+          "unit": "tsp",
+          "item": "Dijon mustard - Jake 1 tsp, Laine 0.75 tsp",
+          "quantity": 1.75,
+          "personQuantities": {
+            "jake": 1,
+            "laine": 0.75
+          }
+        },
+        {
+          "nutritionKey": "Lemon juice",
+          "unit": "tbsp",
+          "item": "Lemon juice - Jake 0.5 tbsp, Laine 0.4 tbsp",
+          "quantity": 0.9,
+          "personQuantities": {
+            "jake": 0.5,
+            "laine": 0.4
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.35 tsp, Laine 0.25 tsp",
+          "quantity": 0.6,
+          "personQuantities": {
+            "jake": 0.35,
+            "laine": 0.25
+          }
+        }
+      ],
+      "steps": [
+        "Season both batches of chicken with the listed total of dried thyme, salt and pepper. Sear in each person's measured olive oil until browned and 165°F. Keep portions separate and transfer the chicken to plates.",
+        "Blot the beans dry, then sauté in the same pans over medium-high heat until blistered and crisp-tender. Transfer to the plates.",
+        "Simmer each person's cream in their pan, uncovered, until it coats a spoon. Scrape in the browned bits, turn off the heat, then whisk in their Dijon and lemon juice. Spoon over the chicken."
+      ]
+    },
+    {
+      "day": "Tuesday (November 17)",
+      "name": "Turkey & Ricotta Zucchini Rollatini",
+      "note": "Uses 210 g from the same ricotta tub as Laine's dip. Reserve it when you open the tub. Total carbs: Jake 13 g, Laine 10 g. Card carbs are net.",
+      "jake": {
+        "cal": 717.0,
+        "protein": 67.8,
+        "carbs": 11.0,
+        "fat": 43.2,
+        "fiber": 2.0,
+        "totalCarbs": 13.0
+      },
+      "laine": {
+        "cal": 471.8,
+        "protein": 43.1,
+        "carbs": 8.4,
+        "fat": 28.4,
+        "fiber": 1.6,
+        "totalCarbs": 10.0
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Ground turkey 93/7",
+          "unit": "g_raw",
+          "item": "93% lean ground turkey - Jake 255 g raw, Laine 150 g raw",
+          "quantity": 405,
+          "personQuantities": {
+            "jake": 255,
+            "laine": 150
+          }
+        },
+        {
+          "nutritionKey": "Ricotta cheese (part-skim)",
+          "unit": "g",
+          "item": "Ricotta cheese (part-skim) - Jake 120 g, Laine 90 g",
+          "quantity": 210,
+          "personQuantities": {
+            "jake": 120,
+            "laine": 90
+          }
+        },
+        {
+          "nutritionKey": "Zucchini",
+          "unit": "g",
+          "item": "Zucchini - Jake 130 g, Laine 105 g",
+          "quantity": 235,
+          "personQuantities": {
+            "jake": 130,
+            "laine": 105
+          }
+        },
+        {
+          "nutritionKey": "Tomato (slicing)",
+          "unit": "g",
+          "item": "Tomato (slicing) - Jake 60 g, Laine 45 g",
+          "quantity": 105,
+          "personQuantities": {
+            "jake": 60,
+            "laine": 45
+          }
+        },
+        {
+          "nutritionKey": "Parmesan cheese (grated)",
+          "unit": "tbsp",
+          "item": "Grated Parmesan - Jake 2 tbsp, Laine 1.5 tbsp",
+          "quantity": 3.5,
+          "personQuantities": {
+            "jake": 2,
+            "laine": 1.5
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 0.8 tbsp, Laine 0.55 tbsp",
+          "quantity": 1.35,
+          "personQuantities": {
+            "jake": 0.8,
+            "laine": 0.55
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.6 tsp, Laine 0.4 tsp",
+          "quantity": 1.0,
+          "personQuantities": {
+            "jake": 0.6,
+            "laine": 0.4
+          }
+        }
+      ],
+      "steps": [
+        "Slice each zucchini portion lengthwise into thin ribbons. Brush with half of each person's olive oil and roast at 425°F for 7–10 minutes until flexible. Blot dry. Finely chop any end pieces for the turkey filling.",
+        "Brown each turkey portion in the remaining oil with its chopped zucchini ends and half its oregano, salt and pepper. Cook the turkey to 165°F. Separately simmer the diced tomato and remaining seasoning uncovered until a spatula dragged across the pan leaves a clean trail.",
+        "Whisk each ricotta portion with half its Parmesan, then fold in its turkey. Roll the mixture in the zucchini ribbons. Any filling that won't fit goes alongside the rolls in the same dish. Spoon the thick tomato reduction around the rolls, top with the remaining Parmesan and bake at 425°F for about 12 minutes until bubbling."
+      ]
+    },
+    {
+      "day": "Wednesday (November 18)",
+      "name": "Pan-Roasted Pork Loin + Thyme Jus & Sautéed Spinach",
+      "note": "Pork is weighed raw. Saturday lunch weights appear on Saturday's card and are already in shopping. Total carbs: Jake 5.6 g, Laine 4.2 g. Card carbs are net.",
+      "jake": {
+        "cal": 803.3,
+        "protein": 81.0,
+        "carbs": 2.8,
+        "fat": 50.2,
+        "fiber": 2.8,
+        "totalCarbs": 5.6
+      },
+      "laine": {
+        "cal": 469.3,
+        "protein": 44.2,
+        "carbs": 2.1,
+        "fat": 30.6,
+        "fiber": 2.1,
+        "totalCarbs": 4.2
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Pork loin",
+          "unit": "g",
+          "item": "Pork loin - Jake 365 g raw, Laine 195 g raw",
+          "quantity": 560,
+          "personQuantities": {
+            "jake": 365,
+            "laine": 195
+          }
+        },
+        {
+          "nutritionKey": "Baby spinach",
+          "unit": "g",
+          "item": "Baby spinach - Jake 120 g, Laine 90 g",
+          "quantity": 210,
+          "personQuantities": {
+            "jake": 120,
+            "laine": 90
+          }
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - Jake 1.5 tbsp, Laine 1 tbsp",
+          "quantity": 2.5,
+          "personQuantities": {
+            "jake": 1.5,
+            "laine": 1
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 0.75 tbsp, Laine 0.5 tbsp",
+          "quantity": 1.25,
+          "personQuantities": {
+            "jake": 0.75,
+            "laine": 0.5
+          }
+        },
+        {
+          "nutritionKey": "Beef bouillon cube",
+          "unit": "cube",
+          "item": "Beef bouillon cube - Jake 0.15 cube, Laine 0.1 cube",
+          "quantity": 0.25,
+          "personQuantities": {
+            "jake": 0.15,
+            "laine": 0.1
+          }
+        },
+        {
+          "nutritionKey": "Dijon mustard",
+          "unit": "tsp",
+          "item": "Dijon mustard - Jake 1 tsp, Laine 0.75 tsp",
+          "quantity": 1.75,
+          "personQuantities": {
+            "jake": 1,
+            "laine": 0.75
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.4 tsp, Laine 0.3 tsp",
+          "quantity": 0.7,
+          "personQuantities": {
+            "jake": 0.4,
+            "laine": 0.3
+          }
+        }
+      ],
+      "steps": [
+        "Before cooking, cut and label the Saturday lunch portions separately: 260 g raw for Jake and 160 g raw for Laine. Add those to a separate oven tray with the Thursday jar portion (165 g raw, seasoned separately as directed on its card). Season tonight's portions with their measured mix of thyme, salt and pepper and sear in their olive oil.",
+        "Roast the dinner and lunch portions at 375°F until the centers reach 145°F, then rest for at least 3 minutes. Cool the Saturday portions promptly and freeze them individually Wednesday evening. Cool the Thursday jar portion and refrigerate it.",
+        "Wilt each spinach portion in half its butter. Let the moisture evaporate and transfer to plates. Deglaze the cooking pan with 60 mL of water per person and the listed total of ¼ beef bouillon cube, or the equivalent strength on your label. Boil uncovered to about 2 tablespoons total. Split about 60/40 between Jake and Laine, then whisk each portion's Dijon and remaining butter into its jus off the heat and spoon over the pork."
+      ]
+    },
+    {
+      "day": "Thursday (November 19)",
+      "name": "Roasted Salmon + Lemon-Dill Sour Cream & Green Beans",
+      "note": "Check the freezer before buying salmon. This is the only fish meal this week. Total carbs: Jake 9.8 g, Laine 8.5 g. Card carbs are net.",
+      "jake": {
+        "cal": 695.4,
+        "protein": 53.1,
+        "carbs": 6.7,
+        "fat": 46.4,
+        "fiber": 3.0,
+        "totalCarbs": 9.8
+      },
+      "laine": {
+        "cal": 561.4,
+        "protein": 41.7,
+        "carbs": 5.7,
+        "fat": 37.9,
+        "fiber": 2.7,
+        "totalCarbs": 8.5
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Atlantic salmon (raw)",
+          "unit": "g_raw",
+          "item": "Atlantic salmon (raw) - Jake 250 g raw, Laine 195 g raw",
+          "quantity": 445,
+          "personQuantities": {
+            "jake": 250,
+            "laine": 195
+          }
+        },
+        {
+          "nutritionKey": "Green beans",
+          "unit": "g",
+          "item": "Green beans - Jake 110 g, Laine 100 g",
+          "quantity": 210,
+          "personQuantities": {
+            "jake": 110,
+            "laine": 100
+          }
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - Jake 0.75 tbsp, Laine 0.75 tbsp",
+          "quantity": 1.5,
+          "personQuantities": {
+            "jake": 0.75,
+            "laine": 0.75
+          }
+        },
+        {
+          "nutritionKey": "Daisy sour cream",
+          "unit": "tbsp",
+          "item": "Sour cream - Jake 2 tbsp, Laine 1.5 tbsp",
+          "quantity": 3.5,
+          "personQuantities": {
+            "jake": 2,
+            "laine": 1.5
+          }
+        },
+        {
+          "nutritionKey": "Fresh dill",
+          "unit": "g",
+          "item": "Fresh dill - Jake 3 g, Laine 2 g",
+          "quantity": 5,
+          "personQuantities": {
+            "jake": 3,
+            "laine": 2
+          }
+        },
+        {
+          "nutritionKey": "Lemon juice",
+          "unit": "tbsp",
+          "item": "Lemon juice - Jake 0.5 tbsp, Laine 0.35 tbsp",
+          "quantity": 0.85,
+          "personQuantities": {
+            "jake": 0.5,
+            "laine": 0.35
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.35 tsp, Laine 0.25 tsp",
+          "quantity": 0.6,
+          "personQuantities": {
+            "jake": 0.35,
+            "laine": 0.25
+          }
+        }
+      ],
+      "steps": [
+        "Pat the salmon dry, season with the measured blend of salt, black pepper and mild smoked paprika. Roast at 400°F until the thickest part reaches 145°F, checking from 12 minutes.",
+        "Steam the green beans until just tender, drain, then toss each portion with its measured butter in the warm pan until melted.",
+        "Stir each portion's sour cream with its minced dill and lemon juice. Spoon the thick cold sauce over the salmon at the table."
+      ]
+    },
+    {
+      "day": "Friday (November 20)",
+      "name": "Cheddar Turkey Smash Patties + Dijon Slaw",
+      "note": "Wednesday night, move the frozen Friday portion of ground turkey to the refrigerator. Total carbs: Jake 7.4 g, Laine 6.3 g. Card carbs are net.",
+      "jake": {
+        "cal": 737.3,
+        "protein": 63.1,
+        "carbs": 4.9,
+        "fat": 51.3,
+        "fiber": 2.5,
+        "totalCarbs": 7.4
+      },
+      "laine": {
+        "cal": 574.3,
+        "protein": 43.0,
+        "carbs": 4.2,
+        "fat": 42.6,
+        "fiber": 2.1,
+        "totalCarbs": 6.3
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Ground turkey 93/7",
+          "unit": "g_raw",
+          "item": "93% lean ground turkey - Jake 285 g raw, Laine 185 g raw",
+          "quantity": 470,
+          "personQuantities": {
+            "jake": 285,
+            "laine": 185
+          }
+        },
+        {
+          "nutritionKey": "Cheddar cheese",
+          "unit": "g",
+          "item": "Cheddar cheese - Jake 32 g, Laine 28 g",
+          "quantity": 60,
+          "personQuantities": {
+            "jake": 32,
+            "laine": 28
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 0.45 tbsp, Laine 0.5 tbsp",
+          "quantity": 0.95,
+          "personQuantities": {
+            "jake": 0.45,
+            "laine": 0.5
+          }
+        },
+        {
+          "nutritionKey": "Green cabbage",
+          "unit": "g",
+          "item": "Green cabbage - Jake 90 g, Laine 80 g",
+          "quantity": 170,
+          "personQuantities": {
+            "jake": 90,
+            "laine": 80
+          }
+        },
+        {
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "unit": "g",
+          "item": "Mayonnaise (avocado oil) - Jake 15 g, Laine 15 g",
+          "quantity": 30,
+          "personQuantities": {
+            "jake": 15,
+            "laine": 15
+          }
+        },
+        {
+          "nutritionKey": "Dijon mustard",
+          "unit": "tsp",
+          "item": "Dijon mustard - Jake 1 tsp, Laine 0.75 tsp",
+          "quantity": 1.75,
+          "personQuantities": {
+            "jake": 1,
+            "laine": 0.75
+          }
+        },
+        {
+          "nutritionKey": "Rice vinegar",
+          "unit": "tbsp",
+          "item": "Rice vinegar - Jake 0.4 tbsp, Laine 0.3 tbsp",
+          "quantity": 0.7,
+          "personQuantities": {
+            "jake": 0.4,
+            "laine": 0.3
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.45 tsp, Laine 0.3 tsp",
+          "quantity": 0.75,
+          "personQuantities": {
+            "jake": 0.45,
+            "laine": 0.3
+          }
+        }
+      ],
+      "steps": [
+        "Toss each person's finely shredded cabbage with their measured mayo, Dijon and vinegar. Chill while the patties cook.",
+        "Divide each person's turkey into two balls. Season with their measured salt, pepper and mild paprika. Press thin in a hot skillet with each person's olive oil. Cook both sides to 165°F, then melt the measured cheddar over the patties. Serve with the slaw."
+      ]
+    },
+    {
+      "day": "Saturday (November 21)",
+      "name": "Sausage-Stuffed Zucchini Boats + Cheddar & Fresh Tomato",
+      "note": "A favorite for both Jake and Laine. Choose mild sausage. Total carbs: Jake 8.3 g, Laine 7.1 g. Card carbs are net.",
+      "jake": {
+        "cal": 632.8,
+        "protein": 37.5,
+        "carbs": 6.1,
+        "fat": 47.0,
+        "fiber": 2.2,
+        "totalCarbs": 8.3
+      },
+      "laine": {
+        "cal": 561.5,
+        "protein": 24.9,
+        "carbs": 5.2,
+        "fat": 46.6,
+        "fiber": 2.0,
+        "totalCarbs": 7.1
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Ground sausage (pork)",
+          "unit": "g_raw",
+          "item": "Ground sausage (pork) - Jake 190 g raw, Laine 120 g raw",
+          "quantity": 310,
+          "personQuantities": {
+            "jake": 190,
+            "laine": 120
+          }
+        },
+        {
+          "nutritionKey": "Zucchini",
+          "unit": "g",
+          "item": "Zucchini - Jake 160 g, Laine 150 g",
+          "quantity": 310,
+          "personQuantities": {
+            "jake": 160,
+            "laine": 150
+          }
+        },
+        {
+          "nutritionKey": "Tomato (slicing)",
+          "unit": "g",
+          "item": "Tomato (slicing) - Jake 50 g, Laine 40 g",
+          "quantity": 90,
+          "personQuantities": {
+            "jake": 50,
+            "laine": 40
+          }
+        },
+        {
+          "nutritionKey": "Cheddar cheese",
+          "unit": "g",
+          "item": "Cheddar cheese - Jake 30 g, Laine 20 g",
+          "quantity": 50,
+          "personQuantities": {
+            "jake": 30,
+            "laine": 20
+          }
+        },
+        {
+          "nutritionKey": "Parmesan cheese (grated)",
+          "unit": "tbsp",
+          "item": "Grated Parmesan - Jake 1 tbsp, Laine 0.75 tbsp",
+          "quantity": 1.75,
+          "personQuantities": {
+            "jake": 1,
+            "laine": 0.75
+          }
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - Jake 0.125 tbsp, Laine 1.5 tbsp",
+          "quantity": 1.625,
+          "personQuantities": {
+            "jake": 0.125,
+            "laine": 1.5
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.4 tsp, Laine 0.3 tsp",
+          "quantity": 0.7,
+          "personQuantities": {
+            "jake": 0.4,
+            "laine": 0.3
+          }
+        }
+      ],
+      "steps": [
+        "Split each zucchini lengthwise and scoop out a shallow channel. Chop the scooped flesh. Salt the boats lightly with part of the measured oregano, salt and pepper blend, rest cut-side down for 10 minutes and blot dry.",
+        "Brown each person's sausage. Add their chopped zucchini flesh, diced fresh tomato and remaining seasoning. Simmer uncovered until the tomato breaks down and the juices coat the sausage. Off heat, stir the listed butter into each filling.",
+        "Fill the boats, top each portion with its cheddar and Parmesan, then bake at 425°F for 15–20 minutes, until the filling reaches 160°F and the zucchini is just fork-tender."
+      ]
+    },
+    {
+      "day": "Sunday (November 22)",
+      "name": "Paprika Chicken Thighs + Roasted Cabbage & Garlic Cream",
+      "note": "Total carbs: Jake 7.8 g, Laine 8.2 g. Card carbs are net.",
+      "jake": {
+        "cal": 705.1,
+        "protein": 75.4,
+        "carbs": 5.6,
+        "fat": 41.4,
+        "fiber": 2.2,
+        "totalCarbs": 7.8
+      },
+      "laine": {
+        "cal": 540.0,
+        "protein": 49.5,
+        "carbs": 5.7,
+        "fat": 34.8,
+        "fiber": 2.5,
+        "totalCarbs": 8.2
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Chicken thighs (boneless, skinless)",
+          "unit": "g_raw",
+          "item": "Chicken thighs (boneless, skinless) - Jake 365 g raw, Laine 235 g raw",
+          "quantity": 600,
+          "personQuantities": {
+            "jake": 365,
+            "laine": 235
+          }
+        },
+        {
+          "nutritionKey": "Green cabbage",
+          "unit": "g",
+          "item": "Green cabbage - Jake 85 g, Laine 95 g",
+          "quantity": 180,
+          "personQuantities": {
+            "jake": 85,
+            "laine": 95
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 0.75 tbsp, Laine 0.65 tbsp",
+          "quantity": 1.4,
+          "personQuantities": {
+            "jake": 0.75,
+            "laine": 0.65
+          }
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - Jake 45 g, Laine 45 g",
+          "quantity": 90,
+          "personQuantities": {
+            "jake": 45,
+            "laine": 45
+          }
+        },
+        {
+          "nutritionKey": "Garlic",
+          "unit": "clove",
+          "item": "Garlic - Jake 1 clove, Laine 1 clove",
+          "quantity": 2,
+          "personQuantities": {
+            "jake": 1,
+            "laine": 1
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.65 tsp, Laine 0.45 tsp",
+          "quantity": 1.1,
+          "personQuantities": {
+            "jake": 0.65,
+            "laine": 0.45
+          }
+        }
+      ],
+      "steps": [
+        "Cut the cabbage into wedges. Pat the thighs dry. Divide each person's measured oil and the blend of mild smoked paprika, thyme, salt and pepper between their chicken and cabbage. Put each person's garlic clove in its own foil packet.",
+        "Roast at 425°F on a sheet pan until the cabbage browns at the edges, the garlic is soft and the chicken reaches 165°F. Check at 20 minutes and remove each item as it finishes.",
+        "Mash each roasted garlic clove into its portion of cream. Simmer uncovered until the cream leaves a trail when scraped with a spatula. Spoon over the chicken and serve with the cabbage."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "name": "Cumin-Roasted Chicken Thigh Bowls",
+    "batchDays": 3,
+    "plannedDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "note": "Use 990 g (about 2.2 lb) of raw boneless, skinless thighs from what you have. Prep the three bowls Sunday for Monday–Wednesday. Keep the romaine and dressing separate until serving.",
+    "macros": {
+      "cal": 908.6,
+      "protein": 84.3,
+      "carbs": 4.7,
+      "fat": 60.0,
+      "fiber": 2.9,
+      "totalCarbs": 7.5
+    },
+    "ingredients": [
+      {
+        "nutritionKey": "Chicken thighs (boneless, skinless)",
+        "unit": "g_raw",
+        "item": "Chicken thighs (boneless, skinless) - 990 g raw total (330 g raw per serving)",
+        "quantity": 990,
+        "perServingQuantity": 330
+      },
+      {
+        "nutritionKey": "Zucchini",
+        "unit": "g",
+        "item": "Zucchini - 420 g total (140 g per serving)",
+        "quantity": 420,
+        "perServingQuantity": 140
+      },
+      {
+        "nutritionKey": "Romaine lettuce",
+        "unit": "g",
+        "item": "Romaine lettuce - 210 g total (70 g per serving)",
+        "quantity": 210,
+        "perServingQuantity": 70
+      },
+      {
+        "nutritionKey": "Eggs (large)",
+        "unit": "egg",
+        "item": "Large eggs - 6 eggs total (2 eggs per serving)",
+        "quantity": 6,
+        "perServingQuantity": 2
+      },
+      {
+        "nutritionKey": "Olive oil",
+        "unit": "tbsp",
+        "item": "Olive oil - 6 tbsp total (2 tbsp per serving)",
+        "quantity": 6,
+        "perServingQuantity": 2
+      },
+      {
+        "nutritionKey": "Butter",
+        "unit": "tbsp",
+        "item": "Butter - 1.5 tbsp total (0.5 tbsp per serving)",
+        "quantity": 1.5,
+        "perServingQuantity": 0.5
+      },
+      {
+        "nutritionKey": "Parmesan cheese (grated)",
+        "unit": "tbsp",
+        "item": "Grated Parmesan - 6 tbsp total (2 tbsp per serving)",
+        "quantity": 6,
+        "perServingQuantity": 2
+      },
+      {
+        "nutritionKey": "Rice vinegar",
+        "unit": "tbsp",
+        "item": "Rice vinegar - 0.75 tbsp total (0.25 tbsp per serving)",
+        "quantity": 0.75,
+        "perServingQuantity": 0.25
+      },
+      {
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+        "unit": "tsp",
+        "item": "Dry seasonings named in Steps - 1.5 tsp total (0.5 tsp per serving)",
+        "quantity": 1.5,
+        "perServingQuantity": 0.5
+      }
+    ],
+    "steps": [
+      "Heat the oven to 425°F. Toss the boneless, skinless thighs with 3 tbsp olive oil and a measured blend of cumin, smoked paprika, oregano and salt. Spread on a rimmed sheet pan and roast to 165°F in the thickest part, checking at 18 minutes. Rest and slice.",
+      "Cut the zucchini into thick half-moons and toss with 2 tbsp olive oil. Roast on a second pan until browned, about 15 to 20 minutes. Toss the hot zucchini with the measured butter and Parmesan.",
+      "Cover the eggs with cold water, bring to a boil, then turn off the heat and keep covered for 12 minutes. Chill in ice water, peel and refrigerate separately. Divide the chicken and zucchini among 3 containers. Use shallow containers and refrigerate promptly.",
+      "Chop and thoroughly dry the romaine. Pack it separately from the warm food. Whisk 1 tbsp olive oil with the rice vinegar and pack the dressing separately. Reheat the chicken and zucchini to 165°F, then add the cold romaine, dressing and two chilled eggs."
+    ]
+  },
+  "laineLunch": {
+    "name": "Chicken & Pecan Crunch Jars",
+    "batchDays": 3,
+    "plannedDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "note": "Sunday prep for Monday–Wednesday. Add pecans at serving.",
+    "macros": {
+      "cal": 407.1,
+      "protein": 35.9,
+      "carbs": 3.1,
+      "fat": 27.5,
+      "fiber": 2.9,
+      "totalCarbs": 6.0
+    },
+    "ingredients": [
+      {
+        "nutritionKey": "Chicken breast",
+        "unit": "g_raw",
+        "item": "Chicken breast - 435 g raw total (145 g raw per serving)",
+        "quantity": 435,
+        "perServingQuantity": 145
+      },
+      {
+        "nutritionKey": "Romaine lettuce",
+        "unit": "g",
+        "item": "Romaine lettuce - 120 g total (40 g per serving)",
+        "quantity": 120,
+        "perServingQuantity": 40
+      },
+      {
+        "nutritionKey": "English cucumber",
+        "unit": "g",
+        "item": "English cucumber - 90 g total (30 g per serving)",
+        "quantity": 90,
+        "perServingQuantity": 30
+      },
+      {
+        "nutritionKey": "Celery",
+        "unit": "g",
+        "item": "Celery - 75 g total (25 g per serving)",
+        "quantity": 75,
+        "perServingQuantity": 25
+      },
+      {
+        "nutritionKey": "Pecans",
+        "unit": "g",
+        "item": "Pecans - 42 g total (14 g per serving)",
+        "quantity": 42,
+        "perServingQuantity": 14
+      },
+      {
+        "nutritionKey": "Mayonnaise (avocado oil)",
+        "unit": "g",
+        "item": "Mayonnaise (avocado oil) - 51 g total (17 g per serving)",
+        "quantity": 51,
+        "perServingQuantity": 17
+      },
+      {
+        "nutritionKey": "Dijon mustard",
+        "unit": "tsp",
+        "item": "Dijon mustard - 1.8 tsp total (0.6 tsp per serving)",
+        "quantity": 1.8,
+        "perServingQuantity": 0.6
+      },
+      {
+        "nutritionKey": "Rice vinegar",
+        "unit": "tbsp",
+        "item": "Rice vinegar - 0.9 tbsp total (0.3 tbsp per serving)",
+        "quantity": 0.9,
+        "perServingQuantity": 0.3
+      },
+      {
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+        "unit": "tsp",
+        "item": "Dry seasonings named in Steps - 0.75 tsp total (0.25 tsp per serving)",
+        "quantity": 0.75,
+        "perServingQuantity": 0.25
+      }
+    ],
+    "steps": [
+      "Season chicken with the measured dried thyme, salt and pepper. Roast or pan-sear in a nonstick skillet to 165°F. Cool promptly before slicing.",
+      "Mix the measured mayo, Dijon and rice vinegar into a thick dressing. Divide dressing and sliced chicken into 3 jars with dry celery, cucumber and romaine. Keep the pecans in a separate small container until serving. Keep jars refrigerated."
+    ]
+  },
+  "laineLunch2": {
+    "name": "Pork & Pecan Crunch Jar",
+    "batchDays": 1,
+    "plannedDays": [
+      "Thursday"
+    ],
+    "note": "Assemble Wednesday night for Thursday. The separate Saturday pork portions are listed on Saturday's lunch card.",
+    "macros": {
+      "cal": 464.2,
+      "protein": 37.3,
+      "carbs": 3.3,
+      "fat": 32.4,
+      "fiber": 3.0,
+      "totalCarbs": 6.3
+    },
+    "ingredients": [
+      {
+        "nutritionKey": "Pork loin",
+        "unit": "g",
+        "item": "Pork loin - 165 g raw total (165 g raw per serving)",
+        "quantity": 165,
+        "perServingQuantity": 165
+      },
+      {
+        "nutritionKey": "Romaine lettuce",
+        "unit": "g",
+        "item": "Romaine lettuce - 45 g total (45 g per serving)",
+        "quantity": 45,
+        "perServingQuantity": 45
+      },
+      {
+        "nutritionKey": "English cucumber",
+        "unit": "g",
+        "item": "English cucumber - 32 g total (32 g per serving)",
+        "quantity": 32,
+        "perServingQuantity": 32
+      },
+      {
+        "nutritionKey": "Celery",
+        "unit": "g",
+        "item": "Celery - 30 g total (30 g per serving)",
+        "quantity": 30,
+        "perServingQuantity": 30
+      },
+      {
+        "nutritionKey": "Pecans",
+        "unit": "g",
+        "item": "Pecans - 14 g total (14 g per serving)",
+        "quantity": 14,
+        "perServingQuantity": 14
+      },
+      {
+        "nutritionKey": "Mayonnaise (avocado oil)",
+        "unit": "g",
+        "item": "Mayonnaise (avocado oil) - 16 g total (16 g per serving)",
+        "quantity": 16,
+        "perServingQuantity": 16
+      },
+      {
+        "nutritionKey": "Dijon mustard",
+        "unit": "tsp",
+        "item": "Dijon mustard - 0.6 tsp total (0.6 tsp per serving)",
+        "quantity": 0.6,
+        "perServingQuantity": 0.6
+      },
+      {
+        "nutritionKey": "Rice vinegar",
+        "unit": "tbsp",
+        "item": "Rice vinegar - 0.3 tbsp total (0.3 tbsp per serving)",
+        "quantity": 0.3,
+        "perServingQuantity": 0.3
+      },
+      {
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+        "unit": "tsp",
+        "item": "Dry seasonings named in Steps - 0.25 tsp total (0.25 tsp per serving)",
+        "quantity": 0.25,
+        "perServingQuantity": 0.25
+      }
+    ],
+    "steps": [
+      "Before roasting Wednesday's dinner, weigh and label this 165 g raw pork portion separately. Season with its measured dried thyme, salt and pepper. Roast to 145°F, rest 3 minutes, then cool promptly and slice.",
+      "Mix the mayo, Dijon and rice vinegar for the dressing. Layer with the pork and thoroughly dried celery, cucumber and romaine. Refrigerate Wednesday night, and pack the pecans separately for Thursday."
+    ]
+  },
+  "laineBreakfasts": [
+    {
+      "name": "Oikos & Pecan Parfait",
+      "batchDays": 2,
+      "plannedDays": [
+        "Monday",
+        "Thursday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 121.9,
+        "protein": 7.6,
+        "carbs": 3.1,
+        "fat": 8.6,
+        "fiber": 1.2,
+        "totalCarbs": 4.3
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Oikos Triple Zero yogurt",
+          "unit": "g",
+          "item": "Oikos Triple Zero yogurt - 130 g total (65 g per serving)",
+          "quantity": 130,
+          "perServingQuantity": 65
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 24 g total (12 g per serving)",
+          "quantity": 24,
+          "perServingQuantity": 12
+        }
+      ],
+      "steps": [
+        "Spoon yogurt into a bowl and add the measured pecans just before eating."
+      ],
+      "days": "Monday / Thursday"
+    },
+    {
+      "name": "Cheddar Egg-White Scramble",
+      "batchDays": 2,
+      "plannedDays": [
+        "Tuesday",
+        "Wednesday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 238.3,
+        "protein": 21.2,
+        "carbs": 1.6,
+        "fat": 15.5,
+        "fiber": 0.0,
+        "totalCarbs": 1.6
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Eggs (large)",
+          "unit": "egg",
+          "item": "Large eggs - 2 eggs total (1 egg per serving)",
+          "quantity": 2,
+          "perServingQuantity": 1
+        },
+        {
+          "nutritionKey": "Liquid egg whites",
+          "unit": "cup",
+          "item": "Liquid egg whites - 1 cup total (0.5 cup per serving)",
+          "quantity": 1.0,
+          "perServingQuantity": 0.5
+        },
+        {
+          "nutritionKey": "Cheddar cheese",
+          "unit": "g",
+          "item": "Cheddar cheese - 36 g total (18 g per serving)",
+          "quantity": 36,
+          "perServingQuantity": 18
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - 0.8 tbsp total (0.4 tbsp per serving)",
+          "quantity": 0.8,
+          "perServingQuantity": 0.4
+        }
+      ],
+      "steps": [
+        "Scramble eggs and whites in the measured butter over medium-low heat. Fold in the measured cheddar off the heat."
+      ],
+      "days": "Tuesday / Wednesday"
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Monday - Almond-Milk Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Monday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 291.4,
+        "protein": 40.5,
+        "carbs": 3.0,
+        "fat": 12.0,
+        "fiber": 0.9,
+        "totalCarbs": 3.9
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond milk (unsweetened)",
+          "unit": "g",
+          "item": "Unsweetened almond milk - 300 g total (300 g per serving)",
+          "quantity": 300,
+          "perServingQuantity": 300
+        },
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 22 g total (22 g per serving)",
+          "quantity": 22,
+          "perServingQuantity": 22
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 40 g total (40 g per serving)",
+          "quantity": 40,
+          "perServingQuantity": 40
+        }
+      ],
+      "steps": [
+        "Split 300 g unsweetened almond milk and 40 g whey isolate between two shakes.",
+        "Portion out 22 g Asiago Fresco for snacking."
+      ],
+      "desc": "Split 300 g unsweetened almond milk and 40 g whey isolate between two shakes. Portion out 22 g Asiago Fresco for snacking."
+    },
+    {
+      "name": "Tuesday - Whey Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Tuesday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 362.0,
+        "protein": 52.6,
+        "carbs": 3.0,
+        "fat": 14.3,
+        "fiber": 0.5,
+        "totalCarbs": 3.5
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 22 g total (22 g per serving)",
+          "quantity": 22,
+          "perServingQuantity": 22
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - 5 g total (5 g per serving)",
+          "quantity": 5,
+          "perServingQuantity": 5
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 56 g total (56 g per serving)",
+          "quantity": 56,
+          "perServingQuantity": 56
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 5 g total (5 g per serving)",
+          "quantity": 5,
+          "perServingQuantity": 5
+        }
+      ],
+      "steps": [
+        "Split about 300 mL cold water and 56 g whey isolate between two shakes. Whisk in the measured 5 g cream across both drinks.",
+        "Portion out 22 g Asiago Fresco and 5 g Pecans for snacking."
+      ],
+      "desc": "Split about 300 mL cold water and 56 g whey isolate between two shakes. Whisk in the measured 5 g cream across both drinks. Portion out 22 g Asiago Fresco and 5 g Pecans for snacking."
+    },
+    {
+      "name": "Wednesday - Almond-Milk Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Wednesday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 275.4,
+        "protein": 37.2,
+        "carbs": 2.9,
+        "fat": 11.9,
+        "fiber": 0.9,
+        "totalCarbs": 3.8
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond milk (unsweetened)",
+          "unit": "g",
+          "item": "Unsweetened almond milk - 300 g total (300 g per serving)",
+          "quantity": 300,
+          "perServingQuantity": 300
+        },
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 22 g total (22 g per serving)",
+          "quantity": 22,
+          "perServingQuantity": 22
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 36 g total (36 g per serving)",
+          "quantity": 36,
+          "perServingQuantity": 36
+        }
+      ],
+      "steps": [
+        "Split 300 g unsweetened almond milk and 36 g whey isolate between two shakes.",
+        "Portion out 22 g Asiago Fresco for snacking."
+      ],
+      "desc": "Split 300 g unsweetened almond milk and 36 g whey isolate between two shakes. Portion out 22 g Asiago Fresco for snacking."
+    },
+    {
+      "name": "Thursday - Almond-Milk Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Thursday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 559.3,
+        "protein": 76.6,
+        "carbs": 5.0,
+        "fat": 23.8,
+        "fiber": 2.1,
+        "totalCarbs": 7.1
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond milk (unsweetened)",
+          "unit": "g",
+          "item": "Unsweetened almond milk - 300 g total (300 g per serving)",
+          "quantity": 300,
+          "perServingQuantity": 300
+        },
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 22 g total (22 g per serving)",
+          "quantity": 22,
+          "perServingQuantity": 22
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - 5 g total (5 g per serving)",
+          "quantity": 5,
+          "perServingQuantity": 5
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 82 g total (82 g per serving)",
+          "quantity": 82,
+          "perServingQuantity": 82
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 12 g total (12 g per serving)",
+          "quantity": 12,
+          "perServingQuantity": 12
+        }
+      ],
+      "steps": [
+        "Split 300 g unsweetened almond milk and 82 g whey isolate between two shakes. Whisk in the measured 5 g cream across both drinks.",
+        "Portion out 22 g Asiago Fresco and 12 g Pecans for snacking."
+      ],
+      "desc": "Split 300 g unsweetened almond milk and 82 g whey isolate between two shakes. Whisk in the measured 5 g cream across both drinks. Portion out 22 g Asiago Fresco and 12 g Pecans for snacking."
+    },
+    {
+      "name": "Friday - Almond-Milk Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Friday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 465.2,
+        "protein": 53.5,
+        "carbs": 4.0,
+        "fat": 24.7,
+        "fiber": 2.6,
+        "totalCarbs": 6.6
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond milk (unsweetened)",
+          "unit": "g",
+          "item": "Unsweetened almond milk - 240 g total (240 g per serving)",
+          "quantity": 240,
+          "perServingQuantity": 240
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - 15 g total (15 g per serving)",
+          "quantity": 15,
+          "perServingQuantity": 15
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 60 g total (60 g per serving)",
+          "quantity": 60,
+          "perServingQuantity": 60
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 20 g total (20 g per serving)",
+          "quantity": 20,
+          "perServingQuantity": 20
+        }
+      ],
+      "steps": [
+        "Split 240 g unsweetened almond milk and 60 g whey isolate between two shakes. Whisk in the measured 15 g cream across both drinks.",
+        "Portion out 20 g Pecans for snacking."
+      ],
+      "desc": "Split 240 g unsweetened almond milk and 60 g whey isolate between two shakes. Whisk in the measured 15 g cream across both drinks. Portion out 20 g Pecans for snacking."
+    },
+    {
+      "name": "Saturday - Almond-Milk Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Saturday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 413.0,
+        "protein": 76.3,
+        "carbs": 3.8,
+        "fat": 7.7,
+        "fiber": 0.7,
+        "totalCarbs": 4.6
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond milk (unsweetened)",
+          "unit": "g",
+          "item": "Unsweetened almond milk - 240 g total (240 g per serving)",
+          "quantity": 240,
+          "perServingQuantity": 240
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - 5 g total (5 g per serving)",
+          "quantity": 5,
+          "perServingQuantity": 5
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 90 g total (90 g per serving)",
+          "quantity": 90,
+          "perServingQuantity": 90
+        }
+      ],
+      "steps": [
+        "Split 240 g unsweetened almond milk and 90 g whey isolate between two shakes. Whisk in the measured 5 g cream across both drinks."
+      ],
+      "desc": "Split 240 g unsweetened almond milk and 90 g whey isolate between two shakes. Whisk in the measured 5 g cream across both drinks."
+    },
+    {
+      "name": "Sunday - Almond-Milk Shakes & Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Sunday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 451.6,
+        "protein": 41.7,
+        "carbs": 4.1,
+        "fat": 28.9,
+        "fiber": 1.1,
+        "totalCarbs": 5.2
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond milk (unsweetened)",
+          "unit": "g",
+          "item": "Unsweetened almond milk - 240 g total (240 g per serving)",
+          "quantity": 240,
+          "perServingQuantity": 240
+        },
+        {
+          "nutritionKey": "Heavy cream",
+          "unit": "g",
+          "item": "Heavy cream - 60 g total (60 g per serving)",
+          "quantity": 60,
+          "perServingQuantity": 60
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 46 g total (46 g per serving)",
+          "quantity": 46,
+          "perServingQuantity": 46
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 4 g total (4 g per serving)",
+          "quantity": 4,
+          "perServingQuantity": 4
+        }
+      ],
+      "steps": [
+        "Split 240 g unsweetened almond milk and 46 g whey isolate between two shakes. Whisk in the measured 60 g cream across both drinks.",
+        "Portion out 4 g Pecans for snacking."
+      ],
+      "desc": "Split 240 g unsweetened almond milk and 46 g whey isolate between two shakes. Whisk in the measured 60 g cream across both drinks. Portion out 4 g Pecans for snacking."
+    }
+  ],
+  "laineSnacks": [
+    {
+      "name": "Monday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Monday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 138.2,
+        "protein": 1.8,
+        "carbs": 0.9,
+        "fat": 14.4,
+        "fiber": 1.9,
+        "totalCarbs": 2.8
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 20 g total (20 g per serving)",
+          "quantity": 20,
+          "perServingQuantity": 20
+        }
+      ],
+      "steps": [
+        "Portion out 20 g Pecans for snacking.",
+        "Also have one of the separately listed whipped ricotta dip portions with vegetables."
+      ],
+      "desc": "Portion out 20 g Pecans for snacking. Also have one of the separately listed whipped ricotta dip portions with vegetables."
+    },
+    {
+      "name": "Tuesday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Tuesday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 89.8,
+        "protein": 1.2,
+        "carbs": 0.6,
+        "fat": 9.4,
+        "fiber": 1.2,
+        "totalCarbs": 1.8
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 13 g total (13 g per serving)",
+          "quantity": 13,
+          "perServingQuantity": 13
+        }
+      ],
+      "steps": [
+        "Portion out 13 g Pecans for snacking.",
+        "Also have one of the separately listed whipped ricotta dip portions with vegetables."
+      ],
+      "desc": "Portion out 13 g Pecans for snacking. Also have one of the separately listed whipped ricotta dip portions with vegetables."
+    },
+    {
+      "name": "Wednesday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Wednesday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 89.8,
+        "protein": 1.2,
+        "carbs": 0.6,
+        "fat": 9.4,
+        "fiber": 1.2,
+        "totalCarbs": 1.8
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 13 g total (13 g per serving)",
+          "quantity": 13,
+          "perServingQuantity": 13
+        }
+      ],
+      "steps": [
+        "Portion out 13 g Pecans for snacking.",
+        "Also have one of the separately listed whipped ricotta dip portions with vegetables."
+      ],
+      "desc": "Portion out 13 g Pecans for snacking. Also have one of the separately listed whipped ricotta dip portions with vegetables."
+    },
+    {
+      "name": "Thursday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Thursday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 216.5,
+        "protein": 17.3,
+        "carbs": 1.7,
+        "fat": 15.6,
+        "fiber": 1.2,
+        "totalCarbs": 2.9
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 18 g total (18 g per serving)",
+          "quantity": 18,
+          "perServingQuantity": 18
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 14 g total (14 g per serving)",
+          "quantity": 14,
+          "perServingQuantity": 14
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 13 g total (13 g per serving)",
+          "quantity": 13,
+          "perServingQuantity": 13
+        }
+      ],
+      "steps": [
+        "Shake 14 g whey isolate with about 150 mL cold water.",
+        "Portion out 18 g Asiago Fresco and 13 g Pecans for snacking."
+      ],
+      "desc": "Shake 14 g whey isolate with about 150 mL cold water. Portion out 18 g Asiago Fresco and 13 g Pecans for snacking."
+    },
+    {
+      "name": "Friday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Friday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 105.3,
+        "protein": 5.0,
+        "carbs": 0.9,
+        "fat": 9.4,
+        "fiber": 0.5,
+        "totalCarbs": 1.3
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 18 g total (18 g per serving)",
+          "quantity": 18,
+          "perServingQuantity": 18
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 5 g total (5 g per serving)",
+          "quantity": 5,
+          "perServingQuantity": 5
+        }
+      ],
+      "steps": [
+        "Portion out 18 g Asiago Fresco and 5 g Pecans for snacking."
+      ],
+      "desc": "Portion out 18 g Asiago Fresco and 5 g Pecans for snacking."
+    },
+    {
+      "name": "Saturday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Saturday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 150.7,
+        "protein": 21.1,
+        "carbs": 1.3,
+        "fat": 6.4,
+        "fiber": 0.0,
+        "totalCarbs": 1.3
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 18 g total (18 g per serving)",
+          "quantity": 18,
+          "perServingQuantity": 18
+        },
+        {
+          "nutritionKey": "Whey protein isolate",
+          "unit": "g",
+          "item": "Whey isolate - 20 g total (20 g per serving)",
+          "quantity": 20,
+          "perServingQuantity": 20
+        }
+      ],
+      "steps": [
+        "Shake 20 g whey isolate with about 150 mL cold water.",
+        "Portion out 18 g Asiago Fresco for snacking."
+      ],
+      "desc": "Shake 20 g whey isolate with about 150 mL cold water. Portion out 18 g Asiago Fresco for snacking."
+    },
+    {
+      "name": "Sunday - Snacks",
+      "batchDays": 1,
+      "plannedDays": [
+        "Sunday"
+      ],
+      "note": "",
+      "macros": {
+        "cal": 181.3,
+        "protein": 6.0,
+        "carbs": 1.3,
+        "fat": 17.3,
+        "fiber": 1.5,
+        "totalCarbs": 2.9
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Asiago Fresco (snacking cheese)",
+          "unit": "g",
+          "item": "Asiago Fresco - 18 g total (18 g per serving)",
+          "quantity": 18,
+          "perServingQuantity": 18
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - 16 g total (16 g per serving)",
+          "quantity": 16,
+          "perServingQuantity": 16
+        }
+      ],
+      "steps": [
+        "Portion out 18 g Asiago Fresco and 16 g Pecans for snacking."
+      ],
+      "desc": "Portion out 18 g Asiago Fresco and 16 g Pecans for snacking."
+    }
+  ],
+  "laineSnackPrep": {
+    "name": "Whipped Ricotta Dip with Cucumber & Celery",
+    "batchDays": 3,
+    "plannedDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "note": "Make Sunday. One portion a day Monday–Wednesday. The dip is already counted on each of those days.",
+    "macros": {
+      "cal": 159.3,
+      "protein": 7.8,
+      "carbs": 4.9,
+      "fat": 11.8,
+      "fiber": 0.6,
+      "totalCarbs": 5.5
+    },
+    "ingredients": [
+      {
+        "nutritionKey": "Ricotta cheese (part-skim)",
+        "unit": "g",
+        "item": "Ricotta cheese (part-skim) - 195 g total (65 g per serving)",
+        "quantity": 195,
+        "perServingQuantity": 65
+      },
+      {
+        "nutritionKey": "Olive oil",
+        "unit": "tbsp",
+        "item": "Olive oil - 1.5 tbsp total (0.5 tbsp per serving)",
+        "quantity": 1.5,
+        "perServingQuantity": 0.5
+      },
+      {
+        "nutritionKey": "Garlic",
+        "unit": "clove",
+        "item": "Garlic - 1 clove total (0.333 clove per serving)",
+        "quantity": 1.0,
+        "perServingQuantity": 0.3333333333333333
+      },
+      {
+        "nutritionKey": "Fresh dill",
+        "unit": "g",
+        "item": "Fresh dill - 6 g total (2 g per serving)",
+        "quantity": 6,
+        "perServingQuantity": 2
+      },
+      {
+        "nutritionKey": "English cucumber",
+        "unit": "g",
+        "item": "English cucumber - 84 g total (28 g per serving)",
+        "quantity": 84,
+        "perServingQuantity": 28
+      },
+      {
+        "nutritionKey": "Celery",
+        "unit": "g",
+        "item": "Celery - 66 g total (22 g per serving)",
+        "quantity": 66,
+        "perServingQuantity": 22
+      },
+      {
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+        "unit": "tsp",
+        "item": "Dry seasonings named in Steps - 0.3 tsp total (0.1 tsp per serving)",
+        "quantity": 0.3,
+        "perServingQuantity": 0.1
+      }
+    ],
+    "steps": [
+      "Open the ricotta Sunday and reserve 210 g for Tuesday's rollatini. For the dip, measure 195 g ricotta and let it drain in a fine sieve if watery.",
+      "Roast 1 peeled garlic clove in a small covered ovenproof dish at 375°F until soft, about 20–25 minutes. Whip it with the drained ricotta, 1½ tbsp olive oil, 6 g chopped dill, and the measured pinch of salt and pepper.",
+      "Divide into three refrigerated portions. Cut 84 g cucumber and 66 g celery into sticks, blot dry and store separately. Serve one dip portion with a third of the vegetables each day, Monday through Wednesday."
+    ],
+    "days": "Monday–Wednesday · three snack portions",
+    "recipeCategory": "Snack"
+  },
+  "extras": [
+    {
+      "name": "Whipped Ricotta Dip with Cucumber & Celery",
+      "batchDays": 3,
+      "plannedDays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "note": "Make Sunday. One portion a day Monday–Wednesday. The dip is already counted on each of those days.",
+      "macros": {
+        "cal": 159.3,
+        "protein": 7.8,
+        "carbs": 4.9,
+        "fat": 11.8,
+        "fiber": 0.6,
+        "totalCarbs": 5.5
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Ricotta cheese (part-skim)",
+          "unit": "g",
+          "item": "Ricotta cheese (part-skim) - 195 g total (65 g per serving)",
+          "quantity": 195,
+          "perServingQuantity": 65
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - 1.5 tbsp total (0.5 tbsp per serving)",
+          "quantity": 1.5,
+          "perServingQuantity": 0.5
+        },
+        {
+          "nutritionKey": "Garlic",
+          "unit": "clove",
+          "item": "Garlic - 1 clove total (0.333 clove per serving)",
+          "quantity": 1.0,
+          "perServingQuantity": 0.3333333333333333
+        },
+        {
+          "nutritionKey": "Fresh dill",
+          "unit": "g",
+          "item": "Fresh dill - 6 g total (2 g per serving)",
+          "quantity": 6,
+          "perServingQuantity": 2
+        },
+        {
+          "nutritionKey": "English cucumber",
+          "unit": "g",
+          "item": "English cucumber - 84 g total (28 g per serving)",
+          "quantity": 84,
+          "perServingQuantity": 28
+        },
+        {
+          "nutritionKey": "Celery",
+          "unit": "g",
+          "item": "Celery - 66 g total (22 g per serving)",
+          "quantity": 66,
+          "perServingQuantity": 22
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - 0.3 tsp total (0.1 tsp per serving)",
+          "quantity": 0.3,
+          "perServingQuantity": 0.1
+        }
+      ],
+      "steps": [
+        "Open the ricotta Sunday and reserve 210 g for Tuesday's rollatini. For the dip, measure 195 g ricotta and let it drain in a fine sieve if watery.",
+        "Roast 1 peeled garlic clove in a small covered ovenproof dish at 375°F until soft, about 20–25 minutes. Whip it with the drained ricotta, 1½ tbsp olive oil, 6 g chopped dill, and the measured pinch of salt and pepper.",
+        "Divide into three refrigerated portions. Cut 84 g cucumber and 66 g celery into sticks, blot dry and store separately. Serve one dip portion with a third of the vegetables each day, Monday through Wednesday."
+      ],
+      "days": "Monday–Wednesday · three snack portions",
+      "recipeCategory": "Snack"
+    }
+  ],
+  "weekendMeals": [
+    {
+      "day": "Friday (November 20) - Breakfast",
+      "name": "Cheddar & Spinach Scramble",
+      "note": "Total carbs: Jake 3.1 g, Laine 2.6 g. Card carbs are net.",
+      "jake": {
+        "cal": 334.5,
+        "protein": 29.1,
+        "carbs": 2.3,
+        "fat": 21.9,
+        "fiber": 0.8,
+        "totalCarbs": 3.1
+      },
+      "laine": {
+        "cal": 316.8,
+        "protein": 25.9,
+        "carbs": 1.9,
+        "fat": 21.7,
+        "fiber": 0.7,
+        "totalCarbs": 2.6
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Eggs (large)",
+          "unit": "egg",
+          "item": "Large eggs - Jake 2 eggs, Laine 2 eggs",
+          "quantity": 4,
+          "personQuantities": {
+            "jake": 2,
+            "laine": 2
+          }
+        },
+        {
+          "nutritionKey": "Liquid egg whites",
+          "unit": "cup",
+          "item": "Liquid egg whites - Jake 0.5 cup, Laine 0.4 cup",
+          "quantity": 0.9,
+          "personQuantities": {
+            "jake": 0.5,
+            "laine": 0.4
+          }
+        },
+        {
+          "nutritionKey": "Cheddar cheese",
+          "unit": "g",
+          "item": "Cheddar cheese - Jake 22 g, Laine 18 g",
+          "quantity": 40,
+          "personQuantities": {
+            "jake": 22,
+            "laine": 18
+          }
+        },
+        {
+          "nutritionKey": "Baby spinach",
+          "unit": "g",
+          "item": "Baby spinach - Jake 35 g, Laine 30 g",
+          "quantity": 65,
+          "personQuantities": {
+            "jake": 35,
+            "laine": 30
+          }
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - Jake 0.4 tbsp, Laine 0.5 tbsp",
+          "quantity": 0.9,
+          "personQuantities": {
+            "jake": 0.4,
+            "laine": 0.5
+          }
+        }
+      ],
+      "steps": [
+        "Wilt each person's spinach in their measured butter. Cook until the pan is dry. Add that person's beaten whole eggs and egg whites, scramble over medium-low, then fold in their cheddar off the heat."
+      ]
+    },
+    {
+      "day": "Friday (November 20) - Lunch",
+      "name": "Warm Lemon-Dill Chicken Lettuce Cups",
+      "note": "Total carbs: Jake 4.8 g, Laine 4.5 g. Card carbs are net.",
+      "jake": {
+        "cal": 450.9,
+        "protein": 60.0,
+        "carbs": 3.1,
+        "fat": 21.8,
+        "fiber": 1.6,
+        "totalCarbs": 4.8
+      },
+      "laine": {
+        "cal": 369.8,
+        "protein": 34.7,
+        "carbs": 3.0,
+        "fat": 24.3,
+        "fiber": 1.4,
+        "totalCarbs": 4.5
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Chicken breast",
+          "unit": "g_raw",
+          "item": "Chicken breast - Jake 255 g raw, Laine 145 g raw",
+          "quantity": 400,
+          "personQuantities": {
+            "jake": 255,
+            "laine": 145
+          }
+        },
+        {
+          "nutritionKey": "Romaine lettuce",
+          "unit": "g",
+          "item": "Romaine lettuce - Jake 65 g, Laine 55 g",
+          "quantity": 120,
+          "personQuantities": {
+            "jake": 65,
+            "laine": 55
+          }
+        },
+        {
+          "nutritionKey": "English cucumber",
+          "unit": "g",
+          "item": "English cucumber - Jake 40 g, Laine 45 g",
+          "quantity": 85,
+          "personQuantities": {
+            "jake": 40,
+            "laine": 45
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 0.35 tbsp, Laine 0.45 tbsp",
+          "quantity": 0.8,
+          "personQuantities": {
+            "jake": 0.35,
+            "laine": 0.45
+          }
+        },
+        {
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "unit": "g",
+          "item": "Mayonnaise (avocado oil) - Jake 12 g, Laine 18 g",
+          "quantity": 30,
+          "personQuantities": {
+            "jake": 12,
+            "laine": 18
+          }
+        },
+        {
+          "nutritionKey": "Lemon juice",
+          "unit": "tbsp",
+          "item": "Lemon juice - Jake 0.45 tbsp, Laine 0.35 tbsp",
+          "quantity": 0.8,
+          "personQuantities": {
+            "jake": 0.45,
+            "laine": 0.35
+          }
+        },
+        {
+          "nutritionKey": "Fresh dill",
+          "unit": "g",
+          "item": "Fresh dill - Jake 2 g, Laine 2 g",
+          "quantity": 4,
+          "personQuantities": {
+            "jake": 2,
+            "laine": 2
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.35 tsp, Laine 0.25 tsp",
+          "quantity": 0.6,
+          "personQuantities": {
+            "jake": 0.35,
+            "laine": 0.25
+          }
+        }
+      ],
+      "steps": [
+        "Slice chicken thin. Season each portion with its measured salt, pepper and mild paprika. Sauté in each person's olive oil until 165°F.",
+        "Stir the measured mayo, lemon juice and chopped dill together for each portion. Dry the romaine leaves and sliced cucumber, then fill the leaves with warm chicken and cucumber. Spoon the mayo dressing over the filling."
+      ]
+    },
+    {
+      "day": "Saturday (November 21) - Breakfast",
+      "name": "Bacon & Cheddar Eggs",
+      "note": "Total carbs: Jake 2.1 g, Laine 1.9 g. Card carbs are net.",
+      "jake": {
+        "cal": 424.3,
+        "protein": 36.1,
+        "carbs": 2.1,
+        "fat": 28.7,
+        "fiber": 0.0,
+        "totalCarbs": 2.1
+      },
+      "laine": {
+        "cal": 298.3,
+        "protein": 26.6,
+        "carbs": 1.9,
+        "fat": 19.5,
+        "fiber": 0.0,
+        "totalCarbs": 1.9
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Bacon (raw, cooked and drained)",
+          "unit": "g_raw",
+          "item": "Bacon - Jake 50 g raw, Laine 30 g raw",
+          "quantity": 80,
+          "personQuantities": {
+            "jake": 50,
+            "laine": 30
+          }
+        },
+        {
+          "nutritionKey": "Eggs (large)",
+          "unit": "egg",
+          "item": "Large eggs - Jake 2 eggs, Laine 1 egg",
+          "quantity": 3,
+          "personQuantities": {
+            "jake": 2,
+            "laine": 1
+          }
+        },
+        {
+          "nutritionKey": "Liquid egg whites",
+          "unit": "cup",
+          "item": "Liquid egg whites - Jake 0.55 cup, Laine 0.55 cup",
+          "quantity": 1.1,
+          "personQuantities": {
+            "jake": 0.55,
+            "laine": 0.55
+          }
+        },
+        {
+          "nutritionKey": "Cheddar cheese",
+          "unit": "g",
+          "item": "Cheddar cheese - Jake 24 g, Laine 20 g",
+          "quantity": 44,
+          "personQuantities": {
+            "jake": 24,
+            "laine": 20
+          }
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - Jake 0.3 tbsp, Laine 0.3 tbsp",
+          "quantity": 0.6,
+          "personQuantities": {
+            "jake": 0.3,
+            "laine": 0.3
+          }
+        }
+      ],
+      "steps": [
+        "Weigh the bacon raw, then crisp it in a skillet and drain. Discard the rendered fat. Scramble each person's beaten eggs and egg whites in their measured butter, fold in the cheddar, and serve with their bacon."
+      ]
+    },
+    {
+      "day": "Saturday (November 21) - Lunch",
+      "name": "Pork Loin Lettuce Wraps + Dijon-Pecan Crunch",
+      "note": "The pork quantities are the raw weights reserved Wednesday. Total carbs: Jake 3.9 g, Laine 3.7 g. Card carbs are net.",
+      "jake": {
+        "cal": 518.8,
+        "protein": 56.4,
+        "carbs": 1.5,
+        "fat": 30.1,
+        "fiber": 2.4,
+        "totalCarbs": 3.9
+      },
+      "laine": {
+        "cal": 354.6,
+        "protein": 35.3,
+        "carbs": 1.5,
+        "fat": 21.8,
+        "fiber": 2.3,
+        "totalCarbs": 3.7
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Pork loin",
+          "unit": "g",
+          "item": "Pork loin - Jake 260 g raw, Laine 160 g raw",
+          "quantity": 420,
+          "personQuantities": {
+            "jake": 260,
+            "laine": 160
+          }
+        },
+        {
+          "nutritionKey": "Romaine lettuce",
+          "unit": "g",
+          "item": "Romaine lettuce - Jake 50 g, Laine 50 g",
+          "quantity": 100,
+          "personQuantities": {
+            "jake": 50,
+            "laine": 50
+          }
+        },
+        {
+          "nutritionKey": "Celery",
+          "unit": "g",
+          "item": "Celery - Jake 30 g, Laine 25 g",
+          "quantity": 55,
+          "personQuantities": {
+            "jake": 30,
+            "laine": 25
+          }
+        },
+        {
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "unit": "g",
+          "item": "Mayonnaise (avocado oil) - Jake 12 g, Laine 9 g",
+          "quantity": 21,
+          "personQuantities": {
+            "jake": 12,
+            "laine": 9
+          }
+        },
+        {
+          "nutritionKey": "Dijon mustard",
+          "unit": "tsp",
+          "item": "Dijon mustard - Jake 0.75 tsp, Laine 0.75 tsp",
+          "quantity": 1.5,
+          "personQuantities": {
+            "jake": 0.75,
+            "laine": 0.75
+          }
+        },
+        {
+          "nutritionKey": "Pecans",
+          "unit": "g",
+          "item": "Pecans - Jake 7 g, Laine 7 g",
+          "quantity": 14,
+          "personQuantities": {
+            "jake": 7,
+            "laine": 7
+          }
+        }
+      ],
+      "steps": [
+        "Thaw the labeled Wednesday-cooked pork portions overnight Friday in the refrigerator. Slice the cold pork.",
+        "Stir each portion's mayo and Dijon together. Fill dry romaine leaves with the pork, diced celery and dressing. Add chopped pecans just before eating."
+      ]
+    },
+    {
+      "day": "Sunday (November 22) - Breakfast",
+      "name": "Almond-Flour Waffles + Oikos",
+      "note": "Total carbs: Jake 6.5 g, Laine 6.3 g. Card carbs are net.",
+      "jake": {
+        "cal": 348.3,
+        "protein": 22.7,
+        "carbs": 4.3,
+        "fat": 26.1,
+        "fiber": 2.1,
+        "totalCarbs": 6.5
+      },
+      "laine": {
+        "cal": 335.3,
+        "protein": 23.0,
+        "carbs": 4.4,
+        "fat": 24.4,
+        "fiber": 1.8,
+        "totalCarbs": 6.3
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Almond flour",
+          "unit": "g",
+          "item": "Almond flour - Jake 20 g, Laine 17 g",
+          "quantity": 37,
+          "personQuantities": {
+            "jake": 20,
+            "laine": 17
+          }
+        },
+        {
+          "nutritionKey": "Eggs (large)",
+          "unit": "egg",
+          "item": "Large eggs - Jake 2 eggs, Laine 2 eggs",
+          "quantity": 4,
+          "personQuantities": {
+            "jake": 2,
+            "laine": 2
+          }
+        },
+        {
+          "nutritionKey": "Cottage cheese 4%",
+          "unit": "g",
+          "item": "Cottage cheese 4% - Jake 35 g, Laine 30 g",
+          "quantity": 65,
+          "personQuantities": {
+            "jake": 35,
+            "laine": 30
+          }
+        },
+        {
+          "nutritionKey": "Oikos Triple Zero yogurt",
+          "unit": "g",
+          "item": "Oikos Triple Zero yogurt - Jake 25 g, Laine 40 g",
+          "quantity": 65,
+          "personQuantities": {
+            "jake": 25,
+            "laine": 40
+          }
+        },
+        {
+          "nutritionKey": "Butter",
+          "unit": "tbsp",
+          "item": "Butter - Jake 0.4 tbsp, Laine 0.4 tbsp",
+          "quantity": 0.8,
+          "personQuantities": {
+            "jake": 0.4,
+            "laine": 0.4
+          }
+        }
+      ],
+      "steps": [
+        "Separate each person's eggs and whip the whites to soft peaks. Blend each person's yolks, cottage cheese and almond flour until smooth. Melt that person's butter, brush a little onto the waffle iron, and whisk the rest into the batter.",
+        "Fold the whites into the batter. Cook until the waffles are golden and set, roughly 4–6 minutes. Top with each person's measured yogurt."
+      ]
+    },
+    {
+      "day": "Sunday (November 22) - Lunch",
+      "name": "Warm Chicken & Cheddar Cabbage Skillet",
+      "note": "Total carbs: Jake 4.9 g, Laine 4.8 g. Card carbs are net.",
+      "jake": {
+        "cal": 482.7,
+        "protein": 65.2,
+        "carbs": 3.2,
+        "fat": 22.9,
+        "fiber": 1.6,
+        "totalCarbs": 4.9
+      },
+      "laine": {
+        "cal": 304.1,
+        "protein": 33.2,
+        "carbs": 3.1,
+        "fat": 17.4,
+        "fiber": 1.7,
+        "totalCarbs": 4.8
+      },
+      "ingredients": [
+        {
+          "nutritionKey": "Chicken breast",
+          "unit": "g_raw",
+          "item": "Chicken breast - Jake 255 g raw, Laine 120 g raw",
+          "quantity": 375,
+          "personQuantities": {
+            "jake": 255,
+            "laine": 120
+          }
+        },
+        {
+          "nutritionKey": "Green cabbage",
+          "unit": "g",
+          "item": "Green cabbage - Jake 60 g, Laine 65 g",
+          "quantity": 125,
+          "personQuantities": {
+            "jake": 60,
+            "laine": 65
+          }
+        },
+        {
+          "nutritionKey": "Olive oil",
+          "unit": "tbsp",
+          "item": "Olive oil - Jake 0.5 tbsp, Laine 0.5 tbsp",
+          "quantity": 1.0,
+          "personQuantities": {
+            "jake": 0.5,
+            "laine": 0.5
+          }
+        },
+        {
+          "nutritionKey": "Cheddar cheese",
+          "unit": "g",
+          "item": "Cheddar cheese - Jake 24 g, Laine 20 g",
+          "quantity": 44,
+          "personQuantities": {
+            "jake": 24,
+            "laine": 20
+          }
+        },
+        {
+          "nutritionKey": "Dijon mustard",
+          "unit": "tsp",
+          "item": "Dijon mustard - Jake 0.75 tsp, Laine 0.5 tsp",
+          "quantity": 1.25,
+          "personQuantities": {
+            "jake": 0.75,
+            "laine": 0.5
+          }
+        },
+        {
+          "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+          "unit": "tsp",
+          "item": "Dry seasonings named in Steps - Jake 0.35 tsp, Laine 0.25 tsp",
+          "quantity": 0.6,
+          "personQuantities": {
+            "jake": 0.35,
+            "laine": 0.25
+          }
+        }
+      ],
+      "steps": [
+        "Slice each portion of chicken and season with the measured salt, pepper and smoked paprika. Sear in half of each person's olive oil to 165°F, then transfer to a plate.",
+        "Thinly slice the cabbage. Sauté in the remaining oil until the edges brown and the center is still crisp. Return the chicken. Off the heat, stir each person's Dijon through their portion and melt the grated cheddar on top."
+      ]
+    }
+  ],
+  "weekendNote": "Friday the 20th is Flex Friday. Jake and Laine share breakfast and lunch at home Friday through Sunday.",
+  "jakeTabNote": "Pack three chicken thigh bowls, Monday–Wednesday. Thursday is team lunch. On Flex Friday, have lunch at home with Laine (Weekend tab). Coffee includes 2 tbsp half-and-half daily in the totals. Follow the two-shake allocation on each day's snack card.",
+  "laineTabNote": "Prep chicken jars Sunday for Monday–Wednesday and the pork jar Wednesday for Thursday. Add pecans at serving. Friday's shared meals are on the Weekend tab.",
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          226.5,
+          15.7,
+          2.5,
+          16.3,
+          0.5
+        ],
+        [
+          "Lunch (avg)",
+          696.4,
+          72.4,
+          3.7,
+          42.4,
+          2.4
+        ],
+        [
+          "Dinner (avg)",
+          731.5,
+          67.2,
+          6.4,
+          47.1,
+          2.6
+        ],
+        [
+          "Snacks (avg)",
+          376.4,
+          50.3,
+          3.5,
+          16.6,
+          1.1
+        ]
+      ],
+      "total": [
+        2030.9,
+        205.5,
+        15.9,
+        122.3,
+        6.5
+      ],
+      "goal": [
+        2030,
+        203,
+        20,
+        126,
+        12
+      ],
+      "note": "Macro averages use the six complete days. Thursday team lunch portions and nutrition are unknown."
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          238.7,
+          19.0,
+          2.5,
+          16.3,
+          0.7
+        ],
+        [
+          "Lunch (avg)",
+          387.7,
+          35.5,
+          2.9,
+          25.5,
+          2.4
+        ],
+        [
+          "Dinner (avg)",
+          530.4,
+          42.5,
+          5.3,
+          36.4,
+          2.3
+        ],
+        [
+          "Snacks (avg)",
+          207.1,
+          11.0,
+          3.1,
+          16.7,
+          1.3
+        ]
+      ],
+      "total": [
+        1363.9,
+        108.0,
+        13.8,
+        94.9,
+        6.7
+      ],
+      "goal": [
+        1363,
+        103,
+        20,
+        97,
+        14
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "shopping": {
+    "Produce": [
+      "Baby spinach - 2 × 8 oz bag (breakfast, dinner)",
+      "Celery - 1 × bunch (lunch, snacks)",
+      "English cucumber - 1 × English cucumber (lunch, snacks)",
+      "Fresh dill - 2 × small bunch (lunch, dinner, snacks)",
+      "Garlic - 1 × bulb, about 9 cloves (dinner, snacks)",
+      "Green beans - 2 × 12 oz frozen bag (dinner)",
+      "Green cabbage - 1 × small head (lunch, dinner)",
+      "Lemons - 2 × lemon, about 30 g juice (lunch, dinner)",
+      "Romaine hearts - 2 × 3-heart pack (lunch)",
+      "Tomato (slicing) - 2 × medium tomato (dinner)",
+      "Zucchini - 6 × medium zucchini (lunch, dinner)"
+    ],
+    "Meat & Seafood": [
+      "93% lean ground turkey - 2 × 1 lb packs, check freezer (dinner)",
+      "Boneless chicken thighs - 4.9 lb total, check 2.2 lb on hand for lunches (lunch, dinner)",
+      "Boneless pork loin - 3 lb (lunch, dinner)",
+      "Chicken breast - 3 lb (lunch)",
+      "Mild ground pork sausage - 1 lb (dinner)",
+      "Raw bacon - 12 oz (breakfast)",
+      "Salmon - 1 lb, check freezer (dinner)"
+    ],
+    "Dairy & Eggs": [
+      "4% cottage cheese - 1 × 16 oz tub (breakfast)",
+      "Asiago Fresco snack cheese - 1 × Asiago Fresco pack, check supply (snacks)",
+      "Block cheddar - 2 × 8 oz block (breakfast, lunch, dinner)",
+      "Butter - 1 × 1 lb box, check supply (breakfast, lunch, dinner)",
+      "Grated Parmesan - 1 × 5 oz grated Parmesan (lunch, dinner)",
+      "Half-and-half - 1 × 1 pint carton, check supply (breakfast)",
+      "Heavy cream - 1 × 1 pint carton (dinner, snacks)",
+      "Large eggs - 2 × dozen (breakfast, lunch)",
+      "Liquid egg whites - 2 × 16 oz carton (breakfast)",
+      "Oikos Triple Zero - 2 × 150 g Oikos cup (breakfast)",
+      "Part-skim ricotta - 405 g, check tub (dinner, snacks)",
+      "Sour cream - 1 × 8 oz tub (dinner)",
+      "Unsweetened almond milk - 1 × 64 fl oz carton (snacks)"
+    ],
+    "Already Have / Pantry Staples": [
+      "Almond flour - 1 × 1 lb bag (breakfast)",
+      "Beef bouillon cubes - 1 × 6-cube box (dinner)",
+      "Dijon mustard - 1 × 8 oz jar (lunch, dinner)",
+      "Ground coffee - 1 bag, if needed (breakfast)",
+      "Mayonnaise (avocado oil) - 1 × 12 oz jar (lunch, dinner)",
+      "Olive oil - 1 × 500 mL bottle (lunch, dinner, snacks)",
+      "Pecan halves - 215 g, check supply (breakfast, lunch, snacks)",
+      "Rice vinegar - 1 × 12 fl oz bottle (lunch, dinner)",
+      "Salt, pepper, thyme, oregano, smoked paprika, cumin - check supply (lunch, dinner, snacks)",
+      "Whey isolate - 1 × 2 lb isolate tub (snacks)",
+      "One A Day Men's Multi - 1 bottle (daily supplement)",
+      "One A Day Women's Multi - 1 bottle (daily supplement)"
+    ]
+  },
+  "dailyNutrition": {
+    "jake": {
+      "Monday": {
+        "totals": {
+          "cal": 2035.6,
+          "protein": 203.9,
+          "carbs": 16.6,
+          "fat": 124.6,
+          "fiber": 7.3,
+          "totalCarbs": 24.0
+        },
+        "meals": [
+          {
+            "id": "monday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "thigh": 370,
+              "beans": 125,
+              "oil": 1,
+              "cream": 55,
+              "mustard": 1,
+              "lemon": 0.5,
+              "spice": 0.35
+            }
+          },
+          {
+            "id": "jake-office-lunch",
+            "type": "lunch",
+            "quantities": {
+              "thigh": 330,
+              "zucchini": 140,
+              "romaine": 70,
+              "egg": 2,
+              "oil": 2,
+              "butter": 0.5,
+              "parm": 2,
+              "vinegar": 0.25,
+              "spice": 0.5
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-monday-snack",
+            "type": "snacks",
+            "quantities": {
+              "milk": 300,
+              "cheese": 22,
+              "whey": 40
+            }
+          }
+        ]
+      },
+      "Tuesday": {
+        "totals": {
+          "cal": 2029.6,
+          "protein": 205.7,
+          "carbs": 19.7,
+          "fat": 121.0,
+          "fiber": 5.4,
+          "totalCarbs": 25.1
+        },
+        "meals": [
+          {
+            "id": "tuesday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "turkey": 255,
+              "ricotta": 120,
+              "zucchini": 130,
+              "tomato": 60,
+              "parm": 2,
+              "oil": 0.8,
+              "spice": 0.6
+            }
+          },
+          {
+            "id": "jake-office-lunch",
+            "type": "lunch",
+            "quantities": {
+              "thigh": 330,
+              "zucchini": 140,
+              "romaine": 70,
+              "egg": 2,
+              "oil": 2,
+              "butter": 0.5,
+              "parm": 2,
+              "vinegar": 0.25,
+              "spice": 0.5
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-tuesday-snack",
+            "type": "snacks",
+            "quantities": {
+              "cheese": 22,
+              "cream": 5,
+              "whey": 56,
+              "pecan": 5
+            }
+          }
+        ]
+      },
+      "Wednesday": {
+        "totals": {
+          "cal": 2029.4,
+          "protein": 203.5,
+          "carbs": 11.3,
+          "fat": 125.6,
+          "fiber": 6.6,
+          "totalCarbs": 17.9
+        },
+        "meals": [
+          {
+            "id": "wednesday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "pork": 365,
+              "spinach": 120,
+              "butter": 1.5,
+              "oil": 0.75,
+              "broth": 0.15,
+              "mustard": 1,
+              "spice": 0.4
+            }
+          },
+          {
+            "id": "jake-office-lunch",
+            "type": "lunch",
+            "quantities": {
+              "thigh": 330,
+              "zucchini": 140,
+              "romaine": 70,
+              "egg": 2,
+              "oil": 2,
+              "butter": 0.5,
+              "parm": 2,
+              "vinegar": 0.25,
+              "spice": 0.5
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-wednesday-snack",
+            "type": "snacks",
+            "quantities": {
+              "milk": 300,
+              "cheese": 22,
+              "whey": 36
+            }
+          }
+        ]
+      },
+      "Thursday": {
+        "totals": {
+          "cal": 1296.7,
+          "protein": 130.7,
+          "carbs": 12.8,
+          "fat": 73.7,
+          "fiber": 5.1,
+          "totalCarbs": 17.9
+        },
+        "meals": [
+          {
+            "id": "thursday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "salmon": 250,
+              "beans": 110,
+              "butter": 0.75,
+              "sour": 2,
+              "dill": 3,
+              "lemon": 0.5,
+              "spice": 0.35
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-thursday-snack",
+            "type": "snacks",
+            "quantities": {
+              "milk": 300,
+              "cheese": 22,
+              "cream": 5,
+              "whey": 82,
+              "pecan": 12
+            }
+          }
+        ],
+        "untrackedMeal": "Team lunch"
+      },
+      "Friday": {
+        "totals": {
+          "cal": 2029.9,
+          "protein": 206.7,
+          "carbs": 15.3,
+          "fat": 123.1,
+          "fiber": 7.5,
+          "totalCarbs": 22.8
+        },
+        "meals": [
+          {
+            "id": "friday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "turkey": 285,
+              "cheddar": 32,
+              "oil": 0.45,
+              "cabbage": 90,
+              "mayo": 15,
+              "mustard": 1,
+              "vinegar": 0.4,
+              "spice": 0.45
+            }
+          },
+          {
+            "id": "friday-breakfast",
+            "type": "breakfast",
+            "quantities": {
+              "egg": 2,
+              "whites": 0.5,
+              "cheddar": 22,
+              "spinach": 35,
+              "butter": 0.4
+            }
+          },
+          {
+            "id": "friday-lunch",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 255,
+              "romaine": 65,
+              "cuke": 40,
+              "oil": 0.35,
+              "mayo": 12,
+              "lemon": 0.45,
+              "dill": 2,
+              "spice": 0.35
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-friday-snack",
+            "type": "snacks",
+            "quantities": {
+              "milk": 240,
+              "cream": 15,
+              "whey": 60,
+              "pecan": 20
+            }
+          }
+        ]
+      },
+      "Saturday": {
+        "totals": {
+          "cal": 2030.9,
+          "protein": 207.3,
+          "carbs": 14.5,
+          "fat": 117.0,
+          "fiber": 5.3,
+          "totalCarbs": 19.8
+        },
+        "meals": [
+          {
+            "id": "saturday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "sausage": 190,
+              "zucchini": 160,
+              "tomato": 50,
+              "cheddar": 30,
+              "parm": 1,
+              "butter": 0.125,
+              "spice": 0.4
+            }
+          },
+          {
+            "id": "saturday-breakfast",
+            "type": "breakfast",
+            "quantities": {
+              "bacon": 50,
+              "egg": 2,
+              "whites": 0.55,
+              "cheddar": 24,
+              "butter": 0.3
+            }
+          },
+          {
+            "id": "saturday-lunch",
+            "type": "lunch",
+            "quantities": {
+              "pork": 260,
+              "romaine": 50,
+              "celery": 30,
+              "mayo": 12,
+              "mustard": 0.75,
+              "pecan": 7
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-saturday-snack",
+            "type": "snacks",
+            "quantities": {
+              "milk": 240,
+              "cream": 5,
+              "whey": 90
+            }
+          }
+        ]
+      },
+      "Sunday": {
+        "totals": {
+          "cal": 2029.8,
+          "protein": 205.9,
+          "carbs": 18.3,
+          "fat": 122.7,
+          "fiber": 7.1,
+          "totalCarbs": 25.4
+        },
+        "meals": [
+          {
+            "id": "sunday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "thigh": 365,
+              "cabbage": 85,
+              "oil": 0.75,
+              "cream": 45,
+              "garlic": 1,
+              "spice": 0.65
+            }
+          },
+          {
+            "id": "sunday-breakfast",
+            "type": "breakfast",
+            "quantities": {
+              "almond": 20,
+              "egg": 2,
+              "cottage": 35,
+              "yogurt": 25,
+              "butter": 0.4
+            }
+          },
+          {
+            "id": "sunday-lunch",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 255,
+              "cabbage": 60,
+              "oil": 0.5,
+              "cheddar": 24,
+              "mustard": 0.75,
+              "spice": 0.35
+            }
+          },
+          {
+            "id": "coffee-with-half-and-half",
+            "type": "breakfast",
+            "quantities": {
+              "coffee": 1,
+              "half": 2
+            }
+          },
+          {
+            "id": "jake-sunday-snack",
+            "type": "snacks",
+            "quantities": {
+              "milk": 240,
+              "cream": 60,
+              "whey": 46,
+              "pecan": 4
+            }
+          }
+        ]
+      }
+    },
+    "laine": {
+      "Monday": {
+        "totals": {
+          "cal": 1361.3,
+          "protein": 104.3,
+          "carbs": 18.0,
+          "fat": 95.9,
+          "fiber": 9.2,
+          "totalCarbs": 27.2
+        },
+        "meals": [
+          {
+            "id": "monday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "thigh": 240,
+              "beans": 95,
+              "oil": 0.65,
+              "cream": 40,
+              "mustard": 0.75,
+              "lemon": 0.4,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "laine-chicken-jar",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 145,
+              "romaine": 40,
+              "cuke": 30,
+              "celery": 25,
+              "pecan": 14,
+              "mayo": 17,
+              "mustard": 0.6,
+              "vinegar": 0.3,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "Oikos & Pecan Parfait",
+            "type": "breakfast",
+            "quantities": {
+              "yogurt": 65,
+              "pecan": 12
+            }
+          },
+          {
+            "id": "ricotta-dip",
+            "type": "snacks",
+            "quantities": {
+              "ricotta": 65,
+              "oil": 0.5,
+              "garlic": 0.3333333333333333,
+              "dill": 2,
+              "cuke": 28,
+              "celery": 22,
+              "spice": 0.1
+            }
+          },
+          {
+            "id": "laine-monday-snack",
+            "type": "snacks",
+            "quantities": {
+              "pecan": 20
+            }
+          }
+        ]
+      },
+      "Tuesday": {
+        "totals": {
+          "cal": 1366.4,
+          "protein": 109.2,
+          "carbs": 18.5,
+          "fat": 92.6,
+          "fiber": 6.3,
+          "totalCarbs": 24.8
+        },
+        "meals": [
+          {
+            "id": "tuesday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "turkey": 150,
+              "ricotta": 90,
+              "zucchini": 105,
+              "tomato": 45,
+              "parm": 1.5,
+              "oil": 0.55,
+              "spice": 0.4
+            }
+          },
+          {
+            "id": "laine-chicken-jar",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 145,
+              "romaine": 40,
+              "cuke": 30,
+              "celery": 25,
+              "pecan": 14,
+              "mayo": 17,
+              "mustard": 0.6,
+              "vinegar": 0.3,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "Cheddar Egg-White Scramble",
+            "type": "breakfast",
+            "quantities": {
+              "egg": 1,
+              "whites": 0.5,
+              "cheddar": 18,
+              "butter": 0.4
+            }
+          },
+          {
+            "id": "ricotta-dip",
+            "type": "snacks",
+            "quantities": {
+              "ricotta": 65,
+              "oil": 0.5,
+              "garlic": 0.3333333333333333,
+              "dill": 2,
+              "cuke": 28,
+              "celery": 22,
+              "spice": 0.1
+            }
+          },
+          {
+            "id": "laine-tuesday-snack",
+            "type": "snacks",
+            "quantities": {
+              "pecan": 13
+            }
+          }
+        ]
+      },
+      "Wednesday": {
+        "totals": {
+          "cal": 1363.9,
+          "protein": 110.3,
+          "carbs": 12.2,
+          "fat": 94.8,
+          "fiber": 6.8,
+          "totalCarbs": 19.0
+        },
+        "meals": [
+          {
+            "id": "wednesday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "pork": 195,
+              "spinach": 90,
+              "butter": 1,
+              "oil": 0.5,
+              "broth": 0.1,
+              "mustard": 0.75,
+              "spice": 0.3
+            }
+          },
+          {
+            "id": "laine-chicken-jar",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 145,
+              "romaine": 40,
+              "cuke": 30,
+              "celery": 25,
+              "pecan": 14,
+              "mayo": 17,
+              "mustard": 0.6,
+              "vinegar": 0.3,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "Cheddar Egg-White Scramble",
+            "type": "breakfast",
+            "quantities": {
+              "egg": 1,
+              "whites": 0.5,
+              "cheddar": 18,
+              "butter": 0.4
+            }
+          },
+          {
+            "id": "ricotta-dip",
+            "type": "snacks",
+            "quantities": {
+              "ricotta": 65,
+              "oil": 0.5,
+              "garlic": 0.3333333333333333,
+              "dill": 2,
+              "cuke": 28,
+              "celery": 22,
+              "spice": 0.1
+            }
+          },
+          {
+            "id": "laine-wednesday-snack",
+            "type": "snacks",
+            "quantities": {
+              "pecan": 13
+            }
+          }
+        ]
+      },
+      "Thursday": {
+        "totals": {
+          "cal": 1364.1,
+          "protein": 104.0,
+          "carbs": 13.8,
+          "fat": 94.5,
+          "fiber": 8.2,
+          "totalCarbs": 22.0
+        },
+        "meals": [
+          {
+            "id": "thursday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "salmon": 195,
+              "beans": 100,
+              "butter": 0.75,
+              "sour": 1.5,
+              "dill": 2,
+              "lemon": 0.35,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "laine-pork-jar",
+            "type": "lunch",
+            "quantities": {
+              "pork": 165,
+              "romaine": 45,
+              "cuke": 32,
+              "celery": 30,
+              "pecan": 14,
+              "mayo": 16,
+              "mustard": 0.6,
+              "vinegar": 0.3,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "Oikos & Pecan Parfait",
+            "type": "breakfast",
+            "quantities": {
+              "yogurt": 65,
+              "pecan": 12
+            }
+          },
+          {
+            "id": "laine-thursday-snack",
+            "type": "snacks",
+            "quantities": {
+              "cheese": 18,
+              "whey": 14,
+              "pecan": 13
+            }
+          }
+        ]
+      },
+      "Friday": {
+        "totals": {
+          "cal": 1366.2,
+          "protein": 108.5,
+          "carbs": 10.0,
+          "fat": 98.0,
+          "fiber": 4.7,
+          "totalCarbs": 14.7
+        },
+        "meals": [
+          {
+            "id": "friday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "turkey": 185,
+              "cheddar": 28,
+              "oil": 0.5,
+              "cabbage": 80,
+              "mayo": 15,
+              "mustard": 0.75,
+              "vinegar": 0.3,
+              "spice": 0.3
+            }
+          },
+          {
+            "id": "friday-breakfast",
+            "type": "breakfast",
+            "quantities": {
+              "egg": 2,
+              "whites": 0.4,
+              "cheddar": 18,
+              "spinach": 30,
+              "butter": 0.5
+            }
+          },
+          {
+            "id": "friday-lunch",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 145,
+              "romaine": 55,
+              "cuke": 45,
+              "oil": 0.45,
+              "mayo": 18,
+              "lemon": 0.35,
+              "dill": 2,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "laine-friday-snack",
+            "type": "snacks",
+            "quantities": {
+              "cheese": 18,
+              "pecan": 5
+            }
+          }
+        ]
+      },
+      "Saturday": {
+        "totals": {
+          "cal": 1365.1,
+          "protein": 107.9,
+          "carbs": 9.8,
+          "fat": 94.3,
+          "fiber": 4.3,
+          "totalCarbs": 14.0
+        },
+        "meals": [
+          {
+            "id": "saturday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "sausage": 120,
+              "zucchini": 150,
+              "tomato": 40,
+              "cheddar": 20,
+              "parm": 0.75,
+              "butter": 1.5,
+              "spice": 0.3
+            }
+          },
+          {
+            "id": "saturday-breakfast",
+            "type": "breakfast",
+            "quantities": {
+              "bacon": 30,
+              "egg": 1,
+              "whites": 0.55,
+              "cheddar": 20,
+              "butter": 0.3
+            }
+          },
+          {
+            "id": "saturday-lunch",
+            "type": "lunch",
+            "quantities": {
+              "pork": 160,
+              "romaine": 50,
+              "celery": 25,
+              "mayo": 9,
+              "mustard": 0.75,
+              "pecan": 7
+            }
+          },
+          {
+            "id": "laine-saturday-snack",
+            "type": "snacks",
+            "quantities": {
+              "cheese": 18,
+              "whey": 20
+            }
+          }
+        ]
+      },
+      "Sunday": {
+        "totals": {
+          "cal": 1360.6,
+          "protein": 111.6,
+          "carbs": 14.6,
+          "fat": 93.9,
+          "fiber": 7.6,
+          "totalCarbs": 22.2
+        },
+        "meals": [
+          {
+            "id": "sunday-dinner",
+            "type": "dinner",
+            "quantities": {
+              "thigh": 235,
+              "cabbage": 95,
+              "oil": 0.65,
+              "cream": 45,
+              "garlic": 1,
+              "spice": 0.45
+            }
+          },
+          {
+            "id": "sunday-breakfast",
+            "type": "breakfast",
+            "quantities": {
+              "almond": 17,
+              "egg": 2,
+              "cottage": 30,
+              "yogurt": 40,
+              "butter": 0.4
+            }
+          },
+          {
+            "id": "sunday-lunch",
+            "type": "lunch",
+            "quantities": {
+              "chicken": 120,
+              "cabbage": 65,
+              "oil": 0.5,
+              "cheddar": 20,
+              "mustard": 0.5,
+              "spice": 0.25
+            }
+          },
+          {
+            "id": "laine-sunday-snack",
+            "type": "snacks",
+            "quantities": {
+              "cheese": 18,
+              "pecan": 16
+            }
+          }
+        ]
+      }
+    }
+  },
+  "budget": {
+    "currency": "USD",
+    "status": "Flexible $150 weekly food guide",
+    "foodCheckoutEstimate": 281.03,
+    "foodUsedValueEstimate": 169.1,
+    "foodCheckoutIfStockedEstimate": 126.83,
+    "supplementCheckoutEstimate": 20,
+    "allInCheckoutEstimate": 301.03,
+    "weeklyFoodBudget": 150,
+    "fullRestockOverBudget": 131.03,
+    "basis": "Pecans and Asiago use November 8 Albertsons receipt prices. Other prices and missing package sizes are planning estimates. The lower checkout assumes pantry and marked stock are on hand, including 990 g chicken thighs for lunch. Estimates cover the home meal plan and exclude Jake’s Thursday team lunch, tax and delivery.",
+    "receipt": {
+      "store": "Albertsons",
+      "date": "2026-11-08",
+      "transactionTotal": 234.7,
+      "linePricesUsed": {
+        "Pecan halves": 6.63,
+        "Asiago Fresco": 5.99
+      }
+    },
+    "items": [
+      {
+        "nutritionKey": "Cottage cheese 4%",
+        "plannedQuantity": 65.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 65.0,
+        "packageCount": 1,
+        "packageDescription": "16 oz tub",
+        "estimatedPackagePrice": 3.79,
+        "estimatedCheckoutCost": 3.79,
+        "estimatedUsedCost": 0.54,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Ground turkey 93/7",
+        "plannedQuantity": 875.0,
+        "plannedUnit": "g_raw",
+        "purchaseQuantity": 875.0,
+        "packageCount": 2,
+        "packageDescription": "1 lb pack, 93% lean",
+        "estimatedPackagePrice": 5.99,
+        "estimatedCheckoutCost": 11.98,
+        "estimatedUsedCost": 11.54,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Two 1 lb packs were on the November 8 receipt. Check the freezer for them. The receipt price was unavailable. Verify the lean percentage.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Almond flour",
+        "plannedQuantity": 37.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 37.0,
+        "packageCount": 1,
+        "packageDescription": "1 lb bag",
+        "estimatedPackagePrice": 6.49,
+        "estimatedCheckoutCost": 6.49,
+        "estimatedUsedCost": 0.53,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Asiago Fresco (snacking cheese)",
+        "plannedQuantity": 160.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 160.0,
+        "packageCount": 1,
+        "packageDescription": "Asiago Fresco pack, 8 oz modeled",
+        "estimatedPackagePrice": 5.99,
+        "estimatedCheckoutCost": 5.99,
+        "estimatedUsedCost": 4.22,
+        "category": "Dairy & Eggs",
+        "priceBasis": "receipt line",
+        "priceDetail": "Albertsons November 8 receipt transcription, $5.99 paid for Asiago Fresco. Package size was unavailable. Used-food value assumes 8 oz.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Baby spinach",
+        "plannedQuantity": 275.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 275.0,
+        "packageCount": 2,
+        "packageDescription": "8 oz bag",
+        "estimatedPackagePrice": 2.99,
+        "estimatedCheckoutCost": 5.98,
+        "estimatedUsedCost": 3.62,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Beef bouillon cube",
+        "plannedQuantity": 0.25,
+        "plannedUnit": "cube",
+        "purchaseQuantity": 0.25,
+        "packageCount": 1,
+        "packageDescription": "6-cube box",
+        "estimatedPackagePrice": 2.49,
+        "estimatedCheckoutCost": 2.49,
+        "estimatedUsedCost": 0.1,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Cheddar cheese",
+        "plannedQuantity": 274.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 274.0,
+        "packageCount": 2,
+        "packageDescription": "8 oz block",
+        "estimatedPackagePrice": 3.49,
+        "estimatedCheckoutCost": 6.98,
+        "estimatedUsedCost": 4.21,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Chicken thighs (boneless, skinless)",
+        "plannedQuantity": 2200.0,
+        "plannedUnit": "g_raw",
+        "purchaseQuantity": 2200.0,
+        "packageCount": 2,
+        "packageDescription": "3 lb boneless skinless thighs",
+        "estimatedPackagePrice": 11.99,
+        "estimatedCheckoutCost": 23.98,
+        "estimatedUsedCost": 19.4,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Existing thighs are available for lunch. The stocked estimate assumes 990 g on hand for the three bowls and prices one 3 lb pack for the dinners. Weigh the thighs before shopping.",
+        "checkSupply": false,
+        "assumedOnHandForLunchQuantity": 990,
+        "estimatedCheckoutCostIfStocked": 11.99
+      },
+      {
+        "nutritionKey": "Pork loin",
+        "plannedQuantity": 1145.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 1145.0,
+        "packageCount": 1,
+        "packageDescription": "3 lb boneless pork loin",
+        "estimatedPackagePrice": 9.0,
+        "estimatedCheckoutCost": 9.0,
+        "estimatedUsedCost": 7.58,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Butter",
+        "plannedQuantity": 10.225,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 145.2,
+        "packageCount": 1,
+        "packageDescription": "1 lb box",
+        "estimatedPackagePrice": 4.99,
+        "estimatedCheckoutCost": 4.99,
+        "estimatedUsedCost": 1.6,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Celery",
+        "plannedQuantity": 226.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 226.0,
+        "packageCount": 1,
+        "packageDescription": "bunch",
+        "estimatedPackagePrice": 2.49,
+        "estimatedCheckoutCost": 2.49,
+        "estimatedUsedCost": 1.25,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Chicken breast",
+        "plannedQuantity": 1210.0,
+        "plannedUnit": "g_raw",
+        "purchaseQuantity": 1210.0,
+        "packageCount": 1,
+        "packageDescription": "3 lb chicken breast pack",
+        "estimatedPackagePrice": 11.99,
+        "estimatedCheckoutCost": 11.99,
+        "estimatedUsedCost": 10.67,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Dijon mustard",
+        "plannedQuantity": 10.4,
+        "plannedUnit": "tsp",
+        "purchaseQuantity": 52.0,
+        "packageCount": 1,
+        "packageDescription": "8 oz jar",
+        "estimatedPackagePrice": 2.99,
+        "estimatedCheckoutCost": 2.99,
+        "estimatedUsedCost": 0.69,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "English cucumber",
+        "plannedQuantity": 291.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 291.0,
+        "packageCount": 1,
+        "packageDescription": "English cucumber",
+        "estimatedPackagePrice": 1.49,
+        "estimatedCheckoutCost": 1.49,
+        "estimatedUsedCost": 1.45,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Fresh dill",
+        "plannedQuantity": 15.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 15.0,
+        "packageCount": 2,
+        "packageDescription": "small bunch",
+        "estimatedPackagePrice": 1.99,
+        "estimatedCheckoutCost": 3.98,
+        "estimatedUsedCost": 2.13,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Garlic",
+        "plannedQuantity": 3.0,
+        "plannedUnit": "clove",
+        "purchaseQuantity": 3.0,
+        "packageCount": 1,
+        "packageDescription": "bulb, about 9 cloves",
+        "estimatedPackagePrice": 0.69,
+        "estimatedCheckoutCost": 0.69,
+        "estimatedUsedCost": 0.23,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Parmesan cheese (grated)",
+        "plannedQuantity": 11.25,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 56.25,
+        "packageCount": 1,
+        "packageDescription": "5 oz grated Parmesan",
+        "estimatedPackagePrice": 4.49,
+        "estimatedCheckoutCost": 4.49,
+        "estimatedUsedCost": 1.78,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Green beans",
+        "plannedQuantity": 430.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 430.0,
+        "packageCount": 2,
+        "packageDescription": "12 oz frozen bag",
+        "estimatedPackagePrice": 1.79,
+        "estimatedCheckoutCost": 3.58,
+        "estimatedUsedCost": 2.26,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Green cabbage",
+        "plannedQuantity": 475.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 475.0,
+        "packageCount": 1,
+        "packageDescription": "small head",
+        "estimatedPackagePrice": 2.49,
+        "estimatedCheckoutCost": 2.49,
+        "estimatedUsedCost": 1.69,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Brewed coffee (plain)",
+        "plannedQuantity": 7.0,
+        "plannedUnit": "cup",
+        "purchaseQuantity": 70.0,
+        "packageCount": 1,
+        "packageDescription": "12 oz ground coffee bag",
+        "estimatedPackagePrice": 8.99,
+        "estimatedCheckoutCost": 8.99,
+        "estimatedUsedCost": 1.85,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Half-and-half",
+        "plannedQuantity": 14.0,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 210.0,
+        "packageCount": 1,
+        "packageDescription": "1 pint carton",
+        "estimatedPackagePrice": 3.29,
+        "estimatedCheckoutCost": 3.29,
+        "estimatedUsedCost": 1.46,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Bought for coffee on November 8. Check the carton. The receipt price was unavailable.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Heavy cream",
+        "plannedQuantity": 275.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 275.0,
+        "packageCount": 1,
+        "packageDescription": "1 pint carton",
+        "estimatedPackagePrice": 5.49,
+        "estimatedCheckoutCost": 5.49,
+        "estimatedUsedCost": 3.19,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Eggs (large)",
+        "plannedQuantity": 19.0,
+        "plannedUnit": "egg",
+        "purchaseQuantity": 19.0,
+        "packageCount": 2,
+        "packageDescription": "dozen",
+        "estimatedPackagePrice": 4.49,
+        "estimatedCheckoutCost": 8.98,
+        "estimatedUsedCost": 7.11,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Lemon juice",
+        "plannedQuantity": 2.55,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 38.25,
+        "packageCount": 2,
+        "packageDescription": "lemon, about 30 g juice",
+        "estimatedPackagePrice": 0.69,
+        "estimatedCheckoutCost": 1.38,
+        "estimatedUsedCost": 0.88,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Liquid egg whites",
+        "plannedQuantity": 3.0,
+        "plannedUnit": "cup",
+        "purchaseQuantity": 729.0,
+        "packageCount": 2,
+        "packageDescription": "16 oz carton",
+        "estimatedPackagePrice": 4.49,
+        "estimatedCheckoutCost": 8.98,
+        "estimatedUsedCost": 7.21,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Mayonnaise (avocado oil)",
+        "plannedQuantity": 148.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 148.0,
+        "packageCount": 1,
+        "packageDescription": "12 oz jar",
+        "estimatedPackagePrice": 6.99,
+        "estimatedCheckoutCost": 6.99,
+        "estimatedUsedCost": 3.04,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Ground sausage (pork)",
+        "plannedQuantity": 310.0,
+        "plannedUnit": "g_raw",
+        "purchaseQuantity": 310.0,
+        "packageCount": 1,
+        "packageDescription": "1 lb mild pork sausage",
+        "estimatedPackagePrice": 4.99,
+        "estimatedCheckoutCost": 4.99,
+        "estimatedUsedCost": 3.41,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Oikos Triple Zero yogurt",
+        "plannedQuantity": 195.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 195.0,
+        "packageCount": 2,
+        "packageDescription": "150 g Oikos cup",
+        "estimatedPackagePrice": 1.49,
+        "estimatedCheckoutCost": 2.98,
+        "estimatedUsedCost": 1.94,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Olive oil",
+        "plannedQuantity": 15.9,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 214.65,
+        "packageCount": 1,
+        "packageDescription": "500 mL bottle",
+        "estimatedPackagePrice": 8.99,
+        "estimatedCheckoutCost": 8.99,
+        "estimatedUsedCost": 4.24,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Ricotta cheese (part-skim)",
+        "plannedQuantity": 405.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 405.0,
+        "packageCount": 1,
+        "packageDescription": "15 oz part-skim tub",
+        "estimatedPackagePrice": 4.79,
+        "estimatedCheckoutCost": 4.79,
+        "estimatedUsedCost": 4.56,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Unopened tub previously on hand, dated December 10. Restock price and 15 oz size are estimates.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Pecans",
+        "plannedQuantity": 215.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 215.0,
+        "packageCount": 2,
+        "packageDescription": "pecan halves pack, 6 oz modeled",
+        "estimatedPackagePrice": 6.63,
+        "estimatedCheckoutCost": 13.26,
+        "estimatedUsedCost": 8.38,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "receipt line",
+        "priceDetail": "Albertsons November 8 receipt transcription, $6.63 paid per line. Package size was unavailable. Used-food value assumes 6 oz.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Bacon (raw, cooked and drained)",
+        "plannedQuantity": 80.0,
+        "plannedUnit": "g_raw",
+        "purchaseQuantity": 80.0,
+        "packageCount": 1,
+        "packageDescription": "12 oz pack",
+        "estimatedPackagePrice": 4.99,
+        "estimatedCheckoutCost": 4.99,
+        "estimatedUsedCost": 1.17,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Rice vinegar",
+        "plannedQuantity": 2.65,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 39.75,
+        "packageCount": 1,
+        "packageDescription": "12 fl oz bottle",
+        "estimatedPackagePrice": 2.99,
+        "estimatedCheckoutCost": 2.99,
+        "estimatedUsedCost": 0.33,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Romaine lettuce",
+        "plannedQuantity": 595.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 595.0,
+        "packageCount": 2,
+        "packageDescription": "3-heart pack",
+        "estimatedPackagePrice": 3.49,
+        "estimatedCheckoutCost": 6.98,
+        "estimatedUsedCost": 4.07,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Atlantic salmon (raw)",
+        "plannedQuantity": 445.0,
+        "plannedUnit": "g_raw",
+        "purchaseQuantity": 445.0,
+        "packageCount": 1,
+        "packageDescription": "1 lb frozen salmon",
+        "estimatedPackagePrice": 9.99,
+        "estimatedCheckoutCost": 9.99,
+        "estimatedUsedCost": 9.79,
+        "category": "Meat & Seafood",
+        "priceBasis": "estimate",
+        "priceDetail": "Usually bulk stocked. Check freezer. Replacement estimate only.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Spices (oregano/thyme/cumin/paprika/salt)",
+        "plannedQuantity": 9.45,
+        "plannedUnit": "tsp",
+        "purchaseQuantity": 9.45,
+        "packageCount": 1,
+        "packageDescription": "salt, pepper, thyme, oregano, smoked paprika, cumin",
+        "estimatedPackagePrice": 8.0,
+        "estimatedCheckoutCost": 8.0,
+        "estimatedUsedCost": 1.89,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Daisy sour cream",
+        "plannedQuantity": 3.5,
+        "plannedUnit": "tbsp",
+        "purchaseQuantity": 52.5,
+        "packageCount": 1,
+        "packageDescription": "8 oz tub",
+        "estimatedPackagePrice": 2.49,
+        "estimatedCheckoutCost": 2.49,
+        "estimatedUsedCost": 0.58,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Tomato (slicing)",
+        "plannedQuantity": 195.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 195.0,
+        "packageCount": 2,
+        "packageDescription": "medium tomato",
+        "estimatedPackagePrice": 0.9,
+        "estimatedCheckoutCost": 1.8,
+        "estimatedUsedCost": 1.17,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Almond milk (unsweetened)",
+        "plannedQuantity": 1620.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 1620.0,
+        "packageCount": 1,
+        "packageDescription": "64 fl oz carton",
+        "estimatedPackagePrice": 3.49,
+        "estimatedCheckoutCost": 3.49,
+        "estimatedUsedCost": 2.99,
+        "category": "Dairy & Eggs",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "Whey protein isolate",
+        "plannedQuantity": 444.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 444.0,
+        "packageCount": 1,
+        "packageDescription": "2 lb isolate tub",
+        "estimatedPackagePrice": 39.99,
+        "estimatedCheckoutCost": 39.99,
+        "estimatedUsedCost": 19.58,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": true
+      },
+      {
+        "nutritionKey": "Zucchini",
+        "plannedQuantity": 965.0,
+        "plannedUnit": "g",
+        "purchaseQuantity": 965.0,
+        "packageCount": 6,
+        "packageDescription": "medium zucchini",
+        "estimatedPackagePrice": 0.89,
+        "estimatedCheckoutCost": 5.34,
+        "estimatedUsedCost": 4.77,
+        "category": "Produce",
+        "priceBasis": "estimate",
+        "priceDetail": "Planning estimate for a standard package.",
+        "checkSupply": false
+      },
+      {
+        "nutritionKey": "One A Day Men's Multi",
+        "plannedQuantity": 7,
+        "plannedUnit": "tablet",
+        "packageCount": 1,
+        "packageDescription": "100-count bottle",
+        "estimatedPackagePrice": 10.0,
+        "estimatedCheckoutCost": 10.0,
+        "estimatedUsedCost": 0.7,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "checkSupply": true,
+        "supplement": true
+      },
+      {
+        "nutritionKey": "One A Day Women's Multi",
+        "plannedQuantity": 7,
+        "plannedUnit": "tablet",
+        "packageCount": 1,
+        "packageDescription": "100-count bottle",
+        "estimatedPackagePrice": 10.0,
+        "estimatedCheckoutCost": 10.0,
+        "estimatedUsedCost": 0.7,
+        "category": "Already Have / Pantry Staples",
+        "priceBasis": "estimate",
+        "checkSupply": true,
+        "supplement": true
+      }
+    ]
+  },
+  "prepPlan": [
+    "Sunday, Nov 15. Cook the thighs you have for Jake’s three chicken bowls. Pack the dry romaine and dressing separately. Prep Laine's three chicken jars. Make three portions of whipped ricotta dip and reserve 210 g ricotta for Tuesday's rollatini. Pack the dip vegetables and pecans separately.",
+    "Check the freezer for two 1 lb packs of ground turkey and the salmon. Keep Friday's raw turkey and Saturday's sausage frozen until it's time to thaw them in the refrigerator.",
+    "Wednesday, Nov 18. Roast and label the Thursday jar portion and both Saturday lunch portions alongside the pork dinner. Assemble Laine's Thursday jar. Cool and freeze Saturday's pork promptly. Move Thursday's raw salmon and Friday's raw turkey to the refrigerator to thaw.",
+    "Friday, Nov 20. Flex Friday breakfast and lunch are shared at home. In the morning, move Saturday's cooked pork and raw sausage from the freezer to the refrigerator.",
+    "Cool cooked batches promptly. Store refrigerated food at 40°F or colder, and reheat office leftovers to 165°F. Keep chilled lunch jars cold until serving."
+  ],
+  "foodSafetySources": [
+    "https://www.fda.gov/food/buy-store-serve-safe-food/safe-food-handling",
+    "https://ask.fsis.usda.gov/article/How-do-I-handle-leftovers-safely/"
+  ]
+}
