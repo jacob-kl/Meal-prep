@@ -105,4 +105,4 @@ Plain HTML + React 18 (UMD CDN). No build step. State stored in `localStorage`.
 - SVG tab icons (plate, fork, sun, bottle, bag, bullseye) that match each section
 - Earthy warm palette: cream background, Lora serif for titles, DM Mono for data
 
-Typography: [Lora](https://fonts.google.com/specimen/Lora) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) + [Barlow](https://fonts.google.com/specimen/Barlow).
+Typography: [Lora](https://fonts.google.com/specimen/Lora) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) + [Barlow](https://fonts.google.com/specimen/Barlow). 
