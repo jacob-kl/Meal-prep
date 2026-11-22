@@ -1,5 +1,4 @@
 {
-  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
   "_dri": {
     "jake": {
       "sodium": {
@@ -120,6 +119,7 @@
       }
     }
   },
+  "_note": "Nutrition database for Jake & Laine meal plan. Values per serving size listed. Mediterranean-leaning + household staples. Jake: lifts heavy — calcium and potassium priority. Laine: breast cancer recovery — calcium, vitamin D, fiber, omega-3s, cruciferous veg, and low processed food are the evidence-based dietary priorities post-treatment. Both: DRI targets in _dri section. Supplements in week JSON dailySupplements field.",
   "All-purpose flour": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -223,12 +223,13 @@
   "Asparagus": {
     "serving_qty": 100,
     "serving_unit": "g",
-    "serving": "per 100g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
     "cal": 20,
     "protein": 2.2,
     "carbs": 3.9,
     "fat": 0.1,
-    "fiber": 2.1
+    "fiber": 2.1,
+    "micros": {}
   },
   "Atlantic salmon (raw)": {
     "serving_qty": 100,
@@ -330,32 +331,6 @@
       "selenium": 62
     }
   },
-  "Bacon (raw, cooked and drained)": {
-    "serving_qty": 100,
-    "serving_unit": "g_raw",
-    "serving": "100 g raw; estimated retained nutrition after cooking",
-    "cal": 189.35,
-    "protein": 12.95,
-    "carbs": 0.49,
-    "fat": 14.7,
-    "fiber": 0.0,
-    "micros": {
-      "sodium": 600.95,
-      "potassium": 197.75,
-      "calcium": 3.85,
-      "vitamin_d": 0.0,
-      "magnesium": 15.4,
-      "zinc": 1.26,
-      "vitamin_c": 0.0,
-      "vitamin_b12": 0.42,
-      "iron": 0.49,
-      "vitamin_a": 0.0,
-      "folate": 0.0,
-      "phosphorus": 191.45,
-      "selenium": 21.7
-    },
-    "note": "Derived from supplied Bacon (cooked) entry with 35% cooked yield; approximate, not a new USDA measurement. Raw weights are what to weigh before cooking."
-  },
   "Banana": {
     "serving_qty": 1,
     "serving_unit": "medium",
@@ -405,21 +380,6 @@
     "serving": "per 100g dry",
     "serving_qty": 100,
     "serving_unit": "g_dry"
-  },
-  "Beef bouillon cube": {
-    "cal": 30,
-    "protein": 2,
-    "carbs": 0,
-    "fat": 2,
-    "fiber": 0,
-    "serving": "1 cube, Knorr-style 10 g cube; verify your package",
-    "serving_qty": 1,
-    "serving_unit": "cube",
-    "micros": {
-      "sodium": 2120
-    },
-    "source": "https://www.cookwithknorr.com/us/en/p/knorr%C2%AE-beef-bouillon-cube.html/00062646070069",
-    "note": "Label estimate: 15 kcal per half cube; one cube prepares about 500 ml broth. Cube strengths vary; match the dilution on your package."
   },
   "Beef broth": {
     "serving_qty": 100,
@@ -871,6 +831,17 @@
       "selenium": 27.6
     }
   },
+  "Chicken broth": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 6,
+    "protein": 0.5,
+    "carbs": 0.5,
+    "fat": 0.2,
+    "fiber": 0,
+    "micros": {}
+  },
   "Chicken thighs (boneless, skinless)": {
     "serving_qty": 100,
     "serving_unit": "g_raw",
@@ -945,6 +916,17 @@
       "phosphorus": 100,
       "selenium": 6.2
     }
+  },
+  "Coffee espresso brewed": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 1,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {}
   },
   "Corn kernels (frozen)": {
     "serving_qty": 100,
@@ -1121,6 +1103,17 @@
       "selenium": 0.5
     }
   },
+  "Cremini mushrooms": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 22,
+    "protein": 2.5,
+    "carbs": 3.3,
+    "fat": 0.1,
+    "fiber": 1,
+    "micros": {}
+  },
   "Cucumber": {
     "serving_qty": 100,
     "serving_unit": "g",
@@ -1195,6 +1188,17 @@
       "phosphorus": 29,
       "selenium": 1
     }
+  },
+  "Dark chocolate 85%": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 600,
+    "protein": 10,
+    "carbs": 19,
+    "fat": 52,
+    "fiber": 11,
+    "micros": {}
   },
   "Dennison's chunky chili": {
     "serving_qty": 1,
@@ -1420,6 +1424,17 @@
     "carbs": 1,
     "fat": 4,
     "fiber": 0
+  },
+  "Filet mignon (raw)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 180,
+    "protein": 21,
+    "carbs": 0,
+    "fat": 10,
+    "fiber": 0,
+    "micros": {}
   },
   "Flank/sirloin steak": {
     "serving_qty": 100,
@@ -2157,6 +2172,17 @@
     "fat": 3,
     "fiber": 0.7
   },
+  "Kale": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 35,
+    "protein": 2.9,
+    "carbs": 4.4,
+    "fat": 1.5,
+    "fiber": 4.1,
+    "micros": {}
+  },
   "Kefir (plain lowfat)": {
     "serving_qty": 1,
     "serving_unit": "cup",
@@ -2342,17 +2368,16 @@
       "selenium": 15
     }
   },
-  "Liquid stevia (zero calorie)": {
-    "cal": 0,
-    "protein": 0,
+  "Lobster tail meat (raw)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 89,
+    "protein": 19,
     "carbs": 0,
-    "fat": 0,
+    "fat": 0.9,
     "fiber": 0,
-    "serving": "1 squeeze (approximately 1 dropper serving; follow bottle sweetness guide)",
-    "serving_qty": 1,
-    "serving_unit": "serving",
-    "micros": {},
-    "source": "Great Value Liquid No Calorie Stevia Sweetener label, https://www.walmart.com/ip/42279263. Choose liquid zero-carb stevia, not a dextrose/maltodextrin baking blend."
+    "micros": {}
   },
   "Macadamia nuts": {
     "serving_qty": 100,
@@ -2643,6 +2668,17 @@
       "selenium": 35
     }
   },
+  "Poblano pepper": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 26,
+    "protein": 1,
+    "carbs": 6,
+    "fat": 0.3,
+    "fiber": 1.7,
+    "micros": {}
+  },
   "Pork loin": {
     "cal": 143,
     "protein": 21,
@@ -2917,6 +2953,17 @@
       "phosphorus": 45,
       "selenium": 0.5
     }
+  },
+  "Roasted red peppers (jarred)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 28,
+    "protein": 1,
+    "carbs": 5,
+    "fat": 0.5,
+    "fiber": 1.5,
+    "micros": {}
   },
   "Romaine lettuce": {
     "serving_qty": 100,
@@ -3308,6 +3355,28 @@
       "zinc": 0
     }
   },
+  "Sugar-free sweetener (monk fruit)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "micros": {}
+  },
+  "Sun-dried tomatoes (dry)": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 258,
+    "protein": 14,
+    "carbs": 56,
+    "fat": 3,
+    "fiber": 12,
+    "micros": {}
+  },
   "Sweet potato": {
     "serving_qty": 130,
     "serving_unit": "g",
@@ -3358,16 +3427,6 @@
       "zinc": 0
     }
   },
-  "TJ's Mandarin Orange Chicken": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g (package weight)",
-    "cal": 220,
-    "protein": 13,
-    "carbs": 22,
-    "fat": 9,
-    "fiber": 0
-  },
   "Taylor Farms salad kit": {
     "serving_qty": 1,
     "serving_unit": "serving",
@@ -3417,6 +3476,16 @@
     "serving": "per 1/2 cup (125g)",
     "serving_qty": 0.5,
     "serving_unit": "cup"
+  },
+  "TJ's Mandarin Orange Chicken": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9,
+    "fiber": 0
   },
   "Tofu (firm)": {
     "cal": 144,
@@ -3518,31 +3587,16 @@
       "selenium": 25
     }
   },
-  "Turkey breast (raw, yield-adjusted)": {
+  "Unsweetened cocoa powder": {
     "serving_qty": 100,
-    "serving_unit": "g_raw",
-    "serving": "100 g raw; estimated retained nutrition after cooking",
-    "cal": 101.25,
-    "protein": 22.5,
-    "carbs": 0.0,
-    "fat": 0.75,
-    "fiber": 0.0,
-    "micros": {
-      "sodium": 41.25,
-      "potassium": 195.0,
-      "calcium": 11.25,
-      "vitamin_d": 0.0,
-      "magnesium": 18.75,
-      "zinc": 0.9,
-      "vitamin_c": 0.0,
-      "vitamin_b12": 0.225,
-      "iron": 0.675,
-      "vitamin_a": 0.0,
-      "folate": 4.5,
-      "phosphorus": 150.0,
-      "selenium": 18.75
-    },
-    "note": "Derived from supplied Turkey breast (cooked) entry with 75% cooked yield; approximate, not a new USDA measurement. Raw weights are what to weigh before cooking."
+    "serving_unit": "g",
+    "serving": "estimated generic per 100 g; verify USDA FDC/product label before treating as authoritative",
+    "cal": 228,
+    "protein": 20,
+    "carbs": 58,
+    "fat": 14,
+    "fiber": 37,
+    "micros": {}
   },
   "Walnuts": {
     "serving_qty": 28,
@@ -3734,77 +3788,5 @@
     "carbs": 3,
     "fat": 0,
     "fiber": 1
-  },
-  "Half-and-half": {
-    "cal": 40,
-    "protein": 1,
-    "carbs": 1,
-    "fat": 3.5,
-    "fiber": 0,
-    "serving_qty": 2,
-    "serving_unit": "tbsp",
-    "serving": "2 tbsp",
-    "source": "Standard half-and-half label estimate. Match your carton when available.",
-    "micros": {}
-  },
-  "Asiago Fresco (snacking cheese)": {
-    "cal": 110,
-    "protein": 7,
-    "carbs": 1,
-    "fat": 9,
-    "fiber": 0,
-    "serving_qty": 28,
-    "serving_unit": "g",
-    "serving": "28 g",
-    "source": "Generic Asiago cheese estimate. Use your package label if different.",
-    "micros": {}
-  },
-  "Brewed coffee (plain)": {
-    "cal": 2,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0,
-    "serving_qty": 1,
-    "serving_unit": "cup",
-    "serving": "1 cup brewed coffee",
-    "source": "Generic plain brewed coffee estimate.",
-    "micros": {}
-  },
-  "Unsweetened cocoa powder": {
-    "cal": 228,
-    "protein": 19.6,
-    "carbs": 57.9,
-    "fat": 13.7,
-    "fiber": 37,
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "100 g",
-    "source": "USDA SR Legacy, NDB 19165",
-    "micros": {}
-  },
-  "Vanilla extract": {
-    "cal": 12,
-    "protein": 0,
-    "carbs": 0.53,
-    "fat": 0,
-    "fiber": 0,
-    "serving_qty": 1,
-    "serving_unit": "tsp",
-    "serving": "1 tsp",
-    "source": "USDA SR Legacy, NDB 02050",
-    "micros": {}
-  },
-  "Monk fruit sweetener (zero-net-carb blend)": {
-    "cal": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fat": 0,
-    "fiber": 0,
-    "serving_qty": 1,
-    "serving_unit": "tbsp sugar equivalent",
-    "serving": "sweetness of 1 tbsp sugar",
-    "source": "Zero-net-carb blend assumption. Use the conversion on your package.",
-    "micros": {}
   }
 }

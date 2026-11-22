@@ -20,9 +20,8 @@ function App() {
     (async()=>{
       try{
         const results=await Promise.all(WEEK_REGISTRY.map(async({id,label})=>{
-          const path = `weeks/${id}/week.json`;
-          const res = await fetch(path);
-          if (!res.ok) throw new Error("Could not load " + path);
+          const res=await fetch("weeks/"+id+".json");
+          if(!res.ok) throw new Error("Could not load "+id+".json");
           return{...await res.json(),id,label};
         }));
         setAllWeeks(results);

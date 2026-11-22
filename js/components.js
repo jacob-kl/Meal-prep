@@ -242,34 +242,6 @@ function IngList({ingredients}) {
   );
 }
  
-function MealHeading({photo,children}) {
-  if (!photo) return <>{children}</>;
-  const tile=photo.tile;
-  const tiled=Number.isInteger(tile);
-  return (
-    <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:10}}>
-      <div style={{position:"relative",flexShrink:0,width:"clamp(76px, 20vw, 118px)",aspectRatio:"1",overflow:"hidden",borderRadius:10}}>
-        <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" style={{
-          display:"block",position:"absolute",width:tiled?"200%":"100%",height:tiled?"200%":"100%",
-          left:tiled&&tile%2?"-100%":0,top:tiled&&tile>=2?"-100%":0,objectFit:"cover",maxWidth:"none"
-        }}/>
-      </div>
-      <div style={{minWidth:0}}>{children}</div>
-    </div>
-  );
-}
- 
-function extraRecipeEntries(week) {
-  const desserts = (week.dinners || []).flatMap(dinner => dinner.desserts || []);
-  const dessertNames = new Set(desserts.map(dessert => dessert.name));
-  return [
-    ...desserts.map(dessert => ["Dessert", dessert]),
-    ...(week.extras || [])
-      .filter(extra => !dessertNames.has(extra.name))
-      .map(extra => [extra.recipeCategory || "Sides", extra])
-  ];
-}
-
 // ── Meal Card ─────────────────────────────────────────────────────────
 function MealCard({meal,personLabel,personColor,forceOpen}) {
   const T = getT(useDark());
@@ -279,10 +251,8 @@ function MealCard({meal,personLabel,personColor,forceOpen}) {
   const accentColor = personColor||T.accent;
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
-      <MealHeading photo={meal.photo}>
-        {(meal.day||meal.days)&&<div style={{fontSize:10,color:accentColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{meal.day||meal.days}{personLabel?` · ${personLabel}`:""}</div>}
-        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{meal.name}</div>
-      </MealHeading>
+      {(meal.day||meal.days)&&<div style={{fontSize:10,color:accentColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{meal.day||meal.days}{personLabel?` · ${personLabel}`:""}</div>}
+      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{meal.name}</div>
       {meal.macros&&<MacroRow macros={meal.macros}/>}
       {meal.macrosNote&&<div style={{fontSize:11,color:T.textLight,marginBottom:6,fontFamily:"'DM Mono',monospace"}}>{meal.macrosNote}</div>}
       {meal.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{meal.note}</div>}
@@ -305,10 +275,8 @@ function DinnerCard({dinner,week}) {
   const mealKey="dinner_"+(dinner.day||"")+"_"+(dinner.name||"");
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
-      <MealHeading photo={dinner.photo}>
-        <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
-        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
-      </MealHeading>
+      <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
+      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
       {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🥣 {(dinner.sauceLabel||"Tzatziki")} night — see recipe card in the Recipes tab</div>}
       {dinner.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{dinner.note}</div>}
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
@@ -336,10 +304,9 @@ function DinnerCard({dinner,week}) {
  
 // ── Tab Bar ───────────────────────────────────────────────────────────
 const ICONS = {
-  Weekend:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/><path d="M8 15h2M14 15h2M8 18h2M14 18h2"/></svg>,
   Dinners:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M3 20h18M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/></svg>,
-  Jake:       ()=><span aria-hidden="true" style={{fontSize:17,lineHeight:1}}>🍆</span>,
-  Laine:      ()=><span aria-hidden="true" style={{fontSize:17,lineHeight:1}}>🍑</span>,
+  Jake:       ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>,
+  Laine:      ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>,
   Breakfasts: ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2"/></svg>,
   Snacks:     ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M12 2a4 4 0 014 4v1H8V6a4 4 0 014-4z"/><path d="M8 7v13h8V7"/></svg>,
   Shopping:   ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>,
@@ -347,12 +314,11 @@ const ICONS = {
 };
 function TabBar({tabs,active,setActive}) {
   const T = getT(useDark());
-  const iconColors={Dinners:T.accent,Weekend:T.blue,Breakfasts:T.gold,Snacks:T.green};
   return (
     <div style={{display:"flex",gap:3,flexWrap:"wrap",background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:24}}>
       {tabs.map((t,i)=>{const Icon=ICONS[t];const isA=active===i;return(
         <button key={t} onClick={()=>setActive(i)} style={{flex:1,minWidth:72,padding:"8px 6px",background:isA?T.card:"none",border:`1px solid ${isA?T.border:"transparent"}`,borderRadius:10,color:isA?T.text:T.textLight,fontSize:10,letterSpacing:"0.04em",textTransform:"uppercase",fontFamily:"'DM Mono',monospace",transition:"all 0.15s",display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
-          {Icon&&<span style={{display:"flex",color:iconColors[t]}}><Icon/></span>}{t}
+          {Icon&&<Icon/>}{t}
         </button>
       );})}
     </div>
@@ -362,34 +328,22 @@ function TabBar({tabs,active,setActive}) {
 // ── Batch Lunch ───────────────────────────────────────────────────────
 function scaleN(n,r){const v=Math.round(parseFloat(n)*r*8)/8;if(v===Math.floor(v))return String(v);const w=Math.floor(v),f=v-w;for(const[a,b,s]of[[1,8,"⅛"],[1,4,"¼"],[3,8,"⅜"],[1,2,"½"],[5,8,"⅝"],[3,4,"¾"],[7,8,"⅞"]])if(Math.abs(f-a/b)<0.07)return w>0?w+s:s;return parseFloat((parseFloat(n)*r).toFixed(1)).toString();}
 // Scales amounts from a batch of `base` containers to `d`. Parentheticals like "(260 g per container)" are per-container amounts and never scale.
-function scaleText(t,d,base=5){if(d===base)return t;const FR={"¼":0.25,"½":0.5,"¾":0.75,"⅛":0.125,"⅜":0.375,"⅝":0.625,"⅞":0.875};const num=x=>{const l=x.slice(-1);return FR[l]!==undefined?(parseFloat(x.slice(0,-1)||"0")+FR[l]):parseFloat(x);};return t.replace(/(\([^)]*\bper\b[^)]*\))|((?:\d+\.?\d*)?[¼½¾⅛⅜⅝⅞]|\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml|eggs?)\b/gi,(m,paren,n,u)=>{
-  if(paren)return paren;
-  const qty=scaleN(num(n),d/base);
-  const unit=/^eggs?$/i.test(u)?(qty==="1"?"egg":"eggs"):u;
-  return qty+" "+unit;
-});}
+function scaleText(t,d,base=5){if(d===base)return t;const FR={"¼":0.25,"½":0.5,"¾":0.75,"⅛":0.125,"⅜":0.375,"⅝":0.625,"⅞":0.875};const num=x=>{const l=x.slice(-1);return FR[l]!==undefined?(parseFloat(x.slice(0,-1)||"0")+FR[l]):parseFloat(x);};return t.replace(/(\([^)]*\bper\b[^)]*\))|((?:\d+\.?\d*)?[¼½¾⅛⅜⅝⅞]|\d+\.?\d*)\s*(lbs?|oz|kg|g|cups?|tbsp|tsp|cans?|pints?|ml)\b/gi,(m,paren,n,u)=>paren?paren:scaleN(num(n),d/base)+" "+u);}
 function LunchSection({lunch,label,labelColor,personColor}) {
   const T = getT(useDark());
-  const [showIng,setShowIng]=useState(false);
-  const [showSteps,setShowSteps]=useState(false);
+  const [open,setOpen]=useState(false);
   const base=lunch.batchDays||5;
   const [days,setDays]=useState(base);
-  const batchCountPattern=new RegExp(`\\b${base} (container|jar)s\\b`, "g");
   const sIngs=(lunch.ingredients||[]).map(i=>({...i,item:scaleText(i.item||"",days,base)}));
-  const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days,base).replace(batchCountPattern,(_,unit)=>days+" "+unit+(days!==1?"s":"")).replace(new RegExp("all "+base,"g"),"all "+days));
+  const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days,base).replace(new RegExp(base+" containers","g"),days+" container"+(days!==1?"s":"")).replace(new RegExp("all "+base,"g"),"all "+days));
   return (
     <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
-      <MealHeading photo={lunch.photo}>
-        <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
-        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{lunch.name}</div>
-      </MealHeading>
+      <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
+      <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{lunch.name}</div>
       {lunch.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:8,fontStyle:"italic"}}>{lunch.note}</div>}
       <MacroRow macros={lunch.macros}/>
-      <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-        {lunch.ingredients&&<button onClick={()=>setShowIng(!showIng)} aria-expanded={showIng} style={{background:showIng?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showIng?"▲":"▼"} Ingredients</button>}
-        {lunch.steps&&<button onClick={()=>setShowSteps(!showSteps)} aria-expanded={showSteps} style={{background:showSteps?T.accentSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showSteps?"▲":"▼"} Steps</button>}
-      </div>
-      {(showIng||showSteps)&&(
+      <button onClick={()=>setOpen(!open)} style={{background:open?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 14px",fontSize:11,color:T.textMid}}>{open?"▲ Hide":"▼ Show"} recipe</button>
+      {open&&(
         <div style={{marginTop:14,paddingTop:14,borderTop:`1px solid ${T.divider}`}}>
           {base>1&&<div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
             <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:"0.06em"}}>Prepping for</span>
@@ -399,8 +353,12 @@ function LunchSection({lunch,label,labelColor,personColor}) {
             <span style={{fontSize:11,color:T.textLight}}>day{days!==1?"s":""}</span>
           </div>}
           {days<base&&<div style={{background:T.accentSoft,borderRadius:8,padding:"8px 12px",marginBottom:12,fontSize:11,color:T.accent,lineHeight:1.5}}>Scaled to {days} day{days!==1?"s":""}.</div>}
-          {showIng&&<div><SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel><IngList ingredients={sIngs}/></div>}
-          {showSteps&&<div style={{marginTop:showIng?12:0}}><SectionLabel>Method</SectionLabel><Steps items={sSteps}/></div>}
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+            <div><SectionLabel>Ingredients — {days} portion{days!==1?"s":""}</SectionLabel>
+              <IngList ingredients={sIngs}/>
+            </div>
+            <div><SectionLabel>Method</SectionLabel><ol style={{paddingLeft:18,margin:0,display:"flex",flexDirection:"column",gap:8}}>{sSteps.map((s,i)=><li key={i} style={{fontSize:13,lineHeight:1.65,color:T.textMid}}>{s}</li>)}</ol></div>
+          </div>
         </div>
       )}
       <MealRating mealKey={"lunch_"+label+"_"+(lunch.name||"")}/>

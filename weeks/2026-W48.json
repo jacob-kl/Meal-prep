@@ -1,0 +1,959 @@
+{
+  "_v": 4,
+  "_note": "Week of November 23–29, 2026. Approved Thanksgiving week; keto-oriented. Jake lunch Mon–Wed only, Friday at home; Laine no scheduled breakfasts or weekday lunches; shared weekend creamy soup. NO jalapeños. Macros are ingredient-database estimates, not certified USDA verification for newly added ingredients.",
+  "jakeMacros": {
+    "cal": 1736.3,
+    "protein": 132.1,
+    "carbs": 33.9,
+    "fat": 120.1
+  },
+  "laineMacros": {
+    "cal": 935.3,
+    "protein": 69.5,
+    "carbs": 19.3,
+    "fat": 64.9
+  },
+  "tzatziki": {
+    "name": "Roasted Red Pepper Cream Sauce",
+    "note": "Used Monday dinner. Sauce is incorporated in the Monday recipe, not a separate shopping purchase.",
+    "macros": {
+      "cal": 501.4,
+      "protein": 4.2,
+      "carbs": 8.7,
+      "fat": 51.0,
+      "fiber": 1.7
+    },
+    "macrosNote": "Entire combined Monday sauce batch (both servings); approximate.",
+    "ingredients": [
+      {
+        "item": "Roasted red peppers (jarred) — 115 g total",
+        "nutritionKey": "Roasted red peppers (jarred)"
+      },
+      {
+        "item": "Heavy cream — 105 g total",
+        "nutritionKey": "Heavy cream"
+      },
+      {
+        "item": "Butter — 1.1 tbsp total",
+        "nutritionKey": "Butter"
+      }
+    ],
+    "steps": [
+      "Drain roasted red peppers and blend with heavy cream.",
+      "Simmer in chicken pan until spoon-coating; finish with butter."
+    ]
+  },
+  "dinners": [
+    {
+      "day": "Monday (November 23)",
+      "name": "Smoky Paprika Chicken Thighs + Green Beans with Roasted-Red-Pepper Cream",
+      "note": "No fish Monday. Sauce stays thick, not watery.",
+      "jake": {
+        "cal": 713.5,
+        "protein": 65.1,
+        "carbs": 15.4,
+        "fat": 44.1,
+        "fiber": 4.8
+      },
+      "laine": {
+        "cal": 464.4,
+        "protein": 43.6,
+        "carbs": 11.6,
+        "fat": 27.5,
+        "fiber": 3.7
+      },
+      "ingredients": [
+        {
+          "item": "Chicken thighs (boneless, skinless) — Jake 300 g_raw, Laine 200 g_raw",
+          "nutritionKey": "Chicken thighs (boneless, skinless)"
+        },
+        {
+          "item": "Green beans — Jake 140 g, Laine 110 g",
+          "nutritionKey": "Green beans"
+        },
+        {
+          "item": "Roasted red peppers (jarred) — Jake 65 g, Laine 50 g",
+          "nutritionKey": "Roasted red peppers (jarred)"
+        },
+        {
+          "item": "Heavy cream — Jake 65 g, Laine 40 g",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Butter — Jake 0.7 tbsp, Laine 0.4 tbsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Spices (cumin/paprika/garlic powder/salt) — Jake 0.5 tsp, Laine 0.3 tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Season thighs with smoked paprika, salt and pepper. Sear until browned; finish to 165°F (74°C) minimum.",
+        "Roast green beans at 425°F with salt and a little of the measured butter until blistered, 15–20 min.",
+        "Blend drained roasted peppers with cream. Simmer in chicken pan until thick and spoon-coating; return chicken to coat."
+      ]
+    },
+    {
+      "day": "Tuesday (November 24)",
+      "name": "Crispy Pulled-Pork Carnitas Lettuce Cups + Lime-Cabbage Slaw + Avocado Crema",
+      "note": "NO jalapeños. Cook enough pork for Tuesday and Saturday; Tuesday ingredient amounts are per-person allocation, not full batch purchase.",
+      "jake": {
+        "cal": 1101.3,
+        "protein": 62.5,
+        "carbs": 24.0,
+        "fat": 83.8,
+        "fiber": 12.1
+      },
+      "laine": {
+        "cal": 786.2,
+        "protein": 44.1,
+        "carbs": 18.5,
+        "fat": 59.5,
+        "fiber": 9.2
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder (raw) — Jake 330 g_raw, Laine 230 g_raw",
+          "nutritionKey": "Pork shoulder (raw)"
+        },
+        {
+          "item": "Romaine lettuce — Jake 90 g, Laine 75 g",
+          "nutritionKey": "Romaine lettuce"
+        },
+        {
+          "item": "Green cabbage — Jake 100 g, Laine 80 g",
+          "nutritionKey": "Green cabbage"
+        },
+        {
+          "item": "Avocado — Jake 0.55 avocado, Laine 0.4 avocado",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Daisy sour cream — Jake 3 tbsp, Laine 2.333 tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Lime juice — Jake 0.8 tbsp, Laine 0.667 tbsp",
+          "nutritionKey": "Lime juice"
+        },
+        {
+          "item": "Yellow onion — Jake 0.156 cup, Laine 0.125 cup",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Spices (cumin/paprika/garlic powder/salt) — Jake 0.6 tsp, Laine 0.4 tsp",
+          "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+        }
+      ],
+      "steps": [
+        "Slow-cook the entire pork shoulder batch with cooked onion, cumin, smoked paprika, salt, and a splash of water until shreddable, about 7–9 hours LOW or pressure-cook according to appliance guidance.",
+        "Reserve approximately 450 g cooked pork for Saturday BEFORE serving. Crisp Tuesday portions under broiler or in skillet.",
+        "Finely shred cabbage; toss with lime and salt. Mash avocado with sour cream and a little lime. Fill lettuce cups with pork, slaw and crema."
+      ]
+    },
+    {
+      "day": "Wednesday (November 25)",
+      "name": "Turkey Meatballs in Creamy Sun-Dried Tomato Sauce + Zucchini Ribbons",
+      "note": "",
+      "jake": {
+        "cal": 896.4,
+        "protein": 69.2,
+        "carbs": 19.0,
+        "fat": 61.7,
+        "fiber": 4.0
+      },
+      "laine": {
+        "cal": 597.6,
+        "protein": 47.2,
+        "carbs": 12.6,
+        "fat": 40.5,
+        "fiber": 2.7
+      },
+      "ingredients": [
+        {
+          "item": "Ground turkey 93/7 — Jake 280 g_raw, Laine 190 g_raw",
+          "nutritionKey": "Ground turkey 93/7"
+        },
+        {
+          "item": "Sun-dried tomatoes (dry) — Jake 16 g, Laine 10 g",
+          "nutritionKey": "Sun-dried tomatoes (dry)"
+        },
+        {
+          "item": "Heavy cream — Jake 65 g, Laine 40 g",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Parmesan cheese (grated) — Jake 5 tbsp, Laine 3.6 tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Zucchini — Jake 190 g, Laine 140 g",
+          "nutritionKey": "Zucchini"
+        },
+        {
+          "item": "Olive oil — Jake 0.6 tbsp, Laine 0.4 tbsp",
+          "nutritionKey": "Olive oil"
+        },
+        {
+          "item": "Garlic — Jake 1.5 clove, Laine 1 clove",
+          "nutritionKey": "Garlic"
+        }
+      ],
+      "steps": [
+        "Combine turkey with half the Parmesan, minced garlic, salt and pepper. Form small meatballs and brown in oil. Cook to 165°F.",
+        "Finely chop sun-dried tomatoes; simmer in cream with a splash of water until thick. Return meatballs and coat.",
+        "Slice zucchini into ribbons and sauté briefly until just tender. Finish with remaining Parmesan."
+      ]
+    },
+    {
+      "day": "Thursday (November 26)",
+      "name": "THANKSGIVING: Filet Mignon + Lobster Tails, Brown-Butter Cauliflower Mash, Garlic-Butter Mushrooms, Asparagus + Chocolate Espresso Mousse",
+      "note": "Holiday splurge. Steak temperatures to preference with food-safety considerations; lobster reaches 145°F. Approximate macros include dessert.",
+      "jake": {
+        "cal": 1598.4,
+        "protein": 101.7,
+        "carbs": 35.2,
+        "fat": 117.8,
+        "fiber": 12.5
+      },
+      "laine": {
+        "cal": 1289.6,
+        "protein": 82.0,
+        "carbs": 27.9,
+        "fat": 95.3,
+        "fiber": 10.0
+      },
+      "ingredients": [
+        {
+          "item": "Filet mignon (raw) — Jake 220 g, Laine 180 g",
+          "nutritionKey": "Filet mignon (raw)"
+        },
+        {
+          "item": "Lobster tail meat (raw) — Jake 150 g, Laine 120 g",
+          "nutritionKey": "Lobster tail meat (raw)"
+        },
+        {
+          "item": "Cauliflower — Jake 220 g, Laine 170 g",
+          "nutritionKey": "Cauliflower"
+        },
+        {
+          "item": "Cremini mushrooms — Jake 180 g, Laine 150 g",
+          "nutritionKey": "Cremini mushrooms"
+        },
+        {
+          "item": "Asparagus — Jake 160 g, Laine 130 g",
+          "nutritionKey": "Asparagus"
+        },
+        {
+          "item": "Butter — Jake 3.1 tbsp, Laine 2.6 tbsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Cream cheese — Jake 2.333 tbsp, Laine 1.667 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Parmesan cheese (grated) — Jake 3.6 tbsp, Laine 2.8 tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        },
+        {
+          "item": "Heavy cream — Jake 80 g, Laine 65 g",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Dark chocolate 85% — Jake 25 g, Laine 20 g",
+          "nutritionKey": "Dark chocolate 85%"
+        },
+        {
+          "item": "Coffee espresso brewed — Jake 20 g, Laine 15 g",
+          "nutritionKey": "Coffee espresso brewed"
+        },
+        {
+          "item": "Sugar-free sweetener (monk fruit) — Jake 4 g, Laine 3 g",
+          "nutritionKey": "Sugar-free sweetener (monk fruit)"
+        },
+        {
+          "item": "Garlic — Jake 2 clove, Laine 1.5 clove",
+          "nutritionKey": "Garlic"
+        }
+      ],
+      "steps": [
+        "Mousse ahead: melt chocolate gently; cool slightly. Whip half the allocated cream with monk fruit; fold in melted chocolate and cooled espresso. Chill in two ramekins.",
+        "Pressure-cook whole cleaned cremini mushrooms with garlic, butter and 60–90 mL water/broth for about 2 minutes at high pressure; quick release per cooker guidance. Reduce liquid uncovered until glossy. Both eat mushrooms.",
+        "Steam cauliflower until very soft. Drain thoroughly, mash with cream cheese and Parmesan; finish with browned butter. Roast asparagus at 425°F until tender-crisp.",
+        "Sear seasoned filet in hot skillet; butter baste, check center temperature, rest. Broil split lobster tails with butter until opaque and 145°F. Plate together with sides and mousse."
+      ]
+    },
+    {
+      "day": "Friday (November 27)",
+      "name": "Sesame-Ginger Salmon + Crispy Bok Choy + Cucumber-Sesame Salad",
+      "note": "Use freezer salmon if available.",
+      "jake": {
+        "cal": 693.5,
+        "protein": 54.7,
+        "carbs": 14.5,
+        "fat": 45.8,
+        "fiber": 4.1
+      },
+      "laine": {
+        "cal": 487.2,
+        "protein": 38.5,
+        "carbs": 11.0,
+        "fat": 31.9,
+        "fiber": 3.0
+      },
+      "ingredients": [
+        {
+          "item": "Atlantic salmon (raw) — Jake 230 g_raw, Laine 160 g_raw",
+          "nutritionKey": "Atlantic salmon (raw)"
+        },
+        {
+          "item": "Bok choy — Jake 180 g, Laine 140 g",
+          "nutritionKey": "Bok choy"
+        },
+        {
+          "item": "English cucumber — Jake 130 g, Laine 100 g",
+          "nutritionKey": "English cucumber"
+        },
+        {
+          "item": "Sesame oil — Jake 0.7 tbsp, Laine 0.5 tbsp",
+          "nutritionKey": "Sesame oil"
+        },
+        {
+          "item": "Sesame seeds — Jake 1.333 tbsp, Laine 0.889 tbsp",
+          "nutritionKey": "Sesame seeds"
+        },
+        {
+          "item": "Soy sauce (reduced sodium) — Jake 1 tbsp, Laine 0.8 tbsp",
+          "nutritionKey": "Soy sauce (reduced sodium)"
+        },
+        {
+          "item": "Fresh ginger — Jake 9 g, Laine 7 g",
+          "nutritionKey": "Fresh ginger"
+        },
+        {
+          "item": "Rice vinegar — Jake 0.8 tbsp, Laine 0.667 tbsp",
+          "nutritionKey": "Rice vinegar"
+        }
+      ],
+      "steps": [
+        "Whisk soy sauce, ginger and half the sesame oil. Brush over salmon and roast at 400°F until 145°F, or to desired safe doneness.",
+        "Sear bok choy cut-side down in remaining oil until browned; steam briefly to finish.",
+        "Slice cucumber and toss with rice vinegar and sesame seeds. Serve cold alongside salmon."
+      ]
+    },
+    {
+      "day": "Saturday (November 28)",
+      "name": "Pulled-Pork Stuffed Peppers + Cheddar, Sour Cream & Crunchy Cabbage",
+      "note": "Saturday pork is from Tuesday batch; freeze reserved pork Tuesday for food safety.",
+      "jake": {
+        "cal": 989.5,
+        "protein": 84.9,
+        "carbs": 21.8,
+        "fat": 62.1,
+        "fiber": 6.1
+      },
+      "laine": {
+        "cal": 697.4,
+        "protein": 58.3,
+        "carbs": 17.3,
+        "fat": 43.6,
+        "fiber": 4.9
+      },
+      "ingredients": [
+        {
+          "item": "Pork shoulder (pulled) — Jake 270 g, Laine 180 g",
+          "nutritionKey": "Pork shoulder (pulled)"
+        },
+        {
+          "item": "Bell pepper — Jake 190 g, Laine 150 g",
+          "nutritionKey": "Bell pepper"
+        },
+        {
+          "item": "Cheddar cheese — Jake 45 g, Laine 35 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Daisy sour cream — Jake 2.667 tbsp, Laine 2 tbsp",
+          "nutritionKey": "Daisy sour cream"
+        },
+        {
+          "item": "Green cabbage — Jake 85 g, Laine 70 g",
+          "nutritionKey": "Green cabbage"
+        },
+        {
+          "item": "Lime juice — Jake 0.667 tbsp, Laine 0.533 tbsp",
+          "nutritionKey": "Lime juice"
+        }
+      ],
+      "steps": [
+        "Use Tuesday’s reserved cooked pulled pork, kept refrigerated no more than 3–4 days; freeze promptly on Tuesday if needed and thaw safely for Saturday.",
+        "Halve and seed peppers; roast at 400°F for 12 minutes. Fill with pork and cheddar, bake 12–15 minutes until hot throughout (165°F for reheated leftovers).",
+        "Toss shredded cabbage with lime and salt; top peppers with sour cream and serve cabbage alongside."
+      ]
+    },
+    {
+      "day": "Sunday (November 29)",
+      "name": "Chicken Thigh Piccata-Style Skillet + Butter-Cream Caper Sauce + Roasted Cauliflower",
+      "note": "",
+      "jake": {
+        "cal": 758.2,
+        "protein": 72.0,
+        "carbs": 13.7,
+        "fat": 46.5,
+        "fiber": 4.5
+      },
+      "laine": {
+        "cal": 544.7,
+        "protein": 51.4,
+        "carbs": 10.7,
+        "fat": 33.2,
+        "fiber": 3.6
+      },
+      "ingredients": [
+        {
+          "item": "Chicken thighs (boneless, skinless) — Jake 300 g_raw, Laine 210 g_raw",
+          "nutritionKey": "Chicken thighs (boneless, skinless)"
+        },
+        {
+          "item": "Cauliflower — Jake 200 g, Laine 160 g",
+          "nutritionKey": "Cauliflower"
+        },
+        {
+          "item": "Heavy cream — Jake 55 g, Laine 40 g",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Butter — Jake 0.9 tbsp, Laine 0.6 tbsp",
+          "nutritionKey": "Butter"
+        },
+        {
+          "item": "Capers — Jake 1.778 tbsp, Laine 1.333 tbsp",
+          "nutritionKey": "Capers"
+        },
+        {
+          "item": "Lemon juice — Jake 0.8 tbsp, Laine 0.6 tbsp",
+          "nutritionKey": "Lemon juice"
+        },
+        {
+          "item": "Parmesan cheese (grated) — Jake 3 tbsp, Laine 2.4 tbsp",
+          "nutritionKey": "Parmesan cheese (grated)"
+        }
+      ],
+      "steps": [
+        "Roast cauliflower florets at 425°F until golden, about 25 minutes.",
+        "Season and sear chicken thighs; finish to 165°F minimum.",
+        "Deglaze skillet with a little water, add capers and lemon juice, then cream and butter. Reduce until thick. Return chicken and coat; finish with Parmesan."
+      ]
+    }
+  ],
+  "jakeLunch": {
+    "batchDays": 3,
+    "name": "Creamy Chipotle-Style Chicken Thighs, Bell Peppers, Cheddar & Broccoli",
+    "note": "Sunday prep for Jake only: three saucy office containers for Mon–Wed. Chipotle-style smokiness from paprika/chile seasoning; no jalapeños. No cauliflower rice or spinach. Ingredient quantities below are FULL 3-container batch.",
+    "macros": {
+      "cal": 805.8,
+      "protein": 71.7,
+      "carbs": 13.9,
+      "fat": 51.8,
+      "fiber": 2.8
+    },
+    "ingredients": [
+      {
+        "item": "Chicken thighs (boneless, skinless) — 900 g_raw TOTAL (3 portions)",
+        "nutritionKey": "Chicken thighs (boneless, skinless)"
+      },
+      {
+        "item": "Bell pepper — 210 g TOTAL (3 portions)",
+        "nutritionKey": "Bell pepper"
+      },
+      {
+        "item": "Broccoli florets — 150 g TOTAL (3 portions)",
+        "nutritionKey": "Broccoli florets"
+      },
+      {
+        "item": "Heavy cream — 180 g TOTAL (3 portions)",
+        "nutritionKey": "Heavy cream"
+      },
+      {
+        "item": "Cream cheese — 6 tbsp TOTAL (3 portions)",
+        "nutritionKey": "Cream cheese"
+      },
+      {
+        "item": "Cheddar cheese — 75 g TOTAL (3 portions)",
+        "nutritionKey": "Cheddar cheese"
+      },
+      {
+        "item": "Hatch diced green chiles — 0.398 can TOTAL (3 portions)",
+        "nutritionKey": "Hatch diced green chiles"
+      },
+      {
+        "item": "Spices (cumin/paprika/garlic powder/salt) — 2 tsp TOTAL (3 portions)",
+        "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
+      }
+    ],
+    "steps": [
+      "Season chicken thighs with smoked paprika, cumin and salt. Sear in a wide skillet until browned.",
+      "Sauté sliced peppers in the same pan. Add cream, cream cheese and drained diced mild green chiles; stir until thick and smooth. Return chicken and simmer to 165°F.",
+      "Steam broccoli just until crisp-tender. Stir cheddar into chicken sauce off heat. Divide chicken, sauce, peppers and broccoli evenly into 3 containers.",
+      "Cool promptly, refrigerate at 40°F or below, and reheat thoroughly. Freeze Wednesday portion after prep if storage temperatures are uncertain."
+    ]
+  },
+  "laineLunch": {
+    "batchDays": 0,
+    "name": "No planned weekday lunch",
+    "note": "Laine is snacking rather than eating prepped weekday lunches. No lunch prep or ingredients.",
+    "macros": {
+      "cal": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "fiber": 0
+    },
+    "ingredients": [],
+    "steps": []
+  },
+  "laineLunch2": {
+    "batchDays": 0,
+    "name": "No second weekday lunch",
+    "note": "No weekday lunches scheduled.",
+    "macros": {
+      "cal": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "fiber": 0
+    },
+    "ingredients": [],
+    "steps": []
+  },
+  "laineBreakfasts": [],
+  "laineSnacks": [
+    {
+      "name": "Cottage Cheese + Pecans",
+      "macros": {
+        "cal": 173,
+        "protein": 14,
+        "carbs": 4.4,
+        "fat": 11,
+        "fiber": 0.8
+      },
+      "desc": "120 g cottage cheese 4% with 8 g pecans, once a day.",
+      "ingredients": [
+        {
+          "item": "Cottage cheese 4% — 120 g",
+          "nutritionKey": "Cottage cheese 4%"
+        },
+        {
+          "item": "Pecans — 8 g",
+          "nutritionKey": "Pecans"
+        }
+      ]
+    }
+  ],
+  "jakeSnacks": [
+    {
+      "name": "Whey Shake (almond milk)",
+      "macros": {
+        "cal": 258,
+        "protein": 27,
+        "carbs": 2.5,
+        "fat": 15,
+        "fiber": 0.7
+      },
+      "desc": "1 scoop whey isolate (30 g), 1 cup unsweetened almond milk, and 2 tbsp heavy cream. Plan: 1 a day Mon–Wed and Fri–Sun, 3 on Thursday (team lunch, no lunch container). Extra shakes any day are fine: skip the cream and each adds about 25 g protein and 2 g net carbs.",
+      "ingredients": [
+        {
+          "item": "Whey protein isolate — 30 g",
+          "nutritionKey": "Whey protein isolate"
+        },
+        {
+          "item": "Unsweetened almond milk — 240 g",
+          "nutritionKey": "Almond milk (unsweetened)"
+        },
+        {
+          "item": "Heavy cream — 2 tbsp",
+          "nutritionKey": "Heavy cream"
+        }
+      ]
+    },
+    {
+      "name": "String Cheese + Pork Rinds + Pecans",
+      "macros": {
+        "cal": 421,
+        "protein": 38,
+        "carbs": 1.4,
+        "fat": 29,
+        "fiber": 1.0
+      },
+      "desc": "1 string cheese, 50 g pork rinds, and 10 g pecans. Mon–Thu; on Friday drop the pecans.",
+      "ingredients": [
+        {
+          "item": "String cheese — 1 stick",
+          "nutritionKey": "String cheese (1 stick)"
+        },
+        {
+          "item": "Pork rinds — 50 g",
+          "nutritionKey": "Pork rinds"
+        },
+        {
+          "item": "Pecans — 10 g",
+          "nutritionKey": "Pecans"
+        }
+      ]
+    }
+  ],
+  "shopping": {
+    "Produce": [
+      "Asparagus — 290 g total (Thursday dinner)",
+      "Avocado — 1.6 avocado total (Tuesday dinner, Friday lunch)",
+      "Bell pepper — 550 g total (Saturday dinner, Jake Mon–Wed lunch)",
+      "Bok choy — 320 g total (Friday dinner)",
+      "Broccoli florets — 150 g total (Jake Mon–Wed lunch)",
+      "Cauliflower — 750 g total (Thursday dinner, Sunday dinner)",
+      "Cremini mushrooms — 330 g total (Thursday dinner)",
+      "English cucumber — 360 g total (Friday dinner, Friday lunch)",
+      "Fresh ginger — 16 g total (Friday dinner)",
+      "Garlic — 13.5 clove total (Wednesday dinner, Thursday dinner, Saturday lunch, Sunday lunch)",
+      "Green beans — 250 g total (Monday dinner)",
+      "Green cabbage — 335 g total (Tuesday dinner, Saturday dinner)",
+      "Lime juice — 2.7 tbsp total (Tuesday dinner, Saturday dinner)",
+      "Poblano pepper — 480 g total (Saturday lunch, Sunday lunch)",
+      "Roasted red peppers (jarred) — 115 g total (Monday dinner)",
+      "Romaine lettuce — 165 g total (Tuesday dinner)",
+      "Yellow onion — 1.1 cup total (Tuesday dinner, Saturday lunch, Sunday lunch)",
+      "Zucchini — 330 g total (Wednesday dinner)"
+    ],
+    "Meat & Seafood": [
+      "Atlantic salmon (raw) — 390 g_raw total (Friday dinner)",
+      "Bacon (cooked) — 215 g total (Friday lunch, Saturday lunch, Sunday lunch)",
+      "Chicken thighs (boneless, skinless) — 3200 g_raw total (Monday dinner, Sunday dinner, Jake Mon–Wed lunch, Saturday lunch, Sunday lunch)",
+      "Filet mignon (raw) — 400 g total (Thursday dinner)",
+      "Ground turkey 93/7 — 470 g_raw total (Wednesday dinner)",
+      "Lobster tail meat (raw) — 270 g total (Thursday dinner)",
+      "Pork shoulder (raw) — 1210 g_raw total (Tuesday dinner, Saturday dinner (reserved from Tuesday batch))"
+    ],
+    "Dairy & Eggs": [
+      "Butter — 8.3 tbsp total (Monday dinner, Thursday dinner, Sunday dinner)",
+      "Cheddar cheese — 430 g total (Saturday dinner, Jake Mon–Wed lunch, Friday lunch, Saturday lunch, Sunday lunch)",
+      "Cream cheese — 29 tbsp total (Thursday dinner, Jake Mon–Wed lunch, Saturday lunch, Sunday lunch)",
+      "Daisy sour cream — 10 tbsp total (Tuesday dinner, Saturday dinner)",
+      "Eggs (large) — 3 egg total (Friday lunch)",
+      "Heavy cream — 975 g total (Monday dinner, Wednesday dinner, Thursday dinner, Sunday dinner, Jake Mon–Wed lunch, Saturday lunch, Sunday lunch)",
+      "Parmesan cheese (grated) — 20.4 tbsp total (Wednesday dinner, Thursday dinner, Sunday dinner)"
+    ],
+    "Pantry": [
+      "Capers — 3.1 tbsp total (Sunday dinner)",
+      "Chicken broth — 480 g total (Saturday lunch, Sunday lunch)",
+      "Coffee espresso brewed — 35 g total (Thursday dinner)",
+      "Dark chocolate 85% — 45 g total (Thursday dinner)",
+      "Hatch diced green chiles — 0.4 can total (Jake Mon–Wed lunch)",
+      "Lemon juice — 1.4 tbsp total (Sunday dinner)",
+      "Olive oil — 1 tbsp total (Wednesday dinner)",
+      "Rice vinegar — 1.5 tbsp total (Friday dinner)",
+      "Sesame oil — 1.2 tbsp total (Friday dinner)",
+      "Sesame seeds — 2.2 tbsp total (Friday dinner)",
+      "Soy sauce (reduced sodium) — 1.8 tbsp total (Friday dinner)",
+      "Spices (cumin/paprika/garlic powder/salt) — 3.8 tsp total (Monday dinner, Tuesday dinner, Jake Mon–Wed lunch)",
+      "Sugar-free sweetener (monk fruit) — 7 g total (Thursday dinner)",
+      "Sun-dried tomatoes (dry) — 26 g total (Wednesday dinner)"
+    ],
+    "Check Supply": [
+      "Freezer salmon: use on Friday if available (Friday dinner)",
+      "Monk fruit sweetener: check stock (Thanksgiving dessert)",
+      "Jarred minced garlic: can replace fresh garlic by equivalent volume (Wednesday/Thursday/Saturday dinner and Saturday/Sunday soup)"
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          209,
+          15,
+          1.7,
+          15,
+          0.6
+        ],
+        [
+          "Lunch (avg)",
+          613,
+          46,
+          5.9,
+          43,
+          2.7
+        ],
+        [
+          "Dinner (avg)",
+          981,
+          64,
+          6.6,
+          75,
+          2.9
+        ],
+        [
+          "Snacks & Shakes (avg)",
+          550,
+          62,
+          3.6,
+          31,
+          1.5
+        ]
+      ],
+      "total": [
+        2353,
+        187,
+        17.8,
+        164,
+        7.7
+      ],
+      "goal": [
+        2030,
+        203,
+        20,
+        126,
+        12
+      ]
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (avg)",
+          210,
+          18,
+          3.8,
+          13,
+          0.8
+        ],
+        [
+          "Lunch (avg)",
+          487,
+          31,
+          5.2,
+          37,
+          3.4
+        ],
+        [
+          "Dinner (avg)",
+          663,
+          40,
+          5.6,
+          52,
+          2.6
+        ],
+        [
+          "Snacks & Shakes (avg)",
+          173,
+          14,
+          4.4,
+          11,
+          0.8
+        ]
+      ],
+      "total": [
+        1533,
+        103,
+        19.0,
+        113,
+        7.6
+      ],
+      "goal": [
+        1363,
+        103,
+        20,
+        97,
+        14
+      ]
+    }
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "weekendMeals": [
+    {
+      "day": "Friday (November 27) — Lunch (at home)",
+      "name": "Bacon, Avocado & Cheddar Omelet + Cucumber Salad",
+      "note": "Jake at-home lunch; Laine weekday lunch unplanned.",
+      "jake": {
+        "cal": 775.2,
+        "protein": 42.9,
+        "carbs": 18.5,
+        "fat": 60.8,
+        "fiber": 9.4
+      },
+      "laine": {
+        "cal": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0
+      },
+      "ingredients": [
+        {
+          "item": "Eggs (large) — 3 egg (Jake only)",
+          "nutritionKey": "Eggs (large)"
+        },
+        {
+          "item": "Bacon (cooked) — 35 g (Jake only)",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Avocado — 0.65 avocado (Jake only)",
+          "nutritionKey": "Avocado"
+        },
+        {
+          "item": "Cheddar cheese — 35 g (Jake only)",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "English cucumber — 130 g (Jake only)",
+          "nutritionKey": "English cucumber"
+        }
+      ],
+      "steps": [
+        "Cook bacon until crisp. Whisk eggs and pour into nonstick skillet over medium-low heat.",
+        "Add shredded cheddar and bacon, fold omelet and cook until set. Serve with sliced avocado and cucumber."
+      ]
+    },
+    {
+      "day": "Saturday (November 28) — Lunch",
+      "name": "Thick Creamy Roasted Poblano, Chicken, Cheddar & Bacon Soup",
+      "note": "Saturday: cook one SIX-serving batch (4 planned portions + 2 extra). Sunday: reheat leftovers gently. No jalapeños. Recipe ingredient amounts shown are per Jake/Laine serving, so multiply both allocations by TWO for four planned servings, then scale by 1.5 for six total servings.",
+      "jake": {
+        "cal": 1105.4,
+        "protein": 78.4,
+        "carbs": 16.9,
+        "fat": 81.3,
+        "fiber": 2.0
+      },
+      "laine": {
+        "cal": 840.1,
+        "protein": 60.6,
+        "carbs": 12.8,
+        "fat": 61.3,
+        "fiber": 1.5
+      },
+      "ingredients": [
+        {
+          "item": "Chicken thighs (boneless, skinless) — Jake 240 g_raw, Laine 190 g_raw",
+          "nutritionKey": "Chicken thighs (boneless, skinless)"
+        },
+        {
+          "item": "Poblano pepper — Jake 90 g, Laine 70 g",
+          "nutritionKey": "Poblano pepper"
+        },
+        {
+          "item": "Bacon (cooked) — Jake 35 g, Laine 25 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Cheddar cheese — Jake 45 g, Laine 35 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Cream cheese — Jake 3.667 tbsp, Laine 2.667 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Heavy cream — Jake 65 g, Laine 50 g",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Chicken broth — Jake 90 g, Laine 70 g",
+          "nutritionKey": "Chicken broth"
+        },
+        {
+          "item": "Yellow onion — Jake 0.156 cup, Laine 0.125 cup",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Garlic — Jake 1.5 clove, Laine 1 clove",
+          "nutritionKey": "Garlic"
+        }
+      ],
+      "steps": [
+        "Saturday only: roast poblanos under broiler until charred; cover, peel if desired, seed and dice. Sauté chopped onion and garlic until soft.",
+        "Cook chicken thighs to 165°F; shred. Cook bacon crisp, reserving a little for topping.",
+        "Combine chicken, poblanos, onion, cream cheese and only enough stock to make a thick base. Stir in heavy cream; simmer gently.",
+        "Off heat, add freshly shredded cheddar gradually. Stir in chicken and bacon. Soup should be thick and spoon-coating; do not thin unnecessarily.",
+        "Sunday: refrigerate promptly after Saturday lunch, then reheat over LOW heat without boiling; stir frequently to prevent dairy separating."
+      ]
+    },
+    {
+      "day": "Sunday (November 29) — Lunch",
+      "name": "Thick Creamy Roasted Poblano, Chicken, Cheddar & Bacon Soup",
+      "note": "Saturday: cook one SIX-serving batch (4 planned portions + 2 extra). Sunday: reheat leftovers gently. No jalapeños. Recipe ingredient amounts shown are per Jake/Laine serving, so multiply both allocations by TWO for four planned servings, then scale by 1.5 for six total servings.",
+      "jake": {
+        "cal": 1105.4,
+        "protein": 78.4,
+        "carbs": 16.9,
+        "fat": 81.3,
+        "fiber": 2.0
+      },
+      "laine": {
+        "cal": 840.1,
+        "protein": 60.6,
+        "carbs": 12.8,
+        "fat": 61.3,
+        "fiber": 1.5
+      },
+      "ingredients": [
+        {
+          "item": "Chicken thighs (boneless, skinless) — Jake 240 g_raw, Laine 190 g_raw",
+          "nutritionKey": "Chicken thighs (boneless, skinless)"
+        },
+        {
+          "item": "Poblano pepper — Jake 90 g, Laine 70 g",
+          "nutritionKey": "Poblano pepper"
+        },
+        {
+          "item": "Bacon (cooked) — Jake 35 g, Laine 25 g",
+          "nutritionKey": "Bacon (cooked)"
+        },
+        {
+          "item": "Cheddar cheese — Jake 45 g, Laine 35 g",
+          "nutritionKey": "Cheddar cheese"
+        },
+        {
+          "item": "Cream cheese — Jake 3.667 tbsp, Laine 2.667 tbsp",
+          "nutritionKey": "Cream cheese"
+        },
+        {
+          "item": "Heavy cream — Jake 65 g, Laine 50 g",
+          "nutritionKey": "Heavy cream"
+        },
+        {
+          "item": "Chicken broth — Jake 90 g, Laine 70 g",
+          "nutritionKey": "Chicken broth"
+        },
+        {
+          "item": "Yellow onion — Jake 0.156 cup, Laine 0.125 cup",
+          "nutritionKey": "Yellow onion"
+        },
+        {
+          "item": "Garlic — Jake 1.5 clove, Laine 1 clove",
+          "nutritionKey": "Garlic"
+        }
+      ],
+      "steps": [
+        "Reheat Saturday soup over low heat, stirring frequently; do not boil. Heat thoroughly."
+      ]
+    }
+  ],
+  "weekendNote": "Friday Jake omelet at home. Saturday make six hearty portions of creamy roasted poblano chicken-cheddar-bacon soup for both people; Sunday reheat. No Laine breakfasts or weekday lunches.",
+  "jakeTabNote": "Three creamy chicken-thigh containers for Mon–Wed. Thanksgiving Thursday; Friday omelet at home. Saturday/Sunday shared soup."
+}
