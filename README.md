@@ -47,6 +47,11 @@ remove the old flat `weeks/2026-W*.json` files. Keep `index.html` at the site ro
    an expandable group under Steps. Use a flat `steps` array for a single list.
 5. Put Friday's dessert in that dinner's `desserts` array. It also appears in the
    Dessert filter in Recipes.
+6. In `shopping`, pair the original amounts with approximate US package units
+   where useful. For example, write `Ground turkey — 435 g raw (about 0.96 lb)`.
+   Use pounds for bulk meat, ounces for smaller packages, and fluid ounces for
+   liquids. Keep simple produce measures and recipe ingredient amounts in their
+   original units.
 
 ---
 
