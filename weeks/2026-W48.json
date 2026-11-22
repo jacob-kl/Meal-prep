@@ -295,7 +295,65 @@
       "photo": {
         "src": "weeks/2026-W48/thursday.webp",
         "alt": "THANKSGIVING: Filet Mignon + Lobster Tails, Brown-Butter Cauliflower Mash, Garlic-Butter Mushrooms, Asparagus + Chocolate Espresso Mousse"
-      }
+      },
+      "stepSections": [
+        {
+          "title": "🍫 Chocolate Espresso Mousse (Make Ahead)",
+          "steps": [
+            "Gently melt the chocolate and allow it to cool until just warm.",
+            "Whip the allocated cream with monk fruit sweetener until soft peaks form.",
+            "Fold in cooled espresso and melted chocolate, portion into two ramekins, and chill until serving."
+          ]
+        },
+        {
+          "title": "🍄 Garlic-Butter Pressure-Cooked Mushrooms",
+          "steps": [
+            "Clean the whole cremini mushrooms and mince the garlic.",
+            "Add mushrooms, garlic, butter and 60–90 mL water or broth to the pressure cooker.",
+            "Cook on high pressure for about 2 minutes, then quick-release following the cooker instructions.",
+            "Use sauté mode with the lid off to reduce the liquid until the mushrooms are glossy and coated in garlic butter."
+          ]
+        },
+        {
+          "title": "🥦 Brown-Butter Cauliflower Mash",
+          "steps": [
+            "Steam cauliflower until very tender, then drain thoroughly so the mash stays thick.",
+            "Mash with cream cheese and Parmesan until smooth.",
+            "Brown the allocated butter separately over medium heat, watching carefully; fold into the mash and keep warm."
+          ]
+        },
+        {
+          "title": "🌿 Roasted Asparagus",
+          "steps": [
+            "Trim asparagus and toss with the measured fat, salt and pepper.",
+            "Roast at 425°F until tender-crisp, checking after 8–12 minutes depending on thickness."
+          ]
+        },
+        {
+          "title": "🥩 Filet Mignon",
+          "steps": [
+            "Pat the steaks dry, season generously and heat a heavy skillet until hot.",
+            "Sear both sides and baste with butter until the desired internal temperature is reached; use a thermometer.",
+            "Rest the steaks before plating."
+          ]
+        },
+        {
+          "title": "🦞 Butter-Broiled Lobster Tails",
+          "steps": [
+            "Split the top of each shell and gently lift the meat above the shell.",
+            "Brush with butter and broil until opaque and the thickest part reaches 145°F; watch closely to avoid overcooking."
+          ]
+        },
+        {
+          "title": "⏱️ Cooking Order & Plating",
+          "steps": [
+            "Make the mousse ahead and chill. Prepare the cauliflower and clean the mushrooms before starting the hot dishes.",
+            "Start the cauliflower mash, then pressure-cook the mushrooms and reduce their butter sauce.",
+            "Cook the steaks and rest them while the asparagus roasts and the lobster tails broil.",
+            "Plate filet, lobster, mash, mushrooms and asparagus. Serve chilled mousse afterward."
+          ]
+        }
+      ]
     },
     {
       "day": "Friday (November 27)",

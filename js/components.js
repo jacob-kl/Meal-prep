@@ -222,6 +222,15 @@ function Steps({items}) {
   const T = getT(useDark());
   return <ol style={{paddingLeft:18,margin:0,display:"flex",flexDirection:"column",gap:8}}>{items.map((s,i)=><li key={i} style={{fontSize:13,lineHeight:1.65,color:T.textMid}}>{s}</li>)}</ol>;
 }
+function GroupedSteps({sections}) {
+  const T = getT(useDark());
+  return <div style={{display:"flex",flexDirection:"column",gap:8}}>
+    {sections.map((section,i)=><details key={i} style={{border:`1px solid ${T.divider}`,borderRadius:10,padding:"10px 12px",background:T.tag}}>
+      <summary style={{cursor:"pointer",fontSize:13,fontWeight:600,color:T.text,lineHeight:1.5}}>{section.title}</summary>
+      <div style={{paddingTop:10}}><Steps items={section.steps}/></div>
+    </details>)}
+  </div>;
+}
 function IngList({ingredients}) {
   const T = getT(useDark());
   const { subs } = useSubs();
@@ -244,14 +253,15 @@ function IngList({ingredients}) {
  
 function MealHeading({photo,children}) {
   if (!photo) return <>{children}</>;
+  const isW48=photo.src&&photo.src.includes("2026-W48/");
   const tile=photo.tile;
   const tiled=Number.isInteger(tile);
   return (
     <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:10}}>
-      <div style={{position:"relative",flexShrink:0,width:"clamp(76px, 20vw, 118px)",aspectRatio:"1",overflow:"hidden",borderRadius:10}}>
+      <div style={{position:"relative",flexShrink:0,width:isW48?"clamp(100px, 24vw, 170px)":"clamp(76px, 20vw, 118px)",aspectRatio:isW48?"3 / 2":"1",overflow:"hidden",borderRadius:10}}>
         <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" style={{
           display:"block",position:"absolute",width:tiled?"200%":"100%",height:tiled?"200%":"100%",
-          left:tiled&&tile%2?"-100%":0,top:tiled&&tile>=2?"-100%":0,objectFit:"cover",maxWidth:"none"
+          left:tiled&&tile%2?"-100%":0,top:tiled&&tile>=2?"-100%":0,objectFit:isW48?"contain":"cover",maxWidth:"none"
         }}/>
       </div>
       <div style={{minWidth:0}}>{children}</div>
@@ -328,7 +338,7 @@ function DinnerCard({dinner,week}) {
         {dinner.steps&&<button onClick={()=>setShowSteps(!showSteps)} style={{background:showSteps?T.accentSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showSteps?"▲":"▼"} Steps</button>}
       </div>
       {showIng&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Ingredients</SectionLabel><IngList ingredients={dinner.ingredients}/></div>}
-      {showSteps&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Method</SectionLabel><Steps items={dinner.steps}/></div>}
+      {showSteps&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Method</SectionLabel>{dinner.stepSections?<GroupedSteps sections={dinner.stepSections}/>:<Steps items={dinner.steps}/>}</div>}
       <MealRating mealKey={mealKey}/>
     </div>
   );
