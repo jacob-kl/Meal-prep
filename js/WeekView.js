@@ -50,7 +50,7 @@ function WeekView({week,nutritionDB}) {
           {week.jakeLunch2&&<LunchSection lunch={week.jakeLunch2} label="Jake · Lunch 2" labelColor={T.blue} personColor={T.blue}/>}
           {(week.jakeSnacks||[]).length>0&&(
             <div style={{marginTop:20}}>
-              <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>{week.laineSnackPrep ? "Jake's Snacks by Day" : "Jake's Snacks — pick 1–2 per day"}</div>
+              <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>{week.jakeSnacksOptional ? "Jake's Optional Snacks & Shakes" : week.laineSnackPrep ? "Jake's Snacks by Day" : "Jake's Snacks — pick 1–2 per day"}</div>
               {week.jakeSnacks.map((s,i)=>(
                 <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
                   <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
