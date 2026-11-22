@@ -16,7 +16,18 @@ function WeekView({week,nutritionDB}) {
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
             Every dinner cooked together — same recipe, different portions. Jake's is always bigger.
           </div>
-          {week.dinners.map((d,i)=><DinnerCard key={i} dinner={d} week={week}/>)}
+          {week.prepPlan?.length>0&&(
+            <details style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"10px 14px",marginBottom:16,color:T.textMid,fontSize:13}}>
+              <summary style={{cursor:"pointer",marginBottom:4}}>Prep schedule</summary>
+              <Steps items={week.prepPlan}/>
+            </details>
+          )}
+          {week.dinners.map((d,i)=>(
+            <React.Fragment key={i}>
+              <DinnerCard dinner={d} week={week}/>
+              {(d.desserts||[]).map((dessert,j)=><DinnerCard key={j} dinner={dessert} week={week}/>)}
+            </React.Fragment>
+          ))}
         </div>
       )}
 
@@ -39,7 +50,7 @@ function WeekView({week,nutritionDB}) {
           {week.jakeLunch2&&<LunchSection lunch={week.jakeLunch2} label="Jake · Lunch 2" labelColor={T.blue} personColor={T.blue}/>}
           {(week.jakeSnacks||[]).length>0&&(
             <div style={{marginTop:20}}>
-              <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Jake's Snacks — pick 1–2 per day</div>
+              <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>{week.laineSnackPrep ? "Jake's Snacks by Day" : "Jake's Snacks — pick 1–2 per day"}</div>
               {week.jakeSnacks.map((s,i)=>(
                 <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
                   <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
@@ -55,11 +66,12 @@ function WeekView({week,nutritionDB}) {
 
       {tab===laineTabIdx&&(
         <div>
-          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>Mason jars batch-made Sunday. Dressing separate. Two sittings per jar.</div>
+          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>{week.laineTabNote || "Mason jars batch-made Sunday. Dressing separate. Two sittings per jar."}</div>
           <LunchSection lunch={week.laineLunch} label="Laine" labelColor={T.accent} personColor={T.accent}/>
           {week.laineLunch2&&<LunchSection lunch={week.laineLunch2} label="Laine · Jar 2" labelColor={T.accent} personColor={T.accent}/>}
           <div style={{marginTop:20}}>
             <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Laine's Snacks</div>
+            {week.laineSnackPrep&&<MealCard meal={week.laineSnackPrep} personLabel="Laine" personColor={T.accent}/>}
             {(week.laineSnacks||[]).map((s,i)=>(
               <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
                 <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
@@ -96,6 +108,7 @@ function WeekView({week,nutritionDB}) {
             ))}
           </>)}
           <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginTop:20,marginBottom:12}}>Laine's Snacks</div>
+          {week.laineSnackPrep&&<MealCard meal={week.laineSnackPrep} personLabel="Laine" personColor={T.accent}/>}
           {(week.laineSnacks||[]).map((s,i)=>(
             <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
               <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>

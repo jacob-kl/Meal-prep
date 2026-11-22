@@ -6,26 +6,44 @@ A personal household meal planning app. Single-page, no server needed beyond a s
 
 ## File structure
 
-```
-index.html          ← the app
-nutrition.json      ← shared nutrition database
+```text
+index.html
+styles.css
+js/
+nutrition.json
 weeks/
-  2026-W19.json
-  2026-W20.json
-  2026-W21.json
-  2026-W22.json
-  2026-W23.json     ← current week (June 1–7) · Mediterranean pivot
+  2026-W45/
+    week.json
+  2026-W46/
+    week.json
+    dinners-mon-thu.webp
+    dinners-fri-sun.webp
+    batch-lunches.webp
+  2026-W47/
+    week.json
+    dinners-mon-thu.webp
+    dinners-fri-sun.webp
+    batch-lunches.webp
+    chocolate-pecan-mousse.webp
 ```
 
-Open with any static server (e.g. `python3 -m http.server`) or VS Code Live Server — the app fetches JSON via `fetch()` and won't work from `file://` directly.
+From the project directory, run `python3 -m http.server 8000` and open
+`http://localhost:8000`. The app fetches each week's `week.json` over HTTP.
 
----
+When updating an existing copy of the site, use the new `weeks/` directory and
+remove the old flat `weeks/2026-W*.json` files. Keep `index.html` at the site root.
 
 ## Adding a new week
 
-1. Copy the current week JSON into `weeks/` with the new ID (e.g. `2026-W24.json`).
-2. Edit dinners, lunches, macros, shopping list.
-3. Add the new week to `WEEK_REGISTRY` in `index.html` and update `CURRENT_WEEK_ID`.
+1. Create `weeks/YYYY-Www/` and put the menu in `week.json`.
+2. Put that week's images in the same folder. Use a site-relative photo path such as
+   `weeks/2026-W47/chocolate-pecan-mousse.webp` in the meal's `photo.src` field, and
+   describe the dish in `photo.alt`. For a 2 × 2 photo sheet, set `photo.tile` to
+   `0`, `1`, `2`, or `3` in reading order.
+3. Add the new ID and label to `WEEK_REGISTRY` in `js/theme.js` and set
+   `CURRENT_WEEK_ID` to that ID when the new week should open by default.
+4. Put Friday's dessert in that dinner's `desserts` array. It also appears in the
+   Dessert filter in Recipes.
 
 ---
 
@@ -87,4 +105,4 @@ Plain HTML + React 18 (UMD CDN). No build step. State stored in `localStorage`.
 - SVG tab icons (plate, fork, sun, bottle, bag, bullseye) that match each section
 - Earthy warm palette: cream background, Lora serif for titles, DM Mono for data
 
-Typography: [Lora](https://fonts.google.com/specimen/Lora) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) + [Barlow](https://fonts.google.com/specimen/Barlow). 
+Typography: [Lora](https://fonts.google.com/specimen/Lora) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) + [Barlow](https://fonts.google.com/specimen/Barlow).

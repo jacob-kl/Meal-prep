@@ -86,7 +86,7 @@ function PantryMatchCard({r, T}) {
           </div>
           {/* Full recipe */}
           <div style={{padding:"2px"}}>
-            {r.category==="Dinner"
+            {(r.category==="Dinner"||r.category==="Dessert")
               ? <DinnerCard dinner={r.obj} week={{}}/>
               : <MealCard meal={r.obj} personColor={T.accent} forceOpen={true}/>
             }
@@ -138,7 +138,7 @@ function PantryTab({allWeeks}) {
       (w.dinners||[]).forEach(d=>add("Dinner",d));
       add("Lunch",w.jakeLunch); add("Lunch",w.laineLunch); add("Lunch",w.laineLunch2);
       (w.laineBreakfasts||[]).forEach(b=>add("Breakfast",b));
-      (w.extras||[]).forEach(e=>add(e.recipeCategory||"Sides",e));
+      extraRecipeEntries(w).forEach(([category, recipe]) => add(category, recipe));
       add("Sauce",w.tzatziki);
     });
     return Object.values(byKey);
@@ -152,7 +152,7 @@ function PantryTab({allWeeks}) {
       const item = (ing.item||'').toLowerCase();
       const key  = (ing.nutritionKey||'').toLowerCase();
       // staple shortcut
-      if(useStaples && (STAPLE_RE.test(ing.item) || STAPLE_KEYS.has(ing.nutritionKey))) return true;
+      if(useStaples && (STAPLE_RE.test((ing.item || "").split(/\s+[—–-]\s+/, 1)[0]) || STAPLE_KEYS.has(ing.nutritionKey))) return true;
       // match any pantry token against item text or nutritionKey
       return pantry.some(p => {
         if(item.includes(p) || key.includes(p)) return true;

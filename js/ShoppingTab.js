@@ -87,6 +87,13 @@ function ShoppingTab({week}) {
  
   return (
     <div>
+      {week.budget?.foodCheckoutIfStockedEstimate!=null&&(
+        <details style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"10px 14px",marginBottom:16,color:T.textMid,fontSize:13,lineHeight:1.6}}>
+          <summary style={{cursor:"pointer"}}>Estimated food checkout · ${week.budget.foodCheckoutIfStockedEstimate.toFixed(2)} if stocked</summary>
+          <div style={{marginTop:6}}>Full restock ${week.budget.foodCheckoutEstimate.toFixed(2)} · Food used ${week.budget.foodUsedValueEstimate.toFixed(2)}</div>
+          <div>{week.budget.basis}</div>
+        </details>
+      )}
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
         <div style={{fontSize:13,color:T.textLight}}>{doneItems}/{totalItems} items</div>
         {Object.keys(ck).length>0&&<button onClick={()=>save({})} style={{background:"none",border:`1px solid ${T.border}`,borderRadius:8,color:T.textLight,padding:"4px 12px",fontSize:11}}>Clear all</button>}

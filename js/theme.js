@@ -18,8 +18,10 @@ const WEEK_REGISTRY = [
   { id:"2026-W38", label:"Week of September 14, 2026" },
   { id:"2026-W43", label:"Week of October 19, 2026" },
   { id:"2026-W44", label:"Week of October 26, 2026" },
-  { id:"2026-W48", label:"Week of November 23, 2026" },
   { id:"2026-W45", label:"Week of November 2, 2026" },
+  { id:"2026-W46", label:"Week of November 9, 2026" },
+  { id:"2026-W47", label:"Week of November 16, 2026" },
+  { id:"2026-W48", label:"Week of November 23, 2026" },
 ];
 const CURRENT_WEEK_ID = "2026-W48";
 const WATER_GLASSES   = 8;

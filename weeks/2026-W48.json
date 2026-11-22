@@ -1,6 +1,6 @@
 {
   "_v": 4,
-  "_note": "Week of November 23–29, 2026. Approved Thanksgiving week; keto-oriented. Jake lunch Mon–Wed only, Friday at home; Laine no scheduled breakfasts or weekday lunches; shared weekend creamy soup. NO jalapeños. Macros are ingredient-database estimates, not certified USDA verification for newly added ingredients.",
+  "_note": "Week of November 23–29, 2026. Thanksgiving week menu. Jake lunch Mon–Wed, Friday at home. Shared weekend soup.",
   "jakeMacros": {
     "cal": 1736.3,
     "protein": 132.1,
@@ -92,12 +92,16 @@
         "Season thighs with smoked paprika, salt and pepper. Sear until browned; finish to 165°F (74°C) minimum.",
         "Roast green beans at 425°F with salt and a little of the measured butter until blistered, 15–20 min.",
         "Blend drained roasted peppers with cream. Simmer in chicken pan until thick and spoon-coating; return chicken to coat."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/monday.webp",
+        "alt": "Smoky Paprika Chicken Thighs + Green Beans with Roasted-Red-Pepper Cream"
+      }
     },
     {
       "day": "Tuesday (November 24)",
       "name": "Crispy Pulled-Pork Carnitas Lettuce Cups + Lime-Cabbage Slaw + Avocado Crema",
-      "note": "NO jalapeños. Cook enough pork for Tuesday and Saturday; Tuesday ingredient amounts are per-person allocation, not full batch purchase.",
+      "note": "Cook enough pork for Tuesday and Saturday; Tuesday ingredient amounts are per-person allocation, not full batch purchase.",
       "jake": {
         "cal": 1101.3,
         "protein": 62.5,
@@ -150,7 +154,11 @@
         "Slow-cook the entire pork shoulder batch with cooked onion, cumin, smoked paprika, salt, and a splash of water until shreddable, about 7–9 hours LOW or pressure-cook according to appliance guidance.",
         "Reserve approximately 450 g cooked pork for Saturday BEFORE serving. Crisp Tuesday portions under broiler or in skillet.",
         "Finely shred cabbage; toss with lime and salt. Mash avocado with sour cream and a little lime. Fill lettuce cups with pork, slaw and crema."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/tuesday.webp",
+        "alt": "Crispy Pulled-Pork Carnitas Lettuce Cups + Lime-Cabbage Slaw + Avocado Crema"
+      }
     },
     {
       "day": "Wednesday (November 25)",
@@ -283,7 +291,11 @@
         "Pressure-cook whole cleaned cremini mushrooms with garlic, butter and 60–90 mL water/broth for about 2 minutes at high pressure; quick release per cooker guidance. Reduce liquid uncovered until glossy. Both eat mushrooms.",
         "Steam cauliflower until very soft. Drain thoroughly, mash with cream cheese and Parmesan; finish with browned butter. Roast asparagus at 425°F until tender-crisp.",
         "Sear seasoned filet in hot skillet; butter baste, check center temperature, rest. Broil split lobster tails with butter until opaque and 145°F. Plate together with sides and mousse."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/thursday.webp",
+        "alt": "THANKSGIVING: Filet Mignon + Lobster Tails, Brown-Butter Cauliflower Mash, Garlic-Butter Mushrooms, Asparagus + Chocolate Espresso Mousse"
+      }
     },
     {
       "day": "Friday (November 27)",
@@ -341,7 +353,11 @@
         "Whisk soy sauce, ginger and half the sesame oil. Brush over salmon and roast at 400°F until 145°F, or to desired safe doneness.",
         "Sear bok choy cut-side down in remaining oil until browned; steam briefly to finish.",
         "Slice cucumber and toss with rice vinegar and sesame seeds. Serve cold alongside salmon."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/friday.webp",
+        "alt": "Sesame-Ginger Salmon + Crispy Bok Choy + Cucumber-Sesame Salad"
+      }
     },
     {
       "day": "Saturday (November 28)",
@@ -451,7 +467,7 @@
   "jakeLunch": {
     "batchDays": 3,
     "name": "Creamy Chipotle-Style Chicken Thighs, Bell Peppers, Cheddar & Broccoli",
-    "note": "Sunday prep for Jake only: three saucy office containers for Mon–Wed. Chipotle-style smokiness from paprika/chile seasoning; no jalapeños. No cauliflower rice or spinach. Ingredient quantities below are FULL 3-container batch.",
+    "note": "Sunday prep: three saucy chicken-thigh containers for Monday–Wednesday. Ingredient quantities are for the full three-container batch.",
     "macros": {
       "cal": 805.8,
       "protein": 71.7,
@@ -498,7 +514,11 @@
       "Sauté sliced peppers in the same pan. Add cream, cream cheese and drained diced mild green chiles; stir until thick and smooth. Return chicken and simmer to 165°F.",
       "Steam broccoli just until crisp-tender. Stir cheddar into chicken sauce off heat. Divide chicken, sauce, peppers and broccoli evenly into 3 containers.",
       "Cool promptly, refrigerate at 40°F or below, and reheat thoroughly. Freeze Wednesday portion after prep if storage temperatures are uncertain."
-    ]
+    ],
+    "photo": {
+      "src": "weeks/2026-W48/lunch.webp",
+      "alt": "Creamy chicken thighs with peppers, cheddar and broccoli in a glass meal prep container"
+    }
   },
   "laineLunch": {
     "batchDays": 0,
@@ -827,7 +847,11 @@
       "steps": [
         "Cook bacon until crisp. Whisk eggs and pour into nonstick skillet over medium-low heat.",
         "Add shredded cheddar and bacon, fold omelet and cook until set. Serve with sliced avocado and cucumber."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/omelet.webp",
+        "alt": "Cheddar omelet with greens"
+      }
     },
     {
       "day": "Saturday (November 28) — Lunch",
@@ -891,7 +915,11 @@
         "Combine chicken, poblanos, onion, cream cheese and only enough stock to make a thick base. Stir in heavy cream; simmer gently.",
         "Off heat, add freshly shredded cheddar gradually. Stir in chicken and bacon. Soup should be thick and spoon-coating; do not thin unnecessarily.",
         "Sunday: refrigerate promptly after Saturday lunch, then reheat over LOW heat without boiling; stir frequently to prevent dairy separating."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/soup.webp",
+        "alt": "Thick creamy poblano chicken cheddar and bacon soup"
+      }
     },
     {
       "day": "Sunday (November 29) — Lunch",
@@ -951,7 +979,11 @@
       ],
       "steps": [
         "Reheat Saturday soup over low heat, stirring frequently; do not boil. Heat thoroughly."
-      ]
+      ],
+      "photo": {
+        "src": "weeks/2026-W48/soup.webp",
+        "alt": "Thick creamy poblano chicken cheddar and bacon soup"
+      }
     }
   ],
   "weekendNote": "Friday Jake omelet at home. Saturday make six hearty portions of creamy roasted poblano chicken-cheddar-bacon soup for both people; Sunday reheat. No Laine breakfasts or weekday lunches.",
