@@ -21,7 +21,7 @@ function App() {
       try{
         const results=await Promise.all(WEEK_REGISTRY.map(async({id,label})=>{
           const path = `weeks/${id}/week.json`;
-          const res = await fetch(path);
+          const res = await fetch(path, {cache:"no-cache"});
           if (!res.ok) throw new Error("Could not load " + path);
           return{...await res.json(),id,label};
         }));

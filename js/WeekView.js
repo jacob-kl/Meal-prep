@@ -67,7 +67,7 @@ function WeekView({week,nutritionDB}) {
       {tab===laineTabIdx&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>{week.laineTabNote || "Mason jars batch-made Sunday. Dressing separate. Two sittings per jar."}</div>
-          <LunchSection lunch={week.laineLunch} label="Laine" labelColor={T.accent} personColor={T.accent}/>
+          {week.laineLunch&&<LunchSection lunch={week.laineLunch} label="Laine" labelColor={T.accent} personColor={T.accent}/>}
           {week.laineLunch2&&<LunchSection lunch={week.laineLunch2} label="Laine · Jar 2" labelColor={T.accent} personColor={T.accent}/>}
           <div style={{marginTop:20}}>
             <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Laine's Snacks</div>
@@ -87,7 +87,9 @@ function WeekView({week,nutritionDB}) {
       {tab===bfTabIdx&&(
         <div>
           <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
-            {week.jakeBreakfast ? "Laine's weekday rotation below. Jake's breakfast this week is on his tab — see Jake." : "Laine only — Jake has coffee."}
+            {week.laineBreakfasts?.length
+              ? (week.jakeBreakfast ? "Laine's weekday rotation below. Jake's breakfast this week is on his tab — see Jake." : "Laine only — Jake has coffee.")
+              : "No weekday breakfasts planned for Laine."}
           </div>
           {(week.laineBreakfasts||[]).map((b,i)=><MealCard key={i} meal={b} personLabel="Laine" personColor={T.accent}/>)}
         </div>

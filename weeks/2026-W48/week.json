@@ -101,7 +101,7 @@
     {
       "day": "Tuesday (November 24)",
       "name": "Crispy Pulled-Pork Carnitas Lettuce Cups + Lime-Cabbage Slaw + Avocado Crema",
-      "note": "Cook enough pork for Tuesday and Saturday; Tuesday ingredient amounts are per-person allocation, not full batch purchase.",
+      "note": "Cook one pork shoulder batch for Tuesday’s lettuce cups and Saturday’s stuffed peppers.",
       "jake": {
         "cal": 1101.3,
         "protein": 62.5,
@@ -157,7 +157,7 @@
       ],
       "photo": {
         "src": "weeks/2026-W48/tuesday.webp",
-        "alt": "Crispy Pulled-Pork Carnitas Lettuce Cups + Lime-Cabbage Slaw + Avocado Crema"
+        "alt": "Crispy pork carnitas in lettuce cups with cabbage slaw and avocado crema"
       }
     },
     {
@@ -221,7 +221,7 @@
     {
       "day": "Thursday (November 26)",
       "name": "THANKSGIVING: Filet Mignon + Lobster Tails, Brown-Butter Cauliflower Mash, Garlic-Butter Mushrooms, Asparagus + Chocolate Espresso Mousse",
-      "note": "Holiday splurge. Steak temperatures to preference with food-safety considerations; lobster reaches 145°F. Approximate macros include dessert.",
+      "note": "Holiday dinner for two. The macros include chocolate espresso mousse.",
       "jake": {
         "cal": 1598.4,
         "protein": 101.7,
@@ -290,71 +290,65 @@
           "nutritionKey": "Garlic"
         }
       ],
-      "steps": [
-        "Mousse ahead: melt chocolate gently; cool slightly. Whip half the allocated cream with monk fruit; fold in melted chocolate and cooled espresso. Chill in two ramekins.",
-        "Pressure-cook whole cleaned cremini mushrooms with garlic, butter and 60–90 mL water/broth for about 2 minutes at high pressure; quick release per cooker guidance. Reduce liquid uncovered until glossy. Both eat mushrooms.",
-        "Steam cauliflower until very soft. Drain thoroughly, mash with cream cheese and Parmesan; finish with browned butter. Roast asparagus at 425°F until tender-crisp.",
-        "Sear seasoned filet in hot skillet; butter baste, check center temperature, rest. Broil split lobster tails with butter until opaque and 145°F. Plate together with sides and mousse."
-      ],
       "photo": {
         "src": "weeks/2026-W48/thursday.webp",
         "alt": "THANKSGIVING: Filet Mignon + Lobster Tails, Brown-Butter Cauliflower Mash, Garlic-Butter Mushrooms, Asparagus + Chocolate Espresso Mousse"
       },
       "stepSections": [
         {
-          "title": "🍫 Chocolate Espresso Mousse (Make Ahead)",
+          "title": "Filet mignon",
           "steps": [
-            "Gently melt the chocolate and allow it to cool until just warm.",
-            "Whip the allocated cream with monk fruit sweetener until soft peaks form.",
-            "Fold in cooled espresso and melted chocolate, portion into two ramekins, and chill until serving."
+            "Pat the filets dry and season both sides with salt and pepper. Keep the 220 g filet for Jake and the 180 g filet for Laine.",
+            "Heat a heavy skillet over medium-high heat. Sear the filets for about 2–3 minutes per side, then briefly sear the edges. Reduce the heat, add a portion of the measured butter, and spoon the foaming butter over the steaks as they finish.",
+            "Check each filet in the center with an instant-read thermometer. Remove each when it reaches 145°F and rest for at least 3 minutes before serving. The smaller filet may finish first."
           ]
         },
         {
-          "title": "🍄 Garlic-Butter Pressure-Cooked Mushrooms",
+          "title": "Butter-broiled lobster tails",
           "steps": [
-            "Clean the whole cremini mushrooms and mince the garlic.",
-            "Add mushrooms, garlic, butter and 60–90 mL water or broth to the pressure cooker.",
-            "Cook on high pressure for about 2 minutes, then quick-release following the cooker instructions.",
-            "Use sauté mode with the lid off to reduce the liquid until the mushrooms are glossy and coated in garlic butter."
+            "Thaw frozen tails in the refrigerator. With kitchen shears, split each top shell lengthwise, stopping at the tail fan. Loosen the meat and lift it over the shell, leaving it attached at the base.",
+            "Preheat the broiler with a rack about 6 inches below the element. Set the tails on a broiler-safe pan and brush the exposed meat with melted butter.",
+            "Broil until pearly and opaque throughout and the thickest part reaches 145°F. Start checking at 5 minutes and remove each tail as it finishes."
           ]
         },
         {
-          "title": "🥦 Brown-Butter Cauliflower Mash",
+          "title": "Garlic-butter pressure-cooked mushrooms",
           "steps": [
-            "Steam cauliflower until very tender, then drain thoroughly so the mash stays thick.",
-            "Mash with cream cheese and Parmesan until smooth.",
-            "Brown the allocated butter separately over medium heat, watching carefully; fold into the mash and keep warm."
+            "Clean and trim 330 g whole cremini mushrooms. Mince the 3½ cloves of garlic. Put the mushrooms, garlic and a portion of the measured butter in the cooker.",
+            "Add water or broth according to the minimum liquid requirement for your cooker. Cook at high pressure for 2 minutes, then quick-release according to the cooker instructions.",
+            "With the lid off, use sauté mode to reduce the cooking liquid. If the cooker required extra liquid, spoon some out first. Toss until the mushrooms are glossy and coated. Divide between Jake and Laine using their 180 g and 150 g raw allocations."
           ]
         },
         {
-          "title": "🌿 Roasted Asparagus",
+          "title": "Roasted asparagus",
           "steps": [
-            "Trim asparagus and toss with the measured fat, salt and pepper.",
-            "Roast at 425°F until tender-crisp, checking after 8–12 minutes depending on thickness."
+            "Heat the oven to 425°F. Trim the tough ends and pat the spears dry. Toss with a little of the measured melted butter, salt and pepper.",
+            "Spread in a single layer and roast for 8–12 minutes, checking thin spears first. Pull the pan when the asparagus is bright green and tender-crisp, before switching the oven to broil for the lobster."
           ]
         },
         {
-          "title": "🥩 Filet Mignon",
+          "title": "Brown-butter cauliflower mash",
           "steps": [
-            "Pat the steaks dry, season generously and heat a heavy skillet until hot.",
-            "Sear both sides and baste with butter until the desired internal temperature is reached; use a thermometer.",
-            "Rest the steaks before plating."
+            "Cut 390 g cauliflower into even florets. Steam until very soft, about 12–15 minutes. Drain well and let the excess moisture steam off.",
+            "Mash or blend the hot cauliflower with the cream cheese and Parmesan until smooth. Taste and season.",
+            "Cook a portion of the measured butter over medium heat, swirling until the milk solids are golden and smell nutty. Take it off the heat immediately and stir it into the mash. Cover and keep warm."
           ]
         },
         {
-          "title": "🦞 Butter-Broiled Lobster Tails",
+          "title": "Chocolate espresso mousse",
           "steps": [
-            "Split the top of each shell and gently lift the meat above the shell.",
-            "Brush with butter and broil until opaque and the thickest part reaches 145°F; watch closely to avoid overcooking."
+            "Make the mousse a few hours ahead. Chop 45 g dark chocolate, melt gently and let it cool until just warm. Brew 35 g espresso and let it cool.",
+            "Whip 145 g cold heavy cream with 7 g monk fruit sweetener to soft peaks. Stir the espresso into the chocolate, then whisk in a spoonful of whipped cream to lighten it.",
+            "Gently fold the chocolate mixture into the remaining whipped cream. Divide between two ramekins and chill until set, about 2 hours."
           ]
         },
         {
-          "title": "⏱️ Cooking Order & Plating",
+          "title": "Cooking timeline",
           "steps": [
-            "Make the mousse ahead and chill. Prepare the cauliflower and clean the mushrooms before starting the hot dishes.",
-            "Start the cauliflower mash, then pressure-cook the mushrooms and reduce their butter sauce.",
-            "Cook the steaks and rest them while the asparagus roasts and the lobster tails broil.",
-            "Plate filet, lobster, mash, mushrooms and asparagus. Serve chilled mousse afterward."
+            "At least 2 hours before dinner, make and refrigerate the mousse. Prep the vegetables and lobster tails, then refrigerate the tails until ready to broil.",
+            "About 40 minutes before serving, preheat the oven to 425°F and get the cauliflower steaming and the pressure cooker heating. Finish the mash and reduce the mushroom sauce while the other dishes cook.",
+            "About 15 minutes before serving, put the asparagus in the oven and begin searing the filets. Check both filets separately and let them rest once they reach temperature.",
+            "Pull the asparagus and switch to broil. Cook the lobster while the filets rest, then plate with the warm mash, mushrooms and asparagus. Serve the chilled mousse after dinner."
           ]
         }
       ]
@@ -547,35 +541,35 @@
     },
     "ingredients": [
       {
-        "item": "Chicken thighs (boneless, skinless) — 900 g_raw TOTAL (3 portions)",
+        "item": "Chicken thighs (boneless, skinless) — 900 g raw",
         "nutritionKey": "Chicken thighs (boneless, skinless)"
       },
       {
-        "item": "Bell pepper — 210 g TOTAL (3 portions)",
+        "item": "Bell pepper — 210 g",
         "nutritionKey": "Bell pepper"
       },
       {
-        "item": "Broccoli florets — 150 g TOTAL (3 portions)",
+        "item": "Broccoli florets — 150 g",
         "nutritionKey": "Broccoli florets"
       },
       {
-        "item": "Heavy cream — 180 g TOTAL (3 portions)",
+        "item": "Heavy cream — 180 g",
         "nutritionKey": "Heavy cream"
       },
       {
-        "item": "Cream cheese — 6 tbsp TOTAL (3 portions)",
+        "item": "Cream cheese — 6 tbsp",
         "nutritionKey": "Cream cheese"
       },
       {
-        "item": "Cheddar cheese — 75 g TOTAL (3 portions)",
+        "item": "Cheddar cheese — 75 g",
         "nutritionKey": "Cheddar cheese"
       },
       {
-        "item": "Hatch diced green chiles — 0.398 can TOTAL (3 portions)",
+        "item": "Hatch diced green chiles — 0.398 can",
         "nutritionKey": "Hatch diced green chiles"
       },
       {
-        "item": "Spices (cumin/paprika/garlic powder/salt) — 2 tsp TOTAL (3 portions)",
+        "item": "Spices (cumin/paprika/garlic powder/salt) — 2 tsp",
         "nutritionKey": "Spices (cumin/paprika/garlic powder/salt)"
       }
     ],
@@ -589,34 +583,6 @@
       "src": "weeks/2026-W48/lunch.webp",
       "alt": "Creamy chicken thighs with peppers, cheddar and broccoli in a glass meal prep container"
     }
-  },
-  "laineLunch": {
-    "batchDays": 0,
-    "name": "No planned weekday lunch",
-    "note": "Laine is snacking rather than eating prepped weekday lunches. No lunch prep or ingredients.",
-    "macros": {
-      "cal": 0,
-      "protein": 0,
-      "carbs": 0,
-      "fat": 0,
-      "fiber": 0
-    },
-    "ingredients": [],
-    "steps": []
-  },
-  "laineLunch2": {
-    "batchDays": 0,
-    "name": "No second weekday lunch",
-    "note": "No weekday lunches scheduled.",
-    "macros": {
-      "cal": 0,
-      "protein": 0,
-      "carbs": 0,
-      "fat": 0,
-      "fiber": 0
-    },
-    "ingredients": [],
-    "steps": []
   },
   "laineBreakfasts": [],
   "laineSnacks": [
@@ -705,20 +671,20 @@
       "Cremini mushrooms — 330 g total (Thursday dinner)",
       "English cucumber — 360 g total (Friday dinner, Friday lunch)",
       "Fresh ginger — 16 g total (Friday dinner)",
-      "Garlic — 13.5 clove total (Wednesday dinner, Thursday dinner, Saturday lunch, Sunday lunch)",
+      "Garlic — 13.5 clove total (Wednesday dinner, Thursday dinner, weekend soup batch)",
       "Green beans — 250 g total (Monday dinner)",
       "Green cabbage — 335 g total (Tuesday dinner, Saturday dinner)",
       "Lime juice — 2.7 tbsp total (Tuesday dinner, Saturday dinner)",
-      "Poblano pepper — 480 g total (Saturday lunch, Sunday lunch)",
+      "Poblano pepper — 480 g total (weekend soup batch)",
       "Roasted red peppers (jarred) — 115 g total (Monday dinner)",
       "Romaine lettuce — 165 g total (Tuesday dinner)",
-      "Yellow onion — 1.1 cup total (Tuesday dinner, Saturday lunch, Sunday lunch)",
+      "Yellow onion — 1.1 cup total (Tuesday dinner, weekend soup batch)",
       "Zucchini — 330 g total (Wednesday dinner)"
     ],
     "Meat & Seafood": [
       "Atlantic salmon (raw) — 390 g_raw total (Friday dinner)",
-      "Bacon (cooked) — 215 g total (Friday lunch, Saturday lunch, Sunday lunch)",
-      "Chicken thighs (boneless, skinless) — 3200 g_raw total (Monday dinner, Sunday dinner, Jake Mon–Wed lunch, Saturday lunch, Sunday lunch)",
+      "Bacon (cooked) — 215 g total (Friday lunch, weekend soup batch)",
+      "Chicken thighs (boneless, skinless) — 3200 g_raw total (Monday dinner, Sunday dinner, Jake Mon–Wed lunch, weekend soup batch)",
       "Filet mignon (raw) — 400 g total (Thursday dinner)",
       "Ground turkey 93/7 — 470 g_raw total (Wednesday dinner)",
       "Lobster tail meat (raw) — 270 g total (Thursday dinner)",
@@ -726,16 +692,16 @@
     ],
     "Dairy & Eggs": [
       "Butter — 8.3 tbsp total (Monday dinner, Thursday dinner, Sunday dinner)",
-      "Cheddar cheese — 430 g total (Saturday dinner, Jake Mon–Wed lunch, Friday lunch, Saturday lunch, Sunday lunch)",
-      "Cream cheese — 29 tbsp total (Thursday dinner, Jake Mon–Wed lunch, Saturday lunch, Sunday lunch)",
+      "Cheddar cheese — 430 g total (Saturday dinner, Jake Mon–Wed lunch, Friday lunch, weekend soup batch)",
+      "Cream cheese — 29 tbsp total (Thursday dinner, Jake Mon–Wed lunch, weekend soup batch)",
       "Daisy sour cream — 10 tbsp total (Tuesday dinner, Saturday dinner)",
       "Eggs (large) — 3 egg total (Friday lunch)",
-      "Heavy cream — 975 g total (Monday dinner, Wednesday dinner, Thursday dinner, Sunday dinner, Jake Mon–Wed lunch, Saturday lunch, Sunday lunch)",
+      "Heavy cream — 975 g total (Monday dinner, Wednesday dinner, Thursday dinner, Sunday dinner, Jake Mon–Wed lunch, weekend soup batch)",
       "Parmesan cheese (grated) — 20.4 tbsp total (Wednesday dinner, Thursday dinner, Sunday dinner)"
     ],
     "Pantry": [
       "Capers — 3.1 tbsp total (Sunday dinner)",
-      "Chicken broth — 480 g total (Saturday lunch, Sunday lunch)",
+      "Chicken broth — 480 g total (weekend soup batch)",
       "Coffee espresso brewed — 35 g total (Thursday dinner)",
       "Dark chocolate 85% — 45 g total (Thursday dinner)",
       "Hatch diced green chiles — 0.4 can total (Jake Mon–Wed lunch)",
@@ -752,7 +718,7 @@
     "Check Supply": [
       "Freezer salmon: use on Friday if available (Friday dinner)",
       "Monk fruit sweetener: check stock (Thanksgiving dessert)",
-      "Jarred minced garlic: can replace fresh garlic by equivalent volume (Wednesday/Thursday/Saturday dinner and Saturday/Sunday soup)"
+      "Jarred minced garlic: can replace fresh garlic by equivalent volume (Wednesday/Thursday dinner and weekend soup batch)"
     ]
   },
   "targets": {
@@ -877,7 +843,7 @@
     {
       "day": "Friday (November 27) — Lunch (at home)",
       "name": "Bacon, Avocado & Cheddar Omelet + Cucumber Salad",
-      "note": "Jake at-home lunch; Laine weekday lunch unplanned.",
+      "note": "Jake’s Friday lunch at home.",
       "jake": {
         "cal": 775.2,
         "protein": 42.9,
@@ -920,13 +886,13 @@
       ],
       "photo": {
         "src": "weeks/2026-W48/omelet.webp",
-        "alt": "Cheddar omelet with greens"
+        "alt": "Bacon and cheddar omelet with sliced avocado and cucumber salad"
       }
     },
     {
       "day": "Saturday (November 28) — Lunch",
       "name": "Thick Creamy Roasted Poblano, Chicken, Cheddar & Bacon Soup",
-      "note": "Saturday: cook one SIX-serving batch (4 planned portions + 2 extra). Sunday: reheat leftovers gently. No jalapeños. Recipe ingredient amounts shown are per Jake/Laine serving, so multiply both allocations by TWO for four planned servings, then scale by 1.5 for six total servings.",
+      "note": "Make one six-serving pot on Saturday. For the full batch, add the Jake and Laine quantities listed below and multiply by three. Serve both on Saturday, save two portions for Sunday, and keep two extra portions.",
       "jake": {
         "cal": 1105.4,
         "protein": 78.4,
@@ -980,11 +946,11 @@
         }
       ],
       "steps": [
-        "Saturday only: roast poblanos under broiler until charred; cover, peel if desired, seed and dice. Sauté chopped onion and garlic until soft.",
-        "Cook chicken thighs to 165°F; shred. Cook bacon crisp, reserving a little for topping.",
-        "Combine chicken, poblanos, onion, cream cheese and only enough stock to make a thick base. Stir in heavy cream; simmer gently.",
-        "Off heat, add freshly shredded cheddar gradually. Stir in chicken and bacon. Soup should be thick and spoon-coating; do not thin unnecessarily.",
-        "Sunday: refrigerate promptly after Saturday lunch, then reheat over LOW heat without boiling; stir frequently to prevent dairy separating."
+        "Broil the poblanos, turning until charred on all sides. Cover to steam briefly, then peel, seed and dice. Sauté the chopped onion and garlic until soft.",
+        "Cook the chicken thighs to 165°F, then shred. Cook the bacon until crisp and reserve some for topping.",
+        "Stir the poblanos, cream cheese and chicken broth into the softened onion and garlic. Add the heavy cream and simmer gently until thick and spoon-coating.",
+        "Take the pot off the heat and stir in the cheddar a handful at a time. Fold in the chicken and some bacon. Serve two portions and top with the reserved bacon.",
+        "Divide the remaining soup into shallow containers and refrigerate promptly. Set aside two portions for Sunday."
       ],
       "photo": {
         "src": "weeks/2026-W48/soup.webp",
@@ -994,7 +960,7 @@
     {
       "day": "Sunday (November 29) — Lunch",
       "name": "Thick Creamy Roasted Poblano, Chicken, Cheddar & Bacon Soup",
-      "note": "Saturday: cook one SIX-serving batch (4 planned portions + 2 extra). Sunday: reheat leftovers gently. No jalapeños. Recipe ingredient amounts shown are per Jake/Laine serving, so multiply both allocations by TWO for four planned servings, then scale by 1.5 for six total servings.",
+      "note": "Leftovers from Saturday’s six-serving batch. The ingredient list shows the portions used for the nutrition estimate.",
       "jake": {
         "cal": 1105.4,
         "protein": 78.4,
@@ -1048,7 +1014,7 @@
         }
       ],
       "steps": [
-        "Reheat Saturday soup over low heat, stirring frequently; do not boil. Heat thoroughly."
+        "Warm two portions from Saturday’s batch over low to medium-low heat, stirring often. Heat to 165°F throughout and serve."
       ],
       "photo": {
         "src": "weeks/2026-W48/soup.webp",
@@ -1056,6 +1022,10 @@
       }
     }
   ],
-  "weekendNote": "Friday Jake omelet at home. Saturday make six hearty portions of creamy roasted poblano chicken-cheddar-bacon soup for both people; Sunday reheat. No Laine breakfasts or weekday lunches.",
-  "jakeTabNote": "Three creamy chicken-thigh containers for Mon–Wed. Thanksgiving Thursday; Friday omelet at home. Saturday/Sunday shared soup."
+  "weekendNote": "Friday: Jake’s omelet at home. Saturday: make one six-serving pot of creamy roasted poblano chicken soup. Sunday: reheat two portions for Jake and Laine.",
+  "jakeTabNote": "Three creamy chicken-thigh containers for Mon–Wed. Thanksgiving Thursday; Friday omelet at home. Saturday/Sunday shared soup.",
+  "laineTabNote": "No weekday lunches planned. Laine’s snack is listed below.",
+  "foodSafetySources": [
+    "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+  ]
 }

@@ -42,7 +42,10 @@ remove the old flat `weeks/2026-W*.json` files. Keep `index.html` at the site ro
    `0`, `1`, `2`, or `3` in reading order.
 3. Add the new ID and label to `WEEK_REGISTRY` in `js/theme.js` and set
    `CURRENT_WEEK_ID` to that ID when the new week should open by default.
-4. Put Friday's dessert in that dinner's `desserts` array. It also appears in the
+4. For a multi-component dinner, use `stepSections`, an array of objects with a
+   `title` and an ordered `steps` array. The dinner card renders each section as
+   an expandable group under Steps. Use a flat `steps` array for a single list.
+5. Put Friday's dessert in that dinner's `desserts` array. It also appears in the
    Dessert filter in Recipes.
 
 ---
