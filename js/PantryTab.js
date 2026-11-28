@@ -86,7 +86,7 @@ function PantryMatchCard({r, T}) {
           </div>
           {/* Full recipe */}
           <div style={{padding:"2px"}}>
-            {(r.category==="Dinner"||r.category==="Dessert")
+            {(r.category==="Dinner"||r.category==="Dessert"||r.obj.jake||r.obj.laine)
               ? <DinnerCard dinner={r.obj} week={{}}/>
               : <MealCard meal={r.obj} personColor={T.accent} forceOpen={true}/>
             }

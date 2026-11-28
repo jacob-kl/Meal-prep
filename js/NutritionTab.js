@@ -89,7 +89,7 @@ function NutritionTab({week,nutritionDB}) {
       )}
       {/* Water-level macro cells */}
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:20}}>
-        {waterCells.map(c=><WaterCell key={c.label} {...c} dark={dark}/>)}
+        {waterCells.map((c,i)=>Number.isFinite(goal[i])&&goal[i]>0?<WaterCell key={c.label} {...c} dark={dark}/>:<div key={c.label} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"17px 10px",textAlign:"center"}}><div style={{fontSize:11,color:T.textMid}}>{c.label}</div><div style={{fontFamily:"'Lora',serif",fontSize:22,color:T.text,margin:"10px 0 4px"}}>{targets.total[i]}</div><div style={{fontSize:10,color:T.textLight}}>{c.unit} · menu average</div></div>)}
       </div>
  
       {/* Breakdown table */}
@@ -114,11 +114,11 @@ function NutritionTab({week,nutritionDB}) {
               ))}
               {targets.avgMicros&&<tr style={{borderBottom:`1px solid ${T.divider}`}}>
                 <td style={{padding:"9px 10px",color:T.text,fontSize:13,fontWeight:500}}>Planned daily average</td>
-                {targets.total.map((v,i)=><td key={i} style={{padding:"9px 8px",textAlign:"right",color:T.text,fontFamily:"monospace",fontWeight:500,fontSize:12}}>{v}{i>0?"g":""}</td>)}
+                {targets.total.map((v,i)=><td key={i} style={{padding:"9px 8px",textAlign:"right",color:T.text,fontFamily:"monospace",fontWeight:500,fontSize:12}}>{v==null?"—":v}{v!=null&&i>0?"g":""}</td>)}
               </tr>}
               <tr style={{background:T.goldSoft}}>
                 <td style={{padding:"9px 10px",color:T.textMid,fontFamily:"monospace",fontSize:10,textTransform:"uppercase",letterSpacing:"0.08em"}}>Goal</td>
-                {goal.map((v,i)=><td key={i} style={{padding:"9px 8px",textAlign:"right",color:T.textMid,fontFamily:"monospace",fontWeight:500,fontSize:12}}>{v}{i>0?"g":""}</td>)}
+                {goal.map((v,i)=><td key={i} style={{padding:"9px 8px",textAlign:"right",color:T.textMid,fontFamily:"monospace",fontWeight:500,fontSize:12}}>{v==null?"—":v}{v!=null&&i>0?"g":""}</td>)}
               </tr>
             </tbody>
           </table>

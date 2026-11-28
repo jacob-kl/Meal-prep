@@ -1,125 +1,57 @@
-// ── Week View ─────────────────────────────────────────────────────────
+function LegacyLaine({week,breakfastsOnly=false,snacksOnly=false}){
+  return <ShireSurface compact={true}>
+    {!breakfastsOnly&&!snacksOnly&&<>
+      {week.laineTabNote&&<p className="shire-intro">{week.laineTabNote}</p>}
+      {week.laineLunch&&<LunchSection lunch={week.laineLunch} label="Laine"/>}
+      {week.laineLunch2&&<LunchSection lunch={week.laineLunch2} label="Laine · Jar 2"/>}
+    </>}
+    {breakfastsOnly?(week.laineBreakfasts||[]).map((meal,i)=><MealCard key={i} meal={meal} personLabel="Laine"/>):<>
+      <h3 className="shire-section-title">A Hobbit's Provisions</h3>
+      {week.laineSnackPrep&&<MealCard meal={week.laineSnackPrep} personLabel="Laine"/>}
+      {(week.laineSnacks||[]).map((meal,i)=><MealCard key={i} meal={{...meal,note:meal.note||meal.desc,ratingKey:"lsnack_"+(meal.name||"")}} personLabel="Laine"/>)}
+    </>}
+  </ShireSurface>;
+}
+function JakeSnacks({week}){
+  const T=useMealTheme();
+  return <>{(week.jakeSnacks||[]).length>0&&<SectionLabel>{week.jakeSnacksOptional?"Jake's Optional Snacks & Shakes":"Jake's Snacks"}</SectionLabel>}
+    {(week.jakeSnacks||[]).map((s,i)=><MealCard key={i} meal={{...s,note:s.note||s.desc,ratingKey:"jsnack_"+(s.name||"")}} personLabel="Jake" personColor={T.blue}/>)}</>;
+}
 function WeekView({week,nutritionDB}) {
-  const T = getT(useDark());
-  const hasWeekend = !!(week.weekendMeals&&week.weekendMeals.length);
-  const TABS = hasWeekend
-    ? ["Dinners","Weekend","Jake","Laine","Breakfasts","Snacks"]
-    : ["Dinners","Jake","Laine","Breakfasts","Snacks"];
-  const jakeTabIdx = hasWeekend?2:1, laineTabIdx = hasWeekend?3:2, bfTabIdx = hasWeekend?4:3, snackTabIdx = hasWeekend?5:4;
-  const [tab,setTab]=useState(0);
-  return (
-    <div>
-      <TabBar tabs={TABS} active={tab} setActive={setTab}/>
-
-      {tab===0&&(
-        <div>
-          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
-            Every dinner cooked together — same recipe, different portions. Jake's is always bigger.
-          </div>
-          {week.prepPlan?.length>0&&(
-            <details style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"10px 14px",marginBottom:16,color:T.textMid,fontSize:13}}>
-              <summary style={{cursor:"pointer",marginBottom:4}}>Prep schedule</summary>
-              <Steps items={week.prepPlan}/>
-            </details>
-          )}
-          {week.dinners.map((d,i)=>(
-            <React.Fragment key={i}>
-              <DinnerCard dinner={d} week={week}/>
-              {(d.desserts||[]).map((dessert,j)=><DinnerCard key={j} dinner={dessert} week={week}/>)}
-            </React.Fragment>
-          ))}
-        </div>
-      )}
-
-      {hasWeekend&&tab===1&&(
-        <div>
-          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
-            {week.weekendNote||"Weekend breakfast & lunch, planned this week — nothing batched, made fresh each day."}
-          </div>
-          {week.weekendMeals.map((d,i)=><DinnerCard key={i} dinner={d} week={week}/>)}
-        </div>
-      )}
-
-      {tab===jakeTabIdx&&(
-        <div>
-          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.blueSoft,border:`1px solid ${T.blue}22`,borderRadius:10,padding:"10px 14px"}}>
-            {week.jakeTabNote || (week.jakeBreakfast ? "Breakfast + two smaller lunches this week — all batch cooked Sunday, 5 containers each, same recipe all week." : "Batch cook Sunday — 5 containers, keeps all week.")}
-          </div>
-          {week.jakeBreakfast&&<MealCard meal={week.jakeBreakfast} personLabel="Jake · Breakfast" personColor={T.blue}/>}
-          <LunchSection lunch={week.jakeLunch} label="Jake · Lunch 1" labelColor={T.blue} personColor={T.blue}/>
-          {week.jakeLunch2&&<LunchSection lunch={week.jakeLunch2} label="Jake · Lunch 2" labelColor={T.blue} personColor={T.blue}/>}
-          {(week.jakeSnacks||[]).length>0&&(
-            <div style={{marginTop:20}}>
-              <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>{week.jakeSnacksOptional ? "Jake's Optional Snacks & Shakes" : week.laineSnackPrep ? "Jake's Snacks by Day" : "Jake's Snacks — pick 1–2 per day"}</div>
-              {week.jakeSnacks.map((s,i)=>(
-                <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
-                  <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
-                  <MacroRow macros={s.macros}/>
-                  <div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
-                  <MealRating mealKey={"jsnack_"+(s.name||"")}/>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-
-      {tab===laineTabIdx&&(
-        <div>
-          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.accentSoft,border:`1px solid ${T.accent}22`,borderRadius:10,padding:"10px 14px"}}>{week.laineTabNote || "Mason jars batch-made Sunday. Dressing separate. Two sittings per jar."}</div>
-          {week.laineLunch&&<LunchSection lunch={week.laineLunch} label="Laine" labelColor={T.accent} personColor={T.accent}/>}
-          {week.laineLunch2&&<LunchSection lunch={week.laineLunch2} label="Laine · Jar 2" labelColor={T.accent} personColor={T.accent}/>}
-          <div style={{marginTop:20}}>
-            <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:12}}>Laine's Snacks</div>
-            {week.laineSnackPrep&&<MealCard meal={week.laineSnackPrep} personLabel="Laine" personColor={T.accent}/>}
-            {(week.laineSnacks||[]).map((s,i)=>(
-              <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
-                <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
-                <MacroRow macros={s.macros}/>
-                <div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
-                <MealRating mealKey={"lsnack_"+(s.name||"")}/>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {tab===bfTabIdx&&(
-        <div>
-          <div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:16,background:T.goldSoft,border:`1px solid ${T.tagBorder}`,borderRadius:10,padding:"10px 14px"}}>
-            {week.laineBreakfasts?.length
-              ? (week.jakeBreakfast ? "Laine's weekday rotation below. Jake's breakfast this week is on his tab — see Jake." : "Laine only — Jake has coffee.")
-              : "No weekday breakfasts planned for Laine."}
-          </div>
-          {(week.laineBreakfasts||[]).map((b,i)=><MealCard key={i} meal={b} personLabel="Laine" personColor={T.accent}/>)}
-        </div>
-      )}
-
-      {tab===snackTabIdx&&(
-        <div>
-          {/* Tzatziki / other recipe card */}
-          {week.tzatziki&&<MealCard meal={week.tzatziki} personLabel="Recipe" personColor={T.green}/>}
-          {(week.jakeSnacks||[]).length>0&&(<>
-            <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginTop:8,marginBottom:12}}>Jake's Snacks</div>
-            {week.jakeSnacks.map((s,i)=>(
-              <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
-                <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
-                <MacroRow macros={s.macros}/><div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
-                <MealRating mealKey={"jsnack_"+(s.name||"")}/>
-              </div>
-            ))}
-          </>)}
-          <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginTop:20,marginBottom:12}}>Laine's Snacks</div>
-          {week.laineSnackPrep&&<MealCard meal={week.laineSnackPrep} personLabel="Laine" personColor={T.accent}/>}
-          {(week.laineSnacks||[]).map((s,i)=>(
-            <div key={i} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:14,padding:"14px 18px",marginBottom:10}}>
-              <div style={{fontSize:15,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{s.name}</div>
-              <MacroRow macros={s.macros}/><div style={{fontSize:12,color:T.textMid,lineHeight:1.6}}>{s.desc}</div>
-              <MealRating mealKey={"lsnack_"+(s.name||"")}/>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+  const T=getT(useDark());
+  const hasPlan=Boolean(week.lainePlan?.days?.length);
+  const tabs=["Dinners",...(week.travelMeals?.length?["Travel"]:[]),...(week.weekendMeals?.length?["Weekend"]:[]),"Jake","Laine",...(!hasPlan?["Breakfasts","Snacks"]:[])];
+  const [tab,setTab]=useState("Dinners");
+  const current=tabs.includes(tab)?tab:tabs[0];
+  return <div>
+    {week.prepPlan?.length>0&&<details className="week-prep" style={{background:T.card,border:`1px solid ${T.border}`,color:T.textMid}}>
+      <summary>Weekly prep & packing</summary><div style={{paddingTop:12}}><Steps items={week.prepPlan}/></div>
+    </details>}
+    <TabBar tabs={tabs} active={tabs.indexOf(current)} setActive={i=>setTab(tabs[i])}/>
+    {current==="Dinners"&&<>
+      <p className="week-intro" style={{background:T.goldSoft,color:T.textMid,borderColor:T.tagBorder}}>{hasPlan?"Shared recipes, separately listed portions. Laine's smaller supper is included in her five-meal plan.":"Every dinner cooked together, with separately listed portions."}</p>
+      {(week.dinners||[]).map((d,i)=><React.Fragment key={d.id||i}><DinnerCard dinner={d} week={week}/>{(d.desserts||[]).map((x,j)=><DinnerCard key={x.id||j} dinner={x} week={week}/>)}</React.Fragment>)}
+    </>}
+    {current==="Travel"&&<>
+      <p className="week-intro" style={{background:T.blueSoft,color:T.textMid,borderColor:T.border}}>Thursday, December 3: shared road breakfast and thick thermos soup. Packing and reheating are in the weekly prep section above.</p>
+      {week.travelMeals.map(m=><DinnerCard key={m.id} dinner={m} week={week}/>)}
+    </>}
+    {current==="Weekend"&&<>
+      <p className="week-intro" style={{background:T.goldSoft,color:T.textMid,borderColor:T.tagBorder}}>{week.weekendNote||"Shared breakfasts and lunches."}</p>
+      {week.weekendMeals.map((m,i)=><DinnerCard key={m.id||i} dinner={m} week={week}/>)}
+    </>}
+    {current==="Jake"&&<>
+      {week.jakeTabNote&&<p className="week-intro" style={{background:T.blueSoft,color:T.textMid,borderColor:T.border}}>{week.jakeTabNote}</p>}
+      {week.jakeBreakfast&&<MealCard meal={week.jakeBreakfast} personLabel="Jake · Breakfast" personColor={T.blue}/>}
+      {week.jakeLunch&&<LunchSection lunch={week.jakeLunch} label="Jake · Lunch 1" labelColor={T.blue} personColor={T.blue}/>}
+      {week.jakeLunch2&&<LunchSection lunch={week.jakeLunch2} label="Jake · Lunch 2" labelColor={T.blue} personColor={T.blue}/>}
+      <JakeSnacks week={week}/>
+    </>}
+    {current==="Laine"&&(hasPlan?<LainePlan key={week.id} week={week}/>:<LegacyLaine week={week}/>)}
+    {current==="Breakfasts"&&<LegacyLaine week={week} breakfastsOnly={true}/>}
+    {current==="Snacks"&&<>
+      {week.tzatziki&&<MealCard meal={week.tzatziki} personLabel="Recipe" personColor={T.green}/>}
+      <JakeSnacks week={week}/><LegacyLaine week={week} snacksOnly={true}/>
+    </>}
+  </div>;
 }

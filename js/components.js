@@ -1,6 +1,8 @@
 // ── Rating Slider ─────────────────────────────────────────────────────
 function MealRating({ mealKey }) {
-  const T = getT(useDark());
+  const T = useMealTheme();
+  const shire=useShire();
+  const shireLabels={0:"Cast it into the fire",1:"Orc rations",2:"Not for the Shire",3:"Needs Sam's help",4:"A modest provision",5:"Fit for the road",6:"A welcome second helping",7:"Back to Bag End",8:"Worthy of Rivendell",9:"A feast for the Fellowship",10:"One feast to rule them all"};
   const [ratings, setRatings] = useState(loadRatings);
   const [pending, setPending] = useState(null);
   const [dragging, setDragging] = useState(false);
@@ -32,10 +34,10 @@ function MealRating({ mealKey }) {
  
   return (
     <div style={{marginTop:14,paddingTop:12,borderTop:`1px solid ${T.divider}`}}>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
-        <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase"}}>Rate this meal</span>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:8,flexWrap:"wrap",marginBottom:10}}>
+        <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase"}}>{shire?"Rate the feast":"Rate this meal"}</span>
         <span style={{fontSize:11,fontWeight:500,color:showSaved?T.green:ratingClr(draft??null),transition:"color 0.2s",fontStyle:draft==null?"italic":"normal"}}>
-          {showSaved?"✓ saved!":draft!=null?`${draft}/10 — ${RATING_LABELS[draft]}`:"drag to score"}
+          {showSaved?(shire?"✓ In the Red Book":"✓ saved!"):draft!=null?`${draft}/10 — ${(shire?shireLabels:RATING_LABELS)[draft]}`:"drag to score"}
         </span>
       </div>
       <div ref={trackRef} style={{position:"relative",height:36,cursor:"ew-resize",userSelect:"none",touchAction:"none"}}
@@ -62,7 +64,7 @@ function MealRating({ mealKey }) {
         <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:10}}>
           <button onClick={()=>setPending(saved??null)} style={{background:"none",border:"none",fontSize:11,color:T.textLight,padding:"4px 8px"}}>Cancel</button>
           <button onClick={commit} style={{background:T.accentSoft,border:`1px solid ${T.accent}`,borderRadius:20,padding:"7px 16px",fontSize:12,fontWeight:500,color:T.accent}}>
-            {btn}
+            {shire?"Save to the Red Book":btn}
           </button>
         </div>
       </div>
@@ -77,7 +79,7 @@ function MealRating({ mealKey }) {
  
 // ── Water Tracker ─────────────────────────────────────────────────────
 function WaterGlass({ full, onClick, index }) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   const W=32,H=44;
   return (
     <button onClick={onClick} title={full?`Tap when you drink glass ${index+1}`:"Tap to undo"}
@@ -94,7 +96,7 @@ function WaterGlass({ full, onClick, index }) {
   );
 }
 function WaterTracker() {
-  const T = getT(useDark());
+  const T = useMealTheme();
   const [glasses, setGlasses] = useState(loadWater);
   useEffect(()=>{
     const ms=()=>{const n=new Date(),m=new Date(n);m.setHours(24,0,0,0);return m-n;};
@@ -168,7 +170,7 @@ function WaterCell({ label, value, unit, pct, color, bg, dark }) {
  
 // ── Sub Dropdown ──────────────────────────────────────────────────────
 function SubDropdown({ ing }) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   const { subs, setSub } = useSubs();
   const { openKey, setOpenKey } = useDrop();
   const ref = useRef(null);
@@ -200,7 +202,7 @@ function SubDropdown({ ing }) {
  
 // ── UI Atoms ──────────────────────────────────────────────────────────
 function MacroPill({label,value,unit,colorKey}) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   return (
     <span style={{display:"inline-flex",alignItems:"center",gap:5,background:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"3px 10px",fontSize:11}}>
       <span style={{width:6,height:6,borderRadius:"50%",background:CLR[colorKey],flexShrink:0}}/>
@@ -209,21 +211,21 @@ function MacroPill({label,value,unit,colorKey}) {
     </span>
   );
 }
-function MacroRow({macros}) {
+function MacroRow({macros,netCarbs}) {
   const items=[["cal",macros.cal,"kcal"],["protein",macros.protein,"g"],["carbs",macros.carbs,"g"],["fat",macros.fat,"g"]];
   if(macros.fiber!=null) items.push(["fiber",macros.fiber,"g"]);
-  return <div style={{display:"flex",gap:5,flexWrap:"wrap",margin:"8px 0 12px"}}>{items.map(([k,v,u])=><MacroPill key={k} label={k} value={v} unit={u} colorKey={k}/>)}</div>;
+  return <div style={{display:"flex",gap:5,flexWrap:"wrap",margin:"8px 0 12px"}}>{items.map(([k,v,u])=><MacroPill key={k} label={k==="carbs"&&netCarbs?"net carbs":k} value={v} unit={u} colorKey={k}/>)}</div>;
 }
 function SectionLabel({children}) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   return <div style={{fontFamily:"'Lora',serif",fontSize:11,letterSpacing:"0.15em",textTransform:"uppercase",color:T.textLight,marginBottom:12}}>{children}</div>;
 }
 function Steps({items}) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   return <ol style={{paddingLeft:18,margin:0,display:"flex",flexDirection:"column",gap:8}}>{items.map((s,i)=><li key={i} style={{fontSize:13,lineHeight:1.65,color:T.textMid}}>{s}</li>)}</ol>;
 }
 function GroupedSteps({sections}) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   return <div style={{display:"grid",gap:8}}>
     {sections.map(({title,steps})=>(
       <details key={title} style={{border:`1px solid ${T.divider}`,borderRadius:10,padding:"10px 12px",background:T.tag}}>
@@ -234,7 +236,7 @@ function GroupedSteps({sections}) {
   </div>;
 }
 function IngList({ingredients}) {
-  const T = getT(useDark());
+  const T = useMealTheme();
   const { subs } = useSubs();
   const resolved = (ingredients||[]).map(ing=>{
     if(!ing.subKey||!subs[ing.subKey]) return ing;
@@ -275,6 +277,10 @@ function extraRecipeEntries(week) {
   const dessertNames = new Set(desserts.map(dessert => dessert.name));
   return [
     ...desserts.map(dessert => ["Dessert", dessert]),
+    ...(week.weekendMeals||[]).map(m=>[m.recipeCategory||"Lunch",m]),
+    ...(week.travelMeals||[]).map(m=>[m.recipeCategory||"Lunch",m]),
+    ...(week.laineMiniMeals||[]).map(m=>["Snack",m]),
+    ...(week.laineMenus||[]).flatMap(menu=>menu.options.map(m=>[m.recipeCategory||"Snack",m])),
     ...(week.extras || [])
       .filter(extra => !dessertNames.has(extra.name))
       .map(extra => [extra.recipeCategory || "Sides", extra])
@@ -282,19 +288,26 @@ function extraRecipeEntries(week) {
 }
 
 // ── Meal Card ─────────────────────────────────────────────────────────
-function MealCard({meal,personLabel,personColor,forceOpen}) {
-  const T = getT(useDark());
+function MealCard(props) {
+  const inherited=useShire();
+  const themed=inherited||props.meal.theme==="shire"||/Laine/i.test(props.personLabel||"");
+  return <ShireCtx.Provider value={themed}><MealCardContent {...props}/></ShireCtx.Provider>;
+}
+function MealCardContent({meal,personLabel,personColor,forceOpen,actions}) {
+  const T = useMealTheme();
   const [showIng,setShowIng]=useState(false);
   const [showSteps,setShowSteps]=useState(false);
-  const mealKey=(meal.day||meal.days||"")+"_"+(personLabel||"")+"_"+(meal.name||"");
+  const shire=useShire();
+  const mealKey=meal.ratingKey||(meal.day||meal.days||"")+"_"+(personLabel||"")+"_"+(meal.name||"");
   const accentColor = personColor||T.accent;
   return (
-    <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
+    <div className={shire?"shire-card":undefined} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
       <MealHeading photo={meal.photo}>
         {(meal.day||meal.days)&&<div style={{fontSize:10,color:accentColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{meal.day||meal.days}{personLabel?` · ${personLabel}`:""}</div>}
-        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{meal.name}</div>
+        <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{shire?(meal.shireName||meal.name):meal.name}</div>
+        {shire&&meal.shireName&&<div className="shire-plain-name">{meal.name}</div>}
       </MealHeading>
-      {meal.macros&&<MacroRow macros={meal.macros}/>}
+      {meal.macros&&<MacroRow macros={meal.macros} netCarbs={meal.netCarbs}/>}
       {meal.macrosNote&&<div style={{fontSize:11,color:T.textLight,marginBottom:6,fontFamily:"'DM Mono',monospace"}}>{meal.macrosNote}</div>}
       {meal.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{meal.note}</div>}
       <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
@@ -303,6 +316,7 @@ function MealCard({meal,personLabel,personColor,forceOpen}) {
       </div>
       {showIng&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Ingredients</SectionLabel><IngList ingredients={meal.ingredients}/></div>}
       {showSteps&&<div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${T.divider}`}}><SectionLabel>Method</SectionLabel><Steps items={meal.steps}/></div>}
+      {actions&&<div className="shire-choice-actions">{actions}</div>}
       <MealRating mealKey={mealKey}/>
     </div>
   );
@@ -310,7 +324,8 @@ function MealCard({meal,personLabel,personColor,forceOpen}) {
  
 // ── Dinner Card ───────────────────────────────────────────────────────
 function DinnerCard({dinner,week}) {
-  const T = getT(useDark());
+  const T = useMealTheme();
+  const shireT=getShireT(useDark());
   const [showIng,setShowIng]=useState(false);
   const [showSteps,setShowSteps]=useState(false);
   const hasGroupedSteps=Boolean(dinner.stepSections?.length);
@@ -321,15 +336,16 @@ function DinnerCard({dinner,week}) {
         <div style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{dinner.day}</div>
         <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:6}}>{dinner.name}</div>
       </MealHeading>
+      {dinner.portions&&<div style={{fontSize:12,color:T.textMid,marginBottom:10,lineHeight:1.5}}>Jake: {dinner.portions.jake} · Laine: {dinner.portions.laine}. Ingredients make the full shared batch.</div>}
       {dinner.tzatzikiRef&&<div style={{fontSize:11,background:T.greenSoft,border:`1px solid ${T.green}22`,borderRadius:8,padding:"6px 10px",marginBottom:8,color:T.green,fontFamily:"'DM Mono',monospace"}}>🥣 {(dinner.sauceLabel||"Tzatziki")} night — see recipe card in the Recipes tab</div>}
       {dinner.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:10,fontStyle:"italic"}}>{dinner.note}</div>}
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
         {[["Jake",dinner.jake,T.blue,T.blueSoft],["Laine",dinner.laine,T.accent,T.accentSoft]].map(([name,m,clr,bg])=>m&&(
-          <div key={name} style={{background:bg,borderRadius:10,padding:"10px 12px"}}>
-            <div style={{fontSize:10,color:clr,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:6}}>{name}</div>
+          <div key={name} className={name==="Laine"?"shire-portion":undefined} style={{background:name==="Laine"?shireT.accentSoft:bg,borderRadius:10,padding:"10px 12px"}}>
+            <div style={{fontSize:10,color:name==="Laine"?shireT.accent:clr,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:6}}>{name==="Laine"?"🍑 Laine · The Shire":name}</div>
             <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
               {[["cal",m.cal,"kcal"],["pro",m.protein,"g"],["carbs",m.carbs,"g"],["fat",m.fat,"g"]].map(([k,v,u])=>(
-                <span key={k} style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:clr,background:"rgba(255,255,255,0.5)",borderRadius:4,padding:"1px 6px"}}>{k} {v}{u}</span>
+                <span key={k} style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:name==="Laine"?shireT.text:clr,background:name==="Laine"?shireT.tag:"rgba(255,255,255,0.5)",borderRadius:4,padding:"1px 6px"}}>{k==="carbs"&&dinner.netCarbs?"net":k} {v}{u}</span>
               ))}
             </div>
           </div>
@@ -350,6 +366,7 @@ function DinnerCard({dinner,week}) {
  
 // ── Tab Bar ───────────────────────────────────────────────────────────
 const ICONS = {
+  Travel:     ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 4-4 2 2-4Z"/></svg>,
   Weekend:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/><path d="M8 15h2M14 15h2M8 18h2M14 18h2"/></svg>,
   Dinners:    ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><path d="M3 20h18M5 20V10a7 7 0 0114 0v10"/><path d="M12 3v3"/></svg>,
   Jake:       ()=><span aria-hidden="true" style={{fontSize:17,lineHeight:1}}>🍆</span>,
@@ -360,8 +377,8 @@ const ICONS = {
   Nutrition:  ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
 };
 function TabBar({tabs,active,setActive}) {
-  const T = getT(useDark());
-  const iconColors={Dinners:T.accent,Weekend:T.blue,Breakfasts:T.gold,Snacks:T.green};
+  const T = useMealTheme();
+  const iconColors={Dinners:T.accent,Travel:T.green,Weekend:T.blue,Breakfasts:T.gold,Snacks:T.green};
   return (
     <div style={{display:"flex",gap:3,flexWrap:"wrap",background:T.tag,border:`1px solid ${T.border}`,borderRadius:14,padding:4,marginBottom:24}}>
       {tabs.map((t,i)=>{const Icon=ICONS[t];const isA=active===i;return(
@@ -382,8 +399,14 @@ function scaleText(t,d,base=5){if(d===base)return t;const FR={"¼":0.25,"½":0.5
   const unit=/^eggs?$/i.test(u)?(qty==="1"?"egg":"eggs"):u;
   return qty+" "+unit;
 });}
-function LunchSection({lunch,label,labelColor,personColor}) {
-  const T = getT(useDark());
+function LunchSection(props) {
+  const inherited=useShire();
+  return <ShireCtx.Provider value={inherited||/Laine/i.test(props.label||"")}><LunchSectionContent {...props}/></ShireCtx.Provider>;
+}
+function LunchSectionContent({lunch,label,labelColor,personColor}) {
+  const T = useMealTheme();
+  const shire=useShire();
+  const accent=personColor||T.accent;
   const [showIng,setShowIng]=useState(false);
   const [showSteps,setShowSteps]=useState(false);
   const base=lunch.batchDays||5;
@@ -392,13 +415,13 @@ function LunchSection({lunch,label,labelColor,personColor}) {
   const sIngs=(lunch.ingredients||[]).map(i=>({...i,item:scaleText(i.item||"",days,base)}));
   const sSteps=(lunch.steps||[]).map(s=>scaleText(s,days,base).replace(batchCountPattern,(_,unit)=>days+" "+unit+(days!==1?"s":"")).replace(new RegExp("all "+base,"g"),"all "+days));
   return (
-    <div style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
+    <div className={shire?"shire-card":undefined} style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:"18px 20px",marginBottom:12}}>
       <MealHeading photo={lunch.photo}>
-        <div style={{fontSize:10,color:labelColor,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
+        <div style={{fontSize:10,color:labelColor||T.accent,fontFamily:"'DM Mono',monospace",letterSpacing:"0.08em",textTransform:"uppercase",marginBottom:4}}>{label} · Batch Prep</div>
         <div style={{fontSize:16,fontWeight:500,color:T.text,fontFamily:"'Lora',serif",marginBottom:4}}>{lunch.name}</div>
       </MealHeading>
       {lunch.note&&<div style={{fontSize:12,color:T.textLight,lineHeight:1.65,marginBottom:8,fontStyle:"italic"}}>{lunch.note}</div>}
-      <MacroRow macros={lunch.macros}/>
+      <MacroRow macros={lunch.macros} netCarbs={lunch.netCarbs}/>
       <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
         {lunch.ingredients&&<button onClick={()=>setShowIng(!showIng)} aria-expanded={showIng} style={{background:showIng?T.goldSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showIng?"▲":"▼"} Ingredients</button>}
         {lunch.steps&&<button onClick={()=>setShowSteps(!showSteps)} aria-expanded={showSteps} style={{background:showSteps?T.accentSoft:T.tag,border:`1px solid ${T.tagBorder}`,borderRadius:20,padding:"4px 12px",fontSize:11,color:T.textMid}}>{showSteps?"▲":"▼"} Steps</button>}
@@ -408,7 +431,7 @@ function LunchSection({lunch,label,labelColor,personColor}) {
           {base>1&&<div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
             <span style={{fontSize:11,color:T.textLight,fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:"0.06em"}}>Prepping for</span>
             <div style={{display:"flex",gap:3}}>
-              {Array.from({length:base},(_,i)=>i+1).map(n=><button key={n} onClick={()=>setDays(n)} style={{width:28,height:28,borderRadius:6,border:`1px solid ${days===n?personColor:T.tagBorder}`,background:days===n?personColor+"22":"none",color:days===n?personColor:T.textLight,fontSize:12,fontFamily:"'DM Mono',monospace"}}>{n}</button>)}
+              {Array.from({length:base},(_,i)=>i+1).map(n=><button key={n} onClick={()=>setDays(n)} style={{width:28,height:28,borderRadius:6,border:`1px solid ${days===n?accent:T.tagBorder}`,background:days===n?accent+"22":"none",color:days===n?accent:T.textLight,fontSize:12,fontFamily:"'DM Mono',monospace"}}>{n}</button>)}
             </div>
             <span style={{fontSize:11,color:T.textLight}}>day{days!==1?"s":""}</span>
           </div>}

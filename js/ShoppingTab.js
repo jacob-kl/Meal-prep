@@ -87,6 +87,11 @@ function ShoppingTab({week}) {
  
   return (
     <div>
+      {week.budget?.range&&<details style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"10px 14px",marginBottom:16,color:T.textMid,fontSize:13,lineHeight:1.6}}>
+        <summary style={{cursor:"pointer"}}>Planning estimate · ${week.budget.range[0]}-${week.budget.range[1]} with pantry stock</summary>
+        {week.budget.fullRestockRange&&<p style={{marginTop:7}}>Full restock: about ${week.budget.fullRestockRange[0]}-${week.budget.fullRestockRange[1]}.</p>}
+        <p>{week.budget.basis}</p>
+      </details>}
       {week.budget?.foodCheckoutIfStockedEstimate!=null&&(
         <details style={{background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"10px 14px",marginBottom:16,color:T.textMid,fontSize:13,lineHeight:1.6}}>
           <summary style={{cursor:"pointer"}}>Estimated food checkout · ${week.budget.foodCheckoutIfStockedEstimate.toFixed(2)} if stocked</summary>

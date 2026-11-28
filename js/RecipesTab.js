@@ -124,7 +124,7 @@ function RecipesTab({allWeeks}) {
             ))}
             <span style={{fontSize:10,color:T.textLight,fontFamily:"'DM Mono',monospace",marginLeft:"auto"}}>{r.weeks.length>1?`${r.weeks.length} weeks`:r.weeks[0]}</span>
           </div>
-          {(r.category==="Dinner"||r.category==="Dessert")
+          {(r.category==="Dinner"||r.category==="Dessert"||r.obj.jake||r.obj.laine)
             ? <DinnerCard dinner={r.obj} week={{}}/>
             : <MealCard meal={r.obj} personLabel={r.category==="Sauce"?"Sauce":r.category==="Sides"?"Side":undefined} personColor={r.category==="Sauce"?T.green:r.category==="Sides"?T.gold:T.accent} forceOpen={false}/>}
         </div>

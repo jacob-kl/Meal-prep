@@ -1,0 +1,3578 @@
+{
+  "_v": 4,
+  "id": "2026-W49",
+  "label": "Week of November 30, 2026",
+  "_note": "Nov 30-Dec 6. Approved PDF plan, including shared Thursday PT travel meals and Friday off. All carbs are net; totalCarbs and fiber are separate. Recipe methods cover only that meal; use the opening prep schedule for cooking ahead. Nutrition is approximate; small herbs and spices are excluded.",
+  "jakeMacros": {
+    "cal": 2030,
+    "protein": 203,
+    "carbs": 20,
+    "fat": 126
+  },
+  "laineMacros": {
+    "cal": null,
+    "protein": 103,
+    "carbs": 20,
+    "fat": null
+  },
+  "dinners": [
+    {
+      "id": "w49-dinner-0",
+      "day": "Monday (2026-11-30)",
+      "date": "2026-11-30",
+      "name": "Pork medallions with mushroom cream & green beans",
+      "shireName": "Supper at the Prancing Pony",
+      "jake": {
+        "cal": 799.2,
+        "protein": 66.6,
+        "carbs": 9.9,
+        "fat": 52.9,
+        "fiber": 3.8,
+        "totalCarbs": 13.7
+      },
+      "laine": {
+        "cal": 306.1,
+        "protein": 21.2,
+        "carbs": 4.2,
+        "fat": 22.1,
+        "fiber": 1.5,
+        "totalCarbs": 5.7
+      },
+      "ingredients": [
+        {
+          "item": "Pork loin, raw - Jake 280 g, Laine 85 g",
+          "nutritionKey": "Pork loin",
+          "quantity": 365.0,
+          "unit": "g",
+          "displayQuantity": 365.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 280,
+            "laine": 85
+          }
+        },
+        {
+          "item": "Mushrooms - Jake 100 g, Laine 40 g",
+          "nutritionKey": "Mushrooms",
+          "quantity": 140.0,
+          "unit": "g",
+          "displayQuantity": 140.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 100,
+            "laine": 40
+          }
+        },
+        {
+          "item": "Heavy cream - Jake 55 g, Laine 25 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 80.0,
+          "unit": "g",
+          "displayQuantity": 80.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 55,
+            "laine": 25
+          }
+        },
+        {
+          "item": "Butter - Jake 14 g, Laine 7 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.5,
+          "unit": "tbsp",
+          "displayQuantity": 21.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        },
+        {
+          "item": "Sour cream - Jake 25 g, Laine 12 g",
+          "nutritionKey": "Daisy sour cream",
+          "quantity": 2.466666667,
+          "unit": "tbsp",
+          "displayQuantity": 37.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.666666667,
+            "laine": 0.8
+          }
+        },
+        {
+          "item": "Green beans - Jake 100 g, Laine 40 g",
+          "nutritionKey": "Green beans",
+          "quantity": 140.0,
+          "unit": "g",
+          "displayQuantity": 140.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 100,
+            "laine": 40
+          }
+        },
+        {
+          "item": "Low-sodium beef broth - Jake 40 g, Laine 20 g",
+          "nutritionKey": "Beef broth",
+          "quantity": 60.0,
+          "unit": "g",
+          "displayQuantity": 60.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 40,
+            "laine": 20
+          }
+        },
+        {
+          "item": "Minced garlic - Jake 3 g, Laine 1.5 g",
+          "nutritionKey": "Garlic",
+          "quantity": 1.5,
+          "unit": "clove",
+          "displayQuantity": 4.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        }
+      ],
+      "steps": [
+        "Slice pork into thick medallions; season with salt and pepper. Sear in half the butter until 145 F. Rest at least 3 min.",
+        "Brown mushrooms in the pan. Add garlic, broth and cream; simmer until spoon-coating. Turn off heat before stirring in sour cream.",
+        "Cook green beans in the remaining butter. Divide the pork, vegetables and sauce using the listed portions."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions."
+    },
+    {
+      "id": "w49-dinner-1",
+      "day": "Tuesday (2026-12-01)",
+      "date": "2026-12-01",
+      "name": "Bacon-cheddar turkey mini meatloaves & cauliflower mash",
+      "shireName": "Gondor's Mini Meatloaves",
+      "jake": {
+        "cal": 911.5,
+        "protein": 71.7,
+        "carbs": 7.1,
+        "fat": 65.8,
+        "fiber": 3.7,
+        "totalCarbs": 10.7
+      },
+      "laine": {
+        "cal": 347.4,
+        "protein": 23.8,
+        "carbs": 3.3,
+        "fat": 26.3,
+        "fiber": 1.7,
+        "totalCarbs": 5.1
+      },
+      "ingredients": [
+        {
+          "item": "Ground turkey 93/7, raw - Jake 280 g, Laine 85 g (raw weight)",
+          "nutritionKey": "Ground turkey 93/7",
+          "quantity": 365.0,
+          "unit": "g_raw",
+          "displayQuantity": 365.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 280,
+            "laine": 85
+          }
+        },
+        {
+          "item": "Bacon, cooked - Jake 16 g, Laine 6 g",
+          "nutritionKey": "Bacon (cooked)",
+          "quantity": 22.0,
+          "unit": "g",
+          "displayQuantity": 22.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 16,
+            "laine": 6
+          }
+        },
+        {
+          "item": "Block cheddar - Jake 30 g, Laine 12 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 42.0,
+          "unit": "g",
+          "displayQuantity": 42.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 30,
+            "laine": 12
+          }
+        },
+        {
+          "item": "Almond flour - Jake 8 g, Laine 3 g",
+          "nutritionKey": "Almond flour",
+          "quantity": 11.0,
+          "unit": "g",
+          "displayQuantity": 11.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 8,
+            "laine": 3
+          }
+        },
+        {
+          "item": "Cauliflower - Jake 130 g, Laine 65 g",
+          "nutritionKey": "Cauliflower",
+          "quantity": 195.0,
+          "unit": "g",
+          "displayQuantity": 195.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 130,
+            "laine": 65
+          }
+        },
+        {
+          "item": "Butter - Jake 12 g, Laine 6 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.285714286,
+          "unit": "tbsp",
+          "displayQuantity": 18.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.857142857,
+            "laine": 0.428571429
+          }
+        },
+        {
+          "item": "Heavy cream - Jake 35 g, Laine 18 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 53.0,
+          "unit": "g",
+          "displayQuantity": 53.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 35,
+            "laine": 18
+          }
+        },
+        {
+          "item": "Dijon mustard - Jake 5 g, Laine 2.5 g",
+          "nutritionKey": "Dijon mustard",
+          "quantity": 1.5,
+          "unit": "tsp",
+          "displayQuantity": 7.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        }
+      ],
+      "steps": [
+        "Heat oven to 400 F. Mix turkey, almond flour, Dijon and half the cheddar; shape separate mini loaves, with Laine's smaller. Top with bacon and remaining cheddar.",
+        "Bake until the center reaches 165 F, about 20-25 min. Use the thermometer rather than size alone.",
+        "Steam cauliflower until tender, drain very well, then blend with butter and cream. Serve the measured mash beside each loaf."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions."
+    },
+    {
+      "id": "w49-dinner-2",
+      "day": "Wednesday (2026-12-02)",
+      "date": "2026-12-02",
+      "name": "Coriander-lime chicken thighs, browned cabbage & cilantro cream",
+      "shireName": "Samwise's Lime Chicken",
+      "jake": {
+        "cal": 672.5,
+        "protein": 63.5,
+        "carbs": 7.7,
+        "fat": 40.8,
+        "fiber": 3.5,
+        "totalCarbs": 11.2
+      },
+      "laine": {
+        "cal": 263.7,
+        "protein": 19.7,
+        "carbs": 3.8,
+        "fat": 17.9,
+        "fiber": 1.8,
+        "totalCarbs": 5.6
+      },
+      "ingredients": [
+        {
+          "item": "Boneless, skinless chicken thighs, raw - Jake 300 g, Laine 90 g (raw weight)",
+          "nutritionKey": "Chicken thighs (boneless, skinless)",
+          "quantity": 390.0,
+          "unit": "g_raw",
+          "displayQuantity": 390.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 300,
+            "laine": 90
+          }
+        },
+        {
+          "item": "Green cabbage - Jake 130 g, Laine 65 g",
+          "nutritionKey": "Green cabbage",
+          "quantity": 195.0,
+          "unit": "g",
+          "displayQuantity": 195.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 130,
+            "laine": 65
+          }
+        },
+        {
+          "item": "Butter - Jake 16 g, Laine 8 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.714285714,
+          "unit": "tbsp",
+          "displayQuantity": 24.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.142857143,
+            "laine": 0.571428571
+          }
+        },
+        {
+          "item": "Sour cream - Jake 45 g, Laine 22 g",
+          "nutritionKey": "Daisy sour cream",
+          "quantity": 4.466666667,
+          "unit": "tbsp",
+          "displayQuantity": 67.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 3.0,
+            "laine": 1.466666667
+          }
+        },
+        {
+          "item": "Olive oil - Jake 8 g, Laine 4 g",
+          "nutritionKey": "Olive oil",
+          "quantity": 0.857142857,
+          "unit": "tbsp",
+          "displayQuantity": 12.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.571428571,
+            "laine": 0.285714286
+          }
+        },
+        {
+          "item": "Lime juice - Jake 10 g, Laine 5 g",
+          "nutritionKey": "Lime juice",
+          "quantity": 1.0,
+          "unit": "tbsp",
+          "displayQuantity": 15.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.666666667,
+            "laine": 0.333333333
+          }
+        },
+        {
+          "item": "Minced garlic - Jake 3 g, Laine 1.5 g",
+          "nutritionKey": "Garlic",
+          "quantity": 1.5,
+          "unit": "clove",
+          "displayQuantity": 4.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        },
+        {
+          "item": "Fresh cilantro - Jake 5 g, Laine 2 g",
+          "nutritionKey": "Fresh herbs (parsley/dill/cilantro)",
+          "quantity": 7.0,
+          "unit": "g",
+          "displayQuantity": 7.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 5,
+            "laine": 2
+          }
+        },
+        {
+          "item": "Ground coriander - 1/2 tsp; cumin - 1/4 tsp",
+          "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+        }
+      ],
+      "steps": [
+        "Season thighs with ground coriander, cumin, salt and pepper. Sear in olive oil and finish covered until at least 165 F.",
+        "Brown sliced cabbage in butter over medium-high heat; add garlic for the last 30 seconds.",
+        "Mix sour cream with lime and chopped cilantro. Spoon over the chicken. Add cayenne or hot sauce to Jake's plate only."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions."
+    },
+    {
+      "id": "w49-dinner-3",
+      "day": "Thursday (2026-12-03)",
+      "date": "2026-12-03",
+      "name": "Sausage-cabbage skillet with thyme mustard cream",
+      "shireName": "The Green Dragon Skillet",
+      "jake": {
+        "cal": 882.0,
+        "protein": 41.2,
+        "carbs": 7.5,
+        "fat": 72.5,
+        "fiber": 4.1,
+        "totalCarbs": 11.5
+      },
+      "laine": {
+        "cal": 349.3,
+        "protein": 15.5,
+        "carbs": 3.3,
+        "fat": 29.1,
+        "fiber": 1.8,
+        "totalCarbs": 5.1
+      },
+      "ingredients": [
+        {
+          "item": "Mild bulk pork sausage, raw - Jake 220 g, Laine 75 g (raw weight)",
+          "nutritionKey": "Ground sausage (pork)",
+          "quantity": 295.0,
+          "unit": "g_raw",
+          "displayQuantity": 295.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 220,
+            "laine": 75
+          }
+        },
+        {
+          "item": "Green cabbage - Jake 150 g, Laine 65 g",
+          "nutritionKey": "Green cabbage",
+          "quantity": 215.0,
+          "unit": "g",
+          "displayQuantity": 215.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 150,
+            "laine": 65
+          }
+        },
+        {
+          "item": "Heavy cream - Jake 55 g, Laine 25 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 80.0,
+          "unit": "g",
+          "displayQuantity": 80.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 55,
+            "laine": 25
+          }
+        },
+        {
+          "item": "Butter - Jake 10 g, Laine 5 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.071428571,
+          "unit": "tbsp",
+          "displayQuantity": 15.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.714285714,
+            "laine": 0.357142857
+          }
+        },
+        {
+          "item": "Dijon mustard - Jake 8 g, Laine 4 g",
+          "nutritionKey": "Dijon mustard",
+          "quantity": 2.4,
+          "unit": "tsp",
+          "displayQuantity": 12.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.6,
+            "laine": 0.8
+          }
+        },
+        {
+          "item": "Grated Parmesan - Jake 15 g, Laine 7.5 g",
+          "nutritionKey": "Parmesan cheese (grated)",
+          "quantity": 4.5,
+          "unit": "tbsp",
+          "displayQuantity": 22.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 3.0,
+            "laine": 1.5
+          }
+        },
+        {
+          "item": "Low-sodium beef broth - Jake 35 g, Laine 20 g",
+          "nutritionKey": "Beef broth",
+          "quantity": 55.0,
+          "unit": "g",
+          "displayQuantity": 55.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 35,
+            "laine": 20
+          }
+        },
+        {
+          "item": "Dried thyme - 1/2 tsp",
+          "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+        }
+      ],
+      "steps": [
+        "Brown mild bulk sausage thoroughly to 160 F. Lift out and discard excess rendered fat.",
+        "Add butter and sliced cabbage; cook until browned and just tender. Add thyme and broth, then cream and Dijon.",
+        "Reduce until thick enough to coat the cabbage. Return sausage, melt in Parmesan and portion onto plates."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions."
+    },
+    {
+      "id": "w49-dinner-4",
+      "day": "Friday (2026-12-04)",
+      "date": "2026-12-04",
+      "name": "Crisp salmon with lime brown butter & roasted asparagus",
+      "shireName": "Rivendell Salmon",
+      "jake": {
+        "cal": 703.7,
+        "protein": 49.2,
+        "carbs": 4.3,
+        "fat": 51.8,
+        "fiber": 3.1,
+        "totalCarbs": 7.3
+      },
+      "laine": {
+        "cal": 274.8,
+        "protein": 17.6,
+        "carbs": 2.1,
+        "fat": 20.9,
+        "fiber": 1.5,
+        "totalCarbs": 3.7
+      },
+      "ingredients": [
+        {
+          "item": "Salmon, raw - Jake 230 g, Laine 80 g (raw weight)",
+          "nutritionKey": "Atlantic salmon (raw)",
+          "quantity": 310.0,
+          "unit": "g_raw",
+          "displayQuantity": 310.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 230,
+            "laine": 80
+          }
+        },
+        {
+          "item": "Butter - Jake 18 g, Laine 9 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.928571429,
+          "unit": "tbsp",
+          "displayQuantity": 27.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.285714286,
+            "laine": 0.642857143
+          }
+        },
+        {
+          "item": "Olive oil - Jake 7 g, Laine 3 g",
+          "nutritionKey": "Olive oil",
+          "quantity": 0.714285714,
+          "unit": "tbsp",
+          "displayQuantity": 10.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.5,
+            "laine": 0.214285714
+          }
+        },
+        {
+          "item": "Lime juice - Jake 10 g, Laine 5 g",
+          "nutritionKey": "Lime juice",
+          "quantity": 1.0,
+          "unit": "tbsp",
+          "displayQuantity": 15.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.666666667,
+            "laine": 0.333333333
+          }
+        },
+        {
+          "item": "Minced garlic - Jake 3 g, Laine 1.5 g",
+          "nutritionKey": "Garlic",
+          "quantity": 1.5,
+          "unit": "clove",
+          "displayQuantity": 4.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        },
+        {
+          "item": "Asparagus - Jake 140 g, Laine 70 g",
+          "nutritionKey": "Asparagus",
+          "quantity": 210.0,
+          "unit": "g",
+          "displayQuantity": 210.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 140,
+            "laine": 70
+          }
+        }
+      ],
+      "steps": [
+        "Heat oven to 425 F. Toss asparagus with olive oil and salt; roast until crisp-tender, about 10-12 min.",
+        "Sear dry salmon skin-side down, then finish gently to 145 F. Keep Laine's smaller portion separate.",
+        "Brown butter in a small pan, remove from heat, then stir in garlic and lime. Spoon over the fish; serve peach crumble after supper."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions.",
+      "desserts": [
+        {
+          "id": "w49-dessert",
+          "day": "Friday dessert (December 4)",
+          "name": "Peach-pecan crumble with cold cream",
+          "shireName": "The Shire's Peach Crumble",
+          "jake": {
+            "cal": 262.8,
+            "protein": 4.3,
+            "carbs": 6.2,
+            "fat": 24.9,
+            "fiber": 2.8,
+            "totalCarbs": 9.0
+          },
+          "laine": {
+            "cal": 262.8,
+            "protein": 4.3,
+            "carbs": 6.2,
+            "fat": 24.9,
+            "fiber": 2.8,
+            "totalCarbs": 9.0
+          },
+          "ingredients": [
+            {
+              "item": "Unsweetened peach slices - Jake 50 g, Laine 50 g",
+              "nutritionKey": "Peaches",
+              "quantity": 100,
+              "unit": "g",
+              "displayQuantity": 100,
+              "displayUnit": "g",
+              "personQuantities": {
+                "jake": 50,
+                "laine": 50
+              }
+            },
+            {
+              "item": "Almond flour - Jake 12 g, Laine 12 g",
+              "nutritionKey": "Almond flour",
+              "quantity": 24,
+              "unit": "g",
+              "displayQuantity": 24,
+              "displayUnit": "g",
+              "personQuantities": {
+                "jake": 12,
+                "laine": 12
+              }
+            },
+            {
+              "item": "Pecans - Jake 8 g, Laine 8 g",
+              "nutritionKey": "Pecans",
+              "quantity": 16,
+              "unit": "g",
+              "displayQuantity": 16,
+              "displayUnit": "g",
+              "personQuantities": {
+                "jake": 8,
+                "laine": 8
+              }
+            },
+            {
+              "item": "Butter - Jake 8 g, Laine 8 g",
+              "nutritionKey": "Butter",
+              "quantity": 1.142857143,
+              "unit": "tbsp",
+              "displayQuantity": 16,
+              "displayUnit": "g",
+              "personQuantities": {
+                "jake": 0.571428571,
+                "laine": 0.571428571
+              }
+            },
+            {
+              "item": "Heavy cream - Jake 18 g, Laine 18 g",
+              "nutritionKey": "Heavy cream",
+              "quantity": 36,
+              "unit": "g",
+              "displayQuantity": 36,
+              "displayUnit": "g",
+              "personQuantities": {
+                "jake": 18,
+                "laine": 18
+              }
+            },
+            {
+              "item": "Cinnamon - 1/4 tsp; monk fruit/erythritol blend - 1-2 tsp",
+              "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+            }
+          ],
+          "steps": [
+            "Heat oven to 350 F. Divide 100 g chopped unsweetened peaches and 1/4 tsp cinnamon between two 8 oz ramekins.",
+            "Rub the 16 g butter into the 24 g almond flour, 16 g pecans and 1-2 tsp cup-for-cup monk fruit/erythritol blend. Divide over the fruit.",
+            "Bake 20-25 min until golden and bubbling. Rest 10 min. Serve each ramekin with 18 g cold cream."
+          ],
+          "note": "50 g peach per person; the ramekins will be partly filled. Use unsweetened fruit and a sweetener without sugar or dextrose.",
+          "netCarbs": true,
+          "recipeCategory": "Dessert"
+        }
+      ]
+    },
+    {
+      "id": "w49-dinner-5",
+      "day": "Saturday (2026-12-05)",
+      "date": "2026-12-05",
+      "name": "Coffee-rubbed steak, garlic-butter mushrooms & Parmesan mash",
+      "shireName": "Rohan's Steak Supper",
+      "jake": {
+        "cal": 817.5,
+        "protein": 71.5,
+        "carbs": 8.5,
+        "fat": 56.1,
+        "fiber": 3.5,
+        "totalCarbs": 12.0
+      },
+      "laine": {
+        "cal": 322.4,
+        "protein": 23.9,
+        "carbs": 4.0,
+        "fat": 23.6,
+        "fiber": 1.7,
+        "totalCarbs": 5.7
+      },
+      "ingredients": [
+        {
+          "item": "Steak, raw - Jake 280 g, Laine 85 g (raw weight)",
+          "nutritionKey": "Flank/sirloin steak",
+          "quantity": 365.0,
+          "unit": "g_raw",
+          "displayQuantity": 365.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 280,
+            "laine": 85
+          }
+        },
+        {
+          "item": "Mushrooms - Jake 100 g, Laine 40 g",
+          "nutritionKey": "Mushrooms",
+          "quantity": 140.0,
+          "unit": "g",
+          "displayQuantity": 140.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 100,
+            "laine": 40
+          }
+        },
+        {
+          "item": "Cauliflower - Jake 120 g, Laine 60 g",
+          "nutritionKey": "Cauliflower",
+          "quantity": 180.0,
+          "unit": "g",
+          "displayQuantity": 180.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 120,
+            "laine": 60
+          }
+        },
+        {
+          "item": "Butter - Jake 18 g, Laine 9 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.928571429,
+          "unit": "tbsp",
+          "displayQuantity": 27.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.285714286,
+            "laine": 0.642857143
+          }
+        },
+        {
+          "item": "Heavy cream - Jake 40 g, Laine 20 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 60.0,
+          "unit": "g",
+          "displayQuantity": 60.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 40,
+            "laine": 20
+          }
+        },
+        {
+          "item": "Grated Parmesan - Jake 15 g, Laine 7.5 g",
+          "nutritionKey": "Parmesan cheese (grated)",
+          "quantity": 4.5,
+          "unit": "tbsp",
+          "displayQuantity": 22.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 3.0,
+            "laine": 1.5
+          }
+        },
+        {
+          "item": "Minced garlic - Jake 3 g, Laine 1.5 g",
+          "nutritionKey": "Garlic",
+          "quantity": 1.5,
+          "unit": "clove",
+          "displayQuantity": 4.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        },
+        {
+          "item": "Smoked paprika and finely ground coffee - 1/2 tsp each",
+          "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+        }
+      ],
+      "steps": [
+        "Season steak with finely ground coffee, smoked paprika, salt and pepper. Sear to 145 F and rest at least 3 min.",
+        "Brown mushrooms in half the butter. Add garlic at the end.",
+        "Steam and drain cauliflower; blend with remaining butter, cream and Parmesan. Slice steak and serve with the measured mushrooms and mash."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions."
+    },
+    {
+      "id": "w49-dinner-6",
+      "day": "Sunday (2026-12-06)",
+      "date": "2026-12-06",
+      "name": "Thyme-roasted chicken thighs, pan gravy & golden zucchini",
+      "shireName": "The Bag End Sunday Roast",
+      "jake": {
+        "cal": 719.3,
+        "protein": 63.8,
+        "carbs": 4.8,
+        "fat": 48.4,
+        "fiber": 1.8,
+        "totalCarbs": 6.6
+      },
+      "laine": {
+        "cal": 286.6,
+        "protein": 19.9,
+        "carbs": 2.4,
+        "fat": 21.6,
+        "fiber": 0.9,
+        "totalCarbs": 3.3
+      },
+      "ingredients": [
+        {
+          "item": "Boneless, skinless chicken thighs, raw - Jake 300 g, Laine 90 g (raw weight)",
+          "nutritionKey": "Chicken thighs (boneless, skinless)",
+          "quantity": 390.0,
+          "unit": "g_raw",
+          "displayQuantity": 390.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 300,
+            "laine": 90
+          }
+        },
+        {
+          "item": "Zucchini - Jake 160 g, Laine 80 g",
+          "nutritionKey": "Zucchini",
+          "quantity": 240.0,
+          "unit": "g",
+          "displayQuantity": 240.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 160,
+            "laine": 80
+          }
+        },
+        {
+          "item": "Butter - Jake 18 g, Laine 9 g",
+          "nutritionKey": "Butter",
+          "quantity": 1.928571429,
+          "unit": "tbsp",
+          "displayQuantity": 27.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.285714286,
+            "laine": 0.642857143
+          }
+        },
+        {
+          "item": "Heavy cream - Jake 45 g, Laine 22 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 67.0,
+          "unit": "g",
+          "displayQuantity": 67.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 45,
+            "laine": 22
+          }
+        },
+        {
+          "item": "Low-sodium beef broth - Jake 50 g, Laine 25 g",
+          "nutritionKey": "Beef broth",
+          "quantity": 75.0,
+          "unit": "g",
+          "displayQuantity": 75.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 50,
+            "laine": 25
+          }
+        },
+        {
+          "item": "Dijon mustard - Jake 5 g, Laine 2.5 g",
+          "nutritionKey": "Dijon mustard",
+          "quantity": 1.5,
+          "unit": "tsp",
+          "displayQuantity": 7.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 1.0,
+            "laine": 0.5
+          }
+        },
+        {
+          "item": "Olive oil - Jake 5 g, Laine 2.5 g",
+          "nutritionKey": "Olive oil",
+          "quantity": 0.535714286,
+          "unit": "tbsp",
+          "displayQuantity": 7.5,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.357142857,
+            "laine": 0.178571429
+          }
+        },
+        {
+          "item": "Dried thyme - 1/2 tsp",
+          "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+        }
+      ],
+      "steps": [
+        "Season chicken with thyme, salt and pepper. Sear in olive oil; finish in a 400 F oven to at least 165 F.",
+        "Brown zucchini coins in half the butter without crowding.",
+        "Deglaze the chicken pan with broth. Add cream and Dijon; reduce until thick, then whisk in remaining butter. Spoon over the chicken."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Dinner",
+      "note": "Laine's supper is half of a comparable former Laine serving. Use the separately listed portions."
+    }
+  ],
+  "prepPlan": [
+    "Sunday Nov 29: Make Jake's three lunch bowls and Laine's three cold lunch choices. Keep nuts and dressings separate.",
+    "Of 615 g cooked turkey: refrigerate 165 g for Mon-Wed. Freeze 160 g for Thursday soup, 50 g for Saturday and 240 g for Sunday. Freeze 330 g raw pork for Saturday lunch. Keep chilled food at 40 F or below and use within 3-4 days.",
+    "Wednesday: Thaw the 160 g soup turkey in the refrigerator during the day. In the evening, make the road egg bites and chowder. Chill promptly in shallow containers.",
+    "Thursday morning: Reheat soup to 165 F. Preheat food thermoses with boiling water for a few minutes; empty and immediately fill with hot soup. Seal until lunch; soup must stay at 140 F or above. Put egg bites and Laine's remaining Second Breakfast and Afternoon Tea choices in a cooler with two ice packs at 40 F or below.",
+    "Thursday night: Thaw Friday salmon in the refrigerator. Friday morning: thaw Saturday's raw pork and 50 g cooked turkey. Saturday: cook and chill the pork for lunch, and thaw Sunday's 240 g cooked turkey in the refrigerator.",
+    "Friday and weekend breakfasts are cooked fresh. Each recipe's ingredient list and method cover only that meal; all cooking ahead, freezing and thawing is kept here."
+  ],
+  "travelMeals": [
+    {
+      "id": "w49-tb",
+      "day": "Thursday road breakfast (December 3)",
+      "date": "2026-12-03",
+      "name": "Bacon-cheddar mini egg bites",
+      "shireName": "Bilbo's Road Bites",
+      "jake": {
+        "cal": 531.7,
+        "protein": 31.6,
+        "carbs": 2.8,
+        "fat": 43.2,
+        "fiber": 0.0,
+        "totalCarbs": 2.8
+      },
+      "laine": {
+        "cal": 265.8,
+        "protein": 15.8,
+        "carbs": 1.4,
+        "fat": 21.6,
+        "fiber": 0.0,
+        "totalCarbs": 1.4
+      },
+      "ingredients": [
+        {
+          "item": "Large eggs - 4 eggs",
+          "nutritionKey": "Eggs (large)",
+          "quantity": 4,
+          "unit": "egg",
+          "displayQuantity": 4,
+          "displayUnit": "egg"
+        },
+        {
+          "item": "Bacon, cooked - 30 g",
+          "nutritionKey": "Bacon (cooked)",
+          "quantity": 30,
+          "unit": "g",
+          "displayQuantity": 30,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Block cheddar - 50 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 50,
+          "unit": "g",
+          "displayQuantity": 50,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Heavy cream - 30 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 30,
+          "unit": "g",
+          "displayQuantity": 30,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Butter - 6 g",
+          "nutritionKey": "Butter",
+          "quantity": 0.428571429,
+          "unit": "tbsp",
+          "displayQuantity": 6,
+          "displayUnit": "g"
+        }
+      ],
+      "ingredientMode": "batch",
+      "batchYield": "12 mini egg bites",
+      "portions": {
+        "jake": "8 mini egg bites",
+        "laine": "4 mini egg bites"
+      },
+      "netCarbs": true,
+      "recipeCategory": "Breakfast",
+      "steps": [
+        "Heat oven to 350 F. Brush 12 silicone mini-muffin wells with the 6 g butter.",
+        "Whisk the 4 eggs with 30 g cream. Fold in 30 g finely chopped cooked bacon and 50 g cheddar. Divide evenly between the 12 wells.",
+        "Bake 12-16 min until set and 160 F in the center. Serve 8 bites for Jake and 4 for Laine."
+      ]
+    },
+    {
+      "id": "w49-tl",
+      "day": "Thursday thermos lunch (December 3)",
+      "date": "2026-12-03",
+      "name": "Thick turkey, bacon and cauliflower chowder",
+      "shireName": "The Prancing Pony Chowder",
+      "jake": {
+        "cal": 662.4,
+        "protein": 50.4,
+        "carbs": 9.6,
+        "fat": 46.1,
+        "fiber": 3.2,
+        "totalCarbs": 12.8
+      },
+      "laine": {
+        "cal": 397.5,
+        "protein": 30.2,
+        "carbs": 5.8,
+        "fat": 27.7,
+        "fiber": 1.9,
+        "totalCarbs": 7.7
+      },
+      "ingredients": [
+        {
+          "item": "Cauliflower - 250 g",
+          "nutritionKey": "Cauliflower",
+          "quantity": 250,
+          "unit": "g",
+          "displayQuantity": 250,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Turkey breast, cooked - 160 g",
+          "nutritionKey": "Turkey breast (cooked)",
+          "quantity": 160,
+          "unit": "g",
+          "displayQuantity": 160,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Block cheddar - 60 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 60,
+          "unit": "g",
+          "displayQuantity": 60,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Heavy cream - 60 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 60,
+          "unit": "g",
+          "displayQuantity": 60,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Cream cheese - 40 g",
+          "nutritionKey": "Cream cheese",
+          "quantity": 2.75862069,
+          "unit": "tbsp",
+          "displayQuantity": 40,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Bacon, cooked - 20 g",
+          "nutritionKey": "Bacon (cooked)",
+          "quantity": 20,
+          "unit": "g",
+          "displayQuantity": 20,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Butter - 10 g",
+          "nutritionKey": "Butter",
+          "quantity": 0.714285714,
+          "unit": "tbsp",
+          "displayQuantity": 10,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Low-sodium beef broth - 180 g",
+          "nutritionKey": "Beef broth",
+          "quantity": 180,
+          "unit": "g",
+          "displayQuantity": 180,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Minced garlic - 3 g",
+          "nutritionKey": "Garlic",
+          "quantity": 1.0,
+          "unit": "clove",
+          "displayQuantity": 3,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Smoked paprika - 1/2 tsp",
+          "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+        }
+      ],
+      "ingredientMode": "batch",
+      "batchYield": "800 g finished thick soup",
+      "portions": {
+        "jake": "500 g soup",
+        "laine": "300 g soup"
+      },
+      "netCarbs": true,
+      "recipeCategory": "Lunch",
+      "steps": [
+        "Cut cauliflower small. Simmer it in the broth with butter and garlic, covered, for 12-15 min until very tender.",
+        "Blend the cauliflower mixture with cream and cream cheese until smooth. Return to low heat and stir in cheddar gradually.",
+        "Add finely shredded cooked turkey, chopped cooked bacon and 1/2 tsp smoked paprika. Stir gently to 165 F throughout.",
+        "Weigh the finished soup; add only enough hot water to bring the batch to 800 g. Keep it thick and spoonable. Serve Jake 500 g and Laine 300 g."
+      ]
+    }
+  ],
+  "weekendMeals": [
+    {
+      "id": "w49-fb",
+      "day": "Friday Breakfast",
+      "date": "2026-12-04",
+      "name": "Bacon-cheddar eggs & avocado",
+      "shireName": "A Bag End Breakfast",
+      "jake": {
+        "cal": 514.6,
+        "protein": 31.2,
+        "carbs": 3.0,
+        "fat": 40.9,
+        "fiber": 2.7,
+        "totalCarbs": 5.7
+      },
+      "laine": {
+        "cal": 473.5,
+        "protein": 27.1,
+        "carbs": 2.9,
+        "fat": 38.4,
+        "fiber": 2.7,
+        "totalCarbs": 5.5
+      },
+      "ingredients": [
+        {
+          "item": "Large eggs - Jake 3 eggs, Laine 2 eggs",
+          "nutritionKey": "Eggs (large)",
+          "quantity": 5.0,
+          "unit": "egg",
+          "displayQuantity": 5.0,
+          "displayUnit": "egg",
+          "personQuantities": {
+            "jake": 3,
+            "laine": 2
+          }
+        },
+        {
+          "item": "Bacon, cooked - Jake 18 g, Laine 20 g",
+          "nutritionKey": "Bacon (cooked)",
+          "quantity": 38.0,
+          "unit": "g",
+          "displayQuantity": 38.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 18,
+            "laine": 20
+          }
+        },
+        {
+          "item": "Block cheddar - Jake 25 g, Laine 30 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 55.0,
+          "unit": "g",
+          "displayQuantity": 55.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 25,
+            "laine": 30
+          }
+        },
+        {
+          "item": "Avocado flesh - Jake 40 g, Laine 40 g",
+          "nutritionKey": "Avocado",
+          "quantity": 0.4,
+          "unit": "avocado",
+          "displayQuantity": 80.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.2,
+            "laine": 0.2
+          }
+        },
+        {
+          "item": "Butter - Jake 5 g, Laine 5 g",
+          "nutritionKey": "Butter",
+          "quantity": 0.714285714,
+          "unit": "tbsp",
+          "displayQuantity": 10.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.357142857,
+            "laine": 0.357142857
+          }
+        }
+      ],
+      "steps": [
+        "Scramble eggs in butter; fold in cheddar. Serve with cooked bacon and fresh avocado."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Breakfast"
+    },
+    {
+      "id": "w49-fl",
+      "day": "Friday Luncheon",
+      "date": "2026-12-04",
+      "name": "Warm ranch-chicken lettuce boats",
+      "shireName": "The Green Dragon Lettuce Boats",
+      "jake": {
+        "cal": 518.9,
+        "protein": 51.2,
+        "carbs": 2.9,
+        "fat": 32.7,
+        "fiber": 1.0,
+        "totalCarbs": 4.0
+      },
+      "laine": {
+        "cal": 510.2,
+        "protein": 42.2,
+        "carbs": 2.6,
+        "fat": 36.0,
+        "fiber": 0.8,
+        "totalCarbs": 3.4
+      },
+      "ingredients": [
+        {
+          "item": "Boneless, skinless chicken thighs, raw - Jake 200 g, Laine 150 g",
+          "nutritionKey": "Chicken thighs (boneless, skinless)",
+          "quantity": 350.0,
+          "unit": "g_raw",
+          "displayQuantity": 350.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 200,
+            "laine": 150
+          }
+        },
+        {
+          "item": "Block cheddar - Jake 25 g, Laine 30 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 55.0,
+          "unit": "g",
+          "displayQuantity": 55.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 25,
+            "laine": 30
+          }
+        },
+        {
+          "item": "Avocado-oil mayonnaise - Jake 15 g, Laine 20 g",
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "quantity": 35.0,
+          "unit": "g",
+          "displayQuantity": 35.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 15,
+            "laine": 20
+          }
+        },
+        {
+          "item": "Bacon, cooked - Jake 12 g, Laine 12 g",
+          "nutritionKey": "Bacon (cooked)",
+          "quantity": 24.0,
+          "unit": "g",
+          "displayQuantity": 24.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 12,
+            "laine": 12
+          }
+        },
+        {
+          "item": "Romaine - Jake 40 g, Laine 30 g",
+          "nutritionKey": "Romaine lettuce",
+          "quantity": 70.0,
+          "unit": "g",
+          "displayQuantity": 70.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 40,
+            "laine": 30
+          }
+        },
+        {
+          "item": "Cucumber - Jake 40 g, Laine 30 g",
+          "nutritionKey": "English cucumber",
+          "quantity": 70.0,
+          "unit": "g",
+          "displayQuantity": 70.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 40,
+            "laine": 30
+          }
+        },
+        {
+          "item": "Dried dill and parsley - 1/4 tsp each",
+          "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+        }
+      ],
+      "steps": [
+        "Cook chicken to 165 F, then slice. Mix mayo with dried dill and parsley. Fill romaine with chicken, cheddar and bacon; spoon dressing over. Serve cucumber alongside."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Lunch"
+    },
+    {
+      "id": "w49-sb",
+      "day": "Saturday Breakfast",
+      "date": "2026-12-05",
+      "name": "Sausage & Swiss scramble",
+      "shireName": "Merry's Saturday Scramble",
+      "jake": {
+        "cal": 395.2,
+        "protein": 26.5,
+        "carbs": 2.1,
+        "fat": 30.2,
+        "fiber": 0.0,
+        "totalCarbs": 2.1
+      },
+      "laine": {
+        "cal": 258.0,
+        "protein": 16.3,
+        "carbs": 1.4,
+        "fat": 20.2,
+        "fiber": 0.0,
+        "totalCarbs": 1.4
+      },
+      "ingredients": [
+        {
+          "item": "Large eggs - Jake 2 eggs, Laine 1 egg",
+          "nutritionKey": "Eggs (large)",
+          "quantity": 3.0,
+          "unit": "egg",
+          "displayQuantity": 3.0,
+          "displayUnit": "egg",
+          "personQuantities": {
+            "jake": 2,
+            "laine": 1
+          }
+        },
+        {
+          "item": "Mild bulk pork sausage, raw - Jake 55 g, Laine 35 g",
+          "nutritionKey": "Ground sausage (pork)",
+          "quantity": 90.0,
+          "unit": "g_raw",
+          "displayQuantity": 90.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 55,
+            "laine": 35
+          }
+        },
+        {
+          "item": "Swiss cheese - Jake 25 g, Laine 20 g",
+          "nutritionKey": "Swiss cheese",
+          "quantity": 45.0,
+          "unit": "g",
+          "displayQuantity": 45.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 25,
+            "laine": 20
+          }
+        },
+        {
+          "item": "Butter - Jake 4 g, Laine 4 g",
+          "nutritionKey": "Butter",
+          "quantity": 0.571428571,
+          "unit": "tbsp",
+          "displayQuantity": 8.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.285714286,
+            "laine": 0.285714286
+          }
+        }
+      ],
+      "steps": [
+        "Brown sausage to 160 F. Add butter and eggs; scramble until set, then melt in Swiss."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Breakfast"
+    },
+    {
+      "id": "w49-sl",
+      "day": "Saturday Luncheon",
+      "date": "2026-12-05",
+      "name": "Cold pork, cheddar & pecan crunch bowls",
+      "shireName": "The Bree Market Lunch",
+      "jake": {
+        "cal": 615.8,
+        "protein": 54.2,
+        "carbs": 3.2,
+        "fat": 41.7,
+        "fiber": 2.2,
+        "totalCarbs": 5.4
+      },
+      "laine": {
+        "cal": 379.7,
+        "protein": 28.3,
+        "carbs": 2.3,
+        "fat": 28.0,
+        "fiber": 1.7,
+        "totalCarbs": 4.0
+      },
+      "ingredients": [
+        {
+          "item": "Pork loin, raw - Jake 220 g, Laine 110 g",
+          "nutritionKey": "Pork loin",
+          "quantity": 330.0,
+          "unit": "g",
+          "displayQuantity": 330.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 220,
+            "laine": 110
+          }
+        },
+        {
+          "item": "Block cheddar - Jake 25 g, Laine 15 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 40.0,
+          "unit": "g",
+          "displayQuantity": 40.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 25,
+            "laine": 15
+          }
+        },
+        {
+          "item": "Pecans - Jake 12 g, Laine 10 g",
+          "nutritionKey": "Pecans",
+          "quantity": 22.0,
+          "unit": "g",
+          "displayQuantity": 22.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 12,
+            "laine": 10
+          }
+        },
+        {
+          "item": "Avocado-oil mayonnaise - Jake 15 g, Laine 12 g",
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "quantity": 27.0,
+          "unit": "g",
+          "displayQuantity": 27.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 15,
+            "laine": 12
+          }
+        },
+        {
+          "item": "Dijon mustard - Jake 4 g, Laine 3 g",
+          "nutritionKey": "Dijon mustard",
+          "quantity": 1.4,
+          "unit": "tsp",
+          "displayQuantity": 7.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.8,
+            "laine": 0.6
+          }
+        },
+        {
+          "item": "Romaine - Jake 35 g, Laine 25 g",
+          "nutritionKey": "Romaine lettuce",
+          "quantity": 60.0,
+          "unit": "g",
+          "displayQuantity": 60.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 35,
+            "laine": 25
+          }
+        },
+        {
+          "item": "Cucumber - Jake 35 g, Laine 25 g",
+          "nutritionKey": "English cucumber",
+          "quantity": 60.0,
+          "unit": "g",
+          "displayQuantity": 60.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 35,
+            "laine": 25
+          }
+        }
+      ],
+      "steps": [
+        "Cook pork to 145 F, rest 3 min, chill and slice. Stir mayo with Dijon. Pack with romaine, cucumber, cheddar and pecans. Serve cold."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Lunch"
+    },
+    {
+      "id": "w49-ub",
+      "day": "Sunday Breakfast",
+      "date": "2026-12-06",
+      "name": "Almond-flour waffles with Oikos cream",
+      "shireName": "Bilbo's Sunday Waffles",
+      "jake": {
+        "cal": 450.7,
+        "protein": 27.3,
+        "carbs": 7.2,
+        "fat": 34.5,
+        "fiber": 2.7,
+        "totalCarbs": 9.8
+      },
+      "laine": {
+        "cal": 368.2,
+        "protein": 24.0,
+        "carbs": 5.7,
+        "fat": 27.4,
+        "fiber": 1.9,
+        "totalCarbs": 7.6
+      },
+      "ingredients": [
+        {
+          "item": "Large eggs - Jake 2 eggs, Laine 2 eggs",
+          "nutritionKey": "Eggs (large)",
+          "quantity": 4.0,
+          "unit": "egg",
+          "displayQuantity": 4.0,
+          "displayUnit": "egg",
+          "personQuantities": {
+            "jake": 2,
+            "laine": 2
+          }
+        },
+        {
+          "item": "Almond flour - Jake 25 g, Laine 18 g",
+          "nutritionKey": "Almond flour",
+          "quantity": 43.0,
+          "unit": "g",
+          "displayQuantity": 43.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 25,
+            "laine": 18
+          }
+        },
+        {
+          "item": "4% cottage cheese - Jake 40 g, Laine 35 g",
+          "nutritionKey": "Cottage cheese 4%",
+          "quantity": 75.0,
+          "unit": "g",
+          "displayQuantity": 75.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 40,
+            "laine": 35
+          }
+        },
+        {
+          "item": "Butter - Jake 6 g, Laine 4 g",
+          "nutritionKey": "Butter",
+          "quantity": 0.714285714,
+          "unit": "tbsp",
+          "displayQuantity": 10.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.428571429,
+            "laine": 0.285714286
+          }
+        },
+        {
+          "item": "Oikos Triple Zero - Jake 50 g, Laine 40 g",
+          "nutritionKey": "Oikos Triple Zero yogurt",
+          "quantity": 90.0,
+          "unit": "g",
+          "displayQuantity": 90.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 50,
+            "laine": 40
+          }
+        },
+        {
+          "item": "Heavy cream - Jake 15 g, Laine 10 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 25.0,
+          "unit": "g",
+          "displayQuantity": 25.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 15,
+            "laine": 10
+          }
+        }
+      ],
+      "steps": [
+        "Separate eggs. Blend yolks, cottage cheese, flour and melted butter; fold in whipped whites. Cook in a waffle iron until set and golden. Mix Oikos with cream for the topping."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Breakfast"
+    },
+    {
+      "id": "w49-ul",
+      "day": "Sunday Luncheon",
+      "date": "2026-12-06",
+      "name": "Turkey-Swiss cucumber stacks",
+      "shireName": "The Ranger's Sunday Stacks",
+      "jake": {
+        "cal": 430.8,
+        "protein": 49.9,
+        "carbs": 4.9,
+        "fat": 22.7,
+        "fiber": 1.1,
+        "totalCarbs": 6.1
+      },
+      "laine": {
+        "cal": 277.1,
+        "protein": 27.2,
+        "carbs": 3.2,
+        "fat": 16.9,
+        "fiber": 0.7,
+        "totalCarbs": 3.9
+      },
+      "ingredients": [
+        {
+          "item": "Turkey breast, cooked - Jake 130 g, Laine 65 g",
+          "nutritionKey": "Turkey breast (cooked)",
+          "quantity": 195.0,
+          "unit": "g",
+          "displayQuantity": 195.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 130,
+            "laine": 65
+          }
+        },
+        {
+          "item": "Swiss cheese - Jake 35 g, Laine 25 g",
+          "nutritionKey": "Swiss cheese",
+          "quantity": 60.0,
+          "unit": "g",
+          "displayQuantity": 60.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 35,
+            "laine": 25
+          }
+        },
+        {
+          "item": "Avocado-oil mayonnaise - Jake 15 g, Laine 12 g",
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "quantity": 27.0,
+          "unit": "g",
+          "displayQuantity": 27.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 15,
+            "laine": 12
+          }
+        },
+        {
+          "item": "Dijon mustard - Jake 4 g, Laine 3 g",
+          "nutritionKey": "Dijon mustard",
+          "quantity": 1.4,
+          "unit": "tsp",
+          "displayQuantity": 7.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 0.8,
+            "laine": 0.6
+          }
+        },
+        {
+          "item": "Cucumber - Jake 70 g, Laine 40 g",
+          "nutritionKey": "English cucumber",
+          "quantity": 110.0,
+          "unit": "g",
+          "displayQuantity": 110.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 70,
+            "laine": 40
+          }
+        },
+        {
+          "item": "Romaine - Jake 30 g, Laine 20 g",
+          "nutritionKey": "Romaine lettuce",
+          "quantity": 50.0,
+          "unit": "g",
+          "displayQuantity": 50.0,
+          "displayUnit": "g",
+          "personQuantities": {
+            "jake": 30,
+            "laine": 20
+          }
+        }
+      ],
+      "steps": [
+        "Mix mayo and Dijon. Layer turkey, Swiss and cucumber on dry romaine leaves; serve the measured sauce alongside."
+      ],
+      "netCarbs": true,
+      "recipeCategory": "Lunch"
+    }
+  ],
+  "weekendNote": "Friday off: three shared meals. Weekend breakfasts/lunches are here; Laine's two weekend mini-meals are in her Hobbit Pantry.",
+  "jakeLunch": {
+    "id": "w49-jake-lunch",
+    "name": "Bacon-ranch chicken thighs, cheddar and sweet pepper",
+    "macros": {
+      "cal": 735.9,
+      "protein": 67.7,
+      "carbs": 5.0,
+      "fat": 49.0,
+      "fiber": 0.6,
+      "totalCarbs": 5.6
+    },
+    "ingredients": [
+      {
+        "item": "Boneless, skinless chicken thighs, raw - 840 g",
+        "nutritionKey": "Chicken thighs (boneless, skinless)",
+        "quantity": 840,
+        "unit": "g_raw",
+        "displayQuantity": 840,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Cream cheese - 75 g",
+        "nutritionKey": "Cream cheese",
+        "quantity": 5.172413793,
+        "unit": "tbsp",
+        "displayQuantity": 75,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Heavy cream - 105 g",
+        "nutritionKey": "Heavy cream",
+        "quantity": 105,
+        "unit": "g",
+        "displayQuantity": 105,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Block cheddar - 60 g",
+        "nutritionKey": "Cheddar cheese",
+        "quantity": 60,
+        "unit": "g",
+        "displayQuantity": 60,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Bacon, cooked - 30 g",
+        "nutritionKey": "Bacon (cooked)",
+        "quantity": 30,
+        "unit": "g",
+        "displayQuantity": 30,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Butter - 21 g",
+        "nutritionKey": "Butter",
+        "quantity": 1.5,
+        "unit": "tbsp",
+        "displayQuantity": 21,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Bell pepper - 90 g",
+        "nutritionKey": "Bell pepper",
+        "quantity": 90,
+        "unit": "g",
+        "displayQuantity": 90,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Low-sodium beef broth - 105 g",
+        "nutritionKey": "Beef broth",
+        "quantity": 105,
+        "unit": "g",
+        "displayQuantity": 105,
+        "displayUnit": "g"
+      },
+      {
+        "item": "Dried dill and parsley - 1 tsp each; black pepper - 1/2 tsp; salt to taste",
+        "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+      }
+    ],
+    "steps": [
+      "Season the thighs with salt, pepper, 1 tsp dried dill and 1 tsp dried parsley. Brown in butter in batches.",
+      "Soften the diced pepper in the pan. Add broth, cream and cream cheese; stir smooth. Return chicken and simmer to at least 165 F.",
+      "Fold in cheddar and cooked bacon. Divide the cooked chicken evenly between 3 containers, then divide every bit of sauce evenly."
+    ],
+    "netCarbs": true,
+    "batchDays": 3,
+    "macrosNote": "Nutrition per container; ingredient amounts make 3 containers.",
+    "note": "Three containers for Mon-Wed. Reheating and travel packing are in the opening prep schedule."
+  },
+  "jakeSnacks": [
+    {
+      "id": "w49-shake",
+      "name": "Whey shake with almond milk",
+      "macros": {
+        "cal": 258.0,
+        "protein": 27.2,
+        "carbs": 2.5,
+        "fat": 14.7,
+        "fiber": 0.7,
+        "totalCarbs": 3.3
+      },
+      "ingredients": [
+        {
+          "item": "Whey isolate - 30 g",
+          "nutritionKey": "Whey protein isolate",
+          "quantity": 30,
+          "unit": "g",
+          "displayQuantity": 30,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Unsweetened almond milk - 240 g",
+          "nutritionKey": "Almond milk (unsweetened)",
+          "quantity": 240,
+          "unit": "g",
+          "displayQuantity": 240,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Heavy cream - 30 g",
+          "nutritionKey": "Heavy cream",
+          "quantity": 30,
+          "unit": "g",
+          "displayQuantity": 30,
+          "displayUnit": "g"
+        }
+      ],
+      "steps": [
+        "Blend whey, unsweetened almond milk and cream until smooth."
+      ],
+      "netCarbs": true,
+      "desc": "One listed shake per day is allowed for in the grocery quantities. Adjust extra snacks and shakes using your usual routine."
+    }
+  ],
+  "jakeSnacksOptional": true,
+  "jakeTabNote": "Three office lunch containers for Mon-Wed. Thursday's shared road breakfast and thermos lunch are on the Travel tab.",
+  "laineTheme": "shire",
+  "laineMenus": [
+    {
+      "id": "breakfast",
+      "label": "Breakfast",
+      "title": "Breakfast at Bag End",
+      "eligibleDates": [
+        "2026-11-30",
+        "2026-12-01",
+        "2026-12-02"
+      ],
+      "options": [
+        {
+          "id": "w49-b1",
+          "name": "Bacon, egg & cheddar",
+          "macros": {
+            "cal": 288.5,
+            "protein": 17.7,
+            "carbs": 1.4,
+            "fat": 23.3,
+            "fiber": 0.0,
+            "totalCarbs": 1.4
+          },
+          "ingredients": [
+            {
+              "item": "Large eggs - 1 egg",
+              "nutritionKey": "Eggs (large)",
+              "quantity": 1,
+              "unit": "egg",
+              "displayQuantity": 1,
+              "displayUnit": "egg"
+            },
+            {
+              "item": "Bacon, cooked - 16 g",
+              "nutritionKey": "Bacon (cooked)",
+              "quantity": 16,
+              "unit": "g",
+              "displayQuantity": 16,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Block cheddar - 25 g",
+              "nutritionKey": "Cheddar cheese",
+              "quantity": 25,
+              "unit": "g",
+              "displayQuantity": 25,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Butter - 4 g",
+              "nutritionKey": "Butter",
+              "quantity": 0.285714286,
+              "unit": "tbsp",
+              "displayQuantity": 4,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Fry the egg in butter until set. Serve with crisp bacon and cheddar."
+          ],
+          "netCarbs": true,
+          "shireName": "Samwise's Morning Hearth",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Breakfast",
+          "ratingKey": "laine_w49_B1"
+        },
+        {
+          "id": "w49-b2",
+          "name": "Sausage & Swiss egg cup",
+          "macros": {
+            "cal": 285.9,
+            "protein": 18.0,
+            "carbs": 1.7,
+            "fat": 22.3,
+            "fiber": 0.0,
+            "totalCarbs": 1.7
+          },
+          "ingredients": [
+            {
+              "item": "Large eggs - 1 egg",
+              "nutritionKey": "Eggs (large)",
+              "quantity": 1,
+              "unit": "egg",
+              "displayQuantity": 1,
+              "displayUnit": "egg"
+            },
+            {
+              "item": "Mild bulk pork sausage, raw - 45 g",
+              "nutritionKey": "Ground sausage (pork)",
+              "quantity": 45,
+              "unit": "g_raw",
+              "displayQuantity": 45,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Swiss cheese - 20 g",
+              "nutritionKey": "Swiss cheese",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Heavy cream - 10 g",
+              "nutritionKey": "Heavy cream",
+              "quantity": 10,
+              "unit": "g",
+              "displayQuantity": 10,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Brown sausage to 160 F. Mix with egg, cream and Swiss; bake in a greased silicone cup at 350 F until 160 F, about 18-22 min."
+          ],
+          "netCarbs": true,
+          "shireName": "The Green Dragon Egg Cup",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Breakfast",
+          "ratingKey": "laine_w49_B2"
+        },
+        {
+          "id": "w49-b3",
+          "name": "Vanilla ricotta-pecan bowl",
+          "macros": {
+            "cal": 298.9,
+            "protein": 17.3,
+            "carbs": 3.9,
+            "fat": 23.5,
+            "fiber": 1.9,
+            "totalCarbs": 5.8
+          },
+          "ingredients": [
+            {
+              "item": "Part-skim ricotta - 45 g",
+              "nutritionKey": "Ricotta cheese (part-skim)",
+              "quantity": 45,
+              "unit": "g",
+              "displayQuantity": 45,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Pecans - 20 g",
+              "nutritionKey": "Pecans",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Heavy cream - 15 g",
+              "nutritionKey": "Heavy cream",
+              "quantity": 15,
+              "unit": "g",
+              "displayQuantity": 15,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Whey isolate - 12 g",
+              "nutritionKey": "Whey protein isolate",
+              "quantity": 12,
+              "unit": "g",
+              "displayQuantity": 12,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cinnamon - 1/8 tsp",
+              "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+            }
+          ],
+          "steps": [
+            "Stir vanilla whey into ricotta and cream; add cinnamon and pecans. Thin with a teaspoon of water if needed."
+          ],
+          "netCarbs": true,
+          "shireName": "Rivendell Ricotta",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Breakfast",
+          "ratingKey": "laine_w49_B3"
+        }
+      ]
+    },
+    {
+      "id": "secondBreakfast",
+      "label": "Second Breakfast",
+      "title": "A Proper Second Breakfast",
+      "eligibleDates": [
+        "2026-11-30",
+        "2026-12-01",
+        "2026-12-02",
+        "2026-12-03"
+      ],
+      "options": [
+        {
+          "id": "w49-s1",
+          "name": "Vanilla cottage cheese & pecans",
+          "macros": {
+            "cal": 325.1,
+            "protein": 19.8,
+            "carbs": 4.4,
+            "fat": 25.4,
+            "fiber": 2.4,
+            "totalCarbs": 6.8
+          },
+          "ingredients": [
+            {
+              "item": "4% cottage cheese - 80 g",
+              "nutritionKey": "Cottage cheese 4%",
+              "quantity": 80,
+              "unit": "g",
+              "displayQuantity": 80,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Pecans - 25 g",
+              "nutritionKey": "Pecans",
+              "quantity": 25,
+              "unit": "g",
+              "displayQuantity": 25,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Heavy cream - 10 g",
+              "nutritionKey": "Heavy cream",
+              "quantity": 10,
+              "unit": "g",
+              "displayQuantity": 10,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Whey isolate - 10 g",
+              "nutritionKey": "Whey protein isolate",
+              "quantity": 10,
+              "unit": "g",
+              "displayQuantity": 10,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Stir whey and cream into cottage cheese. Add pecans."
+          ],
+          "netCarbs": true,
+          "shireName": "Second Breakfast at Bag End",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_S1"
+        },
+        {
+          "id": "w49-s2",
+          "name": "Turkey, cheddar & almond-butter celery",
+          "macros": {
+            "cal": 257.4,
+            "protein": 18.1,
+            "carbs": 3.2,
+            "fat": 19.2,
+            "fiber": 2.1,
+            "totalCarbs": 5.3
+          },
+          "ingredients": [
+            {
+              "item": "Turkey breast, cooked - 25 g",
+              "nutritionKey": "Turkey breast (cooked)",
+              "quantity": 25,
+              "unit": "g",
+              "displayQuantity": 25,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Block cheddar - 30 g",
+              "nutritionKey": "Cheddar cheese",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Almond butter - 16 g",
+              "nutritionKey": "Almond butter",
+              "quantity": 1.0,
+              "unit": "tbsp",
+              "displayQuantity": 16,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Celery - 30 g",
+              "nutritionKey": "Celery",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Serve turkey and cheddar alongside almond-butter-filled celery."
+          ],
+          "netCarbs": true,
+          "shireName": "Merry's Trail Plate",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_S2"
+        },
+        {
+          "id": "w49-s3",
+          "name": "Swiss, bacon & cucumber",
+          "macros": {
+            "cal": 260.5,
+            "protein": 16.2,
+            "carbs": 3.7,
+            "fat": 20.1,
+            "fiber": 0.7,
+            "totalCarbs": 4.4
+          },
+          "ingredients": [
+            {
+              "item": "Swiss cheese - 35 g",
+              "nutritionKey": "Swiss cheese",
+              "quantity": 35,
+              "unit": "g",
+              "displayQuantity": 35,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Bacon, cooked - 16 g",
+              "nutritionKey": "Bacon (cooked)",
+              "quantity": 16,
+              "unit": "g",
+              "displayQuantity": 16,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cucumber - 40 g",
+              "nutritionKey": "English cucumber",
+              "quantity": 40,
+              "unit": "g",
+              "displayQuantity": 40,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Pecans - 5 g",
+              "nutritionKey": "Pecans",
+              "quantity": 5,
+              "unit": "g",
+              "displayQuantity": 5,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Pack separately so the cucumber stays dry and crunchy."
+          ],
+          "netCarbs": true,
+          "shireName": "Pippin's Pocket Provisions",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_S3"
+        },
+        {
+          "id": "w49-s4",
+          "name": "Savory cottage cheese bowl",
+          "macros": {
+            "cal": 270.5,
+            "protein": 15.9,
+            "carbs": 4.4,
+            "fat": 21.3,
+            "fiber": 0.1,
+            "totalCarbs": 4.5
+          },
+          "ingredients": [
+            {
+              "item": "4% cottage cheese - 80 g",
+              "nutritionKey": "Cottage cheese 4%",
+              "quantity": 80,
+              "unit": "g",
+              "displayQuantity": 80,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Block cheddar - 30 g",
+              "nutritionKey": "Cheddar cheese",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cucumber - 20 g",
+              "nutritionKey": "English cucumber",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Olive oil - 8 g",
+              "nutritionKey": "Olive oil",
+              "quantity": 0.571428571,
+              "unit": "tbsp",
+              "displayQuantity": 8,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Dried dill - 1/4 tsp",
+              "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+            }
+          ],
+          "steps": [
+            "Add diced cucumber, cheddar, olive oil and dried dill."
+          ],
+          "netCarbs": true,
+          "shireName": "Brandybuck's Garden Bowl",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_S4"
+        }
+      ]
+    },
+    {
+      "id": "elevenses",
+      "label": "Elevenses",
+      "title": "Elevenses on the Road",
+      "eligibleDates": [
+        "2026-11-30",
+        "2026-12-01",
+        "2026-12-02"
+      ],
+      "options": [
+        {
+          "id": "w49-e1",
+          "name": "Turkey-pecan crunch jar",
+          "macros": {
+            "cal": 305.2,
+            "protein": 23.4,
+            "carbs": 2.4,
+            "fat": 22.0,
+            "fiber": 2.3,
+            "totalCarbs": 4.7
+          },
+          "ingredients": [
+            {
+              "item": "Turkey breast, cooked - 60 g",
+              "nutritionKey": "Turkey breast (cooked)",
+              "quantity": 60,
+              "unit": "g",
+              "displayQuantity": 60,
+              "displayUnit": "g"
+            },
+            {
+              "item": "4% cottage cheese - 30 g",
+              "nutritionKey": "Cottage cheese 4%",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Pecans - 15 g",
+              "nutritionKey": "Pecans",
+              "quantity": 15,
+              "unit": "g",
+              "displayQuantity": 15,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Avocado-oil mayonnaise - 12 g",
+              "nutritionKey": "Mayonnaise (avocado oil)",
+              "quantity": 12,
+              "unit": "g",
+              "displayQuantity": 12,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Celery - 20 g",
+              "nutritionKey": "Celery",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Romaine - 20 g",
+              "nutritionKey": "Romaine lettuce",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Dijon mustard - 3 g",
+              "nutritionKey": "Dijon mustard",
+              "quantity": 0.6,
+              "unit": "tsp",
+              "displayQuantity": 3,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Stir mayo and Dijon into turkey, cottage cheese and celery. Pack over romaine; add pecans at eating."
+          ],
+          "netCarbs": true,
+          "shireName": "Faramir's Crunch Jar",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Lunch",
+          "ratingKey": "laine_w49_E1"
+        },
+        {
+          "id": "w49-e2",
+          "name": "Chicken-bacon ranch jar",
+          "macros": {
+            "cal": 326.8,
+            "protein": 26.1,
+            "carbs": 1.3,
+            "fat": 23.5,
+            "fiber": 0.7,
+            "totalCarbs": 2.1
+          },
+          "ingredients": [
+            {
+              "item": "Boneless, skinless chicken thighs, raw - 85 g",
+              "nutritionKey": "Chicken thighs (boneless, skinless)",
+              "quantity": 85,
+              "unit": "g_raw",
+              "displayQuantity": 85,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Bacon, cooked - 12 g",
+              "nutritionKey": "Bacon (cooked)",
+              "quantity": 12,
+              "unit": "g",
+              "displayQuantity": 12,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Block cheddar - 18 g",
+              "nutritionKey": "Cheddar cheese",
+              "quantity": 18,
+              "unit": "g",
+              "displayQuantity": 18,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Avocado-oil mayonnaise - 12 g",
+              "nutritionKey": "Mayonnaise (avocado oil)",
+              "quantity": 12,
+              "unit": "g",
+              "displayQuantity": 12,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Celery - 20 g",
+              "nutritionKey": "Celery",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Romaine - 20 g",
+              "nutritionKey": "Romaine lettuce",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Dried dill and dried parsley - 1/8 tsp each",
+              "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+            }
+          ],
+          "steps": [
+            "Cook chicken to 165 F, chill and chop. Mix mayo with dried dill and parsley. Pack with bacon, cheddar, celery and romaine."
+          ],
+          "netCarbs": true,
+          "shireName": "Samwise's Garden Jar",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Lunch",
+          "ratingKey": "laine_w49_E2"
+        },
+        {
+          "id": "w49-e3",
+          "name": "Roast-pork Swiss crunch cup",
+          "macros": {
+            "cal": 310.9,
+            "protein": 25.5,
+            "carbs": 3.3,
+            "fat": 21.3,
+            "fiber": 0.8,
+            "totalCarbs": 4.0
+          },
+          "ingredients": [
+            {
+              "item": "Pork loin, raw - 85 g",
+              "nutritionKey": "Pork loin",
+              "quantity": 85,
+              "unit": "g",
+              "displayQuantity": 85,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Swiss cheese - 25 g",
+              "nutritionKey": "Swiss cheese",
+              "quantity": 25,
+              "unit": "g",
+              "displayQuantity": 25,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Avocado-oil mayonnaise - 12 g",
+              "nutritionKey": "Mayonnaise (avocado oil)",
+              "quantity": 12,
+              "unit": "g",
+              "displayQuantity": 12,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Dijon mustard - 3 g",
+              "nutritionKey": "Dijon mustard",
+              "quantity": 0.6,
+              "unit": "tsp",
+              "displayQuantity": 3,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cucumber - 30 g",
+              "nutritionKey": "English cucumber",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Green cabbage - 20 g",
+              "nutritionKey": "Green cabbage",
+              "quantity": 20,
+              "unit": "g",
+              "displayQuantity": 20,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Cook pork to 145 F, rest 3 min, then chill. Slice thin. Mix mayo and Dijon; pack with Swiss, cucumber and cabbage."
+          ],
+          "netCarbs": true,
+          "shireName": "Roast Pork from Bree",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Lunch",
+          "ratingKey": "laine_w49_E3"
+        }
+      ]
+    },
+    {
+      "id": "afternoonTea",
+      "label": "Afternoon Tea",
+      "title": "Afternoon Tea in the Shire",
+      "eligibleDates": [
+        "2026-11-30",
+        "2026-12-01",
+        "2026-12-02",
+        "2026-12-03"
+      ],
+      "options": [
+        {
+          "id": "w49-t1",
+          "name": "Turkey-Swiss roll-ups",
+          "macros": {
+            "cal": 256.0,
+            "protein": 23.5,
+            "carbs": 3.1,
+            "fat": 16.4,
+            "fiber": 0.3,
+            "totalCarbs": 3.4
+          },
+          "ingredients": [
+            {
+              "item": "Turkey breast, cooked - 45 g",
+              "nutritionKey": "Turkey breast (cooked)",
+              "quantity": 45,
+              "unit": "g",
+              "displayQuantity": 45,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Swiss cheese - 35 g",
+              "nutritionKey": "Swiss cheese",
+              "quantity": 35,
+              "unit": "g",
+              "displayQuantity": 35,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Avocado-oil mayonnaise - 8 g",
+              "nutritionKey": "Mayonnaise (avocado oil)",
+              "quantity": 8,
+              "unit": "g",
+              "displayQuantity": 8,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Dijon mustard - 3 g",
+              "nutritionKey": "Dijon mustard",
+              "quantity": 0.6,
+              "unit": "tsp",
+              "displayQuantity": 3,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cucumber - 30 g",
+              "nutritionKey": "English cucumber",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Spread turkey with mayo and Dijon; roll around Swiss. Serve cucumber alongside."
+          ],
+          "netCarbs": true,
+          "shireName": "The Ranger's Roll-ups",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_T1"
+        },
+        {
+          "id": "w49-t2",
+          "name": "Cottage-cheddar dip & celery",
+          "macros": {
+            "cal": 275.2,
+            "protein": 17.1,
+            "carbs": 4.2,
+            "fat": 21.0,
+            "fiber": 0.5,
+            "totalCarbs": 4.7
+          },
+          "ingredients": [
+            {
+              "item": "4% cottage cheese - 80 g",
+              "nutritionKey": "Cottage cheese 4%",
+              "quantity": 80,
+              "unit": "g",
+              "displayQuantity": 80,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Block cheddar - 35 g",
+              "nutritionKey": "Cheddar cheese",
+              "quantity": 35,
+              "unit": "g",
+              "displayQuantity": 35,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Olive oil - 6 g",
+              "nutritionKey": "Olive oil",
+              "quantity": 0.428571429,
+              "unit": "tbsp",
+              "displayQuantity": 6,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Celery - 30 g",
+              "nutritionKey": "Celery",
+              "quantity": 30,
+              "unit": "g",
+              "displayQuantity": 30,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Blend cottage cheese with dill and olive oil; fold in cheddar. Serve with celery."
+          ],
+          "netCarbs": true,
+          "shireName": "The Shire's Cheddar Dip",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_T2"
+        },
+        {
+          "id": "w49-t3",
+          "name": "Turkey, cheddar & pecan plate",
+          "macros": {
+            "cal": 305.3,
+            "protein": 20.4,
+            "carbs": 3.2,
+            "fat": 23.4,
+            "fiber": 1.7,
+            "totalCarbs": 4.9
+          },
+          "ingredients": [
+            {
+              "item": "Turkey breast, cooked - 35 g",
+              "nutritionKey": "Turkey breast (cooked)",
+              "quantity": 35,
+              "unit": "g",
+              "displayQuantity": 35,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Block cheddar - 35 g",
+              "nutritionKey": "Cheddar cheese",
+              "quantity": 35,
+              "unit": "g",
+              "displayQuantity": 35,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Pecans - 16 g",
+              "nutritionKey": "Pecans",
+              "quantity": 16,
+              "unit": "g",
+              "displayQuantity": 16,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cucumber - 40 g",
+              "nutritionKey": "English cucumber",
+              "quantity": 40,
+              "unit": "g",
+              "displayQuantity": 40,
+              "displayUnit": "g"
+            }
+          ],
+          "steps": [
+            "Pack turkey, cheese and nuts dry; keep cucumber separate."
+          ],
+          "netCarbs": true,
+          "shireName": "Fellowship Trail Plate",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_T3"
+        },
+        {
+          "id": "w49-t4",
+          "name": "Oikos cheesecake bowl",
+          "macros": {
+            "cal": 280.3,
+            "protein": 19.2,
+            "carbs": 4.1,
+            "fat": 20.8,
+            "fiber": 1.5,
+            "totalCarbs": 5.6
+          },
+          "ingredients": [
+            {
+              "item": "Oikos Triple Zero - 40 g",
+              "nutritionKey": "Oikos Triple Zero yogurt",
+              "quantity": 40,
+              "unit": "g",
+              "displayQuantity": 40,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cream cheese - 15 g",
+              "nutritionKey": "Cream cheese",
+              "quantity": 1.034482759,
+              "unit": "tbsp",
+              "displayQuantity": 15,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Pecans - 16 g",
+              "nutritionKey": "Pecans",
+              "quantity": 16,
+              "unit": "g",
+              "displayQuantity": 16,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Whey isolate - 15 g",
+              "nutritionKey": "Whey protein isolate",
+              "quantity": 15,
+              "unit": "g",
+              "displayQuantity": 15,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Heavy cream - 10 g",
+              "nutritionKey": "Heavy cream",
+              "quantity": 10,
+              "unit": "g",
+              "displayQuantity": 10,
+              "displayUnit": "g"
+            },
+            {
+              "item": "Cinnamon - 1/8 tsp; monk fruit - optional 1/2 tsp",
+              "nutritionNote": "Small seasoning quantities are excluded from approximate macros."
+            }
+          ],
+          "steps": [
+            "Soften cream cheese. Stir smooth with Oikos, whey and cream; top with pecans and cinnamon."
+          ],
+          "netCarbs": true,
+          "shireName": "Lothlorien Cheesecake Bowl",
+          "person": "laine",
+          "theme": "shire",
+          "note": "One small serving.",
+          "recipeCategory": "Snack",
+          "ratingKey": "laine_w49_T4"
+        }
+      ]
+    }
+  ],
+  "laineMiniMeals": [
+    {
+      "id": "w49-mini-5-0",
+      "name": "Cottage cheese and pecans",
+      "macros": {
+        "cal": 250.6,
+        "protein": 18.0,
+        "carbs": 5.7,
+        "fat": 17.2,
+        "fiber": 1.4,
+        "totalCarbs": 7.2
+      },
+      "ingredients": [
+        {
+          "item": "4% cottage cheese - 150 g",
+          "nutritionKey": "Cottage cheese 4%",
+          "quantity": 150,
+          "unit": "g",
+          "displayQuantity": 150,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Pecans - 15 g",
+          "nutritionKey": "Pecans",
+          "quantity": 15,
+          "unit": "g",
+          "displayQuantity": 15,
+          "displayUnit": "g"
+        }
+      ],
+      "steps": [
+        "Serve the measured ingredients together; keep nuts separate until eating."
+      ],
+      "netCarbs": true,
+      "theme": "shire",
+      "shireName": "Second Breakfast in the Shire",
+      "person": "laine",
+      "date": "2026-12-05",
+      "recipeCategory": "Snack"
+    },
+    {
+      "id": "w49-mini-5-1",
+      "name": "Turkey and cheddar mini plate",
+      "macros": {
+        "cal": 222.7,
+        "protein": 20.8,
+        "carbs": 0.8,
+        "fat": 14.8,
+        "fiber": 0.0,
+        "totalCarbs": 0.8
+      },
+      "ingredients": [
+        {
+          "item": "Turkey breast, cooked - 50 g",
+          "nutritionKey": "Turkey breast (cooked)",
+          "quantity": 50,
+          "unit": "g",
+          "displayQuantity": 50,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Block cheddar - 25 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 25,
+          "unit": "g",
+          "displayQuantity": 25,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Avocado-oil mayonnaise - 8 g",
+          "nutritionKey": "Mayonnaise (avocado oil)",
+          "quantity": 8,
+          "unit": "g",
+          "displayQuantity": 8,
+          "displayUnit": "g"
+        }
+      ],
+      "steps": [
+        "Serve the measured ingredients together; keep nuts separate until eating."
+      ],
+      "netCarbs": true,
+      "theme": "shire",
+      "shireName": "Afternoon Tea at Bag End",
+      "person": "laine",
+      "date": "2026-12-05",
+      "recipeCategory": "Snack"
+    },
+    {
+      "id": "w49-mini-6-0",
+      "name": "Cottage cheese and pecans",
+      "macros": {
+        "cal": 250.6,
+        "protein": 18.0,
+        "carbs": 5.7,
+        "fat": 17.2,
+        "fiber": 1.4,
+        "totalCarbs": 7.2
+      },
+      "ingredients": [
+        {
+          "item": "4% cottage cheese - 150 g",
+          "nutritionKey": "Cottage cheese 4%",
+          "quantity": 150,
+          "unit": "g",
+          "displayQuantity": 150,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Pecans - 15 g",
+          "nutritionKey": "Pecans",
+          "quantity": 15,
+          "unit": "g",
+          "displayQuantity": 15,
+          "displayUnit": "g"
+        }
+      ],
+      "steps": [
+        "Serve the measured ingredients together; keep nuts separate until eating."
+      ],
+      "netCarbs": true,
+      "theme": "shire",
+      "shireName": "Second Breakfast in the Shire",
+      "person": "laine",
+      "date": "2026-12-06",
+      "recipeCategory": "Snack"
+    },
+    {
+      "id": "w49-mini-6-1",
+      "name": "Turkey and cheddar mini plate",
+      "macros": {
+        "cal": 230.6,
+        "protein": 20.1,
+        "carbs": 1.2,
+        "fat": 15.9,
+        "fiber": 1.0,
+        "totalCarbs": 2.2
+      },
+      "ingredients": [
+        {
+          "item": "Turkey breast, cooked - 45 g",
+          "nutritionKey": "Turkey breast (cooked)",
+          "quantity": 45,
+          "unit": "g",
+          "displayQuantity": 45,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Block cheddar - 25 g",
+          "nutritionKey": "Cheddar cheese",
+          "quantity": 25,
+          "unit": "g",
+          "displayQuantity": 25,
+          "displayUnit": "g"
+        },
+        {
+          "item": "Pecans - 10 g",
+          "nutritionKey": "Pecans",
+          "quantity": 10,
+          "unit": "g",
+          "displayQuantity": 10,
+          "displayUnit": "g"
+        }
+      ],
+      "steps": [
+        "Serve the measured ingredients together; keep nuts separate until eating."
+      ],
+      "netCarbs": true,
+      "theme": "shire",
+      "shireName": "Afternoon Tea at Bag End",
+      "person": "laine",
+      "date": "2026-12-06",
+      "recipeCategory": "Snack"
+    }
+  ],
+  "lainePlan": {
+    "days": [
+      {
+        "date": "2026-11-30",
+        "day": "Monday",
+        "label": "Monday 30",
+        "travel": false,
+        "sharedDay": false,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "choice",
+            "menuId": "breakfast",
+            "exampleOptionId": "w49-b1"
+          },
+          {
+            "slot": "secondBreakfast",
+            "type": "choice",
+            "menuId": "secondBreakfast",
+            "exampleOptionId": "w49-s1"
+          },
+          {
+            "slot": "elevenses",
+            "type": "choice",
+            "menuId": "elevenses",
+            "exampleOptionId": "w49-e1"
+          },
+          {
+            "slot": "afternoonTea",
+            "type": "choice",
+            "menuId": "afternoonTea",
+            "exampleOptionId": "w49-t1"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-0"
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "day": "Tuesday",
+        "label": "Tuesday 1",
+        "travel": false,
+        "sharedDay": false,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "choice",
+            "menuId": "breakfast",
+            "exampleOptionId": "w49-b2"
+          },
+          {
+            "slot": "secondBreakfast",
+            "type": "choice",
+            "menuId": "secondBreakfast",
+            "exampleOptionId": "w49-s2"
+          },
+          {
+            "slot": "elevenses",
+            "type": "choice",
+            "menuId": "elevenses",
+            "exampleOptionId": "w49-e2"
+          },
+          {
+            "slot": "afternoonTea",
+            "type": "choice",
+            "menuId": "afternoonTea",
+            "exampleOptionId": "w49-t2"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-1"
+          }
+        ]
+      },
+      {
+        "date": "2026-12-02",
+        "day": "Wednesday",
+        "label": "Wednesday 2",
+        "travel": false,
+        "sharedDay": false,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "choice",
+            "menuId": "breakfast",
+            "exampleOptionId": "w49-b3"
+          },
+          {
+            "slot": "secondBreakfast",
+            "type": "choice",
+            "menuId": "secondBreakfast",
+            "exampleOptionId": "w49-s3"
+          },
+          {
+            "slot": "elevenses",
+            "type": "choice",
+            "menuId": "elevenses",
+            "exampleOptionId": "w49-e3"
+          },
+          {
+            "slot": "afternoonTea",
+            "type": "choice",
+            "menuId": "afternoonTea",
+            "exampleOptionId": "w49-t3"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-2"
+          }
+        ]
+      },
+      {
+        "date": "2026-12-03",
+        "day": "Thursday",
+        "label": "Thursday 3",
+        "travel": true,
+        "sharedDay": false,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "fixed",
+            "mealId": "w49-tb"
+          },
+          {
+            "slot": "secondBreakfast",
+            "type": "choice",
+            "menuId": "secondBreakfast",
+            "exampleOptionId": "w49-s4"
+          },
+          {
+            "slot": "elevenses",
+            "type": "fixed",
+            "mealId": "w49-tl"
+          },
+          {
+            "slot": "afternoonTea",
+            "type": "choice",
+            "menuId": "afternoonTea",
+            "exampleOptionId": "w49-t4"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-3"
+          }
+        ]
+      },
+      {
+        "date": "2026-12-04",
+        "day": "Friday",
+        "label": "Friday 4",
+        "travel": false,
+        "sharedDay": true,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "fixed",
+            "mealId": "w49-fb"
+          },
+          {
+            "slot": "elevenses",
+            "type": "fixed",
+            "mealId": "w49-fl"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-4"
+          },
+          {
+            "slot": "dessert",
+            "type": "fixed",
+            "mealId": "w49-dessert"
+          }
+        ]
+      },
+      {
+        "date": "2026-12-05",
+        "day": "Saturday",
+        "label": "Saturday 5",
+        "travel": false,
+        "sharedDay": false,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "fixed",
+            "mealId": "w49-sb"
+          },
+          {
+            "slot": "secondBreakfast",
+            "type": "fixed",
+            "mealId": "w49-mini-5-0"
+          },
+          {
+            "slot": "elevenses",
+            "type": "fixed",
+            "mealId": "w49-sl"
+          },
+          {
+            "slot": "afternoonTea",
+            "type": "fixed",
+            "mealId": "w49-mini-5-1"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-5"
+          }
+        ]
+      },
+      {
+        "date": "2026-12-06",
+        "day": "Sunday",
+        "label": "Sunday 6",
+        "travel": false,
+        "sharedDay": false,
+        "meals": [
+          {
+            "slot": "breakfast",
+            "type": "fixed",
+            "mealId": "w49-ub"
+          },
+          {
+            "slot": "secondBreakfast",
+            "type": "fixed",
+            "mealId": "w49-mini-6-0"
+          },
+          {
+            "slot": "elevenses",
+            "type": "fixed",
+            "mealId": "w49-ul"
+          },
+          {
+            "slot": "afternoonTea",
+            "type": "fixed",
+            "mealId": "w49-mini-6-1"
+          },
+          {
+            "slot": "supper",
+            "type": "fixed",
+            "mealId": "w49-dinner-6"
+          }
+        ]
+      }
+    ],
+    "menuVersion": 1
+  },
+  "laineTabNote": "A well-provisioned week in the Shire. Choose each menu option once in its own slot; your used choices leave the other days. Thursday has shared road meals. Friday is three meals together.",
+  "laineBreakfasts": [],
+  "laineSnacks": [],
+  "shopping": {
+    "Produce": [
+      "Avocado flesh - 80 g (Friday Breakfast)",
+      "Cucumber - 400 g (Friday Luncheon, Roast-pork Swiss crunch cup, Saturday Luncheon, Savory cottage cheese bowl, Sunday Luncheon, Swiss, bacon & cucumber, Turkey, cheddar & pecan plate, Turkey-Swiss roll-ups)",
+      "Celery - 100 g (Chicken-bacon ranch jar, Cottage-cheddar dip & celery, Turkey, cheddar & almond-butter celery, Turkey-pecan crunch jar)",
+      "Romaine - 220 g (Chicken-bacon ranch jar, Friday Luncheon, Saturday Luncheon, Sunday Luncheon, Turkey-pecan crunch jar)",
+      "Green cabbage - 430 g (Roast-pork Swiss crunch cup, Thu supper, Wed supper)",
+      "Mushrooms - 280 g (Mon supper, Sat supper)",
+      "Green beans - 140 g (Mon supper)",
+      "Cauliflower - 625 g (Sat supper, Thursday chowder, Tue supper)",
+      "Asparagus - 210 g (Fri supper)",
+      "Zucchini - 240 g (Sun supper)",
+      "Bell pepper - 90 g (Jake lunch)",
+      "Unsweetened peach slices - 100 g (Fri dessert)",
+      "Minced garlic - 21 g (Fri supper, Mon supper, Sat supper, Thursday chowder, Wed supper)",
+      "Lime juice - 30 g (Fri supper, Wed supper)",
+      "Fresh cilantro - 7 g (Wed supper)"
+    ],
+    "Meat & Seafood": [
+      "Boneless, skinless chicken thighs, raw - 2055 g raw / 4.53 lb raw (Chicken-bacon ranch jar, Friday Luncheon, Jake lunch, Sun supper, Wed supper)",
+      "Pork loin, raw - 780 g (Mon supper, Roast-pork Swiss crunch cup, Saturday Luncheon)",
+      "Turkey breast, cooked - 615 g (Sat mini-meals, Sun mini-meals, Sunday Luncheon, Thursday chowder, Turkey, cheddar & almond-butter celery, Turkey, cheddar & pecan plate, Turkey-Swiss roll-ups, Turkey-pecan crunch jar)",
+      "Ground turkey 93/7, raw - 365 g (Tue supper)",
+      "Mild bulk pork sausage, raw - 430 g (Saturday Breakfast, Sausage & Swiss egg cup, Thu supper)",
+      "Salmon, raw - 310 g (Fri supper)",
+      "Steak, raw - 365 g (Sat supper)",
+      "Bacon, cooked - 208 g cooked; buy about 1.5 lb raw, yield varies (Bacon, egg & cheddar, Chicken-bacon ranch jar, Friday Breakfast, Friday Luncheon, Jake lunch, Swiss, bacon & cucumber, Thursday chowder, Thursday egg bites, Tue supper)"
+    ],
+    "Dairy & Eggs": [
+      "Large eggs - 18 eggs (Bacon, egg & cheddar, Friday Breakfast, Saturday Breakfast, Sausage & Swiss egg cup, Sunday Breakfast, Thursday egg bites)",
+      "Block cheddar - 585 g (Bacon, egg & cheddar, Chicken-bacon ranch jar, Cottage-cheddar dip & celery, Friday Breakfast, Friday Luncheon, Jake lunch, Sat mini-meals, Saturday Luncheon, Savory cottage cheese bowl, Sun mini-meals, Thursday chowder, Thursday egg bites, Tue supper, Turkey, cheddar & almond-butter celery, Turkey, cheddar & pecan plate)",
+      "Swiss cheese - 220 g (Roast-pork Swiss crunch cup, Saturday Breakfast, Sausage & Swiss egg cup, Sunday Luncheon, Swiss, bacon & cucumber, Turkey-Swiss roll-ups)",
+      "4% cottage cheese - 645 g (Cottage-cheddar dip & celery, Sat mini-meals, Savory cottage cheese bowl, Sun mini-meals, Sunday Breakfast, Turkey-pecan crunch jar, Vanilla cottage cheese & pecans)",
+      "Heavy cream - 851 g (Fri dessert, Jake lunch, Jake shakes, Mon supper, Oikos cheesecake bowl, Sat supper, Sausage & Swiss egg cup, Sun supper, Sunday Breakfast, Thu supper, Thursday chowder, Thursday egg bites, Tue supper, Vanilla cottage cheese & pecans, Vanilla ricotta-pecan bowl)",
+      "Butter - 244 g (Bacon, egg & cheddar, Fri dessert, Fri supper, Friday Breakfast, Jake lunch, Mon supper, Sat supper, Saturday Breakfast, Sun supper, Sunday Breakfast, Thu supper, Thursday chowder, Thursday egg bites, Tue supper, Wed supper)",
+      "Part-skim ricotta - 45 g (Vanilla ricotta-pecan bowl)",
+      "Cream cheese - 130 g (Jake lunch, Oikos cheesecake bowl, Thursday chowder)",
+      "Sour cream - 104 g (Mon supper, Wed supper)",
+      "Grated Parmesan - 45 g (Sat supper, Thu supper)",
+      "Oikos Triple Zero - 130 g (Oikos cheesecake bowl, Sunday Breakfast)",
+      "Unsweetened almond milk - 1680 g (Jake shakes)"
+    ],
+    "Pantry": [
+      "Pecans - 175 g (Fri dessert, Oikos cheesecake bowl, Sat mini-meals, Saturday Luncheon, Sun mini-meals, Swiss, bacon & cucumber, Turkey, cheddar & pecan plate, Turkey-pecan crunch jar, Vanilla cottage cheese & pecans, Vanilla ricotta-pecan bowl)",
+      "Almond flour - 78 g (Fri dessert, Sunday Breakfast, Tue supper)",
+      "Whey isolate - 247 g (Jake shakes, Oikos cheesecake bowl, Vanilla cottage cheese & pecans, Vanilla ricotta-pecan bowl)",
+      "Avocado-oil mayonnaise - 141 g (Chicken-bacon ranch jar, Friday Luncheon, Roast-pork Swiss crunch cup, Sat mini-meals, Saturday Luncheon, Sunday Luncheon, Turkey-Swiss roll-ups, Turkey-pecan crunch jar)",
+      "Olive oil - 43.5 g (Cottage-cheddar dip & celery, Fri supper, Savory cottage cheese bowl, Sun supper, Wed supper)",
+      "Dijon mustard - 50 g (Roast-pork Swiss crunch cup, Saturday Luncheon, Sun supper, Sunday Luncheon, Thu supper, Tue supper, Turkey-Swiss roll-ups, Turkey-pecan crunch jar)",
+      "Low-sodium beef broth - 475 g (Jake lunch, Mon supper, Sun supper, Thu supper, Thursday chowder)",
+      "Almond butter - 16 g (Turkey, cheddar & almond-butter celery)",
+      "Dried dill - 1 5/8 tsp (Jake lunches, savory cottage cheese bowl, chicken-bacon ranch jar, Friday lunch)",
+      "Dried parsley - 1 3/8 tsp (Jake lunches, chicken-bacon ranch jar, Friday lunch)",
+      "Dried thyme - 1 tsp (Thursday supper, Sunday supper)",
+      "Ground coriander - 1/2 tsp; cumin - 1/4 tsp (Wednesday supper)",
+      "Smoked paprika - 1 tsp (Thursday chowder, Saturday supper)",
+      "Finely ground coffee - 1/2 tsp (Saturday supper)",
+      "Cinnamon - 1/2 tsp (vanilla ricotta-pecan bowl, Oikos cheesecake bowl, Friday dessert)",
+      "Monk fruit/erythritol blend - 1-2 tsp plus optional 1/2 tsp (Friday dessert, Oikos cheesecake bowl)",
+      "Salt and black pepper - to taste (savory meals)"
+    ],
+    "Check Supply": [
+      "One A Day Men's Multi - 7 tablets (Jake, daily)",
+      "One A Day Women's Multi - 7 tablets (Laine, daily)"
+    ]
+  },
+  "dailySupplements": {
+    "jake": [
+      {
+        "name": "One A Day Men's Multi",
+        "nutritionKey": "One A Day Men's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ],
+    "laine": [
+      {
+        "name": "One A Day Women's Multi",
+        "nutritionKey": "One A Day Women's Multi",
+        "desc": "1 tablet daily with food."
+      }
+    ]
+  },
+  "targets": {
+    "jake": {
+      "rows": [
+        [
+          "Breakfast (daily avg)",
+          270.3,
+          16.7,
+          2.2,
+          21.3,
+          0.8
+        ],
+        [
+          "Lunch (daily avg)",
+          633.6,
+          58.4,
+          5.1,
+          41.5,
+          1.4
+        ],
+        [
+          "Supper (daily avg)",
+          824.1,
+          61.7,
+          8.0,
+          59.0,
+          3.7
+        ],
+        [
+          "Listed shake (daily avg)",
+          258.0,
+          27.2,
+          2.5,
+          14.7,
+          0.7
+        ]
+      ],
+      "total": [
+        1986.0,
+        163.9,
+        17.8,
+        136.4,
+        6.6
+      ],
+      "goal": [
+        2030,
+        203,
+        20,
+        126,
+        12
+      ],
+      "avgMicros": {
+        "sodium": 955.06,
+        "potassium": 1884.51,
+        "calcium": 437.21,
+        "vitamin_d": 31.16,
+        "magnesium": 262.99,
+        "zinc": 22.6,
+        "vitamin_c": 162.2,
+        "vitamin_b12": 10.89,
+        "iron": 6.8,
+        "vitamin_a": 1385.27,
+        "folate": 553.69,
+        "phosphorus": 1195.24,
+        "selenium": 193.76,
+        "fiber": 6.6,
+        "vitamin_e": 15.0
+      },
+      "netCarbs": true,
+      "note": "Scheduled meals plus one listed shake per day; extra snacks are outside these averages."
+    },
+    "laine": {
+      "rows": [
+        [
+          "Breakfast (daily avg)",
+          319.8,
+          19.5,
+          2.6,
+          25.2,
+          0.9
+        ],
+        [
+          "Second Breakfast (daily avg)",
+          230.7,
+          15.2,
+          3.9,
+          17.2,
+          1.2
+        ],
+        [
+          "Elevenses (daily avg)",
+          358.2,
+          29.0,
+          3.0,
+          25.0,
+          1.3
+        ],
+        [
+          "Afternoon Tea (daily avg)",
+          224.3,
+          17.3,
+          2.4,
+          16.0,
+          0.7
+        ],
+        [
+          "Supper (daily avg)",
+          344.7,
+          20.8,
+          4.2,
+          26.6,
+          2.0
+        ]
+      ],
+      "total": [
+        1477.8,
+        101.8,
+        16.0,
+        110.2,
+        6.1
+      ],
+      "goal": [
+        null,
+        103,
+        20,
+        null,
+        null
+      ],
+      "avgMicros": {
+        "sodium": 928.56,
+        "potassium": 1110.87,
+        "calcium": 358.16,
+        "vitamin_d": 28.12,
+        "magnesium": 127.52,
+        "zinc": 13.76,
+        "vitamin_c": 116.16,
+        "vitamin_b12": 12.28,
+        "iron": 21.83,
+        "vitamin_a": 1032.48,
+        "folate": 776.8,
+        "phosphorus": 795.8,
+        "selenium": 126.16,
+        "fiber": 6.1
+      },
+      "netCarbs": true,
+      "note": "Calculated menu average for the example choice rotation. Reordering choices changes individual days. No new calorie target is assigned; protein and net carbs retain the existing references."
+    }
+  },
+  "dailyMenuEstimates": {
+    "laine": [
+      {
+        "date": "2026-11-30",
+        "cal": 1481.0,
+        "protein": 105.5,
+        "carbs": 15.5,
+        "fat": 109.1,
+        "fiber": 6.5,
+        "totalCarbs": 22.0
+      },
+      {
+        "date": "2026-12-01",
+        "cal": 1492.9,
+        "protein": 103.0,
+        "carbs": 13.8,
+        "fat": 112.4,
+        "fiber": 5.1,
+        "totalCarbs": 18.9
+      },
+      {
+        "date": "2026-12-02",
+        "cal": 1439.3,
+        "protein": 99.1,
+        "carbs": 17.8,
+        "fat": 106.2,
+        "fiber": 6.9,
+        "totalCarbs": 24.7
+      },
+      {
+        "date": "2026-12-03",
+        "cal": 1563.4,
+        "protein": 96.8,
+        "carbs": 19.0,
+        "fat": 120.5,
+        "fiber": 5.3,
+        "totalCarbs": 24.3
+      },
+      {
+        "date": "2026-12-04",
+        "cal": 1521.3,
+        "protein": 91.2,
+        "carbs": 13.8,
+        "fat": 120.2,
+        "fiber": 7.8,
+        "totalCarbs": 21.6
+      },
+      {
+        "date": "2026-12-05",
+        "cal": 1433.4,
+        "protein": 107.4,
+        "carbs": 14.3,
+        "fat": 103.8,
+        "fiber": 4.8,
+        "totalCarbs": 19.1
+      },
+      {
+        "date": "2026-12-06",
+        "cal": 1413.2,
+        "protein": 109.3,
+        "carbs": 18.2,
+        "fat": 99.0,
+        "fiber": 6.0,
+        "totalCarbs": 24.2
+      }
+    ]
+  },
+  "budget": {
+    "range": [
+      135,
+      150
+    ],
+    "fullRestockRange": [
+      180,
+      210
+    ],
+    "basis": "Planning estimates, not live store quotes. Assumes whey, nuts, almond flour, oil, mayo, mustard and spices on hand."
+  },
+  "foodSafetySources": [
+    "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+    "https://content.govdelivery.com/accounts/USDAOC/bulletins/3ebbb1b"
+  ]
+}

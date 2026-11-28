@@ -1400,7 +1400,7 @@
     "serving": "per 1 large egg (50g)",
     "cal": 72,
     "protein": 6,
-    "carbs": 0,
+    "carbs": 0.36,
     "fat": 5,
     "fiber": 0,
     "micros": {
@@ -2509,6 +2509,18 @@
     "source": "Zero-net-carb blend assumption. Use the conversion on your package.",
     "micros": {}
   },
+  "Mushrooms": {
+    "cal": 22,
+    "protein": 3.09,
+    "carbs": 3.26,
+    "fat": 0.34,
+    "fiber": 1,
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100 g raw edible portion",
+    "micros": {},
+    "source": "USDA standard reference; micronutrients not supplied in this plan"
+  },
   "Oikos Triple Zero yogurt": {
     "serving_qty": 150,
     "serving_unit": "g",
@@ -2682,6 +2694,18 @@
       "vitamin_d": 0,
       "zinc": 0.14
     }
+  },
+  "Peaches": {
+    "cal": 39,
+    "protein": 0.91,
+    "carbs": 9.54,
+    "fat": 0.25,
+    "fiber": 1.5,
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100 g raw edible portion",
+    "micros": {},
+    "source": "USDA standard reference; micronutrients not supplied in this plan"
   },
   "Peanuts (dry roasted, unsalted)": {
     "serving_qty": 100,
@@ -3527,6 +3551,16 @@
       "zinc": 0
     }
   },
+  "TJ's Mandarin Orange Chicken": {
+    "serving_qty": 100,
+    "serving_unit": "g",
+    "serving": "per 100g (package weight)",
+    "cal": 220,
+    "protein": 13,
+    "carbs": 22,
+    "fat": 9,
+    "fiber": 0
+  },
   "Taylor Farms salad kit": {
     "serving_qty": 1,
     "serving_unit": "serving",
@@ -3576,16 +3610,6 @@
     "serving": "per 1/2 cup (125g)",
     "serving_qty": 0.5,
     "serving_unit": "cup"
-  },
-  "TJ's Mandarin Orange Chicken": {
-    "serving_qty": 100,
-    "serving_unit": "g",
-    "serving": "per 100g (package weight)",
-    "cal": 220,
-    "protein": 13,
-    "carbs": 22,
-    "fat": 9,
-    "fiber": 0
   },
   "Tofu (firm)": {
     "cal": 144,

@@ -22,8 +22,9 @@ const WEEK_REGISTRY = [
   { id:"2026-W46", label:"Week of November 9, 2026" },
   { id:"2026-W47", label:"Week of November 16, 2026" },
   { id:"2026-W48", label:"Week of November 23, 2026" },
+  { id:"2026-W49", label:"Week of November 30, 2026" },
 ];
-const CURRENT_WEEK_ID = "2026-W48";
+const CURRENT_WEEK_ID = "2026-W49";
 const WATER_GLASSES   = 8;
 const WATER_OZ_EACH   = 16;
 const WATER_TOTAL_OZ  = 128;
@@ -40,6 +41,9 @@ const NutCtx     = createContext({});
 const useNut     = () => useContext(NutCtx);
 const DarkCtx    = createContext(false);
 const useDark    = () => useContext(DarkCtx);
+const ShireCtx   = createContext(false);
+const useShire   = () => useContext(ShireCtx);
+const useMealTheme = () => { const dark=useDark(),shire=useShire();return shire?getShireT(dark):getT(dark); };
  
 // ── Theme ─────────────────────────────────────────────────────────────
 function getT(dark) {
@@ -65,6 +69,11 @@ function getT(dark) {
 }
  
 const CLR = { cal:"#c8814a", protein:"#6b9e6b", carbs:"#c8a96a", fat:"#7a9ec0", fiber:"#9e7ab5" };
+function getShireT(dark) {
+  return {...getT(dark), ...(dark?{
+    card:"#1c2b24",border:"#586144",accent:"#e4c67d",accentSoft:"#26392e",gold:"#d4b36b",goldSoft:"#302f20",green:"#a5c69e",greenSoft:"#26392e",text:"#f7f0d9",textMid:"#d4dcc6",textLight:"#b4bda3",divider:"#47573e",tag:"#293b2e",tagBorder:"#6c7450",inputBg:"#24372b"
+  }:{card:"#fffdf4",border:"#c8c49e",accent:"#345a3e",accentSoft:"#edf1e1",gold:"#977326",goldSoft:"#f3ead1",green:"#3d6947",greenSoft:"#eaf0df",text:"#263e2c",textMid:"#4c614b",textLight:"#657252",divider:"#d5d7b9",tag:"#f2f1df",tagBorder:"#c9c9a2",inputBg:"#f5f5e8"})};
+}
 const MICRO_CLR = {
   sodium:"#e07040", potassium:"#6b9e6b", calcium:"#c8a96a", vitamin_d:"#e8c040",
   magnesium:"#7ab0c0", zinc:"#a07ab0", vitamin_c:"#e8804a", vitamin_b12:"#6ab08a",
